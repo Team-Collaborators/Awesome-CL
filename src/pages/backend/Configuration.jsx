@@ -1,6 +1,6 @@
 import React from "react";
 import { fetchData } from "../../components/Hooks";
-// import { RenderCode } from "../../components/RenderCode";
+import { RenderCode } from "../../components/RenderCode";
 
 export function Configuration() {
   const { data, loading, error } = fetchData(
@@ -9,19 +9,14 @@ export function Configuration() {
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;
+  console.log(data);
 
   return (
     <div>
       <ul>
-        {data.map((element) => {
-          return (
-            <li key={element.title}>
-              <h2>{element.title}</h2>
-              <p>{element.description}</p>
-              {/* <RenderCode code={element.code} language={element.language} /> */}
-            </li>
-          );
-        })}
+        <li key={data.title}>
+          <RenderCode data={data} />
+        </li>
       </ul>
     </div>
   );

@@ -6,7 +6,6 @@ import { Hooks } from "../pages/frontend/Hooks";
 import { FrontRoutes } from "../pages/frontend/frontRoutes";
 import { Backend } from "../pages/backend";
 import { Configuration } from "../pages/backend/Configuration";
-// import { Controllers } from "../pages/backend/Controllers";
 import { Middleware } from "../pages/backend/Middlewares";
 import { Models } from "../pages/backend/Models";
 import { BackRoutes } from "../pages/backend/backRoutes";
@@ -14,8 +13,9 @@ import { Tests } from "../pages/backend/Test";
 import { Utils } from "../pages/backend/Utils";
 import { HomePage } from "../pages/HomePage";
 import { EnvFile } from "../pages/backend/EnvFile";
+import { Controllers } from "../pages/backend/Controllers";
 
-export function MainRoutes() {
+export default function MainRoutes() {
   return (
     <Router>
       <Routes>
@@ -28,7 +28,7 @@ export function MainRoutes() {
 
         <Route path="backend" element={<Backend />}>
           <Route path="configuration" element={<Configuration />} />
-          {/* <Route path="controllers/*" element={<Controllers />} /> */}
+          <Route path="controllers/*" element={<Controllers />} />
           <Route path="middleware" element={<Middleware />} />
           <Route path="models" element={<Models />} />
           <Route path="backRoutes" element={<BackRoutes />} />
