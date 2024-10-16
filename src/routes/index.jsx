@@ -13,7 +13,7 @@ import { Tests } from "../backend/Test";
 import { Utils } from "../backend/Utils";
 import { HomePage } from "../pages/HomePage";
 import { EnvFile } from "../backend/EnvFile";
-import { Controllers } from "../backend/Controllers";
+import { Controller } from "../backend/Controller"; 
 
 export default function MainRoutes() {
   return (
@@ -28,7 +28,7 @@ export default function MainRoutes() {
 
         <Route path="backend" element={<Backend />}>
           <Route path="configuration" element={<Configuration />} />
-          <Route path="controllers/*" element={<Controllers />} />
+          <Route path="controllers/*" element={<Controller />} />
           <Route path="middleware" element={<Middleware />} />
           <Route path="models" element={<Models />} />
           <Route path="backRoutes" element={<BackRoutes />} />
