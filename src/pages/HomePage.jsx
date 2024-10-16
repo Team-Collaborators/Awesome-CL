@@ -1,11 +1,29 @@
 import React, { useState } from "react";
 import { Outlet, Link } from "react-router-dom";
+import { SideBar } from "../common/SideBar";
 
 import "./HomePage.scss";
 import logo from "../assets/images/logo1.png";
 import logo1 from "../assets/images/t-logo.png";
 
 export function HomePage() {
+  const data = {
+    frontend: [
+      { title: "Components", path: "Frontend/Components" },
+      { title: "Hooks", path: "Frontend/Hooks" },
+      { title: "Frontend Routes", path: "Frontend/FrontRoutes" },
+    ],
+    backend: [
+      { title: "Configuration", path: "Backend/Configuration" },
+      { title: "Controllers", path: "Backend/Controllers" },
+      { title: "Middleware", path: "Backend/Middleware" },
+      { title: "Models", path: "Backend/Models" },
+      { title: "Tests", path: "Backend/Tests" },
+      { title: "Utils", path: "Backend/Utils" },
+      { title: "Env File", path: "Backend/EnvFile" },
+      { title: "Backend Routes", path: "Backend/BackendRoutes" },
+    ],
+  };
   const [frontendDropdownVisible, setFrontendDropdownVisible] = useState(false);
   const [backendDropdownVisible, setBackendDropdownVisible] = useState(false);
 
@@ -27,17 +45,7 @@ export function HomePage() {
             <div onClick={toggleFrontendDropdown} className="dropdown-toggle">
               Frontend
               {frontendDropdownVisible && (
-                <ul className="dropdown-menu">
-                  <li>
-                    <Link to="frontend/components">Components</Link>
-                  </li>
-                  <li>
-                    <Link to="frontend/hooks">Hooks</Link>
-                  </li>
-                  <li>
-                    <Link to="frontend/frontRoutes">Routes</Link>
-                  </li>
-                </ul>
+                <SideBar className={"dropdown-menu"} data={data.frontend} />
               )}
             </div>
           </li>
@@ -45,32 +53,7 @@ export function HomePage() {
             <div onClick={toggleBackendDropdown} className="dropdown-toggle">
               Backend
               {backendDropdownVisible && (
-                <ul className="dropdown-menu">
-                  <li>
-                    <Link to="backend/configuration">Configuration</Link>
-                  </li>
-                  <li>
-                    <Link to="backend/controllers">Controllers</Link>
-                  </li>
-                  <li>
-                    <Link to="backend/middleware">Middleware</Link>
-                  </li>
-                  <li>
-                    <Link to="backend/models">Models</Link>
-                  </li>
-                  <li>
-                    <Link to="backend/backRoutes">BackRoutes</Link>
-                  </li>
-                  <li>
-                    <Link to="backend/tests">Tests</Link>
-                  </li>
-                  <li>
-                    <Link to="backend/utils">Utils</Link>
-                  </li>
-                  <li>
-                    <Link to="backend/envFile">EnvFile</Link>
-                  </li>
-                </ul>
+                <SideBar className={"dropdown-menu"} data={data.backend} />
               )}
             </div>
           </li>

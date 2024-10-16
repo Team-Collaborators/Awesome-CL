@@ -1,38 +1,23 @@
 import React from "react";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+import { SideBar } from "../common/SideBar";
 
 export function Backend() {
+  const data = [
+    { title: "Configuration", path: "Configuration" },
+    { title: "Controllers", path: "Controllers" },
+    { title: "Middleware", path: "Middleware" },
+    { title: "Models", path: "Models" },
+    { title: "Tests", path: "Tests" },
+    { title: "Utils", path: "Utils" },
+    { title: "Env File", path: "EnvFile" },
+    { title: "Backend Routes", path: "BackendRoutes" },
+  ];
+
   return (
     <div>
       <h1>Backend</h1>
-      <nav>
-        <ul>
-          <li>
-            <Link to="configuration">Configuration</Link>
-          </li>
-          <li>
-            <Link to="controllers">Controllers</Link>
-          </li>
-          <li>
-            <Link to="middleware">Middleware</Link>
-          </li>
-          <li>
-            <Link to="models">Models</Link>
-          </li>
-          <li>
-            <Link to="backRoutes">BackRoutes</Link>
-          </li>
-          <li>
-            <Link to="tests">Tests</Link>
-          </li>
-          <li>
-            <Link to="utils">Utils</Link>
-          </li>
-          <li>
-            <Link to="envFile">File .env</Link>
-          </li>
-        </ul>
-      </nav>
+      <SideBar data={data} />
       <Outlet />
     </div>
   );

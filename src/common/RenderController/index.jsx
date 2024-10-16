@@ -8,7 +8,6 @@ import { RenderCode } from "../../common/RenderCode";
 export function RenderController({ data }) {
   const { name } = useParams();
   const [component, setComponent] = useState(null);
-  console.log(name);
 
   useEffect(() => {
     if (data) {
