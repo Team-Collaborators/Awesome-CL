@@ -1,0 +1,31 @@
+// Variables
+$primary-color: #083748;
+$secondary-color: #083e52;
+$optional-color: #5a2778;
+$background-color: #181818;
+$text-color: #efeded;
+$font-stack: "Poppins", sans-serif;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Global styles
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}

@@ -1,6 +1,6 @@
 import React from "react";
-import { fetchData } from "../../components/Hooks";
-import { RenderCode } from "../../components/RenderCode";
+import { fetchData } from "../common/Hooks";
+import { RenderCode } from "../common/RenderCode";
 
 export function Configuration() {
   const { data, loading, error } = fetchData(
