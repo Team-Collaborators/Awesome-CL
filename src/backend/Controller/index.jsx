@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { RenderCode } from "../RenderCode";
+import { RenderCode } from "../../common/RenderCode";
 
 export function Controller({ data }) {
   const { name } = useParams();
   const [component, setComponent] = useState(null);
-console.log(name);
+  console.log(name);
 
   useEffect(() => {
     if (data) {

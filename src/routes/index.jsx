@@ -1,25 +1,25 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Components } from "../pages/frontend/Components";
-import { Frontend } from "../pages/frontend";
-import { Hooks } from "../pages/frontend/Hooks";
-import { FrontRoutes } from "../pages/frontend/frontRoutes";
-import { Backend } from "../pages/backend";
-import { Configuration } from "../pages/backend/Configuration";
-import { Middleware } from "../pages/backend/Middlewares";
-import { Models } from "../pages/backend/Models";
-import { BackRoutes } from "../pages/backend/backRoutes";
-import { Tests } from "../pages/backend/Test";
-import { Utils } from "../pages/backend/Utils";
+import { Components } from "../frontend/Components";
+import { Frontend } from "../frontend";
+import { Hooks } from "../frontend/Hooks";
+import { FrontRoutes } from "../frontend/frontRoutes";
+import { Backend } from "../backend";
+import { Configuration } from "../backend/Configuration";
+import { Middleware } from "../backend/Middlewares";
+import { Models } from "../backend/Models";
+import { BackRoutes } from "../backend/backRoutes";
+import { Tests } from "../backend/Test";
+import { Utils } from "../backend/Utils";
 import { HomePage } from "../pages/HomePage";
-import { EnvFile } from "../pages/backend/EnvFile";
-import { Controllers } from "../pages/backend/Controllers";
+import { EnvFile } from "../backend/EnvFile";
+import { Controllers } from "../backend/Controllers";
 
 export default function MainRoutes() {
   return (
     <Router>
       <Routes>
-      <Route index path="/" element={<HomePage/>} />
+        <Route index path="/" element={<HomePage />} />
         <Route path="frontend" element={<Frontend />}>
           <Route path="components" element={<Components />} />
           <Route path="hooks" element={<Hooks />} />
