@@ -15,7 +15,7 @@ export function RenderController({ data }) {
       setComponent(foundComponent);
     }
   }, [name, data]);
-  if (!component) return <>todo bien</>;
+  if (!component) return <>We need to add a presentation page</>;
 
   return (
     <div>

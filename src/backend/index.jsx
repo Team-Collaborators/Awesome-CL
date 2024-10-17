@@ -15,10 +15,10 @@ export function Backend() {
   ];
 
   return (
-    <div>
+    <section>
       <h1>Backend</h1>
       <SideBar data={data} />
       <Outlet />
-    </div>
+    </section>
   );
 }

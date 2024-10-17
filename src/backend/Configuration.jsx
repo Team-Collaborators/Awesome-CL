@@ -11,12 +11,14 @@ export function Configuration() {
   if (error) return <p>Error: {error}</p>;
 
   return (
-    <div>
+    <>
+      <h2>{data.title}</h2>
+      <p>{data.description}</p>
       <ul>
         <li key={data.title}>
-          <RenderCode data={data} />
+          <RenderCode data={data.controllers} />
         </li>
       </ul>
-    </div>
+    </>
   );
 }
