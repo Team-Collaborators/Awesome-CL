@@ -1,25 +1,25 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { RenderCode } from "../../common/RenderCode";
+import React from "react";
 
-export function Controller({ data }) {
-  const { name } = useParams();
-  const [component, setComponent] = useState(null);
-  console.log(name);
+import { Route, Routes } from "react-router-dom";
+import { fetchData } from "../../common/Hooks";
+import { SideBar } from "../../common/SideBar";
+import { RenderController } from "../../common/RenderController";
 
-  useEffect(() => {
-    if (data) {
-      const foundComponent = data.find((comp) => comp.title === name);
-      setComponent(foundComponent);
-    }
-  }, [name, data]);
-  if (!component) return <>todo bien</>;
+export function Controller() {
+  const { data, loading, error } = fetchData(
+    "/data/controllers/controllers.json"
+  );
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error}</p>;
 
   return (
-    <div>
-      <h2>{component.title}</h2>
-      <p>{component.description}</p>
-      <RenderCode data={component.controllers} />
-    </div>
+    <>
+      <SideBar data={data} />
+      <Routes>
+        <Route path="/" element={<RenderController data={data} />} />
+        <Route path="/:name" element={<RenderController data={data} />} />
+      </Routes>
+    </>
   );
 }

@@ -9,15 +9,16 @@ export function Configuration() {
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;
-  console.log(data);
 
   return (
-    <div>
+    <>
+      <h2>{data.title}</h2>
+      <p>{data.description}</p>
       <ul>
         <li key={data.title}>
-          <RenderCode data={data} />
+          <RenderCode data={data.controllers} />
         </li>
       </ul>
-    </div>
+    </>
   );
 }
