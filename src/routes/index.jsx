@@ -8,17 +8,21 @@ import { Backend } from "../backend";
 import { Configuration } from "../backend/Configuration";
 import { Middleware } from "../backend/Middlewares";
 import { Models } from "../backend/Models";
-import { BackRoutes } from "../backend/backRoutes";
 import { Tests } from "../backend/Test";
 import { Utils } from "../backend/Utils";
 import { HomePage } from "../pages/HomePage/HomePage";
 import { EnvFile } from "../backend/EnvFile";
+<<<<<<< HEAD
 import { Controllers } from "../backend/Controllers";
 import Navbar from "../pages/Navbar/Navbar";
+=======
+import { Controller } from "../backend/Controller"; 
+>>>>>>> c5d2c9d81977c8eb12583290914dc3c9e1f627c5
 
 export default function MainRoutes() {
   return (
     <Router>
+<<<<<<< HEAD
       <Navbar />
       <div className="content-wrapper">
         <Routes>
@@ -41,6 +45,26 @@ export default function MainRoutes() {
           </Route>
         </Routes>
       </div>
+=======
+      <Routes>
+        <Route index path="/" element={<HomePage />} />
+        <Route path="Frontend" element={<Frontend />}>
+          <Route path="Components" element={<Components />} />
+          <Route path="Hooks" element={<Hooks />} />
+          <Route path="FrontRoutes" element={<FrontRoutes />} />
+        </Route>
+
+        <Route path="Backend" element={<Backend />}>
+          <Route path="Configuration" element={<Configuration />} />
+          <Route path="Controllers/*" element={<Controller />} />
+          <Route path="Middleware" element={<Middleware />} />
+          <Route path="Models" element={<Models />} />
+          <Route path="Tests" element={<Tests />} />
+          <Route path="Utils" element={<Utils />} />
+          <Route path="EnvFile" element={<EnvFile />} />
+        </Route>
+      </Routes>
+>>>>>>> c5d2c9d81977c8eb12583290914dc3c9e1f627c5
     </Router>
   );
 }

@@ -1,0 +1,132 @@
+@import "../main.scss";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+body {
+  font-family: $font-stack;
+  margin: 0;
+  padding: 0;
+  background-color: $background-color;
+  color: $text-color;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: $primary-color;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .sidebar-logo {
+    width: 150px;
+    height: 110px;
+    margin-bottom: 20px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+
+    li {
+      width: 100%;
+      position: relative;
+
+      .dropdown-toggle {
+        cursor: pointer;
+        padding: 10px;
+        color: $text-color;
+        width: 100%;
+        text-align: left;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+        &::after {
+          content: "▼";
+          float: right;
+        }
+
+        .dropdown-menu {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          padding: 10px 0;
+          list-style: none;
+          border-radius: 4px;
+          z-index: 10;
+
+          li {
+            margin: 0;
+            padding: 10px 20px;
+            background-color: $secondary-color;
+
+            a {
+              color: $text-color;
+              width: 100%;
+              display: block;
+            }
+          }
+        }
+      }
+
+      &:hover .dropdown-menu {
+        display: block;
+      }
+    }
+  }
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #292929, #121212);
+  text-align: center;
+
+  .logo {
+    width: 450px;
+    height: 350px;
+    margin-bottom: 20px;
+    animation: popIn 2s;
+  }
+
+  .title {
+    margin-top: 10px;
+    font-size: 3.5rem;
+    font-weight: lighter;
+    color: $secondary-color;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .description {
+    font-size: 1.2rem;
+    color: $text-color;
+    margin-top: 20px;
+    padding: 0 20px;
+    max-width: 600px;
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
