@@ -1,10 +1,9 @@
-// Variables
 $primary-color: #083748;
 $secondary-color: #083e52;
 $optional-color: #5a2778;
 $background-color: #181818;
-$text-color: #efeded;
-$font-stack: "Poppins", sans-serif;
+$text-color: #ffffff;
+$font-stack: "Roboto", sans-serif;
 
 // Mixins
 @mixin flex-center {
@@ -22,10 +21,21 @@ $font-stack: "Poppins", sans-serif;
   margin: 0;
 }
 
+body {
+  font-family: $font-stack;
+  background-color: $background-color;
+  color: $text-color;
+}
+
 ul {
   list-style: none;
 }
 
 a {
+  color: $text-color;
   text-decoration: none;
+}
+
+.content-wrapper {
+  margin-left: 300px; // Ensures all content is pushed to the right from sidebar
 }
