@@ -11,32 +11,36 @@ import { Models } from "../backend/Models";
 import { BackRoutes } from "../backend/backRoutes";
 import { Tests } from "../backend/Test";
 import { Utils } from "../backend/Utils";
-import { HomePage } from "../pages/HomePage";
+import { HomePage } from "../pages/HomePage/HomePage";
 import { EnvFile } from "../backend/EnvFile";
 import { Controllers } from "../backend/Controllers";
+import Navbar from "../pages/Navbar/Navbar";
 
 export default function MainRoutes() {
   return (
     <Router>
-      <Routes>
-        <Route index path="/" element={<HomePage />} />
-        <Route path="frontend" element={<Frontend />}>
-          <Route path="components" element={<Components />} />
-          <Route path="hooks" element={<Hooks />} />
-          <Route path="frontRoutes" element={<FrontRoutes />} />
-        </Route>
+      <Navbar />
+      <div className="content-wrapper">
+        <Routes>
+          <Route index path="/" element={<HomePage />} />
+          <Route path="frontend">
+            <Route path="components" element={<Components />} />
+            <Route path="hooks" element={<Hooks />} />
+            <Route path="frontRoutes" element={<FrontRoutes />} />
+          </Route>
 
-        <Route path="backend" element={<Backend />}>
-          <Route path="configuration" element={<Configuration />} />
-          <Route path="controllers/*" element={<Controllers />} />
-          <Route path="middleware" element={<Middleware />} />
-          <Route path="models" element={<Models />} />
-          <Route path="backRoutes" element={<BackRoutes />} />
-          <Route path="tests" element={<Tests />} />
-          <Route path="utils" element={<Utils />} />
-          <Route path="envFile" element={<EnvFile />} />
-        </Route>
-      </Routes>
+          <Route path="backend">
+            <Route path="configuration" element={<Configuration />} />
+            <Route path="controllers/*" element={<Controllers />} />
+            <Route path="middleware" element={<Middleware />} />
+            <Route path="models" element={<Models />} />
+            <Route path="backRoutes" element={<BackRoutes />} />
+            <Route path="tests" element={<Tests />} />
+            <Route path="utils" element={<Utils />} />
+            <Route path="envFile" element={<EnvFile />} />
+          </Route>
+        </Routes>
+      </div>
     </Router>
   );
 }
