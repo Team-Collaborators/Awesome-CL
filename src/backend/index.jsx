@@ -11,7 +11,6 @@ export function Backend() {
     { title: "Tests", path: "Tests" },
     { title: "Utils", path: "Utils" },
     { title: "Env File", path: "EnvFile" },
-    { title: "Backend Routes", path: "BackendRoutes" },
   ];
 
   return (
