@@ -7,23 +7,6 @@ import logo from "../assets/images/logo1.png";
 import logo1 from "../assets/images/t-logo.png";
 
 export function HomePage() {
-  const data = {
-    frontend: [
-      { title: "Components", path: "Frontend/Components" },
-      { title: "Hooks", path: "Frontend/Hooks" },
-      { title: "Frontend Routes", path: "Frontend/FrontRoutes" },
-    ],
-    backend: [
-      { title: "Configuration", path: "Backend/Configuration" },
-      { title: "Controllers", path: "Backend/Controllers" },
-      { title: "Middleware", path: "Backend/Middleware" },
-      { title: "Models", path: "Backend/Models" },
-      { title: "Tests", path: "Backend/Tests" },
-      { title: "Utils", path: "Backend/Utils" },
-      { title: "Env File", path: "Backend/EnvFile" },
-      { title: "Backend Routes", path: "Backend/BackendRoutes" },
-    ],
-  };
   const [frontendDropdownVisible, setFrontendDropdownVisible] = useState(false);
   const [backendDropdownVisible, setBackendDropdownVisible] = useState(false);
 
