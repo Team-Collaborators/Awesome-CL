@@ -65,7 +65,6 @@ const Navbar = () => {
               <li>
                 <Link to="backend/models">Models</Link>
               </li>
-
               <li>
                 <Link to="backend/tests">Tests</Link>
               </li>
