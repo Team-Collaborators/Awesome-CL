@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HomePage } from "../pages/HomePage/HomePage";
 
-import Navbar from "../pages/Navbar/Navbar";
+import Navbar from "../common/Navbar/Navbar";
 
 import { RenderPages } from "../common/RenderPages";
 
@@ -26,8 +26,6 @@ export default function MainRoutes() {
             <Route path="tests/*" element={<RenderPages file={"backend/tests"} />} />
             <Route path="utils/*" element={<RenderPages file={"backend/utils"} />} />
             <Route path="envFiles/*" element={<RenderPages file={"backend/envFiles"} />} />
-
-
           </Route>
         </Routes>
       </div>

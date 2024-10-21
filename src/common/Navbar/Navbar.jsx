@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import "./Navbar.scss";
 import logo1 from "../../assets/images/t-logo.png";
+import { Button } from "../Button";
 
 const Navbar = () => {
   const [frontendDropdownVisible, setFrontendDropdownVisible] = useState(false);
@@ -30,7 +31,7 @@ const Navbar = () => {
         <li>
           <div onClick={toggleFrontendDropdown} className="dropdown-toggle">
             Frontend
-            <span className="arrow">{frontendDropdownVisible ? "▲" : "▼"}</span>
+            <Button label={frontendDropdownVisible ? "▲" : "▼"} onClick={toggleBackendDropdown} className={"arrow"} />
           </div>
           {frontendDropdownVisible && (
             <ul className="dropdown-menu">
