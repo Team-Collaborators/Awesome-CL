@@ -1,7 +1,40 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import path from "path";
 
-// https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react()],
-})
+export default defineConfig(({ command }) => {
+  if (command === "build-library") {
+    return {
+      build: {
+        lib: {
+          entry: "./src/library/exports.js", // Entry point for the library
+          name: "Framework",
+          formats: ["es", "cjs"],
+          fileName: (format) => `framework.${format}.js`,
+        },
+        rollupOptions: {
+          external: ["react", "react-dom"],
+          output: {
+            globals: {
+              react: "React",
+              "react-dom": "ReactDOM",
+            },
+          },
+        },
+      },
+      plugins: [react()],
+    };
+  }
+
+  return {
+    build: {
+      outDir: "docs-dist", // Output folder for the documentation site
+    },
+    plugins: [react()],
+    resolve: {
+      alias: {
+        "@components": path.resolve(__dirname, "./src/components"),
+      },
+    },
+  };
+});
