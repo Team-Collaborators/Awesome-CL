@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import "./Navbar.scss";
 import logo1 from "../../assets/images/t-logo.png";
+import { Button } from "../Button";
 
 const Navbar = () => {
   const [frontendDropdownVisible, setFrontendDropdownVisible] = useState(false);
@@ -30,7 +31,7 @@ const Navbar = () => {
         <li>
           <div onClick={toggleFrontendDropdown} className="dropdown-toggle">
             Frontend
-            <span className="arrow">{frontendDropdownVisible ? "▲" : "▼"}</span>
+            <Button label={frontendDropdownVisible ? "▲" : "▼"} onClick={toggleBackendDropdown} className={"arrow"} />
           </div>
           {frontendDropdownVisible && (
             <ul className="dropdown-menu">
@@ -41,7 +42,7 @@ const Navbar = () => {
                 <Link to="frontend/hooks">Hooks</Link>
               </li>
               <li>
-                <Link to="frontend/frontRoutes">Routes</Link>
+                <Link to="frontend/routes">Routes</Link>
               </li>
             </ul>
           )}
@@ -54,13 +55,13 @@ const Navbar = () => {
           {backendDropdownVisible && (
             <ul className="dropdown-menu">
               <li>
-                <Link to="backend/configuration">Configuration</Link>
+                <Link to="backend/configurations">Configuration</Link>
               </li>
               <li>
                 <Link to="backend/controllers">Controllers</Link>
               </li>
               <li>
-                <Link to="backend/middleware">Middleware</Link>
+                <Link to="backend/middlewares">Middleware</Link>
               </li>
               <li>
                 <Link to="backend/models">Models</Link>
@@ -72,7 +73,7 @@ const Navbar = () => {
                 <Link to="backend/utils">Utils</Link>
               </li>
               <li>
-                <Link to="backend/envFile">EnvFile</Link>
+                <Link to="backend/envFiles">EnvFile</Link>
               </li>
             </ul>
           )}
