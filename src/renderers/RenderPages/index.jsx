@@ -2,7 +2,7 @@ import React from "react";
 
 import { Route, Routes } from "react-router-dom";
 import { fetchData } from "../Hooks";
-import { SideBar } from "../SideBar";
+import { SideBar } from "../../components/SideBar";
 import { RenderFiles } from "../RenderFiles";
 
 export function RenderPages({ file }) {
