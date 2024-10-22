@@ -2,9 +2,9 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HomePage } from "../pages/HomePage/HomePage";
 
-import Navbar from "../common/Navbar/Navbar";
+import Navbar from "../components/Navbar/Navbar";
 
-import { RenderPages } from "../common/RenderPages";
+import { RenderPages } from "../renderers/RenderPages";
 
 export default function MainRoutes() {
   return (
