@@ -24,6 +24,15 @@ src/
 |-- main.jsx
 
 *DYNAMIC*
+
+public/
+|-- data/                 // JSON files for dynamic content
+|   |-- backend
+|   |   |-- controllers.json
+|   |-- frontend
+|   |   |-- navbar.json
+|
+
 src/
 |-- assets/               // Static files like images, fonts, etc.
 |
@@ -31,9 +40,9 @@ src/
 |   |-- Navbar.jsx
 |   |-- Sidebar.jsx
 |
-|-- data/                 // JSON files for dynamic content
-|   |-- homepage.json
-|   |-- navbar.json
+|-- component_testing_space/           
+|   |-- Button.jsx
+|   |-- Dropdown.jsx
 |
 |-- hooks/                // Custom hooks for data fetching or other logic
 |   |-- useFetchData.js
