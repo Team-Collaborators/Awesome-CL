@@ -1,0 +1,15 @@
+:root {
+  --primary-color: #083748;
+  --secondary-color: #083e52;
+  --background-color: #ffffff; // Light mode background
+  --text-color: #000000; // Light mode text color
+  --optional-color: #5a2778;
+}
+
+body.dark-theme {
+  --primary-color: #2b2b2b;
+  --secondary-color: #1c1c1c;
+  --background-color: #000000; // Dark mode background
+  --text-color: #e0e0e0; // Dark mode text color
+  --optional-color: #7a3d99;
+}
