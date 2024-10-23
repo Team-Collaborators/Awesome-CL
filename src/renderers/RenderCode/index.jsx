@@ -4,7 +4,7 @@ import { Light as SyntaxHighlighter } from "react-syntax-highlighter"; // Import
 import { atelierDuneDark } from "react-syntax-highlighter/dist/esm/styles/hljs"; // Import syntax highlighting style
 import styles from "./RenderCode.module.css"; // Import CSS module styles
 
-export function RenderCode({ data }) {
+export function RenderCode({ code }) {
   const [copied, setCopied] = useState(false); // State to track if code is copied
 
   const copyToClipboard = (code) => {
@@ -22,43 +22,23 @@ export function RenderCode({ data }) {
   };
 
   return (
-    <>
-      <ul>
-        {data.map((elem) => {
-          return (
-            <li key={elem.title}>
-              <header>
-                <h2>{elem.title}</h2>
-                <p>{elem.description}</p>
-              </header>
-              <section>
-                <div className={styles.div}>
-                  <SyntaxHighlighter
-                    className={styles.code}
-                    language={elem.language}
-                    style={atelierDuneDark}
-                  >
-                    {elem.code}
-                  </SyntaxHighlighter>
-                  <button
-                    onClick={() => {
-                    let code = elem.code
-                      copyToClipboard(code);
-                    }}
-                    className={styles.button}
-                  >
-                    {copied ? (
-                      <span className="copy-message">Copied</span>
-                    ) : (
-                      <FaRegCopy />
-                    )}
-                  </button>
-                </div>
-              </section>
-            </li>
-          );
-        })}
-      </ul>
-    </>
+    <div className={styles.div}>
+      <SyntaxHighlighter
+        className={styles.code}
+        language="javascript"
+        style={atelierDuneDark}
+      >
+        {code}
+      </SyntaxHighlighter>
+      <button
+        onClick={() => {
+          let code = elem.code;
+          copyToClipboard(code);
+        }}
+        className={styles.button}
+      >
+        {copied ? <span className="copy-message">Copied</span> : <FaRegCopy />}
+      </button>
+    </div>
   );
 }
