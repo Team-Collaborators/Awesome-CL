@@ -1,7 +1,26 @@
-import React from 'react'
+import styles from "./Button.module.scss";
 
-export function Button({label, onClick, className}) {
+const Button = ({
+  children,
+  color = "primary",
+  onClick,
+  style,
+  size = "medium",
+  radius = "none",
+  border = "none",
+  className,
+}) => {
+  const combinedClassNames = `${styles.button} ${styles[`border-${border}`]} ${
+    styles[`radius-${radius}`]
+  } ${styles[`color-${color}`]} ${styles[`size-${size}`]} ${
+    className || ""
+  }`.trim();
+
   return (
-    <button className={`${className}`} onClick={onClick}>{label}</button>
-  )
-}
+    <button onClick={onClick} style={style} className={combinedClassNames}>
+      {children}
+    </button>
+  );
+};
+
+export default Button;
