@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { RenderCode } from "../RenderCode";
+import {Table} from "../../components/Table"
 
 
 
@@ -19,6 +20,7 @@ export function RenderComponent({ data }) {
   }, [name, data]);
   if (component) {
     return (
+      <>
       <section>
         <h2>Installation</h2>
         <ul>
@@ -35,8 +37,10 @@ export function RenderComponent({ data }) {
         </ul>
         <RenderCode code={installation} />
       </section>
-
-    
+          <section>
+            <Table data={component.propsTable}/>
+          </section>
+      </>
     );
   }
 }
