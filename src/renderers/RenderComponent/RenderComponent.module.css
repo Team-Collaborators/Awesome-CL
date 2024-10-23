@@ -1,0 +1,35 @@
+.installList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.installItem {
+  margin: 0;
+}
+
+.installButton {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+}
+
+.installButton:hover {
+  background-color: #e0e0e0;
+}
+
+.installButton.active {
+  background-color: #d0d0d0;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 0.5rem;
+}
