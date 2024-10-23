@@ -8,6 +8,7 @@ import { RenderComponent } from "../RenderComponent";
 
 export function RenderPages({ file }) {
   const { data, loading, error } = fetchData(`/data/${file}.json`);
+
   const [were, setWere] = useState((true))
 
   let path = file.split("/")
@@ -23,7 +24,6 @@ export function RenderPages({ file }) {
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;
-  
 
   return (
     <>
@@ -32,7 +32,7 @@ export function RenderPages({ file }) {
         <Route path="/" element={ were ? <RenderFiles data={data} /> : <RenderComponent data={data}/>} />
         <Route path="/:name" element={ were ? <RenderFiles data={data} /> : <RenderComponent data={data} />} />
       </Routes>
-      {/* <Footer /> */} 
+      {/* <Footer /> */}
     </>
   );
 }

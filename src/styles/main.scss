@@ -23,8 +23,8 @@ $font-stack: "Roboto", sans-serif;
 
 body {
   font-family: $font-stack;
-  background-color: $background-color;
-  color: $text-color;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 ul {
@@ -32,7 +32,7 @@ ul {
 }
 
 a {
-  color: $text-color;
+  color: var(--text-color);
   text-decoration: none;
 }
 

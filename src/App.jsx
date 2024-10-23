@@ -1,10 +1,26 @@
+import React, { useState, useEffect } from "react";
+
 import MainRoutes from "./routes";
+import "./styles/theme.scss";
+import "./styles/main.scss";
 
 function App() {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const toggleTheme = () => {
+    setIsDarkMode(!isDarkMode);
+  };
+  useEffect(() => {
+    if (isDarkMode) {
+      document.body.classList.add("dark-theme");
+    } else {
+      document.body.classList.remove("dark-theme");
+    }
+  }, [isDarkMode]);
+
   return (
     <>
-    
-      <MainRoutes />
+      <MainRoutes isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
     </>
   );
 }
