@@ -6,7 +6,7 @@ import Navbar from "../components/Navbar/Navbar";
 import Playground from "../components/Playground/Playground";
 import NotFound from "../components/NotFound/NotFound";
 
-import { RenderPages } from "../renderers/RenderPages";
+import { RenderPages } from "../components/renderers/RenderPages/RenderPages";
 
 export default function MainRoutes({ isDarkMode, toggleTheme }) {
   return (
