@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { RenderCode } from "../RenderCode";
-
-
+import { RenderCode } from "../RenderCode/index";
 
 export function RenderComponent({ data }) {
   const { name } = useParams();
@@ -25,7 +23,7 @@ export function RenderComponent({ data }) {
           {component.installation.map((elem) => {
             return (
               <li key={elem.name}>
-                <button onClick={()=> setInstallation(elem.command)}>
+                <button onClick={() => setInstallation(elem.command)}>
                   <img src={elem.path} alt={elem.name} />
                   <span>{elem.name}</span>
                 </button>
@@ -35,8 +33,6 @@ export function RenderComponent({ data }) {
         </ul>
         <RenderCode code={installation} />
       </section>
-
-    
     );
   }
 }
