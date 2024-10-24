@@ -21,9 +21,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Clean up previous build
-        run: rm -rf dist
-
       - name: Build library
         run: npm run build-library
 
