@@ -14,7 +14,7 @@ export function RenderPages({ file }) {
   let path = file.split("/");
 
   useEffect(() => {
-    if (path[0] === "backend") {
+    if (path.length > 0 && path[0] === "backend") {
       setWere(true);
     } else {
       setWere(false);
@@ -23,7 +23,8 @@ export function RenderPages({ file }) {
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;
-
+  // Ensure that rendering doesn't occur before data is loaded
+  if (!data || data.length === 0) return <p>No data available</p>;
   return (
     <>
       <SideBar data={data} />

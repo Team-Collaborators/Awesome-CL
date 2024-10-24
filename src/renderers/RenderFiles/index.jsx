@@ -21,15 +21,19 @@ export function RenderFiles({ data }) {
   if (component) {
     return (
       <div>
-        <h2>{component.title}</h2>
-        <p>{component.description}</p>
-        {component.controllers.map((controller) => (
-          <div key={controller.title}>
-            <h2>{controller.title}</h2>
-            <p>{controller.description}</p>
-            <RenderCode code={controller.code} />
-          </div>
-        ))}
+        <h2>{component?.title}</h2>
+        <p>{component?.description}</p>
+        {component?.controllers?.length > 0 ? (
+          component.controllers.map((controller) => (
+            <div key={controller.title}>
+              <h2>{controller.title}</h2>
+              <p>{controller.description}</p>
+              <RenderCode code={controller.code} />
+            </div>
+          ))
+        ) : (
+          <p>No controllers available</p>
+        )}
       </div>
     );
   }
