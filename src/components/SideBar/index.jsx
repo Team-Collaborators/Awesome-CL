@@ -1,15 +1,15 @@
 import { Link } from "react-router-dom";
 // import styles from "./SideBar.module.css";
 
-export function SideBar({ data, path }) {
+export function SideBar({ className, data }) {
     console.log(data);
     
   return (
-    <ul>
+    <ul className={className}>
       {data.map((elem) => {
         return (
           <li key={elem.title}>
-            <Link to={`${path}/${elem.title}`}>
+            <Link to={`${elem.path}`}>
               {elem.title}
             </Link>
           </li>

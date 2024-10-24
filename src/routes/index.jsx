@@ -1,42 +1,73 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Components } from "../pages/frontend/Components";
-import { Frontend } from "../pages/frontend";
-import { Hooks } from "../pages/frontend/Hooks";
-import { FrontRoutes } from "../pages/frontend/frontRoutes";
-import { Backend } from "../pages/backend";
-import { Configuration } from "../pages/backend/Configuration";
-import { Middleware } from "../pages/backend/Middlewares";
-import { Models } from "../pages/backend/Models";
-import { BackRoutes } from "../pages/backend/backRoutes";
-import { Tests } from "../pages/backend/Test";
-import { Utils } from "../pages/backend/Utils";
-import { HomePage } from "../pages/HomePage";
-import { EnvFile } from "../pages/backend/EnvFile";
-import { Controllers } from "../pages/backend/Controllers";
+import { HomePage } from "../pages/HomePage/HomePage";
 
-export default function MainRoutes() {
+import Navbar from "../components/Navbar/Navbar";
+import Playground from "../components/Playground/Playground";
+import NotFound from "../components/NotFound/NotFound";
+
+import { RenderPages } from "../renderers/RenderPages";
+
+export default function MainRoutes({ isDarkMode, toggleTheme }) {
   return (
     <Router>
-      <Routes>
-      <Route index path="/" element={<HomePage/>} />
-        <Route path="frontend" element={<Frontend />}>
-          <Route path="components" element={<Components />} />
-          <Route path="hooks" element={<Hooks />} />
-          <Route path="frontRoutes" element={<FrontRoutes />} />
-        </Route>
-
-        <Route path="backend" element={<Backend />}>
-          <Route path="configuration" element={<Configuration />} />
-          <Route path="controllers/*" element={<Controllers />} />
-          <Route path="middleware" element={<Middleware />} />
-          <Route path="models" element={<Models />} />
-          <Route path="backRoutes" element={<BackRoutes />} />
-          <Route path="tests" element={<Tests />} />
-          <Route path="utils" element={<Utils />} />
-          <Route path="envFile" element={<EnvFile />} />
-        </Route>
-      </Routes>
+      <Navbar isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
+      <div className="content-wrapper">
+        <Routes>
+          {/* Home page route */}
+          <Route index path="/" element={<HomePage />} />
+          {/* Frontend routes */}
+          <Route path="frontend">
+            <Route
+              path="components/*"
+              element={<RenderPages file={"frontend/components"} />}
+            />
+            <Route
+              path="hooks/*"
+              element={<RenderPages file={"frontend/hooks"} />}
+            />
+            <Route
+              path="routes/*"
+              element={<RenderPages file={"frontend/routes"} />}
+            />
+          </Route>
+          {/* Backend routes */}
+          <Route path="backend">
+            <Route
+              path="configurations/*"
+              element={<RenderPages file={"backend/configurations"} />}
+            />
+            <Route
+              path="controllers/*"
+              element={<RenderPages file={"backend/controllers"} />}
+            />
+            <Route
+              path="middlewares/*"
+              element={<RenderPages file={"backend/middlewares"} />}
+            />
+            <Route
+              path="models/*"
+              element={<RenderPages file={"backend/models"} />}
+            />
+            <Route
+              path="tests/*"
+              element={<RenderPages file={"backend/tests"} />}
+            />
+            <Route
+              path="utils/*"
+              element={<RenderPages file={"backend/utils"} />}
+            />
+            <Route
+              path="envFiles/*"
+              element={<RenderPages file={"backend/envFiles"} />}
+            />
+          </Route>
+          {/* Playground route */}
+          <Route path="playground" element={<Playground />} />
+          {/* Catch-all route for 404 */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </div>
     </Router>
   );
 }

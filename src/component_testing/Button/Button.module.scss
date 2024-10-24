@@ -1,0 +1,93 @@
+/* src/components/Button/Button.scss */
+@use "../variables.scss" as colors;
+
+.button {
+  cursor: pointer;
+}
+
+/* Size Classes */
+
+.size-small {
+  font-size: 0.8rem;
+  padding: 0.5rem 0.8rem;
+}
+
+.size-medium {
+  font-size: 1.2rem;
+  padding: 0.8rem 1.2rem;
+}
+
+.size-large {
+  font-size: 1.8rem;
+  padding: 1.2rem 1.8rem;
+}
+
+/* radius classes */
+
+.radius-none {
+  border-radius: none;
+}
+
+.radius-halfRound {
+  border-radius: 3px;
+}
+
+.radius-rounded {
+  border-radius: 8px;
+}
+
+.radius-full {
+  border-radius: 100%;
+}
+
+/* border-classes */
+
+.border-none {
+  border: none;
+}
+.border-small {
+  border: solid 2px;
+}
+.border-medium {
+  border: solid 5px;
+}
+.border-large {
+  border: solid 10px;
+}
+
+/* color-classes */
+.color-primary {
+  background-color: colors.$primary-base;
+  color: white;
+  border-color: colors.$primary-dark;
+}
+
+.color-default {
+  background-color: colors.$default-base;
+  color: white;
+  border-color: colors.$default-dark;
+}
+
+.color-secondary {
+  background-color: colors.$secondary-base;
+  color: white;
+  border-color: colors.$secondary-base;
+}
+
+.color-success {
+  background-color: colors.$success-base;
+  color: black;
+  border-color: colors.$success-dark;
+}
+
+.color-warning {
+  background-color: colors.$warning-base;
+  color: black;
+  border-color: colors.$warning-dark;
+}
+
+.color-danger {
+  background-color: colors.$danger-base;
+  color: white;
+  border-color: colors.$danger-dark;
+}

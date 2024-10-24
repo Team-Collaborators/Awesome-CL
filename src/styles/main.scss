@@ -1,0 +1,41 @@
+$primary-color: #083748;
+$secondary-color: #083e52;
+$optional-color: #5a2778;
+$background-color: #181818;
+$text-color: #ffffff;
+$font-stack: "Roboto", sans-serif;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Global styles
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: $font-stack;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.content-wrapper {
+  margin-left: 300px; // Ensures all content is pushed to the right from sidebar
+}
