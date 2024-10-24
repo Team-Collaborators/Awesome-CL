@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HomePage } from "../pages/HomePage/HomePage";
 
 import Navbar from "../components/Navbar/Navbar";
-import Playground from "../components/Playground/Playground"
-import NotFound from "../components/NotFound/NotFound"
+import Playground from "../components/Playground/Playground";
+import NotFound from "../components/NotFound/NotFound";
 
 import { RenderPages } from "../renderers/RenderPages";
 
@@ -14,9 +14,9 @@ export default function MainRoutes({ isDarkMode, toggleTheme }) {
       <Navbar isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
       <div className="content-wrapper">
         <Routes>
-            {/* Home page route */}
+          {/* Home page route */}
           <Route index path="/" element={<HomePage />} />
-           {/* Frontend routes */}
+          {/* Frontend routes */}
           <Route path="frontend">
             <Route
               path="components/*"
@@ -31,7 +31,7 @@ export default function MainRoutes({ isDarkMode, toggleTheme }) {
               element={<RenderPages file={"frontend/routes"} />}
             />
           </Route>
-            {/* Backend routes */}
+          {/* Backend routes */}
           <Route path="backend">
             <Route
               path="configurations/*"
@@ -62,9 +62,9 @@ export default function MainRoutes({ isDarkMode, toggleTheme }) {
               element={<RenderPages file={"backend/envFiles"} />}
             />
           </Route>
-           {/* Playground route */}
-           <Route path="playground" element={<Playground />} />
-             {/* Catch-all route for 404 */}
+          {/* Playground route */}
+          <Route path="playground" element={<Playground />} />
+          {/* Catch-all route for 404 */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>

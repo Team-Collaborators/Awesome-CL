@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-import { RenderCode } from "../../renderers/RenderCode";
-// import { RenderCode } from "../RenderCode"; 
-
+import { RenderCode } from "../RenderCode/index";
 
 //This component is rendering the controllers but could also be used on
 //other pages. !! The Json have to be the same as the controller.json
@@ -25,8 +23,15 @@ export function RenderFiles({ data }) {
       <div>
         <h2>{component.title}</h2>
         <p>{component.description}</p>
-        <RenderCode data={component.controllers} />
+        {component.controllers.map((controller) => (
+          <div key={controller.title}>
+            <h2>{controller.title}</h2>
+            <p>{controller.description}</p>
+            <RenderCode code={controller.code} />
+          </div>
+        ))}
       </div>
     );
   }
+  return null;
 }
