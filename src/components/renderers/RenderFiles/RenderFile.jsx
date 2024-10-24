@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-import { RenderCode } from "../RenderCode/index";
+import { RenderCode } from "../RenderCode/RenderCode";
 
 //This component is rendering the controllers but could also be used on
 //other pages. !! The Json have to be the same as the controller.json

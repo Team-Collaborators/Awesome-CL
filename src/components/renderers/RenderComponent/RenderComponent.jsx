@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { RenderCode } from "../RenderCode/index";
+import { RenderCode } from "../RenderCode/RenderCode";
 
 export function RenderComponent({ data }) {
   const { name } = useParams();

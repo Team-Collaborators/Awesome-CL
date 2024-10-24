@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 
 import { Route, Routes } from "react-router-dom";
-import { fetchData } from "../../hooks";
-import { SideBar } from "../../components/SideBar";
-import { RenderFiles } from "../RenderFiles/index";
-import { RenderComponent } from "../RenderComponent/index";
+import { fetchData } from "../../../hooks";
+import { SideBar } from "../../SideBar/Sidebar";
+import { RenderFiles } from "../RenderFiles/RenderFile";
+import { RenderComponent } from "../RenderComponent/RenderComponent";
 
 export function RenderPages({ file }) {
   const { data, loading, error } = fetchData(`/data/${file}.json`);
