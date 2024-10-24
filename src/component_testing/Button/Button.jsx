@@ -5,7 +5,7 @@ const Button = ({
   color = "primary",
   onClick,
   style,
-  size = "medium",
+  size = "md",
   radius = "none",
   border = "none",
   className,
