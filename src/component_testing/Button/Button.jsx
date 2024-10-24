@@ -2,6 +2,7 @@ import styles from "./Button.module.scss";
 
 const Button = ({
   children,
+  aria,
   color = "primary",
   onClick,
   style,
@@ -17,7 +18,7 @@ const Button = ({
   }`.trim();
 
   return (
-    <button onClick={onClick} style={style} className={combinedClassNames}>
+    <button onClick={onClick} style={style} className={combinedClassNames} aria-label={aria}>
       {children}
     </button>
   );
