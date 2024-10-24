@@ -19,18 +19,22 @@ export function RenderComponent({ data }) {
     return (
       <section>
         <h2>Installation</h2>
-        <ul>
-          {component.installation.map((elem) => {
-            return (
-              <li key={elem.name}>
-                <button onClick={() => setInstallation(elem.command)}>
-                  <img src={elem.path} alt={elem.name} />
-                  <span>{elem.name}</span>
-                </button>
-              </li>
-            );
-          })}
-        </ul>
+        {component.installation ? (
+          <ul>
+            {component.installation.map((elem) => {
+              return (
+                <li key={elem.name}>
+                  <button onClick={() => setInstallation(elem.command)}>
+                    <img src={elem.path} alt={elem.name} />
+                    <span>{elem.name}</span>
+                  </button>
+                </li>
+              );
+            })}
+          </ul>
+        ) : (
+          <p>No installation commands available</p>
+        )}
         <RenderCode code={installation} />
       </section>
     );
