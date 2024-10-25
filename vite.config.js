@@ -5,6 +5,13 @@ import path from "path";
 export default defineConfig(({ mode }) => {
   if (mode === "build-library") {
     return {
+      css: {
+        preprocessorOptions: {
+          scss: {
+            api: "modern-compiler",
+          },
+        },
+      },
       build: {
         lib: {
           entry: "./src/library/exports.js", // Entry point for the library
@@ -27,6 +34,13 @@ export default defineConfig(({ mode }) => {
   }
 
   return {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: "modern-compiler",
+        },
+      },
+    },
     build: {
       outDir: "docs-dist", // Output folder for the documentation site
     },
