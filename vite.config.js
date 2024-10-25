@@ -5,6 +5,13 @@ import path from "path";
 export default defineConfig(({ mode }) => {
   if (mode === "build-library") {
     return {
+      css: {
+        preprocessorOptions: {
+          scss: {
+            api: "modern-compiler",
+          },
+        },
+      },
       build: {
         lib: {
           entry: "./src/library/exports.js", // Entry point for the library
