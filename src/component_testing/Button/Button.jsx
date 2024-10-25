@@ -12,7 +12,7 @@ const Button = ({
   border = "none",
   className,
 }) => {
-  // join all classnames together
+  // join all classnames together, trim extra white space
   const combinedClassNames = `${styles.button} ${styles[`border-${border}`]} ${
     styles[`radius-${radius}`]
   } ${styles[`color-${color}`]} ${styles[`size-${size}`]} ${
