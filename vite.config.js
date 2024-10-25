@@ -27,6 +27,13 @@ export default defineConfig(({ mode }) => {
   }
 
   return {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: "modern-compiler",
+        },
+      },
+    },
     build: {
       outDir: "docs-dist", // Output folder for the documentation site
     },
