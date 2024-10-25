@@ -22,7 +22,3 @@ src/
 | |-- main.scss
 |-- App.jsx
 |-- main.jsx
-
-test
-another test
-and another one lol
