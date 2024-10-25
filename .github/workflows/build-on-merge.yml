@@ -29,6 +29,8 @@ jobs:
 
       - name: Commit build files
         run: |
+          git config --global user.email "kristin.stoecker@dci-student.org"
+          git config --global user.name "kwossi"
           git add .
           git commit -m "Add built files"
           git push
