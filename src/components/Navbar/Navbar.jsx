@@ -99,7 +99,7 @@ const Navbar = ({ toggleTheme }) => {
         </li>
 
       </ul>
-      <Button>Playground</Button>
+  
     </nav>
     
   );
