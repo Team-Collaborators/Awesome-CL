@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./Navbar.scss";
 import logo1 from "../../assets/images/t-logo.png";
 
-// import { Button } from "../../component_testing/Button";
+import {Button} from "../../component_testing/Button/Button"
 import { FaSun, FaMoon } from "react-icons/fa";
 
 const Navbar = ({ toggleTheme }) => {
@@ -91,8 +91,17 @@ const Navbar = ({ toggleTheme }) => {
             </ul>
           )}
         </li>
+        <li>
+          <div className="nav-link">
+            <Link to="/playground">Playground</Link>
+            
+          </div>
+        </li>
+
       </ul>
+      <Button>Playground</Button>
     </nav>
+    
   );
 };
 
