@@ -30,7 +30,12 @@ const Playground = () => {
         >
           Custom Styled Button
         </Button>
+         {/* Test div component styled with Tailwind only */}
         <TestTailwind/>
+         {/* Test div component combined styling with Tailwind and props*/}
+         <Button
+         border="xl" radius="full" className="hover:bg-pink-500"
+         >Button component Button props and Tailwind style</Button> 
       </div>
     </div>
   );
