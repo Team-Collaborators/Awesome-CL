@@ -18,7 +18,7 @@ export function RenderComponent({ data }) {
       setComponent(data[0]);
     }
   }, [name, data]);
-  
+
   if (component) {
     return (
       <>
@@ -30,44 +30,64 @@ export function RenderComponent({ data }) {
           <section>
             <h2>Installation</h2>
             {component.installation ? (
-              <ul>
-                {component.installation.map((elem) => {
-                  return (
-                    <li key={elem.name}>
-                      <button onClick={() => setInstallation(elem.command)}>
-                        <img src={elem.path} alt={elem.name} />
-                        <span>{elem.name}</span>
-                      </button>
-                    </li>
-                  );
-                })}
-              </ul>
+              <>
+                <ul>
+                  {component.installation.map((elem) => {
+                    return (
+                      <li key={elem.name}>
+                        <button onClick={() => setInstallation(elem.command)}>
+                          <img src={elem.path} alt={elem.name} />
+                          <span>{elem.name}</span>
+                        </button>
+                      </li>
+                    );
+                  })}
+                </ul>
+                <RenderCode code={installation} />
+              </>
             ) : (
               <p>No installation commands available</p>
             )}
-            <RenderCode code={installation} />
           </section>
           <section>
             <h2>Import</h2>
-            <p>{component.import.description}</p>
-            <RenderCode code={component.import.code} />
+            {component.import ? (
+              <>
+                <p>{component.import.description}</p>
+                <RenderCode code={component.import.code} />
+              </>
+            ) : (
+              <p>No Import commands available</p>
+            )}
           </section>
           <section>
             <h2>Usage</h2>
-            {component.examples.map((example, index)=> {
-              return(
-                <li key={index}>
-                  <h2>{example.title}</h2>
-                  <ExampleViewer example={example}/>
-
-                </li>
-              )
-            })}
+            {component.examples ? (
+              component.examples.map((example, index) => {
+                return (
+                  <li key={index}>
+                    <h2>{example.title}</h2>
+                    <ExampleViewer example={example} />
+                  </li>
+                );
+              })
+            ) : (
+              <p>No Usage commands available</p>
+            )}
           </section>
           <section>
             <h2>API</h2>
-            <h3>{component.propsTable.title}</h3>
-            <Table headers={component.propsTable.headers} rows={component.propsTable.rows} />
+            {component.propsTable ? (
+              <>
+                <h3>{component.propsTable.title}</h3>
+                <Table
+                  headers={component.propsTable.headers}
+                  rows={component.propsTable.rows}
+                />
+              </>
+            ) : (
+              <p>No API commands available</p>
+            )}
           </section>
         </main>
       </>

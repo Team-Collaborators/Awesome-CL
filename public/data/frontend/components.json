@@ -7,27 +7,27 @@
       {
         "name": "CLI",
         "command": "cli-command-to-install",
-        "path": "relative/path/to/cli-icon.png"
+        "path": "/icons/cube-solid.svg"
       },
       {
         "name": "npm",
         "command": "npm install your-library",
-        "path": "relative/path/to/npm-icon.png"
+        "path": "/icons/npm-brands-solid.svg" 
       },
       {
         "name": "yarn",
         "command": "yarn add your-library",
-        "path": "relative/path/to/yarn-icon.png"
+        "path": "/icons/yarn-brands-solid.svg"
       },
       {
         "name": "pnpm",
         "command": "pnpm add your-library",
-        "path": "relative/path/to/pnpm-icon.png"
+        "path": "/icons/cubes-solid.svg"
       },
       {
         "name": "bun",
         "command": "bun add your-library",
-        "path": "relative/path/to/bun-icon.png"
+        "path": "/icons/lemon-regular.svg"
       }
     ],
     "import": {
