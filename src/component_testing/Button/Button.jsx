@@ -19,7 +19,6 @@ const Button = ({
   ${styles[`radius-${radius}`]} 
   ${styles[`color-${color}`]} 
   ${styles[`size-${size}`]} 
-  //* ${className || ""}*//
   `.trim();
 
   // Final class names with Tailwind/global classes appended last for easy overriding
