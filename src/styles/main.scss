@@ -1,6 +1,7 @@
-$primary-color: #083748;
-$secondary-color: #083e52;
-$optional-color: #5a2778;
+// $primary-color: #083748;
+$primary-color: #0e314c;
+$secondary-color: #1764a0;
+$optional-color: #0dc8db;
 $background-color: #181818;
 $text-color: #ffffff;
 $font-stack: "Roboto", sans-serif;
@@ -38,4 +39,17 @@ a {
 
 .content-wrapper {
   margin-left: 300px; // Ensures all content is pushed to the right from sidebar
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  // Ensure content pushes footer down
 }
