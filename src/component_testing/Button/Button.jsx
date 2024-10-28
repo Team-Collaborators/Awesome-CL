@@ -1,5 +1,6 @@
 import styles from "./Button.module.scss";
 
+// define component and props, give default for props
 const Button = ({
   children,
   aria,
@@ -11,6 +12,7 @@ const Button = ({
   border = "none",
   className="",
 }) => {
+
 
  // Combine CSS module class names with any global Tailwind classes passed as props
   const combinedClassNames = `
@@ -24,6 +26,7 @@ const Button = ({
   // Final class names with Tailwind/global classes appended last for easy overriding
   const finalClassNames = `${combinedClassNames} ${className}`.trim();
 
+  // props that are not part of the predefined styling options need to be passed in the component
   return (
     <button 
     onClick={onClick} 

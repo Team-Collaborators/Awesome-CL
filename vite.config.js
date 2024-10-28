@@ -19,6 +19,8 @@ export default defineConfig(({ mode }) => {
           formats: ["es", "cjs"],
           fileName: (format) => `framework.${format}.js`,
         },
+        cssCodeSplit: false,
+        emptyOutDir: true,
         rollupOptions: {
           external: ["react", "react-dom"],
           output: {

@@ -2,6 +2,14 @@
   "name": "framework",
   "private": true,
   "version": "0.0.0",
+  "main": "./dist/framework.cjs.js",
+  "module": "./dist/framework.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/framework.es.js",
+      "require": "./dist/framework.cjs.js"
+    }
+  },
   "type": "module",
   "scripts": {
     "dev": "vite",
