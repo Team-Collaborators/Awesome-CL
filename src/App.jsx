@@ -4,6 +4,7 @@ import MainRoutes from "./routes";
 import "./styles/theme.scss";
 import "./styles/main.scss";
 
+
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
 

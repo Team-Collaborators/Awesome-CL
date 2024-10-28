@@ -1,6 +1,7 @@
 import React from "react";
 import "./Playground.scss";
 import Button from "../../component_testing/Button/Button";
+import TestTailwind from "../../component_testing/TestTailwind";
 
 const Playground = () => {
   return (
@@ -29,6 +30,12 @@ const Playground = () => {
         >
           Custom Styled Button
         </Button>
+         {/* Test div component styled with Tailwind only */}
+        <TestTailwind/>
+         {/* Test button styled with Tailwind and props*/}
+         <Button
+         border="xl" radius="full" className="hover:bg-pink-200 hover:text-gray-900"
+         >Button component Button props and Tailwind style</Button> 
       </div>
     </div>
   );

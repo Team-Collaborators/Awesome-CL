@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import "./Navbar.scss";
-import logo1 from "../../assets/images/t-logo.png";
+import logo1 from "../../assets/images/cl-awesome-logo.png";
 
-// import { Button } from "../../component_testing/Button";
+// import {Button} from "../../component_testing/Button/Button"
 import { FaSun, FaMoon } from "react-icons/fa";
 
 const Navbar = ({ toggleTheme }) => {
@@ -41,10 +41,7 @@ const Navbar = ({ toggleTheme }) => {
         <li>
           <div onClick={toggleFrontendDropdown} className="dropdown-toggle">
             Frontend
-
             <span className="arrow">{frontendDropdownVisible ? "▲" : "▼"}</span>
-
- 
           </div>
           {frontendDropdownVisible && (
             <ul className="dropdown-menu">
@@ -91,8 +88,17 @@ const Navbar = ({ toggleTheme }) => {
             </ul>
           )}
         </li>
+        <li>
+          <div className="nav-link">
+            <Link to="/playground">Playground</Link>
+            
+          </div>
+        </li>
+
       </ul>
+  
     </nav>
+    
   );
 };
 

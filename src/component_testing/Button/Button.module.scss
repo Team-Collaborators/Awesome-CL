@@ -7,6 +7,9 @@
 
 .button {
   cursor: pointer;
+  &:hover {
+    border: none;
+  }
 }
 
 /* Size Classes */
