@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Outlet } from "react-router-dom";
 
 import "./HomePage.scss";
-import logo from "../../assets/images/logo1.png";
+import logo from "../../assets/images/A-logo.png";
 
 export function HomePage() {
   return (
