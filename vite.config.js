@@ -2,9 +2,16 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
 
-export default defineConfig(({ command }) => {
-  if (command === "build-library") {
+export default defineConfig(({ mode }) => {
+  if (mode === "build-library") {
     return {
+      css: {
+        preprocessorOptions: {
+          scss: {
+            api: "modern-compiler",
+          },
+        },
+      },
       build: {
         lib: {
           entry: "./src/library/exports.js", // Entry point for the library
@@ -12,6 +19,8 @@ export default defineConfig(({ command }) => {
           formats: ["es", "cjs"],
           fileName: (format) => `framework.${format}.js`,
         },
+        cssCodeSplit: false,
+        emptyOutDir: true,
         rollupOptions: {
           external: ["react", "react-dom"],
           output: {
@@ -27,6 +36,13 @@ export default defineConfig(({ command }) => {
   }
 
   return {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: "modern-compiler",
+        },
+      },
+    },
     build: {
       outDir: "docs-dist", // Output folder for the documentation site
     },

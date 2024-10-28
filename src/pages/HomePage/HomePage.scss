@@ -1,8 +1,9 @@
-@import "../../styles/main.scss";
+@use "../../styles/main.scss" as styles;
 
 .container {
   display: flex;
-  height: 100vh;
+  flex-direction: column;
+  min-height: 100vh;
   margin-left: -50px;
   margin-top: 0;
 }
@@ -14,7 +15,7 @@
   justify-content: center;
   align-items: center;
   padding: 20px;
-  background: linear-gradient(135deg, #292929, #121212);
+  // background: linear-gradient(135deg, #292929, #121212);
   text-align: center;
 
   .logo {
@@ -28,13 +29,13 @@
     margin-top: 10px;
     font-size: 3.5rem;
     font-weight: 300;
-    color: $secondary-color;
+    color: styles.$secondary-color;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
 
   .description {
     font-size: 1.2rem;
-    color: $text-color;
+    color: var(--text-color);
     margin-top: 20px;
     padding: 0 20px;
     max-width: 600px;

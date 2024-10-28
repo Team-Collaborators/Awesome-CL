@@ -2,9 +2,12 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import "./Navbar.scss";
-import logo1 from "../../assets/images/t-logo.png";
+import logo1 from "../../assets/images/cl-awesome-logo.png";
 
-const Navbar = () => {
+// import {Button} from "../../component_testing/Button/Button"
+import { FaSun, FaMoon } from "react-icons/fa";
+
+const Navbar = ({ toggleTheme }) => {
   const [frontendDropdownVisible, setFrontendDropdownVisible] = useState(false);
   const [backendDropdownVisible, setBackendDropdownVisible] = useState(false);
 
@@ -25,13 +28,20 @@ const Navbar = () => {
         <li>
           <div className="nav-link">
             <Link to="/">Home</Link>
+            <button onClick={toggleTheme} className="theme-toggle-button">
+              {/* Show sun icon for dark mode, moon icon for light mode */}
+              {document.body.classList.contains("dark-theme") ? (
+                <FaSun />
+              ) : (
+                <FaMoon />
+              )}
+            </button>
           </div>
         </li>
         <li>
           <div onClick={toggleFrontendDropdown} className="dropdown-toggle">
             Frontend
-            <span className="arrow">{backendDropdownVisible ? "▲" : "▼"}</span>
-
+            <span className="arrow">{frontendDropdownVisible ? "▲" : "▼"}</span>
           </div>
           {frontendDropdownVisible && (
             <ul className="dropdown-menu">
@@ -78,8 +88,17 @@ const Navbar = () => {
             </ul>
           )}
         </li>
+        <li>
+          <div className="nav-link">
+            <Link to="/playground">Playground</Link>
+            
+          </div>
+        </li>
+
       </ul>
+  
     </nav>
+    
   );
 };
 
