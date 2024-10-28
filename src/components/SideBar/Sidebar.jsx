@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 // import styles from "./SideBar.module.css";
 
-export function SideBar({ className, data }) {
-    console.log(data);
+export function SideBar({ className= "", data }) {
     
   return (
     <ul className={className}>

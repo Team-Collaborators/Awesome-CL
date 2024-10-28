@@ -2,7 +2,7 @@ import styles from "./Button.module.scss";
 
 const Button = ({
   children,
-  aria,
+  aria = "button",
   color = "primary",
   onClick,
   style,

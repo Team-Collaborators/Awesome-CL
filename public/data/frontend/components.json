@@ -1,8 +1,8 @@
 [
   {
     "title": "Button",
+    "path": "/frontend/components/button",
     "description": "A versatile button component that can be used in different styles and sizes.",
-    
     "installation": [
       {
         "name": "CLI",
@@ -30,66 +30,138 @@
         "path": "relative/path/to/bun-icon.png"
       }
     ],
-    
     "import": {
       "code": "import { Button } from 'your-library';",
       "description": "This code shows how to import the Button component from your library."
     },
-    
-    "examples": {
-      "code": "<Button size='large' color='primary'>Click Me</Button>",
-      "description": "Basic usage of the Button component with size and color props.",
-      "renderVariants": true,
-      "variants": [
-        {
-          "size": "small",
-          "color": "secondary",
-          "label": "Small Button"
+    "examples": [
+      {
+        "title": "Default",
+        "component": {
+          "type": "Button",
+          "props": {},
+          "children": "Default Button"
         },
-        {
-          "size": "large",
-          "color": "primary",
-          "label": "Large Button"
-        }
-      ]
-    },
-  
+        "code": "import { Button } from 'your-library';\n\nfunction App() {\n  return (\n    <Button>\n      Default Button\n    </Button>\n  );\n}"
+      },
+      {
+        "title": "Sizes",
+        "component": {
+          "type": "Button",
+          "props": {
+            "size": "lg"
+          },
+          "children": "Large Button"
+        },
+        "code": "import { Button } from 'your-library';\n\nfunction App() {\n  return (\n    <>\n      <Button size=\"sm\">Small Button</Button>\n      <Button size=\"md\">Medium Button</Button>\n      <Button size=\"lg\">Large Button</Button>\n    </>\n  );\n}"
+      },
+      {
+        "title": "Radius",
+        "component": {
+          "type": "Button",
+          "props": {
+            "radius": "md"
+          },
+          "children": "Button with Medium Radius"
+        },
+        "code": "import { Button } from 'your-library';\n\nfunction App() {\n  return (\n    <>\n      <Button radius=\"none\">No Radius</Button>\n      <Button radius=\"sm\">Small Radius</Button>\n      <Button radius=\"md\">Medium Radius</Button>\n      <Button radius=\"lg\">Large Radius</Button>\n      <Button radius=\"full\">Full Radius</Button>\n    </>\n  );\n}"
+      },
+      {
+        "title": "Colors",
+        "component": {
+          "type": "Button",
+          "props": {
+            "color": "primary"
+          },
+          "children": "Primary Button"
+        },
+        "code": "import { Button } from 'your-library';\n\nfunction App() {\n  return (\n    <>\n      <Button color=\"primary\">Primary Button</Button>\n      <Button color=\"secondary\">Secondary Button</Button>\n      <Button color=\"success\">Success Button</Button>\n      <Button color=\"warning\">Warning Button</Button>\n      <Button color=\"danger\">Danger Button</Button>\n    </>\n  );\n}"
+      },
+      {
+        "title": "Variants",
+        "component": {
+          "type": "Button",
+          "props": {
+            "border": "md"
+          },
+          "children": "Button with Medium Border"
+        },
+        "code": "import { Button } from 'your-library';\n\nfunction App() {\n  return (\n    <>\n      <Button border=\"none\">No Border</Button>\n      <Button border=\"xs\">Extra Small Border</Button>\n      <Button border=\"sm\">Small Border</Button>\n      <Button border=\"md\">Medium Border</Button>\n      <Button border=\"lg\">Large Border</Button>\n    </>\n  );\n}"
+      }
+    ],
     "propsTable": {
-      "title": "Props",
+      "title": " Button Props",
       "description": "List of all props supported by the Button component.",
-      "columns": ["Prop Name", "Type", "Description", "Default Value"],
+      "headers": [
+        "Prop Name",
+        "Type",
+        "Description",
+        "Default Value"
+      ],
       "rows": [
         {
-          "propName": "size",
+          "propName": "children",
+          "type": "node",
+          "description": "Content to be displayed inside the button.",
+          "defaultValue": "null"
+        },
+        {
+          "propName": "aria",
           "type": "string",
-          "description": "Defines the size of the button. Options are: 'small', 'medium', 'large'.",
-          "defaultValue": "medium"
+          "description": "Aria label for accessibility. Provides additional context for screen readers.",
+          "defaultValue": "'button'"
         },
         {
           "propName": "color",
           "type": "string",
-          "description": "Defines the color of the button. Options are: 'primary', 'secondary', 'success', 'danger'.",
-          "defaultValue": "primary"
-        },
-        {
-          "propName": "disabled",
-          "type": "boolean",
-          "description": "Disables the button when set to true.",
-          "defaultValue": "false"
+          "description": "Defines the color of the button. Options are: 'primary', 'secondary', 'success', 'warning', 'danger'.",
+          "defaultValue": "'primary'"
         },
         {
           "propName": "onClick",
           "type": "function",
           "description": "Callback function triggered when the button is clicked.",
           "defaultValue": "undefined"
+        },
+        {
+          "propName": "style",
+          "type": "object",
+          "description": "Inline styles to be applied to the button.",
+          "defaultValue": "undefined"
+        },
+        {
+          "propName": "size",
+          "type": "string",
+          "description": "Defines the size of the button. Options are: 'sm', 'md', 'lg'.",
+          "defaultValue": "'md'"
+        },
+        {
+          "propName": "radius",
+          "type": "string",
+          "description": "Defines the border-radius of the button. Options are: 'none', 'sm', 'md', 'lg', 'full'.",
+          "defaultValue": "'none'"
+        },
+        {
+          "propName": "border",
+          "type": "string",
+          "description": "Defines the border width of the button. Options are: 'none', 'xs', 'sm', 'md', 'lg', 'xl'.",
+          "defaultValue": "'none'"
+        },
+        {
+          "propName": "className",
+          "type": "string",
+          "description": "Additional CSS class names to apply to the button.",
+          "defaultValue": "undefined"
         }
       ]
     },
-  
     "eventsTable": {
       "title": "Events",
       "description": "List of all events emitted by the Button component.",
-      "columns": ["Event Name", "Description"],
+      "columns": [
+        "Event Name",
+        "Description"
+      ],
       "rows": [
         {
           "eventName": "onClick",
@@ -97,7 +169,6 @@
         }
       ]
     },
-  
     "accessibility": {
       "description": "Accessibility considerations for the Button component.",
       "ariaRoles": [
@@ -112,6 +183,4 @@
       ]
     }
   }
-  
-  
 ]
