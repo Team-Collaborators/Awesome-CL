@@ -94,4 +94,21 @@
       }
     }
   }
+
+  .playground-btn {
+    background: radial-gradient(
+      circle,
+      styles.$optional-color,
+      styles.$secondary-color
+    );
+    box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.3),
+      0px 5px 10px rgba(0, 0, 0, 0.102);
+    margin-top: auto;
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transition for both transform and shadow */
+
+    // &:hover {
+    //   transform: translateY(-3px);
+    //   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3), 0px 4px 10px rgba(0, 0, 0, 0.2);
+    // }
+  }
 }
