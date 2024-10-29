@@ -10,6 +10,9 @@
       "require": "./dist/framework.cjs.js"
     }
   },
+  "files": [
+    "dist"
+  ],
   "type": "module",
   "scripts": {
     "dev": "vite",
