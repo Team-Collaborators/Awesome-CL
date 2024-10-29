@@ -42,11 +42,9 @@ export function RenderComponent({ data }) {
                     );
                   })}
                 </ul>
-                
-                  <div style={{ marginTop: "20px" }}>
-                    <RenderCode code={installation} />
-                  </div>
-                
+                <div style={{ marginTop: "20px" }}>
+                  <RenderCode code={installation} />
+                </div>
               </>
             ) : null}
           </section>

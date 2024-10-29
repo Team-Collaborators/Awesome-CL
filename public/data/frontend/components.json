@@ -46,7 +46,7 @@
             "children": "Button"
           }
         ],
-        "code": "import { Button } from 'your-library';\n\nfunction App() {\n  return (\n    <Button>\n      Default Button\n    </Button>\n  );\n}"
+        "code": "import { Button } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Button>\n      Button\n    </Button>\n  );\n}"
       },
       {
         "title": "Sizes",
@@ -54,26 +54,32 @@
           {
             "type": "Button",
             "props": {
-              "size": "sm"
+              "size": "sm",
+              "radius": "sm",
+              "color": "secondary"
             },
             "children": "Button"
           },
           {
             "type": "Button",
             "props": {
-              "size": "md"
+              "size": "md",
+              "radius": "sm",
+              "color": "secondary"
             },
             "children": "Button"
           },
           {
             "type": "Button",
             "props": {
-              "size": "lg"
+              "size": "lg",
+              "radius": "sm",
+              "color": "secondary"
             },
             "children": "Button"
           }
         ],
-        "code": "import { Button } from 'your-library';\n\nfunction App() {\n  return (\n    <>\n      <Button size=\"sm\">Small Button</Button>\n      <Button size=\"md\">Medium Button</Button>\n      <Button size=\"lg\">Large Button</Button>\n    </>\n  );\n}"
+        "code": "import { Button } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Button size=\"sm\">Button</Button>\n      <Button size=\"md\">MButton</Button>\n      <Button size=\"lg\">Button</Button>\n    </>\n  );\n}"
       },
       {
         "title": "Radius",
@@ -81,26 +87,50 @@
           {
             "type": "Button",
             "props": {
-              "size": "sm"
+              "size": "sm",
+              "radius": "none",
+              "color": "secondary"
             },
             "children": "Button"
           },
           {
             "type": "Button",
             "props": {
-              "size": "md"
+              "size": "sm",
+              "radius": "sm",
+              "color": "secondary"
             },
             "children": "Button"
           },
           {
             "type": "Button",
             "props": {
-              "size": "lg"
+              "size": "sm",
+              "radius": "md",
+              "color": "secondary"
+            },
+            "children": "Button"
+          },
+          {
+            "type": "Button",
+            "props": {
+              "size": "sm",
+              "radius": "lg",
+              "color": "secondary"
+            },
+            "children": "Button"
+          },
+          {
+            "type": "Button",
+            "props": {
+              "size": "sm",
+              "radius": "full",
+              "color": "secondary"
             },
             "children": "Button"
           }
         ],
-        "code": "import { Button } from 'your-library';\n\nfunction App() {\n  return (\n    <>\n      <Button radius=\"none\">No Radius</Button>\n      <Button radius=\"sm\">Small Radius</Button>\n      <Button radius=\"md\">Medium Radius</Button>\n      <Button radius=\"lg\">Large Radius</Button>\n      <Button radius=\"full\">Full Radius</Button>\n    </>\n  );\n}"
+        "code": "import { Button } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Button radius=\"none\">Button</Button>\n      <Button radius=\"sm\">Button</Button>\n      <Button radius=\"md\">Button</Button>\n      <Button radius=\"lg\">Button</Button>\n      <Button radius=\"full\">Button</Button>\n    </>\n  );\n}"
       },
       {
         "title": "Colors",
@@ -108,26 +138,59 @@
           {
             "type": "Button",
             "props": {
-              "size": "sm"
+              "size": "sm",
+              "radius": "md",
+              "color": "default"
             },
             "children": "Button"
           },
           {
             "type": "Button",
             "props": {
-              "size": "md"
+              "size": "sm",
+              "radius": "md",
+              "color": "primary"
             },
             "children": "Button"
           },
           {
             "type": "Button",
             "props": {
-              "size": "lg"
+              "size": "sm",
+              "radius": "md",
+              "color": "secondary"
+            },
+            "children": "Button"
+          },
+          {
+            "type": "Button",
+            "props": {
+              "size": "sm",
+              "radius": "md",
+              "color": "success"
+            },
+            "children": "Button"
+          },
+          {
+            "type": "Button",
+            "props": {
+              "size": "sm",
+              "radius": "md",
+              "color": "warning"
+            },
+            "children": "Button"
+          },
+          {
+            "type": "Button",
+            "props": {
+              "size": "sm",
+              "radius": "md",
+              "color": "danger"
             },
             "children": "Button"
           }
         ],
-        "code": "import { Button } from 'your-library';\n\nfunction App() {\n  return (\n    <>\n      <Button color=\"primary\">Primary Button</Button>\n      <Button color=\"secondary\">Secondary Button</Button>\n      <Button color=\"success\">Success Button</Button>\n      <Button color=\"warning\">Warning Button</Button>\n      <Button color=\"danger\">Danger Button</Button>\n    </>\n  );\n}"
+        "code": "import { Button } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Button color=\"default\">Button</Button>\n      <Button color=\"primary\">Button</Button>\n      <Button color=\"secondary\">Button</Button>\n      <Button color=\"success\">Button</Button>\n      <Button color=\"warning\">Button</Button>\n      <Button color=\"danger\">Button</Button>\n    </>\n  );\n}"
       },
       {
         "title": "Variants",
@@ -135,26 +198,68 @@
           {
             "type": "Button",
             "props": {
-              "size": "sm"
+              "size": "sm",
+              "radius": "md",
+              "color": "secondary"
             },
             "children": "Button"
           },
           {
             "type": "Button",
             "props": {
-              "size": "md"
+              "size": "sm",
+              "radius": "md",
+              "color": "secondary"
             },
             "children": "Button"
           },
           {
             "type": "Button",
             "props": {
-              "size": "lg"
+              "size": "sm",
+              "radius": "md",
+              "color": "secondary"
+            },
+            "children": "Button"
+          },
+          {
+            "type": "Button",
+            "props": {
+              "size": "sm",
+              "radius": "md",
+              "color": "secondary"
+            },
+            "children": "Button"
+          },
+          {
+            "type": "Button",
+            "props": {
+              "size": "sm",
+              "radius": "md",
+              "color": "secondary"
+            },
+            "children": "Button"
+          },
+          {
+            "type": "Button",
+            "props": {
+              "size": "sm",
+              "radius": "md",
+              "color": "secondary"
+            },
+            "children": "Button"
+          },
+          {
+            "type": "Button",
+            "props": {
+              "size": "sm",
+              "radius": "md",
+              "color": "secondary"
             },
             "children": "Button"
           }
         ],
-        "code": "import { Button } from 'your-library';\n\nfunction App() {\n  return (\n    <>\n      <Button border=\"none\">No Border</Button>\n      <Button border=\"xs\">Extra Small Border</Button>\n      <Button border=\"sm\">Small Border</Button>\n      <Button border=\"md\">Medium Border</Button>\n      <Button border=\"lg\">Large Border</Button>\n    </>\n  );\n}"
+        "code": "import { Button } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Button border=\"none\">No Border</Button>\n      <Button border=\"xs\">Extra Small Border</Button>\n      <Button border=\"sm\">Small Border</Button>\n      <Button border=\"md\">Medium Border</Button>\n      <Button border=\"lg\">Large Border</Button>\n    </>\n  );\n}"
       }
     ],
     "propsTable": {
