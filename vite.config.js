@@ -3,31 +3,15 @@ import react from "@vitejs/plugin-react";
 import path from "path";
 import postcssPresetEnv from "postcss-preset-env";
 
-function stripDevCSS() {
-  return {
-    name: "strip-dev-css",
-    resolveId(source) {
-      return source === "virtual-module" ? source : null;
-    },
-    renderStart(outputOptions, inputOptions) {
-      const outDir = outputOptions.dir;
-      const cssDir = path.resolve(outDir, "css");
-      fs.rmdir(cssDir, { recursive: true }, () =>
-        console.log(`Deleted ${cssDir}`)
-      );
-    },
-  };
-}
-
 export default defineConfig(({ mode }) => {
   if (mode === "build-library") {
     return {
       build: {
         lib: {
           entry: "./src/library/exports.js", // Entry point for the library
-          name: "Framework",
+          name: "AwesomeCL",
           formats: ["es", "cjs"],
-          fileName: (format) => `framework.${format}.js`,
+          fileName: (format) => `awesomecl.${format}.js`,
         },
         cssCodeSplit: false,
         emptyOutDir: true,
