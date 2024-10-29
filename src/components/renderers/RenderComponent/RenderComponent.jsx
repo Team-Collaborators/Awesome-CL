@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { RenderCode } from "../RenderCode/RenderCode";
-import Button from "../../../component_testing/Button/Button";
 import ExampleViewer from "../../ExampleViewer/ExampleViewer";
 import Table from "../../Table/Table";
 
@@ -43,11 +42,13 @@ export function RenderComponent({ data }) {
                     );
                   })}
                 </ul>
-                <RenderCode code={installation} />
+                
+                  <div style={{ marginTop: "20px" }}>
+                    <RenderCode code={installation} />
+                  </div>
+                
               </>
-            ) : (
-              <p>No installation commands available</p>
-            )}
+            ) : null}
           </section>
           <section>
             <h2>Import</h2>
@@ -56,24 +57,22 @@ export function RenderComponent({ data }) {
                 <p>{component.import.description}</p>
                 <RenderCode code={component.import.code} />
               </>
-            ) : (
-              <p>No Import commands available</p>
-            )}
+            ) : null}
           </section>
           <section>
             <h2>Usage</h2>
-            {component.examples ? (
-              component.examples.map((example, index) => {
-                return (
-                  <li key={index}>
-                    <h2>{example.title}</h2>
-                    <ExampleViewer example={example} />
-                  </li>
-                );
-              })
-            ) : (
-              <p>No Usage commands available</p>
-            )}
+            <ul>
+              {component.examples
+                ? component.examples.map((example, index) => {
+                    return (
+                      <li key={index}>
+                        <h2>{example.title}</h2>
+                        <ExampleViewer example={example} />
+                      </li>
+                    );
+                  })
+                : null}
+            </ul>
           </section>
           <section>
             <h2>API</h2>
@@ -85,9 +84,28 @@ export function RenderComponent({ data }) {
                   rows={component.propsTable.rows}
                 />
               </>
-            ) : (
-              <p>No API commands available</p>
-            )}
+            ) : null}
+          </section>
+          <section>
+            {component.eventsTable ? (
+              <>
+                <h2>{component.eventsTable.title}</h2>
+                <p>{component.eventsTable.description}</p>
+                <Table
+                  headers={component.eventsTable.headers}
+                  rows={component.eventsTable.rows}
+                />
+              </>
+            ) : null}
+          </section>
+          <section>
+            {component.accessibility ? (
+              <>
+                <h2>{component.accessibility.title}</h2>
+                <p>{component.accessibility.description}</p>
+                <Table rows={component.accessibility.ariaRoles} />
+              </>
+            ) : null}
           </section>
         </main>
       </>
