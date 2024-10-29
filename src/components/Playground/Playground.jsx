@@ -2,6 +2,7 @@ import React from "react";
 import "./Playground.scss";
 import Button from "../../component_testing/Button/Button";
 import TestTailwind from "../../component_testing/TestTailwind";
+import Navbar from "../Navbar/Navbar";
 
 const Playground = () => {
   return (
@@ -40,6 +41,7 @@ const Playground = () => {
         >
           Button component Button props and Tailwind style
         </Button>
+
       </div>
     </section>
   );
