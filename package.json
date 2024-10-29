@@ -11,8 +11,8 @@
     }
   },
   "files": [
-    "dist/framework.cjs.js",
-    "dist/framework.es.js",
+    "dist/awesomecl.cjs.js",
+    "dist/awesomecl.es.js",
     "dist/style.css"
   ],
   "type": "module",
