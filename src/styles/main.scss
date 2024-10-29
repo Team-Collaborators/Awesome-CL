@@ -1,7 +1,4 @@
-
 // $primary-color: #083748;
-
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,6 +10,24 @@ $optional-color: #5a2778;
 $background-color: #181818;
 $text-color: #ffffff;
 $font-stack: "Roboto", sans-serif;
+
+// define breakpoints map
+$breakpoints: (
+  "xs": 480px,
+  "sm": 576px,
+  "md": 768px,
+  "lg": 1024px,
+  // "lg": 992px,
+  "xl": 1200px,
+  "xxl": 1600px,
+);
+
+// Mixin to use breakpoints
+@mixin media($size) {
+  @media (max-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}
 
 // Mixins
 @mixin flex-center {
@@ -45,10 +60,6 @@ a {
   text-decoration: none;
 }
 
-.content-wrapper {
-  margin-left: 300px; // Ensures all content is pushed to the right from sidebar
-}
-
 .app-container {
   display: flex;
   flex-direction: column;
@@ -59,5 +70,15 @@ a {
   flex: 1;
   display: flex;
   flex-direction: column;
+  margin-left: 280px; // Ensures all content is pushed to the right from sidebar
   // Ensure content pushes footer down
+
+
+  @include media("md") {
+    margin-left: 200px; // Narrow width for iPad view
+  }
+
+  @include media("sm") {
+    margin-left: 0;
+  }
 }
