@@ -11,7 +11,7 @@ $border-radius: 8px;
   padding: 1.5rem;
   background-color: $background-color;
   border-radius: $border-radius;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.265);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   h2 {
     color: $primary-color;
     font-size: 1.5rem;
@@ -41,13 +41,11 @@ $border-radius: 8px;
   }
   //container for either Preview or Code view
   .component-display {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    gap: 1rem;
+   
     padding: 1rem;
     border-radius: $border-radius;
     background-color: #FFFFFF;
+    border: 1px solid $secondary-color;
     &.code-view {
       font-family: "Courier New", monospace;
       font-size: 0.9rem;
@@ -59,7 +57,12 @@ $border-radius: 8px;
   }
 }
 
-
+.component-ul {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 1rem;
+}
 
 
 

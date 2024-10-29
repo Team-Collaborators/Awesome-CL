@@ -29,9 +29,7 @@ export default function ExampleViewer({ example }) {
         }`}
       >
         {showPreview ? (
-          <ul  className={`component-display ${
-            showPreview ? "preview-view" : "code-view"
-          }`}>
+          <ul className="component-ul">
           {example.components.map((component, index)=> {
             const { type, props, children } = component;
             
