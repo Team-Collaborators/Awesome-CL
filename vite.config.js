@@ -3,6 +3,22 @@ import react from "@vitejs/plugin-react";
 import path from "path";
 import postcssPresetEnv from "postcss-preset-env";
 
+function stripDevCSS() {
+  return {
+    name: "strip-dev-css",
+    resolveId(source) {
+      return source === "virtual-module" ? source : null;
+    },
+    renderStart(outputOptions, inputOptions) {
+      const outDir = outputOptions.dir;
+      const cssDir = path.resolve(outDir, "css");
+      fs.rmdir(cssDir, { recursive: true }, () =>
+        console.log(`Deleted ${cssDir}`)
+      );
+    },
+  };
+}
+
 export default defineConfig(({ mode }) => {
   if (mode === "build-library") {
     return {
@@ -15,7 +31,9 @@ export default defineConfig(({ mode }) => {
         },
         cssCodeSplit: false,
         emptyOutDir: true,
+        publicDir: false,
         rollupOptions: {
+          input: "./src/library/exports.js",
           external: ["react", "react-dom"],
           output: {
             globals: {

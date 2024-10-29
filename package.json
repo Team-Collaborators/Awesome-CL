@@ -1,17 +1,19 @@
 {
-  "name": "framework",
+  "name": "AwesomeCL",
   "private": true,
   "version": "0.0.0",
-  "main": "./dist/framework.cjs.js",
-  "module": "./dist/framework.es.js",
+  "main": "./dist/awesomecl.cjs.js",
+  "module": "./dist/awesomecl.es.js",
   "exports": {
     ".": {
-      "import": "./dist/framework.es.js",
-      "require": "./dist/framework.cjs.js"
+      "import": "./dist/awesomecl.es.js",
+      "require": "./dist/awesomecl.cjs.js"
     }
   },
   "files": [
-    "dist"
+    "dist/framework.cjs.js",
+    "dist/framework.es.js",
+    "dist/style.css"
   ],
   "type": "module",
   "scripts": {
