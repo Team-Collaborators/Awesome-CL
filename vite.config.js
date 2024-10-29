@@ -1,17 +1,27 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
+import postcssPresetEnv from "postcss-preset-env";
+
+function stripDevCSS() {
+  return {
+    name: "strip-dev-css",
+    resolveId(source) {
+      return source === "virtual-module" ? source : null;
+    },
+    renderStart(outputOptions, inputOptions) {
+      const outDir = outputOptions.dir;
+      const cssDir = path.resolve(outDir, "css");
+      fs.rmdir(cssDir, { recursive: true }, () =>
+        console.log(`Deleted ${cssDir}`)
+      );
+    },
+  };
+}
 
 export default defineConfig(({ mode }) => {
   if (mode === "build-library") {
     return {
-      css: {
-        preprocessorOptions: {
-          scss: {
-            api: "modern-compiler",
-          },
-        },
-      },
       build: {
         lib: {
           entry: "./src/library/exports.js", // Entry point for the library
@@ -21,7 +31,9 @@ export default defineConfig(({ mode }) => {
         },
         cssCodeSplit: false,
         emptyOutDir: true,
+        publicDir: false,
         rollupOptions: {
+          input: "./src/library/exports.js",
           external: ["react", "react-dom"],
           output: {
             globals: {
@@ -32,6 +44,23 @@ export default defineConfig(({ mode }) => {
         },
       },
       plugins: [react()],
+      css: {
+        preprocessorOptions: {
+          scss: {
+            api: "modern-compiler",
+          },
+        },
+      },
+      postcss: {
+        plugins: [
+          postcssPresetEnv({
+            stage: 0,
+            features: {
+              "custom-properties": true,
+            },
+          }),
+        ],
+      },
     };
   }
 
