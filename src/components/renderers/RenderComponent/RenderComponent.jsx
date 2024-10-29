@@ -42,11 +42,13 @@ export function RenderComponent({ data }) {
                     );
                   })}
                 </ul>
-                <RenderCode code={installation} />
+                
+                  <div style={{ marginTop: "20px" }}>
+                    <RenderCode code={installation} />
+                  </div>
+                
               </>
-            ) : (
-              null
-            )}
+            ) : null}
           </section>
           <section>
             <h2>Import</h2>
@@ -55,25 +57,21 @@ export function RenderComponent({ data }) {
                 <p>{component.import.description}</p>
                 <RenderCode code={component.import.code} />
               </>
-            ) : (
-              null
-            )}
+            ) : null}
           </section>
           <section>
             <h2>Usage</h2>
             <ul>
-            {component.examples ? (
-              component.examples.map((example, index) => {
-                return (
-                  <li key={index}>
-                    <h2>{example.title}</h2>
-                    <ExampleViewer example={example} />
-                  </li>
-                );
-              })
-            ) : (
-              null
-            )}
+              {component.examples
+                ? component.examples.map((example, index) => {
+                    return (
+                      <li key={index}>
+                        <h2>{example.title}</h2>
+                        <ExampleViewer example={example} />
+                      </li>
+                    );
+                  })
+                : null}
             </ul>
           </section>
           <section>
@@ -86,9 +84,7 @@ export function RenderComponent({ data }) {
                   rows={component.propsTable.rows}
                 />
               </>
-            ) : (
-              null
-            )}
+            ) : null}
           </section>
           <section>
             {component.eventsTable ? (
@@ -100,22 +96,16 @@ export function RenderComponent({ data }) {
                   rows={component.eventsTable.rows}
                 />
               </>
-            ) : (
-              null
-            )}
+            ) : null}
           </section>
           <section>
             {component.accessibility ? (
               <>
                 <h2>{component.accessibility.title}</h2>
                 <p>{component.accessibility.description}</p>
-                <Table
-                  rows={component.accessibility.ariaRoles}
-                />
+                <Table rows={component.accessibility.ariaRoles} />
               </>
-            ) : (
-              null
-            )}
+            ) : null}
           </section>
         </main>
       </>
