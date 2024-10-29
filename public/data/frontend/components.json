@@ -12,7 +12,7 @@
       {
         "name": "npm",
         "command": "npm install your-library",
-        "path": "/icons/npm-brands-solid.svg" 
+        "path": "/icons/npm-brands-solid.svg"
       },
       {
         "name": "yarn",
@@ -37,55 +37,123 @@
     "examples": [
       {
         "title": "Default",
-        "component": {
-          "type": "Button",
-          "props": {},
-          "children": "Default Button"
-        },
+        "components": [
+          {
+            "type": "Button",
+            "props": {
+              "size": "sm"
+            },
+            "children": "Button"
+          }
+        ],
         "code": "import { Button } from 'your-library';\n\nfunction App() {\n  return (\n    <Button>\n      Default Button\n    </Button>\n  );\n}"
       },
       {
         "title": "Sizes",
-        "component": {
-          "type": "Button",
-          "props": {
-            "size": "lg"
+        "components": [
+          {
+            "type": "Button",
+            "props": {
+              "size": "sm"
+            },
+            "children": "Button"
           },
-          "children": "Large Button"
-        },
+          {
+            "type": "Button",
+            "props": {
+              "size": "md"
+            },
+            "children": "Button"
+          },
+          {
+            "type": "Button",
+            "props": {
+              "size": "lg"
+            },
+            "children": "Button"
+          }
+        ],
         "code": "import { Button } from 'your-library';\n\nfunction App() {\n  return (\n    <>\n      <Button size=\"sm\">Small Button</Button>\n      <Button size=\"md\">Medium Button</Button>\n      <Button size=\"lg\">Large Button</Button>\n    </>\n  );\n}"
       },
       {
         "title": "Radius",
-        "component": {
-          "type": "Button",
-          "props": {
-            "radius": "md"
+        "components": [
+          {
+            "type": "Button",
+            "props": {
+              "size": "sm"
+            },
+            "children": "Button"
           },
-          "children": "Button with Medium Radius"
-        },
+          {
+            "type": "Button",
+            "props": {
+              "size": "md"
+            },
+            "children": "Button"
+          },
+          {
+            "type": "Button",
+            "props": {
+              "size": "lg"
+            },
+            "children": "Button"
+          }
+        ],
         "code": "import { Button } from 'your-library';\n\nfunction App() {\n  return (\n    <>\n      <Button radius=\"none\">No Radius</Button>\n      <Button radius=\"sm\">Small Radius</Button>\n      <Button radius=\"md\">Medium Radius</Button>\n      <Button radius=\"lg\">Large Radius</Button>\n      <Button radius=\"full\">Full Radius</Button>\n    </>\n  );\n}"
       },
       {
         "title": "Colors",
-        "component": {
-          "type": "Button",
-          "props": {
-            "color": "primary"
+        "components": [
+          {
+            "type": "Button",
+            "props": {
+              "size": "sm"
+            },
+            "children": "Button"
           },
-          "children": "Primary Button"
-        },
+          {
+            "type": "Button",
+            "props": {
+              "size": "md"
+            },
+            "children": "Button"
+          },
+          {
+            "type": "Button",
+            "props": {
+              "size": "lg"
+            },
+            "children": "Button"
+          }
+        ],
         "code": "import { Button } from 'your-library';\n\nfunction App() {\n  return (\n    <>\n      <Button color=\"primary\">Primary Button</Button>\n      <Button color=\"secondary\">Secondary Button</Button>\n      <Button color=\"success\">Success Button</Button>\n      <Button color=\"warning\">Warning Button</Button>\n      <Button color=\"danger\">Danger Button</Button>\n    </>\n  );\n}"
       },
       {
         "title": "Variants",
-        "component": {
-          "type": "Button",
-          "props": {
-            "border": "md"
+        "components": [
+          {
+            "type": "Button",
+            "props": {
+              "size": "sm"
+            },
+            "children": "Button"
           },
-          "children": "Button with Medium Border"
-        },
+          {
+            "type": "Button",
+            "props": {
+              "size": "md"
+            },
+            "children": "Button"
+          },
+          {
+            "type": "Button",
+            "props": {
+              "size": "lg"
+            },
+            "children": "Button"
+          }
+        ],
         "code": "import { Button } from 'your-library';\n\nfunction App() {\n  return (\n    <>\n      <Button border=\"none\">No Border</Button>\n      <Button border=\"xs\">Extra Small Border</Button>\n      <Button border=\"sm\">Small Border</Button>\n      <Button border=\"md\">Medium Border</Button>\n      <Button border=\"lg\">Large Border</Button>\n    </>\n  );\n}"
       }
     ],
@@ -158,26 +226,29 @@
     "eventsTable": {
       "title": "Events",
       "description": "List of all events emitted by the Button component.",
-      "columns": [
+      "headers": [
         "Event Name",
         "Description"
       ],
       "rows": [
         {
-          "eventName": "onClick",
-          "description": "Triggered when the button is clicked."
+          "propName": "onClick",
+          "type": "Triggered when the button is clicked."
         }
+        
+        
       ]
     },
     "accessibility": {
+      "title": "Accessibility",
       "description": "Accessibility considerations for the Button component.",
       "ariaRoles": [
         {
-          "role": "button",
+          "propName": "Button",
           "description": "The Button component is rendered with the button role by default."
         },
         {
-          "ariaProp": "aria-label",
+          "propName": "Aria-label",
           "description": "If the button has only an icon and no text, you should add an aria-label for screen readers."
         }
       ]
