@@ -18,7 +18,7 @@ export function RenderComponent({ data }) {
       setComponent(data[0]);
     }
   }, [name, data]);
-  
+
   if (component) {
     return (
       <>
@@ -54,20 +54,22 @@ export function RenderComponent({ data }) {
           </section>
           <section>
             <h2>Usage</h2>
-            {component.examples.map((example, index)=> {
-              return(
+            {component.examples.map((example, index) => {
+              return (
                 <li key={index}>
                   <h2>{example.title}</h2>
-                  <ExampleViewer example={example}/>
-
+                  <ExampleViewer example={example} />
                 </li>
-              )
+              );
             })}
           </section>
           <section>
             <h2>API</h2>
             <h3>{component.propsTable.title}</h3>
-            <Table headers={component.propsTable.headers} rows={component.propsTable.rows} />
+            <Table
+              headers={component.propsTable.headers}
+              rows={component.propsTable.rows}
+            />
           </section>
         </main>
       </>
