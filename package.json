@@ -1,15 +1,20 @@
 {
-  "name": "framework",
+  "name": "AwesomeCL",
   "private": true,
   "version": "0.0.0",
-  "main": "./dist/framework.cjs.js",
-  "module": "./dist/framework.es.js",
+  "main": "./dist/awesomecl.cjs.js",
+  "module": "./dist/awesomecl.es.js",
   "exports": {
     ".": {
-      "import": "./dist/framework.es.js",
-      "require": "./dist/framework.cjs.js"
+      "import": "./dist/awesomecl.es.js",
+      "require": "./dist/awesomecl.cjs.js"
     }
   },
+  "files": [
+    "dist/awesomecl.cjs.js",
+    "dist/awesomecl.es.js",
+    "dist/style.css"
+  ],
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -21,6 +26,7 @@
     "build-docs": "vite build"
   },
   "dependencies": {
+    "AwesomeCL": "github:Team-Collaborators/Awesome-CL#dev",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.3.0",
@@ -40,6 +46,7 @@
     "eslint-plugin-react-refresh": "^0.4.9",
     "globals": "^15.9.0",
     "postcss": "^8.4.47",
+    "postcss-preset-env": "^10.0.8",
     "tailwindcss": "^3.4.14",
     "vite": "^5.4.1"
   }

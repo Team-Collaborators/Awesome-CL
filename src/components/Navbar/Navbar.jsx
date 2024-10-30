@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import "./Navbar.scss";
 import logo1 from "../../assets/images/cl-awesome-logo.png";
 
-// import {Button} from "../../component_testing/Button/Button"
+import Button from "../../component_testing/Button/Button";
+
 import { FaSun, FaMoon } from "react-icons/fa";
 
 const Navbar = ({ toggleTheme }) => {
@@ -88,17 +89,23 @@ const Navbar = ({ toggleTheme }) => {
             </ul>
           )}
         </li>
-        <li>
-          <div className="nav-link">
-            <Link to="/playground">Playground</Link>
-            
-          </div>
-        </li>
-
       </ul>
-  
+      <button className="nav-link"></button>
+
+      {/* TODO: this button does not take the Tailwind class if another class that
+      relates to a scss style is applied */}
+      <Button
+        radius="md"
+        color="secondary"
+        className="playground-btn hover:bg-pink-100"
+        // className="hover:bg-pink-500"
+      >
+        {" "}
+        <Link to="/playground" style={{ color: "white" }}>
+          Playground
+        </Link>
+      </Button>
     </nav>
-    
   );
 };
 

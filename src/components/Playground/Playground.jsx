@@ -5,20 +5,20 @@ import TestTailwind from "../../component_testing/TestTailwind";
 
 const Playground = () => {
   return (
-    <div style={{ textAlign: "center", marginTop: "50px" }}>
+    <section className="playground-wrapper">
       <h1>Playground</h1>
       <p>This is the space to test new components</p>
       <div className="playground-container">
         {/* Default button */}
-        <Button>Default Button</Button>
+        {/* <Button>Default Button</Button> */}
 
         {/* Primary button */}
-        <Button color="primary">Primary Button</Button>
+        {/* <Button color="primary">Primary Button</Button> */}
 
         {/* Secondary button */}
-        <Button color="secondary" radius="rounded">
+        {/* <Button color="secondary" radius="rounded">
           Secondary Button
-        </Button>
+        </Button> */}
 
         {/* Button with custom style */}
         <Button
@@ -30,14 +30,18 @@ const Playground = () => {
         >
           Custom Styled Button
         </Button>
-         {/* Test div component styled with Tailwind only */}
-        <TestTailwind/>
-         {/* Test button styled with Tailwind and props*/}
-         <Button
-         border="xl" radius="full" className="hover:bg-pink-200 hover:text-gray-900"
-         >Button component Button props and Tailwind style</Button> 
+        {/* Test div component styled with Tailwind only */}
+        <TestTailwind />
+        {/* Test button styled with Tailwind and props*/}
+        <Button
+          border="xl"
+          radius="full"
+          className="hover:bg-pink-800 hover:text-gray-900"
+        >
+          Button component Button props and Tailwind style
+        </Button>
       </div>
-    </div>
+    </section>
   );
 };
 

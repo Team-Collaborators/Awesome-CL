@@ -1,0 +1,72 @@
+@use "../../styles/main.scss" as styles;
+@use "sass:color";
+
+$primary-color: #083748;
+$secondary-color: #083E52;
+$optional-color: #5A2778;
+$background-color: #F7F7F7;
+$button-padding: 0.5rem 1rem;
+$border-radius: 8px;
+.DynamicComponent {
+  padding: 1.5rem;
+  background-color: $background-color;
+  border-radius: $border-radius;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  h2 {
+    color: $primary-color;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  //toggle buttons for Preview and Code
+  .toggle-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    button {
+      padding: $button-padding;
+      font-size: 1rem;
+      color: #FFFFFF;
+      background-color: $secondary-color;
+      border: none;
+      border-radius: $border-radius;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      &.active {
+        background-color: $optional-color;
+      }
+      &:hover {
+        background-color: color.scale($secondary-color, $lightness: -20%);
+      }
+    }
+  }
+  //container for either Preview or Code view
+  .component-display {
+   
+    padding: 1rem;
+    border-radius: $border-radius;
+    background-color: #FFFFFF;
+    border: 1px solid $secondary-color;
+    &.code-view {
+      font-family: "Courier New", monospace;
+      font-size: 0.9rem;
+      background-color: $background-color;
+      padding: 1rem;
+      color: $primary-color;
+      white-space: pre-wrap;
+    }
+  }
+}
+
+.component-ul {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+
+
+
+
+

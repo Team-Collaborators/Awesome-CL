@@ -1,27 +1,23 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
+import postcssPresetEnv from "postcss-preset-env";
 
 export default defineConfig(({ mode }) => {
   if (mode === "build-library") {
     return {
-      css: {
-        preprocessorOptions: {
-          scss: {
-            api: "modern-compiler",
-          },
-        },
-      },
       build: {
         lib: {
           entry: "./src/library/exports.js", // Entry point for the library
-          name: "Framework",
+          name: "AwesomeCL",
           formats: ["es", "cjs"],
-          fileName: (format) => `framework.${format}.js`,
+          fileName: (format) => `awesomecl.${format}.js`,
         },
         cssCodeSplit: false,
         emptyOutDir: true,
+        publicDir: false,
         rollupOptions: {
+          input: "./src/library/exports.js",
           external: ["react", "react-dom"],
           output: {
             globals: {
@@ -32,6 +28,23 @@ export default defineConfig(({ mode }) => {
         },
       },
       plugins: [react()],
+      css: {
+        preprocessorOptions: {
+          scss: {
+            api: "modern-compiler",
+          },
+        },
+      },
+      postcss: {
+        plugins: [
+          postcssPresetEnv({
+            stage: 0,
+            features: {
+              "custom-properties": true,
+            },
+          }),
+        ],
+      },
     };
   }
 

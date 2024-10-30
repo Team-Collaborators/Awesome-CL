@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '../../component_testing/Button/Button'; // Importa tus componentes
+import {Button} from 'AwesomeCL'; // Importa tus componentes
 
 
 const components = { //Object with all components

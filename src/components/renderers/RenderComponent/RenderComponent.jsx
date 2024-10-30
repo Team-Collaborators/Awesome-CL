@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { RenderCode } from "../RenderCode/RenderCode";
-import Button from "../../../component_testing/Button/Button";
 import ExampleViewer from "../../ExampleViewer/ExampleViewer";
 import Table from "../../Table/Table";
 
@@ -30,30 +29,37 @@ export function RenderComponent({ data }) {
           <section>
             <h2>Installation</h2>
             {component.installation ? (
-              <ul>
-                {component.installation.map((elem) => {
-                  return (
-                    <li key={elem.name}>
-                      <button onClick={() => setInstallation(elem.command)}>
-                        <img src={elem.path} alt={elem.name} />
-                        <span>{elem.name}</span>
-                      </button>
-                    </li>
-                  );
-                })}
-              </ul>
-            ) : (
-              <p>No installation commands available</p>
-            )}
-            <RenderCode code={installation} />
+              <>
+                <ul>
+                  {component.installation.map((elem) => {
+                    return (
+                      <li key={elem.name}>
+                        <button onClick={() => setInstallation(elem.command)}>
+                          <img src={elem.path} alt={elem.name} />
+                          <span>{elem.name}</span>
+                        </button>
+                      </li>
+                    );
+                  })}
+                </ul>
+                <div style={{ marginTop: "20px" }}>
+                  <RenderCode code={installation} />
+                </div>
+              </>
+            ) : null}
           </section>
           <section>
             <h2>Import</h2>
-            <p>{component.import.description}</p>
-            <RenderCode code={component.import.code} />
+            {component.import ? (
+              <>
+                <p>{component.import.description}</p>
+                <RenderCode code={component.import.code} />
+              </>
+            ) : null}
           </section>
           <section>
             <h2>Usage</h2>
+
             {component.examples.map((example, index) => {
               return (
                 <li key={index}>
@@ -70,6 +76,53 @@ export function RenderComponent({ data }) {
               headers={component.propsTable.headers}
               rows={component.propsTable.rows}
             />
+
+            <ul>
+              {component.examples
+                ? component.examples.map((example, index) => {
+                    return (
+                      <li key={index}>
+                        <h2>{example.title}</h2>
+                        <ExampleViewer example={example} />
+                      </li>
+                    );
+                  })
+                : null}
+            </ul>
+          </section>
+          <section>
+            <h2>API</h2>
+            {component.propsTable ? (
+              <>
+                <h3>{component.propsTable.title}</h3>
+                <Table
+                  headers={component.propsTable.headers}
+                  rows={component.propsTable.rows}
+                />
+              </>
+            ) : null}
+          </section>
+          <section>
+            {component.eventsTable ? (
+              <>
+                <h2>{component.eventsTable.title}</h2>
+                <p>{component.eventsTable.description}</p>
+                <Table
+                  headers={component.eventsTable.headers}
+                  rows={component.eventsTable.rows}
+                />
+              </>
+            ) : null}
+          </section>
+          <section>
+            {component.accessibility ? (
+              <>
+                <h2>{component.accessibility.title}</h2>
+                <p>{component.accessibility.description}</p>
+                <Table rows={component.accessibility.ariaRoles} />
+              </>
+            ) : null}
+
           </section>
         </main>
       </>
