@@ -9,7 +9,6 @@
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   width: calc(100% - 250px);
   margin-left: 250px;
-
   bottom: 0; // Stick to bottom
 }
 
@@ -36,7 +35,6 @@
 .links,
 .contact,
 .social {
-  flex: 1;
   padding: 10px;
   text-align: left;
 
@@ -52,7 +50,7 @@
 .social h4 {
   margin-bottom: 10px;
   font-size: 1.2rem;
-  color: styles.$secondary-color;
+  color: color.adjust(styles.$secondary-color, $lightness: 15%);
   text-transform: uppercase;
 }
 
@@ -67,7 +65,7 @@
 
   &:hover {
     color: color.adjust(
-      styles.$text-color,
+      styles.$secondary-color,
       $lightness: 20%
     ); // Use color.adjust for lightening
   }

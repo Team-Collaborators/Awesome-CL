@@ -59,6 +59,24 @@ export function RenderComponent({ data }) {
           </section>
           <section>
             <h2>Usage</h2>
+
+            {component.examples.map((example, index) => {
+              return (
+                <li key={index}>
+                  <h2>{example.title}</h2>
+                  <ExampleViewer example={example} />
+                </li>
+              );
+            })}
+          </section>
+          <section>
+            <h2>API</h2>
+            <h3>{component.propsTable.title}</h3>
+            <Table
+              headers={component.propsTable.headers}
+              rows={component.propsTable.rows}
+            />
+
             <ul>
               {component.examples
                 ? component.examples.map((example, index) => {
@@ -104,6 +122,7 @@ export function RenderComponent({ data }) {
                 <Table rows={component.accessibility.ariaRoles} />
               </>
             ) : null}
+
           </section>
         </main>
       </>
