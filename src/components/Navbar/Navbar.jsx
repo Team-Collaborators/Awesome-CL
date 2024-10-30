@@ -15,9 +15,9 @@ const Navbar = ({ toggleTheme }) => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
-  // Sidebar Toggle
+  //Sidebar Toggle
   const toggleSidebar = () => {
-    //setSidebarOpen(!isSidebarOpen); // toggle open state of sidebar
+   setSidebarOpen(!isSidebarOpen); // toggle open state of sidebar
     setSidebarOpen((prev) => !prev);
   };
 
@@ -54,7 +54,7 @@ const Navbar = ({ toggleTheme }) => {
       <nav className={`sidebar ${isSidebarOpen || !isMobile ? "open" : ""}`}>
         <Link to="/">
           {" "}
-          <img src={logo1} alt="Logo" className="sidebar-logo" />
+          <img src={logo1} alt="Logo" className="nav-logo" />
         </Link>
 
         <ul>
