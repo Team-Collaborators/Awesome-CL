@@ -75,10 +75,10 @@ a {
 
 
   @include media("md") {
-    margin-left: 200px; // Narrow width for iPad view
+    margin-left: 230px; // Narrow width for iPad view
   }
 
   @include media("sm") {
-    margin-left: 0;
+    margin-left: 30px;
   }
 }

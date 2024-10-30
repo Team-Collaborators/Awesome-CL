@@ -52,7 +52,11 @@ const Navbar = ({ toggleTheme }) => {
 
       {/* Sidebar */}
       <nav className={`sidebar ${isSidebarOpen || !isMobile ? "open" : ""}`}>
-        <img src={logo1} alt="Logo" className="sidebar-logo" />
+        <Link to="/">
+          {" "}
+          <img src={logo1} alt="Logo" className="sidebar-logo" />
+        </Link>
+
         <ul>
           <li>
             <div className="nav-link">
