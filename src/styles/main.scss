@@ -1,4 +1,6 @@
 // $primary-color: #083748;
+@use "sass:map";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -25,7 +27,7 @@ $breakpoints: (
 
 // Mixin to use breakpoints
 @mixin media($size) {
-  @media (max-width: map-get($breakpoints, $size)) {
+  @media (max-width: map.get($breakpoints, $size)) {
     @content;
   }
 }
@@ -74,7 +76,6 @@ a {
   flex-direction: column;
   margin-left: 280px; // Ensures all content is pushed to the right from sidebar
   // Ensure content pushes footer down
-
 
   @include media("md") {
     margin-left: 230px; // Narrow width for iPad view
