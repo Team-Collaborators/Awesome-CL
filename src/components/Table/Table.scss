@@ -1,4 +1,4 @@
-@import "../../styles/main.scss";
+@use "../../styles/main.scss" as styles;
 .table_container {
   padding: 1rem;
   border-radius: 8px;
@@ -8,15 +8,15 @@
   transition: transform 0.2s;
   max-width: 600px;
   margin: 10vw auto;
-  font-family: $font-stack; //use font-stack from main.scss
+  font-family: styles.$font-stack; //use font-stack from main.scss
 }
 .table {
   width: 100%;
   border-collapse: collapse;
 }
 .table_header {
-  background-color: $secondary-color; //use the secondary color
-  color: $text-color; //use the text color
+  background-color: styles.$secondary-color; //use the secondary color
+  color: styles.$text-color; //use the text color
   padding: 10px;
   text-align: left;
   font-size: 1.2em;

@@ -31,8 +31,8 @@
       }
     ],
     "import": {
-      "code": "import { Button } from 'your-library';",
-      "description": "This code shows how to import the Button component from your library."
+      "code": "import { Button } from 'AwesomeCL';",
+      "description": "This code shows how to import the Button component from the library."
     },
     "examples": [
       {
@@ -193,7 +193,7 @@
         "code": "import { Button } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Button color=\"default\">Button</Button>\n      <Button color=\"primary\">Button</Button>\n      <Button color=\"secondary\">Button</Button>\n      <Button color=\"success\">Button</Button>\n      <Button color=\"warning\">Button</Button>\n      <Button color=\"danger\">Button</Button>\n    </>\n  );\n}"
       },
       {
-        "title": "Variants",
+        "title": "Borders",
         "components": [
           {
             "type": "Button",
