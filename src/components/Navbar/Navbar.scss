@@ -14,44 +14,50 @@
   transition: left 0.3s ease; // Smooth slide-in effect
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
-  // Navbar Logo
-  .nav-logo {
-    width: 6rem;
-    margin-right: 1rem;
-  }
-
-  // Navbar Links
-  .navbar--inner {
+  .navbar--left {
     display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    align-items: center;
+    // Navbar Logo
+    .nav-logo {
+      width: 6rem;
+      height: auto;
+      margin-right: 1.5rem;
+    }
 
-    .navbar--inner-item {
-      margin-right: 15px;
+    // Navbar Links
+    .navbar--inner {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
 
-      .navbar__link {
-        cursor: pointer;
-        padding: 10px 15px;
-        color: styles.$text-color;
-        width: 100%;
-        text-align: left;
-        transition: background-color 0.3s ease, color 0.3s ease;
+      .navbar--inner-item {
+        margin-right: 15px;
 
-        &:hover {
-          background-color: rgba(255, 255, 255, 0.1);
-          border-radius: 5px;
-        }
-        a {
-          color: inherit;
-          text-decoration: none;
+        .navbar__link {
+          cursor: pointer;
+          padding: 10px 15px;
+          color: styles.$text-color;
+          width: 100%;
+          text-align: left;
+          transition: background-color 0.3s ease, color 0.3s ease;
+
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+          }
+          a {
+            color: inherit;
+            text-decoration: none;
+          }
         }
       }
     }
   }
-  .navbar--search {
-    position: relative;
-    margin-right: auto;
+  .navbar--right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 
     .navbar--search-input {
       padding: 5px 10px;

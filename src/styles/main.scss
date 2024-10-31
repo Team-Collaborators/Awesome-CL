@@ -71,10 +71,12 @@ a {
 }
 
 .content-wrapper {
+  height: 100vh;
   flex: 1;
   display: flex;
   flex-direction: column;
-  margin-left: 280px; // Ensures all content is pushed to the right from sidebar
+  margin-top: 8rem;
+  margin-left: 10rem; // Ensures all content is pushed to the right from sidebar
   // Ensure content pushes footer down
 
   @include media("md") {

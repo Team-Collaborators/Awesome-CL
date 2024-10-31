@@ -1,60 +1,62 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Button from "../../component_testing/Button/Button";
+import styles from "./Sidebar2.module.scss";
 
-export default function Sidebar(props) {
-  const [isSidebarOpen, setSidebarOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+const Sidebar = ({ links, style, isSidebarOpen, isMobile }) => {
+  // const [isSidebarOpen, setSidebarOpen] = useState(false);
+  // const [isMobile, setIsMobile] = useState(false);
 
   // Sidebar Toggle
-  const toggleSidebar = () => {
-    //setSidebarOpen(!isSidebarOpen); // toggle open state of sidebar
-    setSidebarOpen((prev) => !prev);
-  };
-
+  // const toggleSidebar = () => {
+  //   //setSidebarOpen(!isSidebarOpen); // toggle open state of sidebar
+  //   setSidebarOpen((prev) => !prev);
+  // };
 
   // Detect mobile view based on window width
-  useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 576); // Customize breakpoint as needed
-    handleResize(); // Initial check
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  // useEffect(() => {
+  //   const handleResize = () => setIsMobile(window.innerWidth < 576); // Customize breakpoint as needed
+  //   handleResize(); // Initial check
+  //   window.addEventListener("resize", handleResize);
+  //   return () => window.removeEventListener("resize", handleResize);
+  // }, []);
 
   return (
-    <nav className="sidebar" style={props.style}>
-       {/* <nav className={`sidebar ${isSidebarOpen || !isMobile ? "open" : ""}`}></nav> */}
-      <ul className="sidebar--inner">
-        {props.links.map((link, index) => {
+    <nav className={styles.sidebar} style={style}>
+      {/* <nav className={`sidebar ${isSidebarOpen || !isMobile ? "open" : ""}`}></nav> */}
+
+      <ul className={styles["sidebar--inner"]}>
+        {links.map((link, index) => {
           return (
-            <li key={index} className="sidebar--inner-item">
-              <a href="#/" className="sidebar--inner-item__link">
-                {link}
-              </a>
+            <li key={index} className={styles["sidebar--inner-item"]}>
+              <Link to={link.to} className={styles["sidebar__link"]}>
+                {link.label}
+              </Link>
             </li>
           );
         })}
       </ul>
+
       <Button
-          radius="md"
-          color="secondary"
-          className="playground-btn hover:bg-pink-100"
+        radius="md"
+        color="secondary"
+        className={`${styles["playground-btn"]} hover:bg-pink-100`}
         >
-          <Link to="/playground" style={{ color: "white" }}>
-            Playground
-          </Link>
-        </Button>
+        <Link to="/playground" style={{ color: "white" }}>
+          Playground
+        </Link>
+      </Button>
     </nav>
   );
-}
+};
 
-
-
+export default Sidebar;
 // <ul>
 // {isMobile ? (
 // <>
 // {/* Mobile-Specific Links */}
-// <li>
+// <li>s
 // <Link to="/mobile-specific-link1">Mobile Link 1</Link>
 // </li>
 // <li>
