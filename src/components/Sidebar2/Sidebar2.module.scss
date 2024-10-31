@@ -151,3 +151,24 @@
     }
   }
 }
+
+
+// overflow-y: auto;
+  // &::-webkit-scrollbar-track {
+  //   background: styles.$background-color; // Background of the scrollbar track
+  // }
+
+  // @include styles.media("md") {
+  //   width: 200px; // Narrow width for iPad view
+  // }
+
+  // For mobile view, hide sidebar by sliding it off-screen
+  // @include styles.media("sm") {
+  //   left: -350px;
+  //   width: 66.66vw; // Covering 2/3 of the mobile screen width
+
+  //   When sidebar is open, slide it in
+  //   &.open {
+  //     left: 0;
+  //   }
+  // }
