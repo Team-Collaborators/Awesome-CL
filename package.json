@@ -13,9 +13,9 @@
   "files": [
     "dist/awesomecl.cjs.js",
     "dist/awesomecl.es.js",
-    "dist/style.css",
     "dist/exports.css"
   ],
+  "styles": "./dist/exports.css",
   "type": "module",
   "scripts": {
     "dev": "vite",
