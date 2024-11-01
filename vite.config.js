@@ -13,7 +13,7 @@ export default defineConfig(({ mode }) => {
           formats: ["es", "cjs"],
           fileName: (format) => `awesomecl.${format}.js`,
         },
-        cssCodeSplit: false,
+        cssCodeSplit: true,
         emptyOutDir: true,
         publicDir: false,
         rollupOptions: {
