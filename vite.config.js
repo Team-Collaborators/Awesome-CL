@@ -20,6 +20,7 @@ export default defineConfig(({ mode }) => {
           input: "./src/library/exports.js",
           external: ["react", "react-dom"],
           output: {
+            assetFileNames: "exports.css",
             globals: {
               react: "React",
               "react-dom": "ReactDOM",
