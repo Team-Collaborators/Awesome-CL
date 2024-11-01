@@ -13,7 +13,8 @@
   "files": [
     "dist/awesomecl.cjs.js",
     "dist/awesomecl.es.js",
-    "dist/style.css"
+    "dist/style.css",
+    "dist/exports.css"
   ],
   "type": "module",
   "scripts": {
