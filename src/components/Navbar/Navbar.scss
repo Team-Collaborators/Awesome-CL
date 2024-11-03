@@ -1,135 +1,77 @@
 @use "../../styles/main" as styles;
 
-.sidebar {
+.navbar {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 250px;
-  height: 100vh;
+  width: 100%;
+  height: 5rem;
   z-index: 1000;
   background-color: styles.$primary-color;
-  padding: 20px;
+  padding: 0.6rem;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  padding: 0.6rem 1.3rem;
   transition: left 0.3s ease; // Smooth slide-in effect
-  overflow-y: auto;
-  &::-webkit-scrollbar-track {
-    background: styles.$background-color; // Background of the scrollbar track
-  }
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
-  @include styles.media("md") {
-    width: 200px; // Narrow width for iPad view
-  }
-
-  // For mobile view, hide sidebar by sliding it off-screen
-  @include styles.media("sm") {
-    left: -350px;
-    width: 66.66vw; // Covering 2/3 of the mobile screen width
-
-    // When sidebar is open, slide it in
-    &.open {
-      left: 0;
+  .navbar--left {
+    display: flex;
+    align-items: center;
+    // Navbar Logo
+    .nav-logo {
+      width: 6rem;
+      height: auto;
+      margin-right: 1.5rem;
     }
-  }
 
-  .sidebar-logo {
-    width: 150px;
-    height: 110px;
-    margin-bottom: 40px;
-  }
+    // Navbar Links
+    .navbar--inner {
+      display: flex;
+      list-style: none;
+      padding-left: 3rem;
+      .navbar--inner-item {
+        margin-right: 15px;
 
-  ul {
-    list-style: none;
-    padding: 0;
-    width: 100%;
-
-    li {
-      width: 100%;
-      position: relative;
-      margin-bottom: 20px;
-      font-size: 1.2rem;
-      color: styles.$text-color;
-
-      .nav-link,
-      .dropdown-toggle {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        cursor: pointer;
-        padding: 10px 15px;
-        color: styles.$text-color;
-        width: 100%;
-        text-align: left;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        transition: background-color 0.3s ease, color 0.3s ease;
-
-        &:hover {
-          background-color: rgba(255, 255, 255, 0.1);
-          border-radius: 5px;
-        }
-
-        a {
-          color: inherit;
-          text-decoration: none;
-        }
-
-        .arrow {
-          margin-left: 8px;
-        }
-      }
-
-      .dropdown-menu {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        padding: 10px 0;
-        list-style: none;
-        border-radius: 5px;
-        background-color: styles.$primary-color;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        z-index: 10;
-
-        li {
-          padding: 10px 20px;
-          transition: background-color 0.3s ease;
-
-          a {
-            color: styles.$text-color;
-            text-decoration: none;
-            display: block;
-          }
+        .navbar__link {
+          cursor: pointer;
+          padding: 10px 15px;
+          color: styles.$text-color;
+          width: 100%;
+          text-align: left;
+          transition: background-color 0.3s ease, color 0.3s ease;
 
           &:hover {
             background-color: rgba(255, 255, 255, 0.1);
             border-radius: 5px;
           }
+          a {
+            color: inherit;
+            text-decoration: none;
+          }
         }
-      }
-
-      &:hover .dropdown-menu {
-        display: block;
       }
     }
   }
+  .navbar--right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 
-  .playground-btn {
-    background: radial-gradient(
-      circle,
-      styles.$optional-color,
-      styles.$secondary-color
-    );
-    box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.3),
-      0px 5px 10px rgba(0, 0, 0, 0.102);
-    margin-top: auto;
-    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transition for both transform and shadow */
+    .navbar--search-input {
+      padding: 5px 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+      outline: none;
+    }
+  }
 
-    // &:hover {
-    //   transform: translateY(-3px);
-    //   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3), 0px 4px 10px rgba(0, 0, 0, 0.2);
-    // }
+  .theme-toggle-button {
+    background: none;
+    border: none;
+    color: styles.$text-color;
+    cursor: pointer;
+    font-size: 20px;
   }
 }
 
@@ -144,14 +86,14 @@
     position: fixed;
     width: 4rem;
     height: 4rem;
-    top: 20px; 
-    left: 20px; 
+    top: 20px;
+    left: 20px;
     z-index: 2000; // Ensure it's above the sidebar
     cursor: pointer;
 
     .burger-icon {
       font-size: 3rem;
-      color: styles.$secondary-color
+      color: styles.$secondary-color;
     }
   }
 }

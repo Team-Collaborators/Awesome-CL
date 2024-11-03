@@ -1,22 +1,18 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { HomePage } from "../pages/HomePage/HomePage";
 import Layout from "../components/Layout/Layout";
-// import Navbar from "../components/Navbar/Navbar";
+import HomePage from "../pages/HomePage/HomePage";
 import Playground from "../components/Playground/Playground";
 import NotFound from "../components/NotFound/NotFound";
-// import Footer from "../components/Footer/Footer";
-
 import { RenderPages } from "../components/renderers/RenderPages/RenderPages";
 
-export default function MainRoutes({ isDarkMode, toggleTheme }) {
+export default function MainRoutes({ isDarkMode, toggleTheme, data }) {
   return (
     <Router>
-      {/* <div className="app-container"> */}
-      {/* <Navbar isDarkMode={isDarkMode} toggleTheme={toggleTheme} /> */}
-      {/* <div className="content-wrapper"> */}
-      <Layout isDarkMode={isDarkMode} toggleTheme={toggleTheme}>
-        <Routes>
+      <Routes>
+        <Route
+          element={<Layout isDarkMode={isDarkMode} toggleTheme={toggleTheme} />}
+        >
           {/* Home page route */}
           <Route index path="/" element={<HomePage />} />
 
@@ -68,16 +64,25 @@ export default function MainRoutes({ isDarkMode, toggleTheme }) {
             />
           </Route>
 
+          {/* ADD ADD ADD: Instruction routes */}
+          <Route path="instructions">
+            <Route
+              path="1/*"
+              element={<RenderPages file={"backend/configurations"} />}
+            />
+            <Route
+              path="2/*"
+              element={<RenderPages file={"backend/controllers"} />}
+            />
+          </Route>
+
           {/* Playground route */}
           <Route path="playground" element={<Playground />} />
 
           {/* Catch-all route for 404 */}
           <Route path="*" element={<NotFound />} />
-        </Routes>
-        {/* </div>
-        <Footer /> */}
-        {/* </div> */}
-      </Layout>
+        </Route>
+      </Routes>
     </Router>
   );
 }

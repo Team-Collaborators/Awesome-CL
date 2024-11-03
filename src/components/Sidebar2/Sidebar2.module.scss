@@ -1,0 +1,111 @@
+@use "../../styles/main" as styles;
+@use "sass:color"; // Import color module
+
+.sidebar {
+  position: fixed;
+  top: 5rem;
+  left: 0;
+  width: 12rem;
+  height: 90vh;
+  z-index: 1000;
+  background-color: styles.$primary-color;
+  color: styles.$text-color;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, opacity 0.3s ease; // Smooth slide-in effect
+  transform: translateX(0);
+
+  // overflow-y: auto;
+
+  // &::-webkit-scrollbar-track {
+  //   background: styles.$background-color; // Background of the scrollbar track
+  // }
+
+  // Sidebar open state
+  &.open {
+    transform: translateX(0); // Slide in
+    opacity: 1; // Fully visible
+  }
+
+  // Sidebar close state
+  &.closed {
+    transform: translateX(-100%); // Slide out
+    opacity: 0; // Fully transparent
+  }
+
+  // Mobile: hide sidebar by sliding it off-screen
+  @include styles.media("sm") {
+    width: 66.66vw; // Covering 2/3 of the mobile screen width
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  .sidebar-inner {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin-top: 200px;
+    padding: 0;
+
+    .sidebar--inner-item {
+      margin-right: 15px;
+
+      .sidebar__link {
+        cursor: pointer;
+        padding: 10px 15px;
+        color: styles.$text-color;
+        width: 100%;
+        text-align: left;
+        transition: background-color 0.3s ease, color 0.3s ease;
+
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.1);
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+
+  .playground-btn {
+    background: radial-gradient(
+      circle,
+      styles.$optional-color,
+      styles.$secondary-color
+    );
+    box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.3),
+      0px 5px 10px rgba(0, 0, 0, 0.102);
+    margin-top: auto;
+    margin-bottom: 3rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transition for both transform and shadow */
+
+    // &:hover {
+    //   transform: translateY(-3px);
+    //   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3), 0px 4px 10px rgba(0, 0, 0, 0.2);
+    // }
+  }
+}
+
+// Burger menu styles
+.burger-menu {
+  display: none; // Hide by default
+
+  @include styles.media("sm") {
+    display: flex; // Show burger menu for screens smaller than md
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 4rem;
+    height: 4rem;
+    top: 20px;
+    left: 20px;
+    z-index: 2000; // Ensure it's above the sidebar
+    cursor: pointer;
+
+    .burger-icon {
+      font-size: 3rem;
+      color: styles.$secondary-color;
+    }
+  }
+}

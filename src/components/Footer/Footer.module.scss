@@ -7,9 +7,9 @@
   padding: 40px 0;
   text-align: center;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
-  width: calc(100% - 250px);
-  margin-left: 250px;
+  width: 100%;
   bottom: 0; // Stick to bottom
+  transition: left 0.3s ease; // Smooth transition for sidebar changes
 }
 
 .container {
@@ -42,6 +42,8 @@
     text-align: center;
     padding: 5px;
     margin-bottom: 20px;
+    width: 100%;
+    left: 0;
   }
 }
 

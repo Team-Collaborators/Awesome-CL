@@ -7,7 +7,7 @@ import logo from "../../assets/images/A-logo.png";
 import ProductCard from "../../components/ProductDisplay/ProductCard/ProductCard";
 import CodeDisplay from "../../components/ProductDisplay/CodeDisPlay/CodeDisPlay";
 
-export function HomePage() {
+export default function HomePage() {
   const [theme, setTheme] = useState("default");
 
   const productCardCode = `
