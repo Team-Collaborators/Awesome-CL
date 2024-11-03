@@ -6,7 +6,7 @@
   top: 5rem;
   left: 0;
   width: 200px;
-  height: 100vh;
+  height: 90vh;
   z-index: 1000;
   background-color: styles.$primary-color;
   padding: 20px;
@@ -15,6 +15,8 @@
   align-items: center;
   transition: left 0.3s ease; // Smooth slide-in effect
   overflow-y: auto;
+
+
   &::-webkit-scrollbar-track {
     background: styles.$background-color; // Background of the scrollbar track
   }
@@ -28,35 +30,37 @@
   //   left: -350px;
   //   width: 66.66vw; // Covering 2/3 of the mobile screen width
 
-  //   // When sidebar is open, slide it in
-  //   &.open {
-  //     left: 0;
-  //   }
-  // }
+  // When sidebar is open, slide it in
+  &.open {
+    width: 10%;
+    background-color: red;
+  }
 
-.sidebar-inner {
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  margin-top:200px;
-  padding: 0;
+  .sidebar-inner {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin-top: 200px;
+    padding: 0;
 
-  .sidebar--inner-item {
-    margin-right: 15px;
+    .sidebar--inner-item {
+      margin-right: 15px;
 
-    .sidebar__link {
-      cursor: pointer;
-      padding: 10px 15px;
-      color: styles.$text-color;
-      width: 100%;
-      text-align: left;
-      transition: background-color 0.3s ease, color 0.3s ease;
+      .sidebar__link {
+        cursor: pointer;
+        padding: 10px 15px;
+        color: styles.$text-color;
+        width: 100%;
+        text-align: left;
+        transition: background-color 0.3s ease, color 0.3s ease;
 
-      &:hover {
-        background-color: rgba(255, 255, 255, 0.1);
-        border-radius: 5px;
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.1);
+          border-radius: 5px;
+        }
       }
-}}}
+    }
+  }
 
   .playground-btn {
     background: radial-gradient(
@@ -67,6 +71,7 @@
     box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.3),
       0px 5px 10px rgba(0, 0, 0, 0.102);
     margin-top: auto;
+    margin-bottom: 3rem;
     transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transition for both transform and shadow */
 
     // &:hover {
@@ -99,23 +104,22 @@
   }
 }
 
-
 // overflow-y: auto;
-  // &::-webkit-scrollbar-track {
-  //   background: styles.$background-color; // Background of the scrollbar track
-  // }
+// &::-webkit-scrollbar-track {
+//   background: styles.$background-color; // Background of the scrollbar track
+// }
 
-  // @include styles.media("md") {
-  //   width: 200px; // Narrow width for iPad view
-  // }
+// @include styles.media("md") {
+//   width: 200px; // Narrow width for iPad view
+// }
 
-  // For mobile view, hide sidebar by sliding it off-screen
-  // @include styles.media("sm") {
-  //   left: -350px;
-  //   width: 66.66vw; // Covering 2/3 of the mobile screen width
+// For mobile view, hide sidebar by sliding it off-screen
+// @include styles.media("sm") {
+//   left: -350px;
+//   width: 66.66vw; // Covering 2/3 of the mobile screen width
 
-  //   When sidebar is open, slide it in
-  //   &.open {
-  //     left: 0;
-  //   }
-  // }
+//   When sidebar is open, slide it in
+//   &.open {
+//     left: 0;
+//   }
+// }

@@ -6,8 +6,9 @@ import "./styles/main.scss";
 
 
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
 
+  const [isDarkMode, setIsDarkMode] = useState(false);
+//! Applies theme only to body not to entire layout
   const toggleTheme = () => {
     setIsDarkMode(!isDarkMode);
   };

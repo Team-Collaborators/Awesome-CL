@@ -1,45 +1,11 @@
-// $primary-color: #083748;
-@use "sass:map";
-
+@use "partials/variables"; // Import the variables partial
+@use "partials/mixins"; // Import the mixins partial
+@use "partials/layout"; // Import the layout partial
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-$primary-color: #083748;
-$secondary-color: #083e52;
-$optional-color: #5a2778;
-$slightlyLighter-color: #095874;
-
-$background-color: #181818;
-$text-color: #ffffff;
-$font-stack: "Roboto", sans-serif;
-
-// define breakpoints map
-$breakpoints: (
-  "xs": 480px,
-  "sm": 576px,
-  "md": 768px,
-  "lg": 1024px,
-  // "lg": 992px,
-  "xl": 1200px,
-  "xxl": 1600px,
-);
-
-// Mixin to use breakpoints
-@mixin media($size) {
-  @media (max-width: map.get($breakpoints, $size)) {
-    @content;
-  }
-}
-
-// Mixins
-@mixin flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-// Global styles
+// Reset and base styles
 *,
 *::before,
 *::after {
@@ -63,7 +29,7 @@ a {
   text-decoration: none;
 }
 
-// styles for routes wrapper
+// App layout styles
 .app-container {
   display: flex;
   flex-direction: column;

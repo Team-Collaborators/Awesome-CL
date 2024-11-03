@@ -23,8 +23,8 @@ const Sidebar = ({ links, style, isSidebarOpen, isMobile }) => {
   // }, []);
 
   return (
-    <nav className={styles.sidebar} style={style}>
-      {/* <nav className={`sidebar ${isSidebarOpen || !isMobile ? "open" : ""}`}></nav> */}
+     <nav className={styles.sidebar} style={style}>
+      {/* <nav className={`${styles.sidebar} ${isSidebarOpen || !isMobile ? styles.open : ""}`}> */}
 
       <ul className={styles["sidebar--inner"]}>
         {links.map((link, index) => {
