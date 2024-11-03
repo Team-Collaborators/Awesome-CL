@@ -64,6 +64,18 @@ export default function MainRoutes({ isDarkMode, toggleTheme, data }) {
             />
           </Route>
 
+          {/* ADD ADD ADD: Instruction routes */}
+          <Route path="instructions">
+            <Route
+              path="1/*"
+              element={<RenderPages file={"backend/configurations"} />}
+            />
+            <Route
+              path="2/*"
+              element={<RenderPages file={"backend/controllers"} />}
+            />
+          </Route>
+
           {/* Playground route */}
           <Route path="playground" element={<Playground />} />
 

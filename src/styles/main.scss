@@ -1,9 +1,49 @@
-@use "partials/variables"; // Import the variables partial
-@use "partials/mixins"; // Import the mixins partial
-@use "partials/layout"; // Import the layout partial
+@use "sass:map";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+// Primary colors
+$primary-color: #083748;
+$secondary-color: #083e52;
+$optional-color: #5a2778;
+$slightlyLighter-color: #095874;
+
+$background-color: #181818;
+$text-color: #ffffff;
+
+// $primary-color: var(--primary-color);
+// $secondary-color: var(--secondary-color);
+// $optional-color: var(--optional-color);
+// $background-color: var(--background-color);
+// $text-color: var(--text-color);
+
+$font-stack: "Roboto", sans-serif;
+
+// Define breakpoints map
+$breakpoints: (
+  "xs": 480px,
+  "sm": 576px,
+  "md": 768px,
+  "lg": 1024px,
+  // "lg": 992px,
+  "xl": 1200px,
+  "xxl": 1600px,
+);
+
+// Mixin to use breakpoints
+@mixin media($size) {
+  @media (max-width: map.get($breakpoints, $size)) {
+    @content;
+  }
+}
+
+// Flexbox centerin utility mixin
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 // Reset and base styles
 *,
@@ -15,7 +55,7 @@
 }
 
 body {
-  font-family: $font-stack;
+  font-family: var(--font-stack);
   background-color: var(--background-color);
   color: var(--text-color);
 }

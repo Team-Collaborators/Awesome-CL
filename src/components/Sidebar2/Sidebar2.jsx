@@ -4,28 +4,28 @@ import { Link } from "react-router-dom";
 import Button from "../../component_testing/Button/Button";
 import styles from "./Sidebar2.module.scss";
 
-const Sidebar = ({ links, style, isSidebarOpen, isMobile }) => {
-  // const [isSidebarOpen, setSidebarOpen] = useState(false);
-  // const [isMobile, setIsMobile] = useState(false);
+const Sidebar = ({ links, style }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
-  // Sidebar Toggle
-  // const toggleSidebar = () => {
-  //   //setSidebarOpen(!isSidebarOpen); // toggle open state of sidebar
-  //   setSidebarOpen((prev) => !prev);
-  // };
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+      if (window.innerWidth >= 768) {
+        setIsOpen(true); // Automatically open sidebar on larger screens
+      } else {
+        setIsOpen(false); // Automatically close on mobile
+      }
+    };
 
-  // Detect mobile view based on window width
-  // useEffect(() => {
-  //   const handleResize = () => setIsMobile(window.innerWidth < 576); // Customize breakpoint as needed
-  //   handleResize(); // Initial check
-  //   window.addEventListener("resize", handleResize);
-  //   return () => window.removeEventListener("resize", handleResize);
-  // }, []);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
-     <nav className={styles.sidebar} style={style}>
-      {/* <nav className={`${styles.sidebar} ${isSidebarOpen || !isMobile ? styles.open : ""}`}> */}
-
+    <nav
+      className={`${styles.sidebar} ${isOpen ? styles.open : styles.closed}`}
+    >
       <ul className={styles["sidebar--inner"]}>
         {links.map((link, index) => {
           return (
@@ -42,7 +42,7 @@ const Sidebar = ({ links, style, isSidebarOpen, isMobile }) => {
         radius="md"
         color="secondary"
         className={`${styles["playground-btn"]} hover:bg-pink-100`}
-        >
+      >
         <Link to="/playground" style={{ color: "white" }}>
           Playground
         </Link>
@@ -52,6 +52,7 @@ const Sidebar = ({ links, style, isSidebarOpen, isMobile }) => {
 };
 
 export default Sidebar;
+
 // <ul>
 // {isMobile ? (
 // <>

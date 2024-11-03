@@ -7,10 +7,10 @@ import logo1 from "../../assets/images/cl-awesome-logo.png";
 import { FaSun, FaMoon } from "react-icons/fa";
 import { RxHamburgerMenu } from "react-icons/rx";
 
-const Navbar = ({ toggleTheme, links, style }) => {
+const Navbar = ({ isDarkMode, toggleTheme, links}) => {
   return (
     <>
-      <nav className="navbar" style={style}>
+      <nav className="navbar">
         <div className="navbar--left">
           {/* Logo */}
           <Link to="/">
@@ -40,11 +40,7 @@ const Navbar = ({ toggleTheme, links, style }) => {
           {/* Toggle dark / light mode */}
           <button onClick={toggleTheme} className="theme-toggle-button">
             {/* Show sun icon for dark mode, moon icon for light mode */}
-            {document.body.classList.contains("dark-theme") ? (
-              <FaSun />
-            ) : (
-              <FaMoon />
-            )}
+            {isDarkMode ? <FaSun /> : <FaMoon />}
           </button>
         </div>
       </nav>

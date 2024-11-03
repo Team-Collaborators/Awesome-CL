@@ -5,35 +5,41 @@
   position: fixed;
   top: 5rem;
   left: 0;
-  width: 200px;
+  width: 12rem;
   height: 90vh;
   z-index: 1000;
   background-color: styles.$primary-color;
+  color: styles.$text-color;
   padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: left 0.3s ease; // Smooth slide-in effect
-  overflow-y: auto;
+  transition: transform 0.3s ease, opacity 0.3s ease; // Smooth slide-in effect
+  transform: translateX(0);
 
+  // overflow-y: auto;
 
-  &::-webkit-scrollbar-track {
-    background: styles.$background-color; // Background of the scrollbar track
-  }
-
-  // @include styles.media("md") {
-  //   width: 200px; // Narrow width for iPad view
+  // &::-webkit-scrollbar-track {
+  //   background: styles.$background-color; // Background of the scrollbar track
   // }
 
-  // // For mobile view, hide sidebar by sliding it off-screen
-  // @include styles.media("sm") {
-  //   left: -350px;
-  //   width: 66.66vw; // Covering 2/3 of the mobile screen width
-
-  // When sidebar is open, slide it in
+  // Sidebar open state
   &.open {
-    width: 10%;
-    background-color: red;
+    transform: translateX(0); // Slide in
+    opacity: 1; // Fully visible
+  }
+
+  // Sidebar close state
+  &.closed {
+    transform: translateX(-100%); // Slide out
+    opacity: 0; // Fully transparent
+  }
+
+  // Mobile: hide sidebar by sliding it off-screen
+  @include styles.media("sm") {
+    width: 66.66vw; // Covering 2/3 of the mobile screen width
+    transform: translateX(-100%);
+    opacity: 0;
   }
 
   .sidebar-inner {
@@ -103,23 +109,3 @@
     }
   }
 }
-
-// overflow-y: auto;
-// &::-webkit-scrollbar-track {
-//   background: styles.$background-color; // Background of the scrollbar track
-// }
-
-// @include styles.media("md") {
-//   width: 200px; // Narrow width for iPad view
-// }
-
-// For mobile view, hide sidebar by sliding it off-screen
-// @include styles.media("sm") {
-//   left: -350px;
-//   width: 66.66vw; // Covering 2/3 of the mobile screen width
-
-//   When sidebar is open, slide it in
-//   &.open {
-//     left: 0;
-//   }
-// }

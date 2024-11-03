@@ -3,9 +3,11 @@ import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import Sidebar2 from "../Sidebar2/Sidebar2";
 import Footer from "../Footer/Footer";
+import styles from "./Layout.module.scss";
 
+// Sidebar links
 export const sidebarLinks = {
-  instructions: [{ to: "/frontend/components", label: "Components" }],
+  instructions: [{ to: "/frontend/components", label: "Instructions" }],
   frontend: [
     { to: "/frontend/components", label: "Components" },
     { to: "/frontend/hooks", label: "Hooks" },
@@ -23,7 +25,7 @@ export const sidebarLinks = {
 };
 
 // Main layout that wraps the entire app, containing the header, sidebar, main content, and footer.
-const Layout = ({ data, isDarkMode, toggleTheme }) => {
+const Layout = ({ isDarkMode, toggleTheme, isSidebarOpen }) => {
   // Navbar links
   const navbarLinks = [
     { to: "/instructions", label: "Instructions" },
@@ -38,37 +40,35 @@ const Layout = ({ data, isDarkMode, toggleTheme }) => {
   if (location.pathname.startsWith("/instructions")) {
     links = sidebarLinks.instructions;
     showSidebar = true;
-  }
-  if (location.pathname.startsWith("/frontend")) {
+  } else if (location.pathname.startsWith("/frontend")) {
     links = sidebarLinks.frontend;
     showSidebar = true;
-    console.log("show frontend links ");
-  }
-  if (location.pathname.startsWith("/backend")) {
+  } else if (location.pathname.startsWith("/backend")) {
     links = sidebarLinks.backend;
     showSidebar = true;
-    console.log("show backend links ");
-  } else {
-    showSidebar = false;
   }
 
   return (
-    // <div className={`main-layout ${isDarkMode ? "dark": ""}`}>
-    <div className="app-container">
+    // Add dark-theme class conditionally based on isDarkMode
+    <div className={`app-container ${isDarkMode ? "dark-theme" : ""}`}>
       <Navbar
         isDarkMode={isDarkMode}
         toggleTheme={toggleTheme}
         links={navbarLinks}
       />
-      <div className="layout-content">
-        {showSidebar && <Sidebar2 links={links} />}{" "}
-        <main className="content-wrapper">
+      <div className={styles["layout-content"]}>
+        {showSidebar && <Sidebar2 links={links} isOpen={isSidebarOpen} />}{" "}
+        <main
+          className={`${styles["content-wrapper"]} ${
+            isSidebarOpen ? styles.open : styles.closed
+          }`}
+        >
           {" "}
           <Outlet />
         </main>
       </div>
 
-      <Footer />
+      <Footer isSidebarOpen={isSidebarOpen} />
     </div>
   );
 };
