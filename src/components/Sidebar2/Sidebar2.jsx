@@ -1,46 +1,52 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import frontendComponentsData from "../../../public/data/frontend/components.json";
 
 import Button from "../../component_testing/Button/Button";
 import styles from "./Sidebar2.module.scss";
 
-const Sidebar = ({ links, style }) => {
-  // 1. state to track if sidebar is open
-  // 2. if screen width is mobile 
-  const [isOpen, setIsOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-
-// if mobile sidebar closed
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-      if (window.innerWidth >= 768) {
-        setIsOpen(true); // Automatically open sidebar on larger screens
-      } else {
-        setIsOpen(false); // Automatically close on mobile
-      }
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
+const Sidebar = ({ links }) => {
   return (
-    <nav
-      className={`${styles.sidebar} ${isOpen ? styles.open : styles.closed}`}
-    >
-      <ul className={styles["sidebar--inner"]}>
+    // <nav
+    // className={`${styles.sidebar} ${isSidebarOpen ? styles.open : styles.closed}`}
+    <nav className={styles.sidebar}>
+      {/* <ul className={styles["sidebar--inner"]}>
         {links.map((link, index) => {
           return (
             <li key={index} className={styles["sidebar--inner-item"]}>
               <Link to={link.to} className={styles["sidebar__link"]}>
                 {link.label}
               </Link>
+              
             </li>
           );
         })}
+      </ul> */}
+      <ul className={styles["sidebar--inner"]}>
+        {links.map((link, index) => (
+          <li key={index} className={styles["sidebar--inner-item"]}>
+            <Link to={link.to} className={styles["sidebar__link"]}>
+              {link.label}
+            </Link>
+            {link.sublinks && link.sublinks.length > 0 && (
+              <ul className={styles["sublinks"]}>
+                {link.sublinks.map((sublink, subIndex) => (
+                  <li
+                    key={subIndex}
+                    className={styles["sidebar--sublink-item"]}
+                  >
+                    <Link
+                      to={sublink.to}
+                      className={styles["sidebar__sublink"]}
+                    >
+                      {sublink.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </li>
+        ))}
       </ul>
 
       <Button

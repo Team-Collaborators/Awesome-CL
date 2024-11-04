@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import { Route, Routes } from "react-router-dom";
-import { fetchData } from "../../../hooks";
+import { fetchData } from "../../../hooks/hooks";
 //import { SideBar } from "../../SideBar/Sidebar";
 import { MainBackendLayout } from "../../MainBackendLayout/MainBackendLayout";
 import { MainFrontendLayout } from "../../MainFrontendLayout/MainFrontendLayout";
