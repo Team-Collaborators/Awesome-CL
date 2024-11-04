@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { RenderCode } from "../RenderCode/RenderCode";
-import ExampleViewer from "../../ExampleViewer/ExampleViewer";
-import Table from "../../Table/Table";
+import ExampleViewer from "../../components/ExampleViewer/ExampleViewer";
+import Table from "../../components/Table/Table";
 
-export function RenderComponent({ data }) {
+export function MainFrontendLayout({ data }) {
   const { name } = useParams();
   const [component, setComponent] = useState(null);
   const [installation, setInstallation] = useState("cli-command-to-install");
@@ -122,7 +122,6 @@ export function RenderComponent({ data }) {
                 <Table rows={component.accessibility.ariaRoles} />
               </>
             ) : null}
-
           </section>
         </main>
       </>

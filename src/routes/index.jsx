@@ -6,7 +6,11 @@ import Playground from "../components/Playground/Playground";
 import NotFound from "../components/NotFound/NotFound";
 import { RenderPages } from "../components/renderers/RenderPages/RenderPages";
 
-export default function MainRoutes({ isDarkMode, toggleTheme, data }) {
+
+
+export default function MainRoutes({ isDarkMode, toggleTheme }) {
+ 
+
   return (
     <Router>
       <Routes>
@@ -85,4 +89,5 @@ export default function MainRoutes({ isDarkMode, toggleTheme, data }) {
       </Routes>
     </Router>
   );
+
 }

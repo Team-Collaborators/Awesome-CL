@@ -1,13 +1,18 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import frontendComponentsData from "../../../public/data/frontend/components.json";
+
 import Button from "../../component_testing/Button/Button";
 import styles from "./Sidebar2.module.scss";
 
 const Sidebar = ({ links, style }) => {
+  // 1. state to track if sidebar is open
+  // 2. if screen width is mobile 
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
+// if mobile sidebar closed
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
