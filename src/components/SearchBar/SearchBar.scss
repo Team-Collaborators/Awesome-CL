@@ -1,0 +1,25 @@
+/* SearchBar.scss */
+
+.search-wrapper {
+  position: relative;
+}
+
+.search-input,
+.search-results {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.search-results {
+  position: absolute;
+  top: 200%;
+  list-style: none;
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
