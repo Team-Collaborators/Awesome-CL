@@ -1,6 +1,6 @@
 [
   {
-    "title": "Button",
+    "title": "button",
     "path": "/frontend/components/button",
     "description": "A versatile button component that can be used in different styles and sizes.",
     "installation": [
@@ -265,12 +265,7 @@
     "propsTable": {
       "title": " Button Props",
       "description": "List of all props supported by the Button component.",
-      "headers": [
-        "Prop Name",
-        "Type",
-        "Description",
-        "Default Value"
-      ],
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
       "rows": [
         {
           "propName": "children",
@@ -331,17 +326,12 @@
     "eventsTable": {
       "title": "Events",
       "description": "List of all events emitted by the Button component.",
-      "headers": [
-        "Event Name",
-        "Description"
-      ],
+      "headers": ["Event Name", "Description"],
       "rows": [
         {
           "propName": "onClick",
           "type": "Triggered when the button is clicked."
         }
-        
-        
       ]
     },
     "accessibility": {
