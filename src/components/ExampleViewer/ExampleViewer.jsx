@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import DynamicComponent from "../../components/DinamicComponent/DinamicComponent";
 import { RenderCode } from "../RenderCode/RenderCode";
 import Button from "../../component_testing/Button/Button";
-import "./ExampleViewer.scss";
+// import "./ExampleViewer.scss";
 
 export default function ExampleViewer({ example }) {
   const [showPreview, setShowPreview] = useState(true);

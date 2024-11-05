@@ -8,7 +8,6 @@ import { RenderPages } from "../components/renderers/RenderPages/RenderPages";
 import ContactPage from "../pages/ContactPage/ContactPage";
 import AboutUs from "../pages/AboutUs/AboutUs";
 
-
 export default function MainRoutes({ isDarkMode, toggleTheme }) {
   return (
     <Router>

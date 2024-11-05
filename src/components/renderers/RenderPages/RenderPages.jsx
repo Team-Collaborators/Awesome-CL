@@ -2,14 +2,14 @@ import React, { useEffect, useState } from "react";
 // import { Route, Routes } from "react-router-dom";
 import { fetchData } from "../../../hooks/hooks";
 //import { SideBar } from "../../SideBar/Sidebar";
-import { useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { MainBackendLayout } from "../../MainBackendLayout/MainBackendLayout";
 import { MainFrontendLayout } from "../../MainFrontendLayout/MainFrontendLayout";
 import { MainInstructionsLayout } from "../../MainInstructionsLayout/MainInstructionsLayout";
 
 export function RenderPages({ file }) {
-  const { subcategory } = useParams();
-  const { data, loading, error } = fetchData(`/data/${file}.json`);
+  let location = useLocation();
+  let { data, loading, error } = fetchData(`/data/${file}.json`);
   const [pageType, setPageType] = useState(null);
   // const [were, setWere] = useState(true);
 
@@ -38,8 +38,18 @@ export function RenderPages({ file }) {
   if (error) return <p>Error: {error}</p>;
   // Ensure that rendering doesn't occur before data is loaded
   if (!data || data.length === 0) return <p>No data available</p>;
+  console.log("data: ", data, "file ", file);
 
+  // data = data.find(
+  //   (comp) => comp.title === location.pathname.split("/").at(-1)
+  // );
+  const lastPathSegment = location.pathname.split("/").at(-1); // or use: location.pathname.split("/")[location.pathname.split("/").length - 1]
+
+  data = data.find((comp) => comp.title === lastPathSegment);
+
+  console.log("data: ", data, "location: ", location);
   let LayoutComponent;
+
   switch (pageType) {
     case "backend":
       LayoutComponent = MainBackendLayout;
