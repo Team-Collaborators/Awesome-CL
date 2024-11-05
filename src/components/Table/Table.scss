@@ -1,4 +1,4 @@
-@import "../../styles/main.scss";
+@use "../../styles/main.scss" as styles;
 
 :root {
   --table-header-text-color: #e0e0e0; //Default text color (light mode)
@@ -17,14 +17,14 @@ body.dark-theme {
   transition: transform 0.2s;
   max-width: 600px;
   margin: 10vw auto;
-  font-family: $font-stack;
+  font-family: styles.$font-stack;
 }
 .table {
   width: 100%;
   border-collapse: collapse;
 }
 .table_header {
-  background-color: $secondary-color;
+  background-color: styles.$secondary-color;
   color: var(--table-header-text-color);
   padding: 10px;
   text-align: left;

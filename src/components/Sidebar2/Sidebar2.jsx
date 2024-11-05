@@ -6,8 +6,8 @@ import Button from "../../component_testing/Button/Button";
 import styles from "./Sidebar2.module.scss";
 
 const Sidebar = ({ links }) => {
-  return (
-    <nav className={styles.sidebar}>
+  const renderLinks = (items) => {
+    return (
       <ul className={styles["sidebar--inner"]}>
         {links.map((link, index) => {
           return (
@@ -15,12 +15,36 @@ const Sidebar = ({ links }) => {
               <Link to={link.path} className={styles["sidebar__link"]}>
                 {link.title}
               </Link>
+              {/* Check if there are subcategories */}
+              {link.subcategories && link.subcategories.length > 0 && (
+                <ul className={styles["sidebar--inner"]}>
+                  {link.subcategories.map((subLink, subIndex) => (
+                    <li
+                      key={subIndex}
+                      className={styles["sidebar--inner-item"]}
+                    >
+                      <Link
+                        to={subLink.path}
+                        className={styles["sidebar__link"]}
+                      >
+                        {subLink.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </li>
           );
         })}
       </ul>
+    );
+  };
 
-      {/* Playground Button */}
+  return (
+    <nav className={styles.sidebar}>
+      {renderLinks(links)}
+
+      {/* Playground */}
       <Button
         radius="md"
         color="secondary"
