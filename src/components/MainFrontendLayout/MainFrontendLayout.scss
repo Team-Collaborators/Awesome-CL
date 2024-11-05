@@ -1,5 +1,5 @@
 @use "sass:color";
-@import "../../styles/main.scss";
+@use "../../styles/main.scss" as styles;
 
 // Light theme colors
 $primary-color: #083748;
@@ -15,7 +15,7 @@ $primary-color-dark: #d4d4d8;
 $secondary-color-dark: #3b7b83;
 $section-bg-dark: #3c3f46;
 $page-padding-bg-dark: #1e1f23; // Dark padding background for main page
-$header-color-dark: lighten($primary-color-dark, 15%);
+$header-color-dark: color.adjust($primary-color-dark, $lightness: 15%);
 $text-color-dark-mode: #e0e0e0; // Light text for paragraphs in dark mode
 
 .render-component-page {
@@ -50,7 +50,7 @@ $text-color-dark-mode: #e0e0e0; // Light text for paragraphs in dark mode
 
     p {
       font-size: 1.2rem;
-      color: darken($text-color-dark, 20%);
+      color: color.adjust($text-color-dark, $lightness: -20%);
 
       .dark-theme & {
         color: $text-color-dark-mode;
@@ -71,10 +71,10 @@ $text-color-dark-mode: #e0e0e0; // Light text for paragraphs in dark mode
       transition: background-color 0.3s;
 
       &:hover {
-        background-color: lighten($secondary-color, 45%);
+        background-color: color.adjust($secondary-color, $lightness: 45%);
 
         .dark-theme & {
-          background-color: lighten($section-bg-dark, 5%);
+          background-color: color.adjust($section-bg-dark, $lightness: 5%);
         }
       }
 
@@ -115,7 +115,7 @@ $text-color-dark-mode: #e0e0e0; // Light text for paragraphs in dark mode
         transition: background-color 0.3s;
 
         &:hover {
-          background-color: darken($secondary-color, 10%);
+          background-color: color.adjust($secondary-color, $lightness: -10%);
         }
 
         .dark-theme & {
@@ -123,7 +123,10 @@ $text-color-dark-mode: #e0e0e0; // Light text for paragraphs in dark mode
           color: $primary-color-dark;
 
           &:hover {
-            background-color: lighten($secondary-color-dark, 10%);
+            background-color: color.adjust(
+              $secondary-color-dark,
+              $lightness: 10%
+            );
           }
         }
       }
