@@ -11,7 +11,7 @@ $slightlyLighter-color: #095874;
 
 $background-color: #181818;
 $text-color: #ffffff;
-
+$border-color: 1px solid rgba(255, 255, 255, 0.2);
 // $primary-color: var(--primary-color);
 // $secondary-color: var(--secondary-color);
 // $optional-color: var(--optional-color);
@@ -82,7 +82,7 @@ a {
   display: flex;
   flex-direction: column;
   margin-top: 8rem;
-  margin-left: 10rem; // Ensures all content is pushed to the right from sidebar
+  // margin-left: 10rem; // Ensures all content is pushed to the right from sidebar
   // Ensure content pushes footer down
 
   @include media("md") {

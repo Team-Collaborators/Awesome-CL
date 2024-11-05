@@ -5,6 +5,9 @@ import HomePage from "../pages/HomePage/HomePage";
 import Playground from "../components/Playground/Playground";
 import NotFound from "../components/NotFound/NotFound";
 import { RenderPages } from "../components/renderers/RenderPages/RenderPages";
+import ContactPage from "../pages/ContactPage/ContactPage";
+import AboutUs from "../pages/AboutUs/AboutUs";
+
 
 export default function MainRoutes({ isDarkMode, toggleTheme }) {
   return (
@@ -81,6 +84,8 @@ export default function MainRoutes({ isDarkMode, toggleTheme }) {
 
           {/* Catch-all route for 404 */}
           <Route path="*" element={<NotFound />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/about" element={<AboutUs />} />
         </Route>
       </Routes>
     </Router>

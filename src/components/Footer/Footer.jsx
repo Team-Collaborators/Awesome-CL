@@ -2,11 +2,16 @@ import React from "react";
 import { FaTwitter, FaFacebookF, FaInstagram } from "react-icons/fa";
 import styles from "./Footer.module.scss";
 import logo from "../../assets/images/awesome-logo.png";
+import ContactPage from "../../pages/ContactPage/ContactPage";
+import AboutUs from "../../pages/AboutUs/AboutUs";
 
 const Footer = ({ isSidebarOpen }) => {
-
   return (
-    <footer className={`${styles.footer} ${isSidebarOpen ? styles.sidebarOpen : styles.sidebarClosed}`}>
+    <footer
+      className={`${styles.footer} ${
+        isSidebarOpen ? styles.sidebarOpen : styles.sidebarClosed
+      }`}
+    >
       <div className={styles.container}>
         <div className={styles.sections}>
           <div className={styles.links}>
