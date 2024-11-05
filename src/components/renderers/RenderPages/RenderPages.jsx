@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 
 import { Route, Routes } from "react-router-dom";
-import { fetchData } from "../../../hooks";
-import { SideBar } from "../../SideBar/Sidebar";
-import { RenderFiles } from "../RenderFiles/RenderFile";
-import { RenderComponent } from "../RenderComponent/RenderComponent";
+import { fetchData } from "../../../hooks/hooks";
+//import { SideBar } from "../../SideBar/Sidebar";
+import { MainBackendLayout } from "../../MainBackendLayout/MainBackendLayout";
+import { MainFrontendLayout } from "../../MainFrontendLayout/MainFrontendLayout";
 
 export function RenderPages({ file }) {
   const { data, loading, error } = fetchData(`/data/${file}.json`);
@@ -27,18 +27,26 @@ export function RenderPages({ file }) {
   if (!data || data.length === 0) return <p>No data available</p>;
   return (
     <>
-      <SideBar data={data} />
+      {/* <SideBar data={data} /> */}
       <Routes>
         <Route
           path="/"
           element={
-            were ? <RenderFiles data={data} /> : <RenderComponent data={data} />
+            were ? (
+              <MainBackendLayout data={data} />
+            ) : (
+              <MainFrontendLayout data={data} />
+            )
           }
         />
         <Route
           path="/:name"
           element={
-            were ? <RenderFiles data={data} /> : <RenderComponent data={data} />
+            were ? (
+              <MainBackendLayout data={data} />
+            ) : (
+              <MainFrontendLayout data={data} />
+            )
           }
         />
       </Routes>
