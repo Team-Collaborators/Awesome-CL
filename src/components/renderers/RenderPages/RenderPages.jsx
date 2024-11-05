@@ -2,11 +2,13 @@ import React, { useEffect, useState } from "react";
 // import { Route, Routes } from "react-router-dom";
 import { fetchData } from "../../../hooks/hooks";
 //import { SideBar } from "../../SideBar/Sidebar";
+import { useParams } from "react-router-dom";
 import { MainBackendLayout } from "../../MainBackendLayout/MainBackendLayout";
 import { MainFrontendLayout } from "../../MainFrontendLayout/MainFrontendLayout";
 import { MainInstructionsLayout } from "../../MainInstructionsLayout/MainInstructionsLayout";
 
 export function RenderPages({ file }) {
+  const { subcategory } = useParams();
   const { data, loading, error } = fetchData(`/data/${file}.json`);
   const [pageType, setPageType] = useState(null);
   // const [were, setWere] = useState(true);
@@ -53,9 +55,12 @@ export function RenderPages({ file }) {
   }
 
   return <LayoutComponent data={data} />;
-    // <>
-      {/* <SideBar data={data} /> */}
-      {/* <Routes>
+  // <>
+  {
+    /* <SideBar data={data} /> */
+  }
+  {
+    /* <Routes>
         <Route
           path="/"
           element={
@@ -76,8 +81,11 @@ export function RenderPages({ file }) {
             )
           }
         />
-      </Routes> */}
-      {/* <Footer /> */}
-    // </>
+      </Routes> */
+  }
+  {
+    /* <Footer /> */
+  }
+  // </>
   // );
 }
