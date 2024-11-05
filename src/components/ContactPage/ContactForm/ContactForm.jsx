@@ -8,7 +8,7 @@ const ContactForm = () => {
         <img src={contactImage} alt="Contact Us" />
       </div>
       <div className={styles.formContainer}>
-        <h2>Get in touch Us</h2>
+        <h2>Get In Touch With Us</h2>
         <p>
           We'd love to hear from you. Please fill out the form below and we'll
           get in touch as soon as possible.
