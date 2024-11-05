@@ -65,43 +65,38 @@ const AboutUs = () => {
       <h2 className={styles.subtitle}>Why We Create</h2>
       <ul className={styles.list}>
         <li>
-          <strong>Ready-to-Use Components:</strong> Quickly add essential UI
-          elements without setup.
+          Ready-to-Use Components: Quickly add essential UI elements without
+          setup.
         </li>
         <li>
           Full-Stack Compatibility: Components that play well with both frontend
           and backend systems.
         </li>
         <li>
-          <strong>Style Variety:</strong> Neon, dark, or professional themes,
-          whatever you need.
+          Style Variety: Neon, dark, or professional themes, whatever you need.
         </li>
         <li>
-          <strong>Beginner-Friendly Documentation:</strong> Learn with detailed
-          explanations and examples.
+          Beginner-Friendly Documentation: Learn with detailed explanations and
+          examples.
         </li>
       </ul>
 
       <h2 className={styles.subtitle}>What You Can Expect</h2>
       <ul className={styles.list}>
+        <li>Reusable Code: Scales with your career growth.</li>
+        <li>Responsive Design: Looks great on all screen sizes.</li>
         <li>
-          <strong>Reusable Code:</strong> Scales with your career growth.
-        </li>
-        <li>
-          <strong>Responsive Design:</strong> Looks great on all screen sizes.
-        </li>
-        <li>
-          <strong>Continuous Updates:</strong> New styles, animations, and
-          components based on industry trends.
+          Continuous Updates:New styles, animations, and components based on
+          industry trends.
         </li>
       </ul>
 
       <h2 className={styles.subtitle}>Join the Community!</h2>
       <p className={styles.description}>
-        This library is a <strong>community of learners and creators</strong>.
-        Connect with us, share feedback, and help make this library even better.
-        Whether it’s your first project or a portfolio masterpiece, we’re here
-        to support you!
+        This library is a community of learners and creators. Connect with us,
+        share feedback, and help make this library even better. Whether it’s
+        your first project or a portfolio masterpiece, we’re here to support
+        you!
       </p>
 
       <h2 className={styles.subtitle}>Our Team</h2>
