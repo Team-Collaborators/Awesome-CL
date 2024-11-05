@@ -7,48 +7,20 @@ import styles from "./Sidebar2.module.scss";
 
 const Sidebar = ({ links }) => {
   return (
-    // <nav
-    // className={`${styles.sidebar} ${isSidebarOpen ? styles.open : styles.closed}`}
     <nav className={styles.sidebar}>
-      {/* <ul className={styles["sidebar--inner"]}>
+      <ul className={styles["sidebar--inner"]}>
         {links.map((link, index) => {
           return (
             <li key={index} className={styles["sidebar--inner-item"]}>
-              <Link to={link.to} className={styles["sidebar__link"]}>
-                {link.label}
+              <Link to={link.path} className={styles["sidebar__link"]}>
+                {link.title}
               </Link>
-              
             </li>
           );
         })}
-      </ul> */}
-      <ul className={styles["sidebar--inner"]}>
-        {links.map((link, index) => (
-          <li key={index} className={styles["sidebar--inner-item"]}>
-            <Link to={link.to} className={styles["sidebar__link"]}>
-              {link.label}
-            </Link>
-            {link.sublinks && link.sublinks.length > 0 && (
-              <ul className={styles["sublinks"]}>
-                {link.sublinks.map((sublink, subIndex) => (
-                  <li
-                    key={subIndex}
-                    className={styles["sidebar--sublink-item"]}
-                  >
-                    <Link
-                      to={sublink.to}
-                      className={styles["sidebar__sublink"]}
-                    >
-                      {sublink.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </li>
-        ))}
       </ul>
 
+      {/* Playground Button */}
       <Button
         radius="md"
         color="secondary"

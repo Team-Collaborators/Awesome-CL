@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { RenderCode } from "../RenderCode/RenderCode";
 import ExampleViewer from "../../components/ExampleViewer/ExampleViewer";
 import Table from "../../components/Table/Table";
+import "./MainFrontendLayout.scss";
 
 export function MainFrontendLayout({ data }) {
   const { name } = useParams();
@@ -20,13 +21,13 @@ export function MainFrontendLayout({ data }) {
 
   if (component) {
     return (
-      <>
+      <div className="render-component-page">
         <header>
           <h2>{component.title}</h2>
           <p>{component.description}</p>
         </header>
         <main>
-          <section>
+          <section className="installation-section">
             <h2>Installation</h2>
             {component.installation ? (
               <>
@@ -124,7 +125,7 @@ export function MainFrontendLayout({ data }) {
             ) : null}
           </section>
         </main>
-      </>
+      </div>
     );
   }
 }

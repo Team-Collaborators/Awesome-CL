@@ -6,8 +6,9 @@ import logo1 from "../../assets/images/cl-awesome-logo.png";
 
 import { FaSun, FaMoon } from "react-icons/fa";
 import { RxHamburgerMenu } from "react-icons/rx";
+import SearchBar from "../SearchBar/SearchBar";
 
-const Navbar = ({ isDarkMode, toggleTheme, links}) => {
+const Navbar = ({ isDarkMode, toggleTheme, links }) => {
   return (
     <>
       <nav className="navbar">
@@ -32,11 +33,7 @@ const Navbar = ({ isDarkMode, toggleTheme, links}) => {
 
         {/* Search bar */}
         <div className="navbar--right">
-          <input
-            type="text"
-            placeholder="Search..."
-            className="navbar--search-input"
-          />
+          <SearchBar />
           {/* Toggle dark / light mode */}
           <button onClick={toggleTheme} className="theme-toggle-button">
             {/* Show sun icon for dark mode, moon icon for light mode */}
