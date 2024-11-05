@@ -2,11 +2,15 @@
 @use "sass:color";
 
 $primary-color: #083748;
-$secondary-color: #083E52;
-$optional-color: #5A2778;
-$background-color: #F7F7F7;
+$secondary-color: #083e52;
+$optional-color: #5a2778;
+$background-color: #f7f7f7;
+$dark-background-color: #1e1f23;
+$dark-border-color: #4a4a4a;
+$dark-text-color: #e0e0e0;
 $button-padding: 0.5rem 1rem;
 $border-radius: 8px;
+
 .DynamicComponent {
   padding: 1.5rem;
   background-color: $background-color;
@@ -17,7 +21,7 @@ $border-radius: 8px;
     font-size: 1.5rem;
     margin-bottom: 1rem;
   }
-  //toggle buttons for Preview and Code
+
   .toggle-buttons {
     display: flex;
     gap: 1rem;
@@ -25,7 +29,7 @@ $border-radius: 8px;
     button {
       padding: $button-padding;
       font-size: 1rem;
-      color: #FFFFFF;
+      color: #ffffff;
       background-color: $secondary-color;
       border: none;
       border-radius: $border-radius;
@@ -39,12 +43,11 @@ $border-radius: 8px;
       }
     }
   }
-  //container for either Preview or Code view
+
   .component-display {
-   
     padding: 1rem;
     border-radius: $border-radius;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     border: 1px solid $secondary-color;
     &.code-view {
       font-family: "Courier New", monospace;
@@ -55,6 +58,24 @@ $border-radius: 8px;
       white-space: pre-wrap;
     }
   }
+
+  body.dark-theme & {
+    background-color: $dark-background-color;
+
+    h2 {
+      color: $dark-text-color;
+    }
+
+    .component-display {
+      background-color: $dark-background-color;
+      border: 1px solid $dark-border-color;
+
+      &.code-view {
+        background-color: darken($dark-background-color, 10%);
+        color: $dark-text-color;
+      }
+    }
+  }
 }
 
 .component-ul {
@@ -62,11 +83,9 @@ $border-radius: 8px;
   justify-content: left;
   align-items: center;
   gap: 1rem;
+
+  body.dark-theme & {
+    background-color: $dark-background-color;
+    color: $dark-text-color;
+  }
 }
-
-
-
-
-
-
-
