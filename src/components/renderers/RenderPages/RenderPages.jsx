@@ -38,24 +38,17 @@ export function RenderPages({ file }) {
   if (error) return <p>Error: {error}</p>;
   // Ensure that rendering doesn't occur before data is loaded
   if (!data || data.length === 0) return <p>No data available</p>;
-  console.log("data: ", data, "file ", file);
 
-  // data = data.find(
-  //   (comp) => comp.title === location.pathname.split("/").at(-1)
-  // );
-  const lastPathSegment = location.pathname.split("/").at(-1); // or use: location.pathname.split("/")[location.pathname.split("/").length - 1]
-
-  data = data.find((comp) => comp.title === lastPathSegment);
-
-  console.log("data: ", data, "location: ", location);
   let LayoutComponent;
-
   switch (pageType) {
     case "backend":
       LayoutComponent = MainBackendLayout;
       break;
     case "frontend":
       LayoutComponent = MainFrontendLayout;
+      // take the last segment of the URL and look for the matching component
+      const lastPathSegment = location.pathname.split("/").at(-1);
+      data = data.find((comp) => comp.title === lastPathSegment);
       break;
     case "instructions":
       LayoutComponent = MainInstructionsLayout;
