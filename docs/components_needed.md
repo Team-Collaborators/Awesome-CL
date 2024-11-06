@@ -1,4 +1,5 @@
 # Components needed primary
+
 - chip
 - header
 - link
@@ -8,35 +9,40 @@
 - checkbox group
 - radio button
 - input field (search field)
-- search field with button
 - card
 - form
 - table
 - textarea
 - navbar
 - accordion
-- divider
 - dropdown
 - image
-- modal
 - pagination
-- popover
 - select
-- slider
+- divider
 - spacer
-- switch
 - tabs
 - tooltip
 
 # Components needed secondary
+
 - avatar
-- user 
+- user
 - breadcrumbs
 - calendar
 - date picker
 
+# In Progress
+
+- search field with button
+- modal
+- slider
+- popover
+- switch
 
 # Done
-- button 
+
+- button
 - code
 - snippet
+- search field
