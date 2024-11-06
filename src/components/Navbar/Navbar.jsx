@@ -5,7 +5,7 @@ import "./Navbar.scss";
 import logo1 from "../../assets/images/cl-awesome-logo.png";
 
 import { FaSun, FaMoon } from "react-icons/fa";
-import { RxHamburgerMenu } from "react-icons/rx";
+//import { RxHamburgerMenu } from "react-icons/rx"; // Hamburger Menu for Mobile view
 import SearchBar from "../SearchBar/SearchBar";
 
 const Navbar = ({ isDarkMode, toggleTheme, links }) => {
@@ -23,8 +23,8 @@ const Navbar = ({ isDarkMode, toggleTheme, links }) => {
           <ul className="navbar--inner">
             {links.map((link, index) => (
               <li key={index} className="navbar--inner-item">
-                <Link to={link.to} className="navbar__link">
-                  {link.label}
+                <Link to={link.path} className="navbar__link">
+                  {link.title}
                 </Link>
               </li>
             ))}
