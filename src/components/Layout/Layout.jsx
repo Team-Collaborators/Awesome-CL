@@ -4,7 +4,7 @@ import Navbar from "../Navbar/Navbar";
 import Sidebar2 from "../Sidebar2/Sidebar2";
 import Footer from "../Footer/Footer";
 import { sidebarLinks, navbarLinks } from "../../../public/data/links";
-import styles from "./Layout.module.scss";
+import "../../styles/main.scss";
 
 // Main layout that wraps the entire app, containing the header, sidebar, main content, and footer.
 const Layout = ({ isDarkMode, toggleTheme }) => {
@@ -23,7 +23,7 @@ const Layout = ({ isDarkMode, toggleTheme }) => {
     links = sidebarLinks.backend;
     showSidebar = true;
   }
-
+  console.log("showSidebar: ", showSidebar)
 
   return (
     // Add dark-theme class conditionally based on isDarkMode
@@ -33,21 +33,18 @@ const Layout = ({ isDarkMode, toggleTheme }) => {
         toggleTheme={toggleTheme}
         links={navbarLinks}
       />
-      <div className={styles["layout-content"]}>
-        {showSidebar && (
-          <Sidebar2 links={links}/>
-        )}{" "}
+      <div className="layout-content">
+        {showSidebar && <Sidebar2 links={links} />}{" "}
         <main
-          className={`${styles["content-wrapper"]} ${
-            showSidebar ? styles.open : styles.closed
+          className={`content-wrapper ${
+            showSidebar ? "sidebarOpen" : "sidebarClosed"
           }`}
         >
           {" "}
           <Outlet />
         </main>
       </div>
-
-      <Footer isSidebarOpen={showSidebar} />
+      <Footer isSidebarOpen={showSidebar}/>
     </div>
   );
 };
