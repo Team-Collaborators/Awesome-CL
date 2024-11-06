@@ -6,8 +6,9 @@
 // import "../component_testing/Button/Button.module.scss";
 
 import Button from "../component_testing/Button/Button";
+import Input from "../component_testing/Input/Input";
 
 // import variables from lib styles
 // import all components from the json file, then export them all
 
-export { Button };
+export { Button, Input };
