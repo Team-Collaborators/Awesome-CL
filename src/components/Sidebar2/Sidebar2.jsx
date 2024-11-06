@@ -1,31 +1,70 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
-
+import { IoIosArrowBack } from "react-icons/io";
+import { IoIosArrowDown } from "react-icons/io";
 import Button from "../../component_testing/Button/Button";
 import styles from "./Sidebar2.module.scss";
 
 const Sidebar = ({ links }) => {
+  // Initialize all subcategories to be open by default
+  const [openSubcategories, setOpenSubcategories] = useState(
+    links.reduce((acc, _, index) => ({ ...acc, [index]: true }), {})
+  );
+
+  const toggleSubcategory = (index) => {
+    setOpenSubcategories((prevState) => ({
+      ...prevState,
+      [index]: !prevState[index],
+    }));
+  };
+
   const renderLinks = (items) => {
     return (
-      <ul className={styles["sidebar--inner"]}>
+      <ul className={styles.sidebarInner}>
         {links.map((link, index) => {
+          const isOpen = openSubcategories[index]; // Check if this subcategory is open
+
           return (
-            <li key={index} className={styles["sidebar--inner-item"]}>
-              <Link to={link.path} className={styles["sidebar__link"]}>
+            <li key={index} className={styles.sidebarInnerItem}>
+              <Link
+                to={link.path}
+                className={styles.sidebarMainLink}
+                onClick={() => toggleSubcategory(index)}
+              >
                 {link.title}
+                {link.subcategories && link.subcategories.length > 0 && (
+                  <span className={isOpen ? styles.arrowOpen : styles.arrow}>
+                    &#9660; {/* Down arrow icon */}
+                  </span>
+                )}
               </Link>
+
               {/* Check if there are subcategories */}
-              {link.subcategories && link.subcategories.length > 0 && (
-                <ul className={styles["sidebar--inner"]}>
+              {/* {link.subcategories && link.subcategories.length > 0 && (
+                
+                <ul className={styles.sidebarSubCat}>
                   {link.subcategories.map((subLink, subIndex) => (
-                    <li
-                      key={subIndex}
-                      className={styles["sidebar--inner-item"]}
-                    >
+                    <li key={subIndex} className={styles.sidebarSubCatItem}>
                       <Link
                         to={subLink.path}
-                        className={styles["sidebar__link"]}
+                        className={styles.sidebarSubCatLink}
+                      >
+                        {subLink.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )} */}
+
+              {/* Render subcategories only if open */}
+              {isOpen && link.subcategories && (
+                <ul className={styles.sidebarSubCat}>
+                  {link.subcategories.map((subLink, subIndex) => (
+                    <li key={subIndex} className={styles.sidebarSubCatItem}>
+                      <Link
+                        to={subLink.path}
+                        className={styles.sidebarSubCatLink}
                       >
                         {subLink.title}
                       </Link>

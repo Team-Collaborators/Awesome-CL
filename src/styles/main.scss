@@ -92,13 +92,5 @@ a {
     &.sidebarClosed {
       margin-left: 0;
     }
-
-    // Adjust margins for smaller screens
-    // @include media("md") {
-    //   margin-left: 8rem;
-    // }
-    // @include media("sm") {
-    //   margin-left: 2rem;
-    // }
   }
 }

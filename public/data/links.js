@@ -9,6 +9,12 @@ export const sidebarLinks = {
         { path: "/frontend/components/button", title: "Button" },
         { path: "/frontend/components/modal", title: "Modal" },
         { path: "/frontend/components/searchbar", title: "Search Bar" },
+        { path: "/frontend/components/card", title: "Card" },
+        { path: "/frontend/components/popover", title: "Popover" },
+        { path: "/frontend/components/form", title: "Form" },
+        { path: "/frontend/components/carousel", title: "Carousel" },
+        { path: "/frontend/components/divider", title: "Divider" },
+        { path: "/frontend/components/switch", title: "Switch" },
       ],
     },
     {
