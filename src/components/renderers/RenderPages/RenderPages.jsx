@@ -2,14 +2,14 @@ import React, { useEffect, useState } from "react";
 // import { Route, Routes } from "react-router-dom";
 import { fetchData } from "../../../hooks/hooks";
 //import { SideBar } from "../../SideBar/Sidebar";
-import { useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { MainBackendLayout } from "../../MainBackendLayout/MainBackendLayout";
 import { MainFrontendLayout } from "../../MainFrontendLayout/MainFrontendLayout";
 import { MainInstructionsLayout } from "../../MainInstructionsLayout/MainInstructionsLayout";
 
 export function RenderPages({ file }) {
-  const { subcategory } = useParams();
-  const { data, loading, error } = fetchData(`/data/${file}.json`);
+  let location = useLocation();
+  let { data, loading, error } = fetchData(`/data/${file}.json`);
   const [pageType, setPageType] = useState(null);
   // const [were, setWere] = useState(true);
 
@@ -46,6 +46,9 @@ export function RenderPages({ file }) {
       break;
     case "frontend":
       LayoutComponent = MainFrontendLayout;
+      // take the last segment of the URL and look for the matching component
+      const lastPathSegment = location.pathname.split("/").at(-1);
+      data = data.find((comp) => comp.title === lastPathSegment);
       break;
     case "instructions":
       LayoutComponent = MainInstructionsLayout;

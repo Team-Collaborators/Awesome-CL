@@ -1,6 +1,6 @@
 [
   {
-    "title": "Button",
+    "title": "button",
     "path": "/frontend/components/button",
     "description": "A versatile button component that can be used in different styles and sizes.",
     "installation": [

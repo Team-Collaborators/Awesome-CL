@@ -15,7 +15,7 @@ export function MainFrontendLayout({ data }) {
       const foundComponent = data.find((comp) => comp.title === name);
       setComponent(foundComponent);
     } else {
-      setComponent(data[0]);
+      setComponent(data);
     }
   }, [name, data]);
 
