@@ -12,30 +12,30 @@ const Navbar = ({ isDarkMode, toggleTheme, links }) => {
   return (
     <>
       <nav className="navbar">
-        <div className="navbar--left">
-          {/* Logo */}
+        <div className="navbarLeft">
+          {/* Logo */} 
           <Link to="/">
             {" "}
-            <img src={logo1} alt="Logo" className="nav-logo" />
+          <img src={logo1} alt="Logo" className="navLogo" />
           </Link>
-
+  </div>
           {/* Navbar Links */}
-          <ul className="navbar--inner">
+          <ul className="navbarInner">
             {links.map((link, index) => (
-              <li key={index} className="navbar--inner-item">
-                <Link to={link.path} className="navbar__link">
+              <li key={index} className="navbarInnerItem">
+                <Link to={link.path} className="navbarLink">
                   {link.title}
                 </Link>
               </li>
             ))}
           </ul>
-        </div>
+      
 
         {/* Search bar */}
-        <div className="navbar--right">
+        <div className="navbarRight">
           <SearchBar />
           {/* Toggle dark / light mode */}
-          <button onClick={toggleTheme} className="theme-toggle-button">
+          <button onClick={toggleTheme} className="themeToggleButton">
             {/* Show sun icon for dark mode, moon icon for light mode */}
             {isDarkMode ? <FaSun /> : <FaMoon />}
           </button>
