@@ -12,11 +12,6 @@ $slightlyLighter-color: #095874;
 $background-color: #181818;
 $text-color: #ffffff;
 $border-color: 1px solid rgba(255, 255, 255, 0.2);
-// $primary-color: var(--primary-color);
-// $secondary-color: var(--secondary-color);
-// $optional-color: var(--optional-color);
-// $background-color: var(--background-color);
-// $text-color: var(--text-color);
 
 $font-stack: "Roboto", sans-serif;
 
@@ -69,27 +64,33 @@ a {
   text-decoration: none;
 }
 
-// App layout styles
+//App layout styles
 .app-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-.content-wrapper {
-  height: 100vh;
-  flex: 1;
+.layout-content {
   display: flex;
+  flex: 1;
   flex-direction: column;
-  margin-top: 8rem;
-  // margin-left: 10rem; // Ensures all content is pushed to the right from sidebar
-  // Ensure content pushes footer down
 
-  @include media("md") {
-    margin-left: 230px; // Narrow width for iPad view
-  }
+  .content-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 6rem 0 3rem 13rem;
+    transition: margin-left 0.3s ease;
 
-  @include media("sm") {
-    margin-left: 30px;
+    &.sidebarOpen {
+      margin-left: 12rem; // Adjust to match sidebar width
+    }
+
+    &.sidebarClosed {
+      margin-left: 0;
+    }
   }
 }

@@ -8,11 +8,26 @@ export const sidebarLinks = {
       subcategories: [
         { path: "/frontend/components/button", title: "Button" },
         { path: "/frontend/components/modal", title: "Modal" },
+        { path: "/frontend/components/searchbar", title: "Search Bar" },
+        { path: "/frontend/components/card", title: "Card" },
+        { path: "/frontend/components/popover", title: "Popover" },
+        { path: "/frontend/components/form", title: "Form" },
+        { path: "/frontend/components/carousel", title: "Carousel" },
+        { path: "/frontend/components/divider", title: "Divider" },
+        { path: "/frontend/components/switch", title: "Switch" },
       ],
     },
-    { path: "/frontend/hooks", title: "Hooks" },
-    { path: "/frontend/Routes", title: "Routes" },
+    {
+      path: "/frontend/hooks",
+      title: "Hooks",
+      subcategories: [
+        { path: "/frontend/hooks/hook1", title: "Hook1" },
+        { path: "/frontend/hooks/hook2", title: "Hook2" },
+      ],
+    },
+    { path: "/frontend/routes", title: "Routes" },
   ],
+
   backend: [
     { path: "/backend/configurations", title: "Configurations" },
     {
@@ -20,8 +35,16 @@ export const sidebarLinks = {
       title: "Controllers",
       subcategories: [
         {
-          path: "/backend/controllers/work-schedule",
-          title: "TESTSUBCAT",
+          path: "/Backend/Controllers/WorkScheduleManagement",
+          title: "WorkScheduleManagement",
+        },
+        {
+          path: "/Backend/Controllers/ServiceRequestManagement",
+          title: "ServiceRequestManagement",
+        },
+        {
+          path: "/Backend/Controllers/UserManagement",
+          title: "UserManagement",
         },
       ],
     },
@@ -35,7 +58,7 @@ export const sidebarLinks = {
 
 // Navbar links
 export const navbarLinks = [
-  { to: "/instructions", label: "Instructions" },
-  { to: "/frontend/components", label: "Frontend" },
-  { to: "/backend/controllers", label: "Backend" },
+  { path: "/instructions", title: "Instructions" },
+  { path: "/frontend/components/button", title: "Frontend" },
+  { path: "/backend/configurations", title: "Backend" },
 ];

@@ -6,25 +6,29 @@
   color: styles.$text-color;
   padding: 40px 0;
   text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: 1px solid #ffffff33;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: left 0.3s ease, padding-left 0.3s ease; // Smooth transition for sidebar changes
+}
 
-  &.sidebarOpen {
-    margin-left: 12rem; // Adjust this value based on your sidebar width
-    padding-left: 20px; // Adjust padding if needed
-  }
+.sidebarOpen {
+  transition: margin-left 0.3s ease, width 0.3s ease;
+  width: calc(100% - 12rem); // Sidebar width when open
+  margin-left: 12rem;
+}
 
-  &.sidebarClosed {
-    margin-left: 0; // No margin when sidebar is closed
-    padding-left: 0; // Reset padding when sidebar is closed
-  }
+.sidebarClosed {
+  width: 100%;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .sections {
