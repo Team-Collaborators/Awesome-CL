@@ -27,35 +27,22 @@ const Sidebar = ({ links }) => {
 
           return (
             <li key={index} className={styles.sidebarInnerItem}>
-              <Link
-                to={link.path}
-                className={styles.sidebarMainLink}
-                onClick={() => toggleSubcategory(index)}
-              >
-                {link.title}
-                {link.subcategories && link.subcategories.length > 0 && (
-                  <span className={isOpen ? styles.arrowOpen : styles.arrow}>
-                    &#9660; {/* Down arrow icon */}
-                  </span>
-                )}
-              </Link>
+              <div className={styles.sidebarMainLinkWrapper}>
+                <Link className={styles.sidebarMainLink} to={link.path}>
+                  {" "}
+                  {link.title}
+                </Link>
 
-              {/* Check if there are subcategories */}
-              {/* {link.subcategories && link.subcategories.length > 0 && (
-                
-                <ul className={styles.sidebarSubCat}>
-                  {link.subcategories.map((subLink, subIndex) => (
-                    <li key={subIndex} className={styles.sidebarSubCatItem}>
-                      <Link
-                        to={subLink.path}
-                        className={styles.sidebarSubCatLink}
-                      >
-                        {subLink.title}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              )} */}
+                {/* Conditional rendering of the arrow icon with a Fragment wrapper */}
+                {link.subcategories && link.subcategories.length > 0 && (
+                  <>
+                    <IoIosArrowBack
+                      onClick={() => toggleSubcategory(index)}
+                      className={isOpen ? styles.arrowOpen : styles.arrow}
+                    />
+                  </>
+                )}
+              </div>
 
               {/* Render subcategories only if open */}
               {isOpen && link.subcategories && (

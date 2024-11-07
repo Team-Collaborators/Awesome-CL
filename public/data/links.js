@@ -59,6 +59,6 @@ export const sidebarLinks = {
 // Navbar links
 export const navbarLinks = [
   { path: "/instructions", title: "Instructions" },
-  { path: "/frontend", title: "Frontend" },
-  { path: "/backend", title: "Backend" },
+  { path: "/frontend/components/button", title: "Frontend" },
+  { path: "/backend/configurations", title: "Backend" },
 ];
