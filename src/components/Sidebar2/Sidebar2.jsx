@@ -1,24 +1,33 @@
 import React from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
-import { IoIosArrowDown } from "react-icons/io";
 import Button from "../../component_testing/Button/Button";
 import styles from "./Sidebar2.module.scss";
 
 const Sidebar = ({ links }) => {
-  // Initialize all subcategories to be open by default
+  const navigate = useNavigate();
+
+  //! Initialize all subcategories to be open by default
+  //! Should be open on re-render
   const [openSubcategories, setOpenSubcategories] = useState(
     links.reduce((acc, _, index) => ({ ...acc, [index]: true }), {})
   );
 
-  const toggleSubcategory = (index) => {
+  // Handle category click, toggle subcategory open state and navigate to the first subcategory
+  const handleCategoryClick = (index, link) => {
+    // First, toggle the subcategory open state
     setOpenSubcategories((prevState) => ({
       ...prevState,
       [index]: !prevState[index],
     }));
-  };
 
+    // If there are subcategories, navigate to the first one
+    if (link.subcategories && link.subcategories.length > 0) {
+      const firstSubcategoryPath = link.subcategories[0].path;
+      navigate(firstSubcategoryPath); // Navigate to the first subcategory path
+    }
+  };
   const renderLinks = (items) => {
     return (
       <ul className={styles.sidebarInner}>
@@ -27,7 +36,10 @@ const Sidebar = ({ links }) => {
 
           return (
             <li key={index} className={styles.sidebarInnerItem}>
-              <div className={styles.sidebarMainLinkWrapper}>
+              <div
+                className={styles.sidebarMainLinkWrapper}
+                onClick={() => handleCategoryClick(index, link)}
+              >
                 <Link className={styles.sidebarMainLink} to={link.path}>
                   {" "}
                   {link.title}
@@ -37,7 +49,6 @@ const Sidebar = ({ links }) => {
                 {link.subcategories && link.subcategories.length > 0 && (
                   <>
                     <IoIosArrowBack
-                      onClick={() => toggleSubcategory(index)}
                       className={isOpen ? styles.arrowOpen : styles.arrow}
                     />
                   </>
