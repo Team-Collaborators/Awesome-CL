@@ -3,21 +3,12 @@ import styles from "../Switch/Switch.module.scss";
 
 const Switch = ({
   aria = "switch",
-<<<<<<< HEAD
   color = "default-light",
   onChange,
   style,
   size = "md",
   radius = "lg",
-  border = "",
-=======
-  color = "default",
-  onChange,
-  style,
-  size = "md",
-  radius = "full",
-  border = "none",
->>>>>>> 429e0a99c0fc277867624099f3b689be337c767d
+  border = "md",
   checked = false,
   className = "",
 }) => {
@@ -42,7 +33,6 @@ const Switch = ({
       if (onChange) onChange(newCheckedState);
       return newCheckedState;
     });
-    console.log("style", style, "size", size, "color", color);
   };
 
   return (

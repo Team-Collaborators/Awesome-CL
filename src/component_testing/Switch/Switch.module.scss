@@ -3,35 +3,49 @@
 @use "../lib-styles/paddings.scss";
 @use "../lib-styles/radius.scss";
 
-
 // Base styles for the switch container
 .switch {
+  box-sizing: border-box;
   position: relative;
   display: inline-block;
   cursor: pointer;
   transition: all 0.3s ease;
+  padding: 0;
+  width: 100%;
 }
 
-// Color classes
-.color-default {
-  background-color: white;
-  border: solid black 2px;
+// Color variants
+.color-default-light {
+  background-color: colors.$default-light;
+  border: borders.$border-xs colors.$default-dark;
+
   .slider {
-    background-color: black;
+    background-color: colors.$default-dark;
+  }
+}
+
+.color-default-dark {
+  background-color: colors.$default-dark;
+  border: borders.$border-xs colors.$default-light;
+
+  .slider {
+    background-color: colors.$default-light;
   }
 }
 
 .color-primary {
-  background-color: black;
-  border: solid white 2px;
+  background-color: colors.$primary-dark;
+   border: borders.$border-xs colors.$primary-dark;
+
   .slider {
-    background-color: white;
+    background-color: colors.$primary-light;
   }
 }
 
 .color-secondary {
   background-color: colors.$secondary-base;
-  border: 2px solid colors.$secondary-dark;
+  border: borders.$border-xs colors.$secondary-base;
+
   .slider {
     background-color: colors.$secondary-light;
   }
@@ -113,14 +127,24 @@
   border-style: solid;
 }
 
-.color-default {
-  background-color: colors.$default-base;
-  color: white;
-  border-color: colors.$default-dark;
+.border-dashed {
+  border-style: dashed;
 }
 
-.color-secondary {
-  background-color: colors.$secondary-base;
-  color: white;
-  border-color: colors.$secondary-dark;
+// Slider styles
+.slider {
+  position: absolute;
+  top: 50%;
+  left: 2px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  width: 50%;
+  height: 100%;
+
+  &.checked {
+    transform: translateX(100%) translateY(-50%);
+  }
 }
+
