@@ -3,6 +3,8 @@
 @use "../lib-styles/paddings.scss";
 @use "../lib-styles/radius.scss";
 
+
+// Base styles for the switch container
 .switch {
   position: relative;
   display: inline-block;
@@ -81,28 +83,28 @@
   }
 }
 
-/* radius classes */
+// Radius variants
 .radius-none {
-  border-radius: var(--border-radius-none);
+  border-radius: 0;
 }
 
 .radius-sm {
-  border-radius: var(--border-radius-sm);
+  border-radius: 4px;
 }
 
 .radius-md {
-  border-radius: var(--border-radius-md);
+  border-radius: 8px;
 }
 
 .radius-lg {
-  border-radius: var(--border-radius-lg);
+  border-radius: 12px;
 }
 
 .radius-full {
-  border-radius: var(--border-radius-full);
+  border-radius: 50%;
 }
 
-// Border variants (if needed)
+// Border variants
 .border-none {
   border: none;
 }
@@ -111,20 +113,14 @@
   border-style: solid;
 }
 
-.border-dashed {
-  border-style: dashed;
+.color-default {
+  background-color: colors.$default-base;
+  color: white;
+  border-color: colors.$default-dark;
 }
 
-// Slider styles
-.slider {
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  background-color: black;
-  border-radius: 50%;
-  transition: all 0.3s ease;
-
-  &.checked {
-    transform: translateX(120%);
-  }
+.color-secondary {
+  background-color: colors.$secondary-base;
+  color: white;
+  border-color: colors.$secondary-dark;
 }
