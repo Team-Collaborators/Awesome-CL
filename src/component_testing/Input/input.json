@@ -1,0 +1,344 @@
+[
+  {
+    "title": "input",
+    "path": "/frontend/components/input",
+    "description": "A customizable form element with adjustable label positioning (above or to the left), size, color, and border styles.",
+    "installation": [
+      {
+        "name": "CLI",
+        "command": "cli-command-to-install",
+        "path": "/icons/cube-solid.svg"
+      },
+      {
+        "name": "npm",
+        "command": "npm install your-library",
+        "path": "/icons/npm-brands-solid.svg"
+      },
+      {
+        "name": "yarn",
+        "command": "yarn add your-library",
+        "path": "/icons/yarn-brands-solid.svg"
+      },
+      {
+        "name": "pnpm",
+        "command": "pnpm add your-library",
+        "path": "/icons/cubes-solid.svg"
+      },
+      {
+        "name": "bun",
+        "command": "bun add your-library",
+        "path": "/icons/lemon-regular.svg"
+      }
+    ],
+    "import": {
+      "code": "import { Input } from 'AwesomeCL';",
+      "description": "This code shows how to import the input component from the library."
+    },
+    "examples": [
+      {
+        "title": "Default",
+        "components": [
+          {
+            "type": "Input",
+            "props": {
+              "size": "sm"
+            }
+            // "children": "Button"
+          }
+        ],
+        "code": "import { Input } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Input />\n );\n}"
+      },
+      {
+        "title": "Sizes",
+        "components": [
+          {
+            "type": "Input",
+            "props": {
+              "size": "sm"
+            }
+            // "children": "Button"
+          },
+          {
+            "type": "Button",
+            "props": {
+              "size": "md"
+            }
+            // "children": "Button"
+          },
+          {
+            "type": "Input",
+            "props": {
+              "size": "lg"
+            }
+            // "children": "Button"
+          }
+        ],
+        "code": "import { Input } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Input size=\"sm\" />\n   <Button size=\"md\"/>\n      <Button size=\"lg\" />\n    </>\n  );\n}"
+      },
+      {
+        "title": "Radius",
+        "components": [
+          {
+            "type": "Input",
+            "props": {
+              "radius": "none"
+            }
+            // "children": "Button"
+          },
+          {
+            "type": "Button",
+            "props": {
+              "size": "sm",
+              "radius": "sm",
+              "color": "secondary"
+            },
+            "children": "Button"
+          },
+          {
+            "type": "Button",
+            "props": {
+              "size": "sm",
+              "radius": "md",
+              "color": "secondary"
+            },
+            "children": "Button"
+          },
+          {
+            "type": "Button",
+            "props": {
+              "size": "sm",
+              "radius": "lg",
+              "color": "secondary"
+            },
+            "children": "Button"
+          },
+          {
+            "type": "Button",
+            "props": {
+              "size": "sm",
+              "radius": "full",
+              "color": "secondary"
+            },
+            "children": "Button"
+          }
+        ],
+        "code": "import { Button } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Button radius=\"none\">Button</Button>\n      <Button radius=\"sm\">Button</Button>\n      <Button radius=\"md\">Button</Button>\n      <Button radius=\"lg\">Button</Button>\n      <Button radius=\"full\">Button</Button>\n    </>\n  );\n}"
+      },
+      {
+        "title": "Colors",
+        "components": [
+          {
+            "type": "Button",
+            "props": {
+              "size": "sm",
+              "radius": "md",
+              "color": "default"
+            },
+            "children": "Button"
+          },
+          {
+            "type": "Button",
+            "props": {
+              "size": "sm",
+              "radius": "md",
+              "color": "primary"
+            },
+            "children": "Button"
+          },
+          {
+            "type": "Button",
+            "props": {
+              "size": "sm",
+              "radius": "md",
+              "color": "secondary"
+            },
+            "children": "Button"
+          },
+          {
+            "type": "Button",
+            "props": {
+              "size": "sm",
+              "radius": "md",
+              "color": "success"
+            },
+            "children": "Button"
+          },
+          {
+            "type": "Button",
+            "props": {
+              "size": "sm",
+              "radius": "md",
+              "color": "warning"
+            },
+            "children": "Button"
+          },
+          {
+            "type": "Button",
+            "props": {
+              "size": "sm",
+              "radius": "md",
+              "color": "danger"
+            },
+            "children": "Button"
+          }
+        ],
+        "code": "import { Button } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Button color=\"default\">Button</Button>\n      <Button color=\"primary\">Button</Button>\n      <Button color=\"secondary\">Button</Button>\n      <Button color=\"success\">Button</Button>\n      <Button color=\"warning\">Button</Button>\n      <Button color=\"danger\">Button</Button>\n    </>\n  );\n}"
+      },
+      {
+        "title": "Borders",
+        "components": [
+          {
+            "type": "Button",
+            "props": {
+              "size": "sm",
+              "radius": "md",
+              "color": "secondary"
+            },
+            "children": "Button"
+          },
+          {
+            "type": "Button",
+            "props": {
+              "size": "sm",
+              "radius": "md",
+              "color": "secondary"
+            },
+            "children": "Button"
+          },
+          {
+            "type": "Button",
+            "props": {
+              "size": "sm",
+              "radius": "md",
+              "color": "secondary"
+            },
+            "children": "Button"
+          },
+          {
+            "type": "Button",
+            "props": {
+              "size": "sm",
+              "radius": "md",
+              "color": "secondary"
+            },
+            "children": "Button"
+          },
+          {
+            "type": "Button",
+            "props": {
+              "size": "sm",
+              "radius": "md",
+              "color": "secondary"
+            },
+            "children": "Button"
+          },
+          {
+            "type": "Button",
+            "props": {
+              "size": "sm",
+              "radius": "md",
+              "color": "secondary"
+            },
+            "children": "Button"
+          },
+          {
+            "type": "Button",
+            "props": {
+              "size": "sm",
+              "radius": "md",
+              "color": "secondary"
+            },
+            "children": "Button"
+          }
+        ],
+        "code": "import { Button } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Button border=\"none\">No Border</Button>\n      <Button border=\"xs\">Extra Small Border</Button>\n      <Button border=\"sm\">Small Border</Button>\n      <Button border=\"md\">Medium Border</Button>\n      <Button border=\"lg\">Large Border</Button>\n    </>\n  );\n}"
+      }
+    ],
+    "propsTable": {
+      "title": " Button Props",
+      "description": "List of all props supported by the Button component.",
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
+      "rows": [
+        {
+          "propName": "children",
+          "type": "node",
+          "description": "Content to be displayed inside the button.",
+          "defaultValue": "null"
+        },
+        {
+          "propName": "aria",
+          "type": "string",
+          "description": "Aria label for accessibility. Provides additional context for screen readers.",
+          "defaultValue": "'button'"
+        },
+        {
+          "propName": "color",
+          "type": "string",
+          "description": "Defines the color of the button. Options are: 'primary', 'secondary', 'success', 'warning', 'danger'.",
+          "defaultValue": "'primary'"
+        },
+        {
+          "propName": "onClick",
+          "type": "function",
+          "description": "Callback function triggered when the button is clicked.",
+          "defaultValue": "undefined"
+        },
+        {
+          "propName": "style",
+          "type": "object",
+          "description": "Inline styles to be applied to the button.",
+          "defaultValue": "undefined"
+        },
+        {
+          "propName": "size",
+          "type": "string",
+          "description": "Defines the size of the button. Options are: 'sm', 'md', 'lg'.",
+          "defaultValue": "'md'"
+        },
+        {
+          "propName": "radius",
+          "type": "string",
+          "description": "Defines the border-radius of the button. Options are: 'none', 'sm', 'md', 'lg', 'full'.",
+          "defaultValue": "'none'"
+        },
+        {
+          "propName": "border",
+          "type": "string",
+          "description": "Defines the border width of the button. Options are: 'none', 'xs', 'sm', 'md', 'lg', 'xl'.",
+          "defaultValue": "'none'"
+        },
+        {
+          "propName": "className",
+          "type": "string",
+          "description": "Additional CSS class names to apply to the button.",
+          "defaultValue": "undefined"
+        }
+      ]
+    },
+    "eventsTable": {
+      "title": "Events",
+      "description": "List of all events emitted by the Button component.",
+      "headers": ["Event Name", "Description"],
+      "rows": [
+        {
+          "propName": "onClick",
+          "type": "Triggered when the button is clicked."
+        }
+      ]
+    },
+    "accessibility": {
+      "title": "Accessibility",
+      "description": "Accessibility considerations for the Button component.",
+      "ariaRoles": [
+        {
+          "propName": "Button",
+          "description": "The Button component is rendered with the button role by default."
+        },
+        {
+          "propName": "Aria-label",
+          "description": "If the button has only an icon and no text, you should add an aria-label for screen readers."
+        }
+      ]
+    }
+  }
+]
