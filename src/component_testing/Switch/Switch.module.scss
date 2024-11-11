@@ -1,0 +1,84 @@
+@use "../lib-styles/borders.scss";
+@use "../lib-styles/colors.scss";
+@use "../lib-styles/font-sizes.scss";
+@use "../lib-styles/paddings.scss";
+@use "../lib-styles/radius.scss";
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  transition: all 03s ease;
+}
+
+.slider {
+  top: 2px;
+  left: 2px;
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+
+  &.checked {
+    transform: translateX(26px);
+  }
+}
+
+/* Size Classes */
+.size-sm {
+  font-size: var(--font-size-sm);
+  padding: var(--padding-sm);
+}
+
+.size-md {
+  font-size: var(--font-size-md);
+  padding: var(--padding-md);
+}
+
+.size-lg {
+  font-size: var(--font-size-lg);
+  padding: var(--padding-xl);
+}
+
+/* radius classes */
+.radius-none {
+  border-radius: var(--border-radius-none);
+}
+
+.radius-sm {
+  border-radius: var(--border-radius-sm);
+}
+
+.radius-md {
+  border-radius: var(--border-radius-md);
+}
+
+.radius-lg {
+  border-radius: var(--border-radius-lg);
+}
+
+.radius-full {
+  border-radius: var(--border-radius-full);
+}
+
+/* color-classes */
+.color-primary {
+  background-color: colors.$primary-base;
+  color: white;
+  border-color: colors.$primary-dark;
+}
+
+.color-default {
+  background-color: colors.$default-base;
+  color: white;
+  border-color: colors.$default-dark;
+}
+
+.color-secondary {
+  background-color: colors.$secondary-base;
+  color: white;
+  border-color: colors.$secondary-dark;
+}
