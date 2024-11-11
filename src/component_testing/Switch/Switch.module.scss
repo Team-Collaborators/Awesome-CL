@@ -3,6 +3,8 @@
 @use "../lib-styles/paddings.scss";
 @use "../lib-styles/radius.scss";
 
+
+// Base styles for the switch container
 .switch {
   position: relative;
   display: inline-block;
@@ -81,28 +83,28 @@
   }
 }
 
-/* radius classes */
+// Radius variants
 .radius-none {
-  border-radius: var(--border-radius-none);
+  border-radius: 0;
 }
 
 .radius-sm {
-  border-radius: var(--border-radius-sm);
+  border-radius: 4px;
 }
 
 .radius-md {
-  border-radius: var(--border-radius-md);
+  border-radius: 8px;
 }
 
 .radius-lg {
-  border-radius: var(--border-radius-lg);
+  border-radius: 12px;
 }
 
 .radius-full {
-  border-radius: var(--border-radius-full);
+  border-radius: 50%;
 }
 
-// Border variants (if needed)
+// Border variants
 .border-none {
   border: none;
 }
