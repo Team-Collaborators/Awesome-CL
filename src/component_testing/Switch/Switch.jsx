@@ -3,18 +3,18 @@ import styles from "../Switch/Switch.module.scss";
 
 const Switch = ({
   aria = "switch",
-  color = "primary",
+  color = "default-light",
   onChange,
   style,
   size = "md",
-  radius = "none",
-  border = "none",
+  radius = "lg",
+  border = "",
   checked = false,
   className = "",
 }) => {
   // Combine CSS module class names with any global Tailwind classes passed as props
   const combinedClassNames = `
- ${styles.button} 
+ ${styles.switch} 
  ${styles[`border-${border}`]} 
  ${styles[`radius-${radius}`]} 
  ${styles[`color-${color}`]} 
