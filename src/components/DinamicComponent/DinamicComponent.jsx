@@ -1,13 +1,13 @@
-import React from 'react';
-import {Button} from 'AwesomeCL'; // Importa tus componentes
+import React from "react";
+import { Button, Input } from "AwesomeCL"; // Importa tus componentes
 
-
-const components = { //Object with all components
+const components = {
+  //Object with all components
   Button,
+  Input,
 };
 
 export default function DynamicComponent({ type, props, children }) {
-
   const ComponentToRender = components[type]; // Find the component on the object
 
   try {

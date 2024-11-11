@@ -15,7 +15,6 @@ export const sidebarLinks = {
         { path: "/frontend/components/carousel", title: "Carousel" },
         { path: "/frontend/components/divider", title: "Divider" },
         { path: "/frontend/components/switch", title: "Switch" },
-        { path: "/frontend/components/input", title: "Input" },
       ],
     },
     {

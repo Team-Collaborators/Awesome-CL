@@ -4,7 +4,11 @@ import "./Playground.scss";
 // import TestTailwind from "../../component_testing/TestTailwind";
 import Modal from "../../component_testing/Modal/Modal";
 import Switch from "../../component_testing/Switch/Switch";
+<<<<<<< HEAD
 import { DiReact } from "react-icons/di";
+=======
+import { TbBackground } from "react-icons/tb";
+>>>>>>> 429e0a99c0fc277867624099f3b689be337c767d
 
 const Playground = () => {
   return (
@@ -44,8 +48,9 @@ const Playground = () => {
           Button component Button props and Tailwind style
         </Button> */}
 
-        <Modal modalHeader={"Modal header"} modalBody={"Body"}>
+        {/* <Modal modalHeader={"Modal header"} modalBody={"Body"}>
           Hello
+<<<<<<< HEAD
         </Modal>
         <div
           style={{
@@ -73,6 +78,22 @@ const Playground = () => {
           <br />
           <p>Switch 4: default size, color: secondary, radius full</p>
           <Switch color="secondary" radius="full" />
+=======
+        </Modal> */}
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            gap: "1rem",
+          }}
+        >
+          Switch test
+          <Switch size="xl" color="default" />
+          <Switch size="xl" color="default" />
+          <Switch size="xl" color="default" />
+          <Switch size="xl" color="default" />
+          <Switch size="xl" color="default" />
+>>>>>>> 429e0a99c0fc277867624099f3b689be337c767d
         </div>
       </div>
     </section>

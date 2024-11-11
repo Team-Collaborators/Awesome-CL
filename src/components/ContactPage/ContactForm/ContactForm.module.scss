@@ -6,11 +6,20 @@
   justify-content: space-around;
   align-items: center;
   padding: 10px 50px;
-  // background-color: styles.$background-color;
+
+  @media (max-width: 1024px) {
+    height: 60vh; /* Adjust height for iPad */
+    padding: 20px 30px;
+  }
 
   @media (max-width: 768px) {
     flex-direction: column;
+    height: auto;
     padding: 20px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 15px;
   }
 }
 
@@ -25,13 +34,24 @@
     width: 100%;
     height: 500px;
     object-fit: cover;
+
+    @media (max-width: 1024px) {
+      height: 450px;
+    }
+
+    @media (max-width: 768px) {
+      height: 300px;
+    }
+
+    @media (max-width: 480px) {
+      height: 250px;
+    }
   }
 }
 
 .formContainer {
   flex-basis: 50%;
   padding: 20px;
-  // background-color: rgba(42, 41, 41, 0.5);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
@@ -39,11 +59,35 @@
     margin-bottom: 20px;
     font-size: 1.8rem;
     color: styles.$slightlyLighter-color;
+
+    @media (max-width: 1024px) {
+      font-size: 1.7rem;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 1.3rem;
+    }
   }
 
   p {
     margin-bottom: 20px;
     font-size: 1.2rem;
+
+    @media (max-width: 1024px) {
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 1rem;
+    }
   }
 }
 
@@ -52,10 +96,26 @@ form {
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 
+  @media (max-width: 1024px) {
+    gap: 15px;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+
   label {
     display: flex;
     flex-direction: column;
     font-size: 0.9rem;
+
+    @media (max-width: 1024px) {
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 0.8rem;
+    }
   }
 
   input,
@@ -66,7 +126,6 @@ form {
     margin: 5px 0;
     border: none;
     border-bottom: 1px solid #555;
-
     border-radius: 4px;
 
     &:focus {
@@ -78,6 +137,14 @@ form {
   textarea {
     grid-column: span 2;
     height: 100px;
+
+    @media (max-width: 1024px) {
+      height: 80px;
+    }
+
+    @media (max-width: 768px) {
+      grid-column: span 1;
+    }
   }
 
   button {
@@ -94,6 +161,13 @@ form {
     &:hover {
       background-color: styles.$slightlyLighter-color;
       transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      grid-column: span 1;
+    }
+    @media (max-width: 1024px) {
+      padding: 12px 0;
     }
   }
 }
