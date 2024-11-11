@@ -1,18 +1,45 @@
+@use "sass:map";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Primary colors
 $primary-color: #083748;
 $secondary-color: #083e52;
 $optional-color: #5a2778;
+$slightlyLighter-color: #095874;
 $background-color: #181818;
 $text-color: #ffffff;
+$border-color: 1px solid rgba(255, 255, 255, 0.2);
+
 $font-stack: "Roboto", sans-serif;
 
-// Mixins
+// Define breakpoints map
+$breakpoints: (
+  "xs": 480px,
+  "sm": 576px,
+  "md": 768px,
+  "lg": 1024px,
+  // "lg": 992px,
+  "xl": 1200px,
+  "xxl": 1600px,
+);
+
+// Mixin to use breakpoints
+@mixin media($size) {
+  @media (max-width: map.get($breakpoints, $size)) {
+    @content;
+  }
+}
+
+// Flexbox centerin utility mixin
 @mixin flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-// Global styles
+// Reset and base styles
 *,
 *::before,
 *::after {
@@ -22,7 +49,7 @@ $font-stack: "Roboto", sans-serif;
 }
 
 body {
-  font-family: $font-stack;
+  font-family: var(--font-stack);
   background-color: var(--background-color);
   color: var(--text-color);
 }
@@ -36,6 +63,33 @@ a {
   text-decoration: none;
 }
 
-.content-wrapper {
-  margin-left: 300px; // Ensures all content is pushed to the right from sidebar
+//App layout styles
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.layout-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+
+  .content-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 6rem 0 3rem 13rem;
+    transition: margin-left 0.3s ease;
+
+    &.sidebarOpen {
+      margin-left: 12rem; // Adjust to match sidebar width
+    }
+
+    &.sidebarClosed {
+      margin-left: 0;
+    }
+  }
 }

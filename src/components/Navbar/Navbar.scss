@@ -1,97 +1,109 @@
-@use "../../styles/main.scss" as styles;
+@use "../../styles/main" as styles;
 
-.sidebar {
+.navbar {
+  font-size: 1.3rem;
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 250px;
-  height: 100%;
+  width: 100%;
+  height: 6rem;
   z-index: 1000;
   background-color: styles.$primary-color;
-  padding: 20px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  // padding: 0.6rem 1.3rem;
+  transition: left 0.3s ease; // Smooth slide-in effect
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
-  .sidebar-logo {
-    width: 150px;
-    height: 110px;
-    margin-bottom: 40px;
+  .navbarLeft {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 12rem;
+    height: 100%;
+
+    // Navbar Logo
+    .navLogo {
+      max-width: 7rem;
+      height: auto;
+    }
   }
 
-  ul {
+  // Navbar Links
+  .navbarInner {
+    display: flex;
     list-style: none;
-    padding: 0;
-    width: 100%;
+    padding-left: 3rem;
+    .navbarInnerItem {
+      margin-right: 15px;
 
-    li {
-      width: 100%;
-      position: relative;
-      margin-bottom: 20px;
-      font-size: 1.2rem;
-      color: styles.$text-color;
-
-      .nav-link,
-      .dropdown-toggle {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+      .navbarLink {
+        // font-size: 1.3rem;
         cursor: pointer;
         padding: 10px 15px;
         color: styles.$text-color;
         width: 100%;
         text-align: left;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         transition: background-color 0.3s ease, color 0.3s ease;
 
         &:hover {
           background-color: rgba(255, 255, 255, 0.1);
           border-radius: 5px;
         }
-
         a {
           color: inherit;
           text-decoration: none;
         }
-
-        .arrow {
-          margin-left: 8px;
-        }
       }
+    }
+  }
 
-      .dropdown-menu {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        padding: 10px 0;
-        list-style: none;
-        border-radius: 5px;
-        background-color: styles.$primary-color;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        z-index: 10;
+  .navbarRight {
+    display: flex;
+    align-items: center;
+    padding-right: 2rem;
+    gap: 1rem;
 
-        li {
-          padding: 10px 20px;
-          transition: background-color 0.3s ease;
+    .navbarSearchInput {
+      padding: 5px 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+      outline: none;
+    }
+  }
 
-          a {
-            color: styles.$text-color;
-            text-decoration: none;
-            display: block;
-          }
+  .themeToggleButton {
+    background: none;
+    border: none;
+    color: styles.$text-color;
+    cursor: pointer;
+    font-size: 2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+    &:hover {
+      transform: rotate(20deg);
+    }
+  }
+}
 
-          &:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 5px;
-          }
-        }
-      }
+// Burger menu styles
+.burgerMenu {
+  display: none; // Hide by default
 
-      &:hover .dropdown-menu {
-        display: block;
-      }
+  @include styles.media("sm") {
+    display: flex; // Show burger menu for screens smaller than md
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 4rem;
+    height: 4rem;
+    top: 20px;
+    left: 20px;
+    z-index: 2000; // Ensure it's above the sidebar
+    cursor: pointer;
+
+    .burgerIcon {
+      font-size: 3rem;
+      color: styles.$secondary-color;
     }
   }
 }

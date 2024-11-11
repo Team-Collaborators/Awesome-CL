@@ -1,0 +1,27 @@
+@use "../../../styles/main.scss" as styles;
+
+.code-display {
+  padding: 20px;
+  border-radius: 10px;
+  max-height: 450px;
+  overflow-x: auto;
+  overflow-y: auto;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+
+  @media (max-width: 768px) {
+    padding: 10px;
+    height: auto;
+    max-height: none;
+  }
+
+  @media (max-width: 480px) {
+    padding: 8px;
+    max-height: none;
+  }
+
+  @media (max-width: 1200px) {
+    max-height: 450px;
+  }
+}

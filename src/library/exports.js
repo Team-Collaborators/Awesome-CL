@@ -1,9 +1,14 @@
-//! TO DO:
+// import "../component_testing/lib-styles/borders.scss";
+// import "../component_testing/lib-styles/colors.scss";
+// import "../component_testing/lib-styles/font-sizes.scss";
+// import "../component_testing/lib-styles/paddings.scss";
+// import "../component_testing/lib-styles/radius.scss";
+// import "../component_testing/Button/Button.module.scss";
 
 import Button from "../component_testing/Button/Button";
+import Input from "../component_testing/Input/Input";
+
+// import variables from lib styles
 // import all components from the json file, then export them all
 
-// example but can be done with a loop after importing the json from the public folder
-// import Button from "./components/Button";
-
-export { Button };
+export { Button, Input };

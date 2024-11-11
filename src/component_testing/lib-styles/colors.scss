@@ -1,17 +1,23 @@
-$primary-base: blue;
+$primary-base: rgb(0, 0, 255);
 $primary-dark: darkblue;
+$primary-light: rgb(150, 150, 210);
 
 $default-base: grey;
 $default-dark: black;
+$default-light: white;
 
 $secondary-base: purple;
 $secondary-dark: rgb(83, 2, 83);
+$secondary-light: rgb(189, 94, 189);
 
 $success-base: green;
 $success-dark: darkgreen;
+$success-light: rgb(112, 206, 112);
 
 $warning-base: yellow;
-$warning-dark: goldenrod;
+$warning-dark: rgb(165, 124, 20);
+$warning-light: rgb(219, 192, 123);
 
 $danger-base: red;
 $danger-dark: darkred;
+$danger-light: rgb(209, 121, 121);
