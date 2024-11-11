@@ -1,46 +1,84 @@
 @use "../lib-styles/borders.scss";
 @use "../lib-styles/colors.scss";
-@use "../lib-styles/font-sizes.scss";
 @use "../lib-styles/paddings.scss";
 @use "../lib-styles/radius.scss";
 
 .switch {
   position: relative;
   display: inline-block;
-  width: 2rem;
-  height: 2rem;
   cursor: pointer;
-  transition: all 03s ease;
+  transition: all 0.3s ease;
 }
 
-.slider {
-  top: 2px;
-  left: 2px;
-  width: 30px;
-  height: 30px;
-  background-color: black;
-  border-radius: 50%;
-  transition: all 0.3s ease;
-
-  &.checked {
-    transform: translateX(26px);
+// Color classes
+.color-default {
+  background-color: white;
+  border: solid black 2px;
+  .slider {
+    background-color: black;
   }
 }
 
-/* Size Classes */
+.color-primary {
+  background-color: black;
+  border: solid white 2px;
+  .slider {
+    background-color: white;
+  }
+}
+
+.color-secondary {
+  background-color: colors.$secondary-base;
+  border: 2px solid colors.$secondary-dark;
+  .slider {
+    background-color: colors.$secondary-light;
+  }
+}
+
+// Size classes
+.size-xs {
+  width: 1.5rem;
+  height: 0.75rem;
+  .slider {
+    width: 0.6rem;
+    height: 0.6rem;
+  }
+}
+
 .size-sm {
-  font-size: var(--font-size-sm);
-  padding: var(--padding-sm);
+  width: 1.75rem;
+  height: 0.875rem;
+  .slider {
+    width: 0.7rem;
+    height: 0.7rem;
+  }
 }
 
 .size-md {
-  font-size: var(--font-size-md);
-  padding: var(--padding-md);
+  width: 2rem;
+  height: 1rem;
+  .slider {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
 }
 
 .size-lg {
-  font-size: var(--font-size-lg);
-  padding: var(--padding-xl);
+  width: 2.5rem;
+  height: 1.25rem;
+  .slider {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+.size-xl {
+  width: 3rem;
+  height: 1.5rem;
+  .slider {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
 }
 
 /* radius classes */
@@ -64,21 +102,29 @@
   border-radius: var(--border-radius-full);
 }
 
-/* color-classes */
-.color-primary {
-  background-color: colors.$primary-base;
-  color: white;
-  border-color: colors.$primary-dark;
+// Border variants (if needed)
+.border-none {
+  border: none;
 }
 
-.color-default {
-  background-color: colors.$default-base;
-  color: white;
-  border-color: colors.$default-dark;
+.border-solid {
+  border-style: solid;
 }
 
-.color-secondary {
-  background-color: colors.$secondary-base;
-  color: white;
-  border-color: colors.$secondary-dark;
+.border-dashed {
+  border-style: dashed;
+}
+
+// Slider styles
+.slider {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background-color: black;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+
+  &.checked {
+    transform: translateX(120%);
+  }
 }

@@ -4,6 +4,7 @@ import "./Playground.scss";
 // import TestTailwind from "../../component_testing/TestTailwind";
 import Modal from "../../component_testing/Modal/Modal";
 import Switch from "../../component_testing/Switch/Switch";
+import { TbBackground } from "react-icons/tb";
 
 const Playground = () => {
   return (
@@ -43,10 +44,23 @@ const Playground = () => {
           Button component Button props and Tailwind style
         </Button> */}
 
-        <Modal modalHeader={"Modal header"} modalBody={"Body"}>
+        {/* <Modal modalHeader={"Modal header"} modalBody={"Body"}>
           Hello
-        </Modal>
-        <Switch color="secondary" radius="full" />
+        </Modal> */}
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            gap: "1rem",
+          }}
+        >
+          Switch test
+          <Switch size="xl" color="default" />
+          <Switch size="xl" color="default" />
+          <Switch size="xl" color="default" />
+          <Switch size="xl" color="default" />
+          <Switch size="xl" color="default" />
+        </div>
       </div>
     </section>
   );
