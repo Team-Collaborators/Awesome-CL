@@ -1,9 +1,10 @@
 @use "../../styles/main" as styles;
 
 .navbar {
+  font-size: 1.3rem;
   position: fixed;
   width: 100%;
-  height: 5rem;
+  height: 6rem;
   z-index: 1000;
   background-color: styles.$primary-color;
   display: flex;
@@ -22,8 +23,7 @@
 
     // Navbar Logo
     .navLogo {
-      max-width: 6rem;
-      width: auto;
+      max-width: 7rem;
       height: auto;
     }
   }
@@ -37,6 +37,7 @@
       margin-right: 15px;
 
       .navbarLink {
+        // font-size: 1.3rem;
         cursor: pointer;
         padding: 10px 15px;
         color: styles.$text-color;
@@ -76,7 +77,11 @@
     border: none;
     color: styles.$text-color;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+    &:hover {
+      transform: rotate(20deg);
+    }
   }
 }
 
