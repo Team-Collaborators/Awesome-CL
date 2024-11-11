@@ -5,15 +5,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-direction: column;
-  padding: 10px;
   width: 100%;
   color: styles.$text-color;
   margin-left: -20px;
 }
 
 .content {
-  display: flex;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -21,15 +18,18 @@
   justify-content: center;
   text-align: center;
   padding: 20px;
+  flex: 1; /* Allow content to grow */
 
   .logo {
     width: 300px;
     height: auto;
     margin-bottom: 20px;
     animation: popIn 1.5s ease-out;
+
     @media (max-width: 768px) {
       max-width: 80px;
     }
+
     @media (min-width: 1600px) {
       width: 400px;
     }
@@ -43,13 +43,14 @@
     margin: 10px 0;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
 
+    @media (max-width: 480px) {
+      font-size: 1.5rem;
+    }
+
     @media (max-width: 768px) {
       font-size: 1.8rem;
     }
 
-    @media (max-width: 480px) {
-      font-size: 1.5rem;
-    }
     @media (min-width: 1600px) {
       font-size: 3.5rem;
     }
@@ -73,22 +74,20 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  // padding: 30px;
-  height: 95vh;
-  width: 100%;
-  // margin: 30px 0 30px 0;
-
+  min-width: 100%;
+  // height: 100vh;
+  padding: 30px 20px;
   border-radius: 8px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
 
   @media (max-width: 768px) {
     padding: 20px;
+    margin-top: 10px;
   }
+
   @media (min-width: 1600px) {
-    // width: 100%;
-    width: 1550px;
-    margin: 40px 0 40px 45px;
-    height: 90vh;
+    margin-top: 40px;
   }
 }
 
@@ -104,6 +103,7 @@
     @media (max-width: 768px) {
       font-size: 1.5rem;
     }
+
     @media (min-width: 1600px) {
       font-size: 2.7rem;
       margin-bottom: 10px;
@@ -121,6 +121,7 @@
     @media (max-width: 768px) {
       font-size: 1rem;
     }
+
     @media (min-width: 1600px) {
       font-size: 1.5rem;
       max-width: 900px;
@@ -132,9 +133,8 @@
 .example-container {
   display: flex;
   flex-direction: row;
-  gap: 50px;
   width: 100%;
-  // margin-top: 20px;
+  gap: 50px;
   align-items: flex-start;
   justify-content: center;
 
@@ -142,6 +142,7 @@
     flex-direction: column;
     align-items: center;
   }
+
   @media (min-width: 1600px) {
     gap: 80px;
   }
@@ -151,7 +152,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 15px;
+  // gap: 15px;
   max-width: 300px;
 
   .theme-switcher {
@@ -190,6 +191,7 @@
         padding: 8px 15px;
         font-size: 0.9rem;
       }
+
       @media (min-width: 1600px) {
         padding: 7px 15px;
         font-size: 1.1rem;
@@ -205,7 +207,6 @@
   max-width: 500px;
   height: auto;
   margin-top: 60px;
-
   border: 1px solid rgba(255, 255, 255, 0.2);
   background-color: rgba(255, 255, 255, 0.05);
 

@@ -4,34 +4,34 @@ import { FaChevronDown } from "react-icons/fa";
 
 const questionsAnswers = [
   {
-    question: "What Services Does You Offer?",
+    question: "What Services Do You Offer?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique pharetra lacinia. Cras commodo quam non vehicula porta, magna velit tempus leo non.",
+      "We offer a comprehensive range of services including custom component development, UI/UX design, and consultation to help you build and optimize your websites efficiently.",
   },
   {
-    question: "How Can A Component Library Help My Websites",
+    question: "How Can A Component Library Help My Websites?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique pharetra lacinia. Cras commodo quam non vehicula porta, magna velit tempus leo non.",
+      "A component library provides pre-built, reusable components that can significantly speed up the development process. By using our library, you can ensure consistency, enhance maintainability, and reduce development time.",
   },
   {
     question: "What Sets Awesome-CL Components Library Apart From Others?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique pharetra lacinia. Cras commodo quam non vehicula porta, magna velit tempus leo non.",
+      "Awesome-CL Components Library is tailored for junior developers and recent graduates, offering intuitive, easy-to-use components that are well-documented. Our library focuses on practical usage and real-world examples to help you get started quickly.",
   },
   {
     question: "How Do You Approach Website Development?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique pharetra lacinia. Cras commodo quam non vehicula porta, magna velit tempus leo non.",
+      "Our approach to website development is user-centric and agile. We collaborate closely with users to understand users needs and goals, ensuring that the components we provide are aligned with your vision. We emphasize responsive design, accessibility, and performance.",
   },
   {
     question: "How Can I Implement The Components In My Project?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique pharetra lacinia. Cras commodo quam non vehicula porta, magna velit tempus leo non.",
+      "Implementing our components is straightforward. Simply install our library via npm or yarn, and import the necessary components into your project. Detailed documentation and example code are provided to guide you through the process.",
   },
   {
-    question: "How Do I Choose Components For Needs?",
+    question: "How Do I Choose Components For My Needs?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique pharetra lacinia. Cras commodo quam non vehicula porta, magna velit tempus leo non.",
+      "Choosing components is easy with our categorized library. We provide detailed descriptions, usage examples, and guidelines for each component to help you select the best fit for your project requirements.",
   },
 ];
 

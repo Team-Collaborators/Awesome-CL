@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import "./Navbar.scss";
-import logo1 from "../../assets/images/cl-awesome-logo.png";
+import logo1 from "../../assets/images/logo-a.png";
 
 import { FaSun, FaMoon } from "react-icons/fa";
 //import { RxHamburgerMenu } from "react-icons/rx"; // Hamburger Menu for Mobile view
@@ -13,23 +13,22 @@ const Navbar = ({ isDarkMode, toggleTheme, links }) => {
     <>
       <nav className="navbar">
         <div className="navbarLeft">
-          {/* Logo */} 
+          {/* Logo */}
           <Link to="/">
             {" "}
-          <img src={logo1} alt="Logo" className="navLogo" />
+            <img src={logo1} alt="Logo" className="navLogo" />
           </Link>
-  </div>
-          {/* Navbar Links */}
-          <ul className="navbarInner">
-            {links.map((link, index) => (
-              <li key={index} className="navbarInnerItem">
-                <Link to={link.path} className="navbarLink">
-                  {link.title}
-                </Link>
-              </li>
-            ))}
-          </ul>
-      
+        </div>
+        {/* Navbar Links */}
+        <ul className="navbarInner">
+          {links.map((link, index) => (
+            <li key={index} className="navbarInnerItem">
+              <Link to={link.path} className="navbarLink">
+                {link.title}
+              </Link>
+            </li>
+          ))}
+        </ul>
 
         {/* Search bar */}
         <div className="navbarRight">

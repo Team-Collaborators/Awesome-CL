@@ -56,7 +56,7 @@ export default function HomePage() {
       <header className="content">
         <img src={logo} alt="Logo" className="logo" />
         <h1 className="title">Create for Everyone</h1>
-        <Outlet />
+        {/* <Outlet /> */}
       </header>
       <section className="main-wrapper">
         <div className="section-heading-wrapper">
