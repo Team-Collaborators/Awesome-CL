@@ -42,8 +42,8 @@
             "type": "Input",
             "props": {
               "size": "sm"
-            }
-            // "children": "Button"
+            },
+            "children": ""
           }
         ],
         "code": "import { Input } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Input />\n );\n}"
@@ -54,26 +54,29 @@
           {
             "type": "Input",
             "props": {
-              "size": "sm"
-            }
-            // "children": "Button"
-          },
-          {
-            "type": "Button",
-            "props": {
-              "size": "md"
-            }
-            // "children": "Button"
+              "size": "sm",
+              "placeholder": "Email"
+            },
+            "children": ""
           },
           {
             "type": "Input",
             "props": {
-              "size": "lg"
-            }
-            // "children": "Button"
+              "size": "md",
+              "placeholder": "Email"
+            },
+            "children": "Input"
+          },
+          {
+            "type": "Input",
+            "props": {
+              "size": "lg",
+              "placeholder": "Email"
+            },
+            "children": ""
           }
         ],
-        "code": "import { Input } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Input size=\"sm\" />\n   <Button size=\"md\"/>\n      <Button size=\"lg\" />\n    </>\n  );\n}"
+        "code": "import { Input } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Input size=\"sm\" />\n      <Input size=\"md\"/>\n      <Input size=\"lg\" />\n    </>\n  );\n}"
       },
       {
         "title": "Radius",
@@ -81,207 +84,181 @@
           {
             "type": "Input",
             "props": {
-              "radius": "none"
-            }
-            // "children": "Button"
+              "radius": "none",
+              "placeholder": "Email"
+            },
+            "children": ""
           },
           {
-            "type": "Button",
+            "type": "Input",
             "props": {
-              "size": "sm",
               "radius": "sm",
-              "color": "secondary"
+              "placeholder": "Email"
             },
-            "children": "Button"
+            "children": ""
           },
           {
-            "type": "Button",
+            "type": "Input",
             "props": {
-              "size": "sm",
               "radius": "md",
-              "color": "secondary"
+              "placeholder": "Email"
             },
-            "children": "Button"
+            "children": ""
           },
           {
-            "type": "Button",
+            "type": "Input",
             "props": {
-              "size": "sm",
               "radius": "lg",
-              "color": "secondary"
+              "placeholder": "Email"
             },
-            "children": "Button"
+            "children": ""
           },
           {
-            "type": "Button",
+            "type": "Input",
             "props": {
-              "size": "sm",
               "radius": "full",
-              "color": "secondary"
+              "placeholder": "Email"
             },
-            "children": "Button"
+            "children": ""
           }
         ],
-        "code": "import { Button } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Button radius=\"none\">Button</Button>\n      <Button radius=\"sm\">Button</Button>\n      <Button radius=\"md\">Button</Button>\n      <Button radius=\"lg\">Button</Button>\n      <Button radius=\"full\">Button</Button>\n    </>\n  );\n}"
+        "code": "import { Input } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Input radius=\"none\" placeholder=\"Email\" />\n      <Input radius=\"sm\"  placeholder=\"Email\" />\n      <Input radius=\"md\" placeholder=\"Email\" />\n      <Input radius=\"lg\" placeholder=\"Email\" />\n      <Input radius=\"full\" placeholder=\"Email\" />\n    </>\n  );\n}"
       },
       {
         "title": "Colors",
         "components": [
           {
-            "type": "Button",
+            "type": "Input",
             "props": {
-              "size": "sm",
-              "radius": "md",
-              "color": "default"
+              "color": "default",
+              "placeholder": "Email"
             },
-            "children": "Button"
+            "children": ""
           },
           {
-            "type": "Button",
+            "type": "Input",
             "props": {
-              "size": "sm",
-              "radius": "md",
-              "color": "primary"
+              "color": "primary",
+              "placeholder": "Email"
             },
-            "children": "Button"
+            "children": ""
           },
           {
-            "type": "Button",
+            "type": "Input",
             "props": {
-              "size": "sm",
-              "radius": "md",
-              "color": "secondary"
+              "color": "secondary",
+              "placeholder": "Email"
             },
-            "children": "Button"
+            "children": ""
           },
           {
-            "type": "Button",
+            "type": "Input",
             "props": {
-              "size": "sm",
-              "radius": "md",
-              "color": "success"
+              "color": "success",
+              "placeholder": "Email"
             },
-            "children": "Button"
+            "children": ""
           },
           {
-            "type": "Button",
+            "type": "Input",
             "props": {
-              "size": "sm",
-              "radius": "md",
-              "color": "warning"
+              "color": "warning",
+              "placeholder": "Email"
             },
-            "children": "Button"
+            "children": ""
           },
           {
-            "type": "Button",
+            "type": "Input",
             "props": {
-              "size": "sm",
-              "radius": "md",
-              "color": "danger"
+              "color": "danger",
+              "placeholder": "Email"
             },
-            "children": "Button"
+            "children": ""
           }
         ],
-        "code": "import { Button } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Button color=\"default\">Button</Button>\n      <Button color=\"primary\">Button</Button>\n      <Button color=\"secondary\">Button</Button>\n      <Button color=\"success\">Button</Button>\n      <Button color=\"warning\">Button</Button>\n      <Button color=\"danger\">Button</Button>\n    </>\n  );\n}"
+        "code": "import { Input } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Input color=\"default\" placeholder= \"Email\" />\n      <Input color=\"primary\" placeholder= \"Email\" />\n      <Input color=\"secondary\" placeholder= \"Email\" />\n      <Input color=\"success\" placeholder= \"Email\" />\n      <Input color=\"warning\" placeholder= \"Email\" />\n      <Input color=\"danger\" placeholder= \"Email\" />\n    </>\n  );\n}"
       },
       {
         "title": "Borders",
         "components": [
           {
-            "type": "Button",
+            "type": "Input",
             "props": {
-              "size": "sm",
-              "radius": "md",
-              "color": "secondary"
+              "border": "none",
+              "placeholder": "Email"
             },
-            "children": "Button"
+            "children": ""
           },
           {
-            "type": "Button",
+            "type": "Input",
             "props": {
-              "size": "sm",
-              "radius": "md",
-              "color": "secondary"
+              "border": "default",
+              "placeholder": "Email"
             },
-            "children": "Button"
+            "children": ""
           },
           {
-            "type": "Button",
+            "type": "Input",
             "props": {
-              "size": "sm",
-              "radius": "md",
-              "color": "secondary"
+              "border": "bottom",
+              "placeholder": "Email"
             },
-            "children": "Button"
-          },
-          {
-            "type": "Button",
-            "props": {
-              "size": "sm",
-              "radius": "md",
-              "color": "secondary"
-            },
-            "children": "Button"
-          },
-          {
-            "type": "Button",
-            "props": {
-              "size": "sm",
-              "radius": "md",
-              "color": "secondary"
-            },
-            "children": "Button"
-          },
-          {
-            "type": "Button",
-            "props": {
-              "size": "sm",
-              "radius": "md",
-              "color": "secondary"
-            },
-            "children": "Button"
-          },
-          {
-            "type": "Button",
-            "props": {
-              "size": "sm",
-              "radius": "md",
-              "color": "secondary"
-            },
-            "children": "Button"
+            "children": ""
           }
         ],
-        "code": "import { Button } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Button border=\"none\">No Border</Button>\n      <Button border=\"xs\">Extra Small Border</Button>\n      <Button border=\"sm\">Small Border</Button>\n      <Button border=\"md\">Medium Border</Button>\n      <Button border=\"lg\">Large Border</Button>\n    </>\n  );\n}"
+        "code": "import { Input } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Input border=\"none\" placeholder= \"Email\" />\n      <Input border=\"default\" placeholder= \"Email\" />\n      <Input border=\"bottom\" placeholder= \"Email\" />\n    </>\n  );\n}"
+      },
+      {
+        "title": "Label Placements",
+        "components": [
+          {
+            "type": "Input",
+            "props": {
+              "label": "Email",
+              "labelPlacement": "outside"
+            },
+            "children": ""
+          },
+          {
+            "type": "Input",
+            "props": {
+              "label": "Email",
+              "labelPlacement": "outside-left"
+            },
+            "children": ""
+          }
+        ],
+        "code": "import { Input } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Input label=\"Email\" labelPlacement= \"outside\" />\n      <Input label=\"Email\" labelPlacement= \"outside-left\" />\n    </>\n  );\n}"
       }
     ],
     "propsTable": {
-      "title": " Button Props",
-      "description": "List of all props supported by the Button component.",
+      "title": "Input Props",
+      "description": "List of all properties supported by the Input component.",
       "headers": ["Prop Name", "Type", "Description", "Default Value"],
       "rows": [
-        {
-          "propName": "children",
-          "type": "node",
-          "description": "Content to be displayed inside the button.",
-          "defaultValue": "null"
-        },
         {
           "propName": "aria",
           "type": "string",
           "description": "Aria label for accessibility. Provides additional context for screen readers.",
-          "defaultValue": "'button'"
+          "defaultValue": "'input'"
+        },
+        {
+          "propName": "type",
+          "type": "string",
+          "description": "Changes the input type, all common HTML input types are valid.",
+          "defaultValue": "'text'"
+        },
+        {
+          "propName": "required",
+          "type": "Boolean",
+          "description": "Specifies whether an input field must be filled out before form submission.",
+          "defaultValue": "'text'"
         },
         {
           "propName": "color",
           "type": "string",
           "description": "Defines the color of the button. Options are: 'primary', 'secondary', 'success', 'warning', 'danger'.",
-          "defaultValue": "'primary'"
-        },
-        {
-          "propName": "onClick",
-          "type": "function",
-          "description": "Callback function triggered when the button is clicked.",
-          "defaultValue": "undefined"
+          "defaultValue": "'default'"
         },
         {
           "propName": "style",
@@ -293,50 +270,64 @@
           "propName": "size",
           "type": "string",
           "description": "Defines the size of the button. Options are: 'sm', 'md', 'lg'.",
-          "defaultValue": "'md'"
+          "defaultValue": "'sm'"
         },
         {
           "propName": "radius",
           "type": "string",
           "description": "Defines the border-radius of the button. Options are: 'none', 'sm', 'md', 'lg', 'full'.",
-          "defaultValue": "'none'"
+          "defaultValue": "'md'"
         },
         {
           "propName": "border",
           "type": "string",
-          "description": "Defines the border width of the button. Options are: 'none', 'xs', 'sm', 'md', 'lg', 'xl'.",
-          "defaultValue": "'none'"
+          "description": "Defines the border width of the button. Options are: 'none', 'default', 'bottom'.",
+          "defaultValue": "'default'"
+        },
+        {
+          "propName": "label",
+          "type": "string",
+          "description": "Adds a label to the input field. If left blank there is no label. Also determines 'name'-tag.",
+          "defaultValue": ""
+        },
+        {
+          "propName": "labelPlacement",
+          "type": "string",
+          "description": "Determines the position of the label. Options are: 'outside' (places label on top), 'outside-left'.",
+          "defaultValue": "'outside'"
         },
         {
           "propName": "className",
           "type": "string",
           "description": "Additional CSS class names to apply to the button.",
           "defaultValue": "undefined"
+        },
+        {
+          "propName": "value",
+          "type": "string",
+          "description": "Changes the value of the input tag for different operations.",
+          "defaultValue": ""
         }
       ]
     },
     "eventsTable": {
       "title": "Events",
-      "description": "List of all events emitted by the Button component.",
+      "description": "List of all events emitted by the Input component.",
       "headers": ["Event Name", "Description"],
       "rows": [
         {
-          "propName": "onClick",
-          "type": "Triggered when the button is clicked."
+          "propName": "onValueChange",
+          "type": "Triggered when the value changes."
         }
       ]
     },
     "accessibility": {
       "title": "Accessibility",
-      "description": "Accessibility considerations for the Button component.",
+      "description": "Accessibility considerations for the Input component.",
       "ariaRoles": [
         {
-          "propName": "Button",
-          "description": "The Button component is rendered with the button role by default."
-        },
-        {
-          "propName": "Aria-label",
-          "description": "If the button has only an icon and no text, you should add an aria-label for screen readers."
+          "propName": "Input",
+          "description": "The Input component is rendered with the input role by default."
         }
       ]
     }
