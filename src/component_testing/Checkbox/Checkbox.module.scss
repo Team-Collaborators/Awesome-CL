@@ -1,0 +1,157 @@
+@use "../lib-styles/borders.scss";
+@use "../lib-styles/colors.scss";
+@use "../lib-styles/paddings.scss";
+@use "../lib-styles/radius.scss";
+
+.checkbox {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0.5rem;
+}
+
+.checkmark {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  display: block;
+  top: 50%; /* vertically center */
+  left: 50%; /* horizontally center */
+  transform: translate(-50%, -50%); /* Adjust for perfect centering */
+}
+
+// Size classes
+.size-xs {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.size-sm {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.size-md {
+  width: 2rem;
+  height: 2rem;
+}
+
+.size-lg {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.size-xl {
+  width: 3rem;
+  height: 3rem;
+}
+
+// Radius variants
+.radius-none {
+  border-radius: 0;
+}
+
+.radius-sm {
+  border-radius: 4px;
+}
+
+.radius-md {
+  border-radius: 8px;
+}
+
+.radius-lg {
+  border-radius: 12px;
+}
+
+.radius-full {
+  border-radius: 50%;
+}
+
+/* border-classes */
+
+.border-none {
+  border: none;
+}
+
+.border-xs {
+  border: var(--border-xs);
+}
+.border-sm {
+  border: var(--border-sm);
+}
+.border-md {
+  border: var(--border-md);
+}
+
+.border-lg {
+  border: var(--border-lg);
+}
+.border-xl {
+  border: var(--border-xl);
+}
+
+// Color variants
+.color-default-light {
+  background-color: colors.$default-light;
+  border-color: colors.$default-dark;
+
+  .checkmark {
+    color: colors.$default-dark;
+  }
+}
+
+.color-default-dark {
+  background-color: colors.$default-dark;
+  border-color: colors.$default-light;
+
+  .checkmark {
+    color: colors.$default-light;
+  }
+}
+
+.color-primary {
+  background-color: colors.$primary-light;
+  border-color: colors.$primary-base;
+
+  .checkmark {
+    color: colors.$primary-base;
+  }
+}
+
+.color-secondary {
+  background-color: colors.$secondary-light;
+  border-color: colors.$secondary-base;
+
+  .checkmark {
+    color: colors.$secondary-base;
+  }
+}
+
+.color-success {
+  background-color: colors.$success-light;
+  border-color: colors.$success-dark;
+
+  .checkmark {
+    color: colors.$success-dark;
+  }
+}
+
+.color-warning {
+  background-color: colors.$warning-light;
+  border-color: colors.$warning-dark;
+
+  .checkmark {
+    color: colors.$warning-dark;
+  }
+}
+
+.color-danger {
+  background-color: colors.$danger-light;
+  border: colors.$danger-dark;
+
+  .checkmark {
+    color: colors.$danger-dark;
+  }
+}

@@ -7,10 +7,10 @@ import Switch from "../../component_testing/Switch/Switch";
 import { DiReact } from "react-icons/di";
 import { FaReact } from "react-icons/fa";
 import { TbBackground } from "react-icons/tb";
+//import Checkbox from "../../component_testing/Checkbox/Checkbox";
 
 const Playground = () => {
   const [isContentVisible, setIsContentVisible] = useState(false);
-
   // Handle toggle of content visibility
   const handleContentToggle = (newCheckedState) => {
     setIsContentVisible(newCheckedState);
@@ -56,15 +56,8 @@ const Playground = () => {
           Hello
         </Modal> */}
         <br />
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-        >
+
           {/* Check visibility of content using switch */}
-          <h4>Toggle Content Visibility</h4>
           <br />
           <p>{isContentVisible ? "Content is visible" : "Content is hidden"}</p>
           <Switch
@@ -82,23 +75,9 @@ const Playground = () => {
               <p>Now visible because of switch toggle</p>
             </div>
           )}
-          <h4>Switch Style Tests</h4>
-          <p>Switch default: default / default-light</p>
-          <Switch />
-          <br /> <p>Switch 1: color: default-dark</p>
-          <Switch color="default-dark" />
-          <br /> <p>Switch 2: size sm, primary color, radius sm</p>
-          <Switch size="sm" color="primary" radius="sm" />
-          <br /> <p>Switch 3: size lg, secondary color, radius lg</p>
-          <Switch color="secondary" radius="lg" />
-          <br /> <p>Switch 4: size xl, radius lg, inline styling</p>
-          <Switch size="xl" radius="lg" style={{ backgroundColor: "yellow" }} />
-          <br />
-          <p>Switch 4: default size, color: secondary, radius full</p>
-          <Switch color="secondary" radius="full" />
         </div>
       </div>
-    </div>
+
   );
 };
 
