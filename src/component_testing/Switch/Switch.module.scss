@@ -1,84 +1,150 @@
 @use "../lib-styles/borders.scss";
 @use "../lib-styles/colors.scss";
-@use "../lib-styles/font-sizes.scss";
 @use "../lib-styles/paddings.scss";
 @use "../lib-styles/radius.scss";
 
+// Base styles for the switch container
 .switch {
+  box-sizing: border-box;
   position: relative;
   display: inline-block;
-  width: 2rem;
-  height: 2rem;
   cursor: pointer;
-  transition: all 03s ease;
+  transition: all 0.3s ease;
+  padding: 0;
+  width: 100%;
 }
 
-.slider {
-  top: 2px;
-  left: 2px;
-  width: 30px;
-  height: 30px;
-  background-color: black;
-  border-radius: 50%;
-  transition: all 0.3s ease;
+// Color variants
+.color-default-light {
+  background-color: colors.$default-light;
+  border: borders.$border-xs colors.$default-dark;
 
-  &.checked {
-    transform: translateX(26px);
+  .slider {
+    background-color: colors.$default-dark;
   }
 }
 
-/* Size Classes */
-.size-sm {
-  font-size: var(--font-size-sm);
-  padding: var(--padding-sm);
+.color-default-dark {
+  background-color: colors.$default-dark;
+  border: borders.$border-xs colors.$default-light;
+
+  .slider {
+    background-color: colors.$default-light;
+  }
 }
 
-.size-md {
-  font-size: var(--font-size-md);
-  padding: var(--padding-md);
-}
-
-.size-lg {
-  font-size: var(--font-size-lg);
-  padding: var(--padding-xl);
-}
-
-/* radius classes */
-.radius-none {
-  border-radius: var(--border-radius-none);
-}
-
-.radius-sm {
-  border-radius: var(--border-radius-sm);
-}
-
-.radius-md {
-  border-radius: var(--border-radius-md);
-}
-
-.radius-lg {
-  border-radius: var(--border-radius-lg);
-}
-
-.radius-full {
-  border-radius: var(--border-radius-full);
-}
-
-/* color-classes */
 .color-primary {
-  background-color: colors.$primary-base;
-  color: white;
-  border-color: colors.$primary-dark;
-}
+  background-color: colors.$primary-dark;
+   border: borders.$border-xs colors.$primary-dark;
 
-.color-default {
-  background-color: colors.$default-base;
-  color: white;
-  border-color: colors.$default-dark;
+  .slider {
+    background-color: colors.$primary-light;
+  }
 }
 
 .color-secondary {
   background-color: colors.$secondary-base;
-  color: white;
-  border-color: colors.$secondary-dark;
+  border: borders.$border-xs colors.$secondary-base;
+
+  .slider {
+    background-color: colors.$secondary-light;
+  }
 }
+
+// Size classes
+.size-xs {
+  width: 1.5rem;
+  height: 0.75rem;
+  .slider {
+    width: 0.6rem;
+    height: 0.6rem;
+  }
+}
+
+.size-sm {
+  width: 1.75rem;
+  height: 0.875rem;
+  .slider {
+    width: 0.7rem;
+    height: 0.7rem;
+  }
+}
+
+.size-md {
+  width: 2rem;
+  height: 1rem;
+  .slider {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+}
+
+.size-lg {
+  width: 2.5rem;
+  height: 1.25rem;
+  .slider {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+.size-xl {
+  width: 3rem;
+  height: 1.5rem;
+  .slider {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+}
+
+// Radius variants
+.radius-none {
+  border-radius: 0;
+}
+
+.radius-sm {
+  border-radius: 4px;
+}
+
+.radius-md {
+  border-radius: 8px;
+}
+
+.radius-lg {
+  border-radius: 12px;
+}
+
+.radius-full {
+  border-radius: 50%;
+}
+
+// Border variants
+.border-none {
+  border: none;
+}
+
+.border-solid {
+  border-style: solid;
+}
+
+.border-dashed {
+  border-style: dashed;
+}
+
+// Slider styles
+.slider {
+  position: absolute;
+  top: 50%;
+  left: 2px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  width: 50%;
+  height: 100%;
+
+  &.checked {
+    transform: translateX(100%) translateY(-50%);
+  }
+}
+
