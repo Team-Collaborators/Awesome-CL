@@ -30,7 +30,7 @@ export function RenderCode({ code }) {
       >
         {code}
       </SyntaxHighlighter>
-      <button onClick={() => copyToClipboard(code)} className={styles.button}>
+      <button onClick={() => copyToClipboard(code)} className="copy-button">
         {copied ? <span className="copy-message">Copied</span> : <FaRegCopy />}
       </button>
     </div>
