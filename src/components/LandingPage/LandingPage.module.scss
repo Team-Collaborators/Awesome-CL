@@ -1,0 +1,125 @@
+@use "../../styles/main.scss" as styles;
+
+.landingPage {
+  text-align: center;
+  // color: styles.$text-color;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: styles.$font-stack;
+  position: relative;
+  overflow: hidden;
+
+  @keyframes gradientMove {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
+
+.header {
+  padding: 4rem 2rem;
+  animation: fadeIn 2s ease-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  .logo {
+    width: 150px;
+    margin-bottom: 1rem;
+  }
+
+  .title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    animation: slideInLeft 0.8s ease-out;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+  }
+
+  .ctaButtons {
+    display: flex;
+    gap: 1rem;
+
+    .btn {
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s, transform 0.3s;
+
+      &:hover {
+        transform: translateY(-3px);
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes grow {
+  from {
+    transform: scale(0.95);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.animateFadeIn {
+  animation: fadeIn 2s ease-out;
+}
+
+.animateSlideUp {
+  animation: slideUp 1s ease-out;
+}
+
+.animateSlideInLeft {
+  animation: slideInLeft 0.8s ease-out;
+}
+
+.animateGrow {
+  animation: grow 0.3s ease-out;
+}
