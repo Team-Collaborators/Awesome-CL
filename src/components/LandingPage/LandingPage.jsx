@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import "./LandingPage.scss";
-import logo from "../../assets/images/A-logo.png";
 
 const LandingPage = () => {
   return (
@@ -12,19 +11,11 @@ const LandingPage = () => {
           A collection of reusable components for building modern web
           applications
         </p>
-        <Link to="/components" className="cta-button">
-          Explore Components
-        </Link>
       </header>
       <section className="top-components">
         <h2>Top Components</h2>
-        <div className="components-gallery">
-          {/* Add top components here */}
-        </div>
+        <div className="components-gallery"></div>
       </section>
-      <footer className="footer">
-        <p>© 2024 Component Library. All rights reserved.</p>
-      </footer>
     </div>
   );
 };
