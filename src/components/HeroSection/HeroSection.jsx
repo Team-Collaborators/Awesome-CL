@@ -8,8 +8,7 @@ const HeroSection = () => {
       <h1 className="hero-title"></h1>
       <p className="hero-description"></p>
       <div className="hero-buttons">
-        <button className="hero-btn sign-up">Get Started</button>
-        <button className="hero-btn learn-more">Learn More</button>
+        <button className="hero-btn learn-more"></button>
       </div>
     </section>
   );

@@ -12,10 +12,11 @@
 body.dark-theme {
   --primary-color: #2b2b2b;
   --secondary-color: #1c1c1c;
-  --background-color: #000000; /* Dark mode background */
-  --text-color: #e0e0e0; /* Dark mode text color */
+  // --background-color: #000000; /* Dark mode background */
+  --background-color: #282828;
+  --text-color: #e1e0e0; /* Dark mode text color */
   --optional-color: #7a3d99;
-  --input-bg-color: #1e1e1e;
+  --input-bg-color: #282828;
   --input-border-color: #444444;
   --input-focus-color: #095874;
 }
