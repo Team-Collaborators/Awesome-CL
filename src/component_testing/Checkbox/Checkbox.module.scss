@@ -1,0 +1,108 @@
+@use "../lib-styles/borders.scss";
+@use "../lib-styles/colors.scss";
+@use "../lib-styles/paddings.scss";
+@use "../lib-styles/radius.scss";
+
+.checkbox {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: pink;
+  margin: 1rem;
+
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 2px solid var(--color-secondary);
+  border-radius: 4px;
+}
+
+.checkmark {
+  position: relative;
+}
+
+// Color variants
+.color-default-light {
+  background-color: colors.$default-light;
+  border: borders.$border-xs colors.$default-dark;
+
+  .checkmark {
+    color: colors.$default-dark;
+  }
+}
+
+.color-default-dark {
+  background-color: colors.$default-dark;
+  border: borders.$border-xs colors.$default-light;
+
+  .checkmark {
+    color: colors.$default-light;
+  }
+}
+
+.color-primary {
+  background-color: colors.$primary-light;
+  border: borders.$border-xs colors.$primary-light;
+
+  .checkmark {
+    color: colors.$primary-dark;
+  }
+}
+
+.color-secondary {
+  background-color: colors.$secondary-light;
+  border: borders.$border-xs colors.$secondary-light;
+
+  .checkmark {
+    color: colors.$secondary-base;
+  }
+}
+
+// Size classes
+.size-xs {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.size-sm {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.size-md {
+  width: 2rem;
+  height: 2rem;
+}
+
+.size-lg {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.size-xl {
+  width: 3rem;
+  height: 3rem;
+}
+
+
+// Radius variants
+.radius-none {
+    border-radius: 0;
+  }
+  
+  .radius-sm {
+    border-radius: 4px;
+  }
+  
+  .radius-md {
+    border-radius: 8px;
+  }
+  
+  .radius-lg {
+    border-radius: 12px;
+  }
+  
+  .radius-full {
+    border-radius: 50%;
+  }

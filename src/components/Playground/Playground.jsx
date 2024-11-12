@@ -7,6 +7,7 @@ import Switch from "../../component_testing/Switch/Switch";
 import { DiReact } from "react-icons/di";
 import { FaReact } from "react-icons/fa";
 import { TbBackground } from "react-icons/tb";
+import Checkbox from "../../component_testing/Checkbox/Checkbox";
 
 const Playground = () => {
   const [isContentVisible, setIsContentVisible] = useState(false);
@@ -56,6 +57,18 @@ const Playground = () => {
           Hello
         </Modal> */}
         <br />
+
+        <div>
+          <h4>Checkbox Test</h4>
+<p>Default Checkbox</p>
+          <Checkbox/>
+          <br />
+          <p>Default Dark Checkbox</p>
+          <Checkbox color="primary"/>
+        </div>
+       
+       
+       
         <div
           style={{
             display: "flex",
@@ -64,38 +77,23 @@ const Playground = () => {
           }}
         >
           {/* Check visibility of content using switch */}
-          <h4>Toggle Content Visibility</h4>
           <br />
           <p>{isContentVisible ? "Content is visible" : "Content is hidden"}</p>
-          <Switch
+          {/* <Switch
             size="md"
             color={isContentVisible ? "primary" : "secondary"}
             radius="lg"
             checked={isContentVisible}
             onChange={handleContentToggle}
-          />
+          /> */}
           <br />
           {/* Content Section toggled by switch */}
-          {isContentVisible && (
+          {/* {isContentVisible && (
             <div style={{ border: "1px solid black", padding: "10px" }}>
               <h4>Hidden Content</h4>
               <p>Now visible because of switch toggle</p>
             </div>
-          )}
-          <h4>Switch Style Tests</h4>
-          <p>Switch default: default / default-light</p>
-          <Switch />
-          <br /> <p>Switch 1: color: default-dark</p>
-          <Switch color="default-dark" />
-          <br /> <p>Switch 2: size sm, primary color, radius sm</p>
-          <Switch size="sm" color="primary" radius="sm" />
-          <br /> <p>Switch 3: size lg, secondary color, radius lg</p>
-          <Switch color="secondary" radius="lg" />
-          <br /> <p>Switch 4: size xl, radius lg, inline styling</p>
-          <Switch size="xl" radius="lg" style={{ backgroundColor: "yellow" }} />
-          <br />
-          <p>Switch 4: default size, color: secondary, radius full</p>
-          <Switch color="secondary" radius="full" />
+          )} */}
         </div>
       </div>
     </div>

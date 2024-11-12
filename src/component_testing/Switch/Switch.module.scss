@@ -35,7 +35,7 @@
 
 .color-primary {
   background-color: colors.$primary-dark;
-   border: borders.$border-xs colors.$primary-dark;
+  border: borders.$border-xs colors.$primary-dark;
 
   .slider {
     background-color: colors.$primary-light;
@@ -118,19 +118,6 @@
   border-radius: 50%;
 }
 
-// Border variants
-.border-none {
-  border: none;
-}
-
-.border-solid {
-  border-style: solid;
-}
-
-.border-dashed {
-  border-style: dashed;
-}
-
 // Slider styles
 .slider {
   position: absolute;
@@ -147,4 +134,3 @@
     transform: translateX(100%) translateY(-50%);
   }
 }
-
