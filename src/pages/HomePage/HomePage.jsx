@@ -6,6 +6,7 @@ import logo from "../../assets/images/A-logo.png";
 
 import ProductCard from "../../components/ProductDisplay/ProductCard/ProductCard";
 import CodeDisplay from "../../components/ProductDisplay/CodeDisPlay/CodeDisPlay";
+import HeroSection from "../../components/HeroSection/HeroSection";
 
 export default function HomePage() {
   const [theme, setTheme] = useState("default");
@@ -57,6 +58,7 @@ export default function HomePage() {
         <img src={logo} alt="Logo" className="logo" />
         <h1 className="title">Create for Everyone</h1>
         {/* <Outlet /> */}
+        {/* <HeroSection /> */}
       </header>
       <section className="main-wrapper">
         <div className="section-heading-wrapper">
