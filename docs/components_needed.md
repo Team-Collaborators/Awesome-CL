@@ -5,8 +5,6 @@
 - link
 - loading circle
 - label
-- checkbox
-- checkbox group
 - radio button
 - input field (search field)
 - card
@@ -39,6 +37,8 @@
 - slider
 - popover
 - switch
+- checkbox
+- checkbox group
 
 # Done
 

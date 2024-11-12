@@ -1,21 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Playground.scss";
 // import Button from "../../component_testing/Button/Button";
 // import TestTailwind from "../../component_testing/TestTailwind";
 import Modal from "../../component_testing/Modal/Modal";
 import Switch from "../../component_testing/Switch/Switch";
-<<<<<<< HEAD
 import { DiReact } from "react-icons/di";
-=======
+import { FaReact } from "react-icons/fa";
 import { TbBackground } from "react-icons/tb";
->>>>>>> 429e0a99c0fc277867624099f3b689be337c767d
 
 const Playground = () => {
+  const [isContentVisible, setIsContentVisible] = useState(false);
+
+  // Handle toggle of content visibility
+  const handleContentToggle = (newCheckedState) => {
+    setIsContentVisible(newCheckedState);
+  };
+
   return (
-    <section className="playground-wrapper">
+    <div className="playground-wrapper">
       <h1>Playground</h1>
       <p>This is the space to test new components</p>
-      <div className="playground-container">
+      <div className="playground-container" style={{ width: "100%" }}>
         {/* Default button */}
         {/* <Button>Default Button</Button> */}
 
@@ -47,11 +52,10 @@ const Playground = () => {
         >
           Button component Button props and Tailwind style
         </Button> */}
-
         {/* <Modal modalHeader={"Modal header"} modalBody={"Body"}>
           Hello
-<<<<<<< HEAD
-        </Modal>
+        </Modal> */}
+        <br />
         <div
           style={{
             display: "flex",
@@ -59,44 +63,42 @@ const Playground = () => {
             alignItems: "center",
           }}
         >
-          <h4>Switch test</h4>
-         <br /> <p>Switch default: default</p>
-          <Switch/>
-          <br /> <p>Switch 1: color: default-dark</p>
-          <Switch color="default-dark"/>
-         <br /> <p>Switch 2: size sm, primary color, radius xs</p>
-          <Switch size="sm" color="primary" radius="xs" />
-        <br />  <p>Switch 3: size lg, secondary color, radius lg</p>
-          <Switch color="secondary" radius="lg" />
-         <br /> <p>Switch 4: size xl, border md, radius lg, inline styling</p>
+          {/* Check visibility of content using switch */}
+          <h4>Toggle Content Visibility</h4>
+          <br />
+          <p>{isContentVisible ? "Content is visible" : "Content is hidden"}</p>
           <Switch
-            border="md"
-            size="xl"
+            size="md"
+            color={isContentVisible ? "primary" : "secondary"}
             radius="lg"
-            style={{ backgroundColor: "yellow" }}
+            checked={isContentVisible}
+            onChange={handleContentToggle}
           />
+          <br />
+          {/* Content Section toggled by switch */}
+          {isContentVisible && (
+            <div style={{ border: "1px solid black", padding: "10px" }}>
+              <h4>Hidden Content</h4>
+              <p>Now visible because of switch toggle</p>
+            </div>
+          )}
+          <h4>Switch Style Tests</h4>
+          <p>Switch default: default / default-light</p>
+          <Switch />
+          <br /> <p>Switch 1: color: default-dark</p>
+          <Switch color="default-dark" />
+          <br /> <p>Switch 2: size sm, primary color, radius sm</p>
+          <Switch size="sm" color="primary" radius="sm" />
+          <br /> <p>Switch 3: size lg, secondary color, radius lg</p>
+          <Switch color="secondary" radius="lg" />
+          <br /> <p>Switch 4: size xl, radius lg, inline styling</p>
+          <Switch size="xl" radius="lg" style={{ backgroundColor: "yellow" }} />
           <br />
           <p>Switch 4: default size, color: secondary, radius full</p>
           <Switch color="secondary" radius="full" />
-=======
-        </Modal> */}
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            gap: "1rem",
-          }}
-        >
-          Switch test
-          <Switch size="xl" color="default" />
-          <Switch size="xl" color="default" />
-          <Switch size="xl" color="default" />
-          <Switch size="xl" color="default" />
-          <Switch size="xl" color="default" />
->>>>>>> 429e0a99c0fc277867624099f3b689be337c767d
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
