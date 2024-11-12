@@ -36,16 +36,16 @@ export const sidebarLinks = {
       title: "Controllers",
       subcategories: [
         {
-          path: "/Backend/Controllers/WorkScheduleManagement",
-          title: "WorkScheduleManagement",
+          path: "/Backend/Controllers/Users",
+          title: "Users",
         },
         {
-          path: "/Backend/Controllers/ServiceRequestManagement",
-          title: "ServiceRequestManagement",
+          path: "/Backend/Controllers/Schedule",
+          title: "Schedule",
         },
         {
-          path: "/Backend/Controllers/UserManagement",
-          title: "UserManagement",
+          path: "/Backend/Controllers/ServiceRequest",
+          title: "Service Request",
         },
       ],
     },
