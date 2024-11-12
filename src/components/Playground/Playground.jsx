@@ -7,11 +7,10 @@ import Switch from "../../component_testing/Switch/Switch";
 import { DiReact } from "react-icons/di";
 import { FaReact } from "react-icons/fa";
 import { TbBackground } from "react-icons/tb";
-import Checkbox from "../../component_testing/Checkbox/Checkbox";
+//import Checkbox from "../../component_testing/Checkbox/Checkbox";
 
 const Playground = () => {
   const [isContentVisible, setIsContentVisible] = useState(false);
-
   // Handle toggle of content visibility
   const handleContentToggle = (newCheckedState) => {
     setIsContentVisible(newCheckedState);
@@ -58,48 +57,27 @@ const Playground = () => {
         </Modal> */}
         <br />
 
-        <div>
-          <h4>Checkbox Test</h4>
-          <p>Default Checkbox</p>
-          <Checkbox color="default-dark" />
-<Checkbox color="default-light"/>
-          <Checkbox color="primary" radius="sm" />
-          <br />
-          <Checkbox color="secondary" radius="md" />
-          <Checkbox color="danger" border="none"/>
-          <Checkbox color="warning" radius="md" />
-          <Checkbox color="success" size="xl"
-          border="lg"/>
-        </div>
-
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-        >
           {/* Check visibility of content using switch */}
           <br />
           <p>{isContentVisible ? "Content is visible" : "Content is hidden"}</p>
-          {/* <Switch
+          <Switch
             size="md"
             color={isContentVisible ? "primary" : "secondary"}
             radius="lg"
             checked={isContentVisible}
             onChange={handleContentToggle}
-          /> */}
+          />
           <br />
           {/* Content Section toggled by switch */}
-          {/* {isContentVisible && (
+          {isContentVisible && (
             <div style={{ border: "1px solid black", padding: "10px" }}>
               <h4>Hidden Content</h4>
               <p>Now visible because of switch toggle</p>
             </div>
-          )} */}
+          )}
         </div>
       </div>
-    </div>
+
   );
 };
 

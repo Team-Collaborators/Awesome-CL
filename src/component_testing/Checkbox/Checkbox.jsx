@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styles from "./Checkbox.module.scss";
-import CheckmarkIcon from "../../assets/images/checkmark-icon.svg";
 
 const Checkbox = ({
   aria = "checkbox",
