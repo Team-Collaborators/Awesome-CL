@@ -8,7 +8,7 @@ const Switch = ({
   style,
   size = "md",
   radius = "lg",
-  border = "md",
+  border = "sm",
   checked = false,
   className = "",
 }) => {
