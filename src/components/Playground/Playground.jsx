@@ -60,15 +60,18 @@ const Playground = () => {
 
         <div>
           <h4>Checkbox Test</h4>
-<p>Default Checkbox</p>
-          <Checkbox/>
+          <p>Default Checkbox</p>
+          <Checkbox color="default-dark" />
+<Checkbox color="default-light"/>
+          <Checkbox color="primary" radius="sm" />
           <br />
-          <p>Default Dark Checkbox</p>
-          <Checkbox color="primary"/>
+          <Checkbox color="secondary" radius="md" />
+          <Checkbox color="danger" border="none"/>
+          <Checkbox color="warning" radius="md" />
+          <Checkbox color="success" size="xl"
+          border="lg"/>
         </div>
-       
-       
-       
+
         <div
           style={{
             display: "flex",

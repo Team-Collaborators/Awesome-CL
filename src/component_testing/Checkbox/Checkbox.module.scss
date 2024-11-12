@@ -9,54 +9,17 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  background-color: pink;
-  margin: 1rem;
-
-  width: 1.5rem;
-  height: 1.5rem;
-  border: 2px solid var(--color-secondary);
-  border-radius: 4px;
+  margin: 0.5rem;
 }
 
 .checkmark {
-  position: relative;
-}
-
-// Color variants
-.color-default-light {
-  background-color: colors.$default-light;
-  border: borders.$border-xs colors.$default-dark;
-
-  .checkmark {
-    color: colors.$default-dark;
-  }
-}
-
-.color-default-dark {
-  background-color: colors.$default-dark;
-  border: borders.$border-xs colors.$default-light;
-
-  .checkmark {
-    color: colors.$default-light;
-  }
-}
-
-.color-primary {
-  background-color: colors.$primary-light;
-  border: borders.$border-xs colors.$primary-light;
-
-  .checkmark {
-    color: colors.$primary-dark;
-  }
-}
-
-.color-secondary {
-  background-color: colors.$secondary-light;
-  border: borders.$border-xs colors.$secondary-light;
-
-  .checkmark {
-    color: colors.$secondary-base;
-  }
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  display: block;
+  top: 50%; /* vertically center */
+  left: 50%; /* horizontally center */
+  transform: translate(-50%, -50%); /* Adjust for perfect centering */
 }
 
 // Size classes
@@ -85,24 +48,110 @@
   height: 3rem;
 }
 
-
 // Radius variants
 .radius-none {
-    border-radius: 0;
+  border-radius: 0;
+}
+
+.radius-sm {
+  border-radius: 4px;
+}
+
+.radius-md {
+  border-radius: 8px;
+}
+
+.radius-lg {
+  border-radius: 12px;
+}
+
+.radius-full {
+  border-radius: 50%;
+}
+
+/* border-classes */
+
+.border-none {
+  border: none;
+}
+
+.border-xs {
+  border: var(--border-xs);
+}
+.border-sm {
+  border: var(--border-sm);
+}
+.border-md {
+  border: var(--border-md);
+}
+
+.border-lg {
+  border: var(--border-lg);
+}
+.border-xl {
+  border: var(--border-xl);
+}
+
+// Color variants
+.color-default-light {
+  background-color: colors.$default-light;
+  border-color: colors.$default-dark;
+
+  .checkmark {
+    color: colors.$default-dark;
   }
-  
-  .radius-sm {
-    border-radius: 4px;
+}
+
+.color-default-dark {
+  background-color: colors.$default-dark;
+  border-color: colors.$default-light;
+
+  .checkmark {
+    color: colors.$default-light;
   }
-  
-  .radius-md {
-    border-radius: 8px;
+}
+
+.color-primary {
+  background-color: colors.$primary-light;
+  border-color: colors.$primary-base;
+
+  .checkmark {
+    color: colors.$primary-base;
   }
-  
-  .radius-lg {
-    border-radius: 12px;
+}
+
+.color-secondary {
+  background-color: colors.$secondary-light;
+  border-color: colors.$secondary-base;
+
+  .checkmark {
+    color: colors.$secondary-base;
   }
-  
-  .radius-full {
-    border-radius: 50%;
+}
+
+.color-success {
+  background-color: colors.$success-light;
+  border-color: colors.$success-dark;
+
+  .checkmark {
+    color: colors.$success-dark;
   }
+}
+
+.color-warning {
+  background-color: colors.$warning-light;
+  border-color: colors.$warning-dark;
+
+  .checkmark {
+    color: colors.$warning-dark;
+  }
+}
+
+.color-danger {
+  background-color: colors.$danger-light;
+  border: colors.$danger-dark;
+
+  .checkmark {
+    color: colors.$danger-dark;
+  }
+}
