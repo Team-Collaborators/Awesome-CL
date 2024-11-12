@@ -23,7 +23,10 @@ export function MainFrontendLayout({ data }) {
     return (
       <div className={styles.renderComponentPage}>
         <header>
-          <h2>{component.title}</h2>
+          <h2>
+            {component.title[0].toUpperCase() +
+              component.title.slice(1).toLowerCase()}
+          </h2>
           <p>{component.description}</p>
         </header>
         <main>
@@ -35,7 +38,11 @@ export function MainFrontendLayout({ data }) {
                   {component.installation.map((elem) => (
                     <li key={elem.name}>
                       <button onClick={() => setInstallation(elem.command)}>
-                        <img src={elem.path} alt={elem.name} />
+                        <img
+                          className={styles.imageSvg}
+                          src={elem.path}
+                          alt={elem.name}
+                        />
                         <span>{elem.name}</span>
                       </button>
                     </li>
