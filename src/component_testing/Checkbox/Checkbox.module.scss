@@ -9,17 +9,16 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  margin: 0.5rem;
 }
 
 .checkmark {
   position: absolute;
-  width: 80%;
-  height: 80%;
+  width: 95%;
+  height: 95%;
   display: block;
-  top: 50%; /* vertically center */
-  left: 50%; /* horizontally center */
-  transform: translate(-50%, -50%); /* Adjust for perfect centering */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 // Size classes
@@ -48,7 +47,7 @@
   height: 3rem;
 }
 
-// Radius variants
+/* Radius classes*/
 .radius-none {
   border-radius: 0;
 }
@@ -70,11 +69,9 @@
 }
 
 /* border-classes */
-
 .border-none {
   border: none;
 }
-
 .border-xs {
   border: var(--border-xs);
 }
@@ -92,7 +89,7 @@
   border: var(--border-xl);
 }
 
-// Color variants
+/* Color variants */
 .color-default-light {
   background-color: colors.$default-light;
   border-color: colors.$default-dark;
@@ -113,19 +110,19 @@
 
 .color-primary {
   background-color: colors.$primary-light;
-  border-color: colors.$primary-base;
+  border-color: colors.$primary-dark;
 
   .checkmark {
-    color: colors.$primary-base;
+    color: colors.$primary-dark;
   }
 }
 
 .color-secondary {
   background-color: colors.$secondary-light;
-  border-color: colors.$secondary-base;
+  border-color: colors.$secondary-dark;
 
   .checkmark {
-    color: colors.$secondary-base;
+    color: colors.$secondary-dark;
   }
 }
 
@@ -149,7 +146,7 @@
 
 .color-danger {
   background-color: colors.$danger-light;
-  border: colors.$danger-dark;
+  border-color: colors.$danger-dark;
 
   .checkmark {
     color: colors.$danger-dark;

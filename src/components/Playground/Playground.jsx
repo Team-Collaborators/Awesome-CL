@@ -3,7 +3,7 @@ import "./Playground.scss";
 // import Button from "../../component_testing/Button/Button";
 // import TestTailwind from "../../component_testing/TestTailwind";
 import Modal from "../../component_testing/Modal/Modal";
-import Switch from "../../component_testing/Switch/Switch";
+import Checkbox from "../../component_testing/Checkbox/Checkbox";
 import { DiReact } from "react-icons/di";
 import { FaReact } from "react-icons/fa";
 import { TbBackground } from "react-icons/tb";
@@ -24,6 +24,19 @@ const Playground = () => {
         {/* <Modal modalHeader={"Modal header"} modalBody={"Body"}>
           Hello
         </Modal> */}
+
+        <div style={{ display: "flex", justifyContent: "space-around" }}>
+<Checkbox color="default-dark" border="xs"/>
+<Checkbox color="primary" border="sm"/>
+<Checkbox color="secondary" border="md"/>
+<Checkbox color="danger" border="lg"/>
+<Checkbox style={{backgroundColor: "pink", border: "yellow 3px dotted", color: "yellow"}} />
+<Checkbox color="warning"/>
+<Checkbox/>
+<Checkbox/>
+
+
+        </div>
       </div>
     </div>
   );

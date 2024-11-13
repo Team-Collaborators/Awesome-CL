@@ -6,11 +6,12 @@ const Checkbox = ({
   color = "default-light",
   onChange,
   style,
-  size = "md",
-  radius = "lg",
-  border = "sm",
+  size = "sm",
+  radius = "md",
+  border = "xs",
   checked = false,
   className = "",
+  checkmarkColor = "currentColor",
 }) => {
   // Combine CSS module class names with any global Tailwind classes passed as props
   const combinedClassNames = `
@@ -51,11 +52,9 @@ const Checkbox = ({
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
           className={styles.checkmark}
+          style={{ fill: checkmarkColor }}
         >
-          <path
-            d="M20.285 6.71a1 1 0 0 0-1.414-1.414l-9.9 9.9-3.958-3.958a1 1 0 0 0-1.414 1.414l4.672 4.672a1 1 0 0 0 1.414 0l10.6-10.6z"
-            fill="currentColor" // Use currentColor to make the icon inherit the color
-          />
+          <path d="M20.285 6.71a1 1 0 0 0-1.414-1.414l-9.9 9.9-3.958-3.958a1 1 0 0 0-1.414 1.414l4.672 4.672a1 1 0 0 0 1.414 0l10.6-10.6z" />
         </svg>
       )}
     </div>
