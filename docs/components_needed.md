@@ -4,7 +4,6 @@
 - header
 - link
 - loading circle
-- label
 - radio button
 - input field (search field)
 - card
@@ -12,7 +11,6 @@
 - table
 - textarea
 - navbar
-- accordion
 - dropdown
 - image
 - pagination
@@ -32,13 +30,13 @@
 
 # In Progress
 
-- search field with button
 - modal
 - slider
 - popover
 - switch
 - checkbox
 - checkbox group
+- accordion
 
 # Done
 
@@ -46,3 +44,6 @@
 - code
 - snippet
 - search field
+- label
+- search field with button
+- input with label
