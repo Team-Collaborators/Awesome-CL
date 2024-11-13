@@ -352,7 +352,7 @@
   {
     "title": "modal",
     "path": "/frontend/components/modal",
-    "description": "MODAL component that can be used in different styles and sizes.",
+    "description": "A modal component that can be customized with various sizes, placements, scroll options, and backdrop styles.",
     "installation": [
       {
         "name": "CLI",
@@ -381,320 +381,241 @@
       }
     ],
     "import": {
-      "code": "import { Button } from 'AwesomeCL';",
-      "description": "This code shows how to import the Button component from the library."
+      "code": "import { Modal } from 'AwesomeCL';",
+      "description": "This code shows how to import the Modal component from the library."
     },
     "examples": [
       {
-        "title": "Default",
+        "title": "Default Modal",
         "components": [
           {
-            "type": "Button",
+            "type": "Modal",
             "props": {
-              "size": "sm"
+              "modalHeader": "Example Header",
+              "modalBody": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque eos voluptatibus ullam, cupiditate vitae voluptates quas voluptatum repudiandae corrupti neque quam assumenda sint facilis nihil voluptatem voluptate hic non nemo nostrum earum! Magnam quos ipsa quibusdam nulla laboriosam ducimus itaque ex eos esse voluptas at rem velit, praesentium reprehenderit? Architecto!"
             },
-            "children": "Button"
+            "children": "Default"
           }
         ],
-        "code": "import { Button } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Button>\n      Button\n    </Button>\n  );\n}"
+        "code": "import { Modal } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Modal size=\"md\" placement=\"center\" scroll=\"inside\" backdrop=\"opaque\">\n      This is a default modal.\n    </Modal>\n  );\n}"
       },
       {
         "title": "Sizes",
         "components": [
           {
-            "type": "Button",
+            "type": "Modal",
             "props": {
+              "modalHeader": "Example Header",
+              "modalBody": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque eos voluptatibus ullam, cupiditate vitae voluptates quas voluptatum repudiandae corrupti neque quam assumenda sint facilis nihil voluptatem voluptate hic non nemo nostrum earum! Magnam quos ipsa quibusdam nulla laboriosam ducimus itaque ex eos esse voluptas at rem velit, praesentium reprehenderit? Architecto!",
               "size": "sm",
               "radius": "sm",
               "color": "secondary"
             },
-            "children": "Button"
+            "children": "Size sm"
           },
           {
-            "type": "Button",
+            "type": "Modal",
             "props": {
+              "modalHeader": "Example Header",
+              "modalBody": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque eos voluptatibus ullam, cupiditate vitae voluptates quas voluptatum repudiandae corrupti neque quam assumenda sint facilis nihil voluptatem voluptate hic non nemo nostrum earum! Magnam quos ipsa quibusdam nulla laboriosam ducimus itaque ex eos esse voluptas at rem velit, praesentium reprehenderit? Architecto!",
               "size": "md",
               "radius": "sm",
               "color": "secondary"
             },
-            "children": "Button"
+            "children": "Size md"
           },
           {
-            "type": "Button",
+            "type": "Modal",
             "props": {
+              "modalHeader": "Example Header",
+              "modalBody": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque eos voluptatibus ullam, cupiditate vitae voluptates quas voluptatum repudiandae corrupti neque quam assumenda sint facilis nihil voluptatem voluptate hic non nemo nostrum earum! Magnam quos ipsa quibusdam nulla laboriosam ducimus itaque ex eos esse voluptas at rem velit, praesentium reprehenderit? Architecto!",
               "size": "lg",
               "radius": "sm",
               "color": "secondary"
             },
-            "children": "Button"
+            "children": "Size lg"
           }
         ],
-        "code": "import { Button } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Button size=\"sm\">Button</Button>\n      <Button size=\"md\">MButton</Button>\n      <Button size=\"lg\">Button</Button>\n    </>\n  );\n}"
+        "code": "import { Modal } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Modal size=\"xs\">Extra Small Modal</Modal>\n      <Modal size=\"sm\">Small Modal</Modal>\n      <Modal size=\"md\">Medium Modal</Modal>\n      <Modal size=\"lg\">Large Modal</Modal>\n      <Modal size=\"xl\">Extra Large Modal</Modal>\n    </>\n  );\n}"
       },
       {
-        "title": "Radius",
+        "title": "Placement",
         "components": [
           {
-            "type": "Button",
+            "type": "Modal",
             "props": {
-              "size": "sm",
-              "radius": "none",
-              "color": "secondary"
+              "modalHeader": "Example Header",
+              "modalBody": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque eos voluptatibus ullam, cupiditate vitae voluptates quas voluptatum repudiandae corrupti neque quam assumenda sint facilis nihil voluptatem voluptate hic non nemo nostrum earum! Magnam quos ipsa quibusdam nulla laboriosam ducimus itaque ex eos esse voluptas at rem velit, praesentium reprehenderit? Architecto!",
+              "placement": "top"
             },
-            "children": "Button"
+            "children": "Top "
           },
           {
-            "type": "Button",
+            "type": "Modal",
             "props": {
-              "size": "sm",
-              "radius": "sm",
-              "color": "secondary"
+              "modalHeader": "Example Header",
+              "modalBody": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque eos voluptatibus ullam, cupiditate vitae voluptates quas voluptatum repudiandae corrupti neque quam assumenda sint facilis nihil voluptatem voluptate hic non nemo nostrum earum! Magnam quos ipsa quibusdam nulla laboriosam ducimus itaque ex eos esse voluptas at rem velit, praesentium reprehenderit? Architecto!",
+              "placement": "bottom"
             },
-            "children": "Button"
+            "children": "Bottom "
           },
           {
-            "type": "Button",
+            "type": "Modal",
             "props": {
-              "size": "sm",
-              "radius": "md",
-              "color": "secondary"
+              "modalHeader": "Example Header",
+              "modalBody": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque eos voluptatibus ullam, cupiditate vitae voluptates quas voluptatum repudiandae corrupti neque quam assumenda sint facilis nihil voluptatem voluptate hic non nemo nostrum earum! Magnam quos ipsa quibusdam nulla laboriosam ducimus itaque ex eos esse voluptas at rem velit, praesentium reprehenderit? Architecto!",
+              "placement": "center"
             },
-            "children": "Button"
-          },
-          {
-            "type": "Button",
-            "props": {
-              "size": "sm",
-              "radius": "lg",
-              "color": "secondary"
-            },
-            "children": "Button"
-          },
-          {
-            "type": "Button",
-            "props": {
-              "size": "sm",
-              "radius": "full",
-              "color": "secondary"
-            },
-            "children": "Button"
+            "children": "Center"
           }
         ],
-        "code": "import { Button } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Button radius=\"none\">Button</Button>\n      <Button radius=\"sm\">Button</Button>\n      <Button radius=\"md\">Button</Button>\n      <Button radius=\"lg\">Button</Button>\n      <Button radius=\"full\">Button</Button>\n    </>\n  );\n}"
+        "code": "import { Modal } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Modal placement=\"top\">Top Placement</Modal>\n      <Modal placement=\"bottom\">Bottom Placement</Modal>\n      <Modal placement=\"center\">Center Placement</Modal>\n      <Modal placement=\"top-center\">Top Center Placement</Modal>\n      <Modal placement=\"bottom-center\">Bottom Center Placement</Modal>\n    </>\n  );\n}"
       },
       {
-        "title": "Colors",
+        "title": "Scroll Options",
         "components": [
           {
-            "type": "Button",
+            "type": "Modal",
             "props": {
-              "size": "sm",
-              "radius": "md",
-              "color": "default"
+              "modalHeader": "Example Header",
+              "modalBody": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque eos voluptatibus ullam, cupiditate vitae voluptates quas voluptatum repudiandae corrupti neque quam assumenda sint facilis nihil voluptatem voluptate hic non nemo nostrum earum! Magnam quos ipsa quibusdam nulla laboriosam ducimus itaque ex eos esse voluptas at rem velit, praesentium reprehenderit? Architecto!Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque eos voluptatibus ullam, cupiditate vitae voluptates quas voluptatum repudiandae corrupti neque quam assumenda sint facilis nihil voluptatem voluptate hic non nemo nostrum earum! Magnam quos ipsa quibusdam nulla laboriosam ducimus itaque ex eos esse voluptas at rem velit, praesentium reprehenderit? Architecto!Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque eos voluptatibus ullam, cupiditate vitae voluptates quas voluptatum repudiandae corrupti neque quam assumenda sint facilis nihil voluptatem voluptate hic non nemo nostrum earum! Magnam quos ipsa quibusdam nulla laboriosam ducimus itaque ex eos esse voluptas at rem velit, praesentium reprehenderit? Architecto!Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque eos voluptatibus ullam, cupiditate vitae voluptates quas voluptatum repudiandae corrupti neque quam assumenda sint facilis nihil voluptatem voluptate hic non nemo nostrum earum! Magnam quos ipsa quibusdam nulla laboriosam ducimus itaque ex eos esse voluptas at rem velit, praesentium reprehenderit? Architecto!Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque eos voluptatibus ullam, cupiditate vitae voluptates quas voluptatum repudiandae corrupti neque quam assumenda sint facilis nihil voluptatem voluptate hic non nemo nostrum earum! Magnam quos ipsa quibusdam nulla laboriosam ducimus itaque ex eos esse voluptas at rem velit, praesentium reprehenderit? Architecto!",
+              "size": "sm"
             },
-            "children": "Button"
-          },
-          {
-            "type": "Button",
-            "props": {
-              "size": "sm",
-              "radius": "md",
-              "color": "primary"
-            },
-            "children": "Button"
-          },
-          {
-            "type": "Button",
-            "props": {
-              "size": "sm",
-              "radius": "md",
-              "color": "secondary"
-            },
-            "children": "Button"
-          },
-          {
-            "type": "Button",
-            "props": {
-              "size": "sm",
-              "radius": "md",
-              "color": "success"
-            },
-            "children": "Button"
-          },
-          {
-            "type": "Button",
-            "props": {
-              "size": "sm",
-              "radius": "md",
-              "color": "warning"
-            },
-            "children": "Button"
-          },
-          {
-            "type": "Button",
-            "props": {
-              "size": "sm",
-              "radius": "md",
-              "color": "danger"
-            },
-            "children": "Button"
+            "children": "Scroll"
           }
         ],
-        "code": "import { Button } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Button color=\"default\">Button</Button>\n      <Button color=\"primary\">Button</Button>\n      <Button color=\"secondary\">Button</Button>\n      <Button color=\"success\">Button</Button>\n      <Button color=\"warning\">Button</Button>\n      <Button color=\"danger\">Button</Button>\n    </>\n  );\n}"
+        "code": "import { Modal } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Modal scroll=\"inside\">Inside Scroll</Modal>\n      <Modal scroll=\"outside\">Outside Scroll</Modal>\n    </>\n  );\n}"
       },
       {
-        "title": "Borders",
+        "title": "Backdrop Options",
         "components": [
           {
-            "type": "Button",
+            "type": "Modal",
             "props": {
-              "size": "sm",
-              "radius": "md",
-              "color": "secondary"
+              "modalHeader": "Example Header",
+              "modalBody": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque eos voluptatibus ullam, cupiditate vitae voluptates quas voluptatum repudiandae corrupti neque quam assumenda sint facilis nihil voluptatem voluptate hic non nemo nostrum earum! Magnam quos ipsa quibusdam nulla laboriosam ducimus itaque ex eos esse voluptas at rem velit, praesentium reprehenderit? Architecto!",
+              "backdrop": "opaque"
             },
-            "children": "Button"
+            "children": "Opaque"
           },
           {
-            "type": "Button",
+            "type": "Modal",
             "props": {
-              "size": "sm",
-              "radius": "md",
-              "color": "secondary"
+              "modalHeader": "Example Header",
+              "modalBody": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque eos voluptatibus ullam, cupiditate vitae voluptates quas voluptatum repudiandae corrupti neque quam assumenda sint facilis nihil voluptatem voluptate hic non nemo nostrum earum! Magnam quos ipsa quibusdam nulla laboriosam ducimus itaque ex eos esse voluptas at rem velit, praesentium reprehenderit? Architecto!",
+              "backdrop": "blur"
             },
-            "children": "Button"
+            "children": "Blur"
           },
           {
-            "type": "Button",
+            "type": "Modal",
             "props": {
-              "size": "sm",
-              "radius": "md",
-              "color": "secondary"
+              "modalHeader": "Example Header",
+              "modalBody": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque eos voluptatibus ullam, cupiditate vitae voluptates quas voluptatum repudiandae corrupti neque quam assumenda sint facilis nihil voluptatem voluptate hic non nemo nostrum earum! Magnam quos ipsa quibusdam nulla laboriosam ducimus itaque ex eos esse voluptas at rem velit, praesentium reprehenderit? Architecto!",
+              "backdrop": "transparent"
             },
-            "children": "Button"
-          },
-          {
-            "type": "Button",
-            "props": {
-              "size": "sm",
-              "radius": "md",
-              "color": "secondary"
-            },
-            "children": "Button"
-          },
-          {
-            "type": "Button",
-            "props": {
-              "size": "sm",
-              "radius": "md",
-              "color": "secondary"
-            },
-            "children": "Button"
-          },
-          {
-            "type": "Button",
-            "props": {
-              "size": "sm",
-              "radius": "md",
-              "color": "secondary"
-            },
-            "children": "Button"
-          },
-          {
-            "type": "Button",
-            "props": {
-              "size": "sm",
-              "radius": "md",
-              "color": "secondary"
-            },
-            "children": "Button"
+            "children": "Transparent"
           }
         ],
-        "code": "import { Button } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Button border=\"none\">No Border</Button>\n      <Button border=\"xs\">Extra Small Border</Button>\n      <Button border=\"sm\">Small Border</Button>\n      <Button border=\"md\">Medium Border</Button>\n      <Button border=\"lg\">Large Border</Button>\n    </>\n  );\n}"
+        "code": "import { Modal } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Modal backdrop=\"opaque\">Opaque Backdrop</Modal>\n      <Modal backdrop=\"blur\">Blur Backdrop</Modal>\n      <Modal backdrop=\"transparent\">Transparent Backdrop</Modal>\n    </>\n  );\n}"
       }
     ],
+
     "propsTable": {
-      "title": " Button Props",
-      "description": "List of all props supported by the Button component.",
+      "title": "Modal Props",
+      "description": "List of all props supported by the Modal component.",
       "headers": ["Prop Name", "Type", "Description", "Default Value"],
       "rows": [
         {
           "propName": "children",
-          "type": "node",
-          "description": "Content to be displayed inside the button.",
+          "type": "string",
+          "description": "Content to be displayed inside the modal body.",
           "defaultValue": "null"
         },
         {
-          "propName": "aria",
+          "propName": "modalHeader",
           "type": "string",
-          "description": "Aria label for accessibility. Provides additional context for screen readers.",
-          "defaultValue": "'button'"
+          "description": "Content to be displayed in the modal header section.",
+          "defaultValue": "null"
         },
         {
-          "propName": "color",
+          "propName": "modalBody",
           "type": "string",
-          "description": "Defines the color of the button. Options are: 'primary', 'secondary', 'success', 'warning', 'danger'.",
-          "defaultValue": "'primary'"
-        },
-        {
-          "propName": "onClick",
-          "type": "function",
-          "description": "Callback function triggered when the button is clicked.",
-          "defaultValue": "undefined"
-        },
-        {
-          "propName": "style",
-          "type": "object",
-          "description": "Inline styles to be applied to the button.",
-          "defaultValue": "undefined"
+          "description": "Content to be displayed in the modal body, as an alternative to 'children'.",
+          "defaultValue": "null"
         },
         {
           "propName": "size",
           "type": "string",
-          "description": "Defines the size of the button. Options are: 'sm', 'md', 'lg'.",
+          "description": "Defines the size of the modal. Options are: 'sm', 'md', 'lg'.",
           "defaultValue": "'md'"
         },
         {
           "propName": "radius",
           "type": "string",
-          "description": "Defines the border-radius of the button. Options are: 'none', 'sm', 'md', 'lg', 'full'.",
-          "defaultValue": "'none'"
+          "description": "Defines the border-radius of the modal. Options are: 'none', 'sm', 'md', 'lg', 'full'.",
+          "defaultValue": "'md'"
         },
         {
-          "propName": "border",
+          "propName": "placement",
           "type": "string",
-          "description": "Defines the border width of the button. Options are: 'none', 'xs', 'sm', 'md', 'lg', 'xl'.",
-          "defaultValue": "'none'"
+          "description": "Defines the placement of the modal on the screen. Options are: 'center', 'top', 'bottom'.",
+          "defaultValue": "'center'"
         },
         {
-          "propName": "className",
+          "propName": "backdrop",
           "type": "string",
-          "description": "Additional CSS class names to apply to the button.",
-          "defaultValue": "undefined"
+          "description": "Defines the backdrop style of the modal. Options are: 'transparent', 'dark'.",
+          "defaultValue": "'transparent'"
+        },
+        {
+          "propName": "color",
+          "type": "string",
+          "description": "Defines the color theme of the modal. Options are: 'primary', 'secondary', 'success', 'warning', 'danger'.",
+          "defaultValue": "'primary'"
+        },
+        {
+          "propName": "classNames",
+          "type": "string",
+          "description": "Additional CSS class names to apply to the modal.",
+          "defaultValue": "''"
         }
       ]
     },
     "eventsTable": {
       "title": "Events",
-      "description": "List of all events emitted by the Button component.",
+      "description": "List of all events emitted by the Modal component.",
       "headers": ["Event Name", "Description"],
       "rows": [
         {
-          "propName": "onClick",
-          "type": "Triggered when the button is clicked."
+          "propName": "onOpen",
+          "type": "Triggered when the modal is opened."
+        },
+        {
+          "propName": "onClose",
+          "type": "Triggered when the modal is closed."
         }
       ]
     },
     "accessibility": {
       "title": "Accessibility",
-      "description": "Accessibility considerations for the Button component.",
+      "description": "Accessibility considerations for the Modal component.",
       "ariaRoles": [
         {
-          "propName": "Button",
-          "description": "The Button component is rendered with the button role by default."
+          "propName": "Dialog",
+          "description": "The Modal component is rendered with the 'dialog' role to provide a container for the modal content."
         },
         {
-          "propName": "Aria-label",
-          "description": "If the button has only an icon and no text, you should add an aria-label for screen readers."
+          "propName": "Aria-modal",
+          "description": "The modal has an 'aria-modal' attribute set to 'true' to indicate it's a modal dialog."
+        },
+        {
+          "propName": "Backdrop Click",
+          "description": "The modal can be closed by clicking the backdrop, which should be announced to users if they need alternative options for closing."
+        },
+        {
+          "propName": "Keyboard Navigation",
+          "description": "Ensures keyboard focus is retained within the modal when open, and provides a close button accessible via keyboard navigation."
         }
       ]
     }
