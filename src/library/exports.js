@@ -7,8 +7,10 @@
 
 import Button from "../component_testing/Button/Button";
 import Input from "../component_testing/Input/Input";
+import Search from "../component_testing/Search/Search";
+import Accordion from "../component_testing/Accordion/Accordion";
 
 // import variables from lib styles
 // import all components from the json file, then export them all
 
-export { Button, Input };
+export { Button, Input, Search, Accordion };
