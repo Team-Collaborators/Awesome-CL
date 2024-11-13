@@ -25,41 +25,6 @@ const Playground = () => {
           Hello
         </Modal> */}
       </div>
-      <h4>Switch</h4>
-      <div
-        className="switch-container"
-        style={{ display: "flex", justifyContent: "space-around" }}
-      >
-        <Switch />
-        <Switch color="default-dark" />
-        <Switch color="primary" sliderColor="yellow" />
-        <Switch color="secondary" />
-        <Switch color="danger" />
-        <Switch color="success" />
-        <Switch color="warning" />
-      </div>
-      <br />
-      <div
-        className="switch-container"
-        style={{ display: "flex", justifyContent: "space-around" }}
-      >
-        <Switch size="xs" border="none" />
-        <Switch size="sm" border="none" />
-        <Switch size="md" border="none" />
-        <Switch size="lg" border="none" />
-        <Switch size="xl" border="none" />
-      </div>
-      <br />
-      <br />
-      <Switch color="primary" size="xl" />
-      <br />
-      <br />
-      <br />
-      <Switch
-        size="xl"
-        sliderColor="tomato"
-        style={{ border: "green solid 2px", backgroundColor: "pink" }}
-      />
     </div>
   );
 };
