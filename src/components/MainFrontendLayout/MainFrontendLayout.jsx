@@ -37,12 +37,11 @@ export function MainFrontendLayout({ data }) {
                 <ul>
                   {component.installation.map((elem) => (
                     <li key={elem.name}>
-                      <button onClick={() => setInstallation(elem.command)}>
-                        <img
-                          className={styles.imageSvg}
-                          src={elem.path}
-                          alt={elem.name}
-                        />
+                      <button
+                        className={styles.someIcon}
+                        onClick={() => setInstallation(elem.command)}
+                      >
+                        <img src={elem.path} alt={elem.name} />
                         <span>{elem.name}</span>
                       </button>
                     </li>
@@ -58,7 +57,7 @@ export function MainFrontendLayout({ data }) {
             <h2>Import</h2>
             {component.import && (
               <>
-                <p>{component.import.description}</p>
+                <p className={styles.importDescription}>{component.import.description}</p>
                 <RenderCode code={component.import.code} />
               </>
             )}
