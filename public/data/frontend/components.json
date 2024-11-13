@@ -588,12 +588,12 @@
       "headers": ["Event Name", "Description"],
       "rows": [
         {
-          "eventName": "onOpen",
-          "description": "Triggered when the modal is opened."
+          "propName": "onOpen",
+          "type": "Triggered when the modal is opened."
         },
         {
-          "eventName": "onClose",
-          "description": "Triggered when the modal is closed."
+          "propName": "onClose",
+          "type": "Triggered when the modal is closed."
         }
       ]
     },
