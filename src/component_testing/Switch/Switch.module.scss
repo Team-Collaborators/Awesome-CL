@@ -5,50 +5,24 @@
 
 // Base styles for the switch container
 .switch {
-  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  display: inline-block;
   cursor: pointer;
   transition: all 0.3s ease;
-  padding: 0;
-  width: 100%;
 }
 
-// Color variants
-.color-default-light {
-  background-color: colors.$default-light;
-  border: borders.$border-xs colors.$default-dark;
-
-  .slider {
-    background-color: colors.$default-dark;
-  }
-}
-
-.color-default-dark {
-  background-color: colors.$default-dark;
-  border: borders.$border-xs colors.$default-light;
-
-  .slider {
-    background-color: colors.$default-light;
-  }
-}
-
-.color-primary {
-  background-color: colors.$primary-dark;
-  border: borders.$border-xs colors.$primary-dark;
-
-  .slider {
-    background-color: colors.$primary-light;
-  }
-}
-
-.color-secondary {
-  background-color: colors.$secondary-base;
-  border: borders.$border-xs colors.$secondary-base;
-
-  .slider {
-    background-color: colors.$secondary-light;
-  }
+// Slider styles
+.slider {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  width: 50%;
+  height: 100%;
+  left: 2px;
 }
 
 // Size classes
@@ -58,6 +32,11 @@
   .slider {
     width: 0.6rem;
     height: 0.6rem;
+    left: 2px;
+
+    &.checked {
+      left: calc(100% - 0.6rem - 1px);
+    }
   }
 }
 
@@ -67,6 +46,11 @@
   .slider {
     width: 0.7rem;
     height: 0.7rem;
+    left: 2px;
+
+    &.checked {
+      left: calc(100% - 0.7rem - 1px);
+    }
   }
 }
 
@@ -76,6 +60,11 @@
   .slider {
     width: 0.8rem;
     height: 0.8rem;
+    left: 2px;
+
+    &.checked {
+      left: calc(100% - 0.8rem - 2px);
+    }
   }
 }
 
@@ -85,6 +74,11 @@
   .slider {
     width: 1rem;
     height: 1rem;
+    left: 2px;
+
+    &.checked {
+      left: calc(100% - 1rem - 2px);
+    }
   }
 }
 
@@ -94,6 +88,11 @@
   .slider {
     width: 1.2rem;
     height: 1.2rem;
+    left: 2px;
+
+    &.checked {
+      left: calc(100% - 1.2rem - 2px);
+    }
   }
 }
 
@@ -118,19 +117,89 @@
   border-radius: 50%;
 }
 
-// Slider styles
-.slider {
-  position: absolute;
-  top: 50%;
-  left: 2px;
-  transform: translateY(-50%);
-  border-radius: 50%;
-  transition: all 0.3s ease;
-  box-sizing: border-box;
-  width: 50%;
-  height: 100%;
+// Border variants
 
-  &.checked {
-    transform: translateX(100%) translateY(-50%);
+.border-none {
+  border: none;
+}
+
+.border-xs {
+  border: var(--border-xs);
+}
+.border-sm {
+  border: var(--border-sm);
+}
+.border-md {
+  border: var(--border-md);
+}
+
+.border-lg {
+  border: var(--border-lg);
+}
+.border-xl {
+  border: var(--border-xl);
+}
+
+// Color variants
+.color-default-light {
+  background-color: colors.$default-light;
+  border-color: colors.$default-dark;
+
+  .slider {
+    background-color: colors.$default-dark;
+  }
+}
+
+.color-default-dark {
+  background-color: colors.$default-dark;
+  border-color: colors.$default-light;
+
+  .slider {
+    background-color: colors.$default-light;
+  }
+}
+
+.color-primary {
+  background-color: colors.$primary-dark;
+  border-color: colors.$primary-light;
+
+  .slider {
+    background-color: colors.$primary-light;
+  }
+}
+
+.color-secondary {
+  background-color: colors.$secondary-dark;
+  border-color: colors.$secondary-light;
+
+  .slider {
+    background-color: colors.$secondary-light;
+  }
+}
+
+.color-success {
+  background-color: colors.$success-dark;
+  border-color: colors.$success-light;
+
+  .slider {
+    background-color: colors.$success-light;
+  }
+}
+
+.color-warning {
+  background-color: colors.$warning-dark;
+  border-color: colors.$warning-light;
+
+  .slider {
+    background-color: colors.$warning-light;
+  }
+}
+
+.color-danger {
+  background-color: colors.$danger-dark;
+  border-color: colors.$danger-light;
+
+  .slider {
+    background-color: colors.$danger-light;
   }
 }

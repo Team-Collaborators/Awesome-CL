@@ -8,9 +8,10 @@ const Switch = ({
   style,
   size = "md",
   radius = "lg",
-  border = "md",
+  border = "xs",
   checked = false,
   className = "",
+  sliderColor = "default-dark",
 }) => {
   // Combine CSS module class names with any global Tailwind classes passed as props
   const combinedClassNames = `
@@ -44,7 +45,10 @@ const Switch = ({
       style={style}
       className={finalClassNames}
     >
-      <div className={`${styles.slider} ${isChecked ? styles.checked : ""}`} />
+      <div
+        className={`${styles.slider} ${isChecked ? styles.checked : ""}`}
+        style={{ backgroundColor: sliderColor }}
+      />
     </div>
   );
 };
