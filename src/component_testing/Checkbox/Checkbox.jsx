@@ -6,9 +6,9 @@ const Checkbox = ({
   color = "default-light",
   onChange,
   style,
-  size = "md",
-  radius = "lg",
-  border = "sm",
+  size = "sm",
+  radius = "md",
+  border = "xs",
   checked = false,
   className = "",
 }) => {
