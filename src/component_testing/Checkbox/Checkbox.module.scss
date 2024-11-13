@@ -13,13 +13,12 @@
 
 .checkmark {
   position: absolute;
-  width: 80%;
-  height: 80%;
+  width: 95%;
+  height: 95%;
   display: block;
-  top: 50%; 
-  left: 50%; 
-  transform: translate(-50%, -50%); 
-  
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 // Size classes
@@ -48,7 +47,7 @@
   height: 3rem;
 }
 
-// Radius variants
+/* Radius classes*/
 .radius-none {
   border-radius: 0;
 }
@@ -75,26 +74,22 @@
 }
 .border-xs {
   border: var(--border-xs);
-  --checkmark-stroke: var(--border-xs);
 }
 .border-sm {
   border: var(--border-sm);
-  --checkmark-stroke: var(--border-sm);
 }
 .border-md {
   border: var(--border-md);
-  --checkmark-stroke: var(--border-md);
 }
 
 .border-lg {
   border: var(--border-lg);
-  --checkmark-stroke: var(--border-lg); 
 }
 .border-xl {
   border: var(--border-xl);
 }
 
-// Color variants
+/* Color variants */
 .color-default-light {
   background-color: colors.$default-light;
   border-color: colors.$default-dark;
