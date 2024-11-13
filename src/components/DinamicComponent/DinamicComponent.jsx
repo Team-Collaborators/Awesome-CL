@@ -2,12 +2,14 @@ import React from "react";
 
 import { Button, Input } from "AwesomeCL"; // Importa tus componentes
 import Modal from "../../component_testing/Modal/Modal";
+import Switch from "../../component_testing/Switch/Switch";
 
 const components = {
   //Object with all components
   Button,
   Input,
   Modal,
+  Switch,
 };
 
 export default function DynamicComponent({ type, props, children }) {

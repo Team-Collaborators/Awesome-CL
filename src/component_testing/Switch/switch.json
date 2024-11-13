@@ -1,0 +1,341 @@
+{
+  "title": "switch",
+  "path": "/frontend/components/switch",
+  "description": "A customizable switch component that toggles between two states.",
+  "installation": [
+    {
+      "name": "CLI",
+      "command": "cli-command-to-install",
+      "path": "/icons/cube-solid.svg"
+    },
+    {
+      "name": "npm",
+      "command": "npm install your-library",
+      "path": "/icons/npm-brands-solid.svg"
+    },
+    {
+      "name": "yarn",
+      "command": "yarn add your-library",
+      "path": "/icons/yarn-brands-solid.svg"
+    },
+    {
+      "name": "pnpm",
+      "command": "pnpm add your-library",
+      "path": "/icons/cubes-solid.svg"
+    },
+    {
+      "name": "bun",
+      "command": "bun add your-library",
+      "path": "/icons/lemon-regular.svg"
+    }
+  ],
+  "import": {
+    "code": "import { Switch } from 'AwesomeCL';",
+    "description": "This code shows how to import the Switch component from the library."
+  },
+  "examples": [
+    {
+      "title": "Default",
+      "components": [
+        {
+          "type": "Switch",
+          "props": {
+            "size": "lg"
+          },
+          "children": null
+        }
+      ],
+      "code": "import { Switch } from 'AwesomeCL';\n\nfunction App() {\n  return <Switch />;\n}"
+    },
+    {
+      "title": "Sizes",
+      "components": [
+        {
+          "type": "Switch",
+          "props": {
+            "size": "sm",
+            "radius": "md",
+            "color": "default-light"
+          }
+        },
+        {
+          "type": "Switch",
+          "props": {
+            "size": "md",
+            "radius": "md",
+            "color": "default-light"
+          }
+        },
+        {
+          "type": "Switch",
+          "props": {
+            "size": "lg",
+            "radius": "lg",
+            "color": "default-light"
+          }
+        }
+      ],
+      "code": "import { Switch } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n     <Switch size=\"xs\"/>\n     <Switch size=\"sm\"/>\n     <Switch size=\"md\"/>\n     <Switch size=\"lg\"/>\n     <Switch size=\"xl\"/> \n    </>\n   );\n}"
+    },
+    {
+      "title": "Radius",
+      "components": [
+        {
+          "type": "Switch",
+          "props": {
+            "size": "lg",
+            "radius": "none",
+            "color": "default-light"
+          }
+        },
+        {
+          "type": "Switch",
+          "props": {
+            "size": "lg",
+            "radius": "sm",
+            "color": "default-light"
+          }
+        },
+        {
+          "type": "Switch",
+          "props": {
+            "size": "lg",
+            "radius": "md",
+            "color": "default-light"
+          }
+        },
+        {
+          "type": "Switch",
+          "props": {
+            "size": "lg",
+            "radius": "lg",
+            "color": "default-light"
+          }
+        },
+        {
+          "type": "Switch",
+          "props": {
+            "size": "lg",
+            "radius": "full",
+            "color": "default-light"
+          }
+        }
+      ],
+      "code": "import { Switch } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Switch radius=\"none\"/>\n      <Switch radius=\"sm\"/>\n      <Switch radius=\"md\"/>\n      <Switch radius=\"lg\"/>\n      <Switch radius=\"full\"/>\n    </>\n  );\n}"
+    },
+    {
+      "title": "Colors",
+      "components": [
+        {
+          "type": "Switch",
+          "props": {
+            "size": "lg",
+            "radius": "lg",
+            "color": "default-light"
+          }
+        },
+        {
+          "type": "Switch",
+          "props": {
+            "size": "lg",
+            "radius": "lg",
+            "color": "default-dark"
+          }
+        },
+        {
+          "type": "Switch",
+          "props": {
+            "size": "lg",
+            "radius": "lg",
+            "color": "primary"
+          }
+        },
+        {
+          "type": "Switch",
+          "props": {
+            "size": "lg",
+            "radius": "lg",
+            "color": "secondary"
+          }
+        },
+        {
+          "type": "Switch",
+          "props": {
+            "size": "lg",
+            "radius": "lg",
+            "color": "success"
+          }
+        },
+        {
+          "type": "Switch",
+          "props": {
+            "size": "lg",
+            "radius": "lg",
+            "color": "warning"
+          }
+        },
+        {
+          "type": "Switch",
+          "props": {
+            "size": "lg",
+            "radius": "lg",
+            "color": "danger"
+          }
+        }
+      ],
+      "code": "import { Switch } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Button color=\"default-light\"/>\n      <Button color=\"default-dark\"/>\n      <Button color=\"primary\"/>\n      <Button color=\"secondary\"/>\n      <Button color=\"success\"/>\n      <Button color=\"warning\"/>\n      <Button color=\"danger\"/>\n    </>\n  );\n}"
+    },
+    {
+      "title": "Borders",
+      "components": [
+        {
+          "type": "Switch",
+          "props": {
+            "size": "lg",
+            "radius": "lg",
+            "color": "default-dark",
+            "border": "none"
+          }
+        },
+        {
+          "type": "Switch",
+          "props": {
+            "size": "lg",
+            "radius": "lg",
+            "color": "default-light",
+            "border": "xs"
+          }
+        },
+        {
+          "type": "Switch",
+          "props": {
+            "size": "lg",
+            "radius": "lg",
+            "color": "default-light",
+            "border": "sm"
+          }
+        },
+        {
+          "type": "Switch",
+          "props": {
+            "size": "lg",
+            "radius": "lg",
+            "color": "default-light",
+            "border": "md"
+          }
+        }
+      ],
+      "code": "import { Switch } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Switch border=\"none\"/>\n      <Switch border=\"xs\"/>\n      <Switch border=\"sm\"/>\n      <Switch border=\"md\"/>\n    </>\n  );\n}"
+    },
+
+    {
+      "title": "Switch with onChange Event",
+      "components": [
+        {
+          "type": "Switch",
+          "props": {
+            "onChange": "handleSwitchChange",
+            "checked": true
+          }
+        }
+      ],
+      "code": "import { Switch } from 'AwesomeCL';\n\nfunction App() {\n  const handleSwitchChange = (isChecked) => {\n    console.log('Switch is now:', isChecked);\n  };\n  return <Switch onChange={handleSwitchChange} checked={true} />;\n}"
+    }
+  ],
+  "propsTable": {
+    "title": "Switch Props",
+    "description": "List of all props supported by the Switch component.",
+    "headers": ["Prop Name", "Type", "Description", "Default Value"],
+    "rows": [
+      {
+        "propName": "aria",
+        "type": "string",
+        "description": "Aria label for accessibility. Provides additional context for screen readers.",
+        "defaultValue": "\"switch\""
+      },
+      {
+        "propName": "color",
+        "type": "string",
+        "description": "Defines the color of the switch. Options are: 'default-light', 'default-dark', 'primary', 'secondary', 'success', 'warning', 'danger'.",
+        "defaultValue": "\"default-light\""
+      },
+      {
+        "propName": "onChange",
+        "type": "function",
+        "description": "Callback function triggered when the switch is toggled.",
+        "defaultValue": "undefined"
+      },
+      {
+        "propName": "style",
+        "type": "object",
+        "description": "Inline styles to be applied to the switch.",
+        "defaultValue": "undefined"
+      },
+      {
+        "propName": "size",
+        "type": "string",
+        "description": "Defines the size of the switch. Options are: 'xs', 'sm', 'md', 'lg', 'xl'.",
+        "defaultValue": "\"md\""
+      },
+      {
+        "propName": "radius",
+        "type": "string",
+        "description": "Defines the border-radius of the switch. Options are: 'none', 'sm', 'md', 'lg', 'full'.",
+        "defaultValue": "\"lg\""
+      },
+      {
+        "propName": "border",
+        "type": "string",
+        "description": "Defines the border width of the switch. Options are: 'none', 'xs', 'sm', 'md', 'lg', 'xl'.",
+        "defaultValue": "\"xs\""
+      },
+      {
+        "propName": "checked",
+        "type": "boolean",
+        "description": "Determines if the switch is initially checked.",
+        "defaultValue": "false"
+      },
+      {
+        "propName": "className",
+        "type": "string",
+        "description": "Additional CSS class names to apply to the switch.",
+        "defaultValue": "\"\""
+      },
+      {
+        "propName": "sliderColor",
+        "type": "string",
+        "description": "Optional color of the slider.",
+        "defaultValue": "\"default-dark\""
+      }
+    ]
+  },
+  "eventsTable": {
+    "title": "Events",
+    "description": "List of all events emitted by the Switch component.",
+    "headers": ["Event Name", "Description"],
+    "rows": [
+      {
+        "eventName": "onChange",
+        "description": "Triggered when the switch is toggled, passing the new checked state."
+      }
+    ]
+  },
+  "accessibility": {
+    "title": "Accessibility",
+    "description": "Accessibility considerations for the Switch component.",
+    "ariaRoles": [
+      {
+        "propName": "Switch",
+        "description": "The Switch component uses role='switch' to signify toggle functionality."
+      },
+      {
+        "propName": "aria-checked",
+        "description": "The aria-checked attribute is used to indicate the current state of the switch (true or false)."
+      },
+      {
+        "propName": "aria-label",
+        "description": "The aria label (default is 'switch') should be customized if additional context is needed for screen readers."
+      }
+    ]
+  }
+}

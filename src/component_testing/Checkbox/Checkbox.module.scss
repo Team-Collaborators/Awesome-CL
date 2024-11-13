@@ -2,6 +2,31 @@
 @use "../lib-styles/colors.scss";
 @use "../lib-styles/paddings.scss";
 @use "../lib-styles/radius.scss";
+@use "../lib-styles/component-sizes.scss";
+
+.container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.label {
+  font-size: var(--font-size-sm);
+  margin-left: 0.5rem;
+}
+
+// Label positioning modifiers
+.label-left {
+  flex-direction: row-reverse;
+  .label {
+    margin-left: 0; // Reset default spacing
+    margin-right: 0.5rem; // Spacing for label on the left
+  }
+}
+
+.label-right {
+  flex-direction: row;
+}
 
 .checkbox {
   position: relative;
@@ -22,50 +47,40 @@
 }
 
 // Size classes
-.size-xs {
-  width: 1.5rem;
-  height: 1.5rem;
-}
-
 .size-sm {
-  width: 1.75rem;
-  height: 1.75rem;
+  width: var(--checkbox-size-sm);
+  height: var(--checkbox-size-sm);
 }
 
 .size-md {
-  width: 2rem;
-  height: 2rem;
+  width: var(--checkbox-size-md);
+  height: var(--checkbox-size-md);
 }
 
 .size-lg {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.size-xl {
-  width: 3rem;
-  height: 3rem;
+  width: var(--checkbox-size-lg);
+  height: var(--checkbox-size-lg);
 }
 
 /* Radius classes*/
 .radius-none {
-  border-radius: 0;
+  border-radius: var(--border-radius-none);
 }
 
 .radius-sm {
-  border-radius: 4px;
+  border-radius: var(--border-radius-sm);
 }
 
 .radius-md {
-  border-radius: 8px;
+  border-radius: var(--border-radius-md);
 }
 
 .radius-lg {
-  border-radius: 12px;
+  border-radius: var(--border-radius-lg);
 }
 
 .radius-full {
-  border-radius: 50%;
+  border-radius: var(--border-radius-full);
 }
 
 /* border-classes */
@@ -81,7 +96,6 @@
 .border-md {
   border: var(--border-md);
 }
-
 .border-lg {
   border: var(--border-lg);
 }
