@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 import { RenderCode } from "../RenderCode/RenderCode";
+import styles from "./MainBackendLayout.module.scss";
 
 //This component is rendering the controllers but could also be used on
 //other pages. !! The Json have to be the same as the controller.json
@@ -20,15 +21,17 @@ export function MainBackendLayout({ data }) {
   }, [name, data]);
   if (component) {
     return (
-      <div>
-        <h2>{component?.title}</h2>
-        <p>{component?.description}</p>
+      <div className={styles.container}>
+        <h2 className={styles.title}>{component?.title}</h2>{" "}
+        <p className={styles.description}>{component?.description}</p>{" "}
         {component?.controllers?.length > 0 ? (
           component.controllers.map((controller) => (
-            <div key={controller.title}>
-              <h2>{controller.title}</h2>
-              <p>{controller.description}</p>
-              <RenderCode code={controller.code} />
+            <div key={controller.title} className={styles.controller}>
+              <h2 className={styles.controllerTitle}>{controller.title}</h2>
+              <p className={styles.controllerDescription}>
+                {controller.description}
+              </p>
+              <RenderCode code={controller.code} />{" "}
             </div>
           ))
         ) : (
