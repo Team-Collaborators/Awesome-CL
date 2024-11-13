@@ -24,19 +24,6 @@ const Playground = () => {
         {/* <Modal modalHeader={"Modal header"} modalBody={"Body"}>
           Hello
         </Modal> */}
-
-        <div style={{ display: "flex", justifyContent: "space-around" }}>
-<Checkbox color="default-dark" border="xs"/>
-<Checkbox color="primary" border="sm"/>
-<Checkbox color="secondary" border="md"/>
-<Checkbox color="danger" border="lg"/>
-<Checkbox style={{backgroundColor: "pink", border: "yellow 3px dotted", color: "yellow"}} />
-<Checkbox color="warning"/>
-<Checkbox/>
-<Checkbox/>
-
-
-        </div>
       </div>
     </div>
   );
