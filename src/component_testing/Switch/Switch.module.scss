@@ -3,8 +3,23 @@
 @use "../lib-styles/paddings.scss";
 @use "../lib-styles/radius.scss";
 @use "../lib-styles/component-sizes.scss";
+@use "../lib-styles/font-sizes.scss";
 
 // Base styles for the switch container
+.switchContainer {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 6px;
+}
+
+// Label styling
+.switchLabel {
+  font-size: var(--font-size-sm);
+  color: inherit;
+  user-select: none;
+}
+
 .switch {
   display: flex;
   justify-content: center;
@@ -27,7 +42,6 @@
 }
 
 // Size classes
-
 .size-sm {
   width: var(--switch-track-width-sm);
   height: var(--switch-track-height-sm);
@@ -96,13 +110,13 @@
 .border-none {
   border: none;
 }
-.border-xs {
+.border-sm {
   border: var(--border-xs);
 }
-.border-sm {
+.border-md {
   border: var(--border-sm);
 }
-.border-md {
+.border-lg {
   border: var(--border-md);
 }
 
