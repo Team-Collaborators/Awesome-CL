@@ -6,13 +6,14 @@ const Checkbox = ({
   color = "default-light",
   onChange,
   style,
-  size = "sm",
+  size = "md",
   radius = "sm",
-  border = "xs",
+  border = "sm",
   checked = false,
   className = "",
   checkmarkColor = "currentColor",
-  label = "",
+  children,
+  labelPosition = "right",
 }) => {
   // Combine CSS module class names with any global Tailwind classes passed as props
   const combinedClassNames = `
@@ -40,15 +41,15 @@ const Checkbox = ({
   };
 
   return (
-    <div className={styles.container}>
-      <div
-        role="checkbox"
-        aria-checked={isChecked}
-        aria-label={aria}
-        onClick={handleToggle}
-        style={style}
-        className={finalClassNames}
-      >
+    <div
+      className={`${styles.container} ${styles[`label-${labelPosition}`]}`}
+      style={style}
+      onClick={handleToggle}
+      role="checkbox"
+      aria-checked={isChecked}
+      aria-label={aria}
+    >
+      <div className={finalClassNames}>
         {isChecked && (
           <svg
             viewBox="0 0 24 24"
@@ -60,7 +61,7 @@ const Checkbox = ({
           </svg>
         )}
       </div>
-      {label && <span className={styles.label}>{label}</span>}
+      {children && <span className={styles.label}>{children}</span>}
     </div>
   );
 };
