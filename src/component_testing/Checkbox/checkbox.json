@@ -1,0 +1,351 @@
+{
+  "title": "checkbox",
+  "path": "/frontend/components/checkbox",
+  "description": "A versatile checkbox component that supports various styles, sizes, and allows for flexible positioning of the label.",
+  "installation": [
+    {
+      "name": "CLI",
+      "command": "cli-command-to-install",
+      "path": "/icons/cube-solid.svg"
+    },
+    {
+      "name": "npm",
+      "command": "npm install your-library",
+      "path": "/icons/npm-brands-solid.svg"
+    },
+    {
+      "name": "yarn",
+      "command": "yarn add your-library",
+      "path": "/icons/yarn-brands-solid.svg"
+    },
+    {
+      "name": "pnpm",
+      "command": "pnpm add your-library",
+      "path": "/icons/cubes-solid.svg"
+    },
+    {
+      "name": "bun",
+      "command": "bun add your-library",
+      "path": "/icons/lemon-regular.svg"
+    }
+  ],
+  "import": {
+    "code": "import { Checkbox } from 'AwesomeCL';",
+    "description": "This code shows how to import the Checkbox component from the library."
+  },
+  "examples": [
+    {
+      "title": "Default",
+      "components": [
+        {
+          "type": "Checkbox",
+          "props": {
+            "checked": true,
+            "size": "md"
+          },
+          "children": "My Label"
+        }
+      ],
+      "code": "import { Checkbox } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Checkbox>\n      My Label\n    </Checkbox>\n  );\n}"
+    },
+    {
+      "title": "Label Position",
+      "components": [
+        {
+          "type": "Checkbox",
+          "props": {
+            "labelPosition": "right"
+          },
+          "children": "Right Label"
+        },
+        {
+          "type": "Checkbox",
+          "props": {
+            "labelPosition": "left"
+          },
+          "children": "Left Label"
+        },
+        {
+          "type": "Checkbox",
+          "props": {
+            "labelPosition": "top"
+          },
+          "children": "Top Label"
+        },
+
+        {
+          "type": "Checkbox",
+          "props": {
+            "labelPosition": "bottom"
+          },
+          "children": "Bottom Label"
+        }
+      ],
+      "code": "import { Checkbox } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Checkbox labelPosition=\"right\">Right</Checkbox>\n      <Checkbox labelPosition=\"left\">Left</Checkbox>\n      <Checkbox labelPosition=\"top\">Top</Checkbox>\n      <Checkbox labelPosition=\"bottom\">Bottom</Checkbox>\n    </>\n  );\n}"
+    },
+    {
+      "title": "Checked State",
+      "components": [
+        {
+          "type": "Checkbox",
+          "props": {
+            "checked": true
+          },
+          "children": "Checked"
+        }
+      ],
+      "code": "import { Checkbox } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Checkbox checked={true}>\n      Checked\n    </Checkbox>\n  );\n}"
+    },
+    {
+      "title": "Sizes",
+      "components": [
+        {
+          "type": "Checkbox",
+          "props": {
+            "size": "sm"
+          },
+          "children": "Small"
+        },
+        {
+          "type": "Checkbox",
+          "props": {
+            "size": "md"
+          },
+          "children": "Medium"
+        },
+        {
+          "type": "Checkbox",
+          "props": {
+            "size": "lg"
+          },
+          "children": "Large"
+        }
+      ],
+      "code": "import { Checkbox } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Checkbox size=\"sm\">Small</Checkbox>\n      <Checkbox size=\"md\">Medium</Checkbox>\n      <Checkbox size=\"lg\">Large</Checkbox>\n    </>\n  );\n}"
+    },
+    {
+      "title": "Radius",
+      "components": [
+        {
+          "type": "Checkbox",
+          "props": {
+            "size": "lg",
+            "radius": "none",
+            "color": "default-light"
+          },
+          "children": "None"
+        },
+        {
+          "type": "Checkbox",
+          "props": {
+            "size": "lg",
+            "radius": "sm",
+            "color": "default-light"
+          },
+          "children": "Small"
+        },
+        {
+          "type": "Checkbox",
+          "props": {
+            "size": "lg",
+            "radius": "md",
+            "color": "default-light"
+          },
+          "children": "Medium"
+        },
+        {
+          "type": "Checkbox",
+          "props": {
+            "size": "lg",
+            "radius": "full",
+            "color": "default-light"
+          },
+          "children": "Full"
+        }
+      ],
+      "code": "import { Switch } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Checkbox radius=\"none\">None</Checkbox>\n      <Checkbox radius=\"sm\">Small</Checkbox>\n      <Checkbox radius=\"md\">Medium</Checkbox>\n      <Checkbox radius=\"full\">Full</Checkbox>\n    </>\n  );\n}"
+    },
+    {
+      "title": "Color Variants",
+      "components": [
+        {
+          "type": "Checkbox",
+          "props": {
+            "color": "default-light"
+          },
+          "children": "Default Light"
+        },
+        {
+          "type": "Checkbox",
+          "props": {
+            "color": "default-dark"
+          },
+          "children": "Default Dark"
+        },
+        {
+          "type": "Checkbox",
+          "props": {
+            "color": "primary"
+          },
+          "children": "Primary"
+        },
+        {
+          "type": "Checkbox",
+          "props": {
+            "color": "secondary"
+          },
+          "children": "Secondary"
+        },
+        {
+          "type": "Checkbox",
+          "props": {
+            "color": "success"
+          },
+          "children": "Success"
+        },
+        {
+          "type": "Checkbox",
+          "props": {
+            "color": "warning"
+          },
+          "children": "Warning"
+        },
+        {
+          "type": "Checkbox",
+          "props": {
+            "color": "danger"
+          },
+          "children": "Danger"
+        }
+      ],
+      "code": "import { Checkbox } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Checkbox color=\"default-light\">Default Light</Checkbox>\n      <Checkbox color=\"default-dark\">Default Dark</Checkbox>\n      <Checkbox color=\"primary\">Primary</Checkbox>\n      <Checkbox color=\"secondary\">Secondary</Checkbox>\n      <Checkbox color=\"success\">Success</Checkbox>\n      <Checkbox color=\"warning\">Warning</Checkbox>\n      <Checkbox color=\"danger\">Danger</Checkbox>\n    </>\n  );\n}"
+    },
+    {
+      "title": "Border Variants",
+      "components": [
+        {
+          "type": "Checkbox",
+          "props": {
+            "border": "none",
+            "color": "default-dark"
+          },
+          "children": "No Border"
+        },
+        {
+          "type": "Checkbox",
+          "props": {
+            "border": "sm"
+          },
+          "children": "Small Border"
+        },
+        {
+          "type": "Checkbox",
+          "props": {
+            "border": "md"
+          },
+          "children": "Medium Border"
+        },
+        {
+          "type": "Checkbox",
+          "props": {
+            "border": "lg"
+          },
+          "children": "Large Border"
+        }
+      ],
+      "code": "import { Checkbox } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Checkbox border=\"none\">No Border</Checkbox>\n      <Checkbox border=\"sm\">Small Border</Checkbox>\n      <Checkbox border=\"md\">Medium Border</Checkbox>\n      <Checkbox border=\"lg\">Large Border</Checkbox>\n    </>\n  );\n}"
+    }
+  ],
+  "propsTable": {
+    "title": "Checkbox Props",
+    "description": "List of all props supported by the Checkbox component.",
+    "headers": ["Prop Name", "Type", "Description", "Default Value"],
+    "rows": [
+      {
+        "propName": "children",
+        "type": "node",
+        "description": "Content to be displayed next to the checkbox.",
+        "defaultValue": "null"
+      },
+      {
+        "propName": "aria",
+        "type": "string",
+        "description": "Aria label for accessibility. Provides additional context for screen readers.",
+        "defaultValue": "'checkbox'"
+      },
+      {
+        "propName": "color",
+        "type": "string",
+        "description": "Defines the color of the checkbox. Options are: 'default-light', 'default-dark', 'primary', 'secondary', 'success', 'warning', 'danger'.",
+        "defaultValue": "'default-light'"
+      },
+      {
+        "propName": "onChange",
+        "type": "function",
+        "description": "Callback function triggered when the checkbox is clicked",
+        "defaultValue": "-"
+      },
+      {
+        "propName": "style",
+        "type": "object",
+        "description": "Inline styles to be applied to the checkbox container.",
+        "defaultValue": "-"
+      },
+      {
+        "propName": "size",
+        "type": "string",
+        "description": "Defines the size of the checkbox. Options are: 'sm', 'md', 'lg'.",
+        "defaultValue": "'md'"
+      },
+      {
+        "propName": "radius",
+        "type": "string",
+        "description": "Defines the border-radius of the checkbox. Options are: 'none', 'sm', 'md', 'full'.",
+        "defaultValue": "'sm'"
+      },
+      {
+        "propName": "border",
+        "type": "string",
+        "description": "Defines the border width of the checkbox. Options are: 'sm', 'md', 'lg', 'none'.",
+        "defaultValue": "'sm'"
+      },
+      {
+        "propName": "className",
+        "type": "string",
+        "description": "Additional CSS class names to apply to the checkbox container.",
+        "defaultValue": "-"
+      },
+      {
+        "propName": "labelPosition",
+        "type": "string",
+        "description": "Defines the position of the label. Options are: 'left', 'right', 'top', 'bottom'.",
+        "defaultValue": "'right'"
+      }
+    ]
+  },
+  "eventsTable": {
+    "title": "Events",
+    "description": "List of all events emitted by the Checkbox component.",
+    "headers": ["Event Name", "Description"],
+    "rows": [
+      {
+        "propName": "onChange",
+        "type": "Triggered when the checkbox is clicked."
+      }
+    ]
+  },
+  "accessibility": {
+    "title": "Accessibility",
+    "description": "Accessibility considerations for the Checkbox component.",
+    "ariaRoles": [
+      {
+        "propName": "Checkbox",
+        "description": "The Checkbox component is rendered with the checkbox role by default."
+      },
+      {
+        "propName": "Aria-label",
+        "description": "If the checkbox has only an icon and no text, you should add an aria-label for screen readers."
+      }
+    ]
+  }
+}

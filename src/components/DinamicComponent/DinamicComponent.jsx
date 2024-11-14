@@ -5,6 +5,8 @@ import Modal from "../../component_testing/Modal/Modal";
 import Accordion from "../../component_testing/Accordion/Accordion";
 import AccordionItem from "../../component_testing/Accordion/AccordionItem";
 import Search from "../../component_testing/Search/Search";
+import Switch from "../../component_testing/Switch/Switch";
+import Checkbox from "../../component_testing/Checkbox/Checkbox";
 
 const components = {
   //Object with all components
@@ -14,6 +16,8 @@ const components = {
   Accordion,
   AccordionItem,
   Search,
+  Switch,
+  Checkbox,
 };
 
 export default function DynamicComponent({ type, props, children }) {

@@ -7,7 +7,6 @@ import Checkbox from "../../component_testing/Checkbox/Checkbox";
 import { DiReact } from "react-icons/di";
 import { FaReact } from "react-icons/fa";
 import { TbBackground } from "react-icons/tb";
-//import Checkbox from "../../component_testing/Checkbox/Checkbox";
 
 const Playground = () => {
   const [isContentVisible, setIsContentVisible] = useState(false);
@@ -24,6 +23,9 @@ const Playground = () => {
         {/* <Modal modalHeader={"Modal header"} modalBody={"Body"}>
           Hello
         </Modal> */}
+
+<Checkbox size="lg" radius="md" border="sm">Hello</Checkbox>
+
       </div>
     </div>
   );
