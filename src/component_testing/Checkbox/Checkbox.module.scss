@@ -9,24 +9,42 @@
   display: flex;
   align-items: center;
   cursor: pointer;
+  user-select: none;
 }
 
 .label {
   font-size: var(--font-size-sm);
   margin-left: 0.5rem;
+  user-select: none;
+  color: inherit;
 }
 
-// Label positioning modifiers
 .label-left {
   flex-direction: row-reverse;
   .label {
-    margin-left: 0; // Reset default spacing
-    margin-right: 0.5rem; // Spacing for label on the left
+    margin-left: 0;
+    margin-right: 0.5rem;
   }
 }
 
 .label-right {
   flex-direction: row;
+}
+
+.label-bottom {
+  flex-direction: column;
+  align-items: center;
+  .label {
+    margin-top: 0.5rem;
+  }
+}
+
+.label-top {
+  flex-direction: column-reverse;
+  align-items: center;
+  .label {
+    margin-bottom: 0.5rem;
+  }
 }
 
 .checkbox {
@@ -76,10 +94,6 @@
   border-radius: var(--border-radius-md);
 }
 
-.radius-lg {
-  border-radius: var(--border-radius-lg);
-}
-
 .radius-full {
   border-radius: var(--border-radius-full);
 }
@@ -88,21 +102,16 @@
 .border-none {
   border: none;
 }
-.border-xs {
+.border-sm {
   border: var(--border-xs);
 }
-.border-sm {
+.border-md {
   border: var(--border-sm);
 }
-.border-md {
+.border-lg {
   border: var(--border-md);
 }
-.border-lg {
-  border: var(--border-lg);
-}
-.border-xl {
-  border: var(--border-xl);
-}
+
 
 /* Color variants */
 .color-default-light {
