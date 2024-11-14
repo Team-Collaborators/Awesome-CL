@@ -1,0 +1,344 @@
+[
+  {
+    "title": "accordion",
+    "path": "/frontend/components/accordion",
+    "description": "A customizable accordion that comes in different variants.",
+    "installation": [
+      {
+        "name": "CLI",
+        "command": "cli-command-to-install",
+        "path": "/icons/cube-solid.svg"
+      },
+      {
+        "name": "npm",
+        "command": "npm install your-library",
+        "path": "/icons/npm-brands-solid.svg"
+      },
+      {
+        "name": "yarn",
+        "command": "yarn add your-library",
+        "path": "/icons/yarn-brands-solid.svg"
+      },
+      {
+        "name": "pnpm",
+        "command": "pnpm add your-library",
+        "path": "/icons/cubes-solid.svg"
+      },
+      {
+        "name": "bun",
+        "command": "bun add your-library",
+        "path": "/icons/lemon-regular.svg"
+      }
+    ],
+    "import": {
+      "code": "import { Accordion, AccordionItem } from 'AwesomeCL';",
+      "description": "This code shows how to import the accordion component from the library."
+    },
+    "examples": [
+      {
+        "title": "Default",
+        "components": [
+          {
+            "type": "Accordion",
+            "props": {
+              "variant": "light"
+            },
+            "children": [
+              {
+                "type": "AccordionItem",
+                "props": {
+                  "title": "Section 1"
+                },
+                "children": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolorem unde quis, ea ratione obcaecati. Quaerat autem unde cupiditate ipsa."
+              },
+              {
+                "type": "AccordionItem",
+                "props": {
+                  "title": "Section 2"
+                },
+                "children": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolorem unde quis, ea ratione obcaecati. Quaerat autem unde cupiditate ipsa."
+              },
+              {
+                "type": "AccordionItem",
+                "props": {
+                  "title": "Section 3"
+                },
+                "children": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolorem unde quis, ea ratione obcaecati. Quaerat autem unde cupiditate ipsa."
+              }
+            ]
+          }
+        ],
+        "code": "import { Accordion, AccordionItem } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Accordion>\n            <AccordionItem title='Section 1'>\n              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolorem unde quis, ea ratione obcaecati. Quaerat autem unde cupiditate ipsa.\n            </AccordionItem>\n            <AccordionItem title='Section 2'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium unde, amet voluptatibus soluta reprehenderit sed laudantium optio ut sint nemo illum earum ducimus tempora nulla quia nam placeat explicabo facilis quisquam minus? Fuga, labore facilis.\n            </AccordionItem>\n            <AccordionItem title='Section 3'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, est exercitationem consequatur dolorum architecto molestiae aspernatur voluptatem ducimus nisi ea quo, atque tempora magni necessitatibus.\n            </AccordionItem>\n          </Accordion>`\n );\n}"
+      },
+      {
+        "title": "Sizes",
+        "components": [
+          {
+            "type": "Search",
+            "props": {
+              "size": "sm"
+            },
+            "children": ""
+          },
+          {
+            "type": "Search",
+            "props": {
+              "size": "md"
+            },
+            "children": "Search"
+          },
+          {
+            "type": "Search",
+            "props": {
+              "size": "lg"
+            },
+            "children": ""
+          }
+        ],
+        "code": "import { Search } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Search size=\"sm\" />\n      <Search size=\"md\"/>\n      <Search size=\"lg\" />\n    </>\n  );\n}"
+      },
+      {
+        "title": "Radius",
+        "components": [
+          {
+            "type": "Search",
+            "props": {
+              "radius": "none"
+            },
+            "children": ""
+          },
+          {
+            "type": "Search",
+            "props": {
+              "radius": "sm"
+            },
+            "children": ""
+          },
+          {
+            "type": "Search",
+            "props": {
+              "radius": "md"
+            },
+            "children": ""
+          },
+          {
+            "type": "Search",
+            "props": {
+              "radius": "lg"
+            },
+            "children": ""
+          },
+          {
+            "type": "Search",
+            "props": {
+              "radius": "full"
+            },
+            "children": ""
+          }
+        ],
+        "code": "import { Search } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Search radius=\"none\" />\n      <Search radius=\"sm\" />\n      <Search radius=\"md\" />\n      <Search radius=\"lg\" />\n      <Search radius=\"full\" />\n    </>\n  );\n}"
+      },
+      {
+        "title": "Colors",
+        "components": [
+          {
+            "type": "Search",
+            "props": {
+              "color": "default"
+            },
+            "children": ""
+          },
+          {
+            "type": "Search",
+            "props": {
+              "color": "primary"
+            },
+            "children": ""
+          },
+          {
+            "type": "Search",
+            "props": {
+              "color": "secondary"
+            },
+            "children": ""
+          },
+          {
+            "type": "Search",
+            "props": {
+              "color": "success"
+            },
+            "children": ""
+          },
+          {
+            "type": "Search",
+            "props": {
+              "color": "warning"
+            },
+            "children": ""
+          },
+          {
+            "type": "Search",
+            "props": {
+              "color": "danger"
+            },
+            "children": ""
+          }
+        ],
+        "code": "import { Search } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Search color=\"default\" />\n      <Search color=\"primary\" />\n      <Search color=\"secondary\" />\n      <Search color=\"success\" />\n      <Search color=\"warning\" />\n      <Search color=\"danger\" />\n    </>\n  );\n}"
+      },
+      {
+        "title": "Borders",
+        "components": [
+          {
+            "type": "Search",
+            "props": {
+              "border": "none"
+            },
+            "children": ""
+          },
+          {
+            "type": "Search",
+            "props": {
+              "border": "default"
+            },
+            "children": ""
+          },
+          {
+            "type": "Search",
+            "props": {
+              "border": "bottom"
+            },
+            "children": ""
+          }
+        ],
+        "code": "import { Search } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Search border=\"none\" />\n      <Search border=\"default\" />\n      <Search border=\"bottom\" />\n    </>\n  );\n}"
+      },
+      {
+        "title": "Button Placements",
+        "components": [
+          {
+            "type": "Search",
+            "props": {
+              "buttonPlacement": "outside-end"
+            },
+            "children": ""
+          },
+          {
+            "type": "Search",
+            "props": {
+              "buttonPlacement": "outside-start"
+            },
+            "children": ""
+          },
+          {
+            "type": "Search",
+            "props": {
+              "buttonPlacement": "inside-start"
+            },
+            "children": ""
+          },
+          {
+            "type": "Search",
+            "props": {
+              "buttonPlacement": "inside-start"
+            },
+            "children": ""
+          }
+        ],
+        "code": "import { Search } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Search buttonPlacement= \"outside-start\" />\n      <Search labelPlacement= \"outside-end\" />\n      <Search labelPlacement= \"inside-start\" />\n      <Search labelPlacement= \"inside-end\" />\n    </>\n  );\n}"
+      }
+    ],
+    "propsTable": {
+      "title": "Search Props",
+      "description": "List of all properties supported by the Search component.",
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
+      "rows": [
+        {
+          "propName": "aria",
+          "type": "string",
+          "description": "Aria label for accessibility. Provides additional context for screen readers.",
+          "defaultValue": "'search'"
+        },
+        {
+          "propName": "color",
+          "type": "string",
+          "description": "Defines the color of the search bar. Options are: 'primary', 'secondary', 'success', 'warning', 'danger'.",
+          "defaultValue": "'default'"
+        },
+        {
+          "propName": "style",
+          "type": "object",
+          "description": "Inline styles to be applied to the search bar.",
+          "defaultValue": "undefined"
+        },
+        {
+          "propName": "size",
+          "type": "string",
+          "description": "Defines the size of the search bar. Options are: 'sm', 'md', 'lg'.",
+          "defaultValue": "'sm'"
+        },
+        {
+          "propName": "radius",
+          "type": "string",
+          "description": "Defines the border-radius of the search bar. Options are: 'none', 'sm', 'md', 'lg', 'full'.",
+          "defaultValue": "'md'"
+        },
+        {
+          "propName": "border",
+          "type": "string",
+          "description": "Defines the border width of the search bar. Options are: 'none', 'default', 'bottom'.",
+          "defaultValue": "'default'"
+        },
+        {
+          "propName": "buttonPlacement",
+          "type": "string",
+          "description": "Determines the position of the label. Options are: 'outside.start', 'outside-end', 'inside-start' and 'inside-end'.",
+          "defaultValue": "'inside-end'"
+        },
+        {
+          "propName": "className",
+          "type": "string",
+          "description": "Additional CSS class names to apply.",
+          "defaultValue": "undefined"
+        },
+        {
+          "propName": "value",
+          "type": "string",
+          "description": "Changes the value of the search bar for different operations.",
+          "defaultValue": ""
+        },
+        {
+          "propName": "placeholder",
+          "type": "string",
+          "description": "Adds placeholder text to the search bar.",
+          "defaultValue": ""
+        }
+      ]
+    },
+    "eventsTable": {
+      "title": "Events",
+      "description": "List of all events emitted by the Search bar component.",
+      "headers": ["Event Name", "Description"],
+      "rows": [
+        {
+          "propName": "onValueChange",
+          "type": "Triggered when the value changes."
+        },
+        {
+          "propName": "onSearchClick",
+          "type": "Triggered when the button is clicked."
+        }
+      ]
+    },
+    "accessibility": {
+      "title": "Accessibility",
+      "description": "Accessibility considerations for the Search bar component.",
+      "ariaRoles": [
+        {
+          "propName": "Search",
+          "description": "The Search component is rendered with the search role by default."
+        }
+      ]
+    }
+  }
+]
