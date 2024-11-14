@@ -1,5 +1,6 @@
 import React, { useState, cloneElement } from "react";
 import "./Accordion.scss";
+import AccordionItem from "./AccordionItem";
 
 const Accordion = ({
   children,
