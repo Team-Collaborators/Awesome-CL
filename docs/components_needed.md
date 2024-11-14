@@ -1,18 +1,10 @@
 # Components needed primary
-
-- chip
 - header
-- link
-- loading circle
-- radio button
-- input field (search field)
+
 - card
-- form
-- table
 - textarea
-- navbar
+- navbar 
 - dropdown
-- image
 - pagination
 - select
 - divider
@@ -27,9 +19,10 @@
 - breadcrumbs
 - calendar
 - date picker
+- chip
 
 # In Progress
-
+- image
 - modal
 - slider
 - popover
@@ -37,6 +30,10 @@
 - checkbox
 - checkbox group
 - accordion
+- form
+- table
+- loading circle
+
 
 # Done
 
@@ -47,3 +44,5 @@
 - label
 - search field with button
 - input with label
+- input field (search field)
+

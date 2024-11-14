@@ -42,10 +42,10 @@
           "props": {
             "size": "lg"
           },
-          "children": null
+          "children": "Enable Notifications"
         }
       ],
-      "code": "import { Switch } from 'AwesomeCL';\n\nfunction App() {\n  return <Switch />;\n}"
+      "code": "import { Switch } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Switch>\n      Enable Notifications\n    </Switch>\n  );\n}"
     },
     {
       "title": "Sizes",
@@ -56,15 +56,17 @@
             "size": "sm",
             "radius": "md",
             "color": "default-light"
-          }
+          },
+          "children": "Small"
         },
         {
           "type": "Switch",
           "props": {
             "size": "md",
-            "radius": "md",
+            "radius": "lg",
             "color": "default-light"
-          }
+          },
+          "children": "Medium"
         },
         {
           "type": "Switch",
@@ -72,10 +74,11 @@
             "size": "lg",
             "radius": "lg",
             "color": "default-light"
-          }
+          },
+          "children": "Large"
         }
       ],
-      "code": "import { Switch } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n     <Switch size=\"xs\"/>\n     <Switch size=\"sm\"/>\n     <Switch size=\"md\"/>\n     <Switch size=\"lg\"/>\n     <Switch size=\"xl\"/> \n    </>\n   );\n}"
+      "code": "import { Switch } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Switch size=\"sm\">Small</Switch>\n      <Switch size=\"md\">Medium</Switch>\n      <Switch size=\"lg\">Large</Switch>\n    </>\n  );\n}"
     },
     {
       "title": "Radius",
@@ -86,7 +89,8 @@
             "size": "lg",
             "radius": "none",
             "color": "default-light"
-          }
+          },
+          "children": "None"
         },
         {
           "type": "Switch",
@@ -94,7 +98,8 @@
             "size": "lg",
             "radius": "sm",
             "color": "default-light"
-          }
+          },
+          "children": "Small"
         },
         {
           "type": "Switch",
@@ -102,7 +107,8 @@
             "size": "lg",
             "radius": "md",
             "color": "default-light"
-          }
+          },
+          "children": "Medium"
         },
         {
           "type": "Switch",
@@ -110,7 +116,8 @@
             "size": "lg",
             "radius": "lg",
             "color": "default-light"
-          }
+          },
+          "children": "Large"
         },
         {
           "type": "Switch",
@@ -118,10 +125,11 @@
             "size": "lg",
             "radius": "full",
             "color": "default-light"
-          }
+          },
+          "children": "Full"
         }
       ],
-      "code": "import { Switch } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Switch radius=\"none\"/>\n      <Switch radius=\"sm\"/>\n      <Switch radius=\"md\"/>\n      <Switch radius=\"lg\"/>\n      <Switch radius=\"full\"/>\n    </>\n  );\n}"
+      "code": "import { Switch } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Switch radius=\"none\">None</Switch>\n      <Switch radius=\"sm\">Small</Switch>\n      <Switch radius=\"md\">Medium</Switch>\n      <Switch radius=\"lg\">Large</Switch>\n      <Switch radius=\"full\">Full</Switch>\n    </>\n  );\n}"
     },
     {
       "title": "Colors",
@@ -132,7 +140,8 @@
             "size": "lg",
             "radius": "lg",
             "color": "default-light"
-          }
+          },
+          "children": "Default Light"
         },
         {
           "type": "Switch",
@@ -140,7 +149,8 @@
             "size": "lg",
             "radius": "lg",
             "color": "default-dark"
-          }
+          },
+          "children": "Default Dark"
         },
         {
           "type": "Switch",
@@ -148,7 +158,8 @@
             "size": "lg",
             "radius": "lg",
             "color": "primary"
-          }
+          },
+          "children": "Primary"
         },
         {
           "type": "Switch",
@@ -156,7 +167,8 @@
             "size": "lg",
             "radius": "lg",
             "color": "secondary"
-          }
+          },
+          "children": "Secondary"
         },
         {
           "type": "Switch",
@@ -164,7 +176,8 @@
             "size": "lg",
             "radius": "lg",
             "color": "success"
-          }
+          },
+          "children": "Success"
         },
         {
           "type": "Switch",
@@ -172,7 +185,8 @@
             "size": "lg",
             "radius": "lg",
             "color": "warning"
-          }
+          },
+          "children": "Warning"
         },
         {
           "type": "Switch",
@@ -180,10 +194,11 @@
             "size": "lg",
             "radius": "lg",
             "color": "danger"
-          }
+          },
+          "children": "Danger"
         }
       ],
-      "code": "import { Switch } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Button color=\"default-light\"/>\n      <Button color=\"default-dark\"/>\n      <Button color=\"primary\"/>\n      <Button color=\"secondary\"/>\n      <Button color=\"success\"/>\n      <Button color=\"warning\"/>\n      <Button color=\"danger\"/>\n    </>\n  );\n}"
+      "code": "import { Switch } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Switch color=\"default-light\">Default Light</Switch>\n      <Switch color=\"default-dark\">Default Dark</Switch>\n      <Switch color=\"primary\">Primary</Switch>\n      <Switch color=\"secondary\">Secondary</Switch>\n      <Switch color=\"success\">Success</Switch>\n      <Switch color=\"warning\">Warning</Switch>\n      <Switch color=\"danger\">Danger</Switch>\n    </>\n  );\n}"
     },
     {
       "title": "Borders",
@@ -195,16 +210,8 @@
             "radius": "lg",
             "color": "default-dark",
             "border": "none"
-          }
-        },
-        {
-          "type": "Switch",
-          "props": {
-            "size": "lg",
-            "radius": "lg",
-            "color": "default-light",
-            "border": "xs"
-          }
+          },
+          "children": "None"
         },
         {
           "type": "Switch",
@@ -213,7 +220,8 @@
             "radius": "lg",
             "color": "default-light",
             "border": "sm"
-          }
+          },
+          "children": "Small"
         },
         {
           "type": "Switch",
@@ -222,24 +230,21 @@
             "radius": "lg",
             "color": "default-light",
             "border": "md"
-          }
-        }
-      ],
-      "code": "import { Switch } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Switch border=\"none\"/>\n      <Switch border=\"xs\"/>\n      <Switch border=\"sm\"/>\n      <Switch border=\"md\"/>\n    </>\n  );\n}"
-    },
-
-    {
-      "title": "Switch with onChange Event",
-      "components": [
+          },
+          "children": "Medium"
+        },
         {
           "type": "Switch",
           "props": {
-            "onChange": "handleSwitchChange",
-            "checked": true
-          }
+            "size": "lg",
+            "radius": "lg",
+            "color": "default-light",
+            "border": "lg"
+          },
+          "children": "Large"
         }
       ],
-      "code": "import { Switch } from 'AwesomeCL';\n\nfunction App() {\n  const handleSwitchChange = (isChecked) => {\n    console.log('Switch is now:', isChecked);\n  };\n  return <Switch onChange={handleSwitchChange} checked={true} />;\n}"
+      "code": "import { Switch } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Switch border=\"none\">None</Switch>\n      <Switch border=\"sm\">Small</Switch>\n      <Switch border=\"md\">Medium</Switch>\n      <Switch border=\"lg\">Large</Switch>\n    </>\n  );\n}"
     }
   ],
   "propsTable": {
@@ -274,7 +279,7 @@
       {
         "propName": "size",
         "type": "string",
-        "description": "Defines the size of the switch. Options are: 'xs', 'sm', 'md', 'lg', 'xl'.",
+        "description": "Defines the size of the switch. Options are: 'sm', 'md', 'lg'.",
         "defaultValue": "\"md\""
       },
       {
@@ -286,7 +291,7 @@
       {
         "propName": "border",
         "type": "string",
-        "description": "Defines the border width of the switch. Options are: 'none', 'xs', 'sm', 'md', 'lg', 'xl'.",
+        "description": "Defines the border width of the switch. Options are: 'none', 'xs', 'sm', 'md'.",
         "defaultValue": "\"xs\""
       },
       {
@@ -315,8 +320,8 @@
     "headers": ["Event Name", "Description"],
     "rows": [
       {
-        "eventName": "onChange",
-        "description": "Triggered when the switch is toggled, passing the new checked state."
+        "propName": "onChange",
+        "type": "Triggered when the switch is toggled, passing the new checked state."
       }
     ]
   },
