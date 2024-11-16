@@ -51,13 +51,13 @@
 }
 
 // Color classes
-.color-default-light {
-  border-color: colors.$default-light;
-  border-bottom-color: transparent;
-}
+// .color-default-light {
+//   border-color: colors.$default-light;
+//   border-bottom-color: transparent;
+// }
 
 .color-default-dark {
-  border-color: colors.$default-dark;
+  border-color: colors.$default-base;
   border-bottom-color: transparent;
 }
 
