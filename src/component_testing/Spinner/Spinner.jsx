@@ -3,7 +3,7 @@ import styles from "../Spinner/Spinner.module.scss";
 const Spinner = ({
   size = "lg",
   thickness = "lg",
-  color = "default-dark",
+  color = "default",
   speed = "1s",
   style,
   className = "",
@@ -22,7 +22,12 @@ ${styles[`thickness-${thickness}`]}
   return (
     <>
       {" "}
-      <div role="status" aria-busy="true" style={{...style, animationDuration: speed}} className={finalClassNames} />
+      <div
+        role="status"
+        aria-busy="true"
+        style={{ ...style, animationDuration: speed }}
+        className={finalClassNames}
+      />
     </>
   );
 };

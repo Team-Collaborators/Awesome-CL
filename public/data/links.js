@@ -16,6 +16,7 @@ export const sidebarLinks = {
         { path: "/frontend/components/modal", title: "Modal" },
         { path: "/frontend/components/popover", title: "Popover" },
         { path: "/frontend/components/searchbar", title: "Search Bar" },
+        { path: "/frontend/components/spinner", title: "Spinner" },
         { path: "/frontend/components/switch", title: "Switch" },
       ],
     },
