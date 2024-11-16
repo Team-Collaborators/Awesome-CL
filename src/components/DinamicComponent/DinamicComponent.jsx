@@ -7,6 +7,7 @@ import AccordionItem from "../../component_testing/Accordion/AccordionItem";
 import Search from "../../component_testing/Search/Search";
 import Switch from "../../component_testing/Switch/Switch";
 import Checkbox from "../../component_testing/Checkbox/Checkbox";
+import Spinner from "../../component_testing/Spinner/Spinner";
 
 const components = {
   //Object with all components
@@ -16,6 +17,7 @@ const components = {
   Accordion,
   AccordionItem,
   Search,
+  Spinner,
   Switch,
   Checkbox,
 };

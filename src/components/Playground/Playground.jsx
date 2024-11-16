@@ -3,7 +3,6 @@ import "./Playground.scss";
 // import Button from "../../component_testing/Button/Button";
 // import TestTailwind from "../../component_testing/TestTailwind";
 import Modal from "../../component_testing/Modal/Modal";
-import Checkbox from "../../component_testing/Checkbox/Checkbox";
 import { DiReact } from "react-icons/di";
 import { FaReact } from "react-icons/fa";
 import { TbBackground } from "react-icons/tb";
@@ -23,9 +22,6 @@ const Playground = () => {
         {/* <Modal modalHeader={"Modal header"} modalBody={"Body"}>
           Hello
         </Modal> */}
-
-<Checkbox size="lg" radius="md" border="sm">Hello</Checkbox>
-
       </div>
     </div>
   );
