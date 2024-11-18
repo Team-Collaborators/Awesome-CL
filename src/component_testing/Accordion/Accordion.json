@@ -36,12 +36,16 @@
     },
     "examples": [
       {
-        "title": "Default",
+        "title": "Default / Variant Bordered",
         "components": [
           {
             "type": "Accordion",
             "props": {
-              "variant": "light"
+              "variant": "bordered",
+              "style": {
+                "width": "60%",
+                "margin": "auto"
+              }
             },
             "children": [
               {
@@ -49,269 +53,349 @@
                 "props": {
                   "title": "Section 1"
                 },
-                "children": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolorem unde quis, ea ratione obcaecati. Quaerat autem unde cupiditate ipsa."
+                "children": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident optio dolore, laboriosam voluptatum consequatur non mollitia. Magni eligendi eaque eum aperiam iste similique ad commodi."
               },
               {
                 "type": "AccordionItem",
                 "props": {
                   "title": "Section 2"
                 },
-                "children": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolorem unde quis, ea ratione obcaecati. Quaerat autem unde cupiditate ipsa."
+                "children": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis velit provident earum vel, perferendis cupiditate beatae illo aut minima libero consequuntur aperiam officiis quisquam error neque id eos possimus est. Deserunt voluptatum inventore laudantium veritatis?"
               },
               {
                 "type": "AccordionItem",
                 "props": {
                   "title": "Section 3"
                 },
-                "children": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolorem unde quis, ea ratione obcaecati. Quaerat autem unde cupiditate ipsa."
+                "children": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque officiis cupiditate placeat ut beatae temporibus deserunt neque, quis iure! Repudiandae eius eos facere numquam, suscipit voluptatibus sequi sunt esse excepturi."
               }
             ]
           }
         ],
-        "code": "import { Accordion, AccordionItem } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Accordion>\n            <AccordionItem title='Section 1'>\n              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolorem unde quis, ea ratione obcaecati. Quaerat autem unde cupiditate ipsa.\n            </AccordionItem>\n            <AccordionItem title='Section 2'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium unde, amet voluptatibus soluta reprehenderit sed laudantium optio ut sint nemo illum earum ducimus tempora nulla quia nam placeat explicabo facilis quisquam minus? Fuga, labore facilis.\n            </AccordionItem>\n            <AccordionItem title='Section 3'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, est exercitationem consequatur dolorum architecto molestiae aspernatur voluptatem ducimus nisi ea quo, atque tempora magni necessitatibus.\n            </AccordionItem>\n          </Accordion>`\n );\n}"
+        "code": "import { Accordion, AccordionItem } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Accordion>\n            <AccordionItem title='Section 1'>\n              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolorem unde quis, ea ratione obcaecati. Quaerat autem unde cupiditate ipsa.\n            </AccordionItem>\n            <AccordionItem title='Section 2'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium unde, amet voluptatibus soluta reprehenderit sed laudantium optio ut sint nemo illum earum ducimus tempora nulla quia nam placeat explicabo facilis quisquam minus? Fuga, labore facilis.\n            </AccordionItem>\n            <AccordionItem title='Section 3'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, est exercitationem consequatur dolorum architecto molestiae aspernatur voluptatem ducimus nisi ea quo, atque tempora magni necessitatibus.\n            </AccordionItem>\n    </Accordion>\n );\n}"
       },
       {
-        "title": "Sizes",
+        "title": "Multiple items open",
         "components": [
           {
-            "type": "Search",
+            "type": "Accordion",
             "props": {
-              "size": "sm"
+              "variant": "bordered",
+              "allowMultipleOpen": "true",
+              "style": {
+                "width": "60%",
+                "margin": "auto"
+              }
             },
-            "children": ""
-          },
-          {
-            "type": "Search",
-            "props": {
-              "size": "md"
-            },
-            "children": "Search"
-          },
-          {
-            "type": "Search",
-            "props": {
-              "size": "lg"
-            },
-            "children": ""
+            "children": [
+              {
+                "type": "AccordionItem",
+                "props": {
+                  "title": "Section 1"
+                },
+                "children": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident optio dolore, laboriosam voluptatum consequatur non mollitia. Magni eligendi eaque eum aperiam iste similique ad commodi."
+              },
+              {
+                "type": "AccordionItem",
+                "props": {
+                  "title": "Section 2"
+                },
+                "children": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis velit provident earum vel, perferendis cupiditate beatae illo aut minima libero consequuntur aperiam officiis quisquam error neque id eos possimus est. Deserunt voluptatum inventore laudantium veritatis?"
+              },
+              {
+                "type": "AccordionItem",
+                "props": {
+                  "title": "Section 3"
+                },
+                "children": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque officiis cupiditate placeat ut beatae temporibus deserunt neque, quis iure! Repudiandae eius eos facere numquam, suscipit voluptatibus sequi sunt esse excepturi."
+              }
+            ]
           }
         ],
-        "code": "import { Search } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Search size=\"sm\" />\n      <Search size=\"md\"/>\n      <Search size=\"lg\" />\n    </>\n  );\n}"
+        "code": "import { Accordion, AccordionItem } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Accordion allowMultipleOpen={false}>\n            <AccordionItem title='Section 1'>\n              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolorem unde quis, ea ratione obcaecati. Quaerat autem unde cupiditate ipsa.\n            </AccordionItem>\n            <AccordionItem title='Section 2'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium unde, amet voluptatibus soluta reprehenderit sed laudantium optio ut sint nemo illum earum ducimus tempora nulla quia nam placeat explicabo facilis quisquam minus? Fuga, labore facilis.\n            </AccordionItem>\n            <AccordionItem title='Section 3'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, est exercitationem consequatur dolorum architecto molestiae aspernatur voluptatem ducimus nisi ea quo, atque tempora magni necessitatibus.\n            </AccordionItem>\n    </Accordion>\n );\n}"
       },
       {
-        "title": "Radius",
+        "title": "With Subtitles",
         "components": [
           {
-            "type": "Search",
+            "type": "Accordion",
             "props": {
-              "radius": "none"
+              "variant": "bordered",
+              "style": {
+                "width": "60%",
+                "margin": "auto"
+              }
             },
-            "children": ""
-          },
-          {
-            "type": "Search",
-            "props": {
-              "radius": "sm"
-            },
-            "children": ""
-          },
-          {
-            "type": "Search",
-            "props": {
-              "radius": "md"
-            },
-            "children": ""
-          },
-          {
-            "type": "Search",
-            "props": {
-              "radius": "lg"
-            },
-            "children": ""
-          },
-          {
-            "type": "Search",
-            "props": {
-              "radius": "full"
-            },
-            "children": ""
+            "children": [
+              {
+                "type": "AccordionItem",
+                "props": {
+                  "title": "Section 1",
+                  "subtitle": "Subtitle 1"
+                },
+                "children": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident optio dolore, laboriosam voluptatum consequatur non mollitia. Magni eligendi eaque eum aperiam iste similique ad commodi."
+              },
+              {
+                "type": "AccordionItem",
+                "props": {
+                  "title": "Section 2",
+                  "subtitle": "Subtitle 2"
+                },
+                "children": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis velit provident earum vel, perferendis cupiditate beatae illo aut minima libero consequuntur aperiam officiis quisquam error neque id eos possimus est. Deserunt voluptatum inventore laudantium veritatis?"
+              },
+              {
+                "type": "AccordionItem",
+                "props": {
+                  "title": "Section 3",
+                  "subtitle": "Subtitle 3"
+                },
+                "children": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque officiis cupiditate placeat ut beatae temporibus deserunt neque, quis iure! Repudiandae eius eos facere numquam, suscipit voluptatibus sequi sunt esse excepturi."
+              }
+            ]
           }
         ],
-        "code": "import { Search } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Search radius=\"none\" />\n      <Search radius=\"sm\" />\n      <Search radius=\"md\" />\n      <Search radius=\"lg\" />\n      <Search radius=\"full\" />\n    </>\n  );\n}"
+        "code": "import { Accordion, AccordionItem } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Accordion allowMultipleOpen={false}>\n            <AccordionItem title='Section 1' subtitle='Subtitle 1'>\n              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolorem unde quis, ea ratione obcaecati. Quaerat autem unde cupiditate ipsa.\n            </AccordionItem>\n            <AccordionItem title='Section 2' subtitle='Subtitle 2'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium unde, amet voluptatibus soluta reprehenderit sed laudantium optio ut sint nemo illum earum ducimus tempora nulla quia nam placeat explicabo facilis quisquam minus? Fuga, labore facilis.\n            </AccordionItem>\n            <AccordionItem title='Section 3' subtitle='Subtitle 3'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, est exercitationem consequatur dolorum architecto molestiae aspernatur voluptatem ducimus nisi ea quo, atque tempora magni necessitatibus.\n            </AccordionItem>\n    </Accordion>\n );\n}"
       },
       {
-        "title": "Colors",
+        "title": "Variant Shadow",
         "components": [
           {
-            "type": "Search",
+            "type": "Accordion",
             "props": {
-              "color": "default"
+              "variant": "shadow",
+              "style": {
+                "width": "60%",
+                "margin": "auto"
+              }
             },
-            "children": ""
-          },
-          {
-            "type": "Search",
-            "props": {
-              "color": "primary"
-            },
-            "children": ""
-          },
-          {
-            "type": "Search",
-            "props": {
-              "color": "secondary"
-            },
-            "children": ""
-          },
-          {
-            "type": "Search",
-            "props": {
-              "color": "success"
-            },
-            "children": ""
-          },
-          {
-            "type": "Search",
-            "props": {
-              "color": "warning"
-            },
-            "children": ""
-          },
-          {
-            "type": "Search",
-            "props": {
-              "color": "danger"
-            },
-            "children": ""
+            "children": [
+              {
+                "type": "AccordionItem",
+                "props": {
+                  "title": "Section 1"
+                },
+                "children": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident optio dolore, laboriosam voluptatum consequatur non mollitia. Magni eligendi eaque eum aperiam iste similique ad commodi."
+              },
+              {
+                "type": "AccordionItem",
+                "props": {
+                  "title": "Section 2"
+                },
+                "children": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis velit provident earum vel, perferendis cupiditate beatae illo aut minima libero consequuntur aperiam officiis quisquam error neque id eos possimus est. Deserunt voluptatum inventore laudantium veritatis?"
+              },
+              {
+                "type": "AccordionItem",
+                "props": {
+                  "title": "Section 3"
+                },
+                "children": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque officiis cupiditate placeat ut beatae temporibus deserunt neque, quis iure! Repudiandae eius eos facere numquam, suscipit voluptatibus sequi sunt esse excepturi."
+              }
+            ]
           }
         ],
-        "code": "import { Search } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Search color=\"default\" />\n      <Search color=\"primary\" />\n      <Search color=\"secondary\" />\n      <Search color=\"success\" />\n      <Search color=\"warning\" />\n      <Search color=\"danger\" />\n    </>\n  );\n}"
+        "code": "import { Accordion, AccordionItem } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Accordion variant='shadow'>\n            <AccordionItem title='Section 1'>\n              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolorem unde quis, ea ratione obcaecati. Quaerat autem unde cupiditate ipsa.\n            </AccordionItem>\n            <AccordionItem title='Section 2'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium unde, amet voluptatibus soluta reprehenderit sed laudantium optio ut sint nemo illum earum ducimus tempora nulla quia nam placeat explicabo facilis quisquam minus? Fuga, labore facilis.\n            </AccordionItem>\n            <AccordionItem title='Section 3'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, est exercitationem consequatur dolorum architecto molestiae aspernatur voluptatem ducimus nisi ea quo, atque tempora magni necessitatibus.\n            </AccordionItem>\n    </Accordion>\n );\n}"
       },
       {
-        "title": "Borders",
+        "title": "Variant Light",
         "components": [
           {
-            "type": "Search",
+            "type": "Accordion",
             "props": {
-              "border": "none"
+              "variant": "light",
+              "style": {
+                "width": "60%",
+                "margin": "auto"
+              }
             },
-            "children": ""
-          },
-          {
-            "type": "Search",
-            "props": {
-              "border": "default"
-            },
-            "children": ""
-          },
-          {
-            "type": "Search",
-            "props": {
-              "border": "bottom"
-            },
-            "children": ""
+            "children": [
+              {
+                "type": "AccordionItem",
+                "props": {
+                  "title": "Section 1"
+                },
+                "children": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident optio dolore, laboriosam voluptatum consequatur non mollitia. Magni eligendi eaque eum aperiam iste similique ad commodi."
+              },
+              {
+                "type": "AccordionItem",
+                "props": {
+                  "title": "Section 2"
+                },
+                "children": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis velit provident earum vel, perferendis cupiditate beatae illo aut minima libero consequuntur aperiam officiis quisquam error neque id eos possimus est. Deserunt voluptatum inventore laudantium veritatis?"
+              },
+              {
+                "type": "AccordionItem",
+                "props": {
+                  "title": "Section 3"
+                },
+                "children": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque officiis cupiditate placeat ut beatae temporibus deserunt neque, quis iure! Repudiandae eius eos facere numquam, suscipit voluptatibus sequi sunt esse excepturi."
+              }
+            ]
           }
         ],
-        "code": "import { Search } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Search border=\"none\" />\n      <Search border=\"default\" />\n      <Search border=\"bottom\" />\n    </>\n  );\n}"
+        "code": "import { Accordion, AccordionItem } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Accordion variant='light'>\n            <AccordionItem title='Section 1'>\n              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolorem unde quis, ea ratione obcaecati. Quaerat autem unde cupiditate ipsa.\n            </AccordionItem>\n            <AccordionItem title='Section 2'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium unde, amet voluptatibus soluta reprehenderit sed laudantium optio ut sint nemo illum earum ducimus tempora nulla quia nam placeat explicabo facilis quisquam minus? Fuga, labore facilis.\n            </AccordionItem>\n            <AccordionItem title='Section 3'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, est exercitationem consequatur dolorum architecto molestiae aspernatur voluptatem ducimus nisi ea quo, atque tempora magni necessitatibus.\n            </AccordionItem>\n    </Accordion>\n );\n}"
       },
       {
-        "title": "Button Placements",
+        "title": "Variant Splitted",
         "components": [
           {
-            "type": "Search",
+            "type": "Accordion",
             "props": {
-              "buttonPlacement": "outside-end"
+              "variant": "splitted",
+              "style": {
+                "width": "60%",
+                "margin": "auto"
+              }
             },
-            "children": ""
-          },
-          {
-            "type": "Search",
-            "props": {
-              "buttonPlacement": "outside-start"
-            },
-            "children": ""
-          },
-          {
-            "type": "Search",
-            "props": {
-              "buttonPlacement": "inside-start"
-            },
-            "children": ""
-          },
-          {
-            "type": "Search",
-            "props": {
-              "buttonPlacement": "inside-start"
-            },
-            "children": ""
+            "children": [
+              {
+                "type": "AccordionItem",
+                "props": {
+                  "title": "Section 1"
+                },
+                "children": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident optio dolore, laboriosam voluptatum consequatur non mollitia. Magni eligendi eaque eum aperiam iste similique ad commodi."
+              },
+              {
+                "type": "AccordionItem",
+                "props": {
+                  "title": "Section 2"
+                },
+                "children": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis velit provident earum vel, perferendis cupiditate beatae illo aut minima libero consequuntur aperiam officiis quisquam error neque id eos possimus est. Deserunt voluptatum inventore laudantium veritatis?"
+              },
+              {
+                "type": "AccordionItem",
+                "props": {
+                  "title": "Section 3"
+                },
+                "children": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque officiis cupiditate placeat ut beatae temporibus deserunt neque, quis iure! Repudiandae eius eos facere numquam, suscipit voluptatibus sequi sunt esse excepturi."
+              }
+            ]
           }
         ],
-        "code": "import { Search } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Search buttonPlacement= \"outside-start\" />\n      <Search labelPlacement= \"outside-end\" />\n      <Search labelPlacement= \"inside-start\" />\n      <Search labelPlacement= \"inside-end\" />\n    </>\n  );\n}"
+        "code": "import { Accordion, AccordionItem } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Accordion variant='splitted'>\n            <AccordionItem title='Section 1'>\n              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolorem unde quis, ea ratione obcaecati. Quaerat autem unde cupiditate ipsa.\n            </AccordionItem>\n            <AccordionItem title='Section 2'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium unde, amet voluptatibus soluta reprehenderit sed laudantium optio ut sint nemo illum earum ducimus tempora nulla quia nam placeat explicabo facilis quisquam minus? Fuga, labore facilis.\n            </AccordionItem>\n            <AccordionItem title='Section 3'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, est exercitationem consequatur dolorum architecto molestiae aspernatur voluptatem ducimus nisi ea quo, atque tempora magni necessitatibus.\n            </AccordionItem>\n    </Accordion>\n );\n}"
+      },
+      {
+        "title": "Change Icons",
+        "components": [
+          {
+            "type": "Accordion",
+            "props": {
+              "variant": "bordered",
+              "style": {
+                "width": "60%",
+                "margin": "auto"
+              }
+            },
+            "children": [
+              {
+                "type": "AccordionItem",
+                "props": {
+                  "title": "Section 1",
+                  "iconClose": "FaMinus",
+                  "iconOpen": "FaPlus"
+                },
+                "children": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident optio dolore, laboriosam voluptatum consequatur non mollitia. Magni eligendi eaque eum aperiam iste similique ad commodi."
+              },
+              {
+                "type": "AccordionItem",
+                "props": {
+                  "title": "Section 2",
+                  "iconClose": "FaMinus",
+                  "iconOpen": "FaPlus"
+                },
+                "children": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis velit provident earum vel, perferendis cupiditate beatae illo aut minima libero consequuntur aperiam officiis quisquam error neque id eos possimus est. Deserunt voluptatum inventore laudantium veritatis?"
+              },
+              {
+                "type": "AccordionItem",
+                "props": {
+                  "title": "Section 3",
+                  "iconClose": "FaMinus",
+                  "iconOpen": "FaPlus"
+                },
+                "children": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque officiis cupiditate placeat ut beatae temporibus deserunt neque, quis iure! Repudiandae eius eos facere numquam, suscipit voluptatibus sequi sunt esse excepturi."
+              }
+            ]
+          }
+        ],
+        "code": "import { Accordion, AccordionItem } from 'AwesomeCL';\nimport { FaPlus, FaMinus } from 'react-icons/fa6';\n\nfunction App() {\n  return (\n    <Accordion variant='bordered'>\n            <AccordionItem title='Section 1' iconClose={<FaMinus />} iconOpen={<FaPlus />} >\n              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolorem unde quis, ea ratione obcaecati. Quaerat autem unde cupiditate ipsa.\n            </AccordionItem>\n            <AccordionItem title='Section 2' iconClose={<FaMinus />} iconOpen={<FaPlus />}>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium unde, amet voluptatibus soluta reprehenderit sed laudantium optio ut sint nemo illum earum ducimus tempora nulla quia nam placeat explicabo facilis quisquam minus? Fuga, labore facilis.\n            </AccordionItem>\n            <AccordionItem title='Section 3' iconClose={<FaMinus />} iconOpen={<FaPlus />}>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, est exercitationem consequatur dolorum architecto molestiae aspernatur voluptatem ducimus nisi ea quo, atque tempora magni necessitatibus.\n            </AccordionItem>\n    </Accordion>\n );\n}"
       }
     ],
     "propsTable": {
-      "title": "Search Props",
-      "description": "List of all properties supported by the Search component.",
+      "title": "Accordion Props",
+      "description": "List of all properties supported by the accordion component.",
       "headers": ["Prop Name", "Type", "Description", "Default Value"],
       "rows": [
         {
           "propName": "aria",
           "type": "string",
           "description": "Aria label for accessibility. Provides additional context for screen readers.",
-          "defaultValue": "'search'"
+          "defaultValue": "'accordion'"
         },
         {
-          "propName": "color",
+          "propName": "allowMultipleOpen",
+          "type": "Boolean",
+          "description": "Defines whether multiple items can be toggled at the same time.",
+          "defaultValue": "false"
+        },
+        {
+          "propName": "variant",
           "type": "string",
-          "description": "Defines the color of the search bar. Options are: 'primary', 'secondary', 'success', 'warning', 'danger'.",
-          "defaultValue": "'default'"
+          "description": "Defines the visual variant of the accordion. Options are: 'light', 'bordered', 'shadow', 'splitted'.",
+          "defaultValue": "bordered"
         },
         {
           "propName": "style",
           "type": "object",
           "description": "Inline styles to be applied to the search bar.",
-          "defaultValue": "undefined"
-        },
-        {
-          "propName": "size",
-          "type": "string",
-          "description": "Defines the size of the search bar. Options are: 'sm', 'md', 'lg'.",
-          "defaultValue": "'sm'"
-        },
-        {
-          "propName": "radius",
-          "type": "string",
-          "description": "Defines the border-radius of the search bar. Options are: 'none', 'sm', 'md', 'lg', 'full'.",
-          "defaultValue": "'md'"
-        },
-        {
-          "propName": "border",
-          "type": "string",
-          "description": "Defines the border width of the search bar. Options are: 'none', 'default', 'bottom'.",
-          "defaultValue": "'default'"
-        },
-        {
-          "propName": "buttonPlacement",
-          "type": "string",
-          "description": "Determines the position of the label. Options are: 'outside.start', 'outside-end', 'inside-start' and 'inside-end'.",
-          "defaultValue": "'inside-end'"
+          "defaultValue": "-"
         },
         {
           "propName": "className",
           "type": "string",
           "description": "Additional CSS class names to apply.",
           "defaultValue": "undefined"
+        }
+      ]
+    },
+    "propsTable2": {
+      "title": "Accordion Item Props",
+      "description": "List of all properties supported by the accordion item component.",
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
+      "rows": [
+        {
+          "propName": "aria",
+          "type": "string",
+          "description": "Aria label for accessibility. Provides additional context for screen readers.",
+          "defaultValue": "'accordion-item'"
         },
         {
-          "propName": "value",
+          "propName": "title",
           "type": "string",
-          "description": "Changes the value of the search bar for different operations.",
-          "defaultValue": ""
+          "description": "Defines the headline for the accordion item.",
+          "defaultValue": "-"
         },
         {
-          "propName": "placeholder",
+          "propName": "subtitle",
           "type": "string",
-          "description": "Adds placeholder text to the search bar.",
-          "defaultValue": ""
+          "description": "Defines the subtitle for the accordion item.",
+          "defaultValue": "-"
+        },
+        {
+          "propName": "children",
+          "type": "string/ React Node",
+          "description": "The content for the accordion item.",
+          "defaultValue": "-"
+        },
+        {
+          "propName": "iconClose",
+          "type": "(React) icon",
+          "description": "Defines the icon that is visible when item is open. Works with react icons.",
+          "defaultValue": "Arrow down"
+        },
+        {
+          "propName": "iconOpen",
+          "type": "string/ React Node",
+          "description": "Defines the icon that is visible when item is closed. Works with react icons.",
+          "defaultValue": "Arrow left"
         }
       ]
     },
@@ -321,12 +405,8 @@
       "headers": ["Event Name", "Description"],
       "rows": [
         {
-          "propName": "onValueChange",
-          "type": "Triggered when the value changes."
-        },
-        {
-          "propName": "onSearchClick",
-          "type": "Triggered when the button is clicked."
+          "propName": "onToggle",
+          "type": "Accordion item event. Defines action in toggle."
         }
       ]
     },
@@ -335,8 +415,12 @@
       "description": "Accessibility considerations for the Search bar component.",
       "ariaRoles": [
         {
-          "propName": "Search",
-          "description": "The Search component is rendered with the search role by default."
+          "propName": "Accordion",
+          "description": "The Accordion component is rendered with the search accordion by default."
+        },
+        {
+          "propName": "Accordion Item",
+          "description": "The Accordion Item component is rendered with the accordion item accordion by default."
         }
       ]
     }

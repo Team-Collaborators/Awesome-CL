@@ -57,7 +57,9 @@ export function MainFrontendLayout({ data }) {
             <h2>Import</h2>
             {component.import && (
               <>
-                <p className={styles.importDescription}>{component.import.description}</p>
+                <p className={styles.importDescription}>
+                  {component.import.description}
+                </p>
                 <RenderCode code={component.import.code} />
               </>
             )}
@@ -78,6 +80,16 @@ export function MainFrontendLayout({ data }) {
               rows={component.propsTable.rows}
             />
           </section>
+          {component.propsTable2 && (
+            <section>
+              <h2>{component.propsTable2.title}</h2>
+              <p>{component.propsTable2.description}</p>
+              <Table
+                headers={component.propsTable2.headers}
+                rows={component.propsTable2.rows}
+              />
+            </section>
+          )}
           <section>
             {component.eventsTable && (
               <>

@@ -5,6 +5,7 @@ import "./Playground.scss";
 import Modal from "../../component_testing/Modal/Modal";
 import Checkbox from "../../component_testing/Checkbox/Checkbox";
 import Switch from "../../component_testing/Switch/Switch";
+
 import { DiReact } from "react-icons/di";
 import { FaReact } from "react-icons/fa";
 import { TbBackground } from "react-icons/tb";

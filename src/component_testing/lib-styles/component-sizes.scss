@@ -18,6 +18,14 @@ $switch-thumb-size-md: 1rem;
 $switch-thumb-size-lg: 1.25rem;
 $switch-thumb-size-xl: 1.5rem;
 
+$spinner-diameter-sm: 1.5rem;
+$spinner-diameter-md: 2rem;
+$spinner-diameter-lg: 2.5rem;
+
+$spinner-thickness-sm: 4px;
+$spinner-thickness-md: 6px;
+$spinner-thickness-lg: 8px;
+
 // Global Component Sizes (CSS Variables)
 :root {
   --checkbox-size-sm: #{$checkbox-size-sm};
@@ -38,6 +46,15 @@ $switch-thumb-size-xl: 1.5rem;
   --switch-thumb-size-md: #{$switch-thumb-size-md};
   --switch-thumb-size-lg: #{$switch-thumb-size-lg};
   --switch-thumb-size-xl: #{$switch-thumb-size-xl};
+
+  --spinner-diameter-sm: #{$spinner-diameter-sm};
+  --spinner-diameter-md: #{$spinner-diameter-md};
+  --spinner-diameter-lg: #{$spinner-diameter-lg};
+
+  --spinner-thickness-sm: #{$spinner-thickness-sm};
+  --spinner-thickness-md: #{$spinner-thickness-md};
+  --spinner-thickness-lg: #{$spinner-thickness-lg};
+
 }
 
 // Tablet Component Sizes
