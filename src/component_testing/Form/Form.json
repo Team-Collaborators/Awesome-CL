@@ -1,0 +1,198 @@
+{
+  "title": "form",
+  "path": "/frontend/components/form",
+  "description": "A versatile form component with multiple variants for various use cases like contact, appointment, feedback, inquiry, and newsletter.",
+  "installation": [
+    {
+      "name": "CLI",
+      "command": "cli-command-to-install",
+      "path": "/icons/cube-solid.svg"
+    },
+    {
+      "name": "npm",
+      "command": "npm install your-library",
+      "path": "/icons/npm-brands-solid.svg"
+    },
+    {
+      "name": "yarn",
+      "command": "yarn add your-library",
+      "path": "/icons/yarn-brands-solid.svg"
+    },
+    {
+      "name": "pnpm",
+      "command": "pnpm add your-library",
+      "path": "/icons/cubes-solid.svg"
+    },
+    {
+      "name": "bun",
+      "command": "bun add your-library",
+      "path": "/icons/lemon-regular.svg"
+    }
+  ],
+  "import": {
+    "code": "import { Form } from 'AwesomeCL';",
+    "description": "This code shows how to import the Form component from the library."
+  },
+  "examples": [
+    {
+      "title": "Contact Form",
+      "components": [
+        {
+          "type": "Form",
+          "props": {
+            "variant": "contact",
+            "fields": ["firstName", "lastName", "email", "message"]
+          },
+          "children": "Contact Form Content"
+        }
+      ],
+      "code": "import { Form } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Form variant=\"contact\" />\n  );\n}"
+    },
+    {
+      "title": "Appointment Form",
+      "components": [
+        {
+          "type": "Form",
+          "props": {
+            "variant": "appointment",
+            "fields": ["firstName", "lastName", "email", "phone", "date"]
+          },
+          "children": "Appointment Form Content"
+        }
+      ],
+      "code": "import { Form } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Form variant=\"appointment\" />\n  );\n}"
+    },
+    {
+      "title": "Feedback Form",
+      "components": [
+        {
+          "type": "Form",
+          "props": {
+            "variant": "feedback",
+            "fields": ["firstName", "lastName", "email", "feedback"]
+          },
+          "children": "Feedback Form Content"
+        }
+      ],
+      "code": "import { Form } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Form variant=\"feedback\" />\n  );\n}"
+    },
+    {
+      "title": "Inquiry Form",
+      "components": [
+        {
+          "type": "Form",
+          "props": {
+            "variant": "inquiry",
+            "fields": ["firstName", "lastName", "email", "inquiry"]
+          },
+          "children": "Inquiry Form Content"
+        }
+      ],
+      "code": "import { Form } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Form variant=\"inquiry\" />\n  );\n}"
+    },
+    {
+      "title": "Newsletter Signup",
+      "components": [
+        {
+          "type": "Form",
+          "props": {
+            "variant": "newsletter",
+            "fields": ["email", "interests"]
+          },
+          "children": "Newsletter Signup Content"
+        }
+      ],
+      "code": "import { Form } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Form variant=\"newsletter\" />\n  );\n}"
+    }
+  ],
+  "propsTable": {
+    "title": "Form Props",
+    "description": "List of all props supported by the Form component.",
+    "headers": ["Prop Name", "Type", "Description", "Default Value"],
+    "rows": [
+      {
+        "propName": "variant",
+        "type": "string",
+        "description": "Specifies the type of form (e.g., 'contact', 'appointment', etc.).",
+        "defaultValue": "'contact'"
+      },
+      {
+        "propName": "fields",
+        "type": "array",
+        "description": "Defines the fields included in the form.",
+        "defaultValue": "[]"
+      },
+      {
+        "propName": "firstName",
+        "type": "string",
+        "description": "Sets the default first name value.",
+        "defaultValue": "''"
+      },
+      {
+        "propName": "lastName",
+        "type": "string",
+        "description": "Sets the default last name value.",
+        "defaultValue": "''"
+      },
+      {
+        "propName": "email",
+        "type": "string",
+        "description": "Sets the default email value.",
+        "defaultValue": "''"
+      },
+      {
+        "propName": "phone",
+        "type": "string",
+        "description": "Sets the default phone number for the form.",
+        "defaultValue": "''"
+      },
+      {
+        "propName": "date",
+        "type": "Date",
+        "description": "Sets a default date for the appointment form.",
+        "defaultValue": "new Date()"
+      },
+      {
+        "propName": "message",
+        "type": "string",
+        "description": "Provides a message field for the contact or inquiry form.",
+        "defaultValue": "''"
+      },
+      {
+        "propName": "interests",
+        "type": "array",
+        "description": "List of interests for the newsletter signup form.",
+        "defaultValue": "[]"
+      }
+    ]
+  },
+  "eventsTable": {
+    "title": "Events",
+    "description": "List of all events emitted by the Form component.",
+    "headers": ["Event Name", "Description"],
+    "rows": [
+      {
+        "propName": "onSubmit",
+        "type": "Triggered when the form is submitted."
+      },
+      {
+        "propName": "onChange",
+        "type": "Triggered when the input values are changed."
+      }
+    ]
+  },
+  "accessibility": {
+    "title": "Accessibility",
+    "description": "Accessibility considerations for the Form component.",
+    "ariaRoles": [
+      {
+        "propName": "Form",
+        "description": "The Form component is rendered with the 'form' role."
+      },
+      {
+        "propName": "aria-label",
+        "description": "An aria-label can be added for accessibility if the form has no header."
+      }
+    ]
+  }
+}

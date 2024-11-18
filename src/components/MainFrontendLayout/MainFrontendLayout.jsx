@@ -57,7 +57,9 @@ export function MainFrontendLayout({ data }) {
             <h2>Import</h2>
             {component.import && (
               <>
-                <p className={styles.importDescription}>{component.import.description}</p>
+                <p className={styles.importDescription}>
+                  {component.import.description}
+                </p>
                 <RenderCode code={component.import.code} />
               </>
             )}

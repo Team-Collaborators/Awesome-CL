@@ -107,7 +107,7 @@
   text-align: center;
   padding: 25px;
   border-radius: 12px;
-  background-color: #9a9a9c4b;
+  background-color: var(--team-bg-color);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 
   &:hover {
@@ -143,7 +143,7 @@
   .teamName {
     font-size: 1.3rem;
     font-weight: 700;
-    color: styles.$slightlyLighter-color;
+    // color: styles.$slightlyLighter-color;
     margin-bottom: 5px;
 
     @media (max-width: 768px) {
@@ -158,7 +158,7 @@
   .teamRole {
     font-size: 1rem;
     font-weight: 600;
-    color: styles.$slightlyLighter-color;
+
     margin-bottom: 12px;
 
     @media (max-width: 768px) {
