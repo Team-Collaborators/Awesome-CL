@@ -117,6 +117,12 @@
   .checkmark {
     color: var(--default-dark);
   }
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--dark-default-base);
+    .checkmark {
+      color: var(--default-light);
+    }
+  }
 }
 
 .color-primary.variant-subtle {
@@ -124,6 +130,12 @@
   border: none;
   .checkmark {
     color: var(--primary-dark);
+  }
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--dark-primary-base);
+    .checkmark {
+      color: var(--primary-light);
+    }
   }
 }
 
@@ -133,13 +145,26 @@
   .checkmark {
     color: var(--secondary-dark);
   }
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--dark-secondary-base);
+    .checkmark {
+      color: var(--secondary-light);
+    }
+  }
 }
 
 .color-success.variant-subtle {
   background-color: var(--success-light);
   border: none;
   .checkmark {
-    color: var(--success-dark);
+    color: var(--dark-success-dark);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--dark-success-base);
+    .checkmark {
+      color: var(--success-light);
+    }
   }
 }
 
@@ -148,6 +173,13 @@
   border: none;
   .checkmark {
     color: var(--warning-dark);
+
+    @media (prefers-color-scheme: dark) {
+      background-color: var(--dark-warning-base);
+      .checkmark {
+        color: var(--warning-light);
+      }
+    }
   }
 }
 
@@ -156,6 +188,13 @@
   border-color: var(--danger-dark);
   .checkmark {
     color: var(--danger-dark);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--dark-danger-base);
+    .checkmark {
+      color: var(--danger-light);
+    }
   }
 }
 
@@ -166,40 +205,44 @@
   .checkmark {
     color: var(--default-light);
   }
+  &.checked {
+    border: none;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--dark-default-base);
+    border-color: var(--dark-default-light);
+  }
 }
 
 .color-default.variant-solid {
   &.checked {
     background-color: var(--default-dark);
-    border: none;
   }
 }
 
 .color-primary.variant-solid {
   &.checked {
     background-color: var(--primary-base);
-    border: none;
   }
 }
 
 .color-secondary.variant-solid {
   &.checked {
     background-color: var(--secondary-base);
-    border: none;
   }
 }
 
 .color-success.variant-solid {
   &.checked {
     background-color: var(--success-base);
-    border: none;
   }
 }
 
 .color-warning.variant-solid {
   &.checked {
     background-color: var(--warning-base);
-    border: none;
+
     .checkmark {
       color: var(--default-dark);
     }
@@ -209,6 +252,5 @@
 .color-danger.variant-solid {
   &.checked {
     background-color: var(--danger-base);
-    border: none;
   }
 }

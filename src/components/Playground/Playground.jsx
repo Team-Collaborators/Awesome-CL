@@ -37,11 +37,12 @@ const Playground = () => {
         <Checkbox variant="solid" color="default"></Checkbox>
         <Checkbox variant="solid" color="primary" size="sm">
           {" "}
-          <Checkbox variant="solid" color="secondary" labelPosition="bottom">
-            Click me
-          </Checkbox>
-          small
         </Checkbox>
+
+        <Checkbox variant="solid" color="secondary" labelPosition="left">
+          Click me
+        </Checkbox>
+
         <Checkbox color="warning" variant="solid" size="md">
           medium
         </Checkbox>
@@ -49,6 +50,23 @@ const Playground = () => {
           large
         </Checkbox>
         <Checkbox color="danger" variant="solid" size="lg">
+          large
+        </Checkbox>
+        <br />
+        <Checkbox color="default"></Checkbox>
+        <Checkbox color="primary" size="sm">
+          <br />
+          <br />
+          <br />
+        </Checkbox>
+        <Checkbox color="secondary">Click me</Checkbox>
+        <Checkbox color="warning" size="md">
+          medium
+        </Checkbox>
+        <Checkbox color="success" size="lg">
+          large
+        </Checkbox>
+        <Checkbox color="danger" size="lg">
           large
         </Checkbox>
         <Checkbox
