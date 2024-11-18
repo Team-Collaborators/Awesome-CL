@@ -9,7 +9,7 @@ import Search from "../../component_testing/Search/Search";
 import Switch from "../../component_testing/Switch/Switch";
 import Checkbox from "../../component_testing/Checkbox/Checkbox";
 import Spinner from "../../component_testing/Spinner/Spinner";
-
+import Image from "../../component_testing/Image/Image";
 
 const components = {
   //Object with all components
@@ -23,6 +23,7 @@ const components = {
   Spinner,
   Switch,
   Checkbox,
+  Image,
 };
 
 export default function DynamicComponent({ type, props, children }) {
