@@ -33,12 +33,12 @@ export default function DynamicComponent({ type, props, children }) {
   }
 
   const childrenElements = Array.isArray(children)
-    ? children.map((child) => {
-        console.log(typeof child.type);
+    ? children.map((child, index) => {
         return DynamicComponent({
           type: child.type,
           props: child.props,
           children: child.children,
+          key: index,
         });
       })
     : children;

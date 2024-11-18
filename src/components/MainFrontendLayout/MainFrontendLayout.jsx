@@ -80,6 +80,16 @@ export function MainFrontendLayout({ data }) {
               rows={component.propsTable.rows}
             />
           </section>
+          {component.propsTable2 && (
+            <section>
+              <h2>{component.propsTable2.title}</h2>
+              <p>{component.propsTable2.description}</p>
+              <Table
+                headers={component.propsTable2.headers}
+                rows={component.propsTable2.rows}
+              />
+            </section>
+          )}
           <section>
             {component.eventsTable && (
               <>

@@ -5,9 +5,10 @@ import AccordionItem from "./AccordionItem";
 const Accordion = ({
   children,
   allowMultipleOpen = false,
-  variant = "light",
+  variant = "bordered",
   className = "",
   style,
+  aria = "accordion",
 }) => {
   const [openIndexes, setOpenIndexes] = useState([]);
 
@@ -31,6 +32,7 @@ const Accordion = ({
         cloneElement(child, {
           isOpen: openIndexes.includes(index),
           onToggle: () => toggleItem(index),
+          key: index,
         })
       )}
     </div>
