@@ -6,6 +6,7 @@ export const sidebarLinks = {
       path: "/frontend/components",
       title: "Components",
       subcategories: [
+        { path: "/frontend/components/avatar", title: "Avatar" },
         { path: "/frontend/components/button", title: "Button" },
         { path: "/frontend/components/modal", title: "Modal" },
         { path: "/frontend/components/form", title: "Form" },
@@ -13,9 +14,10 @@ export const sidebarLinks = {
         { path: "/frontend/components/card", title: "Card" },
         { path: "/frontend/components/popover", title: "Popover" },
         { path: "/frontend/components/carousel", title: "Carousel" },
-        { path: "/frontend/components/divider", title: "Divider" },
-        { path: "/frontend/components/switch", title: "Switch" },
+        { path: "/frontend/components/checkbox", title: "Checkbox" },
         { path: "/frontend/components/input", title: "Input" },
+        { path: "/frontend/components/spinner", title: "Spinner" },
+        { path: "/frontend/components/switch", title: "Switch" },
       ],
     },
     {

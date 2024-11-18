@@ -2,6 +2,50 @@
 @use "../lib-styles/colors.scss";
 @use "../lib-styles/paddings.scss";
 @use "../lib-styles/radius.scss";
+@use "../lib-styles/component-sizes.scss";
+@use "../lib-styles/font-sizes.scss";
+
+.container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.label {
+  font-size: var(--font-size-sm);
+  margin-left: 0.5rem;
+  user-select: none;
+  color: inherit;
+}
+
+.label-left {
+  flex-direction: row-reverse;
+  .label {
+    margin-left: 0;
+    margin-right: 0.5rem;
+  }
+}
+
+.label-right {
+  flex-direction: row;
+}
+
+.label-bottom {
+  flex-direction: column;
+  align-items: center;
+  .label {
+    margin-top: 0.5rem;
+  }
+}
+
+.label-top {
+  flex-direction: column-reverse;
+  align-items: center;
+  .label {
+    margin-bottom: 0.5rem;
+  }
+}
 
 .checkbox {
   position: relative;
@@ -9,90 +53,67 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  margin: 0.5rem;
 }
 
 .checkmark {
   position: absolute;
-  width: 80%;
-  height: 80%;
+  width: 95%;
+  height: 95%;
   display: block;
-  top: 50%; /* vertically center */
-  left: 50%; /* horizontally center */
-  transform: translate(-50%, -50%); /* Adjust for perfect centering */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 // Size classes
-.size-xs {
-  width: 1.5rem;
-  height: 1.5rem;
-}
-
 .size-sm {
-  width: 1.75rem;
-  height: 1.75rem;
+  width: var(--checkbox-size-sm);
+  height: var(--checkbox-size-sm);
 }
 
 .size-md {
-  width: 2rem;
-  height: 2rem;
+  width: var(--checkbox-size-md);
+  height: var(--checkbox-size-md);
 }
 
 .size-lg {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: var(--checkbox-size-lg);
+  height: var(--checkbox-size-lg);
 }
 
-.size-xl {
-  width: 3rem;
-  height: 3rem;
-}
-
-// Radius variants
+/* Radius classes*/
 .radius-none {
-  border-radius: 0;
+  border-radius: var(--border-radius-none);
 }
 
 .radius-sm {
-  border-radius: 4px;
+  border-radius: var(--border-radius-sm);
 }
 
 .radius-md {
-  border-radius: 8px;
-}
-
-.radius-lg {
-  border-radius: 12px;
+  border-radius: var(--border-radius-md);
 }
 
 .radius-full {
-  border-radius: 50%;
+  border-radius: var(--border-radius-full);
 }
 
 /* border-classes */
-
 .border-none {
   border: none;
 }
-
-.border-xs {
+.border-sm {
   border: var(--border-xs);
 }
-.border-sm {
+.border-md {
   border: var(--border-sm);
 }
-.border-md {
+.border-lg {
   border: var(--border-md);
 }
 
-.border-lg {
-  border: var(--border-lg);
-}
-.border-xl {
-  border: var(--border-xl);
-}
 
-// Color variants
+/* Color variants */
 .color-default-light {
   background-color: colors.$default-light;
   border-color: colors.$default-dark;
@@ -113,19 +134,19 @@
 
 .color-primary {
   background-color: colors.$primary-light;
-  border-color: colors.$primary-base;
+  border-color: colors.$primary-dark;
 
   .checkmark {
-    color: colors.$primary-base;
+    color: colors.$primary-dark;
   }
 }
 
 .color-secondary {
   background-color: colors.$secondary-light;
-  border-color: colors.$secondary-base;
+  border-color: colors.$secondary-dark;
 
   .checkmark {
-    color: colors.$secondary-base;
+    color: colors.$secondary-dark;
   }
 }
 
@@ -149,7 +170,7 @@
 
 .color-danger {
   background-color: colors.$danger-light;
-  border: colors.$danger-dark;
+  border-color: colors.$danger-dark;
 
   .checkmark {
     color: colors.$danger-dark;

@@ -7,10 +7,13 @@ const Checkbox = ({
   onChange,
   style,
   size = "md",
-  radius = "lg",
+  radius = "sm",
   border = "sm",
   checked = false,
   className = "",
+  checkmarkColor = "currentColor",
+  children,
+  labelPosition = "right",
 }) => {
   // Combine CSS module class names with any global Tailwind classes passed as props
   const combinedClassNames = `
@@ -39,25 +42,26 @@ const Checkbox = ({
 
   return (
     <div
+      className={`${styles.container} ${styles[`label-${labelPosition}`]}`}
+      style={style}
+      onClick={handleToggle}
       role="checkbox"
       aria-checked={isChecked}
       aria-label={aria}
-      onClick={handleToggle}
-      style={style}
-      className={finalClassNames}
     >
-      {isChecked && (
-        <svg
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-          className={styles.checkmark}
-        >
-          <path
-            d="M20.285 6.71a1 1 0 0 0-1.414-1.414l-9.9 9.9-3.958-3.958a1 1 0 0 0-1.414 1.414l4.672 4.672a1 1 0 0 0 1.414 0l10.6-10.6z"
-            fill="currentColor" // Use currentColor to make the icon inherit the color
-          />
-        </svg>
-      )}
+      <div className={finalClassNames}>
+        {isChecked && (
+          <svg
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            className={styles.checkmark}
+            style={{ fill: checkmarkColor }}
+          >
+            <path d="M20.285 6.71a1 1 0 0 0-1.414-1.414l-9.9 9.9-3.958-3.958a1 1 0 0 0-1.414 1.414l4.672 4.672a1 1 0 0 0 1.414 0l10.6-10.6z" />
+          </svg>
+        )}
+      </div>
+      {children && <span className={styles.label}>{children}</span>}
     </div>
   );
 };

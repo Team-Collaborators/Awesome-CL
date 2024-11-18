@@ -3,11 +3,9 @@ import "./Playground.scss";
 // import Button from "../../component_testing/Button/Button";
 // import TestTailwind from "../../component_testing/TestTailwind";
 import Modal from "../../component_testing/Modal/Modal";
-import Switch from "../../component_testing/Switch/Switch";
 import { DiReact } from "react-icons/di";
 import { FaReact } from "react-icons/fa";
 import { TbBackground } from "react-icons/tb";
-//import Checkbox from "../../component_testing/Checkbox/Checkbox";
 
 const Playground = () => {
   const [isContentVisible, setIsContentVisible] = useState(false);

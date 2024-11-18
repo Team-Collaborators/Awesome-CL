@@ -2,8 +2,24 @@
 @use "../lib-styles/colors.scss";
 @use "../lib-styles/paddings.scss";
 @use "../lib-styles/radius.scss";
+@use "../lib-styles/component-sizes.scss";
+@use "../lib-styles/font-sizes.scss";
 
 // Base styles for the switch container
+.switchContainer {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 6px;
+}
+
+// Label styling
+.switchLabel {
+  font-size: var(--font-size-sm);
+  color: inherit;
+  user-select: none;
+}
+
 .switch {
   display: flex;
   justify-content: center;
@@ -26,72 +42,44 @@
 }
 
 // Size classes
-.size-xs {
-  width: 1.5rem;
-  height: 0.75rem;
-  .slider {
-    width: 0.6rem;
-    height: 0.6rem;
-    left: 2px;
-
-    &.checked {
-      left: calc(100% - 0.6rem - 1px);
-    }
-  }
-}
-
 .size-sm {
-  width: 1.75rem;
-  height: 0.875rem;
+  width: var(--switch-track-width-sm);
+  height: var(--switch-track-height-sm);
   .slider {
-    width: 0.7rem;
-    height: 0.7rem;
+    width: var(--switch-thumb-size-sm);
+    height: var(--switch-thumb-size-sm);
     left: 2px;
 
     &.checked {
-      left: calc(100% - 0.7rem - 1px);
+      left: calc(100% - var(--switch-thumb-size-sm) - 2px);
     }
   }
 }
 
 .size-md {
-  width: 2rem;
-  height: 1rem;
+  width: var(--switch-track-width-md);
+  height: var(--switch-track-height-md);
   .slider {
-    width: 0.8rem;
-    height: 0.8rem;
+    width: var(--switch-thumb-size-md);
+    height: var(--switch-thumb-size-md);
     left: 2px;
 
     &.checked {
-      left: calc(100% - 0.8rem - 2px);
+      left: calc(100% - var(--switch-thumb-size-md) - 2px);
     }
   }
 }
 
 .size-lg {
-  width: 2.5rem;
-  height: 1.25rem;
+  width: var(--switch-track-width-lg);
+  height: var(--switch-track-height-lg);
   .slider {
-    width: 1rem;
-    height: 1rem;
+    width: var(--switch-thumb-size-lg);
+    height: var(--switch-thumb-size-lg);
     left: 2px;
 
     &.checked {
-      left: calc(100% - 1rem - 2px);
-    }
-  }
-}
-
-.size-xl {
-  width: 3rem;
-  height: 1.5rem;
-  .slider {
-    width: 1.2rem;
-    height: 1.2rem;
-    left: 2px;
-
-    &.checked {
-      left: calc(100% - 1.2rem - 2px);
+      left: calc(100% - var(--switch-thumb-size-lg) - 2px);
     }
   }
 }
@@ -122,25 +110,17 @@
 .border-none {
   border: none;
 }
-
-.border-xs {
+.border-sm {
   border: var(--border-xs);
 }
-.border-sm {
+.border-md {
   border: var(--border-sm);
 }
-.border-md {
+.border-lg {
   border: var(--border-md);
 }
 
-.border-lg {
-  border: var(--border-lg);
-}
-.border-xl {
-  border: var(--border-xl);
-}
-
-// Color variants
+/* Color variants */
 .color-default-light {
   background-color: colors.$default-light;
   border-color: colors.$default-dark;
