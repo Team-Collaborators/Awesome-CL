@@ -7,6 +7,8 @@ import AccordionItem from "../../component_testing/Accordion/AccordionItem";
 import Search from "../../component_testing/Search/Search";
 import Switch from "../../component_testing/Switch/Switch";
 import Checkbox from "../../component_testing/Checkbox/Checkbox";
+import { FaPlus } from "react-icons/fa6";
+import { FaMinus } from "react-icons/fa";
 
 const components = {
   //Object with all components
@@ -28,12 +30,12 @@ export default function DynamicComponent({ type, props, children }) {
   }
 
   const childrenElements = Array.isArray(children)
-    ? children.map((child) => {
-        console.log(typeof child.type);
+    ? children.map((child, index) => {
         return DynamicComponent({
           type: child.type,
           props: child.props,
           children: child.children,
+          key: index,
         });
       })
     : children;

@@ -1,5 +1,9 @@
 @use "../lib-styles/radius.scss";
 
+.accordion-wrapper {
+  width: 100%;
+}
+
 .accordion-item {
   border-bottom: 2px solid;
   &:last-child {
