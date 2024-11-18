@@ -6,14 +6,17 @@ $checkbox-size-lg: 1.5rem;
 $switch-track-width-sm: 2rem;
 $switch-track-width-md: 2.5rem;
 $switch-track-width-lg: 3rem;
+$switch-track-width-xl: 3.5rem;
 
 $switch-track-height-sm: 1rem;
 $switch-track-height-md: 1.25rem;
 $switch-track-height-lg: 1.5rem;
+$switch-track-height-xl: 1.75rem;
 
 $switch-thumb-size-sm: 0.875rem;
 $switch-thumb-size-md: 1rem;
 $switch-thumb-size-lg: 1.25rem;
+$switch-thumb-size-xl: 1.5rem;
 
 $spinner-diameter-sm: 1.5rem;
 $spinner-diameter-md: 2rem;
@@ -32,14 +35,17 @@ $spinner-thickness-lg: 8px;
   --switch-track-width-sm: #{$switch-track-width-sm};
   --switch-track-width-md: #{$switch-track-width-md};
   --switch-track-width-lg: #{$switch-track-width-lg};
+  --switch-track-width-xl: #{$switch-track-width-xl};
 
   --switch-track-height-sm: #{$switch-track-height-sm};
   --switch-track-height-md: #{$switch-track-height-md};
   --switch-track-height-lg: #{$switch-track-height-lg};
+  --switch-track-height-xl: #{$switch-track-height-xl};
 
   --switch-thumb-size-sm: #{$switch-thumb-size-sm};
   --switch-thumb-size-md: #{$switch-thumb-size-md};
   --switch-thumb-size-lg: #{$switch-thumb-size-lg};
+  --switch-thumb-size-xl: #{$switch-thumb-size-xl};
 
   --spinner-diameter-sm: #{$spinner-diameter-sm};
   --spinner-diameter-md: #{$spinner-diameter-md};
@@ -48,6 +54,7 @@ $spinner-thickness-lg: 8px;
   --spinner-thickness-sm: #{$spinner-thickness-sm};
   --spinner-thickness-md: #{$spinner-thickness-md};
   --spinner-thickness-lg: #{$spinner-thickness-lg};
+
 }
 
 // Tablet Component Sizes
@@ -77,17 +84,21 @@ $spinner-thickness-lg: 8px;
     --checkbox-size-sm: 0.8rem;
     --checkbox-size-md: 1rem;
     --checkbox-size-lg: 1.2rem;
+    --checkbox-size-xl: 1.4rem;
 
     --switch-track-width-sm: 1.6rem;
     --switch-track-width-md: 2rem;
     --switch-track-width-lg: 2.5rem;
+    --switch-track-width-xl: 3rem;
 
     --switch-track-height-sm: 0.8rem;
     --switch-track-height-md: 1rem;
     --switch-track-height-lg: 1.2rem;
+    --switch-track-height-xl: 1.4rem;
 
     --switch-thumb-size-sm: 0.75rem;
     --switch-thumb-size-md: 0.85rem;
     --switch-thumb-size-lg: 1rem;
+    --switch-thumb-size-xl: 1.2rem;
   }
 }

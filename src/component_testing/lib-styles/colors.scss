@@ -1,8 +1,9 @@
+// Light theme colors (default)
 $primary-base: rgb(0, 0, 255);
 $primary-dark: darkblue;
 $primary-light: rgb(166, 166, 217);
 
-$default-base: grey;
+$default-base: lightgrey;
 $default-dark: black;
 $default-light: white;
 
@@ -21,3 +22,85 @@ $warning-light: rgb(219, 192, 123);
 $danger-base: red;
 $danger-dark: darkred;
 $danger-light: rgb(209, 121, 121);
+
+// Dark theme colors
+$dark-primary-base: rgb(0, 0, 139);
+$dark-primary-dark: darkblue;
+$dark-primary-light: rgb(80, 80, 120);
+
+$dark-default-base: rgb(50, 50, 50);
+$dark-default-dark: black;
+$dark-default-light: rgb(79, 79, 79);
+
+$dark-secondary-base: rgb(83, 2, 83);
+$dark-secondary-dark: rgb(83, 2, 83);
+$dark-secondary-light: rgb(120, 50, 120);
+
+$dark-success-base: rgb(0, 128, 0);
+$dark-success-dark: darkgreen;
+$dark-success-light: rgb(60, 120, 60);
+
+$dark-warning-base: rgb(255, 204, 0);
+$dark-warning-dark: rgb(155, 105, 0);
+$dark-warning-light: rgb(150, 125, 80);
+
+$dark-danger-base: rgb(139, 0, 0);
+$dark-danger-dark: darkred;
+$dark-danger-light: rgb(150, 50, 50);
+
+// Root variables for light mode
+:root {
+  --default-base: #{$default-base};
+  --default-dark: #{$default-dark};
+  --default-light: #{$default-light};
+
+  --primary-base: #{$primary-base};
+  --primary-dark: #{$primary-dark};
+  --primary-light: #{$primary-light};
+
+  --secondary-base: #{$secondary-base};
+  --secondary-dark: #{$secondary-dark};
+  --secondary-light: #{$secondary-light};
+
+  --success-base: #{$success-base};
+  --success-dark: #{$success-dark};
+  --success-light: #{$success-light};
+
+  --warning-base: #{$warning-base};
+  --warning-dark: #{$warning-dark};
+  --warning-light: #{$warning-light};
+
+  --danger-base: #{$danger-base};
+  --danger-dark: #{$danger-dark};
+  --danger-light: #{$danger-light};
+
+  //Dark Mode Colors (Override using prefers-color-scheme)
+  // then remove dark in front, because need same name to override
+  // @media (prefers-color-scheme: dark) {
+
+  --dark-default-base: #{$dark-default-base};
+  --dark-default-dark: #{$dark-default-dark};
+  --dark-default-light: #{$dark-default-light};
+
+  --dark-primary-base: #{$dark-primary-base};
+  --dark-primary-dark: #{$dark-primary-dark};
+  --dark-primary-light: #{$dark-primary-light};
+
+  --dark-secondary-base: #{$dark-secondary-base};
+  --dark-secondary-dark: #{$dark-secondary-dark};
+  --dark-secondary-light: #{$dark-secondary-light};
+
+  --dark-success-base: #{$dark-success-base};
+  --dark-success-dark: #{$dark-success-dark};
+  --dark-success-light: #{$dark-success-light};
+
+  --dark-warning-base: #{$dark-warning-base};
+  --dark-warning-dark: #{$dark-warning-dark};
+  --dark-warning-light: #{$dark-warning-light};
+
+  --dark-danger-base: #{$dark-danger-base};
+  --dark-danger-dark: #{$dark-danger-dark};
+  --dark-danger-light: #{$dark-danger-light};
+
+  // }
+}

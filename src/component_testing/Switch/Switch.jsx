@@ -3,30 +3,31 @@ import styles from "../Switch/Switch.module.scss";
 
 const Switch = ({
   aria = "switch",
-  color = "default-light",
+  color = "default",
   onChange,
   style,
   size = "md",
   radius = "lg",
-  border = "sm",
   checked = false,
   className = "",
-  sliderColor = "default-dark",
+  sliderColor = "",
   children,
 }) => {
+ 
+  const [isChecked, setIsChecked] = useState(checked); 
+  
   // Combine CSS module class names with any global Tailwind classes passed as props
   const combinedClassNames = `
  ${styles.switch} 
- ${styles[`border-${border}`]} 
  ${styles[`radius-${radius}`]} 
- ${styles[`color-${color}`]} 
  ${styles[`size-${size}`]} 
+  ${styles[`color-${color}`]}
+   ${isChecked ? styles.checked : ""}
  `.trim();
 
   // Final class names with Tailwind/global classes appended last for easy overriding
   const finalClassNames = `${combinedClassNames} ${className}`.trim();
 
-  const [isChecked, setIsChecked] = useState(checked);
 
   // Handle toggle change
   const handleToggle = () => {
@@ -36,7 +37,7 @@ const Switch = ({
       return newCheckedState;
     });
   };
-
+  console.log("isChecked", isChecked);
   return (
     <div className={styles.switchContainer}>
       <div
@@ -44,12 +45,14 @@ const Switch = ({
         aria-checked={isChecked}
         aria-label={aria}
         onClick={handleToggle}
-        style={style}
+        style={style} // Allow for inline styles to be passed
         className={finalClassNames}
       >
         <div
           className={`${styles.slider} ${isChecked ? styles.checked : ""}`}
-          style={{ backgroundColor: sliderColor }}
+          style={{
+            backgroundColor: sliderColor,
+          }}
         />
       </div>{" "}
       {children && <label className={styles.switchLabel}>{children}</label>}
