@@ -15,7 +15,7 @@
 # Components needed secondary
 
 - avatar
-- user
+- usergit ch
 - breadcrumbs
 - calendar
 - date picker

@@ -7,7 +7,7 @@
 
 // Base styles for the switch container
 .switchContainer {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   cursor: pointer;
   gap: 6px;
@@ -15,7 +15,6 @@
 
 // Label styling
 .switchLabel {
-  font-size: var(--font-size-sm);
   color: inherit;
   user-select: none;
 }
@@ -27,6 +26,7 @@
   position: relative;
   cursor: pointer;
   transition: all 0.3s ease;
+  background-color: var(--default-base);
 }
 
 // Slider styles
@@ -39,6 +39,7 @@
   width: 50%;
   height: 100%;
   left: 2px;
+  background-color: var(--default-light);
 }
 
 // Size classes
@@ -84,102 +85,116 @@
   }
 }
 
-// Radius variants
-.radius-none {
-  border-radius: 0;
-}
-
-.radius-sm {
-  border-radius: 4px;
-}
-
-.radius-md {
-  border-radius: 8px;
-}
-
-.radius-lg {
-  border-radius: 12px;
-}
-
-.radius-full {
-  border-radius: 50%;
-}
-
-// Border variants
-
-.border-none {
-  border: none;
-}
-.border-sm {
-  border: var(--border-xs);
-}
-.border-md {
-  border: var(--border-sm);
-}
-.border-lg {
-  border: var(--border-md);
-}
-
-/* Color variants */
-.color-default-light {
-  background-color: colors.$default-light;
-  border-color: colors.$default-dark;
-
+.size-xl {
+  width: var(--switch-track-width-xl);
+  height: var(--switch-track-height-xl);
   .slider {
-    background-color: colors.$default-dark;
+    width: var(--switch-thumb-size-xl);
+    height: var(--switch-thumb-size-xl);
+    left: 2px;
+
+    &.checked {
+      left: calc(100% - var(--switch-thumb-size-xl) - 2px);
+    }
   }
 }
 
-.color-default-dark {
-  background-color: colors.$default-dark;
-  border-color: colors.$default-light;
+// Radius variants
+.radius-none {
+  border-radius: var(--border-radius-none);
+}
 
-  .slider {
-    background-color: colors.$default-light;
+.radius-sm {
+  border-radius: var(--border-radius-md);
+}
+
+.radius-lg {
+  border-radius: var(--border-radius-lg);
+}
+
+
+/* Color variants */
+.color-default {
+  &.checked {
+    background-color: var(--default-dark);
   }
 }
 
 .color-primary {
-  background-color: colors.$primary-dark;
-  border-color: colors.$primary-light;
-
-  .slider {
-    background-color: colors.$primary-light;
+  &.checked {
+    background-color: var(--primary-base);
   }
 }
 
 .color-secondary {
-  background-color: colors.$secondary-dark;
-  border-color: colors.$secondary-light;
-
-  .slider {
-    background-color: colors.$secondary-light;
+  &.checked {
+    background-color: var(--secondary-base);
   }
 }
 
 .color-success {
-  background-color: colors.$success-dark;
-  border-color: colors.$success-light;
-
-  .slider {
-    background-color: colors.$success-light;
+  &.checked {
+    background-color: var(--success-base);
   }
 }
 
 .color-warning {
-  background-color: colors.$warning-dark;
-  border-color: colors.$warning-light;
-
-  .slider {
-    background-color: colors.$warning-light;
+  &.checked {
+    background-color: var(--warning-base);
   }
 }
 
 .color-danger {
-  background-color: colors.$danger-dark;
-  border-color: colors.$danger-light;
+  &.checked {
+    background-color: var(--danger-base);
+  }
+}
 
+// Dark mode adjustments
+@media (prefers-color-scheme: dark) {
+  .switch {
+    background-color: var(--dark-default-light);
+  }
   .slider {
-    background-color: colors.$danger-light;
+    background-color: --default-base;
+    &.checked {
+      background-color: var(--dark-default-dark);
+    }
+  }
+
+  .color-default {
+    &.checked {
+      background-color: var(--default-light);
+    }
+  }
+
+  .color-primary {
+    &.checked {
+      background-color: var(--dark-primary-base);
+    }
+  }
+
+  .color-secondary {
+    &.checked {
+      background-color: var(--dark-secondary-base);
+    }
+  }
+
+  .color-success {
+    &.checked {
+      background-color: var(--dark-success-base);
+    }
+  }
+
+  .color-warning {
+    &.checked {
+      background-color: var(--dark-warning-base);
+    }
+  }
+
+  .color-danger {
+    &.checked {
+      background-color: var(--dark-danger-base);
+    }
   }
 }
