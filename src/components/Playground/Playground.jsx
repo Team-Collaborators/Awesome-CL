@@ -33,26 +33,6 @@ const Playground = () => {
         {/* <Modal modalHeader={"Modal header"} modalBody={"Body"}>
           Hello
         </Modal> */}
-
-        <Checkbox border="sm">Hello</Checkbox>
-        <br />
-        <br />
-        <Switch size="xl">default xl</Switch>
-        <Switch color="primary" border="md" size="xl">
-          Hello
-        </Switch>
-        <Switch color="secondary"  size="xl">
-          Hello
-        </Switch>
-        <Switch style={{backgroundColor: "pink"}} sliderColor="red" size="xl">
-          Hello
-        </Switch>
-        <Switch color="success" size="xl">
-          Hello
-        </Switch>
-        <Switch color="warning" size="xl">
-          Hello
-        </Switch>
       </div>
     </div>
   );
