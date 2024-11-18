@@ -17,9 +17,9 @@ const Footer = ({ isSidebarOpen }) => {
           <div className={styles.links}>
             <h4>Quick Links</h4>
             <a href="/about">About Us</a>
-            <a href="/services">Services</a>
             <a href="/contact">Contact</a>
-            <a href="/privacy">Privacy Policy</a>
+            <a href="/services">Services</a>
+            {/* <a href="/privacy">Privacy Policy</a> */}
           </div>
           <div className={styles.contact}>
             <h4>Contact Us</h4>

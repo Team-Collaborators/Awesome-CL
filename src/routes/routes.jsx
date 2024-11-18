@@ -8,13 +8,11 @@ import { RenderPages } from "../components/renderers/RenderPages/RenderPages";
 import ContactPage from "../pages/ContactPage/ContactPage";
 import AboutUs from "../pages/AboutUs/AboutUs";
 
-export default function MainRoutes({ isDarkMode, toggleTheme }) {
+export default function MainRoutes() {
   return (
     <Router>
       <Routes>
-        <Route
-          element={<Layout isDarkMode={isDarkMode} toggleTheme={toggleTheme} />}
-        >
+        <Route element={<Layout />}>
           {/* Home page route */}
           <Route index path="/" element={<HomePage />} />
 

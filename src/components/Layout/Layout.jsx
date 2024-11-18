@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Outlet, useLocation } from "react-router-dom";
+import { useTheme } from "../../context/ThemeContext";
 import Navbar from "../Navbar/Navbar";
 import Sidebar2 from "../Sidebar2/Sidebar2";
 import Footer from "../Footer/Footer";
@@ -7,7 +8,8 @@ import { sidebarLinks, navbarLinks } from "../../../public/data/links";
 import "../../styles/main.scss";
 
 // Main layout that wraps the entire app, containing the header, sidebar, main content, and footer.
-const Layout = ({ isDarkMode, toggleTheme }) => {
+const Layout = () => {
+  const { isDarkMode } = useTheme();
   const location = useLocation();
 
   let links = [];
@@ -23,16 +25,12 @@ const Layout = ({ isDarkMode, toggleTheme }) => {
     links = sidebarLinks.backend;
     showSidebar = true;
   }
-  console.log("showSidebar: ", showSidebar)
+  console.log("showSidebar: ", showSidebar);
 
   return (
     // Add dark-theme class conditionally based on isDarkMode
     <div className={`app-container ${isDarkMode ? "dark-theme" : ""}`}>
-      <Navbar
-        isDarkMode={isDarkMode}
-        toggleTheme={toggleTheme}
-        links={navbarLinks}
-      />
+      <Navbar links={navbarLinks} />
       <div className="layout-content">
         {showSidebar && <Sidebar2 links={links} />}{" "}
         <main
@@ -44,7 +42,7 @@ const Layout = ({ isDarkMode, toggleTheme }) => {
           <Outlet />
         </main>
       </div>
-      <Footer isSidebarOpen={showSidebar}/>
+      <Footer isSidebarOpen={showSidebar} />
     </div>
   );
 };
