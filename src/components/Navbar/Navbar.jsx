@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
+import { useTheme } from "../../context/ThemeContext";
 import "./Navbar.scss";
-import logo1 from "../../assets/images/logo-a.png";
+import logo1 from "../../assets/images/logo-mountain.png";
 
 import { FaSun, FaMoon } from "react-icons/fa";
 //import { RxHamburgerMenu } from "react-icons/rx"; // Hamburger Menu for Mobile view
 import SearchBar from "../SearchBar/SearchBar";
 
-const Navbar = ({ isDarkMode, toggleTheme, links }) => {
+const Navbar = ({ links }) => {
+  const { isDarkMode, toggleTheme } = useTheme();
   return (
     <>
       <nav className="navbar">

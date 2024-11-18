@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button } from "AwesomeCL";
+import { MdClose } from "react-icons/md";
 import styles from "./Modal.module.scss";
 
 const Modal = ({
@@ -29,7 +29,7 @@ const Modal = ({
    ${styles[`placement-${placement}`]}
    ${styles[`backdrop-${backdrop}`]}
    ${styles[`color-${color}`]}
-   ${scroll !== "none" ? styles[`scroll-${scroll}`] : ""}
+  ${scroll !== "none" ? styles[`scroll-${scroll}`] : ""}
    `.trim();
 
   const finalClassNames = `${combinedClassNames} ${classNames}`.trim();
@@ -40,7 +40,6 @@ const Modal = ({
       <button className={styles.openButton} onClick={handleOpen}>
         {children}
       </button>
-
       {isVisible && (
         <div
           className={`${styles.backdrop} ${styles[`backdrop-${backdrop}`]}`}
@@ -54,7 +53,7 @@ const Modal = ({
             <div className={styles.modalBody}>{modalBody}</div>
             {/* Close button inside the modal */}
             <button className={styles.closeButton} onClick={handleClose}>
-              Close
+              <MdClose />
             </button>
           </aside>
         </div>
