@@ -111,9 +111,12 @@
 }
 
 // Color classes with variants (subtle, solid)
+.variant-subtle {
+  border: none;
+}
+
 .color-default.variant-subtle {
   background-color: var(--default-base);
-  border: none;
   .checkmark {
     color: var(--default-dark);
   }
@@ -127,7 +130,6 @@
 
 .color-primary.variant-subtle {
   background-color: var(--primary-light);
-  border: none;
   .checkmark {
     color: var(--primary-dark);
   }
@@ -141,7 +143,6 @@
 
 .color-secondary.variant-subtle {
   background-color: var(--secondary-light);
-  border: none;
   .checkmark {
     color: var(--secondary-dark);
   }
@@ -155,7 +156,6 @@
 
 .color-success.variant-subtle {
   background-color: var(--success-light);
-  border: none;
   .checkmark {
     color: var(--dark-success-dark);
   }
@@ -170,7 +170,6 @@
 
 .color-warning.variant-subtle {
   background-color: var(--warning-light);
-  border: none;
   .checkmark {
     color: var(--warning-dark);
 
@@ -185,7 +184,6 @@
 
 .color-danger.variant-subtle {
   background-color: var(--danger-light);
-  border-color: var(--danger-dark);
   .checkmark {
     color: var(--danger-dark);
   }
