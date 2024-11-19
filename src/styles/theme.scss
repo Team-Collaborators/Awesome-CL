@@ -7,15 +7,19 @@
   --input-bg-color: #f0f0f0;
   --input-border-color: #ccc;
   --input-focus-color: #095874;
+  --button-bg-color: #d4d4d8;
+  --team-bg-color: rgba(130, 130, 132, 0.15);
 }
 
 body.dark-theme {
   --primary-color: #2b2b2b;
   --secondary-color: #1c1c1c;
-  --background-color: #000000; /* Dark mode background */
-  --text-color: #e0e0e0; /* Dark mode text color */
+  --background-color: #282828; /* Dark mode background */
+  --text-color: #e1e0e0; /* Dark mode text color */
   --optional-color: #7a3d99;
-  --input-bg-color: #1e1e1e;
+  --input-bg-color: #282828d4;
   --input-border-color: #444444;
   --input-focus-color: #095874;
+  --button-bg-color: #3f3f46;
+  --team-bg-color: rgba(50, 50, 50, 0.5);
 }

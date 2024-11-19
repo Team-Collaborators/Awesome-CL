@@ -1,3 +1,5 @@
+@use "../../node_modules/AwesomeCL/dist/exports.css";
+
 @use "sass:map";
 @tailwind base;
 @tailwind components;
@@ -8,11 +10,20 @@ $primary-color: #083748;
 $secondary-color: #083e52;
 $optional-color: #5a2778;
 $slightlyLighter-color: #095874;
-$background-color: #181818;
-$text-color: #ffffff;
-$border-color: 1px solid rgba(255, 255, 255, 0.2);
+$background-color: #252525;
+$dark-purple: #57548d;
 
+$text-color: #ffffff;
+
+$border-color: 1px solid rgba(255, 255, 255, 0.2);
 $font-stack: "Roboto", sans-serif;
+
+// Font sizes
+$title-font-size: 2.5rem;
+$h1-font-size: 2rem;
+$h2-font-size: 1.75rem;
+$h3-font-size: 1.5rem;
+$paragraph-font-size: 1rem;
 
 // Define breakpoints map
 $breakpoints: (

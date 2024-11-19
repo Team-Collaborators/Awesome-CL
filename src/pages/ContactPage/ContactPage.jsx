@@ -1,6 +1,6 @@
-import ContactForm from "../../components/ContactPage/ContactForm/ContactForm.jsx";
-import ContactDetails from "../../components/ContactPage/ContactDetails/ContactDetails.jsx";
-import FAQSection from "../../components/ContactPage/FAQ/FAQSection.jsx";
+import ContactForm from "../../components/ContactPageComponents/ContactForm/ContactForm.jsx";
+import ContactDetails from "../../components/ContactPageComponents/ContactDetails/ContactDetails.jsx";
+import FAQSection from "../../components/ContactPageComponents/FAQ/FAQSection.jsx";
 
 const ContactPage = () => {
   return (

@@ -1,39 +1,65 @@
 import React, { useState } from "react";
-import { Button } from "AwesomeCL";
-export default function Modal({
-  children = "Open Modal", //text on the button
-  modalHeader, //
+import { MdClose } from "react-icons/md";
+import styles from "./Modal.module.scss";
+
+const Modal = ({
+  children = "button",
+  modalHeader,
   modalBody,
-  size = "md", // size of the modal, default size
-  radius = "md", // radius from the modal, default border radius
+  size = "md",
+  radius = "md",
   placement = "center",
-  backdrop = "transparent", // background color of the backdrop: blur, transparent, color( should be the color included)
+  backdrop = "transparent",
+  color = "primary",
   classNames = "",
-}) {
-  const [open, setOpen] = useState(false);
-  //   const combinedClassNames = `
-  //   ${styles.button}
-  //   ${styles[`border-${border}`]}
-  //   ${styles[`radius-${radius}`]}
-  //   ${styles[`color-${color}`]}
-  //   ${styles[`size-${size}`]}
-  //   `.trim();
-  //   const finalClassNames = `${combinedClassNames} ${className}`.trim();
+}) => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  const handleOpen = () => {
+    setIsVisible(true);
+  };
+  const handleClose = () => {
+    setIsVisible(false);
+  };
+
+  const combinedClassNames = `
+   ${styles.modal}
+   ${styles[`size-${size}`]}
+   ${styles[`radius-${radius}`]}
+   ${styles[`placement-${placement}`]}
+   ${styles[`backdrop-${backdrop}`]}
+   ${styles[`color-${color}`]}
+  ${scroll !== "none" ? styles[`scroll-${scroll}`] : ""}
+   `.trim();
+
+  const finalClassNames = `${combinedClassNames} ${classNames}`.trim();
+
   return (
     <>
-      <main>
-        {open ? (
-          <aside>
-            <h2>{modalHeader}</h2>
-            <p>{modalBody}</p>
-            <Button size={"md"} onClick={() => setOpen(false)}>
-              X
-            </Button>
+      {/* Initial button to open the modal */}
+      <button className={styles.openButton} onClick={handleOpen}>
+        {children}
+      </button>
+      {isVisible && (
+        <div
+          className={`${styles.backdrop} ${styles[`backdrop-${backdrop}`]}`}
+          onClick={handleClose}
+        >
+          <aside className={finalClassNames} role="dialog" aria-modal="true">
+            {/* Modal content */}
+            {modalHeader && (
+              <div className={styles.modalHeader}>{modalHeader}</div>
+            )}
+            <div className={styles.modalBody}>{modalBody}</div>
+            {/* Close button inside the modal */}
+            <button className={styles.closeButton} onClick={handleClose}>
+              <MdClose />
+            </button>
           </aside>
-        ) : (
-          <Button children={children} onClick={() => setOpen(true)} />
-        )}
-      </main>
+        </div>
+      )}
     </>
   );
-}
+};
+
+export default Modal;

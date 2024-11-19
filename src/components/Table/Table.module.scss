@@ -1,0 +1,121 @@
+// @use "../../styles/main.scss" as styles;
+
+// :root {
+//   --table-header-text-color: #e0e0e0; //Default text color (light mode)
+// }
+
+// body.dark-theme {
+//   --table-header-text-color: #d4d4d8; //Dark mode text color for the table header
+// }
+
+// .table_container {
+//   padding: 1rem;
+//   border-radius: 8px;
+//   overflow: hidden;
+//   background-color: rgba(177, 177, 177, 0.3);
+//   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+//   transition: transform 0.2s;
+//   max-width: 600px;
+//   margin: 10vw auto;
+//   font-family: styles.$font-stack;
+// }
+// .table {
+//   width: 100%;
+//   border-collapse: collapse;
+// }
+// .table_header {
+//   background-color: styles.$secondary-color;
+//   color: var(--table-header-text-color);
+//   padding: 10px;
+//   text-align: left;
+//   font-size: 1.2em;
+//   font-weight: bold;
+// }
+// .table_cell {
+//   padding: 10px;
+//   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+//   color: rgba(0, 0, 0, 0.87);
+// }
+// .table_cell:nth-child(even) {
+//   background-color: rgba(255, 255, 255, 0.1);
+// }
+// .table_cell:nth-child(odd) {
+//   background-color: rgba(255, 255, 255, 0.2);
+// }
+
+// tr:hover {
+//   background-color: rgba(0, 0, 0, 0.05);
+// }
+
+@use "../../styles/main.scss" as styles;
+
+.table_container {
+  padding: 1.5rem;
+  border-radius: 10px;
+  overflow: hidden;
+
+  // border: 1px solid #4444440e;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 12px 24px rgba(0, 0, 0, 0.1);
+
+  max-width: 100%;
+  margin: 5vh auto;
+  font-family: styles.$font-stack;
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+
+  @media (max-width: 768px) {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+.table_header {
+  padding: 1rem;
+  text-align: left;
+  font-size: 1.15rem;
+  font-weight: 600;
+  border-bottom: 1px solid #444;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+}
+
+.table_cell {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #444;
+
+  text-align: left;
+
+  @media (max-width: 768px) {
+    display: block;
+    padding: 0.5rem 0.75rem;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: #6867673d;
+    border-bottom: 1px solid #888;
+  }
+}
+
+tr {
+  @media (max-width: 768px) {
+    display: block;
+    margin-bottom: 1rem;
+  }
+}
+
+tr:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}

@@ -1,58 +1,110 @@
 @use "../lib-styles/borders.scss";
 @use "../lib-styles/colors.scss";
-@use "../lib-styles/font-sizes.scss";
 @use "../lib-styles/paddings.scss";
 @use "../lib-styles/radius.scss";
+@use "../lib-styles/component-sizes.scss";
+@use "../lib-styles/font-sizes.scss";
 
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 2rem;
-  height: 2rem;
+// Base styles for the switch container
+.switchContainer {
+  display: inline-flex;
+  align-items: center;
   cursor: pointer;
-  transition: all 03s ease;
+  gap: 6px;
 }
 
+// Label styling
+.switchLabel {
+  color: inherit;
+  user-select: none;
+}
+
+.switch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: var(--default-base);
+}
+
+// Slider styles
 .slider {
-  top: 2px;
-  left: 2px;
-  width: 30px;
-  height: 30px;
-  background-color: black;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   border-radius: 50%;
   transition: all 0.3s ease;
+  width: 50%;
+  height: 100%;
+  left: 2px;
+  background-color: var(--default-light);
+}
 
-  &.checked {
-    transform: translateX(26px);
+// Size classes
+.size-sm {
+  width: var(--switch-track-width-sm);
+  height: var(--switch-track-height-sm);
+  .slider {
+    width: var(--switch-thumb-size-sm);
+    height: var(--switch-thumb-size-sm);
+    left: 2px;
+
+    &.checked {
+      left: calc(100% - var(--switch-thumb-size-sm) - 2px);
+    }
   }
 }
 
-/* Size Classes */
-.size-sm {
-  font-size: var(--font-size-sm);
-  padding: var(--padding-sm);
-}
-
 .size-md {
-  font-size: var(--font-size-md);
-  padding: var(--padding-md);
+  width: var(--switch-track-width-md);
+  height: var(--switch-track-height-md);
+  .slider {
+    width: var(--switch-thumb-size-md);
+    height: var(--switch-thumb-size-md);
+    left: 2px;
+
+    &.checked {
+      left: calc(100% - var(--switch-thumb-size-md) - 2px);
+    }
+  }
 }
 
 .size-lg {
-  font-size: var(--font-size-lg);
-  padding: var(--padding-xl);
+  width: var(--switch-track-width-lg);
+  height: var(--switch-track-height-lg);
+  .slider {
+    width: var(--switch-thumb-size-lg);
+    height: var(--switch-thumb-size-lg);
+    left: 2px;
+
+    &.checked {
+      left: calc(100% - var(--switch-thumb-size-lg) - 2px);
+    }
+  }
 }
 
-/* radius classes */
+.size-xl {
+  width: var(--switch-track-width-xl);
+  height: var(--switch-track-height-xl);
+  .slider {
+    width: var(--switch-thumb-size-xl);
+    height: var(--switch-thumb-size-xl);
+    left: 2px;
+
+    &.checked {
+      left: calc(100% - var(--switch-thumb-size-xl) - 2px);
+    }
+  }
+}
+
+// Radius variants
 .radius-none {
   border-radius: var(--border-radius-none);
 }
 
 .radius-sm {
-  border-radius: var(--border-radius-sm);
-}
-
-.radius-md {
   border-radius: var(--border-radius-md);
 }
 
@@ -60,25 +112,89 @@
   border-radius: var(--border-radius-lg);
 }
 
-.radius-full {
-  border-radius: var(--border-radius-full);
-}
 
-/* color-classes */
-.color-primary {
-  background-color: colors.$primary-base;
-  color: white;
-  border-color: colors.$primary-dark;
-}
-
+/* Color variants */
 .color-default {
-  background-color: colors.$default-base;
-  color: white;
-  border-color: colors.$default-dark;
+  &.checked {
+    background-color: var(--default-dark);
+  }
+}
+
+.color-primary {
+  &.checked {
+    background-color: var(--primary-base);
+  }
 }
 
 .color-secondary {
-  background-color: colors.$secondary-base;
-  color: white;
-  border-color: colors.$secondary-dark;
+  &.checked {
+    background-color: var(--secondary-base);
+  }
+}
+
+.color-success {
+  &.checked {
+    background-color: var(--success-base);
+  }
+}
+
+.color-warning {
+  &.checked {
+    background-color: var(--warning-base);
+  }
+}
+
+.color-danger {
+  &.checked {
+    background-color: var(--danger-base);
+  }
+}
+
+// Dark mode adjustments
+@media (prefers-color-scheme: dark) {
+  .switch {
+    background-color: var(--dark-default-light);
+  }
+  .slider {
+    background-color: --default-base;
+    &.checked {
+      background-color: var(--dark-default-dark);
+    }
+  }
+
+  .color-default {
+    &.checked {
+      background-color: var(--default-light);
+    }
+  }
+
+  .color-primary {
+    &.checked {
+      background-color: var(--dark-primary-base);
+    }
+  }
+
+  .color-secondary {
+    &.checked {
+      background-color: var(--dark-secondary-base);
+    }
+  }
+
+  .color-success {
+    &.checked {
+      background-color: var(--dark-success-base);
+    }
+  }
+
+  .color-warning {
+    &.checked {
+      background-color: var(--dark-warning-base);
+    }
+  }
+
+  .color-danger {
+    &.checked {
+      background-color: var(--dark-danger-base);
+    }
+  }
 }

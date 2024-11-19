@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  color: styles.$text-color;
+  // color: styles.$text-color;
   margin-left: -20px;
 }
 
@@ -82,6 +82,7 @@
   margin-top: 20px;
 
   @media (max-width: 768px) {
+    width: 100%;
     padding: 20px;
     margin-top: 10px;
   }

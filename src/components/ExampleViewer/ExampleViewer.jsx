@@ -2,34 +2,34 @@ import React, { useState } from "react";
 import DynamicComponent from "../../components/DinamicComponent/DinamicComponent";
 import { RenderCode } from "../RenderCode/RenderCode";
 import Button from "../../component_testing/Button/Button";
-// import "./ExampleViewer.scss";
+import styles from "./ExampleViewer.module.scss";
 
 export default function ExampleViewer({ example }) {
   const [showPreview, setShowPreview] = useState(true);
   if (example) {
     return (
-      <section className="DynamicComponent">
-        <div className="toggle-buttons">
+      <section className={styles.DynamicComponent}>
+        <div className={styles.toggleButtons}>
           <Button
             onClick={() => setShowPreview(true)}
-            className={showPreview ? "active" : ""}
+            className={showPreview ? styles.active : ""}
           >
             Preview
           </Button>
           <Button
             onClick={() => setShowPreview(false)}
-            className={showPreview ? "active" : ""}
+            className={showPreview ? "" : styles.active}
           >
             Code
           </Button>
         </div>
         <div
-          className={`component-display ${
-            showPreview ? "preview-view" : "code-view"
+          className={`${styles.componentDisplay} ${
+            showPreview ? styles.previewView : styles.codeView
           }`}
         >
           {showPreview ? (
-            <ul className="component-ul">
+            <ul className={styles.componentUl}>
               {example.components.map((component, index) => {
                 const { type, props, children } = component;
 

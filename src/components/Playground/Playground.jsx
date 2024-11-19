@@ -1,54 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Playground.scss";
 // import Button from "../../component_testing/Button/Button";
 // import TestTailwind from "../../component_testing/TestTailwind";
 import Modal from "../../component_testing/Modal/Modal";
+import Checkbox from "../../component_testing/Checkbox/Checkbox";
 import Switch from "../../component_testing/Switch/Switch";
 
+import { DiReact } from "react-icons/di";
+import { FaReact } from "react-icons/fa";
+import { TbBackground } from "react-icons/tb";
+
 const Playground = () => {
+  const [isContentVisible, setIsContentVisible] = useState(false);
+  // Handle toggle of content visibility
+  const handleContentToggle = (newCheckedState) => {
+    setIsContentVisible(newCheckedState);
+  };
+
   return (
-    <section className="playground-wrapper">
+    <div className="playground-wrapper">
       <h1>Playground</h1>
       <p>This is the space to test new components</p>
-      <div className="playground-container">
-        {/* Default button */}
-        {/* <Button>Default Button</Button> */}
-
-        {/* Primary button */}
-        {/* <Button color="primary">Primary Button</Button> */}
-
-        {/* Secondary button */}
-        {/* <Button color="secondary" radius="rounded">
-          Secondary Button
-        </Button> */}
-
-        {/* Button with custom style */}
-        {/* <Button
-          style={{
-            backgroundColor: "lightblue",
-            color: "white",
-            borderRadius: "50px",
-          }}
-        >
-          Custom Styled Button
-        </Button> */}
-        {/* Test div component styled with Tailwind only */}
-        {/* <TestTailwind /> */}
-        {/* Test button styled with Tailwind and props*/}
-        {/* <Button
-          border="xl"
-          radius="full"
-          className="hover:bg-pink-800 hover:text-gray-900"
-        >
-          Button component Button props and Tailwind style
-        </Button> */}
-
-        <Modal modalHeader={"Modal header"} modalBody={"Body"}>
+      <div
+        className="playground-container"
+        style={{
+          width: "100%",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        {/* <Modal modalHeader={"Modal header"} modalBody={"Body"}>
           Hello
-        </Modal>
-        <Switch color="secondary" radius="full" />
+        </Modal> */}
       </div>
-    </section>
+    </div>
   );
 };
 

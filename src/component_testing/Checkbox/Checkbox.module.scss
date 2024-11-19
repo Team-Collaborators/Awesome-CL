@@ -1,0 +1,178 @@
+@use "../lib-styles/borders.scss";
+@use "../lib-styles/colors.scss";
+@use "../lib-styles/paddings.scss";
+@use "../lib-styles/radius.scss";
+@use "../lib-styles/component-sizes.scss";
+@use "../lib-styles/font-sizes.scss";
+
+.container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.label {
+  font-size: var(--font-size-sm);
+  margin-left: 0.5rem;
+  user-select: none;
+  color: inherit;
+}
+
+.label-left {
+  flex-direction: row-reverse;
+  .label {
+    margin-left: 0;
+    margin-right: 0.5rem;
+  }
+}
+
+.label-right {
+  flex-direction: row;
+}
+
+.label-bottom {
+  flex-direction: column;
+  align-items: center;
+  .label {
+    margin-top: 0.5rem;
+  }
+}
+
+.label-top {
+  flex-direction: column-reverse;
+  align-items: center;
+  .label {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.checkbox {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  width: 95%;
+  height: 95%;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// Size classes
+.size-sm {
+  width: var(--checkbox-size-sm);
+  height: var(--checkbox-size-sm);
+}
+
+.size-md {
+  width: var(--checkbox-size-md);
+  height: var(--checkbox-size-md);
+}
+
+.size-lg {
+  width: var(--checkbox-size-lg);
+  height: var(--checkbox-size-lg);
+}
+
+/* Radius classes*/
+.radius-none {
+  border-radius: var(--border-radius-none);
+}
+
+.radius-sm {
+  border-radius: var(--border-radius-sm);
+}
+
+.radius-md {
+  border-radius: var(--border-radius-md);
+}
+
+.radius-full {
+  border-radius: var(--border-radius-full);
+}
+
+/* border-classes */
+.border-none {
+  border: none;
+}
+.border-sm {
+  border: var(--border-xs);
+}
+.border-md {
+  border: var(--border-sm);
+}
+.border-lg {
+  border: var(--border-md);
+}
+
+
+/* Color variants */
+.color-default-light {
+  background-color: colors.$default-light;
+  border-color: colors.$default-dark;
+
+  .checkmark {
+    color: colors.$default-dark;
+  }
+}
+
+.color-default-dark {
+  background-color: colors.$default-dark;
+  border-color: colors.$default-light;
+
+  .checkmark {
+    color: colors.$default-light;
+  }
+}
+
+.color-primary {
+  background-color: colors.$primary-light;
+  border-color: colors.$primary-dark;
+
+  .checkmark {
+    color: colors.$primary-dark;
+  }
+}
+
+.color-secondary {
+  background-color: colors.$secondary-light;
+  border-color: colors.$secondary-dark;
+
+  .checkmark {
+    color: colors.$secondary-dark;
+  }
+}
+
+.color-success {
+  background-color: colors.$success-light;
+  border-color: colors.$success-dark;
+
+  .checkmark {
+    color: colors.$success-dark;
+  }
+}
+
+.color-warning {
+  background-color: colors.$warning-light;
+  border-color: colors.$warning-dark;
+
+  .checkmark {
+    color: colors.$warning-dark;
+  }
+}
+
+.color-danger {
+  background-color: colors.$danger-light;
+  border-color: colors.$danger-dark;
+
+  .checkmark {
+    color: colors.$danger-dark;
+  }
+}

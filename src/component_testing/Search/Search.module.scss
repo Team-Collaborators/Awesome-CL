@@ -1,0 +1,221 @@
+@use "../lib-styles/borders.scss";
+@use "../lib-styles/colors.scss";
+@use "../lib-styles/font-sizes.scss";
+@use "../lib-styles/paddings.scss";
+@use "../lib-styles/radius.scss";
+
+@use "sass:color";
+
+* {
+  box-sizing: border-box;
+}
+
+.outer-wrapper {
+  display: flex;
+}
+
+.inner-wrapper {
+  display: flex;
+}
+
+.input {
+  &:hover {
+    opacity: 0.7;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+.button {
+  display: flex;
+  align-items: center;
+}
+
+.size-sm {
+  font-size: var(--font-size-sm);
+  padding: var(--padding-sm);
+}
+
+.size-md {
+  font-size: var(--font-size-md);
+  padding: var(--padding-md);
+}
+
+.size-lg {
+  font-size: var(--font-size-lg);
+  padding: var(--padding-xl);
+}
+
+.radius-none {
+  border-radius: var(--border-radius-none);
+}
+
+.radius-sm {
+  border-radius: var(--border-radius-sm);
+}
+
+.radius-md {
+  border-radius: var(--border-radius-md);
+}
+
+.radius-lg {
+  border-radius: var(--border-radius-lg);
+}
+
+.radius-full {
+  border-radius: var(--border-radius-full);
+}
+
+/* border-classes */
+
+.border-none {
+  border: none;
+}
+
+.border-default {
+  border: var(--border-sm);
+}
+.border-bottom {
+  border: none;
+  border-bottom: 2px solid;
+}
+
+/* color-classes */
+.color-primary {
+  border-color: colors.$primary-dark;
+  .inner-wrapper {
+    border-color: colors.$primary-dark;
+  }
+  .input {
+    background-color: colors.$primary-light;
+    color: colors.$primary-dark;
+    border-color: colors.$primary-dark;
+    &::placeholder {
+      color: colors.$primary-dark;
+      font-style: italic;
+    }
+  }
+  .button {
+    background-color: colors.$primary-base;
+    border-color: colors.$primary-dark;
+    color: colors.$primary-dark;
+  }
+}
+
+.color-default {
+  border-color: colors.$default-dark;
+  .inner-wrapper {
+    border-color: colors.$default-dark;
+  }
+  .input {
+    background-color: colors.$default-light;
+    color: colors.$default-dark;
+    border-color: colors.$default-dark;
+    &::placeholder {
+      color: colors.$default-dark;
+      font-style: italic;
+    }
+  }
+  .button {
+    background-color: colors.$default-base;
+    border-color: colors.$default-dark;
+    color: colors.$default-dark;
+  }
+}
+
+.color-secondary {
+  border-color: colors.$secondary-dark;
+  .inner-wrapper {
+    border-color: colors.$secondary-dark;
+  }
+  .input {
+    background-color: colors.$secondary-light;
+    color: colors.$secondary-dark;
+    border-color: colors.$secondary-dark;
+    &::placeholder {
+      color: colors.$secondary-dark;
+      font-style: italic;
+    }
+  }
+  .button {
+    background-color: colors.$secondary-base;
+    border-color: colors.$secondary-dark;
+    color: colors.$secondary-dark;
+  }
+}
+
+.color-success {
+  border-color: colors.$success-dark;
+  .inner-wrapper {
+    border-color: colors.$success-dark;
+  }
+  .input {
+    background-color: colors.$success-light;
+    color: colors.$success-dark;
+    border-color: colors.$success-dark;
+    &::placeholder {
+      color: colors.$success-dark;
+      font-style: italic;
+    }
+  }
+  .button {
+    background-color: colors.$success-base;
+    border-color: colors.$success-dark;
+    color: colors.$success-dark;
+  }
+}
+
+.color-warning {
+  border-color: colors.$warning-dark;
+  .inner-wrapper {
+    border-color: colors.$warning-dark;
+  }
+  .input {
+    background-color: colors.$warning-light;
+    color: colors.$warning-dark;
+    border-color: colors.$warning-dark;
+    &::placeholder {
+      color: colors.$warning-dark;
+      font-style: italic;
+    }
+  }
+  .button {
+    background-color: colors.$warning-base;
+    border-color: colors.$warning-dark;
+    color: colors.$warning-dark;
+  }
+}
+
+.color-danger {
+  border-color: colors.$danger-dark;
+  .inner-wrapper {
+    border-color: colors.$danger-dark;
+  }
+  .input {
+    background-color: colors.$danger-light;
+    color: colors.$danger-dark;
+    border-color: colors.$danger-dark;
+    &::placeholder {
+      color: colors.$danger-dark;
+      font-style: italic;
+    }
+  }
+  .button {
+    background-color: colors.$danger-base;
+    border-color: colors.$danger-dark;
+    color: colors.$danger-dark;
+  }
+}
+
+.bordered {
+  overflow: hidden;
+  .button {
+    border: none;
+    border-radius: none;
+  }
+  .input {
+    border: none;
+    border-radius: none;
+  }
+}

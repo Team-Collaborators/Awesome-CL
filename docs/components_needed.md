@@ -1,22 +1,10 @@
 # Components needed primary
-
-- chip
 - header
-- link
-- loading circle
-- label
-- checkbox
-- checkbox group
-- radio button
-- input field (search field)
+
 - card
-- form
-- table
 - textarea
-- navbar
-- accordion
+- navbar 
 - dropdown
-- image
 - pagination
 - select
 - divider
@@ -27,18 +15,25 @@
 # Components needed secondary
 
 - avatar
-- user
+- usergit ch
 - breadcrumbs
 - calendar
 - date picker
+- chip
 
 # In Progress
-
-- search field with button
+- image
 - modal
 - slider
 - popover
 - switch
+- checkbox
+- checkbox group
+- accordion
+- form
+- table
+- loading circle
+
 
 # Done
 
@@ -46,3 +41,8 @@
 - code
 - snippet
 - search field
+- label
+- search field with button
+- input with label
+- input field (search field)
+
