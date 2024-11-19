@@ -9,8 +9,34 @@ import Button from "../component_testing/Button/Button";
 import Input from "../component_testing/Input/Input";
 import Search from "../component_testing/Search/Search";
 import Accordion from "../component_testing/Accordion/Accordion";
+import AccordionItem from "../component_testing/Accordion/AccordionItem";
+import Modal from "../component_testing/Modal/Modal";
+import Form from "../component_testing/Form/Form";
+import Accordion from "../component_testing/Accordion/Accordion";
+import Search from "../component_testing/Search/Search";
+import Spinner from "../component_testing/Spinner/Spinner";
+import Switch from "../component_testing/Switch/Switch";
+import Checkbox from "../component_testing/Checkbox/Checkbox";
+import Image from "../component_testing/Image/Image";
+
+
+
 
 // import variables from lib styles
 // import all components from the json file, then export them all
 
-export { Button, Input, Search, Accordion };
+export {
+  Button,
+  Input,
+  Search,
+  Accordion,
+  AccordionItem,
+  Modal,
+  Form,
+  Accordion,
+  Search,
+  Spinner,
+  Switch,
+  Checkbox,
+  Image,
+};
