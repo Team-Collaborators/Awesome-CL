@@ -2832,6 +2832,909 @@
         }
       ]
     }
+  },
+  {
+    "title": "carousel",
+    "path": "/frontend/components/carousel",
+    "description": "A versatile carousel component that can be used in different variants and styles.",
+    "installation": [
+        {
+            "name": "CLI",
+            "command": "cli-command-to-install",
+            "path": "/icons/cube-solid.svg"
+        },
+        {
+            "name": "npm",
+            "command": "npm install your-library",
+            "path": "/icons/npm-brands-solid.svg"
+        },
+        {
+            "name": "yarn",
+            "command": "yarn add your-library",
+            "path": "/icons/yarn-brands-solid.svg"
+        },
+        {
+            "name": "pnpm",
+            "command": "pnpm add your-library",
+            "path": "/icons/cubes-solid.svg"
+        },
+        {
+            "name": "bun",
+            "command": "bun add your-library",
+            "path": "/icons/lemon-regular.svg"
+        }
+    ],
+    "import": {
+        "code": "import { Carousel } from 'AwesomeCL';",
+        "description": "This code shows how to import the Button component from the library."
+    },
+    "examples": [
+        {
+            "title": "Default",
+            "components": [
+                {
+                    "type": "Carousel",
+                    "props": {
+                        "images": [
+                            {
+                                "url": "https://picsum.photos/id/10/600/300",
+                                "alt": "Aerial view photography of green trees beside ocean"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/11/600/300",
+                                "alt": "Green grass field"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/12/600/300",
+                                "alt": "rippling body of water facing the coastline"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/13/600/300",
+                                "alt": "Calm water and seashore near trees under white clouds"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/14/600/300",
+                                "alt": "Brown rocks beside body of water"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/15/600/300",
+                                "alt": "Landscape photography of river and trees"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/16/600/300",
+                                "alt": "Body of water under blue sky"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/17/600/300",
+                                "alt": "Road surrounded by green leafed trees"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/18/600/300",
+                                "alt": "Shallow focus photography of green grass"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/19/600/300",
+                                "alt": "Selective focus photography of tree trunk on daytime"
+                            }
+                        ],
+                        "variant": "classic",
+                        "width": 600,
+                        "height": 300
+                    },
+                    "children": ""
+                }
+            ],
+            "code": "import { Carousel } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Button>\n      Button\n    </Button>\n  );\n}"
+        },
+        {
+            "title": "Auto play",
+            "components": [
+                {
+                    "type": "Carousel",
+                    "props": {
+                        "images": [
+                            {
+                                "url": "https://picsum.photos/id/10/600/300",
+                                "alt": "Aerial view photography of green trees beside ocean"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/11/600/300",
+                                "alt": "Green grass field"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/12/600/300",
+                                "alt": "rippling body of water facing the coastline"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/13/600/300",
+                                "alt": "Calm water and seashore near trees under white clouds"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/14/600/300",
+                                "alt": "Brown rocks beside body of water"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/15/600/300",
+                                "alt": "Landscape photography of river and trees"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/16/600/300",
+                                "alt": "Body of water under blue sky"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/17/600/300",
+                                "alt": "Road surrounded by green leafed trees"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/18/600/300",
+                                "alt": "Shallow focus photography of green grass"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/19/600/300",
+                                "alt": "Selective focus photography of tree trunk on daytime"
+                            }
+                        ],
+                        "variant": "classic",
+                        "autoPlay": "true",
+                        "interval": 3,
+                        "width": 600,
+                        "height": 300,
+                        "showArrows": "false",
+                        "showDots":"false"
+                    },
+                    "children": ""
+                }
+            ],
+            "code": "import { Carousel } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Button>\n      Button\n    </Button>\n  );\n}"
+        },
+        {
+            "title": "Border radius",
+            "components": [
+                {
+                    "type": "Carousel",
+                    "props": {
+                        "images": [
+                            {
+                                "url": "https://picsum.photos/id/10/600/300",
+                                "alt": "Aerial view photography of green trees beside ocean"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/11/600/300",
+                                "alt": "Green grass field"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/12/600/300",
+                                "alt": "rippling body of water facing the coastline"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/13/600/300",
+                                "alt": "Calm water and seashore near trees under white clouds"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/14/600/300",
+                                "alt": "Brown rocks beside body of water"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/15/600/300",
+                                "alt": "Landscape photography of river and trees"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/16/600/300",
+                                "alt": "Body of water under blue sky"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/17/600/300",
+                                "alt": "Road surrounded by green leafed trees"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/18/600/300",
+                                "alt": "Shallow focus photography of green grass"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/19/600/300",
+                                "alt": "Selective focus photography of tree trunk on daytime"
+                            }
+                        ],
+                        "variant": "classic",
+                        "autoPlay": "true",
+                        "interval": 3,
+                        "width": 600,
+                        "height": 300,
+                        "borderRadius": 16
+                    },
+                    "children": ""
+                }
+            ],
+            "code": "import { Carousel } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Button>\n      Button\n    </Button>\n  );\n}"
+        },
+        {
+            "title": "Slider default",
+            "components": [
+                {
+                    "type": "Carousel",
+                    "props": {
+                        "images": [
+                            {
+                                "url": "https://picsum.photos/id/10/600/300",
+                                "alt": "Aerial view photography of green trees beside ocean"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/11/600/300",
+                                "alt": "Green grass field"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/12/600/300",
+                                "alt": "rippling body of water facing the coastline"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/13/600/300",
+                                "alt": "Calm water and seashore near trees under white clouds"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/14/600/300",
+                                "alt": "Brown rocks beside body of water"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/15/600/300",
+                                "alt": "Landscape photography of river and trees"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/16/600/300",
+                                "alt": "Body of water under blue sky"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/17/600/300",
+                                "alt": "Road surrounded by green leafed trees"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/18/600/300",
+                                "alt": "Shallow focus photography of green grass"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/19/600/300",
+                                "alt": "Selective focus photography of tree trunk on daytime"
+                            }
+                        ],
+                        "variant": "slider",
+                        "autoPlay": "true",
+                        "animationDuration": 40,
+                        "width": 600,
+                        "height": 300
+                    },
+                    "children": ""
+                }
+            ],
+            "code": "import { Carousel } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Button>\n      Button\n    </Button>\n  );\n}"
+        },
+        {
+            "title": "Gap on slider variant",
+            "components": [
+                {
+                    "type": "Carousel",
+                    "props": {
+                        "images": [
+                            {
+                                "url": "https://picsum.photos/id/10/600/300",
+                                "alt": "Aerial view photography of green trees beside ocean"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/11/600/300",
+                                "alt": "Green grass field"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/12/600/300",
+                                "alt": "rippling body of water facing the coastline"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/13/600/300",
+                                "alt": "Calm water and seashore near trees under white clouds"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/14/600/300",
+                                "alt": "Brown rocks beside body of water"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/15/600/300",
+                                "alt": "Landscape photography of river and trees"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/16/600/300",
+                                "alt": "Body of water under blue sky"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/17/600/300",
+                                "alt": "Road surrounded by green leafed trees"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/18/600/300",
+                                "alt": "Shallow focus photography of green grass"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/19/600/300",
+                                "alt": "Selective focus photography of tree trunk on daytime"
+                            }
+                        ],
+                        "variant": "slider",
+                        "autoPlay": "true",
+                        "animationDuration": 40,
+                        "gap": 16,
+                        "borderRadius": 16,
+                        "width": 600,
+                        "height": 300
+                    },
+                    "children": ""
+                }
+            ],
+            "code": "import { Carousel } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Button>\n      Button\n    </Button>\n  );\n}"
+        },
+        {
+            "title": "Slider with icons",
+            "components": [
+                {
+                    "type": "Carousel",
+                    "props": {
+                        "images": [
+                            {
+                                "icon": "<FaReact />",
+                                "alt": "React icon"
+                            },
+                            {
+                                "icon": "<SiJavascript />",
+                                "alt": "JavaScript icon"
+                            },
+                            {
+                                "icon": "<SiHtml5 />",
+                                "alt": "Html icon"
+                            },
+                            {
+                                "icon": "<SiCss3 />",
+                                "alt": "Css3 icon"
+                            },
+                            {
+                                "icon": "<FaGitAlt />",
+                                "alt": "Git icon"
+                            },
+                            {
+                                "icon": "<FaGithub />",
+                                "alt": "GitHub icon"
+                            },
+                            {
+                                "icon": "<SiNpm />",
+                                "alt": "Npm icon"
+                            },
+                            {
+                                "icon": "<FaNodeJs />",
+                                "alt": "NodeJS icon"
+                            },
+                            {
+                                "icon": "<SiWebpack />",
+                                "alt": "Webpack"
+                            },
+                            {
+                                "icon": "<SiVite />",
+                                "alt": "Vite"
+                            }
+                        ],
+                        "variant": "slider",
+                        "autoPlay": "true",
+                        "animationDuration": 10,
+                        "width": 300,
+                        "height": 300,
+                        "iconSize": 150,
+                        "iconColor": "#313131"
+                    },
+                    "children": ""
+                }
+            ],
+            "code": "import { Carousel } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Button>\n      Button\n    </Button>\n  );\n}"
+        },
+        {
+            "title": "Colors and shadow",
+            "components": [
+                {
+                    "type": "Carousel",
+                    "props": {
+                        "images": [
+                            {
+                                "url": "https://picsum.photos/id/10/600/300",
+                                "alt": "Aerial view photography of green trees beside ocean"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/11/600/300",
+                                "alt": "Green grass field"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/12/600/300",
+                                "alt": "rippling body of water facing the coastline"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/13/600/300",
+                                "alt": "Calm water and seashore near trees under white clouds"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/14/600/300",
+                                "alt": "Brown rocks beside body of water"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/15/600/300",
+                                "alt": "Landscape photography of river and trees"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/16/600/300",
+                                "alt": "Body of water under blue sky"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/17/600/300",
+                                "alt": "Road surrounded by green leafed trees"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/18/600/300",
+                                "alt": "Shallow focus photography of green grass"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/19/600/300",
+                                "alt": "Selective focus photography of tree trunk on daytime"
+                            }
+                        ],
+                        "variant": "slider",
+                        "autoPlay": "true",
+                        "animationDuration": 10,
+                        "width": 300,
+                        "height": 300,
+                        "iconSize": 150,
+                        "iconColor": "#61DAFB",
+                        "backgroundColor": "#525274",
+                        "shadow": "true"
+                    },
+                    "children": ""
+                }
+            ],
+            "code": "import { Carousel } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Button>\n      Button\n    </Button>\n  );\n}"
+        },
+        {
+            "title": "Size",
+            "components": [
+                {
+                    "type": "Carousel",
+                    "props": {
+                        "images": [
+                            {
+                                "url": "https://picsum.photos/id/10/300/300",
+                                "alt": "Aerial view photography of green trees beside ocean"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/11/300/300",
+                                "alt": "Green grass field"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/12/300/300",
+                                "alt": "rippling body of water facing the coastline"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/13/300/300",
+                                "alt": "Calm water and seashore near trees under white clouds"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/14/300/300",
+                                "alt": "Brown rocks beside body of water"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/15/300/300",
+                                "alt": "Landscape photography of river and trees"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/16/300/300",
+                                "alt": "Body of water under blue sky"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/17/300/300",
+                                "alt": "Road surrounded by green leafed trees"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/18/300/300",
+                                "alt": "Shallow focus photography of green grass"
+                            },
+                            {
+                                "url": "https://picsum.photos/id/19/300/300",
+                                "alt": "Selective focus photography of tree trunk on daytime"
+                            }
+                        ],
+                        "variant": "slider",
+                        "autoPlay": "true",
+                        "containerWidth": 900,
+                        "width": 300,
+                        "height": 400,
+                        "gap": 16,
+                        "animationDuration": 40,
+                        "borderRadius": 16,
+                        "shadow": "true"
+                    },
+                    "children": ""
+                }
+            ],
+            "code": "import { Carousel } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Button>\n      Button\n    </Button>\n  );\n}"
+        }
+     ],
+    "propsTable": {
+        "title": "Carousel Props",
+        "description": "List of all props supported by the Carousel component.",
+        "headers": [
+            "Prop Name",
+            "Type",
+            "Description",
+            "Default Value"
+        ],
+        "rows": [
+            {
+                "propName": "images",
+                "type": "Array",
+                "description": "Array of objects representing the images or icons to display. Each object can include `url`, `alt`, and optionally `icon` for icons.",
+                "defaultValue": "[]"
+            },
+            {
+                "propName": "variant",
+                "type": "String",
+                "description": "Defines the style of the carousel. Options are: 'classic', 'slider'.",
+                "defaultValue": "'classic'"
+            },
+            {
+                "propName": "autoPlay",
+                "type": "Boolean",
+                "description": "Whether the carousel should autoplay slides.",
+                "defaultValue": "true"
+            },
+            {
+                "propName": "interval",
+                "type": "number",
+                "description": "Time interval (in milliseconds) between autoPlay transitions.",
+                "defaultValue": "0"
+            },
+            {
+                "propName": "showArrows",
+                "type": "boolean",
+                "description": "Whether to display navigation arrows.",
+                "defaultValue": "true"
+            },
+            {
+                "propName": "showDots",
+                "type": "boolean",
+                "description": "Whether to display navigation dots.",
+                "defaultValue": "true"
+            },
+            {
+                "propName": "containerWidth",
+                "type": "string",
+                "description": "Specifies the width of the carousel container. Defaults to the screen width for 'slider' variant.",
+                "defaultValue": "-"
+            },
+            {
+                "propName": "width",
+                "type": "number",
+                "description": "Defines the width of each slide in pixels.",
+                "defaultValue": "-"
+            },
+            {
+                "propName": "height",
+                "type": "number",
+                "description": "Defines the height of the carousel in pixels.",
+                "defaultValue": "-"
+            },
+            {
+                "propName": "gap",
+                "type": "number",
+                "description": "Defines the gap between slides in pixels.",
+                "defaultValue": "0"
+            },
+            {
+                "propName": "borderRadius",
+                "type": "number",
+                "description": "Specifies the border-radius of the carousel container and slides.",
+                "defaultValue": "0"
+            },
+            {
+                "propName": "iconSize",
+                "type": "number",
+                "description": "Size of the icons if used in place of images.",
+                "defaultValue": "0"
+            },
+            {
+                "propName": "iconColor",
+                "type": "string",
+                "description": "Color of the icons if used in place of images.",
+                "defaultValue": "-"
+            },
+            {
+                "propName": "backgroundColor",
+                "type": "string",
+                "description": "Background color of the carousel container.",
+                "defaultValue": "transparent"
+            },
+            {
+                "propName": "shadow",
+                "type": "boolean",
+                "description": "Whether to apply a shadow to icons or images.",
+                "defaultValue": "false"
+            },
+            {
+                "propName": "animationDuration",
+                "type": "number",
+                "description": "Duration (in seconds) of the slider animation for the 'slider' variant.",
+                "defaultValue": "0"
+            },
+            {
+                "propName": "enableSwipe",
+                "type": "boolean",
+                "description": "Whether swipe gestures are enabled for navigating slides.",
+                "defaultValue": "true"
+            }
+        ]
+    },
+    "eventsTable": {
+        "title": "Events",
+        "description": "List of all events emitted by the Carousel component.",
+        "headers": [
+            "Event Name",
+            "Description"
+        ],
+        "rows": [
+            {
+                "propName": "onSlideChange",
+                "type": "Triggered when the current slide changes, providing the new slide index."
+            }
+        ]
+    },
+    "accessibility": {
+        "title": "Accessibility",
+        "description": "Accessibility considerations for the Carousel component.",
+        "ariaRoles": [
+            {
+                "propName": "Carousel",
+                "description": "The carousel container uses a region role to group related content."
+            },
+            {
+                "propName": "Aria-label",
+                "description": "Each slide has an aria-label describing its content."
+            },
+            {
+                "propName": "Keyboard Navigation",
+                "description": "Users can navigate through slides using the arrow keys when the carousel is focused."
+            }
+        ]
+    }
+},
+{
+  "title": "image",
+  "path": "/frontend/components/image",
+  "description": "A customizable image component.",
+  "installation": [
+    {
+      "name": "CLI",
+      "command": "cli-command-to-install",
+      "path": "/icons/cube-solid.svg"
+    },
+    {
+      "name": "npm",
+      "command": "npm install your-library",
+      "path": "/icons/npm-brands-solid.svg"
+    },
+    {
+      "name": "yarn",
+      "command": "yarn add your-library",
+      "path": "/icons/yarn-brands-solid.svg"
+    },
+    {
+      "name": "pnpm",
+      "command": "pnpm add your-library",
+      "path": "/icons/cubes-solid.svg"
+    },
+    {
+      "name": "bun",
+      "command": "bun add your-library",
+      "path": "/icons/lemon-regular.svg"
+    }
+  ],
+  "import": {
+    "code": "import { Image } from 'AwesomeCL';",
+    "description": "This code shows how to import the image component from the library."
+  },
+  "examples": [
+    {
+      "title": "Default Image",
+      "components": [
+        {
+          "type": "Image",
+          "props": {
+            "src": "https://picsum.photos/200"
+          },
+          "children": ""
+        }
+      ],
+      "code": "import { Image } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Image src=\"https://picsum.photos/200\" />\n  );\n}"
+    },
+    {
+      "title": "Width and Height",
+      "components": [
+        {
+          "type": "Image",
+          "props": {
+            "src": "https://picsum.photos/1920/1080"
+          },
+          "children": ""
+        },
+        {
+          "type": "Image",
+          "props": {
+            "src": "https://picsum.photos/1920/1080",
+            "height": "200px",
+            "width": "200px"
+          },
+          "children": ""
+        },
+        {
+          "type": "Image",
+          "props": {
+            "src": "https://picsum.photos/1920/1080",
+            "width": "400px"
+          },
+          "children": ""
+        }
+      ],
+      "code": "import { Image } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Image src=\"https://picsum.photos/1920/1080\" />\n    <Image src=\"https://picsum.photos/1920/1080\" height=\"200px\" width=\"200px\" />\n    <Image src=\"https://picsum.photos/1920/1080\" width=\"400px\" />\n  );\n}"
+    },
+    {
+      "title": "Zoom in effect",
+      "components": [
+        {
+          "type": "Image",
+          "props": {
+            "src": "https://picsum.photos/200",
+            "isZoomed": "true"
+          },
+          "children": ""
+        }
+      ],
+      "code": "import { Image } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Image src=\"https://picsum.photos/200\" isZoomed/>\n  );\n}"
+    },
+    {
+      "title": "Border Radius",
+      "components": [
+        {
+          "type": "Image",
+          "props": {
+            "src": "https://picsum.photos/200",
+            "radius": "none"
+          },
+          "children": ""
+        },
+        {
+          "type": "Image",
+          "props": {
+            "src": "https://picsum.photos/200",
+            "radius": "sm"
+          },
+          "children": ""
+        },
+        {
+          "type": "Image",
+          "props": {
+            "src": "https://picsum.photos/200",
+            "radius": "md"
+          },
+          "children": ""
+        },
+        {
+          "type": "Image",
+          "props": {
+            "src": "https://picsum.photos/200",
+            "radius": "lg"
+          },
+          "children": ""
+        },
+        {
+          "type": "Image",
+          "props": {
+            "src": "https://picsum.photos/200",
+            "radius": "full"
+          },
+          "children": ""
+        }
+      ],
+      "code": "import { Image } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Image src=\"https://picsum.photos/200\" radius=\"none\" />\n    <Image src=\"https://picsum.photos/200\" radius=\"sm\" />\n    <Image src=\"https://picsum.photos/200\" radius=\"md\" />\n    <Image src=\"https://picsum.photos/200\" radius=\"lg\" />\n    <Image src=\"https://picsum.photos/200\" radius=\"full\" />\n  );\n}"
+    }
+  ],
+
+  "propsTable": {
+    "title": "Modal Props",
+    "description": "List of all props supported by the Modal component.",
+    "headers": ["Prop Name", "Type", "Description", "Default Value"],
+    "rows": [
+      {
+        "propName": "width",
+        "type": "string",
+        "description": "Defines the width of the image to override original size. Use with unit (e.g. px).",
+        "defaultValue": "-"
+      },
+      {
+        "propName": "height",
+        "type": "string",
+        "description": "Defines the height of the image to override original size. Use with unit (e.g. px).",
+        "defaultValue": "-"
+      },
+      {
+        "propName": "alt",
+        "type": "string",
+        "description": "Add an alt text for accessibility.",
+        "defaultValue": "Image alt text"
+      },
+      {
+        "propName": "src",
+        "type": "string",
+        "description": "The path to source file of the image.",
+        "defaultValue": "-"
+      },
+      {
+        "propName": "isZoomed",
+        "type": "boolean",
+        "description": "Adds the Zoom in effect when hovering over the image.",
+        "defaultValue": "false"
+      },
+      {
+        "propName": "radius",
+        "type": "string",
+        "description": "Defines the border-radius of the modal. Options are: 'none', 'sm', 'md', 'lg', 'full'.",
+        "defaultValue": "'md'"
+      },
+      {
+        "propName": "objectFit",
+        "type": "string",
+        "description": "Defines how the image should be resized to fit the container. Options are 'fill', 'contain', 'cover', 'none' and 'scale-down'.",
+        "defaultValue": "cover"
+      },
+      {
+        "propName": "style",
+        "type": "object",
+        "description": "Additional inline CSS to add to the image.",
+        "defaultValue": "''"
+      },
+      {
+        "propName": "classNameWrapper",
+        "type": "string",
+        "description": "Additional CSS class names to apply to the image wrapper.",
+        "defaultValue": "''"
+      },
+      {
+        "propName": "classNameImage",
+        "type": "string",
+        "description": "Additional CSS class names to apply to the image.",
+        "defaultValue": "''"
+      }
+    ]
+  },
+  "eventsTable": {
+    "title": "Events",
+    "description": "List of all events emitted by the Modal component.",
+    "headers": ["Event Name", "Description"],
+    "rows": [
+      {
+        "propName": "onClick",
+        "type": "Triggered when the image is clicked."
+      },
+      {
+        "propName": "onLoad",
+        "type": "Handler is called when the image is loading."
+      }
+    ]
+  },
+  "accessibility": {
+    "title": "Accessibility",
+    "description": "Accessibility considerations for the image component.",
+    "ariaRoles": [
+      {
+        "propName": "alt",
+        "description": "The image component has an alt text with space for an image description."
+      }
+    ]
   }
-  
+}
+
 ]
