@@ -3,7 +3,8 @@ import styles from "./Checkbox.module.scss";
 
 const Checkbox = ({
   aria = "checkbox",
-  color = "default-light",
+  variant = "subtle",
+  color = "default",
   onChange,
   style,
   size = "md",
@@ -15,19 +16,20 @@ const Checkbox = ({
   children,
   labelPosition = "right",
 }) => {
+  const [isChecked, setIsChecked] = useState(checked);
   // Combine CSS module class names with any global Tailwind classes passed as props
   const combinedClassNames = `
  ${styles.checkbox} 
+${styles[`variant-${variant}`]}
  ${styles[`border-${border}`]} 
  ${styles[`radius-${radius}`]} 
  ${styles[`color-${color}`]} 
  ${styles[`size-${size}`]} 
+ ${isChecked ? styles.checked : ""}
  `.trim();
 
   // Final class names with Tailwind/global classes appended last for easy overriding
   const finalClassNames = `${combinedClassNames} ${className}`.trim();
-
-  const [isChecked, setIsChecked] = useState(checked);
 
   // Handle toggle change
   const handleToggle = () => {

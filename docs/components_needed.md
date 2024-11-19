@@ -1,42 +1,36 @@
 # Components needed primary
-- header
 
-- card
-- textarea
-- navbar 
-- dropdown
+- card!
+- textarea (from form)
+- fieldset (from form)
 - pagination
-- select
-- divider
-- spacer
-- tabs
-- tooltip
+- tooltip!
 
 # Components needed secondary
 
-- avatar
-- usergit ch
 - breadcrumbs
 - calendar
 - date picker
 - chip
+- header
+- navbar
+- select
+- divider
+- spacer
+- tabs
 
 # In Progress
-- image
-- modal
-- slider
-- popover
-- switch
-- checkbox
-- checkbox group
-- accordion
-- form
-- table
-- loading circle
 
+- popover
+- avatar
+- checkbox group
+- table
+- dropdown
 
 # Done
 
+- accordion
+- form
 - button
 - code
 - snippet
@@ -45,4 +39,9 @@
 - search field with button
 - input with label
 - input field (search field)
-
+- image
+- modal
+- slider
+- loading circle
+- switch
+- checkbox

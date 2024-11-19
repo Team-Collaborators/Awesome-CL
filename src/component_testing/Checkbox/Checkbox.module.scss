@@ -105,74 +105,152 @@
 .border-sm {
   border: var(--border-xs);
 }
-.border-md {
+
+.border-lg {
   border: var(--border-sm);
 }
-.border-lg {
-  border: var(--border-md);
-}
 
-
-/* Color variants */
-.color-default-light {
-  background-color: colors.$default-light;
-  border-color: colors.$default-dark;
-
+// Color classes with variants (subtle, solid)
+.color-default.variant-subtle {
+  background-color: var(--default-base);
+  border: none;
   .checkmark {
-    color: colors.$default-dark;
+    color: var(--default-dark);
+  }
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--dark-default-base);
+    .checkmark {
+      color: var(--default-light);
+    }
   }
 }
 
-.color-default-dark {
-  background-color: colors.$default-dark;
-  border-color: colors.$default-light;
-
+.color-primary.variant-subtle {
+  background-color: var(--primary-light);
+  border: none;
   .checkmark {
-    color: colors.$default-light;
+    color: var(--primary-dark);
+  }
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--dark-primary-base);
+    .checkmark {
+      color: var(--primary-light);
+    }
   }
 }
 
-.color-primary {
-  background-color: colors.$primary-light;
-  border-color: colors.$primary-dark;
-
+.color-secondary.variant-subtle {
+  background-color: var(--secondary-light);
+  border: none;
   .checkmark {
-    color: colors.$primary-dark;
+    color: var(--secondary-dark);
+  }
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--dark-secondary-base);
+    .checkmark {
+      color: var(--secondary-light);
+    }
   }
 }
 
-.color-secondary {
-  background-color: colors.$secondary-light;
-  border-color: colors.$secondary-dark;
-
+.color-success.variant-subtle {
+  background-color: var(--success-light);
+  border: none;
   .checkmark {
-    color: colors.$secondary-dark;
+    color: var(--dark-success-dark);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--dark-success-base);
+    .checkmark {
+      color: var(--success-light);
+    }
   }
 }
 
-.color-success {
-  background-color: colors.$success-light;
-  border-color: colors.$success-dark;
-
+.color-warning.variant-subtle {
+  background-color: var(--warning-light);
+  border: none;
   .checkmark {
-    color: colors.$success-dark;
+    color: var(--warning-dark);
+
+    @media (prefers-color-scheme: dark) {
+      background-color: var(--dark-warning-base);
+      .checkmark {
+        color: var(--warning-light);
+      }
+    }
   }
 }
 
-.color-warning {
-  background-color: colors.$warning-light;
-  border-color: colors.$warning-dark;
-
+.color-danger.variant-subtle {
+  background-color: var(--danger-light);
+  border-color: var(--danger-dark);
   .checkmark {
-    color: colors.$warning-dark;
+    color: var(--danger-dark);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--dark-danger-base);
+    .checkmark {
+      color: var(--danger-light);
+    }
   }
 }
 
-.color-danger {
-  background-color: colors.$danger-light;
-  border-color: colors.$danger-dark;
-
+// Solid classes
+.variant-solid {
+  background-color: var(--default-light);
+  border-color: var(--default-base);
   .checkmark {
-    color: colors.$danger-dark;
+    color: var(--default-light);
+  }
+  &.checked {
+    border: none;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--dark-default-base);
+    border-color: var(--dark-default-light);
+  }
+}
+
+.color-default.variant-solid {
+  &.checked {
+    background-color: var(--default-dark);
+  }
+}
+
+.color-primary.variant-solid {
+  &.checked {
+    background-color: var(--primary-base);
+  }
+}
+
+.color-secondary.variant-solid {
+  &.checked {
+    background-color: var(--secondary-base);
+  }
+}
+
+.color-success.variant-solid {
+  &.checked {
+    background-color: var(--success-base);
+  }
+}
+
+.color-warning.variant-solid {
+  &.checked {
+    background-color: var(--warning-base);
+
+    .checkmark {
+      color: var(--default-dark);
+    }
+  }
+}
+
+.color-danger.variant-solid {
+  &.checked {
+    background-color: var(--danger-base);
   }
 }
