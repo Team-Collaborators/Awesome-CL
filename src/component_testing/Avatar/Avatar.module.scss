@@ -1,0 +1,137 @@
+@use "../lib-styles/borders.scss";
+@use "../lib-styles/radius.scss";
+@use "../lib-styles/colors.scss";
+
+//Avatar Container
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 50%;
+  position: relative;
+
+  &.shape-circle {
+    border-radius: 50%;
+  }
+
+  & img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.avatarSvgContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: cover;
+}
+
+.avatar-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+//Size Classes
+.size-sm {
+  width: 40px;
+  height: 40px;
+}
+
+.size-md {
+  width: 60px;
+  height: 60px;
+}
+
+.size-lg {
+  width: 80px;
+  height: 80px;
+}
+
+//Shape Classes
+.shape-circle {
+  border-radius: 50%;
+}
+
+.shape-square {
+  border-radius: 0;
+}
+
+//Color Classes
+.color-primary {
+  background-color: colors.$primary-base;
+}
+
+.color-secondary {
+  background-color: colors.$secondary-base;
+}
+
+.color-success {
+  background-color: colors.$success-base;
+}
+
+.color-warning {
+  background-color: colors.$warning-base;
+}
+.color-default {
+  background-color: colors.$default-base;
+}
+
+//Border Classes
+.border-none {
+  border: none;
+}
+
+.border-xs {
+  outline: var(--border-xs);
+}
+
+.border-sm {
+  border: var(--border-sm);
+}
+
+.border-md {
+  border: var(--border-md);
+}
+
+//Border-colors Classes
+.border-color-primary {
+  --border-color: colors.$primary-base;
+}
+
+.border-color-secondary {
+  --border-color: colors.$secondary-dark;
+}
+
+.border-color-warning {
+  --border-color: colors.$warning-base;
+}
+
+//Radius Classes
+.radius-none {
+  border-radius: var(--border-radius-none);
+}
+
+.radius-sm {
+  border-radius: var(--border-radius-sm);
+}
+
+.radius-md {
+  border-radius: var(--border-radius-md);
+}
+
+.radius-lg {
+  border-radius: var(--border-radius-lg);
+}
+
+.radius-full {
+  border-radius: var(--border-radius-full);
+}
+
+.border {
+  border: 5px solid white;
+}

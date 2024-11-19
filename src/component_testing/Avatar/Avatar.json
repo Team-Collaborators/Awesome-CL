@@ -1,0 +1,213 @@
+{
+  "title": "avatar",
+  "path": "/frontend/components/avatar",
+  "description": "A versatile Avatar component that supports different sizes, colors, shapes, borders, radius, and grouped avatars.",
+  "installation": [
+    {
+      "name": "CLI",
+      "command": "npm install @dicebear/core @dicebear/collection",
+      "path": "/icons/cube-solid.svg"
+    },
+    {
+      "name": "npm",
+      "command": "npm install your-avatar-library",
+      "path": "/icons/npm-brands-solid.svg"
+    },
+    {
+      "name": "yarn",
+      "command": "yarn add your-avatar-library",
+      "path": "/icons/yarn-brands-solid.svg"
+    },
+    {
+      "name": "pnpm",
+      "command": "pnpm add your-avatar-library",
+      "path": "/icons/cubes-solid.svg"
+    },
+    {
+      "name": "bun",
+      "command": "bun add your-avatar-library",
+      "path": "/icons/lemon-regular.svg"
+    }
+  ],
+  "import": {
+    "code": "import Avatar from './Avatar';",
+    "description": "This code shows how to import the Avatar component for use in your project."
+  },
+  "usage": [
+    {
+      "title": "Default",
+      "description": "Default avatars displayed in a row with small size and default color.",
+      "examples": [
+        {
+          "type": "Avatar",
+          "props": {
+            "name": "Jude",
+            "size": "sm",
+            "color": "default"
+          },
+          "children": ""
+        },
+        {
+          "type": "Avatar",
+          "props": {
+            "name": "Brian",
+            "size": "sm",
+            "color": "default"
+          },
+          "children": ""
+        },
+        {
+          "type": "Avatar",
+          "props": {
+            "name": "Andrea",
+            "size": "sm",
+            "color": "default"
+          },
+          "children": ""
+        },
+        {
+          "type": "Avatar",
+          "props": {
+            "name": "Luis",
+            "size": "sm",
+            "color": "default"
+          },
+          "children": ""
+        },
+        {
+          "type": "Avatar",
+          "props": {
+            "name": "Emery",
+            "size": "sm",
+            "color": "default"
+          },
+          "children": ""
+        }
+      ]
+    },
+    {
+      "title": "Sizes",
+      "description": "Avatars displayed with various sizes and bordered with different colors.",
+      "examples": [
+        {
+          "type": "Avatar",
+          "props": {
+            "name": "Jude",
+            "size": "sm",
+            "border": "sm",
+            "borderColor": "primary"
+          },
+          "children": ""
+        },
+        {
+          "type": "Avatar",
+          "props": {
+            "name": "Brian",
+            "size": "md",
+            "border": "sm",
+            "borderColor": "secondary"
+          },
+          "children": ""
+        },
+        {
+          "type": "Avatar",
+          "props": {
+            "name": "Andrea",
+            "size": "lg",
+            "border": "md",
+            "borderColor": "warning"
+          },
+          "children": ""
+        }
+      ]
+    },
+    {
+      "title": "Radius",
+      "description": "Avatars with varying border radius.",
+      "examples": [
+        {
+          "type": "Avatar",
+          "props": {
+            "name": "Jude",
+            "size": "md",
+            "radius": "sm",
+            "shape": "square"
+          },
+          "children": ""
+        },
+        {
+          "type": "Avatar",
+          "props": {
+            "name": "Brian",
+            "size": "md",
+            "radius": "md",
+            "shape": "square"
+          },
+          "children": ""
+        },
+        {
+          "type": "Avatar",
+          "props": {
+            "name": "Andrea",
+            "size": "md",
+            "radius": "lg",
+            "shape": "square"
+          },
+          "children": ""
+        },
+        {
+          "type": "Avatar",
+          "props": {
+            "name": "Luis",
+            "size": "md",
+            "radius": "full",
+            "shape": "square"
+          },
+          "children": ""
+        }
+      ]
+    }
+  ],
+  "propsTable": [
+    {
+      "name": "src",
+      "type": "string",
+      "description": "The source URL for the avatar image."
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "description": "The name used for generating initials or DiceBear avatar."
+    },
+    {
+      "name": "size",
+      "type": "'sm' | 'md' | 'lg'",
+      "description": "The size of the avatar."
+    },
+    {
+      "name": "color",
+      "type": "'primary' | 'secondary' | 'default' | 'success' | 'warning'",
+      "description": "The background color of the avatar."
+    },
+    {
+      "name": "shape",
+      "type": "'circle' | 'square'",
+      "description": "The shape of the avatar."
+    },
+    {
+      "name": "border",
+      "type": "'none' | 'xs' | 'sm' | 'md'",
+      "description": "The border size of the avatar."
+    },
+    {
+      "name": "borderColor",
+      "type": "string",
+      "description": "The color of the border."
+    },
+    {
+      "name": "radius",
+      "type": "'none' | 'sm' | 'md' | 'lg' | 'full'",
+      "description": "The border radius of the avatar."
+    }
+  ]
+}
