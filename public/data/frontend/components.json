@@ -3173,48 +3173,7 @@
                 {
                     "type": "Carousel",
                     "props": {
-                        "images": [
-                            {
-                                "icon": "<FaReact />",
-                                "alt": "React icon"
-                            },
-                            {
-                                "icon": "<SiJavascript />",
-                                "alt": "JavaScript icon"
-                            },
-                            {
-                                "icon": "<SiHtml5 />",
-                                "alt": "Html icon"
-                            },
-                            {
-                                "icon": "<SiCss3 />",
-                                "alt": "Css3 icon"
-                            },
-                            {
-                                "icon": "<FaGitAlt />",
-                                "alt": "Git icon"
-                            },
-                            {
-                                "icon": "<FaGithub />",
-                                "alt": "GitHub icon"
-                            },
-                            {
-                                "icon": "<SiNpm />",
-                                "alt": "Npm icon"
-                            },
-                            {
-                                "icon": "<FaNodeJs />",
-                                "alt": "NodeJS icon"
-                            },
-                            {
-                                "icon": "<SiWebpack />",
-                                "alt": "Webpack"
-                            },
-                            {
-                                "icon": "<SiVite />",
-                                "alt": "Vite"
-                            }
-                        ],
+                        
                         "variant": "slider",
                         "autoPlay": "true",
                         "animationDuration": 10,
@@ -3234,48 +3193,7 @@
                 {
                     "type": "Carousel",
                     "props": {
-                        "images": [
-                            {
-                                "url": "https://picsum.photos/id/10/600/300",
-                                "alt": "Aerial view photography of green trees beside ocean"
-                            },
-                            {
-                                "url": "https://picsum.photos/id/11/600/300",
-                                "alt": "Green grass field"
-                            },
-                            {
-                                "url": "https://picsum.photos/id/12/600/300",
-                                "alt": "rippling body of water facing the coastline"
-                            },
-                            {
-                                "url": "https://picsum.photos/id/13/600/300",
-                                "alt": "Calm water and seashore near trees under white clouds"
-                            },
-                            {
-                                "url": "https://picsum.photos/id/14/600/300",
-                                "alt": "Brown rocks beside body of water"
-                            },
-                            {
-                                "url": "https://picsum.photos/id/15/600/300",
-                                "alt": "Landscape photography of river and trees"
-                            },
-                            {
-                                "url": "https://picsum.photos/id/16/600/300",
-                                "alt": "Body of water under blue sky"
-                            },
-                            {
-                                "url": "https://picsum.photos/id/17/600/300",
-                                "alt": "Road surrounded by green leafed trees"
-                            },
-                            {
-                                "url": "https://picsum.photos/id/18/600/300",
-                                "alt": "Shallow focus photography of green grass"
-                            },
-                            {
-                                "url": "https://picsum.photos/id/19/600/300",
-                                "alt": "Selective focus photography of tree trunk on daytime"
-                            }
-                        ],
+                       
                         "variant": "slider",
                         "autoPlay": "true",
                         "animationDuration": 10,
