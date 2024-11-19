@@ -18,6 +18,7 @@ export const sidebarLinks = {
         { path: "/frontend/components/input", title: "Input" },
         { path: "/frontend/components/spinner", title: "Spinner" },
         { path: "/frontend/components/accordion", title: "Accordion" },
+        { path: "/frontend/components/image", title: "Image" },
         { path: "/frontend/components/switch", title: "Switch" },
       ],
     },
