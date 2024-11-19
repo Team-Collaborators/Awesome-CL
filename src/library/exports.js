@@ -12,7 +12,6 @@ import Accordion from "../component_testing/Accordion/Accordion";
 import AccordionItem from "../component_testing/Accordion/AccordionItem";
 import Modal from "../component_testing/Modal/Modal";
 import Form from "../component_testing/Form/Form";
-import Accordion from "../component_testing/Accordion/Accordion";
 import Search from "../component_testing/Search/Search";
 import Spinner from "../component_testing/Spinner/Spinner";
 import Switch from "../component_testing/Switch/Switch";
@@ -33,7 +32,6 @@ export {
   AccordionItem,
   Modal,
   Form,
-  Accordion,
   Search,
   Spinner,
   Switch,
