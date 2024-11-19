@@ -20,17 +20,17 @@ export const sidebarLinks = {
         { path: "/frontend/components/accordion", title: "Accordion" },
         { path: "/frontend/components/image", title: "Image" },
         { path: "/frontend/components/switch", title: "Switch" },
-      ],
+      ].sort((a, b) => a.title.localeCompare(b.title)),
     },
-    {
-      path: "/frontend/hooks",
-      title: "Hooks",
-      subcategories: [
-        { path: "/frontend/hooks/hook1", title: "Hook1" },
-        { path: "/frontend/hooks/hook2", title: "Hook2" },
-      ],
-    },
-    { path: "/frontend/routes", title: "Routes" },
+    // {
+    //   path: "/frontend/hooks",
+    //   title: "Hooks",
+    //   subcategories: [
+    //     { path: "/frontend/hooks/hook1", title: "Hook1" },
+    //     { path: "/frontend/hooks/hook2", title: "Hook2" },
+    //   ],
+    // },
+    // { path: "/frontend/routes", title: "Routes" },
   ],
 
   backend: [
