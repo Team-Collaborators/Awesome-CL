@@ -7,7 +7,6 @@
 
 import Button from "../component_testing/Button/Button";
 import Input from "../component_testing/Input/Input";
-import Search from "../component_testing/Search/Search";
 import Accordion from "../component_testing/Accordion/Accordion";
 import AccordionItem from "../component_testing/Accordion/AccordionItem";
 import Modal from "../component_testing/Modal/Modal";
@@ -27,7 +26,6 @@ import Image from "../component_testing/Image/Image";
 export {
   Button,
   Input,
-  Search,
   Accordion,
   AccordionItem,
   Modal,

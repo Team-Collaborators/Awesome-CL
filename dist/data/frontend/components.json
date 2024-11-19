@@ -352,7 +352,7 @@
   {
     "title": "modal",
     "path": "/frontend/components/modal",
-    "description": "MODAL component that can be used in different styles and sizes.",
+    "description": "A modal component that can be customized with various sizes, placements, scroll options, and backdrop styles.",
     "installation": [
       {
         "name": "CLI",
@@ -381,265 +381,1480 @@
       }
     ],
     "import": {
-      "code": "import { Button } from 'AwesomeCL';",
-      "description": "This code shows how to import the Button component from the library."
+      "code": "import { Modal } from 'AwesomeCL';",
+      "description": "This code shows how to import the Modal component from the library."
+    },
+    "examples": [
+      {
+        "title": "Default Modal",
+        "components": [
+          {
+            "type": "Modal",
+            "props": {
+              "modalHeader": "Example Header",
+              "modalBody": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque eos voluptatibus ullam, cupiditate vitae voluptates quas voluptatum repudiandae corrupti neque quam assumenda sint facilis nihil voluptatem voluptate hic non nemo nostrum earum! Magnam quos ipsa quibusdam nulla laboriosam ducimus itaque ex eos esse voluptas at rem velit, praesentium reprehenderit? Architecto!"
+            },
+            "children": "Default"
+          }
+        ],
+        "code": "import { Modal } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Modal size=\"md\" placement=\"center\" scroll=\"inside\" backdrop=\"opaque\">\n      This is a default modal.\n    </Modal>\n  );\n}"
+      },
+      {
+        "title": "Sizes",
+        "components": [
+          {
+            "type": "Modal",
+            "props": {
+              "modalHeader": "Example Header",
+              "modalBody": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque eos voluptatibus ullam, cupiditate vitae voluptates quas voluptatum repudiandae corrupti neque quam assumenda sint facilis nihil voluptatem voluptate hic non nemo nostrum earum! Magnam quos ipsa quibusdam nulla laboriosam ducimus itaque ex eos esse voluptas at rem velit, praesentium reprehenderit? Architecto!",
+              "size": "sm",
+              "radius": "sm",
+              "color": "secondary"
+            },
+            "children": "Size sm"
+          },
+          {
+            "type": "Modal",
+            "props": {
+              "modalHeader": "Example Header",
+              "modalBody": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque eos voluptatibus ullam, cupiditate vitae voluptates quas voluptatum repudiandae corrupti neque quam assumenda sint facilis nihil voluptatem voluptate hic non nemo nostrum earum! Magnam quos ipsa quibusdam nulla laboriosam ducimus itaque ex eos esse voluptas at rem velit, praesentium reprehenderit? Architecto!",
+              "size": "md",
+              "radius": "sm",
+              "color": "secondary"
+            },
+            "children": "Size md"
+          },
+          {
+            "type": "Modal",
+            "props": {
+              "modalHeader": "Example Header",
+              "modalBody": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque eos voluptatibus ullam, cupiditate vitae voluptates quas voluptatum repudiandae corrupti neque quam assumenda sint facilis nihil voluptatem voluptate hic non nemo nostrum earum! Magnam quos ipsa quibusdam nulla laboriosam ducimus itaque ex eos esse voluptas at rem velit, praesentium reprehenderit? Architecto!",
+              "size": "lg",
+              "radius": "sm",
+              "color": "secondary"
+            },
+            "children": "Size lg"
+          }
+        ],
+        "code": "import { Modal } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Modal size=\"xs\">Extra Small Modal</Modal>\n      <Modal size=\"sm\">Small Modal</Modal>\n      <Modal size=\"md\">Medium Modal</Modal>\n      <Modal size=\"lg\">Large Modal</Modal>\n      <Modal size=\"xl\">Extra Large Modal</Modal>\n    </>\n  );\n}"
+      },
+      {
+        "title": "Placement",
+        "components": [
+          {
+            "type": "Modal",
+            "props": {
+              "modalHeader": "Example Header",
+              "modalBody": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque eos voluptatibus ullam, cupiditate vitae voluptates quas voluptatum repudiandae corrupti neque quam assumenda sint facilis nihil voluptatem voluptate hic non nemo nostrum earum! Magnam quos ipsa quibusdam nulla laboriosam ducimus itaque ex eos esse voluptas at rem velit, praesentium reprehenderit? Architecto!",
+              "placement": "top"
+            },
+            "children": "Top "
+          },
+          {
+            "type": "Modal",
+            "props": {
+              "modalHeader": "Example Header",
+              "modalBody": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque eos voluptatibus ullam, cupiditate vitae voluptates quas voluptatum repudiandae corrupti neque quam assumenda sint facilis nihil voluptatem voluptate hic non nemo nostrum earum! Magnam quos ipsa quibusdam nulla laboriosam ducimus itaque ex eos esse voluptas at rem velit, praesentium reprehenderit? Architecto!",
+              "placement": "bottom"
+            },
+            "children": "Bottom "
+          },
+          {
+            "type": "Modal",
+            "props": {
+              "modalHeader": "Example Header",
+              "modalBody": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque eos voluptatibus ullam, cupiditate vitae voluptates quas voluptatum repudiandae corrupti neque quam assumenda sint facilis nihil voluptatem voluptate hic non nemo nostrum earum! Magnam quos ipsa quibusdam nulla laboriosam ducimus itaque ex eos esse voluptas at rem velit, praesentium reprehenderit? Architecto!",
+              "placement": "center"
+            },
+            "children": "Center"
+          }
+        ],
+        "code": "import { Modal } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Modal placement=\"top\">Top Placement</Modal>\n      <Modal placement=\"bottom\">Bottom Placement</Modal>\n      <Modal placement=\"center\">Center Placement</Modal>\n      <Modal placement=\"top-center\">Top Center Placement</Modal>\n      <Modal placement=\"bottom-center\">Bottom Center Placement</Modal>\n    </>\n  );\n}"
+      },
+      {
+        "title": "Scroll Options",
+        "components": [
+          {
+            "type": "Modal",
+            "props": {
+              "modalHeader": "Example Header",
+              "modalBody": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque eos voluptatibus ullam, cupiditate vitae voluptates quas voluptatum repudiandae corrupti neque quam assumenda sint facilis nihil voluptatem voluptate hic non nemo nostrum earum! Magnam quos ipsa quibusdam nulla laboriosam ducimus itaque ex eos esse voluptas at rem velit, praesentium reprehenderit? Architecto!Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque eos voluptatibus ullam, cupiditate vitae voluptates quas voluptatum repudiandae corrupti neque quam assumenda sint facilis nihil voluptatem voluptate hic non nemo nostrum earum! Magnam quos ipsa quibusdam nulla laboriosam ducimus itaque ex eos esse voluptas at rem velit, praesentium reprehenderit? Architecto!Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque eos voluptatibus ullam, cupiditate vitae voluptates quas voluptatum repudiandae corrupti neque quam assumenda sint facilis nihil voluptatem voluptate hic non nemo nostrum earum! Magnam quos ipsa quibusdam nulla laboriosam ducimus itaque ex eos esse voluptas at rem velit, praesentium reprehenderit? Architecto!Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque eos voluptatibus ullam, cupiditate vitae voluptates quas voluptatum repudiandae corrupti neque quam assumenda sint facilis nihil voluptatem voluptate hic non nemo nostrum earum! Magnam quos ipsa quibusdam nulla laboriosam ducimus itaque ex eos esse voluptas at rem velit, praesentium reprehenderit? Architecto!Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque eos voluptatibus ullam, cupiditate vitae voluptates quas voluptatum repudiandae corrupti neque quam assumenda sint facilis nihil voluptatem voluptate hic non nemo nostrum earum! Magnam quos ipsa quibusdam nulla laboriosam ducimus itaque ex eos esse voluptas at rem velit, praesentium reprehenderit? Architecto!",
+              "size": "sm"
+            },
+            "children": "Scroll"
+          }
+        ],
+        "code": "import { Modal } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Modal scroll=\"inside\">Inside Scroll</Modal>\n      <Modal scroll=\"outside\">Outside Scroll</Modal>\n    </>\n  );\n}"
+      },
+      {
+        "title": "Backdrop Options",
+        "components": [
+          {
+            "type": "Modal",
+            "props": {
+              "modalHeader": "Example Header",
+              "modalBody": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque eos voluptatibus ullam, cupiditate vitae voluptates quas voluptatum repudiandae corrupti neque quam assumenda sint facilis nihil voluptatem voluptate hic non nemo nostrum earum! Magnam quos ipsa quibusdam nulla laboriosam ducimus itaque ex eos esse voluptas at rem velit, praesentium reprehenderit? Architecto!",
+              "backdrop": "opaque"
+            },
+            "children": "Opaque"
+          },
+          {
+            "type": "Modal",
+            "props": {
+              "modalHeader": "Example Header",
+              "modalBody": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque eos voluptatibus ullam, cupiditate vitae voluptates quas voluptatum repudiandae corrupti neque quam assumenda sint facilis nihil voluptatem voluptate hic non nemo nostrum earum! Magnam quos ipsa quibusdam nulla laboriosam ducimus itaque ex eos esse voluptas at rem velit, praesentium reprehenderit? Architecto!",
+              "backdrop": "blur"
+            },
+            "children": "Blur"
+          },
+          {
+            "type": "Modal",
+            "props": {
+              "modalHeader": "Example Header",
+              "modalBody": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque eos voluptatibus ullam, cupiditate vitae voluptates quas voluptatum repudiandae corrupti neque quam assumenda sint facilis nihil voluptatem voluptate hic non nemo nostrum earum! Magnam quos ipsa quibusdam nulla laboriosam ducimus itaque ex eos esse voluptas at rem velit, praesentium reprehenderit? Architecto!",
+              "backdrop": "transparent"
+            },
+            "children": "Transparent"
+          }
+        ],
+        "code": "import { Modal } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Modal backdrop=\"opaque\">Opaque Backdrop</Modal>\n      <Modal backdrop=\"blur\">Blur Backdrop</Modal>\n      <Modal backdrop=\"transparent\">Transparent Backdrop</Modal>\n    </>\n  );\n}"
+      }
+    ],
+
+    "propsTable": {
+      "title": "Modal Props",
+      "description": "List of all props supported by the Modal component.",
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
+      "rows": [
+        {
+          "propName": "children",
+          "type": "string",
+          "description": "Content to be displayed inside the modal body.",
+          "defaultValue": "null"
+        },
+        {
+          "propName": "modalHeader",
+          "type": "string",
+          "description": "Content to be displayed in the modal header section.",
+          "defaultValue": "null"
+        },
+        {
+          "propName": "modalBody",
+          "type": "string",
+          "description": "Content to be displayed in the modal body, as an alternative to 'children'.",
+          "defaultValue": "null"
+        },
+        {
+          "propName": "size",
+          "type": "string",
+          "description": "Defines the size of the modal. Options are: 'sm', 'md', 'lg'.",
+          "defaultValue": "'md'"
+        },
+        {
+          "propName": "radius",
+          "type": "string",
+          "description": "Defines the border-radius of the modal. Options are: 'none', 'sm', 'md', 'lg', 'full'.",
+          "defaultValue": "'md'"
+        },
+        {
+          "propName": "placement",
+          "type": "string",
+          "description": "Defines the placement of the modal on the screen. Options are: 'center', 'top', 'bottom'.",
+          "defaultValue": "'center'"
+        },
+        {
+          "propName": "backdrop",
+          "type": "string",
+          "description": "Defines the backdrop style of the modal. Options are: 'transparent', 'dark'.",
+          "defaultValue": "'transparent'"
+        },
+        {
+          "propName": "color",
+          "type": "string",
+          "description": "Defines the color theme of the modal. Options are: 'primary', 'secondary', 'success', 'warning', 'danger'.",
+          "defaultValue": "'primary'"
+        },
+        {
+          "propName": "classNames",
+          "type": "string",
+          "description": "Additional CSS class names to apply to the modal.",
+          "defaultValue": "''"
+        }
+      ]
+    },
+    "eventsTable": {
+      "title": "Events",
+      "description": "List of all events emitted by the Modal component.",
+      "headers": ["Event Name", "Description"],
+      "rows": [
+        {
+          "propName": "onOpen",
+          "type": "Triggered when the modal is opened."
+        },
+        {
+          "propName": "onClose",
+          "type": "Triggered when the modal is closed."
+        }
+      ]
+    },
+    "accessibility": {
+      "title": "Accessibility",
+      "description": "Accessibility considerations for the Modal component.",
+      "ariaRoles": [
+        {
+          "propName": "Dialog",
+          "description": "The Modal component is rendered with the 'dialog' role to provide a container for the modal content."
+        },
+        {
+          "propName": "Aria-modal",
+          "description": "The modal has an 'aria-modal' attribute set to 'true' to indicate it's a modal dialog."
+        },
+        {
+          "propName": "Backdrop Click",
+          "description": "The modal can be closed by clicking the backdrop, which should be announced to users if they need alternative options for closing."
+        },
+        {
+          "propName": "Keyboard Navigation",
+          "description": "Ensures keyboard focus is retained within the modal when open, and provides a close button accessible via keyboard navigation."
+        }
+      ]
+    }
+  },
+  {
+    "title": "accordion",
+    "path": "/frontend/components/accordion",
+    "description": "A customizable accordion that comes in different variants.",
+    "installation": [
+      {
+        "name": "CLI",
+        "command": "cli-command-to-install",
+        "path": "/icons/cube-solid.svg"
+      },
+      {
+        "name": "npm",
+        "command": "npm install your-library",
+        "path": "/icons/npm-brands-solid.svg"
+      },
+      {
+        "name": "yarn",
+        "command": "yarn add your-library",
+        "path": "/icons/yarn-brands-solid.svg"
+      },
+      {
+        "name": "pnpm",
+        "command": "pnpm add your-library",
+        "path": "/icons/cubes-solid.svg"
+      },
+      {
+        "name": "bun",
+        "command": "bun add your-library",
+        "path": "/icons/lemon-regular.svg"
+      }
+    ],
+    "import": {
+      "code": "import { Accordion, AccordionItem } from 'AwesomeCL';",
+      "description": "This code shows how to import the accordion component from the library."
+    },
+    "examples": [
+      {
+        "title": "Default / Variant Bordered",
+        "components": [
+          {
+            "type": "Accordion",
+            "props": {
+              "variant": "bordered",
+              "style": {
+                "width": "60%",
+                "margin": "auto"
+              }
+            },
+            "children": [
+              {
+                "type": "AccordionItem",
+                "props": {
+                  "title": "Section 1"
+                },
+                "children": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident optio dolore, laboriosam voluptatum consequatur non mollitia. Magni eligendi eaque eum aperiam iste similique ad commodi."
+              },
+              {
+                "type": "AccordionItem",
+                "props": {
+                  "title": "Section 2"
+                },
+                "children": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis velit provident earum vel, perferendis cupiditate beatae illo aut minima libero consequuntur aperiam officiis quisquam error neque id eos possimus est. Deserunt voluptatum inventore laudantium veritatis?"
+              },
+              {
+                "type": "AccordionItem",
+                "props": {
+                  "title": "Section 3"
+                },
+                "children": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque officiis cupiditate placeat ut beatae temporibus deserunt neque, quis iure! Repudiandae eius eos facere numquam, suscipit voluptatibus sequi sunt esse excepturi."
+              }
+            ]
+          }
+        ],
+        "code": "import { Accordion, AccordionItem } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Accordion>\n            <AccordionItem title='Section 1'>\n              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolorem unde quis, ea ratione obcaecati. Quaerat autem unde cupiditate ipsa.\n            </AccordionItem>\n            <AccordionItem title='Section 2'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium unde, amet voluptatibus soluta reprehenderit sed laudantium optio ut sint nemo illum earum ducimus tempora nulla quia nam placeat explicabo facilis quisquam minus? Fuga, labore facilis.\n            </AccordionItem>\n            <AccordionItem title='Section 3'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, est exercitationem consequatur dolorum architecto molestiae aspernatur voluptatem ducimus nisi ea quo, atque tempora magni necessitatibus.\n            </AccordionItem>\n    </Accordion>\n );\n}"
+      },
+      {
+        "title": "Multiple items open",
+        "components": [
+          {
+            "type": "Accordion",
+            "props": {
+              "variant": "bordered",
+              "allowMultipleOpen": "true",
+              "style": {
+                "width": "60%",
+                "margin": "auto"
+              }
+            },
+            "children": [
+              {
+                "type": "AccordionItem",
+                "props": {
+                  "title": "Section 1"
+                },
+                "children": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident optio dolore, laboriosam voluptatum consequatur non mollitia. Magni eligendi eaque eum aperiam iste similique ad commodi."
+              },
+              {
+                "type": "AccordionItem",
+                "props": {
+                  "title": "Section 2"
+                },
+                "children": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis velit provident earum vel, perferendis cupiditate beatae illo aut minima libero consequuntur aperiam officiis quisquam error neque id eos possimus est. Deserunt voluptatum inventore laudantium veritatis?"
+              },
+              {
+                "type": "AccordionItem",
+                "props": {
+                  "title": "Section 3"
+                },
+                "children": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque officiis cupiditate placeat ut beatae temporibus deserunt neque, quis iure! Repudiandae eius eos facere numquam, suscipit voluptatibus sequi sunt esse excepturi."
+              }
+            ]
+          }
+        ],
+        "code": "import { Accordion, AccordionItem } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Accordion allowMultipleOpen={false}>\n            <AccordionItem title='Section 1'>\n              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolorem unde quis, ea ratione obcaecati. Quaerat autem unde cupiditate ipsa.\n            </AccordionItem>\n            <AccordionItem title='Section 2'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium unde, amet voluptatibus soluta reprehenderit sed laudantium optio ut sint nemo illum earum ducimus tempora nulla quia nam placeat explicabo facilis quisquam minus? Fuga, labore facilis.\n            </AccordionItem>\n            <AccordionItem title='Section 3'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, est exercitationem consequatur dolorum architecto molestiae aspernatur voluptatem ducimus nisi ea quo, atque tempora magni necessitatibus.\n            </AccordionItem>\n    </Accordion>\n );\n}"
+      },
+      {
+        "title": "With Subtitles",
+        "components": [
+          {
+            "type": "Accordion",
+            "props": {
+              "variant": "bordered",
+              "style": {
+                "width": "60%",
+                "margin": "auto"
+              }
+            },
+            "children": [
+              {
+                "type": "AccordionItem",
+                "props": {
+                  "title": "Section 1",
+                  "subtitle": "Subtitle 1"
+                },
+                "children": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident optio dolore, laboriosam voluptatum consequatur non mollitia. Magni eligendi eaque eum aperiam iste similique ad commodi."
+              },
+              {
+                "type": "AccordionItem",
+                "props": {
+                  "title": "Section 2",
+                  "subtitle": "Subtitle 2"
+                },
+                "children": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis velit provident earum vel, perferendis cupiditate beatae illo aut minima libero consequuntur aperiam officiis quisquam error neque id eos possimus est. Deserunt voluptatum inventore laudantium veritatis?"
+              },
+              {
+                "type": "AccordionItem",
+                "props": {
+                  "title": "Section 3",
+                  "subtitle": "Subtitle 3"
+                },
+                "children": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque officiis cupiditate placeat ut beatae temporibus deserunt neque, quis iure! Repudiandae eius eos facere numquam, suscipit voluptatibus sequi sunt esse excepturi."
+              }
+            ]
+          }
+        ],
+        "code": "import { Accordion, AccordionItem } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Accordion allowMultipleOpen={false}>\n            <AccordionItem title='Section 1' subtitle='Subtitle 1'>\n              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolorem unde quis, ea ratione obcaecati. Quaerat autem unde cupiditate ipsa.\n            </AccordionItem>\n            <AccordionItem title='Section 2' subtitle='Subtitle 2'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium unde, amet voluptatibus soluta reprehenderit sed laudantium optio ut sint nemo illum earum ducimus tempora nulla quia nam placeat explicabo facilis quisquam minus? Fuga, labore facilis.\n            </AccordionItem>\n            <AccordionItem title='Section 3' subtitle='Subtitle 3'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, est exercitationem consequatur dolorum architecto molestiae aspernatur voluptatem ducimus nisi ea quo, atque tempora magni necessitatibus.\n            </AccordionItem>\n    </Accordion>\n );\n}"
+      },
+      {
+        "title": "Variant Shadow",
+        "components": [
+          {
+            "type": "Accordion",
+            "props": {
+              "variant": "shadow",
+              "style": {
+                "width": "60%",
+                "margin": "auto"
+              }
+            },
+            "children": [
+              {
+                "type": "AccordionItem",
+                "props": {
+                  "title": "Section 1"
+                },
+                "children": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident optio dolore, laboriosam voluptatum consequatur non mollitia. Magni eligendi eaque eum aperiam iste similique ad commodi."
+              },
+              {
+                "type": "AccordionItem",
+                "props": {
+                  "title": "Section 2"
+                },
+                "children": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis velit provident earum vel, perferendis cupiditate beatae illo aut minima libero consequuntur aperiam officiis quisquam error neque id eos possimus est. Deserunt voluptatum inventore laudantium veritatis?"
+              },
+              {
+                "type": "AccordionItem",
+                "props": {
+                  "title": "Section 3"
+                },
+                "children": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque officiis cupiditate placeat ut beatae temporibus deserunt neque, quis iure! Repudiandae eius eos facere numquam, suscipit voluptatibus sequi sunt esse excepturi."
+              }
+            ]
+          }
+        ],
+        "code": "import { Accordion, AccordionItem } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Accordion variant='shadow'>\n            <AccordionItem title='Section 1'>\n              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolorem unde quis, ea ratione obcaecati. Quaerat autem unde cupiditate ipsa.\n            </AccordionItem>\n            <AccordionItem title='Section 2'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium unde, amet voluptatibus soluta reprehenderit sed laudantium optio ut sint nemo illum earum ducimus tempora nulla quia nam placeat explicabo facilis quisquam minus? Fuga, labore facilis.\n            </AccordionItem>\n            <AccordionItem title='Section 3'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, est exercitationem consequatur dolorum architecto molestiae aspernatur voluptatem ducimus nisi ea quo, atque tempora magni necessitatibus.\n            </AccordionItem>\n    </Accordion>\n );\n}"
+      },
+      {
+        "title": "Variant Light",
+        "components": [
+          {
+            "type": "Accordion",
+            "props": {
+              "variant": "light",
+              "style": {
+                "width": "60%",
+                "margin": "auto"
+              }
+            },
+            "children": [
+              {
+                "type": "AccordionItem",
+                "props": {
+                  "title": "Section 1"
+                },
+                "children": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident optio dolore, laboriosam voluptatum consequatur non mollitia. Magni eligendi eaque eum aperiam iste similique ad commodi."
+              },
+              {
+                "type": "AccordionItem",
+                "props": {
+                  "title": "Section 2"
+                },
+                "children": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis velit provident earum vel, perferendis cupiditate beatae illo aut minima libero consequuntur aperiam officiis quisquam error neque id eos possimus est. Deserunt voluptatum inventore laudantium veritatis?"
+              },
+              {
+                "type": "AccordionItem",
+                "props": {
+                  "title": "Section 3"
+                },
+                "children": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque officiis cupiditate placeat ut beatae temporibus deserunt neque, quis iure! Repudiandae eius eos facere numquam, suscipit voluptatibus sequi sunt esse excepturi."
+              }
+            ]
+          }
+        ],
+        "code": "import { Accordion, AccordionItem } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Accordion variant='light'>\n            <AccordionItem title='Section 1'>\n              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolorem unde quis, ea ratione obcaecati. Quaerat autem unde cupiditate ipsa.\n            </AccordionItem>\n            <AccordionItem title='Section 2'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium unde, amet voluptatibus soluta reprehenderit sed laudantium optio ut sint nemo illum earum ducimus tempora nulla quia nam placeat explicabo facilis quisquam minus? Fuga, labore facilis.\n            </AccordionItem>\n            <AccordionItem title='Section 3'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, est exercitationem consequatur dolorum architecto molestiae aspernatur voluptatem ducimus nisi ea quo, atque tempora magni necessitatibus.\n            </AccordionItem>\n    </Accordion>\n );\n}"
+      },
+      {
+        "title": "Variant Splitted",
+        "components": [
+          {
+            "type": "Accordion",
+            "props": {
+              "variant": "splitted",
+              "style": {
+                "width": "60%",
+                "margin": "auto"
+              }
+            },
+            "children": [
+              {
+                "type": "AccordionItem",
+                "props": {
+                  "title": "Section 1"
+                },
+                "children": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident optio dolore, laboriosam voluptatum consequatur non mollitia. Magni eligendi eaque eum aperiam iste similique ad commodi."
+              },
+              {
+                "type": "AccordionItem",
+                "props": {
+                  "title": "Section 2"
+                },
+                "children": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis velit provident earum vel, perferendis cupiditate beatae illo aut minima libero consequuntur aperiam officiis quisquam error neque id eos possimus est. Deserunt voluptatum inventore laudantium veritatis?"
+              },
+              {
+                "type": "AccordionItem",
+                "props": {
+                  "title": "Section 3"
+                },
+                "children": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque officiis cupiditate placeat ut beatae temporibus deserunt neque, quis iure! Repudiandae eius eos facere numquam, suscipit voluptatibus sequi sunt esse excepturi."
+              }
+            ]
+          }
+        ],
+        "code": "import { Accordion, AccordionItem } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Accordion variant='splitted'>\n            <AccordionItem title='Section 1'>\n              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolorem unde quis, ea ratione obcaecati. Quaerat autem unde cupiditate ipsa.\n            </AccordionItem>\n            <AccordionItem title='Section 2'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium unde, amet voluptatibus soluta reprehenderit sed laudantium optio ut sint nemo illum earum ducimus tempora nulla quia nam placeat explicabo facilis quisquam minus? Fuga, labore facilis.\n            </AccordionItem>\n            <AccordionItem title='Section 3'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, est exercitationem consequatur dolorum architecto molestiae aspernatur voluptatem ducimus nisi ea quo, atque tempora magni necessitatibus.\n            </AccordionItem>\n    </Accordion>\n );\n}"
+      },
+      {
+        "title": "Change Icons",
+        "components": [
+          {
+            "type": "Accordion",
+            "props": {
+              "variant": "bordered",
+              "style": {
+                "width": "60%",
+                "margin": "auto"
+              }
+            },
+            "children": [
+              {
+                "type": "AccordionItem",
+                "props": {
+                  "title": "Section 1",
+                  "iconClose": "FaMinus",
+                  "iconOpen": "FaPlus"
+                },
+                "children": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident optio dolore, laboriosam voluptatum consequatur non mollitia. Magni eligendi eaque eum aperiam iste similique ad commodi."
+              },
+              {
+                "type": "AccordionItem",
+                "props": {
+                  "title": "Section 2",
+                  "iconClose": "FaMinus",
+                  "iconOpen": "FaPlus"
+                },
+                "children": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis velit provident earum vel, perferendis cupiditate beatae illo aut minima libero consequuntur aperiam officiis quisquam error neque id eos possimus est. Deserunt voluptatum inventore laudantium veritatis?"
+              },
+              {
+                "type": "AccordionItem",
+                "props": {
+                  "title": "Section 3",
+                  "iconClose": "FaMinus",
+                  "iconOpen": "FaPlus"
+                },
+                "children": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque officiis cupiditate placeat ut beatae temporibus deserunt neque, quis iure! Repudiandae eius eos facere numquam, suscipit voluptatibus sequi sunt esse excepturi."
+              }
+            ]
+          }
+        ],
+        "code": "import { Accordion, AccordionItem } from 'AwesomeCL';\nimport { FaPlus, FaMinus } from 'react-icons/fa6';\n\nfunction App() {\n  return (\n    <Accordion variant='bordered'>\n            <AccordionItem title='Section 1' iconClose={<FaMinus />} iconOpen={<FaPlus />} >\n              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolorem unde quis, ea ratione obcaecati. Quaerat autem unde cupiditate ipsa.\n            </AccordionItem>\n            <AccordionItem title='Section 2' iconClose={<FaMinus />} iconOpen={<FaPlus />}>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium unde, amet voluptatibus soluta reprehenderit sed laudantium optio ut sint nemo illum earum ducimus tempora nulla quia nam placeat explicabo facilis quisquam minus? Fuga, labore facilis.\n            </AccordionItem>\n            <AccordionItem title='Section 3' iconClose={<FaMinus />} iconOpen={<FaPlus />}>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, est exercitationem consequatur dolorum architecto molestiae aspernatur voluptatem ducimus nisi ea quo, atque tempora magni necessitatibus.\n            </AccordionItem>\n    </Accordion>\n );\n}"
+      }
+    ],
+    "propsTable": {
+      "title": "Accordion Props",
+      "description": "List of all properties supported by the accordion component.",
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
+      "rows": [
+        {
+          "propName": "aria",
+          "type": "string",
+          "description": "Aria label for accessibility. Provides additional context for screen readers.",
+          "defaultValue": "'accordion'"
+        },
+        {
+          "propName": "allowMultipleOpen",
+          "type": "Boolean",
+          "description": "Defines whether multiple items can be toggled at the same time.",
+          "defaultValue": "false"
+        },
+        {
+          "propName": "variant",
+          "type": "string",
+          "description": "Defines the visual variant of the accordion. Options are: 'light', 'bordered', 'shadow', 'splitted'.",
+          "defaultValue": "bordered"
+        },
+        {
+          "propName": "style",
+          "type": "object",
+          "description": "Inline styles to be applied to the search bar.",
+          "defaultValue": "-"
+        },
+        {
+          "propName": "className",
+          "type": "string",
+          "description": "Additional CSS class names to apply.",
+          "defaultValue": "undefined"
+        }
+      ]
+    },
+    "propsTable2": {
+      "title": "Accordion Item Props",
+      "description": "List of all properties supported by the accordion item component.",
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
+      "rows": [
+        {
+          "propName": "aria",
+          "type": "string",
+          "description": "Aria label for accessibility. Provides additional context for screen readers.",
+          "defaultValue": "'accordion-item'"
+        },
+        {
+          "propName": "title",
+          "type": "string",
+          "description": "Defines the headline for the accordion item.",
+          "defaultValue": "-"
+        },
+        {
+          "propName": "subtitle",
+          "type": "string",
+          "description": "Defines the subtitle for the accordion item.",
+          "defaultValue": "-"
+        },
+        {
+          "propName": "children",
+          "type": "string/ React Node",
+          "description": "The content for the accordion item.",
+          "defaultValue": "-"
+        },
+        {
+          "propName": "iconClose",
+          "type": "(React) icon",
+          "description": "Defines the icon that is visible when item is open. Works with react icons.",
+          "defaultValue": "Arrow down"
+        },
+        {
+          "propName": "iconOpen",
+          "type": "string/ React Node",
+          "description": "Defines the icon that is visible when item is closed. Works with react icons.",
+          "defaultValue": "Arrow left"
+        }
+      ]
+    },
+    "eventsTable": {
+      "title": "Events",
+      "description": "List of all events emitted by the Search bar component.",
+      "headers": ["Event Name", "Description"],
+      "rows": [
+        {
+          "propName": "onToggle",
+          "type": "Accordion item event. Defines action in toggle."
+        }
+      ]
+    },
+    "accessibility": {
+      "title": "Accessibility",
+      "description": "Accessibility considerations for the Search bar component.",
+      "ariaRoles": [
+        {
+          "propName": "Accordion",
+          "description": "The Accordion component is rendered with the search accordion by default."
+        },
+        {
+          "propName": "Accordion Item",
+          "description": "The Accordion Item component is rendered with the accordion item accordion by default."
+        }
+      ]
+    }
+  },
+  {
+    "title": "checkbox",
+    "path": "/frontend/components/checkbox",
+    "description": "A versatile checkbox component that supports various styles, sizes, and allows for flexible positioning of the label.",
+    "installation": [
+      {
+        "name": "CLI",
+        "command": "cli-command-to-install",
+        "path": "/icons/cube-solid.svg"
+      },
+      {
+        "name": "npm",
+        "command": "npm install your-library",
+        "path": "/icons/npm-brands-solid.svg"
+      },
+      {
+        "name": "yarn",
+        "command": "yarn add your-library",
+        "path": "/icons/yarn-brands-solid.svg"
+      },
+      {
+        "name": "pnpm",
+        "command": "pnpm add your-library",
+        "path": "/icons/cubes-solid.svg"
+      },
+      {
+        "name": "bun",
+        "command": "bun add your-library",
+        "path": "/icons/lemon-regular.svg"
+      }
+    ],
+    "import": {
+      "code": "import { Checkbox } from 'AwesomeCL';",
+      "description": "This code shows how to import the Checkbox component from the library."
     },
     "examples": [
       {
         "title": "Default",
         "components": [
           {
-            "type": "Button",
+            "type": "Checkbox",
             "props": {
-              "size": "sm"
+              "checked": true,
+              "size": "md"
             },
-            "children": "Button"
+            "children": "My Label"
           }
         ],
-        "code": "import { Button } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Button>\n      Button\n    </Button>\n  );\n}"
+        "code": "import { Checkbox } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Checkbox>\n      My Label\n    </Checkbox>\n  );\n}"
+      },
+      {
+        "title": "Label Position",
+        "components": [
+          {
+            "type": "Checkbox",
+            "props": {
+              "labelPosition": "right"
+            },
+            "children": "Right Label"
+          },
+          {
+            "type": "Checkbox",
+            "props": {
+              "labelPosition": "left"
+            },
+            "children": "Left Label"
+          },
+          {
+            "type": "Checkbox",
+            "props": {
+              "labelPosition": "top"
+            },
+            "children": "Top Label"
+          },
+  
+          {
+            "type": "Checkbox",
+            "props": {
+              "labelPosition": "bottom"
+            },
+            "children": "Bottom Label"
+          }
+        ],
+        "code": "import { Checkbox } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Checkbox labelPosition=\"right\">Right</Checkbox>\n      <Checkbox labelPosition=\"left\">Left</Checkbox>\n      <Checkbox labelPosition=\"top\">Top</Checkbox>\n      <Checkbox labelPosition=\"bottom\">Bottom</Checkbox>\n    </>\n  );\n}"
+      },
+      {
+        "title": "Checked State",
+        "components": [
+          {
+            "type": "Checkbox",
+            "props": {
+              "checked": true
+            },
+            "children": "Checked"
+          }
+        ],
+        "code": "import { Checkbox } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Checkbox checked={true}>\n      Checked\n    </Checkbox>\n  );\n}"
       },
       {
         "title": "Sizes",
         "components": [
           {
-            "type": "Button",
+            "type": "Checkbox",
             "props": {
-              "size": "sm",
-              "radius": "sm",
-              "color": "secondary"
+              "size": "sm"
             },
-            "children": "Button"
+            "children": "Small"
           },
           {
-            "type": "Button",
+            "type": "Checkbox",
             "props": {
-              "size": "md",
-              "radius": "sm",
-              "color": "secondary"
+              "size": "md"
             },
-            "children": "Button"
+            "children": "Medium"
           },
           {
-            "type": "Button",
+            "type": "Checkbox",
             "props": {
-              "size": "lg",
-              "radius": "sm",
-              "color": "secondary"
+              "size": "lg"
             },
-            "children": "Button"
+            "children": "Large"
           }
         ],
-        "code": "import { Button } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Button size=\"sm\">Button</Button>\n      <Button size=\"md\">MButton</Button>\n      <Button size=\"lg\">Button</Button>\n    </>\n  );\n}"
+        "code": "import { Checkbox } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Checkbox size=\"sm\">Small</Checkbox>\n      <Checkbox size=\"md\">Medium</Checkbox>\n      <Checkbox size=\"lg\">Large</Checkbox>\n    </>\n  );\n}"
       },
       {
         "title": "Radius",
         "components": [
           {
-            "type": "Button",
+            "type": "Checkbox",
             "props": {
-              "size": "sm",
+              "size": "lg",
               "radius": "none",
-              "color": "secondary"
+              "color": "default-light"
             },
-            "children": "Button"
+            "children": "None"
           },
           {
-            "type": "Button",
+            "type": "Checkbox",
             "props": {
-              "size": "sm",
+              "size": "lg",
               "radius": "sm",
-              "color": "secondary"
+              "color": "default-light"
             },
-            "children": "Button"
+            "children": "Small"
           },
           {
-            "type": "Button",
+            "type": "Checkbox",
             "props": {
-              "size": "sm",
+              "size": "lg",
               "radius": "md",
-              "color": "secondary"
+              "color": "default-light"
             },
-            "children": "Button"
+            "children": "Medium"
           },
           {
-            "type": "Button",
+            "type": "Checkbox",
             "props": {
-              "size": "sm",
-              "radius": "lg",
-              "color": "secondary"
-            },
-            "children": "Button"
-          },
-          {
-            "type": "Button",
-            "props": {
-              "size": "sm",
+              "size": "lg",
               "radius": "full",
-              "color": "secondary"
+              "color": "default-light"
             },
-            "children": "Button"
+            "children": "Full"
           }
         ],
-        "code": "import { Button } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Button radius=\"none\">Button</Button>\n      <Button radius=\"sm\">Button</Button>\n      <Button radius=\"md\">Button</Button>\n      <Button radius=\"lg\">Button</Button>\n      <Button radius=\"full\">Button</Button>\n    </>\n  );\n}"
+        "code": "import { Switch } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Checkbox radius=\"none\">None</Checkbox>\n      <Checkbox radius=\"sm\">Small</Checkbox>\n      <Checkbox radius=\"md\">Medium</Checkbox>\n      <Checkbox radius=\"full\">Full</Checkbox>\n    </>\n  );\n}"
       },
       {
-        "title": "Colors",
+        "title": "Color Variants",
         "components": [
           {
-            "type": "Button",
+            "type": "Checkbox",
             "props": {
-              "size": "sm",
-              "radius": "md",
-              "color": "default"
+              "color": "default-light"
             },
-            "children": "Button"
+            "children": "Default Light"
           },
           {
-            "type": "Button",
+            "type": "Checkbox",
             "props": {
-              "size": "sm",
-              "radius": "md",
+              "color": "default-dark"
+            },
+            "children": "Default Dark"
+          },
+          {
+            "type": "Checkbox",
+            "props": {
               "color": "primary"
             },
-            "children": "Button"
+            "children": "Primary"
           },
           {
-            "type": "Button",
+            "type": "Checkbox",
             "props": {
-              "size": "sm",
-              "radius": "md",
               "color": "secondary"
             },
-            "children": "Button"
+            "children": "Secondary"
           },
           {
-            "type": "Button",
+            "type": "Checkbox",
             "props": {
-              "size": "sm",
-              "radius": "md",
               "color": "success"
             },
-            "children": "Button"
+            "children": "Success"
           },
           {
-            "type": "Button",
+            "type": "Checkbox",
             "props": {
-              "size": "sm",
-              "radius": "md",
               "color": "warning"
             },
-            "children": "Button"
+            "children": "Warning"
           },
           {
-            "type": "Button",
+            "type": "Checkbox",
             "props": {
-              "size": "sm",
-              "radius": "md",
               "color": "danger"
             },
-            "children": "Button"
+            "children": "Danger"
           }
         ],
-        "code": "import { Button } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Button color=\"default\">Button</Button>\n      <Button color=\"primary\">Button</Button>\n      <Button color=\"secondary\">Button</Button>\n      <Button color=\"success\">Button</Button>\n      <Button color=\"warning\">Button</Button>\n      <Button color=\"danger\">Button</Button>\n    </>\n  );\n}"
+        "code": "import { Checkbox } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Checkbox color=\"default-light\">Default Light</Checkbox>\n      <Checkbox color=\"default-dark\">Default Dark</Checkbox>\n      <Checkbox color=\"primary\">Primary</Checkbox>\n      <Checkbox color=\"secondary\">Secondary</Checkbox>\n      <Checkbox color=\"success\">Success</Checkbox>\n      <Checkbox color=\"warning\">Warning</Checkbox>\n      <Checkbox color=\"danger\">Danger</Checkbox>\n    </>\n  );\n}"
       },
       {
-        "title": "Borders",
+        "title": "Border Variants",
         "components": [
           {
-            "type": "Button",
+            "type": "Checkbox",
             "props": {
-              "size": "sm",
-              "radius": "md",
-              "color": "secondary"
+              "border": "none",
+              "color": "default-dark"
             },
-            "children": "Button"
+            "children": "No Border"
           },
           {
-            "type": "Button",
+            "type": "Checkbox",
             "props": {
-              "size": "sm",
-              "radius": "md",
-              "color": "secondary"
+              "border": "sm"
             },
-            "children": "Button"
+            "children": "Small Border"
           },
           {
-            "type": "Button",
+            "type": "Checkbox",
             "props": {
-              "size": "sm",
-              "radius": "md",
-              "color": "secondary"
+              "border": "md"
             },
-            "children": "Button"
+            "children": "Medium Border"
           },
           {
-            "type": "Button",
+            "type": "Checkbox",
             "props": {
-              "size": "sm",
-              "radius": "md",
-              "color": "secondary"
+              "border": "lg"
             },
-            "children": "Button"
-          },
-          {
-            "type": "Button",
-            "props": {
-              "size": "sm",
-              "radius": "md",
-              "color": "secondary"
-            },
-            "children": "Button"
-          },
-          {
-            "type": "Button",
-            "props": {
-              "size": "sm",
-              "radius": "md",
-              "color": "secondary"
-            },
-            "children": "Button"
-          },
-          {
-            "type": "Button",
-            "props": {
-              "size": "sm",
-              "radius": "md",
-              "color": "secondary"
-            },
-            "children": "Button"
+            "children": "Large Border"
           }
         ],
-        "code": "import { Button } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Button border=\"none\">No Border</Button>\n      <Button border=\"xs\">Extra Small Border</Button>\n      <Button border=\"sm\">Small Border</Button>\n      <Button border=\"md\">Medium Border</Button>\n      <Button border=\"lg\">Large Border</Button>\n    </>\n  );\n}"
+        "code": "import { Checkbox } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Checkbox border=\"none\">No Border</Checkbox>\n      <Checkbox border=\"sm\">Small Border</Checkbox>\n      <Checkbox border=\"md\">Medium Border</Checkbox>\n      <Checkbox border=\"lg\">Large Border</Checkbox>\n    </>\n  );\n}"
       }
     ],
     "propsTable": {
-      "title": " Button Props",
-      "description": "List of all props supported by the Button component.",
+      "title": "Checkbox Props",
+      "description": "List of all props supported by the Checkbox component.",
       "headers": ["Prop Name", "Type", "Description", "Default Value"],
       "rows": [
         {
           "propName": "children",
           "type": "node",
-          "description": "Content to be displayed inside the button.",
+          "description": "Content to be displayed next to the checkbox.",
           "defaultValue": "null"
         },
         {
           "propName": "aria",
           "type": "string",
           "description": "Aria label for accessibility. Provides additional context for screen readers.",
-          "defaultValue": "'button'"
+          "defaultValue": "'checkbox'"
+        },
+        {
+          "propName": "color",
+          "type": "string",
+          "description": "Defines the color of the checkbox. Options are: 'default-light', 'default-dark', 'primary', 'secondary', 'success', 'warning', 'danger'.",
+          "defaultValue": "'default-light'"
+        },
+        {
+          "propName": "onChange",
+          "type": "function",
+          "description": "Callback function triggered when the checkbox is clicked",
+          "defaultValue": "-"
+        },
+        {
+          "propName": "style",
+          "type": "object",
+          "description": "Inline styles to be applied to the checkbox container.",
+          "defaultValue": "-"
+        },
+        {
+          "propName": "size",
+          "type": "string",
+          "description": "Defines the size of the checkbox. Options are: 'sm', 'md', 'lg'.",
+          "defaultValue": "'md'"
+        },
+        {
+          "propName": "radius",
+          "type": "string",
+          "description": "Defines the border-radius of the checkbox. Options are: 'none', 'sm', 'md', 'full'.",
+          "defaultValue": "'sm'"
+        },
+        {
+          "propName": "border",
+          "type": "string",
+          "description": "Defines the border width of the checkbox. Options are: 'sm', 'md', 'lg', 'none'.",
+          "defaultValue": "'sm'"
+        },
+        {
+          "propName": "className",
+          "type": "string",
+          "description": "Additional CSS class names to apply to the checkbox container.",
+          "defaultValue": "-"
+        },
+        {
+          "propName": "labelPosition",
+          "type": "string",
+          "description": "Defines the position of the label. Options are: 'left', 'right', 'top', 'bottom'.",
+          "defaultValue": "'right'"
+        }
+      ]
+    },
+    "eventsTable": {
+      "title": "Events",
+      "description": "List of all events emitted by the Checkbox component.",
+      "headers": ["Event Name", "Description"],
+      "rows": [
+        {
+          "propName": "onChange",
+          "type": "Triggered when the checkbox is clicked."
+        }
+      ]
+    },
+    "accessibility": {
+      "title": "Accessibility",
+      "description": "Accessibility considerations for the Checkbox component.",
+      "ariaRoles": [
+        {
+          "propName": "Checkbox",
+          "description": "The Checkbox component is rendered with the checkbox role by default."
+        },
+        {
+          "propName": "Aria-label",
+          "description": "If the checkbox has only an icon and no text, you should add an aria-label for screen readers."
+        }
+      ]
+    }
+  },
+  {
+    "title": "form",
+    "path": "/frontend/components/form",
+    "description": "A versatile form component with multiple variants for various use cases like contact, appointment, feedback, inquiry, and newsletter.",
+    "installation": [
+      {
+        "name": "CLI",
+        "command": "cli-command-to-install",
+        "path": "/icons/cube-solid.svg"
+      },
+      {
+        "name": "npm",
+        "command": "npm install your-library",
+        "path": "/icons/npm-brands-solid.svg"
+      },
+      {
+        "name": "yarn",
+        "command": "yarn add your-library",
+        "path": "/icons/yarn-brands-solid.svg"
+      },
+      {
+        "name": "pnpm",
+        "command": "pnpm add your-library",
+        "path": "/icons/cubes-solid.svg"
+      },
+      {
+        "name": "bun",
+        "command": "bun add your-library",
+        "path": "/icons/lemon-regular.svg"
+      }
+    ],
+    "import": {
+      "code": "import { Form } from 'AwesomeCL';",
+      "description": "This code shows how to import the Form component from the library."
+    },
+    "examples": [
+      {
+        "title": "Contact Form",
+        "components": [
+          {
+            "type": "Form",
+            "props": {
+              "variant": "contact",
+              "fields": ["firstName", "lastName", "email", "message"]
+            },
+            "children": "Contact Form Content"
+          }
+        ],
+        "code": "import { Form } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Form variant=\"contact\" />\n  );\n}"
+      },
+      {
+        "title": "Appointment Form",
+        "components": [
+          {
+            "type": "Form",
+            "props": {
+              "variant": "appointment",
+              "fields": ["firstName", "lastName", "email", "phone", "date"]
+            },
+            "children": "Appointment Form Content"
+          }
+        ],
+        "code": "import { Form } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Form variant=\"appointment\" />\n  );\n}"
+      },
+      {
+        "title": "Feedback Form",
+        "components": [
+          {
+            "type": "Form",
+            "props": {
+              "variant": "feedback",
+              "fields": ["firstName", "lastName", "email", "feedback"]
+            },
+            "children": "Feedback Form Content"
+          }
+        ],
+        "code": "import { Form } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Form variant=\"feedback\" />\n  );\n}"
+      },
+      {
+        "title": "Inquiry Form",
+        "components": [
+          {
+            "type": "Form",
+            "props": {
+              "variant": "inquiry",
+              "fields": ["firstName", "lastName", "email", "inquiry"]
+            },
+            "children": "Inquiry Form Content"
+          }
+        ],
+        "code": "import { Form } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Form variant=\"inquiry\" />\n  );\n}"
+      },
+      {
+        "title": "Newsletter Signup",
+        "components": [
+          {
+            "type": "Form",
+            "props": {
+              "variant": "newsletter",
+              "fields": ["email", "interests"]
+            },
+            "children": "Newsletter Signup Content"
+          }
+        ],
+        "code": "import { Form } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Form variant=\"newsletter\" />\n  );\n}"
+      }
+    ],
+    "propsTable": {
+      "title": "Form Props",
+      "description": "List of all props supported by the Form component.",
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
+      "rows": [
+        {
+          "propName": "variant",
+          "type": "string",
+          "description": "Specifies the type of form (e.g., 'contact', 'appointment', etc.).",
+          "defaultValue": "'contact'"
+        },
+        {
+          "propName": "fields",
+          "type": "array",
+          "description": "Defines the fields included in the form.",
+          "defaultValue": "[]"
+        },
+        {
+          "propName": "firstName",
+          "type": "string",
+          "description": "Sets the default first name value.",
+          "defaultValue": "''"
+        },
+        {
+          "propName": "lastName",
+          "type": "string",
+          "description": "Sets the default last name value.",
+          "defaultValue": "''"
+        },
+        {
+          "propName": "email",
+          "type": "string",
+          "description": "Sets the default email value.",
+          "defaultValue": "''"
+        },
+        {
+          "propName": "phone",
+          "type": "string",
+          "description": "Sets the default phone number for the form.",
+          "defaultValue": "''"
+        },
+        {
+          "propName": "date",
+          "type": "Date",
+          "description": "Sets a default date for the appointment form.",
+          "defaultValue": "new Date()"
+        },
+        {
+          "propName": "message",
+          "type": "string",
+          "description": "Provides a message field for the contact or inquiry form.",
+          "defaultValue": "''"
+        },
+        {
+          "propName": "interests",
+          "type": "array",
+          "description": "List of interests for the newsletter signup form.",
+          "defaultValue": "[]"
+        }
+      ]
+    },
+    "eventsTable": {
+      "title": "Events",
+      "description": "List of all events emitted by the Form component.",
+      "headers": ["Event Name", "Description"],
+      "rows": [
+        {
+          "propName": "onSubmit",
+          "type": "Triggered when the form is submitted."
+        },
+        {
+          "propName": "onChange",
+          "type": "Triggered when the input values are changed."
+        }
+      ]
+    },
+    "accessibility": {
+      "title": "Accessibility",
+      "description": "Accessibility considerations for the Form component.",
+      "ariaRoles": [
+        {
+          "propName": "Form",
+          "description": "The Form component is rendered with the 'form' role."
+        },
+        {
+          "propName": "aria-label",
+          "description": "An aria-label can be added for accessibility if the form has no header."
+        }
+      ]
+    }
+  },
+  {
+    "title": "input",
+    "path": "/frontend/components/input",
+    "description": "A customizable form element with adjustable label positioning (above or to the left), size, color, and border styles.",
+    "installation": [
+      {
+        "name": "CLI",
+        "command": "cli-command-to-install",
+        "path": "/icons/cube-solid.svg"
+      },
+      {
+        "name": "npm",
+        "command": "npm install your-library",
+        "path": "/icons/npm-brands-solid.svg"
+      },
+      {
+        "name": "yarn",
+        "command": "yarn add your-library",
+        "path": "/icons/yarn-brands-solid.svg"
+      },
+      {
+        "name": "pnpm",
+        "command": "pnpm add your-library",
+        "path": "/icons/cubes-solid.svg"
+      },
+      {
+        "name": "bun",
+        "command": "bun add your-library",
+        "path": "/icons/lemon-regular.svg"
+      }
+    ],
+    "import": {
+      "code": "import { Input } from 'AwesomeCL';",
+      "description": "This code shows how to import the input component from the library."
+    },
+    "examples": [
+      {
+        "title": "Default",
+        "components": [
+          {
+            "type": "Input",
+            "props": {
+              "size": "sm"
+            },
+            "children": ""
+          }
+        ],
+        "code": "import { Input } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Input />\n );\n}"
+      },
+      {
+        "title": "Sizes",
+        "components": [
+          {
+            "type": "Input",
+            "props": {
+              "size": "sm",
+              "placeholder": "Email"
+            },
+            "children": ""
+          },
+          {
+            "type": "Input",
+            "props": {
+              "size": "md",
+              "placeholder": "Email"
+            },
+            "children": "Input"
+          },
+          {
+            "type": "Input",
+            "props": {
+              "size": "lg",
+              "placeholder": "Email"
+            },
+            "children": ""
+          }
+        ],
+        "code": "import { Input } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Input size=\"sm\" />\n      <Input size=\"md\"/>\n      <Input size=\"lg\" />\n    </>\n  );\n}"
+      },
+      {
+        "title": "Radius",
+        "components": [
+          {
+            "type": "Input",
+            "props": {
+              "radius": "none",
+              "placeholder": "Email"
+            },
+            "children": ""
+          },
+          {
+            "type": "Input",
+            "props": {
+              "radius": "sm",
+              "placeholder": "Email"
+            },
+            "children": ""
+          },
+          {
+            "type": "Input",
+            "props": {
+              "radius": "md",
+              "placeholder": "Email"
+            },
+            "children": ""
+          },
+          {
+            "type": "Input",
+            "props": {
+              "radius": "lg",
+              "placeholder": "Email"
+            },
+            "children": ""
+          },
+          {
+            "type": "Input",
+            "props": {
+              "radius": "full",
+              "placeholder": "Email"
+            },
+            "children": ""
+          }
+        ],
+        "code": "import { Input } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Input radius=\"none\" placeholder=\"Email\" />\n      <Input radius=\"sm\"  placeholder=\"Email\" />\n      <Input radius=\"md\" placeholder=\"Email\" />\n      <Input radius=\"lg\" placeholder=\"Email\" />\n      <Input radius=\"full\" placeholder=\"Email\" />\n    </>\n  );\n}"
+      },
+      {
+        "title": "Colors",
+        "components": [
+          {
+            "type": "Input",
+            "props": {
+              "color": "default",
+              "placeholder": "Email"
+            },
+            "children": ""
+          },
+          {
+            "type": "Input",
+            "props": {
+              "color": "primary",
+              "placeholder": "Email"
+            },
+            "children": ""
+          },
+          {
+            "type": "Input",
+            "props": {
+              "color": "secondary",
+              "placeholder": "Email"
+            },
+            "children": ""
+          },
+          {
+            "type": "Input",
+            "props": {
+              "color": "success",
+              "placeholder": "Email"
+            },
+            "children": ""
+          },
+          {
+            "type": "Input",
+            "props": {
+              "color": "warning",
+              "placeholder": "Email"
+            },
+            "children": ""
+          },
+          {
+            "type": "Input",
+            "props": {
+              "color": "danger",
+              "placeholder": "Email"
+            },
+            "children": ""
+          }
+        ],
+        "code": "import { Input } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Input color=\"default\" placeholder= \"Email\" />\n      <Input color=\"primary\" placeholder= \"Email\" />\n      <Input color=\"secondary\" placeholder= \"Email\" />\n      <Input color=\"success\" placeholder= \"Email\" />\n      <Input color=\"warning\" placeholder= \"Email\" />\n      <Input color=\"danger\" placeholder= \"Email\" />\n    </>\n  );\n}"
+      },
+      {
+        "title": "Borders",
+        "components": [
+          {
+            "type": "Input",
+            "props": {
+              "border": "none",
+              "placeholder": "Email"
+            },
+            "children": ""
+          },
+          {
+            "type": "Input",
+            "props": {
+              "border": "default",
+              "placeholder": "Email"
+            },
+            "children": ""
+          },
+          {
+            "type": "Input",
+            "props": {
+              "border": "bottom",
+              "placeholder": "Email"
+            },
+            "children": ""
+          }
+        ],
+        "code": "import { Input } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Input border=\"none\" placeholder= \"Email\" />\n      <Input border=\"default\" placeholder= \"Email\" />\n      <Input border=\"bottom\" placeholder= \"Email\" />\n    </>\n  );\n}"
+      },
+      {
+        "title": "Label Placements",
+        "components": [
+          {
+            "type": "Input",
+            "props": {
+              "label": "Email",
+              "labelPlacement": "outside"
+            },
+            "children": ""
+          },
+          {
+            "type": "Input",
+            "props": {
+              "label": "Email",
+              "labelPlacement": "outside-left"
+            },
+            "children": ""
+          }
+        ],
+        "code": "import { Input } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Input label=\"Email\" labelPlacement= \"outside\" />\n      <Input label=\"Email\" labelPlacement= \"outside-left\" />\n    </>\n  );\n}"
+      }
+    ],
+    "propsTable": {
+      "title": "Input Props",
+      "description": "List of all properties supported by the Input component.",
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
+      "rows": [
+        {
+          "propName": "aria",
+          "type": "string",
+          "description": "Aria label for accessibility. Provides additional context for screen readers.",
+          "defaultValue": "'input'"
+        },
+        {
+          "propName": "type",
+          "type": "string",
+          "description": "Changes the input type, all common HTML input types are valid.",
+          "defaultValue": "'text'"
+        },
+        {
+          "propName": "required",
+          "type": "Boolean",
+          "description": "Specifies whether an input field must be filled out before form submission.",
+          "defaultValue": "'text'"
         },
         {
           "propName": "color",
           "type": "string",
           "description": "Defines the color of the button. Options are: 'primary', 'secondary', 'success', 'warning', 'danger'.",
-          "defaultValue": "'primary'"
-        },
-        {
-          "propName": "onClick",
-          "type": "function",
-          "description": "Callback function triggered when the button is clicked.",
-          "defaultValue": "undefined"
+          "defaultValue": "'default'"
         },
         {
           "propName": "style",
@@ -651,52 +1866,972 @@
           "propName": "size",
           "type": "string",
           "description": "Defines the size of the button. Options are: 'sm', 'md', 'lg'.",
-          "defaultValue": "'md'"
+          "defaultValue": "'sm'"
         },
         {
           "propName": "radius",
           "type": "string",
           "description": "Defines the border-radius of the button. Options are: 'none', 'sm', 'md', 'lg', 'full'.",
-          "defaultValue": "'none'"
+          "defaultValue": "'md'"
         },
         {
           "propName": "border",
           "type": "string",
-          "description": "Defines the border width of the button. Options are: 'none', 'xs', 'sm', 'md', 'lg', 'xl'.",
-          "defaultValue": "'none'"
+          "description": "Defines the border width of the button. Options are: 'none', 'default', 'bottom'.",
+          "defaultValue": "'default'"
+        },
+        {
+          "propName": "label",
+          "type": "string",
+          "description": "Adds a label to the input field. If left blank there is no label. Also determines 'name'-tag.",
+          "defaultValue": ""
+        },
+        {
+          "propName": "labelPlacement",
+          "type": "string",
+          "description": "Determines the position of the label. Options are: 'outside' (places label on top), 'outside-left'.",
+          "defaultValue": "'outside'"
         },
         {
           "propName": "className",
           "type": "string",
           "description": "Additional CSS class names to apply to the button.",
           "defaultValue": "undefined"
+        },
+        {
+          "propName": "value",
+          "type": "string",
+          "description": "Changes the value of the input tag for different operations.",
+          "defaultValue": ""
         }
       ]
     },
     "eventsTable": {
       "title": "Events",
-      "description": "List of all events emitted by the Button component.",
+      "description": "List of all events emitted by the Input component.",
       "headers": ["Event Name", "Description"],
       "rows": [
         {
-          "propName": "onClick",
+          "propName": "onValueChange",
+          "type": "Triggered when the value changes."
+        }
+      ]
+    },
+    "accessibility": {
+      "title": "Accessibility",
+      "description": "Accessibility considerations for the Input component.",
+      "ariaRoles": [
+        {
+          "propName": "Input",
+          "description": "The Input component is rendered with the input role by default."
+        }
+      ]
+    }
+  },
+  {
+    "title": "searchbar",
+    "path": "/frontend/components/searchbar",
+    "description": "A customizable search bar with button element with adjustable positioning, size, color, and border styles.",
+    "installation": [
+      {
+        "name": "CLI",
+        "command": "cli-command-to-install",
+        "path": "/icons/cube-solid.svg"
+      },
+      {
+        "name": "npm",
+        "command": "npm install your-library",
+        "path": "/icons/npm-brands-solid.svg"
+      },
+      {
+        "name": "yarn",
+        "command": "yarn add your-library",
+        "path": "/icons/yarn-brands-solid.svg"
+      },
+      {
+        "name": "pnpm",
+        "command": "pnpm add your-library",
+        "path": "/icons/cubes-solid.svg"
+      },
+      {
+        "name": "bun",
+        "command": "bun add your-library",
+        "path": "/icons/lemon-regular.svg"
+      }
+    ],
+    "import": {
+      "code": "import { Search } from 'AwesomeCL';",
+      "description": "This code shows how to import the search component from the library."
+    },
+    "examples": [
+      {
+        "title": "Default",
+        "components": [
+          {
+            "type": "Search",
+            "props": {
+              "size": "sm"
+            },
+            "children": ""
+          }
+        ],
+        "code": "import { Search } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Search />\n );\n}"
+      },
+      {
+        "title": "Sizes",
+        "components": [
+          {
+            "type": "Search",
+            "props": {
+              "size": "sm"
+            },
+            "children": ""
+          },
+          {
+            "type": "Search",
+            "props": {
+              "size": "md"
+            },
+            "children": "Search"
+          },
+          {
+            "type": "Search",
+            "props": {
+              "size": "lg"
+            },
+            "children": ""
+          }
+        ],
+        "code": "import { Search } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Search size=\"sm\" />\n      <Search size=\"md\"/>\n      <Search size=\"lg\" />\n    </>\n  );\n}"
+      },
+      {
+        "title": "Radius",
+        "components": [
+          {
+            "type": "Search",
+            "props": {
+              "radius": "none"
+            },
+            "children": ""
+          },
+          {
+            "type": "Search",
+            "props": {
+              "radius": "sm"
+            },
+            "children": ""
+          },
+          {
+            "type": "Search",
+            "props": {
+              "radius": "md"
+            },
+            "children": ""
+          },
+          {
+            "type": "Search",
+            "props": {
+              "radius": "lg"
+            },
+            "children": ""
+          },
+          {
+            "type": "Search",
+            "props": {
+              "radius": "full"
+            },
+            "children": ""
+          }
+        ],
+        "code": "import { Search } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Search radius=\"none\" />\n      <Search radius=\"sm\" />\n      <Search radius=\"md\" />\n      <Search radius=\"lg\" />\n      <Search radius=\"full\" />\n    </>\n  );\n}"
+      },
+      {
+        "title": "Colors",
+        "components": [
+          {
+            "type": "Search",
+            "props": {
+              "color": "default"
+            },
+            "children": ""
+          },
+          {
+            "type": "Search",
+            "props": {
+              "color": "primary"
+            },
+            "children": ""
+          },
+          {
+            "type": "Search",
+            "props": {
+              "color": "secondary"
+            },
+            "children": ""
+          },
+          {
+            "type": "Search",
+            "props": {
+              "color": "success"
+            },
+            "children": ""
+          },
+          {
+            "type": "Search",
+            "props": {
+              "color": "warning"
+            },
+            "children": ""
+          },
+          {
+            "type": "Search",
+            "props": {
+              "color": "danger"
+            },
+            "children": ""
+          }
+        ],
+        "code": "import { Search } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Search color=\"default\" />\n      <Search color=\"primary\" />\n      <Search color=\"secondary\" />\n      <Search color=\"success\" />\n      <Search color=\"warning\" />\n      <Search color=\"danger\" />\n    </>\n  );\n}"
+      },
+      {
+        "title": "Borders",
+        "components": [
+          {
+            "type": "Search",
+            "props": {
+              "border": "none"
+            },
+            "children": ""
+          },
+          {
+            "type": "Search",
+            "props": {
+              "border": "default"
+            },
+            "children": ""
+          },
+          {
+            "type": "Search",
+            "props": {
+              "border": "bottom"
+            },
+            "children": ""
+          }
+        ],
+        "code": "import { Search } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Search border=\"none\" />\n      <Search border=\"default\" />\n      <Search border=\"bottom\" />\n    </>\n  );\n}"
+      },
+      {
+        "title": "Button Placements",
+        "components": [
+          {
+            "type": "Search",
+            "props": {
+              "buttonPlacement": "outside-end"
+            },
+            "children": ""
+          },
+          {
+            "type": "Search",
+            "props": {
+              "buttonPlacement": "outside-start"
+            },
+            "children": ""
+          },
+          {
+            "type": "Search",
+            "props": {
+              "buttonPlacement": "inside-start"
+            },
+            "children": ""
+          },
+          {
+            "type": "Search",
+            "props": {
+              "buttonPlacement": "inside-start"
+            },
+            "children": ""
+          }
+        ],
+        "code": "import { Search } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Search buttonPlacement= \"outside-start\" />\n      <Search labelPlacement= \"outside-end\" />\n      <Search labelPlacement= \"inside-start\" />\n      <Search labelPlacement= \"inside-end\" />\n    </>\n  );\n}"
+      }
+    ],
+    "propsTable": {
+      "title": "Search Props",
+      "description": "List of all properties supported by the Search component.",
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
+      "rows": [
+        {
+          "propName": "aria",
+          "type": "string",
+          "description": "Aria label for accessibility. Provides additional context for screen readers.",
+          "defaultValue": "'search'"
+        },
+        {
+          "propName": "color",
+          "type": "string",
+          "description": "Defines the color of the search bar. Options are: 'primary', 'secondary', 'success', 'warning', 'danger'.",
+          "defaultValue": "'default'"
+        },
+        {
+          "propName": "style",
+          "type": "object",
+          "description": "Inline styles to be applied to the search bar.",
+          "defaultValue": "undefined"
+        },
+        {
+          "propName": "size",
+          "type": "string",
+          "description": "Defines the size of the search bar. Options are: 'sm', 'md', 'lg'.",
+          "defaultValue": "'sm'"
+        },
+        {
+          "propName": "radius",
+          "type": "string",
+          "description": "Defines the border-radius of the search bar. Options are: 'none', 'sm', 'md', 'lg', 'full'.",
+          "defaultValue": "'md'"
+        },
+        {
+          "propName": "border",
+          "type": "string",
+          "description": "Defines the border width of the search bar. Options are: 'none', 'default', 'bottom'.",
+          "defaultValue": "'default'"
+        },
+        {
+          "propName": "buttonPlacement",
+          "type": "string",
+          "description": "Determines the position of the label. Options are: 'outside.start', 'outside-end', 'inside-start' and 'inside-end'.",
+          "defaultValue": "'inside-end'"
+        },
+        {
+          "propName": "className",
+          "type": "string",
+          "description": "Additional CSS class names to apply.",
+          "defaultValue": "undefined"
+        },
+        {
+          "propName": "value",
+          "type": "string",
+          "description": "Changes the value of the search bar for different operations.",
+          "defaultValue": ""
+        },
+        {
+          "propName": "placeholder",
+          "type": "string",
+          "description": "Adds placeholder text to the search bar.",
+          "defaultValue": ""
+        }
+      ]
+    },
+    "eventsTable": {
+      "title": "Events",
+      "description": "List of all events emitted by the Search bar component.",
+      "headers": ["Event Name", "Description"],
+      "rows": [
+        {
+          "propName": "onValueChange",
+          "type": "Triggered when the value changes."
+        },
+        {
+          "propName": "onSearchClick",
           "type": "Triggered when the button is clicked."
         }
       ]
     },
     "accessibility": {
       "title": "Accessibility",
-      "description": "Accessibility considerations for the Button component.",
+      "description": "Accessibility considerations for the Search bar component.",
       "ariaRoles": [
         {
-          "propName": "Button",
-          "description": "The Button component is rendered with the button role by default."
+          "propName": "Search",
+          "description": "The Search component is rendered with the search role by default."
+        }
+      ]
+    }
+  },
+  {
+    "title": "spinner",
+    "path": "/frontend/components/spinner",
+    "description": "A customizable spinner component for indicating loading states.",
+    "installation": [
+      {
+        "name": "CLI",
+        "command": "cli-command-to-install",
+        "path": "/icons/cube-solid.svg"
+      },
+      {
+        "name": "npm",
+        "command": "npm install your-library",
+        "path": "/icons/npm-brands-solid.svg"
+      },
+      {
+        "name": "yarn",
+        "command": "yarn add your-library",
+        "path": "/icons/yarn-brands-solid.svg"
+      },
+      {
+        "name": "pnpm",
+        "command": "pnpm add your-library",
+        "path": "/icons/cubes-solid.svg"
+      },
+      {
+        "name": "bun",
+        "command": "bun add your-library",
+        "path": "/icons/lemon-regular.svg"
+      }
+    ],
+    "import": {
+      "code": "import { Spinner } from 'AwesomeCL';",
+      "description": "This code shows how to import the Spinner component from the library."
+    },
+    "examples": [
+      {
+        "title": "Default",
+        "components": [
+          {
+            "type": "Spinner",
+            "props": {
+              "size": "lg"
+            }
+          }
+        ],
+        "code": "import { Spinner } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Spinner />\n  );\n}"
+      },
+      {
+        "title": "Sizes",
+        "components": [
+          {
+            "type": "Spinner",
+            "props": {
+              "size": "sm",
+              "color": "default"
+            }
+          },
+          {
+            "type": "Spinner",
+            "props": {
+              "size": "md",
+              "color": "default"
+            }
+          },
+          {
+            "type": "Spinner",
+            "props": {
+              "size": "lg",
+              "color": "default"
+            }
+          }
+        ],
+        "code": "import { Spinner } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Spinner size=\"sm\" />\n      <Spinner size=\"md\" />\n      <Spinner size=\"lg\" />\n    </>\n  );\n}"
+      },
+      {
+        "title": "Thickness",
+        "components": [
+          {
+            "type": "Spinner",
+            "props": {
+              "thickness": "sm",
+              "color": "default"
+            }
+          },
+          {
+            "type": "Spinner",
+            "props": {
+              "thickness": "md",
+              "color": "default"
+            }
+          },
+          {
+            "type": "Spinner",
+            "props": {
+              "thickness": "lg",
+              "color": "default"
+            }
+          }
+        ],
+        "code": "import { Spinner } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Spinner thickness=\"sm\" />\n      <Spinner thickness=\"md\" />\n      <Spinner thickness=\"lg\" />\n    </>\n  );\n}"
+      },
+      {
+        "title": "Colors",
+        "components": [
+          {
+            "type": "Spinner",
+            "props": {
+              "size": "lg",
+              "color": "default"
+            }
+          },
+          {
+            "type": "Spinner",
+            "props": {
+              "size": "lg",
+              "color": "primary"
+            }
+          },
+          {
+            "type": "Spinner",
+            "props": {
+              "size": "lg",
+              "color": "secondary"
+            }
+          },
+          {
+            "type": "Spinner",
+            "props": {
+              "size": "lg",
+              "color": "success"
+            }
+          },
+          {
+            "type": "Spinner",
+            "props": {
+              "size": "lg",
+              "color": "warning"
+            }
+          },
+          {
+            "type": "Spinner",
+            "props": {
+              "size": "lg",
+              "color": "danger"
+            }
+          }
+        ],
+        "code": "import { Spinner } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Spinner color=\"default\" />\n      <Spinner color=\"primary\" />\n      <Spinner color=\"secondary\" />\n      <Spinner color=\"success\" />\n      <Spinner color=\"warning\" />\n      <Spinner color=\"danger\" />\n    </>\n  );\n}"
+      },
+      {
+        "title": "Speed",
+        "components": [
+          {
+            "type": "Spinner",
+            "props": {
+              "size": "lg",
+              "color": "default",
+              "speed": "1s"
+            }
+          },
+          {
+            "type": "Spinner",
+            "props": {
+              "size": "lg",
+              "color": "default",
+              "speed": "2s"
+            }
+          },
+          {
+            "type": "Spinner",
+            "props": {
+              "size": "lg",
+              "color": "default",
+              "speed": "3s"
+            }
+          }
+        ],
+        "code": "import { Spinner } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Spinner speed=\"1s\" />\n      <Spinner speed=\"2s\" />\n      <Spinner speed=\"3s\" />\n    </>\n  );\n}"
+      }
+    ],
+    "propsTable": {
+      "title": "Spinner Props",
+      "description": "List of all props supported by the Spinner component.",
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
+      "rows": [
+        {
+          "propName": "size",
+          "type": "string",
+          "description": "Defines the size of the spinner. Options are: 'sm', 'md', 'lg'.",
+          "defaultValue": "'lg'"
         },
         {
-          "propName": "Aria-label",
-          "description": "If the button has only an icon and no text, you should add an aria-label for screen readers."
+          "propName": "thickness",
+          "type": "string",
+          "description": "Defines the thickness of the spinner. Options are: 'sm', 'md', 'lg'.",
+          "defaultValue": "'lg'"
+        },
+        {
+          "propName": "color",
+          "type": "string",
+          "description": "Defines the color of the spinner. Options are: 'default-dark', 'default-light', or any other predefined CSS color.",
+          "defaultValue": "'default'"
+        },
+        {
+          "propName": "speed",
+          "type": "string",
+          "description": "Specifies the animation duration of the spinner. Accepts any valid CSS time unit, e.g., '1s', '500ms'.",
+          "defaultValue": "'1s'"
+        },
+        {
+          "propName": "style",
+          "type": "object",
+          "description": "Inline styles to apply to the spinner.",
+          "defaultValue": "-"
+        },
+        {
+          "propName": "className",
+          "type": "string",
+          "description": "Additional CSS class names to apply to the spinner.",
+          "defaultValue": "-"
+        }
+      ]
+    },
+    "accessibility": {
+      "title": "Accessibility",
+      "description": "Accessibility considerations for the Spinner component.",
+      "ariaRoles": [
+        {
+          "propName": "role",
+          "description": "The Spinner component uses the 'status' role to indicate loading."
+        },
+        {
+          "propName": "aria-busy",
+          "description": "The Spinner component sets 'aria-busy' to 'true' to communicate the loading state to assistive technologies."
+        }
+      ]
+    }
+  },
+  {
+    "title": "switch",
+    "path": "/frontend/components/switch",
+    "description": "A customizable switch component that toggles between two states.",
+    "installation": [
+      {
+        "name": "CLI",
+        "command": "cli-command-to-install",
+        "path": "/icons/cube-solid.svg"
+      },
+      {
+        "name": "npm",
+        "command": "npm install your-library",
+        "path": "/icons/npm-brands-solid.svg"
+      },
+      {
+        "name": "yarn",
+        "command": "yarn add your-library",
+        "path": "/icons/yarn-brands-solid.svg"
+      },
+      {
+        "name": "pnpm",
+        "command": "pnpm add your-library",
+        "path": "/icons/cubes-solid.svg"
+      },
+      {
+        "name": "bun",
+        "command": "bun add your-library",
+        "path": "/icons/lemon-regular.svg"
+      }
+    ],
+    "import": {
+      "code": "import { Switch } from 'AwesomeCL';",
+      "description": "This code shows how to import the Switch component from the library."
+    },
+    "examples": [
+      {
+        "title": "Default",
+        "components": [
+          {
+            "type": "Switch",
+            "props": {
+              "size": "lg"
+            },
+            "children": "Enable Notifications"
+          }
+        ],
+        "code": "import { Switch } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Switch>\n      Enable Notifications\n    </Switch>\n  );\n}"
+      },
+      {
+        "title": "Sizes",
+        "components": [
+          {
+            "type": "Switch",
+            "props": {
+              "size": "sm",
+              "radius": "md",
+              "color": "default-light"
+            },
+            "children": "Small"
+          },
+          {
+            "type": "Switch",
+            "props": {
+              "size": "md",
+              "radius": "lg",
+              "color": "default-light"
+            },
+            "children": "Medium"
+          },
+          {
+            "type": "Switch",
+            "props": {
+              "size": "lg",
+              "radius": "lg",
+              "color": "default-light"
+            },
+            "children": "Large"
+          }
+        ],
+        "code": "import { Switch } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Switch size=\"sm\">Small</Switch>\n      <Switch size=\"md\">Medium</Switch>\n      <Switch size=\"lg\">Large</Switch>\n    </>\n  );\n}"
+      },
+      {
+        "title": "Radius",
+        "components": [
+          {
+            "type": "Switch",
+            "props": {
+              "size": "lg",
+              "radius": "none",
+              "color": "default-light"
+            },
+            "children": "None"
+          },
+          {
+            "type": "Switch",
+            "props": {
+              "size": "lg",
+              "radius": "sm",
+              "color": "default-light"
+            },
+            "children": "Small"
+          },
+          {
+            "type": "Switch",
+            "props": {
+              "size": "lg",
+              "radius": "md",
+              "color": "default-light"
+            },
+            "children": "Medium"
+          },
+          {
+            "type": "Switch",
+            "props": {
+              "size": "lg",
+              "radius": "lg",
+              "color": "default-light"
+            },
+            "children": "Large"
+          },
+          {
+            "type": "Switch",
+            "props": {
+              "size": "lg",
+              "radius": "full",
+              "color": "default-light"
+            },
+            "children": "Full"
+          }
+        ],
+        "code": "import { Switch } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Switch radius=\"none\">None</Switch>\n      <Switch radius=\"sm\">Small</Switch>\n      <Switch radius=\"md\">Medium</Switch>\n      <Switch radius=\"lg\">Large</Switch>\n      <Switch radius=\"full\">Full</Switch>\n    </>\n  );\n}"
+      },
+      {
+        "title": "Colors",
+        "components": [
+          {
+            "type": "Switch",
+            "props": {
+              "size": "lg",
+              "radius": "lg",
+              "color": "default-light"
+            },
+            "children": "Default Light"
+          },
+          {
+            "type": "Switch",
+            "props": {
+              "size": "lg",
+              "radius": "lg",
+              "color": "default-dark"
+            },
+            "children": "Default Dark"
+          },
+          {
+            "type": "Switch",
+            "props": {
+              "size": "lg",
+              "radius": "lg",
+              "color": "primary"
+            },
+            "children": "Primary"
+          },
+          {
+            "type": "Switch",
+            "props": {
+              "size": "lg",
+              "radius": "lg",
+              "color": "secondary"
+            },
+            "children": "Secondary"
+          },
+          {
+            "type": "Switch",
+            "props": {
+              "size": "lg",
+              "radius": "lg",
+              "color": "success"
+            },
+            "children": "Success"
+          },
+          {
+            "type": "Switch",
+            "props": {
+              "size": "lg",
+              "radius": "lg",
+              "color": "warning"
+            },
+            "children": "Warning"
+          },
+          {
+            "type": "Switch",
+            "props": {
+              "size": "lg",
+              "radius": "lg",
+              "color": "danger"
+            },
+            "children": "Danger"
+          }
+        ],
+        "code": "import { Switch } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Switch color=\"default-light\">Default Light</Switch>\n      <Switch color=\"default-dark\">Default Dark</Switch>\n      <Switch color=\"primary\">Primary</Switch>\n      <Switch color=\"secondary\">Secondary</Switch>\n      <Switch color=\"success\">Success</Switch>\n      <Switch color=\"warning\">Warning</Switch>\n      <Switch color=\"danger\">Danger</Switch>\n    </>\n  );\n}"
+      },
+      {
+        "title": "Borders",
+        "components": [
+          {
+            "type": "Switch",
+            "props": {
+              "size": "lg",
+              "radius": "lg",
+              "color": "default-dark",
+              "border": "none"
+            },
+            "children": "None"
+          },
+          {
+            "type": "Switch",
+            "props": {
+              "size": "lg",
+              "radius": "lg",
+              "color": "default-light",
+              "border": "sm"
+            },
+            "children": "Small"
+          },
+          {
+            "type": "Switch",
+            "props": {
+              "size": "lg",
+              "radius": "lg",
+              "color": "default-light",
+              "border": "md"
+            },
+            "children": "Medium"
+          },
+          {
+            "type": "Switch",
+            "props": {
+              "size": "lg",
+              "radius": "lg",
+              "color": "default-light",
+              "border": "lg"
+            },
+            "children": "Large"
+          }
+        ],
+        "code": "import { Switch } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Switch border=\"none\">None</Switch>\n      <Switch border=\"sm\">Small</Switch>\n      <Switch border=\"md\">Medium</Switch>\n      <Switch border=\"lg\">Large</Switch>\n    </>\n  );\n}"
+      }
+    ],
+    "propsTable": {
+      "title": "Switch Props",
+      "description": "List of all props supported by the Switch component.",
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
+      "rows": [
+        {
+          "propName": "aria",
+          "type": "string",
+          "description": "Aria label for accessibility. Provides additional context for screen readers.",
+          "defaultValue": "\"switch\""
+        },
+        {
+          "propName": "color",
+          "type": "string",
+          "description": "Defines the color of the switch. Options are: 'default-light', 'default-dark', 'primary', 'secondary', 'success', 'warning', 'danger'.",
+          "defaultValue": "\"default-light\""
+        },
+        {
+          "propName": "onChange",
+          "type": "function",
+          "description": "Callback function triggered when the switch is toggled.",
+          "defaultValue": "undefined"
+        },
+        {
+          "propName": "style",
+          "type": "object",
+          "description": "Inline styles to be applied to the switch.",
+          "defaultValue": "undefined"
+        },
+        {
+          "propName": "size",
+          "type": "string",
+          "description": "Defines the size of the switch. Options are: 'sm', 'md', 'lg'.",
+          "defaultValue": "\"md\""
+        },
+        {
+          "propName": "radius",
+          "type": "string",
+          "description": "Defines the border-radius of the switch. Options are: 'none', 'sm', 'md', 'lg', 'full'.",
+          "defaultValue": "\"lg\""
+        },
+        {
+          "propName": "border",
+          "type": "string",
+          "description": "Defines the border width of the switch. Options are: 'none', 'xs', 'sm', 'md'.",
+          "defaultValue": "\"xs\""
+        },
+        {
+          "propName": "checked",
+          "type": "boolean",
+          "description": "Determines if the switch is initially checked.",
+          "defaultValue": "false"
+        },
+        {
+          "propName": "className",
+          "type": "string",
+          "description": "Additional CSS class names to apply to the switch.",
+          "defaultValue": "\"\""
+        },
+        {
+          "propName": "sliderColor",
+          "type": "string",
+          "description": "Optional color of the slider.",
+          "defaultValue": "\"default-dark\""
+        }
+      ]
+    },
+    "eventsTable": {
+      "title": "Events",
+      "description": "List of all events emitted by the Switch component.",
+      "headers": ["Event Name", "Description"],
+      "rows": [
+        {
+          "propName": "onChange",
+          "type": "Triggered when the switch is toggled, passing the new checked state."
+        }
+      ]
+    },
+    "accessibility": {
+      "title": "Accessibility",
+      "description": "Accessibility considerations for the Switch component.",
+      "ariaRoles": [
+        {
+          "propName": "Switch",
+          "description": "The Switch component uses role='switch' to signify toggle functionality."
+        },
+        {
+          "propName": "aria-checked",
+          "description": "The aria-checked attribute is used to indicate the current state of the switch (true or false)."
+        },
+        {
+          "propName": "aria-label",
+          "description": "The aria label (default is 'switch') should be customized if additional context is needed for screen readers."
         }
       ]
     }
   }
+  
 ]
