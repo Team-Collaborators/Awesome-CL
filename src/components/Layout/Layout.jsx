@@ -1,11 +1,11 @@
 import { Outlet, useLocation } from "react-router-dom";
 import { useTheme } from "../../context/ThemeContext";
 import Navbar from "../Navbar/Navbar";
-import Sidebar from "../Sidebar/Sidebar";
 import Footer from "../Footer/Footer";
 import { sidebarLinks, navbarLinks } from "../../../public/data/links";
 import "./Layout.module.scss";
 import { useEffect, useState } from "react";
+import Sidebar from "../SideBar/Sidebar";
 
 // Main layout that wraps the entire app, containing the header, sidebar, main content, and footer.
 const Layout = () => {
@@ -38,7 +38,7 @@ const Layout = () => {
     <div className={`app-container ${isDarkMode ? "dark-theme" : ""}`}>
       <Navbar links={navbarLinks} />
       <div className="layout-content">
-        {showSidebar && !isMobile && <Sidebar2 links={links} />}
+        {showSidebar && !isMobile && <Sidebar links={links} />}
         <main
           className={`content-wrapper ${
             showSidebar ? "sidebarOpen" : "sidebarClosed"

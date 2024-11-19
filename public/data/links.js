@@ -1,6 +1,25 @@
 // Sidebar links
 export const sidebarLinks = {
-  instructions: [{ path: "/frontend/instructions", title: "Instructions" }],
+  instructions: [
+    {
+      path: "/instructions",
+      title: "Instructions",
+      subcategories: [
+        {
+          path: "instructions/introduction",
+          title: "Introduction",
+        },
+        {
+          path: "instructions/getting-started",
+          title: "Getting Started",
+        },
+        {
+          path: "instructions/customization",
+          title: "Customization",
+        },
+      ],
+    },
+  ],
   frontend: [
     {
       path: "/frontend/components",
