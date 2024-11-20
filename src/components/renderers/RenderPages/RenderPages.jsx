@@ -51,10 +51,6 @@ export function RenderPages({ file }) {
       return <p>Unknown page type</p>;
   }
 
-  console.log("data: ", data);
-  console.log("page type:", pageType);
-  console.log("location:", location);
-  console.log("pathname:", location.pathname);
   return <LayoutComponent data={data} />;
   // <>
   {
