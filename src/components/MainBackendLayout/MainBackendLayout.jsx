@@ -26,7 +26,9 @@ export function MainBackendLayout({ data }) {
   if (component) {
     return (
       <div className={styles.container}>
-        <h2 className={styles.title}>{component?.title}</h2>{" "}
+        <h2 className={styles.title}>
+          {component?.oldTitle || component?.title}
+        </h2>{" "}
         <p className={styles.description}>{component?.description}</p>{" "}
         {component?.controllers?.length > 0 ? (
           component.controllers.map((controller) => (
