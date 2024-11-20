@@ -16,11 +16,13 @@ const Customization = () => {
         running with pre-styled components. Just pass the props and watch the
         magic happen:
       </p>
-      <RenderCode
-        code={
-          '<Button border="full" color="danger" size="lg">Say hello!</Button>'
-        }
-      />
+      <div className={styles.code}>
+        <RenderCode
+          code={
+            '<Button border="full" color="danger" size="lg">Say hello!</Button>'
+          }
+        />
+      </div>
       <p className={styles.paragraph}>
         Props can simply be added inline to customize your component. Make sure
         to browse the component's documentation page to see a full list of its
@@ -34,19 +36,23 @@ const Customization = () => {
         easily add your own classnames to apply themes and styles that fit your
         branding!
       </p>
-      <RenderCode
-        code={'<Button className="swag style fashion">Say hello!</Button>'}
-      />
+      <div className={styles.code}>
+        <RenderCode
+          code={'<Button className="swag style fashion">Say hello!</Button>'}
+        />
+      </div>
       <p className={styles.paragraph}>
         For those who need an even more precise fine tuning option you can also
         add inline styles with the style property. Use it like you would in
         HTML.
       </p>
-      <RenderCode
-        code={
-          '<Button style={{color: "tomato", width: "100px"}}>Say hello!</Button>'
-        }
-      />
+      <div className={styles.code}>
+        <RenderCode
+          code={
+            '<Button style={{color: "tomato", width: "100px"}}>Say hello!</Button>'
+          }
+        />
+      </div>
       <h2 className={styles.subtitle}>Level Up your Workflow with Tailwind</h2>
       <p className={styles.paragraph}>
         Awesome CL comes with full Tailwind integration that allows you to style
@@ -54,28 +60,38 @@ const Customization = () => {
       </p>
       <ul>
         <li className={styles.paragraph}>1. Install Tailwind</li>
-        <RenderCode
-          code={"npm install -D tailwindcss\nnpx tailwindcss init "}
-        />
+        <div className={styles.code}>
+          <RenderCode
+            code={"npm install -D tailwindcss\nnpx tailwindcss init "}
+          />
+        </div>
         <li className={styles.paragraph}>
           2. Add Tailwind's directives to your CSS file (e.g.,
           styles/tailwind.css):
         </li>
-        <RenderCode
-          code={"@tailwind base;\n@tailwind components;\n@tailwind utilities;"}
-        />
+        <div className={styles.code}>
+          <RenderCode
+            code={
+              "@tailwind base;\n@tailwind components;\n@tailwind utilities;"
+            }
+          />
+        </div>
         <li className={styles.paragraph}>
           3. Import your Tailwind CSS into your project:
         </li>
-        <RenderCode code={"import './styles/tailwind.css';"} />
+        <div className={styles.code}>
+          <RenderCode code={"import './styles/tailwind.css';"} />
+        </div>
         <li className={styles.paragraph}>
           4. Start using Tailwind classes directly on your components:
         </li>
-        <RenderCode
-          code={
-            '<Button className="bg-blue-500 text-white font-bold py-2 px-4 rounded">Click Me</Button>'
-          }
-        />
+        <div className={styles.code}>
+          <RenderCode
+            code={
+              '<Button className="bg-blue-500 text-white font-bold py-2 px-4 rounded">Click Me</Button>'
+            }
+          />
+        </div>
       </ul>
     </div>
   );
