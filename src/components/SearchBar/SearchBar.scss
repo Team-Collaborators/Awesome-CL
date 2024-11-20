@@ -53,12 +53,18 @@
   p {
     padding: 10px;
     border-bottom: 1px solid rgba(var(--text-color), 0.1);
-
+    display: flex;
+    justify-content: space-between;
     a {
       color: var(--text-color);
       text-decoration: none;
-      display: block;
+      font-weight: bold;
+      display: inline;
       transition: background-color 0.2s ease;
+    }
+    span {
+      color: var(--text-color);
+      font-style: italic;
     }
   }
 }
@@ -78,6 +84,7 @@
 
     li {
       padding: 8px;
+      display: inline-block;
     }
 
     p {
