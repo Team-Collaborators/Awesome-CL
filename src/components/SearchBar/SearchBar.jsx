@@ -62,8 +62,8 @@ const SearchBar = () => {
                 <li key={index}>
                   <Link to={data.path} key={index} onClick={clearSearchBar}>
                     {data.title}
+                    <span>{data.category}</span>
                   </Link>
-                  <span>{data.category}</span>
                 </li>
               ))
             ) : (

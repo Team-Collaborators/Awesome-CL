@@ -53,17 +53,20 @@
   p {
     padding: 10px;
     border-bottom: 1px solid rgba(var(--text-color), 0.1);
-    display: flex;
-    justify-content: space-between;
+    &:hover {
+      background-color: var(--input-border-color);
+    }
     a {
       color: var(--text-color);
       text-decoration: none;
       font-weight: bold;
-      display: inline;
+      display: flex;
+      justify-content: space-between;
       transition: background-color 0.2s ease;
     }
     span {
       color: var(--text-color);
+      font-weight: normal;
       font-style: italic;
     }
   }
