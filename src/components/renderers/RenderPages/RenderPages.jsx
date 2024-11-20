@@ -52,37 +52,4 @@ export function RenderPages({ file }) {
   }
 
   return <LayoutComponent data={data} />;
-  // <>
-  {
-    /* <SideBar data={data} /> */
-  }
-  {
-    /* <Routes>
-        <Route
-          path="/"
-          element={
-            were ? (
-              <MainBackendLayout data={data} />
-            ) : (
-              <MainFrontendLayout data={data} />
-            )
-          }
-        />
-        <Route
-          path="/:name"
-          element={
-            were ? (
-              <MainBackendLayout data={data} />
-            ) : (
-              <MainFrontendLayout data={data} />
-            )
-          }
-        />
-      </Routes> */
-  }
-  {
-    /* <Footer /> */
-  }
-  // </>
-  // );
 }
