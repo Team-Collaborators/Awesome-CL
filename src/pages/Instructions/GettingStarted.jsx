@@ -49,7 +49,7 @@ const GettingStarted = () => {
         </p>
         <ul>
           {installData.map((elem) => (
-            <li key={elem.name}>
+            <li key={elem.name} style={{ textAlign: "center" }}>
               <button
                 className={styles.someIcon}
                 onClick={() => setInstallation(elem.command)}
@@ -60,8 +60,11 @@ const GettingStarted = () => {
             </li>
           ))}
         </ul>
-        <div className={styles.codeDisplay}>
-          <RenderCode code={installation} />
+        <div
+          className={styles.codeDisplay}
+          style={{ textAlign: "left", maxWidth: "500px" }}
+        >
+          <RenderCode className={styles.code} code={installation} />
         </div>
       </section>
       <p className={styles.paragraph}>
@@ -76,17 +79,21 @@ const GettingStarted = () => {
           command.
         </p>
 
-        <RenderCode code={'import { Button } from "AwesomeCL"'} />
+        <div className={styles.code}>
+          <RenderCode code={'import { Button } from "AwesomeCL"'} />
+        </div>
       </section>
 
       <p className={styles.paragraph}>
         To import the style sheet add it to you main CSS file:
       </p>
-      <RenderCode
-        code={'@use "../../node_modules/AwesomeCL/dist/exports.css"'}
-      />
+      <div className={styles.code}>
+        <RenderCode
+          code={'@use "../../node_modules/AwesomeCL/dist/exports.css"'}
+        />
+      </div>
 
-      <p>
+      <p className={styles.paragraph}>
         And voilá. Now you're ready to style and{" "}
         <Link to="/instructions/customization" className={styles.link}>
           CUSTOMIZE

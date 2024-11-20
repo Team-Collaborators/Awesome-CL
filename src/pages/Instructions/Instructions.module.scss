@@ -7,7 +7,7 @@ $optional-color: #5a2778;
 .page {
   padding: 40px 20px;
   width: 100%;
-  text-align: center;
+  text-align: left;
   max-width: 1000px;
   @media (max-width: 1024px) {
     padding: 30px 20px;
@@ -120,4 +120,11 @@ $optional-color: #5a2778;
   @media (max-width: 768px) {
     flex-direction: column;
   }
+}
+
+.code {
+  text-align: left;
+  display: inline-block;
+  min-width: 500px;
+  margin: auto;
 }
