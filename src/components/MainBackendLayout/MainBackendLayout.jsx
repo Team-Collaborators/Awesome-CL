@@ -27,7 +27,8 @@ export function MainBackendLayout({ data }) {
     return (
       <div className={styles.container}>
         <h2 className={styles.title}>
-          {component?.oldTitle || component?.title}
+          {component?.oldTitle ||
+            component?.title[0].toUpperCase() + component?.title.slice(1)}
         </h2>{" "}
         <p className={styles.description}>{component?.description}</p>{" "}
         {component?.controllers?.length > 0 ? (

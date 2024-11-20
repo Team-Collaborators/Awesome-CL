@@ -62,7 +62,9 @@ const SearchBar = () => {
                 <li key={index}>
                   <Link to={data.path} key={index} onClick={clearSearchBar}>
                     {data.title}
-                    <span>{data.category}</span>
+                    <span>
+                      {data.category[0].toUpperCase() + data.category.slice(1)}
+                    </span>
                   </Link>
                 </li>
               ))
