@@ -19,7 +19,8 @@
     ]
   },
   {
-    "title": "Service Request",
+    "title": "ServiceRequest",
+    "oldTitle": "Service Request",
     "path": "/backend/controllers/serviceRequest",
     "description": "These controllers manage service requests, including creating and validating requests, and handling admin functionalities like retrieving and confirming service requests.",
     "controllers": [
