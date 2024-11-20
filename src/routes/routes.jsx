@@ -22,6 +22,10 @@ export default function MainRoutes() {
           {/* Frontend routes */}
           <Route path="frontend">
             <Route
+              index
+              element={<RenderPages file={"frontend/components/accordion"} />}
+            />
+            <Route
               path="components/*"
               element={<RenderPages file={"frontend/components"} />}
             />
@@ -37,6 +41,10 @@ export default function MainRoutes() {
 
           {/* Backend routes */}
           <Route path="backend">
+            <Route
+              index
+              element={<RenderPages file={"backend/configurations"} />}
+            />
             <Route
               path="configurations/*"
               element={<RenderPages file={"backend/configurations"} />}
