@@ -13,16 +13,6 @@ export function RenderPages({ file }) {
   const [pageType, setPageType] = useState(null);
   // const [were, setWere] = useState(true);
 
-  // let path = file.split("/");
-
-  // useEffect(() => {
-  //   if (path.length > 0 && path[0] === "backend") {
-  //     setWere(true);
-  //   } else {
-  //     setWere(false);
-  //   }
-  // }, [file]);
-
   useEffect(() => {
     const path = file.split("/");
     if (path[0] === "backend") {
@@ -40,15 +30,19 @@ export function RenderPages({ file }) {
   if (!data || data.length === 0) return <p>No data available</p>;
 
   let LayoutComponent;
+
+  const applyLastPathSegmentLogic = () => {
+    const lastPathSegment = location.pathname.split("/").at(-1);
+    data = data.find((comp) => comp.title === lastPathSegment);
+  };
   switch (pageType) {
     case "backend":
       LayoutComponent = MainBackendLayout;
+      applyLastPathSegmentLogic();
       break;
     case "frontend":
       LayoutComponent = MainFrontendLayout;
-      // take the last segment of the URL and look for the matching component
-      const lastPathSegment = location.pathname.split("/").at(-1);
-      data = data.find((comp) => comp.title === lastPathSegment);
+      applyLastPathSegmentLogic();
       break;
     case "instructions":
       LayoutComponent = MainInstructionsLayout;
@@ -57,6 +51,10 @@ export function RenderPages({ file }) {
       return <p>Unknown page type</p>;
   }
 
+  console.log("data: ", data);
+  console.log("page type:", pageType);
+  console.log("location:", location);
+  console.log("pathname:", location.pathname);
   return <LayoutComponent data={data} />;
   // <>
   {

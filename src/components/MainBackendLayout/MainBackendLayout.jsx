@@ -16,9 +16,13 @@ export function MainBackendLayout({ data }) {
       const foundComponent = data.find((comp) => comp.title === name);
       setComponent(foundComponent);
     } else {
-      setComponent(data[0]);
+      setComponent(data);
     }
   }, [name, data]);
+
+  console.log("name", name, "data", data);
+  console.log("component", component);
+
   if (component) {
     return (
       <div className={styles.container}>
