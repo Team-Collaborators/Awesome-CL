@@ -30,7 +30,7 @@ const Layout = () => {
     showSidebar = true;
   } else if (location.pathname.startsWith("/backend")) {
     links = sidebarLinks.backend;
-    showSidebar = !isMobile;
+    showSidebar = true;
   }
 
   return (
