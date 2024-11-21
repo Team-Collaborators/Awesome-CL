@@ -1,7 +1,6 @@
 import { Outlet, useLocation } from "react-router-dom";
-import { useTheme } from "../../context/ThemeContext";
 import Navbar from "../Navbar/Navbar";
-import Sidebar from "../Sidebar/Sidebar";
+import Sidebar from "../SideBar/Sidebar";
 import Footer from "../Footer/Footer";
 import { sidebarLinks, navbarLinks } from "../../../public/data/links";
 import "./Layout.module.scss";
@@ -10,7 +9,6 @@ import { useEffect, useState } from "react";
 // Main layout that wraps the entire app, containing the header, sidebar, main content, and footer.
 const Layout = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-  const { isDarkMode } = useTheme();
   const location = useLocation();
 
   useEffect(() => {
@@ -18,7 +16,7 @@ const Layout = () => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-  // Determine sidebar links and visibility based on current path
+
   let links = [];
   let showSidebar = false;
 
@@ -34,11 +32,10 @@ const Layout = () => {
   }
 
   return (
-    // Add dark-theme class conditionally based on isDarkMode
-    <div className={`app-container ${isDarkMode ? "dark-theme" : ""}`}>
+    <div className="app-container">
       <Navbar links={navbarLinks} />
       <div className="layout-content">
-        {showSidebar && !isMobile && <Sidebar2 links={links} />}
+        {showSidebar && !isMobile && <Sidebar links={links} />}
         <main
           className={`content-wrapper ${
             showSidebar ? "sidebarOpen" : "sidebarClosed"
