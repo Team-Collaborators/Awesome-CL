@@ -8,6 +8,9 @@ const Card = ({
   variant = "subtle",
   size = "md",
   radius = "md",
+  isInteractive = true,
+  horizontal = false,
+  avatar = null,
   className = "",
   style,
   image,
@@ -21,26 +24,25 @@ ${styles.card}
 ${styles[`variant-${variant}`]}
 ${styles[`size-${size}`]} 
 ${styles[`radius-${radius}`]}
+${isInteractive ? styles.interactive : ""}
 `.trim();
 
   const finalClassNames = `${combinedClassNames} ${className}`.trim();
 
-  console.log("Styles object:", styles);
-  console.log("Variant:", variant);
-  console.log("Size:", size);
-  console.log("Radius:", radius);
-  console.log("Final class names:", finalClassNames);
-  console.log("Combined class names:", combinedClassNames);
-
   return (
     <div className={finalClassNames} style={style} role={aria}>
-      {image && <div className="card-image">{image}</div>}
-
-      {header && <div className="card-header">{header}</div>}
-      <div className="card-body">{children} </div>
-
-      {footer && <div className="card-footer">{footer}</div>}
-      {actions && <div className="card-actions">{actions}</div>}
+      {/* Avatar */}
+      {avatar && <div className={styles.cardAvatar}>{avatar}</div>}
+      {/* Image */}
+      {image && <div className={styles.cardImage}>{image}</div>}
+      {/* Header */}
+      {header && <div className={styles.cardHeader}>{header}</div>}
+      {/* Body */}
+      <div className={styles.cardBody}>{children} </div>
+      {/* Footer */}
+      {footer && <div className={styles.cardFooter}>{footer}</div>}
+      {/* Actions */}
+      {actions && <div className={styles.cardActions}>{actions}</div>}
     </div>
   );
 };

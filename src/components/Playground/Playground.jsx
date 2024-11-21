@@ -3,10 +3,6 @@ import "./Playground.scss";
 import Card from "../../component_testing/Card/Card";
 import Button from "../../component_testing/Button/Button";
 import Image from "../../component_testing/Image/Image";
-// import TestTailwind from "../../component_testing/TestTailwind";
-// import Checkbox from "../../component_testing/Checkbox/Checkbox";
-// import HeroAnimation from "../HomepageAnimation/HomepageAnimation";
-// import Card from "../../component_testing/Card/Card";
 const Playground = () => {
   const [isContentVisible, setIsContentVisible] = useState(false);
   // Handle toggle of content visibility
@@ -21,7 +17,7 @@ const Playground = () => {
       <br />
       <h2>Card Component</h2>
       <div
-        className="card-container"
+        className="container"
         style={{
           display: "flex",
           justifyContent: "space-around",
