@@ -4,6 +4,7 @@ $primary-dark: darkblue;
 $primary-light: rgb(166, 166, 217);
 
 $default-base: lightgrey;
+$default-base-lighter: rgb(247, 247, 247);
 $default-dark: black;
 $default-light: white;
 
@@ -51,6 +52,7 @@ $dark-danger-light: rgb(150, 50, 50);
 // Root variables for light mode
 :root {
   --default-base: #{$default-base};
+  --default-base-lighter: #{$default-base-lighter};
   --default-dark: #{$default-dark};
   --default-light: #{$default-light};
 
