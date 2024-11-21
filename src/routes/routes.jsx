@@ -7,6 +7,9 @@ import NotFound from "../components/NotFound/NotFound";
 import { RenderPages } from "../components/renderers/RenderPages/RenderPages";
 import ContactPage from "../pages/ContactPage/ContactPage";
 import AboutUs from "../pages/AboutUs/AboutUs";
+import Introduction from "../pages/Instructions/Introduction";
+import GettingStarted from "../pages/Instructions/GettingStarted";
+import Customization from "../pages/Instructions/Customization";
 
 export default function MainRoutes() {
   return (
@@ -18,6 +21,10 @@ export default function MainRoutes() {
 
           {/* Frontend routes */}
           <Route path="frontend">
+            <Route
+              index
+              element={<RenderPages file={"frontend/components/accordion"} />}
+            />
             <Route
               path="components/*"
               element={<RenderPages file={"frontend/components"} />}
@@ -34,6 +41,10 @@ export default function MainRoutes() {
 
           {/* Backend routes */}
           <Route path="backend">
+            <Route
+              index
+              element={<RenderPages file={"backend/configurations"} />}
+            />
             <Route
               path="configurations/*"
               element={<RenderPages file={"backend/configurations"} />}
@@ -66,14 +77,10 @@ export default function MainRoutes() {
 
           {/* ADD ADD ADD: Instruction routes */}
           <Route path="instructions">
-            <Route
-              path="1/*"
-              element={<RenderPages file={"backend/configurations"} />}
-            />
-            <Route
-              path="2/*"
-              element={<RenderPages file={"backend/controllers"} />}
-            />
+            <Route index element={<Introduction />} />
+            <Route path="introduction/*" element={<Introduction />} />
+            <Route path="getting-started/*" element={<GettingStarted />} />
+            <Route path="customization/*" element={<Customization />} />
           </Route>
 
           {/* Playground route */}

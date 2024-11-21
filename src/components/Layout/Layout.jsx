@@ -23,12 +23,12 @@ const Layout = () => {
   if (location.pathname.startsWith("/instructions")) {
     links = sidebarLinks.instructions;
     showSidebar = true;
-  } else if (location.pathname.startsWith("/frontend")) {
+  } else if (location.pathname.toLowerCase().startsWith("/frontend")) {
     links = sidebarLinks.frontend;
     showSidebar = true;
-  } else if (location.pathname.startsWith("/backend")) {
+  } else if (location.pathname.toLowerCase().startsWith("/backend")) {
     links = sidebarLinks.backend;
-    showSidebar = !isMobile;
+    showSidebar = true;
   }
 
   return (

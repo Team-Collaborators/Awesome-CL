@@ -19,6 +19,9 @@ export function MainFrontendLayout({ data }) {
     }
   }, [name, data]);
 
+  console.log("name:", name, "data:", data);
+  console.log("componentn:", component);
+
   if (component) {
     return (
       <div className={styles.renderComponentPage}>

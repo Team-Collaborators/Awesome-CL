@@ -16,13 +16,20 @@ export function MainBackendLayout({ data }) {
       const foundComponent = data.find((comp) => comp.title === name);
       setComponent(foundComponent);
     } else {
-      setComponent(data[0]);
+      setComponent(data);
     }
   }, [name, data]);
+
+  console.log("name", name, "data", data);
+  console.log("component", component);
+
   if (component) {
     return (
       <div className={styles.container}>
-        <h2 className={styles.title}>{component?.title}</h2>{" "}
+        <h2 className={styles.title}>
+          {component?.oldTitle ||
+            component?.title[0].toUpperCase() + component?.title.slice(1)}
+        </h2>{" "}
         <p className={styles.description}>{component?.description}</p>{" "}
         {component?.controllers?.length > 0 ? (
           component.controllers.map((controller) => (

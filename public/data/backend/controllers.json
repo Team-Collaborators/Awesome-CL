@@ -1,7 +1,7 @@
 [
   {
     "title": "Schedule",
-    "path": "/Backend/Controllers/Schedule",
+    "path": "/backend/controllers/schedule",
     "description": "These controllers handle the work schedule functionality, including setting work schedules, checking availability, and calculating available time slots.",
     "controllers": [
       {
@@ -19,8 +19,9 @@
     ]
   },
   {
-    "title": "Service Request",
-    "path": "/Backend/Controllers/ServiceRequest",
+    "title": "ServiceRequest",
+    "oldTitle": "Service Request",
+    "path": "/backend/controllers/serviceRequest",
     "description": "These controllers manage service requests, including creating and validating requests, and handling admin functionalities like retrieving and confirming service requests.",
     "controllers": [
       {
@@ -45,7 +46,7 @@
   },
   {
     "title": "Users",
-    "path": "/Backend/Controllers/Users",
+    "path": "/backend/controllers/users",
     "description": "These controllers handle user registration, login, profile management, and email verification.",
     "controllers": [
       {
