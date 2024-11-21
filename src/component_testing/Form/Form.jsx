@@ -25,13 +25,6 @@ const INTEREST_OPTIONS = [
   "Cloud Computing",
 ];
 
-const BUDGET_OPTIONS = [
-  { value: "below-20000", label: "Below $20,000" },
-  { value: "20000-50000", label: "$20,000 - $50,000" },
-  { value: "50000-100000", label: "$50,000 - $100,000" },
-  { value: "above-100000", label: "Above $100,000" },
-];
-
 //Input field component for text inputs
 const InputField = ({
   label,
@@ -51,34 +44,6 @@ const InputField = ({
       required={required}
       className={styles.inputField}
     />
-  </label>
-);
-
-// Select field component
-const SelectField = ({
-  label,
-  name,
-  value,
-  onChange,
-  options,
-  required = false,
-}) => (
-  <label className={styles.label}>
-    {label}
-    <select
-      name={name}
-      value={value}
-      onChange={onChange}
-      required={required}
-      className={styles.inputField}
-    >
-      <option value="">Please select</option>
-      {options.map((option) => (
-        <option key={option.value || option} value={option.value || option}>
-          {option.label || option}
-        </option>
-      ))}
-    </select>
   </label>
 );
 
@@ -150,7 +115,7 @@ const DatePickerField = ({ label, selected, onChange }) => (
 );
 
 // Main Form Component
-const Form = ({ variant = VARIANTS.PROJECT }) => {
+const Form = ({ variant = VARIANTS.CONTACT }) => {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -171,10 +136,12 @@ const Form = ({ variant = VARIANTS.PROJECT }) => {
 
   const handleChange = (event) => {
     const { name, value, type, selectedOptions } = event.target;
+
     const updatedValue =
-      type === "select-multiple"
+      type === "select-multiple" && selectedOptions
         ? Array.from(selectedOptions, (option) => option.value)
         : value;
+
     setFormData((prevData) => ({ ...prevData, [name]: updatedValue }));
   };
 
