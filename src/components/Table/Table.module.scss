@@ -1,16 +1,14 @@
-@use "../../styles/main.scss" as styles;
+@use "../../styles/main.scss" as *;
 
 .table_container {
   padding: 1.5rem;
   border-radius: 10px;
   overflow: hidden;
-
-  // border: 1px solid #4444440e;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 12px 24px rgba(0, 0, 0, 0.1);
+  // box-shadow: $box-shadow-all-sides;
 
   max-width: 100%;
   margin: 5vh auto;
-  font-family: styles.$font-stack;
+  font-family: $font-stack;
 
   @media (max-width: 768px) {
     padding: 1rem;

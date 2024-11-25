@@ -9,17 +9,17 @@
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1000;
+  z-index: 1100;
   background-color: rgba(0, 0, 0, 0.6);
 }
 
 .formContainer {
   color: var(--text-color);
   border-radius: 15px;
-  padding: 3vh 3vw;
+  padding: 3vh 2vw;
   width: 100%;
   max-width: 600px;
-  max-height: 85vh;
+  max-height: 90%;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   position: relative;
@@ -28,6 +28,7 @@
   align-items: center;
   overflow-y: auto;
   transition: background-color 0.3s ease, color 0.3s ease;
+
   &.contactForm {
     max-width: 800px;
 
@@ -147,6 +148,9 @@ textarea {
 
 .datePicker {
   width: 425px;
+  @media (max-width: 768px) {
+    width: 375px;
+  }
 }
 
 textarea {

@@ -12,11 +12,20 @@ $optional-color: #5a2778;
 $slightlyLighter-color: #095874;
 $background-color: #252525;
 $dark-purple: #57548d;
-
 $text-color: #ffffff;
-
 $border-color: 1px solid rgba(255, 255, 255, 0.2);
 $font-stack: "Roboto", sans-serif;
+
+// box shadow
+$box-shadow-light: rgba(0, 0, 0, 0.3);
+$box-shadow-strong: rgba(0, 0, 0, 0.5);
+
+$box-shadow-small: 0 2px 4px $box-shadow-light;
+$box-shadow-medium: 0 4px 6px $box-shadow-light;
+$box-shadow-large: 0 6px 10px $box-shadow-light;
+$box-shadow-all-sides: 0 2px 3px rgba(0, 0, 0, 0.1),
+  0 -2px 3px rgba(0, 0, 0, 0.1), 2px 0 3px rgba(0, 0, 0, 0.1),
+  -2px 0 3px rgba(0, 0, 0, 0.1);
 
 // Font sizes
 $title-font-size: 2.5rem;
@@ -75,32 +84,32 @@ a {
 }
 
 //App layout styles
-.app-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
+// .app-container {
+//   display: flex;
+//   flex-direction: column;
+//   min-height: 100vh;
+// }
 
-.layout-content {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
+// .layout-content {
+//   display: flex;
+//   flex: 1;
+//   flex-direction: column;
 
-  .content-wrapper {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 6rem 0 3rem 13rem;
-    transition: margin-left 0.3s ease;
+//   .content-wrapper {
+//     flex: 1;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     margin: 6rem 0 3rem 13rem;
+//     transition: margin-left 0.3s ease;
 
-    &.sidebarOpen {
-      margin-left: 12rem; // Adjust to match sidebar width
-    }
+//     &.sidebarOpen {
+//       margin-left: 12rem; // Adjust to match sidebar width
+//     }
 
-    &.sidebarClosed {
-      margin-left: 0;
-    }
-  }
-}
+//     &.sidebarClosed {
+//       margin-left: 0;
+//     }
+//   }
+// }
