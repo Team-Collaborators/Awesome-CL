@@ -1,3 +1,5 @@
+@use "../../styles/main" as *;
+
 /* Container styles */
 .showcase-container {
     display: flex;
@@ -22,15 +24,14 @@
   
   /* Component box styles */
   .component-box {
-    min-width: 12rem;
-    min-height: 10rem;
+    min-width: 18rem;
+    min-height: 12rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f9f9f9;
     border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 16px;
+    border-radius: 0.5rem;
+    box-shadow: $box-shadow-all-sides;
+    padding: 1rem;
   }
   
