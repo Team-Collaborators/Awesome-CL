@@ -1,15 +1,8 @@
 import React, { useState } from "react";
 import "./Playground.scss";
-// import Button from "../../component_testing/Button/Button";
-// import TestTailwind from "../../component_testing/TestTailwind";
-import Modal from "../../component_testing/Modal/Modal";
-import Checkbox from "../../component_testing/Checkbox/Checkbox";
-import Switch from "../../component_testing/Switch/Switch";
-
-import { DiReact } from "react-icons/di";
-import { FaReact } from "react-icons/fa";
-import { TbBackground } from "react-icons/tb";
-
+import Card from "../../component_testing/Card/Card";
+import Button from "../../component_testing/Button/Button";
+import Image from "../../component_testing/Image/Image";
 const Playground = () => {
   const [isContentVisible, setIsContentVisible] = useState(false);
   // Handle toggle of content visibility
@@ -21,20 +14,16 @@ const Playground = () => {
     <div className="playground-wrapper">
       <h1>Playground</h1>
       <p>This is the space to test new components</p>
+
       <div
-        className="playground-container"
+        className="container"
         style={{
-          width: "100%",
           display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
+          justifyContent: "space-around",
+          gap: "20px",
+          padding: "20px",
         }}
-      >
-        {/* <Modal modalHeader={"Modal header"} modalBody={"Body"}>
-          Hello
-        </Modal> */}
-      </div>
+      ></div>
     </div>
   );
 };

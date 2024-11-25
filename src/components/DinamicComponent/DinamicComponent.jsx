@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Button, Input } from "AwesomeCL"; // Importa tus componentes
+import { Button } from "AwesomeCL"; // Importa tus componentes
 import Modal from "../../component_testing/Modal/Modal";
 import Form from "../../component_testing/Form/Form";
 import Accordion from "../../component_testing/Accordion/Accordion";
@@ -10,6 +10,7 @@ import Switch from "../../component_testing/Switch/Switch";
 import Checkbox from "../../component_testing/Checkbox/Checkbox";
 import Spinner from "../../component_testing/Spinner/Spinner";
 import Carousel from "../../component_testing/Carousel/Carousel";
+import Input from "../../component_testing/Input/Input";
 
 import Image from "../../component_testing/Image/Image";
 

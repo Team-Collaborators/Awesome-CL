@@ -1,28 +1,42 @@
 import React, { useState } from "react";
 import "./SearchBar.scss";
 import { Link } from "react-router-dom";
+import { sidebarLinks as data } from "/public/data/links.js";
 import { FaSearch } from "react-icons/fa";
 
 const SearchBar = () => {
   const [searchInput, setSearchInput] = useState("");
   const [filteredData, setFilteredData] = useState([]);
 
-  // array of the possible search results, can be fetched else where, once we have it
-  const data = [
-    { name: "Button", path: "frontend/components/button" },
-    {
-      name: "Work Schedule Management",
-      path: "Backend/Controllers/WorkScheduleManagement",
-    },
-  ];
-
-  // sets input to search results, then filters accordingly
   const handleChange = (e) => {
     setSearchInput(e.target.value);
-    const results = data.filter((data) =>
-      data.name.toLowerCase().includes(searchInput.toLowerCase())
-    );
+    const searchInputLower = e.target.value.toLowerCase();
+    const results = [];
+    for (let [category, items] of Object.entries(data)) {
+      for (let item of items) {
+        if (item.title?.toLowerCase().includes(searchInputLower)) {
+          results.push({
+            title: item.title,
+            path: item.path,
+            category: category,
+          });
+        }
+        if (item.subcategories) {
+          for (let subcat of item.subcategories) {
+            if (subcat.title?.toLowerCase().includes(searchInputLower)) {
+              results.push({
+                title: subcat.title,
+                path: subcat.path,
+                category: category,
+              });
+            }
+          }
+        }
+      }
+    }
+
     setFilteredData(results);
+    console.log("Filtered Results:", results);
   };
 
   // after clicking on a Link in the search results, clear input (and results)
@@ -45,9 +59,12 @@ const SearchBar = () => {
           <div className="search-results">
             {filteredData.length > 0 ? (
               filteredData.map((data, index) => (
-                <li>
+                <li key={index}>
                   <Link to={data.path} key={index} onClick={clearSearchBar}>
-                    {data.name}
+                    {data.title}
+                    <span>
+                      {data.category[0].toUpperCase() + data.category.slice(1)}
+                    </span>
                   </Link>
                 </li>
               ))

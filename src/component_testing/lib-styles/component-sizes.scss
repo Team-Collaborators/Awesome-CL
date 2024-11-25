@@ -26,6 +26,10 @@ $spinner-thickness-sm: 4px;
 $spinner-thickness-md: 6px;
 $spinner-thickness-lg: 8px;
 
+$card-size-sm: 15rem;
+$card-size-md: 20rem;
+$card-size-lg: 25rem;
+
 // Global Component Sizes (CSS Variables)
 :root {
   --checkbox-size-sm: #{$checkbox-size-sm};
@@ -55,6 +59,9 @@ $spinner-thickness-lg: 8px;
   --spinner-thickness-md: #{$spinner-thickness-md};
   --spinner-thickness-lg: #{$spinner-thickness-lg};
 
+  --card-size-sm: #{$card-size-sm};
+  --card-size-md: #{$card-size-md};
+  --card-size-lg: #{$card-size-lg};
 }
 
 // Tablet Component Sizes
