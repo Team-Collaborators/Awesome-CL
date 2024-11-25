@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Button } from "AwesomeCL"; // Importa tus componentes
+import Button from "../../component_testing/Button/Button"; // Importa tus componentes
 import Modal from "../../component_testing/Modal/Modal";
 import Form from "../../component_testing/Form/Form";
 import Accordion from "../../component_testing/Accordion/Accordion";
