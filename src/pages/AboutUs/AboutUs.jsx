@@ -53,7 +53,7 @@ const AboutUs = () => {
     <div className={styles.aboutUs}>
       <h1 className={styles.title}>About Us</h1>
 
-      <h2 className={styles.subtitle}>Built by a Student, for Students</h2>
+      <h2 className={styles.subtitle}>Built by for Students by Students</h2>
       <p className={styles.description}>
         Our component library is designed for junior developers, recent
         graduates, and anyone ready to level up in web development. We get it:
