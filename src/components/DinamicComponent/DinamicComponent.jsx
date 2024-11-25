@@ -9,8 +9,6 @@ import Search from "../../component_testing/Search/Search";
 import Switch from "../../component_testing/Switch/Switch";
 import Checkbox from "../../component_testing/Checkbox/Checkbox";
 import Spinner from "../../component_testing/Spinner/Spinner";
-import Carousel from "../../component_testing/Carousel/Carousel";
-
 import Image from "../../component_testing/Image/Image";
 
 const components = {
@@ -25,7 +23,6 @@ const components = {
   Spinner,
   Switch,
   Checkbox,
-  Carousel,
   Image,
 };
 
