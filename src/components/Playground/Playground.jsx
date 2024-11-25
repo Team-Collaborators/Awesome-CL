@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import "./Playground.scss";
-// import Button from "../../component_testing/Button/Button";
-// import TestTailwind from "../../component_testing/TestTailwind";
-// import Checkbox from "../../component_testing/Checkbox/Checkbox";
-// import HeroAnimation from "../HomepageAnimation/HomepageAnimation";
-
+import Card from "../../component_testing/Card/Card";
+import Button from "../../component_testing/Button/Button";
+import Image from "../../component_testing/Image/Image";
 const Playground = () => {
   const [isContentVisible, setIsContentVisible] = useState(false);
   // Handle toggle of content visibility
@@ -17,7 +15,15 @@ const Playground = () => {
       <h1>Playground</h1>
       <p>This is the space to test new components</p>
 
-      {/* <HeroAnimation /> */}
+      <div
+        className="container"
+        style={{
+          display: "flex",
+          justifyContent: "space-around",
+          gap: "20px",
+          padding: "20px",
+        }}
+      ></div>
     </div>
   );
 };

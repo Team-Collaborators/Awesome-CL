@@ -6,8 +6,13 @@ import logo from "../../assets/images/logo-1.png";
 
 import ProductCard from "../../components/ProductDisplay/ProductCard/ProductCard";
 import CodeDisplay from "../../components/ProductDisplay/CodeDisPlay/CodeDisPlay";
+
 import FeatureCards from "../../components/FeatureCards/FeatureCards";
 import LandingSection from "../../components/LandingSection/LandingSection";
+
+import Table from "../../component_testing/Table/Table";
+
+
 export default function HomePage() {
   const [theme, setTheme] = useState("default");
 
@@ -91,8 +96,12 @@ export default function HomePage() {
               <CodeDisplay code={productCardCode} />
             </aside>
           </div>
+          
         </section>
       </main>
+          <section>
+          <Table />
+          </section>
     </>
   );
 }
