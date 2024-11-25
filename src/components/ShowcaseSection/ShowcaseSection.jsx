@@ -1,7 +1,8 @@
 import React from "react";
 import "./ShowcaseSection.scss";
+import { Link } from "react-router-dom";
 import glasses from "../../assets/images/high-tech-glasses.jpg";
-// import Accordion from "../../component_testing/Accordion/Accordion";
+import Accordion from "../../component_testing/Accordion/Accordion";
 // // import Avatar from "../../component_testing/Avatar/Avatar";
 import Button from "../../component_testing/Button/Button";
 // //import Card from "../../component_testing/Card/Card";
@@ -16,39 +17,93 @@ import Search from "../../component_testing/Search/Search";
 import Spinner from "../../component_testing/Spinner/Spinner";
 import Switch from "../../component_testing/Switch/Switch";
 
+const showcaseItems = [
+  {
+    component: <Accordion />,
+    title: "Accordion",
+    link: "/frontend/components/accordion",
+  },
+  {
+    component: (
+      <Button color="secondary" radius="lg">
+        Button
+      </Button>
+    ),
+    title: "Button",
+    link: "/frontend/components/button",
+  },
+  {
+    component: <Checkbox color="secondary" checked="true" size="lg"></Checkbox>,
+    title: "Checkbox",
+    link: "/frontend/components/checkbox",
+  },
+  {
+    component: <Form />,
+    title: "Form",
+    link: "/frontend/components/form",
+  },
+  {
+    component: (
+      <Image
+        src={glasses}
+        alt="High-tech glasses"
+        size="sm"
+        objectFit="cover"
+        isZoomed="true"
+      />
+    ),
+    title: "Image",
+    link: "/frontend/components/image",
+  },
+  {
+    component: (
+      <Input color="secondary" size="sm" border="bottom">
+        Input
+      </Input>
+    ),
+    title: "Input",
+    link: "/frontend/components/input",
+  },
+  {
+    component: (
+      <Modal size="sm" placement="top">
+        Modal
+      </Modal>
+    ),
+    title: "Modal",
+    link: "/frontend/components/modal",
+  },
+  {
+    component: <Search size="sm" radius="full" border="bottom" />,
+    title: "Search",
+    link: "/frontend/components/searchbar",
+  },
+  {
+    component: <Spinner color="secondary" />,
+    title: "Spinner",
+    link: "/frontend/components/spinner",
+  },
+  {
+    component: <Switch color="secondary" checked="true" size="xl" />,
+    title: "Switch",
+    link: "/frontend/components/switch",
+  },
+];
+
 const ShowcaseSection = () => {
   return (
-    <div className="showcase-container">
-      {/* <div className="component-box">
-        <Accordion></Accordion>
-      </div>{" "}*/}
-      <div className="component-box">
-        {" "}
-        <Button color="secondary" radius="lg">Button</Button>
-      </div>
-      <div className="component-box">
-        <Checkbox color="secondary" checked="true"></Checkbox>
-      </div>
-      <div className="component-box">
-        <Form/>
-      </div>
-      <div className="component-box">
-        <Image src={glasses} alt="High-tech glasses" />
-      </div>
-      <div className="component-box">
-        <Input color="secondary">Input</Input>
-      </div>
-      <div className="component-box">
-        <Modal size="sm" placement="top">Modal</Modal>
-      </div>
-      <div className="component-box">
-        <Search size="xs" />
-      </div>
-      <div className="component-box">
-        <Spinner color="secondary" />
-      </div>
-      <div className="component-box">
-        <Switch color="secondary" checked="true">Switch</Switch>
+    <div className="showcase-section">
+      <div className="showcase-container">
+        {showcaseItems.map((item, index) => (
+          <div key={index} className="component-box">
+            {" "}
+            <div className="component-content"> {item.component}</div>
+            <Link to={item.link} className="component-link">
+              {" "}
+              <h3>{item.title}</h3>
+            </Link>
+          </div>
+        ))}
       </div>
     </div>
   );

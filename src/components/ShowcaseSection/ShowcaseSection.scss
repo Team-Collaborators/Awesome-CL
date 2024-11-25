@@ -1,37 +1,69 @@
 @use "../../styles/main" as *;
 
-/* Container styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.showcase-section {
+  width: 100vw;
+  overflow: hidden;
+}
+
 .showcase-container {
-    display: flex;
-    overflow-x: auto;
-    gap: 1rem;
-    padding: 1rem;
-    scrollbar-width: thin; /* For Firefox */
-    scrollbar-color: #c1c1c1 transparent; /* For Firefox */
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  gap: 1rem;
+  padding: 1rem;
+  scroll-snap-type: x mandatory; /* Enable snap scrolling */
+
+  /* Hide scrollbar for Webkit browsers */
+  &::-webkit-scrollbar {
+    display: none; /* Hides the scrollbar */
   }
-  
-  /* For Webkit browsers (Chrome, Edge, Safari) */
-  .showcase-container::-webkit-scrollbar {
-    height: 8px;
-  }
-  .showcase-container::-webkit-scrollbar-thumb {
-    background: #c1c1c1;
-    border-radius: 4px;
-  }
-  .showcase-container::-webkit-scrollbar-track {
-    background: transparent;
-  }
-  
-  /* Component box styles */
-  .component-box {
-    min-width: 18rem;
-    min-height: 12rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #e0e0e0;
-    border-radius: 0.5rem;
-    box-shadow: $box-shadow-all-sides;
-    padding: 1rem;
-  }
-  
+
+  /* For Firefox */
+  scrollbar-width: none; /* Hides the scrollbar */
+}
+
+
+
+.component-box {
+  flex: 0 0 auto;
+  width: 18rem;
+  height: 16rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #e0e0e0;
+  border-radius: 0.5rem;
+  box-shadow: $box-shadow-light;
+  padding: 1rem;
+  overflow: hidden;
+  scroll-snap-align: start; /* Snap item to start */
+}
+
+.component-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0.5rem;
+}
+.component-content > * {
+  max-width: 100%; /* Ensure elements don't overflow */
+  max-height: 100%;
+  width: auto; /* Prevent full width if not required */
+  height: auto; /* Prevent full height if not required */
+}
+
+.component-box h3 {
+  font-size: 1rem;
+  margin: 0;
+  text-align: center;
+}
