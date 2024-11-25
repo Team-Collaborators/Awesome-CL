@@ -7,26 +7,31 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2.5rem;
+  padding: 0 2rem;
   height: 6rem;
   background-color: $primary-color;
   color: $text-color;
+  transition: background-color 0.3s ease, color 0.3s ease;
 
   .navbarLeft {
     display: flex;
     align-items: center;
+    justify-content: center;
 
     .navbarLogo {
+      margin: 0 auto;
       display: flex;
       align-items: center;
+      margin-bottom: 5px;
+
       img {
-        max-width: 6rem;
+        max-width: 120px;
         height: auto;
-        margin-right: 4rem;
+        margin-right: 2rem;
       }
       @media (max-width: 768px) {
         img {
-          max-width: 4rem;
+          max-width: 100px;
         }
       }
     }
@@ -34,7 +39,7 @@
     .navbarLinks {
       display: flex;
       list-style: none;
-      gap: 1.2rem;
+      gap: 1rem;
 
       .navbarLinkItem {
         .navbarLink {
@@ -49,7 +54,7 @@
 
           &:hover {
             background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 6px;
+            border-radius: 4px;
           }
         }
       }
@@ -71,16 +76,14 @@
       background: none;
       border: none;
       color: $text-color;
-      font-size: 2rem;
       cursor: pointer;
+      font-size: 2rem;
       transition: color 0.3s ease, transform 0.3s ease;
-
       &:hover {
         transform: rotate(20deg);
       }
-
       @media (max-width: 768px) {
-        font-size: 1.7rem;
+        font-size: 1.5rem;
       }
     }
 
@@ -89,15 +92,18 @@
       background: none;
       border: none;
       color: $text-color;
-      font-size: 2rem;
+      font-size: 1.7rem;
       cursor: pointer;
 
+      &:hover {
+        opacity: 0.7;
+      }
       @media (max-width: 768px) {
         display: block;
-        font-size: 1.7rem;
       }
     }
   }
+
   .mobileMenu {
     position: fixed;
     top: 0;
@@ -105,12 +111,11 @@
     width: 100%;
     height: 100vh;
     background-color: $primary-color;
-    padding: 2rem;
+    padding: 2rem 1.5rem;
     overflow-y: auto;
     z-index: 1000;
     display: flex;
     flex-direction: column;
-    // align-items: center;
     transform: translateX(-100%);
     transition: transform 0.3s ease;
 
@@ -121,25 +126,24 @@
     .closeMenuButton {
       position: absolute;
       top: 1rem;
-      right: 1.5rem;
+      right: 1rem;
+      padding: 0.5rem;
       background: none;
       border: none;
       color: $text-color;
       font-size: 1.5rem;
       cursor: pointer;
-      padding: 0.5rem;
-      transition: color 0.3s ease, transform 0.3s ease;
+      transition: transform 0.3s ease;
 
       &:hover {
-        background-color: var(--button-bg-color);
+        background-color: $slightlyLighter-color;
         border-radius: 50%;
+        opacity: 0.7;
       }
     }
 
     .mobileMenuSection {
-      margin-top: 2rem;
-      width: 100%;
-
+      margin-top: 1.5rem;
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
       .mobileMenuTitle {
@@ -147,34 +151,50 @@
         justify-content: space-between;
         padding: 0.5rem 0;
         color: $text-color;
+        font-size: 1rem;
         font-weight: bold;
         cursor: pointer;
-      }
-
-      .submenuToggleIcon {
-        font-size: 1.2rem;
+        &:hover {
+          opacity: 0.7;
+        }
+        .submenuToggleIcon {
+          font-size: 1.2rem;
+        }
       }
 
       .mobileMenuLinks {
         list-style: none;
-        padding: 0;
+        padding: 0.5rem 0 0;
 
         .mobileMenuLinkItem {
+          margin: 0.5rem 0;
+
           .mobileMenuLink {
-            color: rgba($text-color, 0.8);
-            text-decoration: none;
             display: inline-block;
-            padding: 0.5rem 0;
-            width: 100%;
+            color: rgba($text-color, 0.85);
+            text-decoration: none;
+            padding: 0.3rem 0;
+            transition: color 0.3s ease;
+
+            &:hover {
+              opacity: 0.7;
+            }
           }
 
           .mobileMenuSubLinks {
+            margin: 0.3rem 0 0 1.5rem;
+
             .mobileMenuSubLinkItem {
               .mobileMenuSubLink {
-                color: rgba($text-color, 0.7);
                 display: inline-block;
+                color: rgba($text-color, 0.7);
+                text-decoration: none;
                 padding: 0.3rem 0;
-                width: 100%;
+                transition: color 0.3s ease;
+
+                &:hover {
+                  opacity: 0.7;
+                }
               }
             }
           }

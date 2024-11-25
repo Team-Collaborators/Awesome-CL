@@ -19,9 +19,6 @@ export function MainFrontendLayout({ data }) {
     }
   }, [name, data]);
 
-  console.log("name:", name, "data:", data);
-  console.log("componentn:", component);
-
   if (component) {
     return (
       <div className={styles.renderComponentPage}>
@@ -30,7 +27,7 @@ export function MainFrontendLayout({ data }) {
             {component.title[0].toUpperCase() +
               component.title.slice(1).toLowerCase()}
           </h2>
-          <p>{component.description}</p>
+          <p className={styles.description}>{component.description}</p>
         </header>
         <main>
           <section className={styles.installationSection}>

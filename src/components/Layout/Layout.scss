@@ -1,7 +1,6 @@
 @use "../../styles/main.scss" as styles;
 @use "sass:color"; // Import color module
 
-//App layout styles
 .app-container {
   display: flex;
   flex-direction: column;
@@ -19,15 +18,23 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 6rem 0 3rem 13rem;
+    margin: 7rem 0;
     transition: margin-left 0.3s ease;
 
     &.sidebarOpen {
-      margin-left: 12rem; // Adjust to match sidebar width
+      margin-left: 12rem;
+
+      @media (max-width: 768px) {
+        margin-left: 0;
+      }
     }
 
     &.sidebarClosed {
       margin-left: 0;
+
+      @media (max-width: 768px) {
+        margin-left: 0;
+      }
     }
   }
 }

@@ -86,7 +86,7 @@ const AboutUs = () => {
         <li>Reusable Code: Scales with your career growth.</li>
         <li>Responsive Design: Looks great on all screen sizes.</li>
         <li>
-          Continuous Updates:New styles, animations, and components based on
+          Continuous Updates: New styles, animations, and components based on
           industry trends.
         </li>
       </ul>
