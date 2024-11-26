@@ -38,7 +38,7 @@ const showcaseItems = [
     link: "/frontend/components/checkbox",
   },
   {
-    component: <Form />,
+    component: <Form variant="feedback" />,
     title: "Form",
     link: "/frontend/components/form",
   },
