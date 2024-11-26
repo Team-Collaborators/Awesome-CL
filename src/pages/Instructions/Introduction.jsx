@@ -31,12 +31,12 @@ const Introduction = () => {
           <Link to="/contact" className={styles.link}>
             CONNECT WITH US
           </Link>
-          ! hwqhfdqowhfqoöwhgffqwöfkHGF
+          !
         </p>
       </section>
       <section className={styles.shadow}>
         <h2 className={styles.subtitle}>
-          Backend Meets Frontend – One Library to Rule Them All
+          Backend Meets Frontend - One Library to Rule Them All
         </h2>
         <p className={styles.paragraph}>
           Awesome CL isn't just another pretty UI kit. It's optimized for the
@@ -54,44 +54,45 @@ const Introduction = () => {
           you covered!
         </p>
       </section>
-      <h2 className={styles.subtitle}>Make It Yours - 100% Customizable</h2>
-
-      <p className={styles.paragraph}>
-        No cookie-cutter designs here. With Awesome CL, you're the designer.
-        Fine-tune every component to match your style, your brand, and your
-        vibe. Use build-in styles or add your own custom branding. Awesome CL
-        even comes with a seemless integration for Tailwind CSS to open
-        unlimitted possibilities to{" "}
-        <Link to="/customization" className={styles.link}>
-          CUSTOMIZE
-        </Link>{" "}
-        your projects.
-      </p>
-      <h2 className={styles.subtitle}>The Future Looks Awesome</h2>
-
-      <p className={styles.paragraph}>
-        We're just getting started! Expect new features, more integrations, and
-        a growing collection of killer components. Here are just a few bullet
-        points from our roadmap for the future:
-      </p>
-
-      <ul className={styles.list}>
-        <li className={styles.futureFeature}>
-          <span>Layout integration</span>
-        </li>
-        <li className={styles.futureFeature}>
-          <span>CMS integration</span>
-        </li>
-        <li className={styles.futureFeature}>
-          <span>More themes</span>
-        </li>
-        <li className={styles.futureFeature}>
-          <span>More components</span>
-        </li>
-        <li className={styles.futureFeature}>
-          <span>Awesome Animations</span>
-        </li>
-      </ul>
+      <section className={styles.shadow}>
+        <h2 className={styles.subtitle}>Make It Yours - 100% Customizable</h2>
+        <p className={styles.paragraph}>
+          No cookie-cutter designs here. With Awesome CL, you're the designer.
+          Fine-tune every component to match your style, your brand, and your
+          vibe. Use build-in styles or add your own custom branding. Awesome CL
+          even comes with a seemless integration for Tailwind CSS to open
+          unlimitted possibilities to{" "}
+          <Link to="/customization" className={styles.link}>
+            CUSTOMIZE
+          </Link>{" "}
+          your projects.
+        </p>
+      </section>
+      <section className={styles.shadow}>
+        <h2 className={styles.subtitle}>The Future Looks Awesome</h2>
+        <p className={styles.paragraph}>
+          We're just getting started! Expect new features, more integrations,
+          and a growing collection of killer components. Here are just a few
+          bullet points from our roadmap for the future:
+        </p>
+        <ul className={styles.list}>
+          <li className={styles.futureFeature}>
+            <span>Layout integration</span>
+          </li>
+          <li className={styles.futureFeature}>
+            <span>CMS integration</span>
+          </li>
+          <li className={styles.futureFeature}>
+            <span>More themes</span>
+          </li>
+          <li className={styles.futureFeature}>
+            <span>More components</span>
+          </li>
+          <li className={styles.futureFeature}>
+            <span>Awesome Animations</span>
+          </li>
+        </ul>
+      </section>
     </div>
   );
 };
