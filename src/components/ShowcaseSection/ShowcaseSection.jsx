@@ -3,7 +3,7 @@ import "./ShowcaseSection.scss";
 import { Link } from "react-router-dom";
 import glasses from "../../assets/images/high-tech-glasses.jpg";
 import Accordion from "../../component_testing/Accordion/Accordion";
-// // import Avatar from "../../component_testing/Avatar/Avatar";
+// import Avatar from "../../component_testing/Avatar/Avatar";
 import Button from "../../component_testing/Button/Button";
 // //import Card from "../../component_testing/Card/Card";
 // // import Carousel from "../../component_testing/Carousel/Carousel";
