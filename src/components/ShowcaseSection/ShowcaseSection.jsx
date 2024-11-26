@@ -1,9 +1,8 @@
 import React from "react";
 import "./ShowcaseSection.scss";
 import { Link } from "react-router-dom";
-import glasses from "../../assets/images/high-tech-glasses.jpg";
-import Accordion from "../../component_testing/Accordion/Accordion";
-// import Avatar from "../../component_testing/Avatar/Avatar";
+import snow from "../../assets/images/snow.jpg";
+import Avatar from "../../component_testing/Avatar/Avatar";
 import Button from "../../component_testing/Button/Button";
 // //import Card from "../../component_testing/Card/Card";
 // // import Carousel from "../../component_testing/Carousel/Carousel";
@@ -19,13 +18,13 @@ import Switch from "../../component_testing/Switch/Switch";
 
 const showcaseItems = [
   {
-    component: <Accordion />,
-    title: "Accordion",
-    link: "/frontend/components/accordion",
+    component: <Avatar />,
+    title: "Avatar",
+    link: "/frontend/components/avatar",
   },
   {
     component: (
-      <Button color="secondary" radius="lg">
+      <Button color="secondary" radius="lg" size="sm">
         Button
       </Button>
     ),
@@ -45,7 +44,7 @@ const showcaseItems = [
   {
     component: (
       <Image
-        src={glasses}
+        src={snow}
         alt="High-tech glasses"
         size="sm"
         objectFit="cover"
