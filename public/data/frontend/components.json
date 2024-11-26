@@ -3619,5 +3619,291 @@
         }
       ]
     }
+  },
+  {
+    "title": "avatar",
+    "path": "/frontend/components/avatar",
+    "description": "A customizable Avatar component that supports DiceBear SVG generation, image sources, sizes, colors, shapes, and additional user details like name and description.",
+    "installation": [
+      {
+        "name": "CLI",
+        "command": "npm install @dicebear/core @dicebear/collection",
+        "path": "/icons/cube-solid.svg"
+      },
+      {
+        "name": "npm",
+        "command": "npm install your-avatar-library",
+        "path": "/icons/npm-brands-solid.svg"
+      },
+      {
+        "name": "yarn",
+        "command": "yarn add your-avatar-library",
+        "path": "/icons/yarn-brands-solid.svg"
+      },
+      {
+        "name": "pnpm",
+        "command": "pnpm add your-avatar-library",
+        "path": "/icons/cubes-solid.svg"
+      },
+      {
+        "name": "bun",
+        "command": "bun add your-avatar-library",
+        "path": "/icons/lemon-regular.svg"
+      }
+    ],
+    "import": {
+      "code": "import Avatar from 'AwesomeCL';",
+      "description": "This code shows how to import the Avatar component from the library."
+    },
+
+    "examples": [
+      {
+        "title": "Default",
+        "components": [
+          {
+            "type": "Avatar",
+            "props": {
+              "avatarName": "Jude",
+              "size": "md",
+              "color": "default"
+            },
+            "children": ""
+          },
+          {
+            "type": "Avatar",
+            "props": {
+              "avatarName": "Brian",
+              "size": "md",
+              "color": "default"
+            },
+            "children": ""
+          },
+          {
+            "type": "Avatar",
+            "props": {
+              "avatarName": "Andrea",
+              "size": "md",
+              "color": "default"
+            },
+            "children": ""
+          },
+          {
+            "type": "Avatar",
+            "props": {
+              "avatarName": "Luis",
+              "size": "md",
+              "color": "default"
+            },
+            "children": ""
+          },
+          {
+            "type": "Avatar",
+            "props": {
+              "avatarName": "Emery",
+              "size": "md",
+              "color": "default"
+            },
+            "children": ""
+          }
+        ],
+        "code": "import { Avatar } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Avatar name=\"Jude\" size=\"sm\" color=\"default\" />\n    <Avatar name=\"Brian\" size=\"sm\" color=\"default\" />\n    <Avatar name=\"Andrea\" size=\"sm\" color=\"default\" />\n    <Avatar name=\"Luis\" size=\"sm\" color=\"default\" />\n    <Avatar name=\"Emery\" size=\"sm\" color=\"default\" />  );\n}"
+      },
+      {
+        "title": "Sizes",
+        "description": "Avatars displayed with various sizes and bordered with different colors.",
+        "components": [
+          {
+            "type": "Avatar",
+            "props": {
+              "avatarName": "Jude",
+              "size": "sm"
+            },
+            "children": ""
+          },
+          {
+            "type": "Avatar",
+            "props": {
+              "avatarName": "Brian",
+              "size": "md"
+            },
+            "children": ""
+          },
+          {
+            "type": "Avatar",
+            "props": {
+              "avatarName": "Andrea",
+              "size": "lg"
+            },
+            "children": ""
+          }
+        ],
+        "code": "import { Avatar } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Avatar name=\"Jude\" size=\"sm\"  />\n      <Avatar name=\"Brian\" size=\"md\"  />\n      <Avatar name=\"Andrea\" size=\"lg\"  />\n    </>\n  );\n}"
+      },
+      {
+        "title": "Radius",
+        "description": "Avatars with varying radius.",
+        "components": [
+          {
+            "type": "Avatar",
+            "props": {
+              "avatarName": "Jude",
+              "size": "md",
+              "radius": "sm",
+              "shape": "square",
+              "color": "secondary"
+            },
+            "children": ""
+          },
+          {
+            "type": "Avatar",
+            "props": {
+              "avatarName": "Brian",
+              "size": "md",
+              "radius": "md",
+              "shape": "square",
+              "color": "secondary"
+            },
+            "children": ""
+          },
+          {
+            "type": "Avatar",
+            "props": {
+              "avatarName": "Andrea",
+              "size": "md",
+              "radius": "lg",
+              "shape": "square",
+              "color": "secondary"
+            },
+            "children": ""
+          },
+          {
+            "type": "Avatar",
+            "props": {
+              "avatarName": "Luis",
+              "size": "md",
+              "shape": "square",
+              "color": "secondary"
+            },
+            "children": ""
+          }
+        ],
+        "code": "import { Avatar } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Avatar name=\"Jude\" size=\"md\" radius=\"sm\" shape=\"square\" />\n      <Avatar name=\"Brian\" size=\"md\" radius=\"md\" shape=\"square\" />\n      <Avatar name=\"Andrea\" size=\"md\" radius=\"lg\" shape=\"square\" />\n      <Avatar name=\"Luis\" size=\"md\" shape=\"square\" />\n    </>\n  );\n}"
+      },
+      {
+        "title": "User",
+        "description": "Avatars displayed with name and description.",
+        "components": [
+          {
+            "type": "Avatar",
+            "props": {
+              "avatarName": "Emery",
+              "size": "lg",
+              "name": "Emery",
+              "description": "Web Developer"
+            },
+            "children": ""
+          }
+        ],
+        "code": "import { Avatar } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n    <Avatar name=\"Emery\" size=\"lg\"  name=\"Emery\"  description=\"Web Developer\" />\n   </>\n  );\n}"
+      }
+    ],
+    "propsTable": {
+      "title": "Avatar Props",
+      "description": "List of all props supported by the Avatar component.",
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
+      "rows": [
+        {
+          "propName": "src",
+          "type": "string",
+          "description": "The source URL for the avatar image.",
+          "defaultValue": "undefined"
+        },
+        {
+          "propName": "avatarName",
+          "type": "string",
+          "description": "Seed value for generating a DiceBear avatar.",
+          "defaultValue": "undefined"
+        },
+        {
+          "propName": "name",
+          "type": "string",
+          "description": "User's name displayed below the avatar.",
+          "defaultValue": "undefined"
+        },
+        {
+          "propName": "description",
+          "type": "string",
+          "description": "Additional description or role displayed below the name.",
+          "defaultValue": "undefined"
+        },
+        {
+          "propName": "size",
+          "type": "'sm' | 'md' | 'lg'",
+          "description": "The size of the avatar.",
+          "defaultValue": "'md'"
+        },
+        {
+          "propName": "color",
+          "type": "'primary' | 'secondary' | 'default' | 'success' | 'warning'",
+          "description": "The background color of the avatar.",
+          "defaultValue": "'primary'"
+        },
+        {
+          "propName": "shape",
+          "type": "'circle' | 'square'",
+          "description": "The shape of the avatar.",
+          "defaultValue": "'circle'"
+        },
+
+        {
+          "propName": "radius",
+          "type": "'none' | 'sm' | 'md' | 'lg' | 'full'",
+          "description": "The border radius of the avatar.",
+          "defaultValue": "'none'"
+        },
+        {
+          "propName": "className",
+          "type": "string",
+          "description": "Additional class names for custom styling.",
+          "defaultValue": "undefined"
+        },
+        {
+          "propName": "style",
+          "type": "React.CSSProperties",
+          "description": "Inline styles applied to the avatar.",
+          "defaultValue": "undefined"
+        }
+      ]
+    },
+    "accessibility": {
+      "title": "Accessibility",
+      "description": "Accessibility considerations for the Avatar component.",
+      "ariaRoles": [
+        {
+          "propName": "Alt Text",
+          "description": "The `alt` attribute is used for the `img` element to describe the avatar when an image source (`src`) is provided. This ensures screen readers can interpret the visual content."
+        },
+        {
+          "propName": "Aria-label",
+          "description": "For SVG avatars generated via DiceBear, the `aria-label` attribute is applied to describe the avatar content using the `name` prop."
+        },
+        {
+          "propName": "Initials Fallback",
+          "description": "If no `src` or `name` is provided, the avatar defaults to displaying a '?' or initials, ensuring visual context is always present."
+        },
+        {
+          "propName": "Keyboard Focus",
+          "description": "Interactive avatars (e.g., clickable or focusable) should have proper keyboard focus handling. Ensure tab index and accessible roles are provided where necessary."
+        },
+        {
+          "propName": "Color Contrast",
+          "description": "Ensure that the background and text or SVG colors meet WCAG contrast standards for sufficient readability."
+        },
+        {
+          "propName": "Responsive Design",
+          "description": "Avatar sizes (`size` prop) should be responsive and maintain accessibility for varying device sizes."
+        }
+      ]
+    }
   }
 ]
