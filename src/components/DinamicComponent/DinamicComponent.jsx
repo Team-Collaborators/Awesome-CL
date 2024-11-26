@@ -13,6 +13,7 @@ import Spinner from "../../component_testing/Spinner/Spinner";
 import Carousel from "../../component_testing/Carousel/Carousel";
 import Input from "../../component_testing/Input/Input";
 import Image from "../../component_testing/Image/Image";
+import Avatar from "../../component_testing/Avatar/Avatar";
 
 const components = {
   //Object with all components
@@ -28,6 +29,7 @@ const components = {
   Checkbox,
   Carousel,
   Image,
+  Avatar,
 };
 
 export default function DynamicComponent({ type, props, children }) {

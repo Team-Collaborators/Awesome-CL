@@ -27,6 +27,8 @@
     "build-docs": "vite build"
   },
   "dependencies": {
+    "@dicebear/collection": "^9.2.2",
+    "@dicebear/core": "^9.2.2",
     "AwesomeCL": "github:Team-Collaborators/Awesome-CL#broken-build",
     "motion": "^11.11.17",
     "react": "^18.3.1",
