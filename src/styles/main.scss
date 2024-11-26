@@ -11,8 +11,11 @@ $secondary-color: #083e52;
 $optional-color: #5a2778;
 $slightlyLighter-color: #095874;
 $background-color: #252525;
+$light-purple: #8c50c7;
 $dark-purple: #57548d;
+$coolBlue: #5983c1;
 $text-color: #ffffff;
+$muted-text-color: #a1a1aa;
 $border-color: 1px solid rgba(255, 255, 255, 0.2);
 $font-stack: "Roboto", sans-serif;
 
@@ -82,34 +85,3 @@ a {
   color: var(--text-color);
   text-decoration: none;
 }
-
-//App layout styles
-// .app-container {
-//   display: flex;
-//   flex-direction: column;
-//   min-height: 100vh;
-// }
-
-// .layout-content {
-//   display: flex;
-//   flex: 1;
-//   flex-direction: column;
-
-//   .content-wrapper {
-//     flex: 1;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     justify-content: center;
-//     margin: 6rem 0 3rem 13rem;
-//     transition: margin-left 0.3s ease;
-
-//     &.sidebarOpen {
-//       margin-left: 12rem; // Adjust to match sidebar width
-//     }
-
-//     &.sidebarClosed {
-//       margin-left: 0;
-//     }
-//   }
-// }

@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
 import Button from "../../component_testing/Button/Button";
 import styles from "./Sidebar.module.scss";
@@ -31,6 +31,7 @@ const Sidebar = ({ links }) => {
       navigate(firstSubcategoryPath); // Navigate to the first subcategory path
     }
   };
+
   const renderLinks = (items) => {
     return (
       <ul className={styles.sidebarInner}>
@@ -43,12 +44,18 @@ const Sidebar = ({ links }) => {
                 className={styles.sidebarMainLinkWrapper}
                 onClick={() => handleCategoryClick(index, link)}
               >
-                <Link className={styles.sidebarMainLink} to={link.path}>
-                  {" "}
+                <NavLink
+                  to={link.path}
+                  className={({ isActive }) =>
+                    isActive
+                      ? `${styles.sidebarMainLink} ${styles.activeLink}` // Add active style
+                      : styles.sidebarMainLink
+                  }
+                >
                   {link.title}
-                </Link>
+                </NavLink>
 
-                {/* Conditional rendering of the arrow icon with a Fragment wrapper */}
+                {/* Conditional rendering of the arrow icon */}
                 {link.subcategories && link.subcategories.length > 0 && (
                   <>
                     <IoIosArrowBack
@@ -63,12 +70,16 @@ const Sidebar = ({ links }) => {
                 <ul className={styles.sidebarSubCat}>
                   {link.subcategories.map((subLink, subIndex) => (
                     <li key={subIndex} className={styles.sidebarSubCatItem}>
-                      <Link
+                      <NavLink
                         to={subLink.path}
-                        className={styles.sidebarSubCatLink}
+                        className={({ isActive }) =>
+                          isActive
+                            ? `${styles.sidebarSubCatLink} ${styles.activeSubLink}`
+                            : styles.sidebarSubCatLink
+                        }
                       >
                         {subLink.title}
-                      </Link>
+                      </NavLink>
                     </li>
                   ))}
                 </ul>

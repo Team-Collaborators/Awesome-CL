@@ -9,6 +9,8 @@
   --input-focus-color: #095874;
   --button-bg-color: #d4d4d8;
   --team-bg-color: rgba(130, 130, 132, 0.15);
+  --secondary-text-color: #2d2d2d;
+  --muted-text-color: #575760;
 }
 
 body.dark-theme {
@@ -22,4 +24,6 @@ body.dark-theme {
   --input-focus-color: #095874;
   --button-bg-color: #3f3f46;
   --team-bg-color: rgba(50, 50, 50, 0.5);
+  --secondary-text-color: #fafafa;
+  --muted-text-color: #a1a1aa;
 }

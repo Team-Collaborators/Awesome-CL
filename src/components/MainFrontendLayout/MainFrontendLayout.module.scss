@@ -1,96 +1,5 @@
 @use "../../styles/main.scss" as *;
 
-// PREVIOUS STYLES
-
-// .renderComponentPage {
-//   padding: 2rem;
-//   // transition: background 0.3s, color 0.3s;
-
-//   header {
-//     text-align: left;
-//     margin-left: 1.5rem;
-//     margin-bottom: 1.5rem;
-
-//     h2 {
-//       font-size: 2rem;
-//     }
-
-//     p {
-//       font-size: 1.2rem;
-//     }
-//   }
-
-//   main {
-//     max-width: 1200px;
-//     margin: 0 auto;
-
-//     section {
-//       padding: 1.5rem;
-//       border-radius: 10px;
-//       // border: 1px solid rgba(255, 255, 255, 0.2);
-//       box-shadow: 0 1px 8px rgba(0, 0, 0, 0.28);
-//       margin-bottom: 1.5rem;
-//       // transition: background-color 0.3s, box-shadow 0.3s;
-
-//       // &:hover {
-//       //   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
-//       // }
-
-//       h2 {
-//         font-size: 1.5rem;
-//         margin-bottom: 1rem;
-//       }
-
-//       ul {
-//         li {
-//           display: flex;
-//           align-items: center;
-//           margin-bottom: 1rem;
-//         }
-//       }
-//     }
-
-//     .installationSection {
-//       ul {
-//         display: flex;
-//         flex-direction: row;
-//         flex-wrap: nowrap;
-//         gap: 1rem;
-//       }
-
-//       li {
-//         align-items: center;
-//         justify-content: center;
-//         flex: 1 1 30%;
-//         background-color: #ffffff0d;
-//         padding: 1rem;
-//         border-radius: 8px;
-//         transition: background-color 0.3s, box-shadow 0.3s;
-//       }
-
-//       li:hover {
-//         background-color: #ffffff26;
-//         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 12px rgba(0, 0, 0, 0.1);
-//       }
-
-//       .someIcon {
-//         background-color: styles.$slightlyLighter-color;
-//         width: 70px;
-//         height: 80px;
-//         padding: 0.5rem 1rem;
-//         border-radius: 5px;
-//         cursor: pointer;
-//         font-size: 1rem;
-//         transition: background-color 0.3s;
-//       }
-//     }
-
-//     .importDescription {
-//       font-size: 1.2rem;
-//     }
-//   }
-// }
-
 .renderComponentPage {
   padding: 2rem;
   max-width: 100%;
@@ -105,6 +14,7 @@
       font-size: 1.5rem;
     }
     .description {
+      // color: var(--muted-text-color);
       font-size: 1.2rem;
       @media (max-width: 768px) {
         font-size: 1rem;
@@ -177,6 +87,7 @@
     }
 
     .importDescription {
+      // color: var(--muted-text-color);
       font-size: 1.2rem;
     }
   }
