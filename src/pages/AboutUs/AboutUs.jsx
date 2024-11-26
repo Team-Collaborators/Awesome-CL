@@ -48,7 +48,6 @@ const teamData = [
     role: "Frontend & Backend Developer",
     description:
       "Passionate about creating seamless user experiences and building reusable components.",
-    linkedin: "https://www.linkedin.com/",
     image: "",
     linkedin: "https://www.linkedin.com/",
   },
