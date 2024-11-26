@@ -18,7 +18,7 @@ import Switch from "../../component_testing/Switch/Switch";
 
 const showcaseItems = [
   {
-    component: <Avatar />,
+    component: <Avatar avatarName="Brian" />,
     title: "Avatar",
     link: "/frontend/components/avatar",
   },
