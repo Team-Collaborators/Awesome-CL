@@ -39,7 +39,7 @@ const FeatureCards = () => {
           <div key={index} className={styles["feature-card"]}>
             <div className={styles["feature-icon"]}>{feature.icon}</div>
             <h3>{feature.title}</h3>
-            <p>{feature.description}</p>
+            <p className={styles.description}>{feature.description}</p>
           </div>
         ))}
       </div>

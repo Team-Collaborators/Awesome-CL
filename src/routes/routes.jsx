@@ -10,10 +10,12 @@ import AboutUs from "../pages/AboutUs/AboutUs";
 import Introduction from "../pages/Instructions/Introduction";
 import GettingStarted from "../pages/Instructions/GettingStarted";
 import Customization from "../pages/Instructions/Customization";
+import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
 
 export default function MainRoutes() {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route element={<Layout />}>
           {/* Home page route */}

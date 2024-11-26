@@ -6,7 +6,7 @@
   text-align: center;
 
   .feature-section-title {
-    font-size: 2rem;
+    font-size: $h2-font-size;
     margin-bottom: 4rem;
   }
 }
@@ -38,7 +38,10 @@
       animation: borderSlide 0.9s ease-in-out forwards;
     }
   }
-
+  .description {
+    font-size: $paragraph-font-size;
+    color: var(--muted-text-color);
+  }
   @keyframes borderSlide {
     0% {
       left: -100%;
@@ -82,7 +85,7 @@
   .feature-icon {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: $slightlyLighter-color;
+    color: $coolBlue;
     display: flex;
     justify-content: center;
     align-items: center;
