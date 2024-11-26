@@ -5,7 +5,7 @@
   max-width: 100%;
   box-sizing: border-box;
 
-  header {
+  .header {
     text-align: left;
     // margin-left: 1.5rem;
     margin-bottom: 1.5rem;
@@ -22,13 +22,13 @@
     }
   }
 
-  main {
+  .main {
     max-width: 1300px;
     // margin: 0 auto;
     display: flex;
     flex-direction: column;
 
-    section {
+    .section {
       padding: 1.5rem;
       // border-radius: 10px;
       box-shadow: $box-shadow-all-sides;
@@ -37,19 +37,19 @@
         // margin-bottom: -4rem;
       }
 
-      h2 {
+      .h2 {
         font-size: 1.5rem;
         margin-bottom: 1rem;
       }
 
-      ul {
+      .ul {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       }
     }
 
     .installationSection {
-      ul {
+      .ul {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
@@ -59,7 +59,7 @@
         }
       }
 
-      li {
+      .li {
         text-align: center;
         justify-content: center;
         flex: 1 1 30%;
@@ -69,7 +69,7 @@
         transition: background-color 0.3s, box-shadow 0.3s;
       }
 
-      li:hover {
+      .li:hover {
         background-color: #ffffff26;
         box-shadow: $box-shadow-all-sides;
       }
