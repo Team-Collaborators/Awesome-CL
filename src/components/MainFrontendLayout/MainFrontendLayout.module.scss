@@ -16,6 +16,7 @@
     .description {
       // color: var(--muted-text-color);
       font-size: 1.2rem;
+      max-width: 800px;
       @media (max-width: 768px) {
         font-size: 1rem;
       }
