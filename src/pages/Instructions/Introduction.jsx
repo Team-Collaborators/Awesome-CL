@@ -1,6 +1,3 @@
-// ! to do: add style to link
-// ! to do: add pics? something to make the page look nicer, not just text
-
 import React from "react";
 import styles from "./Instructions.module.scss";
 import { Link } from "react-router-dom";
@@ -9,7 +6,7 @@ const Introduction = () => {
   return (
     <div className={styles.page}>
       <h1 className={styles.title}>Welcome to Awesome CL</h1>
-      <h2 className={styles.subtitle}>Built for Students, by Students</h2>
+      <h2 className={styles.subtitle}>Built for Students by Students</h2>
       <p className={styles.paragraph}>
         Say hello to Awesome CL, the community-driven component library that
         brings style, power, and simplicity to your projects. This project was
@@ -75,11 +72,21 @@ const Introduction = () => {
       </p>
 
       <ul className={styles.list}>
-        <li className={styles.paragraph}>Layout integration</li>
-        <li className={styles.paragraph}>CMS integration</li>
-        <li className={styles.paragraph}>More themes</li>
-        <li className={styles.paragraph}>More components</li>
-        <li className={styles.paragraph}>Animations</li>
+        <li className={styles.futureFeature}>
+          <span>Layout integration</span>
+        </li>
+        <li className={styles.futureFeature}>
+          <span>CMS integration</span>
+        </li>
+        <li className={styles.futureFeature}>
+          <span>More themes</span>
+        </li>
+        <li className={styles.futureFeature}>
+          <span>More components</span>
+        </li>
+        <li className={styles.futureFeature}>
+          <span>Animations</span>
+        </li>
       </ul>
     </div>
   );
