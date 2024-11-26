@@ -67,7 +67,7 @@ export function MainFrontendLayout({ data }) {
           <section className={styles.section}>
             <h2 className={styles.h2}>Usage</h2>
             {component.examples.map((example, index) => (
-              <div key={index}>
+              <div className={styles.viewBox} key={index}>
                 <h2 className={styles.h2}>{example.title}</h2>
                 <ExampleViewer example={example} />
               </div>
