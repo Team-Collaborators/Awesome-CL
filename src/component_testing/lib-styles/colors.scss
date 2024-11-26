@@ -8,9 +8,13 @@ $default-base-lighter: rgb(247, 247, 247);
 $default-dark: black;
 $default-light: white;
 
-$secondary-base: purple;
-$secondary-dark: rgb(83, 2, 83);
-$secondary-light: rgb(211, 146, 211);
+// $secondary-base: purple;
+// $secondary-dark: rgb(83, 2, 83);
+// $secondary-light: rgb(211, 146, 211);
+$secondary-base: #8f52bc;
+$secondary-dark: #60377d;
+$secondary-light: #be6ef8;
+//#8f52bc, #26b3c6
 
 $success-base: green;
 $success-dark: darkgreen;
@@ -33,9 +37,9 @@ $dark-default-base: rgb(50, 50, 50);
 $dark-default-dark: black;
 $dark-default-light: rgb(79, 79, 79);
 
-$dark-secondary-base: rgb(83, 2, 83);
-$dark-secondary-dark: rgb(83, 2, 83);
-$dark-secondary-light: rgb(120, 50, 120);
+$dark-secondary-base: #b388ff;
+$dark-secondary-dark: #7c4dff;
+$dark-secondary-light: #d1a3ff;
 
 $dark-success-base: rgb(0, 128, 0);
 $dark-success-dark: darkgreen;
