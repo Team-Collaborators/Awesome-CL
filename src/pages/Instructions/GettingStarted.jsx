@@ -72,7 +72,7 @@ const GettingStarted = () => {
         components or check out the backend utilities according to your needs!
       </p>
 
-      <section>
+      <section className={styles.shadow}>
         <h2 className={styles.subtitle}>Importing components</h2>
         <p className={styles.paragraph}>
           Now import components where ever you need them with a simple import
@@ -82,24 +82,24 @@ const GettingStarted = () => {
         <div className={styles.code}>
           <RenderCode code={'import { Button } from "AwesomeCL"'} />
         </div>
+
+        <p className={styles.paragraph}>
+          To import the style sheet add it to you main CSS file:
+        </p>
+        <div className={styles.code}>
+          <RenderCode
+            code={'@use "../../node_modules/AwesomeCL/dist/exports.css"'}
+          />
+        </div>
+
+        <p className={styles.paragraph}>
+          And voilá. Now you're ready to style and{" "}
+          <Link to="/instructions/customization" className={styles.link}>
+            CUSTOMIZE
+          </Link>{" "}
+          your component.
+        </p>
       </section>
-
-      <p className={styles.paragraph}>
-        To import the style sheet add it to you main CSS file:
-      </p>
-      <div className={styles.code}>
-        <RenderCode
-          code={'@use "../../node_modules/AwesomeCL/dist/exports.css"'}
-        />
-      </div>
-
-      <p className={styles.paragraph}>
-        And voilá. Now you're ready to style and{" "}
-        <Link to="/instructions/customization" className={styles.link}>
-          CUSTOMIZE
-        </Link>{" "}
-        your component.
-      </p>
     </div>
   );
 };
