@@ -41,7 +41,7 @@
 
 .sections {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   width: 100%;
   max-width: 1200px;
@@ -57,7 +57,7 @@
 .contact,
 .social {
   padding: 10px;
-  text-align: left;
+  text-align: center;
 
   @media (max-width: 768px) {
     text-align: center;
