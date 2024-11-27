@@ -32,35 +32,35 @@ $danger-light: #f2a0aa;
 
 // Dark theme colors
 // Default Colors
-$default-base: #303030; 
-$default-base-lighter: #424242; 
-$default-dark: #f4f4f4; 
-$default-light: #e0e0e0; 
+$dark-default-base: #303030; 
+$dark-default-base-lighter: #424242; 
+$dark-default-dark: #f4f4f4; 
+$dark-default-light: #e0e0e0; 
 
 // Primary Colors
-$primary-base: #4a90e2;
-$primary-dark: #81b3ed; 
-$primary-light: #204970; 
+$dark-primary-base: #4a90e2;
+$dark-primary-dark: #81b3ed; 
+$dark-primary-light: #204970; 
 
 // Secondary Colors
-$secondary-base: #8f52bc; 
-$secondary-dark: #b685db; 
-$secondary-light: #4c316b; 
+$dark-secondary-base: #8f52bc; 
+$dark-secondary-dark: #b685db; 
+$dark-secondary-light: #4c316b; 
 
 // Success Colors
-$success-base: #39cb73; 
-$success-dark: #4ddb88; 
-$success-light: #1f5a36; 
+$dark-success-base: #39cb73; 
+$dark-success-dark: #4ddb88; 
+$dark-success-light: #1f5a36; 
 
 // Warning Colors
-$warning-base: #f2f05e; 
-$warning-dark: #f7f787;
-$warning-light: #645e27; 
+$dark-warning-base: #f2f05e; 
+$dark-warning-dark: #f7f787;
+$dark-warning-light: #645e27; 
 
 // Danger Colors
-$danger-base: #e35260; 
-$danger-dark: #f27885; 
-$danger-light: #5a2c33; 
+$dark-danger-base: #e35260; 
+$dark-danger-dark: #f27885; 
+$dark-danger-light: #5a2c33; 
 
 :root {
   --default-base: #{$default-base};
