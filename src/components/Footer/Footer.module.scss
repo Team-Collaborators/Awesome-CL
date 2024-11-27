@@ -41,11 +41,12 @@
 
 .sections {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-wrap: wrap;
   width: 100%;
   max-width: 1200px;
   margin: 20px 0;
+  gap: 120px;
 
   @media (max-width: 768px) {
     flex-direction: column;

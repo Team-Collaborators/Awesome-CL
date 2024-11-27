@@ -7,6 +7,10 @@ import AboutUs from "../../pages/AboutUs/AboutUs";
 import LegalNotice from "../../pages/LegalNotice/LegalNotice";
 
 const Footer = ({ isSidebarOpen }) => {
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText("awesomeCL@protonmail.com");
+    alert("Email address copied to clipboard!");
+  };
   return (
     <footer
       className={`${styles.footer} ${
@@ -30,9 +34,6 @@ const Footer = ({ isSidebarOpen }) => {
           </div> */}
           <div className={styles.social}>
             <h4>Contact</h4>
-            {/* <a href="https://linkedin.com" target="blank">
-              <FaLinkedin style={{ marginRight: "10px" }} /> LinkedIn
-            </a> */}
             <a
               href="https://github.com/Team-Collaborators/Awesome-CL"
               target="blank"
