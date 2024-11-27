@@ -8,8 +8,9 @@
 .card {
   display: flex;
   flex-direction: column;
+  height: 100%;
   padding: var(--padding-md);
-  background-color: var(--default-light);
+  // background-color: var(--default-light);
 
   &.withAvatar {
     align-items: flex-start;
@@ -26,14 +27,32 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    gap: 1rem;
-    padding: var(--padding-sm);
+    gap: 1 rem;
 
+    .cardImageWrapper {
+      height: 100%;
+      width: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    } 
+    .cardImage {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+
+      width: auto;
+      object-fit: cover;
+    }
     .contentContainer {
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
+      text-align: left;
     }
+   
   }
 }
 
@@ -46,13 +65,14 @@
 .cardDescription {
   margin-bottom: 1rem;
   margin-top: 1rem;
-  font-size: var(--font-size-md);
+  font-size: var(--font-size-);
 }
 
 .cardFooter {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-md);
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 1rem;
   width: 100%;
   margin-top: 1rem;

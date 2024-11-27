@@ -29,7 +29,7 @@ const Playground = () => {
           padding: "20px",
         }}
       >
-        <Modal
+        {/* <Modal
           size="sm"
           placement="bottom-center"
           modalBody={
@@ -42,16 +42,18 @@ const Playground = () => {
           }
         >
           Click me
-        </Modal>
+        </Modal> */}
         {/* Card Small */}
         <Card
           size="sm"
           title="Some Title"
+          style={{ width: "200px", height: "200px", backgroundColor: "lightblue", color: "black"
+           }}
           description="This is a small card with default variant"
-          footer={
-            <Button color="primary" size="sm">
+          footer={<>  <p>Hello </p><Button color="primary" size="sm">
               Primary
-            </Button>
+            </Button></>
+          
           }
         ></Card>
         <br />
@@ -79,13 +81,14 @@ const Playground = () => {
           radius="lg"
           image={
             <Image
-              src={glasses}
+              src={snow}
               height="200px"
               width="200px"
               objectFit="cover"
             />
           }
           title="Large Outlined Card"
+          description="This is a large card with outlined variant and an image"
           footer={
             <>
               {" "}
@@ -101,32 +104,25 @@ const Playground = () => {
         <br />
 
         {/* Card Horizontal */}
-        <Card
-          horizontal="true"
-          title={
-            <>
-              <h2>Card Horizontal</h2> <p>With Image</p>
-            </>
-          }
-          image={<Image src={snow} />}
+      <Card horizontal="true"
+      radius="sm"
+          title="Card Horizontal"
+          description="This is a horizontal card with an image"
+          image={<Image src={glasses} size="lg" radius="md" />}
           variant="outlined"
           isInteractive={false}
-          radius="none"
           size="lg"
           footer={
             <>
               {" "}
-              <Button color="secondary" radius="full">
-                Yes
+              <Button color="default" radius="sm" size="sm">
+                no
               </Button>
-              <Button color="default" radius="full">
-                No
+              <Button style={{backgroundColor: "black", color: "white"}} radius="sm" size="sm">
+                Yes!
               </Button>
             </>
-          }
-        >
-          This is a horizontal card with two buttons and no radius
-        </Card>
+          }></Card>
       </div>
     </div>
   );
