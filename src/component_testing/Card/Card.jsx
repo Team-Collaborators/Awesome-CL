@@ -35,8 +35,12 @@ ${avatar ? styles.withAvatar : ""}
     <div className={finalClassNames} style={style} role={aria}>
       {/* Avatar */}
       {avatar && <div className={styles.cardAvatar}>{avatar}</div>}
-      {/* Image */}
-      {image && <div className={styles.cardImage}>{image}</div>}
+
+      <div className={styles.cardImageWrapper}>
+        {" "}
+        {/* Image */}
+        {image && <div className={styles.cardImage}>{image}</div>}
+      </div>
 
       <div className={styles.contentContainer}>
         {" "}
