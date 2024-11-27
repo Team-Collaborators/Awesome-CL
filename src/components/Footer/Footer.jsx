@@ -1,5 +1,5 @@
 import React from "react";
-import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaEnvelope } from "react-icons/fa";
 import styles from "./Footer.module.scss";
 import logo from "../../assets/images/awesome-logo.png";
 import ContactPage from "../../pages/ContactPage/ContactPage";
@@ -26,12 +26,6 @@ const Footer = ({ isSidebarOpen }) => {
             <a href="/contact">Contact</a>
             <a href="/legalnotice">Legal Notice</a>
           </div>
-          {/* <div className={styles.contact}>
-            <h4>Contact Us</h4>
-            <p>Email: awesomeCL@protonmail.com</p> */}
-          {/* <p>Phone: +49 234 567 890</p> */}
-          {/* <p>Address: Vulkanstraße 1, 10367 Berlin, Germany</p>
-          </div> */}
           <div className={styles.social}>
             <h4>Contact</h4>
             <a
@@ -40,7 +34,7 @@ const Footer = ({ isSidebarOpen }) => {
             >
               <FaGithub style={{ marginRight: "10px" }} /> Github
             </a>
-            <a>awesomeCL@protonmail.com</a>
+            <a href="#" onClick={copyToClipboard} style={{cursor: "pointer", marginLeft: "10px"}}><FaEnvelope style={{ marginRight: "10px" }} /> Email</a>
           </div>
         </div>
         <div className={styles.copyright}>
