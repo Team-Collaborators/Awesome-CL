@@ -17,7 +17,7 @@ const teamData = [
     description:
       "Passionate about creating seamless user experiences and building reusable components.",
     image: "",
-    linkedin: "https://www.linkedin.com/",
+    linkedin: "https://www.linkedin.com/in/heriberto-santana-solsona/",
   },
   {
     name: "Iryna",
@@ -25,7 +25,7 @@ const teamData = [
     description:
       "Passionate about creating seamless user experiences and building reusable components.",
     image: "",
-    linkedin: "https://www.linkedin.com/",
+    github: "https://github.com/IrYna-Kononova",
   },
   {
     name: "Kristin",
@@ -33,7 +33,7 @@ const teamData = [
     description:
       "Passionate about creating seamless user experiences and building reusable components.",
     image: "",
-    linkedin: "https://www.linkedin.com/",
+    github: "https://github.com/kwossi",
   },
   {
     name: "Nancy",
