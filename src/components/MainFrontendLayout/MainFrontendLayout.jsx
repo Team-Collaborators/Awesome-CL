@@ -22,21 +22,21 @@ export function MainFrontendLayout({ data }) {
   if (component) {
     return (
       <div className={styles.renderComponentPage}>
-        <header>
-          <h2>
+        <header className={styles.header}>
+          <h2 className={styles.h2}>
             {component.title[0].toUpperCase() +
               component.title.slice(1).toLowerCase()}
           </h2>
-          <p>{component.description}</p>
+          <p className={styles.description}>{component.description}</p>
         </header>
-        <main>
+        <main className={styles.main}>
           <section className={styles.installationSection}>
-            <h2>Installation</h2>
+            <h2 className={styles.h2}>Installation</h2>
             {component.installation && (
               <>
-                <ul>
+                <ul className={styles.ul}>
                   {component.installation.map((elem) => (
-                    <li key={elem.name}>
+                    <li className={styles.li} key={elem.name}>
                       <button
                         className={styles.someIcon}
                         onClick={() => setInstallation(elem.command)}
@@ -53,8 +53,8 @@ export function MainFrontendLayout({ data }) {
               </>
             )}
           </section>
-          <section>
-            <h2>Import</h2>
+          <section className={styles.section}>
+            <h2 className={styles.h2}>Import</h2>
             {component.import && (
               <>
                 <p className={styles.importDescription}>
@@ -64,36 +64,36 @@ export function MainFrontendLayout({ data }) {
               </>
             )}
           </section>
-          <section>
-            <h2>Usage</h2>
+          <section className={styles.section}>
+            <h2 className={styles.h2}>Usage</h2>
             {component.examples.map((example, index) => (
-              <div key={index}>
-                <h2>{example.title}</h2>
+              <div className={styles.viewBox} key={index}>
+                <h2 className={styles.h2}>{example.title}</h2>
                 <ExampleViewer example={example} />
               </div>
             ))}
           </section>
-          <section>
-            <h2>API</h2>
+          <section className={styles.section}>
+            <h2 className={styles.h2}>API</h2>
             <Table
               headers={component.propsTable.headers}
               rows={component.propsTable.rows}
             />
           </section>
           {component.propsTable2 && (
-            <section>
-              <h2>{component.propsTable2.title}</h2>
-              <p>{component.propsTable2.description}</p>
+            <section className={styles.section}>
+              <h2 className={styles.h2}>{component.propsTable2.title}</h2>
+              <p className={styles.p}>{component.propsTable2.description}</p>
               <Table
                 headers={component.propsTable2.headers}
                 rows={component.propsTable2.rows}
               />
             </section>
           )}
-          <section>
+          <section className={styles.section}>
             {component.eventsTable && (
               <>
-                <h2>{component.eventsTable.title}</h2>
+                <h2 className={styles.h2}>{component.eventsTable.title}</h2>
                 <p>{component.eventsTable.description}</p>
                 <Table
                   headers={component.eventsTable.headers}
@@ -102,10 +102,10 @@ export function MainFrontendLayout({ data }) {
               </>
             )}
           </section>
-          <section>
+          <section className={styles.section}>
             {component.accessibility && (
               <>
-                <h2>{component.accessibility.title}</h2>
+                <h2 className={styles.h2}>{component.accessibility.title}</h2>
                 <p>{component.accessibility.description}</p>
                 <Table rows={component.accessibility.ariaRoles} />
               </>

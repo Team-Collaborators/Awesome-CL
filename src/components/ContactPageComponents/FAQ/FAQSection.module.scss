@@ -17,7 +17,7 @@
 
   h2 {
     margin-bottom: 20px;
-    font-size: 2rem;
+    font-size: styles.$h2-font-size;
     color: styles.$slightlyLighter-color;
 
     @media (max-width: 768px) {
@@ -31,7 +31,8 @@
 
   p {
     margin-bottom: 20px;
-    font-size: 1.1rem;
+    color: styles.$muted-text-color;
+    font-size: styles.$paragraph-font-size;
 
     @media (max-width: 768px) {
       font-size: 1rem;

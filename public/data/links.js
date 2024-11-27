@@ -1,6 +1,25 @@
 // Sidebar links
 export const sidebarLinks = {
-  instructions: [{ path: "/frontend/instructions", title: "Instructions" }],
+  instructions: [
+    {
+      path: "/instructions",
+      title: "Instructions",
+      subcategories: [
+        {
+          path: "instructions/introduction",
+          title: "Introduction",
+        },
+        {
+          path: "instructions/getting-started",
+          title: "Getting Started",
+        },
+        {
+          path: "instructions/customization",
+          title: "Customization",
+        },
+      ],
+    },
+  ],
   frontend: [
     {
       path: "/frontend/components",
@@ -18,17 +37,17 @@ export const sidebarLinks = {
         { path: "/frontend/components/input", title: "Input" },
         { path: "/frontend/components/spinner", title: "Spinner" },
         { path: "/frontend/components/switch", title: "Switch" },
-      ],
+      ].sort((a, b) => a.title.localeCompare(b.title)),
     },
-    {
-      path: "/frontend/hooks",
-      title: "Hooks",
-      subcategories: [
-        { path: "/frontend/hooks/hook1", title: "Hook1" },
-        { path: "/frontend/hooks/hook2", title: "Hook2" },
-      ],
-    },
-    { path: "/frontend/routes", title: "Routes" },
+    // {
+    //   path: "/frontend/hooks",
+    //   title: "Hooks",
+    //   subcategories: [
+    //     { path: "/frontend/hooks/hook1", title: "Hook1" },
+    //     { path: "/frontend/hooks/hook2", title: "Hook2" },
+    //   ],
+    // },
+    // { path: "/frontend/routes", title: "Routes" },
   ],
 
   backend: [

@@ -1,6 +1,7 @@
 import React from "react";
 
-import { Button, Input } from "AwesomeCL"; // Importa tus componentes
+import Button from "../../component_testing/Button/Button"; // Importa tus componentes
+// import { Button } from "AwesomeCL";
 import Modal from "../../component_testing/Modal/Modal";
 import Form from "../../component_testing/Form/Form";
 import Accordion from "../../component_testing/Accordion/Accordion";
@@ -9,7 +10,10 @@ import Search from "../../component_testing/Search/Search";
 import Switch from "../../component_testing/Switch/Switch";
 import Checkbox from "../../component_testing/Checkbox/Checkbox";
 import Spinner from "../../component_testing/Spinner/Spinner";
+import Carousel from "../../component_testing/Carousel/Carousel";
+import Input from "../../component_testing/Input/Input";
 import Image from "../../component_testing/Image/Image";
+import Avatar from "../../component_testing/Avatar/Avatar";
 
 const components = {
   //Object with all components
@@ -24,6 +28,7 @@ const components = {
   Switch,
   Checkbox,
   Image,
+  Avatar,
 };
 
 export default function DynamicComponent({ type, props, children }) {

@@ -1,48 +1,107 @@
-import React, { useContext } from "react";
+// // import { Outlet, useLocation } from "react-router-dom";
+// // import Navbar from "../Navbar/Navbar";
+// // import Sidebar from "../SideBar/Sidebar";
+// // import Footer from "../Footer/Footer";
+// // import { sidebarLinks, navbarLinks } from "../../../public/data/links";
+// // import "./Layout.module.scss";
+// // import { useEffect, useState } from "react";
+
+// // // Main layout that wraps the entire app, containing the header, sidebar, main content, and footer.
+// // const Layout = () => {
+// //   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+// //   const location = useLocation();
+
+// //   useEffect(() => {
+// //     const handleResize = () => setIsMobile(window.innerWidth <= 768);
+// //     window.addEventListener("resize", handleResize);
+// //     return () => window.removeEventListener("resize", handleResize);
+// //   }, []);
+
+// //   let links = [];
+// //   let showSidebar = false;
+
+// //   if (location.pathname.startsWith("/instructions")) {
+// //     links = sidebarLinks.instructions;
+// //     showSidebar = true;
+// //   } else if (location.pathname.toLowerCase().startsWith("/frontend")) {
+// //     links = sidebarLinks.frontend;
+// //     showSidebar = true;
+// //   } else if (location.pathname.toLowerCase().startsWith("/backend")) {
+// //     links = sidebarLinks.backend;
+// //     showSidebar = true;
+// //   }
+
+// //   return (
+// //     <div className="app-container">
+// //       <Navbar links={navbarLinks} />
+// //       <div className="layout-content">
+// //         {showSidebar && !isMobile && <Sidebar links={links} />}
+// //         <main
+// //           className={`content-wrapper ${
+// //             showSidebar ? "sidebarOpen" : "sidebarClosed"
+// //           }`}
+// //         >
+// //           <Outlet />
+// //         </main>
+// //       </div>
+// //       <Footer isSidebarOpen={showSidebar && !isMobile} />
+// //     </div>
+// //   );
+// // };
+
+// // export default Layout;
+
 import { Outlet, useLocation } from "react-router-dom";
-import { useTheme } from "../../context/ThemeContext";
 import Navbar from "../Navbar/Navbar";
-import Sidebar2 from "../Sidebar2/Sidebar2";
+import Sidebar from "../SideBar/Sidebar";
 import Footer from "../Footer/Footer";
 import { sidebarLinks, navbarLinks } from "../../../public/data/links";
-import "../../styles/main.scss";
+import "./Layout.scss";
+import { useEffect, useState } from "react";
 
 // Main layout that wraps the entire app, containing the header, sidebar, main content, and footer.
 const Layout = () => {
-  const { isDarkMode } = useTheme();
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const location = useLocation();
 
-  let links = [];
-  let showSidebar = false;
+  // Detect window resizing to determine mobile view
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
-  if (location.pathname.startsWith("/instructions")) {
-    links = sidebarLinks.instructions;
-    showSidebar = true;
-  } else if (location.pathname.startsWith("/frontend")) {
-    links = sidebarLinks.frontend;
-    showSidebar = true;
-  } else if (location.pathname.startsWith("/backend")) {
-    links = sidebarLinks.backend;
-    showSidebar = true;
-  }
-  console.log("showSidebar: ", showSidebar);
+  // Determine which links to display and whether to show the sidebar
+  const getSidebarData = () => {
+    if (location.pathname.toLowerCase().startsWith("/instructions")) {
+      return { links: sidebarLinks.instructions, showSidebar: true };
+    }
+    if (location.pathname.toLowerCase().startsWith("/frontend")) {
+      return { links: sidebarLinks.frontend, showSidebar: true };
+    }
+    if (location.pathname.toLowerCase().startsWith("/backend")) {
+      return { links: sidebarLinks.backend, showSidebar: true };
+    }
+    return { links: [], showSidebar: false };
+  };
+
+  const { links, showSidebar } = getSidebarData();
 
   return (
-    // Add dark-theme class conditionally based on isDarkMode
-    <div className={`app-container ${isDarkMode ? "dark-theme" : ""}`}>
+    <div className="app-container">
       <Navbar links={navbarLinks} />
       <div className="layout-content">
-        {showSidebar && <Sidebar2 links={links} />}{" "}
+        {/* Sidebar only visible on non-mobile screens */}
+        {showSidebar && !isMobile && <Sidebar links={links} />}
         <main
           className={`content-wrapper ${
-            showSidebar ? "sidebarOpen" : "sidebarClosed"
+            showSidebar && !isMobile ? "sidebarOpen" : "sidebarClosed"
           }`}
         >
-          {" "}
           <Outlet />
         </main>
       </div>
-      <Footer isSidebarOpen={showSidebar} />
+      <Footer isSidebarOpen={showSidebar && !isMobile} />
     </div>
   );
 };

@@ -1,59 +1,68 @@
-@use "../../styles/main" as styles;
+@use "../../styles/main" as *;
 
 .navbar {
-  font-size: 1.3rem;
   position: fixed;
   width: 100%;
-  height: 6rem;
-  z-index: 1000;
-  background-color: styles.$primary-color;
+  z-index: 1100;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  // padding: 0.6rem 1.3rem;
-  transition: left 0.3s ease; // Smooth slide-in effect
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  justify-content: space-between;
+  padding: 0 2rem;
+  height: 6rem;
+  background-color: $primary-color;
+  color: $text-color;
+  transition: background-color 0.3s ease, color 0.3s ease;
 
   .navbarLeft {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 12rem;
-    height: 100%;
 
-    // Navbar Logo
-    .navLogo {
+    .navbarLogo {
       margin: 0 auto;
-      max-width: 6rem;
-      height: auto;
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px;
+
+      img {
+        max-width: 120px;
+        height: auto;
+        margin-right: 2rem;
+      }
+      @media (max-width: 768px) {
+        img {
+          max-width: 100px;
+        }
+      }
     }
-  }
 
-  // Navbar Links
-  .navbarInner {
-    display: flex;
-    list-style: none;
-    padding-left: 3rem;
-    .navbarInnerItem {
-      margin-right: 15px;
+    .navbarLinks {
+      display: flex;
+      list-style: none;
+      gap: 1rem;
 
-      .navbarLink {
-        // font-size: 1.3rem;
-        cursor: pointer;
-        padding: 10px 15px;
-        color: styles.$text-color;
-        width: 100%;
-        text-align: left;
-        transition: background-color 0.3s ease, color 0.3s ease;
-
-        &:hover {
-          background-color: rgba(255, 255, 255, 0.1);
-          border-radius: 5px;
-        }
-        a {
-          color: inherit;
+      .navbarLinkItem {
+        .navbarLink {
+          font-size: 1.2rem;
+          color: $text-color;
+          background: none;
+          border: none;
+          cursor: pointer;
           text-decoration: none;
+          padding: 0.5rem 1rem;
+          transition: color 0.3s ease, background-color 0.3s ease;
+
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+          }
         }
+      }
+    }
+
+    @media (max-width: 768px) {
+      .navbarLinks {
+        display: none;
       }
     }
   }
@@ -61,50 +70,135 @@
   .navbarRight {
     display: flex;
     align-items: center;
-    padding-right: 2rem;
     gap: 1rem;
 
-    .navbarSearchInput {
-      padding: 5px 10px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 16px;
-      outline: none;
+    .themeToggle {
+      background: none;
+      border: none;
+      color: $text-color;
+      cursor: pointer;
+      font-size: 2rem;
+      transition: color 0.3s ease, transform 0.3s ease;
+      &:hover {
+        transform: rotate(20deg);
+      }
+      @media (max-width: 768px) {
+        font-size: 1.5rem;
+      }
+    }
+
+    .menuToggle {
+      display: none;
+      background: none;
+      border: none;
+      color: $text-color;
+      font-size: 1.7rem;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.7;
+      }
+      @media (max-width: 768px) {
+        display: block;
+      }
     }
   }
 
-  .themeToggleButton {
-    background: none;
-    border: none;
-    color: styles.$text-color;
-    cursor: pointer;
-    font-size: 2rem;
-    transition: color 0.3s ease, transform 0.3s ease;
-    &:hover {
-      transform: rotate(20deg);
-    }
-  }
-}
-
-// Burger menu styles
-.burgerMenu {
-  display: none; // Hide by default
-
-  @include styles.media("sm") {
-    display: flex; // Show burger menu for screens smaller than md
-    align-items: center;
-    justify-content: center;
+  .mobileMenu {
     position: fixed;
-    width: 4rem;
-    height: 4rem;
-    top: 20px;
-    left: 20px;
-    z-index: 2000; // Ensure it's above the sidebar
-    cursor: pointer;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: $primary-color;
+    padding: 2rem 1.5rem;
+    overflow-y: auto;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
 
-    .burgerIcon {
-      font-size: 3rem;
-      color: styles.$secondary-color;
+    &.open {
+      transform: translateX(0);
+    }
+
+    .closeMenuButton {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      padding: 0.5rem;
+      background: none;
+      border: none;
+      color: $text-color;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        background-color: $slightlyLighter-color;
+        border-radius: 50%;
+        opacity: 0.7;
+      }
+    }
+
+    .mobileMenuSection {
+      margin-top: 1.5rem;
+      border-bottom: $border-color;
+      .mobileMenuTitle {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem 0;
+        color: $text-color;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        &:hover {
+          opacity: 0.7;
+        }
+        .submenuToggleIcon {
+          font-size: 1.2rem;
+        }
+      }
+
+      .mobileMenuLinks {
+        list-style: none;
+        padding: 0.5rem 0 0;
+
+        .mobileMenuLinkItem {
+          margin: 0.5rem 0;
+
+          .mobileMenuLink {
+            display: inline-block;
+            color: rgba($text-color, 0.85);
+            text-decoration: none;
+            padding: 0.3rem 0;
+            transition: color 0.3s ease;
+
+            &:hover {
+              opacity: 0.7;
+            }
+          }
+
+          .mobileMenuSubLinks {
+            margin: 0.3rem 0 0 1.5rem;
+
+            .mobileMenuSubLinkItem {
+              .mobileMenuSubLink {
+                display: inline-block;
+                color: rgba($text-color, 0.7);
+                text-decoration: none;
+                padding: 0.3rem 0;
+                transition: color 0.3s ease;
+
+                &:hover {
+                  opacity: 0.7;
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

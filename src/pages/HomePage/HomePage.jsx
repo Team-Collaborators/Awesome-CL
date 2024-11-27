@@ -2,10 +2,14 @@ import React, { useState } from "react";
 import { Outlet } from "react-router-dom";
 
 import "./HomePage.scss";
-import logo from "../../assets/images/A-logo.png";
+import logo from "../../assets/images/logo-1.png";
 
 import ProductCard from "../../components/ProductDisplay/ProductCard/ProductCard";
 import CodeDisplay from "../../components/ProductDisplay/CodeDisPlay/CodeDisPlay";
+
+import FeatureCards from "../../components/FeatureCards/FeatureCards";
+import LandingSection from "../../components/LandingSection/LandingSection";
+import ShowcaseSection from "../../components/ShowcaseSection/ShowcaseSection";
 
 export default function HomePage() {
   const [theme, setTheme] = useState("default");
@@ -54,10 +58,9 @@ export default function HomePage() {
   return (
     <>
       <main className="container">
-        <header className="content">
-          <img src={logo} alt="Logo" className="logo" />
-          <h1 className="title">Create for Everyone</h1>
-        </header>
+        <LandingSection />
+        <ShowcaseSection />
+        <FeatureCards />
         <section className="main-wrapper">
           <div className="section-heading-wrapper">
             <h2 className="section-heading">Product Card Example</h2>
