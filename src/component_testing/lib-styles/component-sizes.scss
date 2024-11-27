@@ -26,9 +26,20 @@ $spinner-thickness-sm: 4px;
 $spinner-thickness-md: 6px;
 $spinner-thickness-lg: 8px;
 
-$card-size-sm: 15rem;
-$card-size-md: 20rem;
-$card-size-lg: 25rem;
+$card-sm-width: 200px;
+$card-sm-min-height: 100px; /* Minimum for small cards */
+$card-sm-padding: 0.5rem;
+$card-sm-font-size: 0.875rem;
+
+$card-md-width: 300px;
+$card-md-min-height: 150px;
+$card-md-padding: 1rem;
+$card-md-font-size: 1rem;
+
+$card-lg-width: 400px;
+$card-lg-min-height: 200px; /* Minimum for large cards */
+$card-lg-padding: 1.5rem;
+$card-lg-font-size: 1.125rem;
 
 // Global Component Sizes (CSS Variables)
 :root {
@@ -59,9 +70,20 @@ $card-size-lg: 25rem;
   --spinner-thickness-md: #{$spinner-thickness-md};
   --spinner-thickness-lg: #{$spinner-thickness-lg};
 
-  --card-size-sm: #{$card-size-sm};
-  --card-size-md: #{$card-size-md};
-  --card-size-lg: #{$card-size-lg};
+  --card-sm-width: #{$card-sm-width};
+  --card-sm-min-height: #{$card-sm-min-height};
+  --card-sm-padding: #{$card-sm-padding};
+  --card-sm-font-size: #{$card-sm-font-size};
+
+  --card-md-width: #{$card-md-width};
+  --card-md-min-height: #{$card-md-min-height};
+  --card-md-padding: #{$card-md-padding};
+  --card-md-font-size: #{$card-md-font-size};
+
+  --card-lg-width: #{$card-lg-width};
+  --card-lg-min-height: #{$card-lg-min-height};
+  --card-lg-padding: #{$card-lg-padding};
+  --card-lg-font-size: #{$card-lg-font-size};
 }
 
 // Tablet Component Sizes

@@ -72,22 +72,22 @@
 
 //Color Classes
 .color-primary {
-  background-color: colors.$primary-light;
+  background-color: var(--primary-light);
 }
 
 .color-secondary {
-  background-color: colors.$secondary-light;
+  background-color: var(--secondary-light);
 }
 
 .color-success {
-  background-color: colors.$success-base;
+  background-color: var(--success-base);
 }
 
 .color-warning {
-  background-color: colors.$warning-base;
+  background-color: var(--warning-base);
 }
 .color-default {
-  background-color: colors.$default-base;
+  background-color: var(--default-base);
 }
 
 //Radius Classes

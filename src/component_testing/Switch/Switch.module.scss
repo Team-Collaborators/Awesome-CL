@@ -128,7 +128,7 @@
 .color-secondary {
   &.checked {
     // background-color: var(--secondary-base);
-    background-color: colors.$secondary-base;
+    background-color: var(--secondary-base);
   }
 }
 

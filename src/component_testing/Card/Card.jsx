@@ -7,6 +7,7 @@ const Card = ({
   variant = "subtle",
   size = "md",
   radius = "md",
+  color = "default",
   isInteractive = true,
   horizontal = false,
   avatar = null,
@@ -22,11 +23,13 @@ const Card = ({
   const combinedClassNames = `
 ${styles.card} 
 ${styles[`variant-${variant}`]}
+${styles[`color-${color}`]}
 ${styles[`size-${size}`]} 
 ${styles[`radius-${radius}`]}
 ${isInteractive ? styles.interactive : ""}
 ${horizontal ? styles.horizontal : ""}
 ${avatar ? styles.withAvatar : ""}
+${image ? styles.withImage : ""}
 `.trim();
 
   const finalClassNames = `${combinedClassNames} ${className}`.trim();
