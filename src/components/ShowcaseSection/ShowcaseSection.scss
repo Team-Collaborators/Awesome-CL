@@ -29,8 +29,6 @@
   scrollbar-width: none; /* Hides the scrollbar */
 }
 
-
-
 .component-box {
   flex: 0 0 auto;
   width: 18rem;
@@ -55,7 +53,7 @@
   overflow: hidden;
   padding: 0.3rem;
   width: 100%;
-  }
+}
 .component-content > * {
   max-width: 100%; /* Ensure elements don't overflow */
   max-height: 100%;
