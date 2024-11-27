@@ -28,6 +28,7 @@ const components = {
   Switch,
   Checkbox,
   Image,
+  Carousel,
   Avatar,
 };
 
