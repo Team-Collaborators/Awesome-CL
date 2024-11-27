@@ -27,7 +27,6 @@ const components = {
   Spinner,
   Switch,
   Checkbox,
-  Carousel,
   Image,
   Avatar,
 };
