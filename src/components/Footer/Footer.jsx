@@ -34,7 +34,13 @@ const Footer = ({ isSidebarOpen }) => {
             >
               <FaGithub style={{ marginRight: "10px" }} /> Github
             </a>
-            <a href="#" onClick={copyToClipboard} style={{cursor: "pointer", marginLeft: "10px"}}><FaEnvelope style={{ marginRight: "10px" }} /> Email</a>
+            <a
+              href="#"
+              onClick={copyToClipboard}
+              style={{ cursor: "pointer", marginLeft: "10px" }}
+            >
+              <FaEnvelope style={{ marginRight: "10px" }} /> Email
+            </a>
           </div>
         </div>
         <div className={styles.copyright}>

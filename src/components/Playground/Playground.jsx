@@ -4,7 +4,7 @@ import Card from "../../component_testing/Card/Card";
 import Image from "../../component_testing/Image/Image";
 import snow from "../../assets/images/snow.jpg";
 import glasses from "../../assets/images/high-tech-glasses.jpg";
-// import Switch from "../../component_testing/Switch/Switch";
+import Modal from "../../component_testing/Modal/Modal";
 import Button from "../../component_testing/Button/Button";
 import Avatar from "../../component_testing/Avatar/Avatar";
 
@@ -29,6 +29,20 @@ const Playground = () => {
           padding: "20px",
         }}
       >
+        <Modal
+          size="sm"
+          placement="bottom-center"
+          modalBody={
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad sequi
+              commodi vero, esse fugiat atque repellat! Eius magni illo
+              accusantium nihil officia quod, doloribus excepturi obcaecati,
+              odio molestiae minima labore!
+            </p>
+          }
+        >
+          Click me
+        </Modal>
         {/* Card Small */}
         <Card
           size="sm"
@@ -39,8 +53,7 @@ const Playground = () => {
               Primary
             </Button>
           }
-        >
-        </Card>
+        ></Card>
         <br />
 
         {/* Card Medium Elevated with Avatar */}
@@ -64,7 +77,14 @@ const Playground = () => {
           variant="outlined"
           size="lg"
           radius="lg"
-          image={<Image src={glasses} height="200px" width="200px" objectFit="cover"/>}
+          image={
+            <Image
+              src={glasses}
+              height="200px"
+              width="200px"
+              objectFit="cover"
+            />
+          }
           title="Large Outlined Card"
           footer={
             <>
@@ -82,7 +102,7 @@ const Playground = () => {
 
         {/* Card Horizontal */}
         <Card
-           horizontal="true"
+          horizontal="true"
           title={
             <>
               <h2>Card Horizontal</h2> <p>With Image</p>
