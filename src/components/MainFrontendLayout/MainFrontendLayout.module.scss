@@ -27,6 +27,7 @@
     max-width: 1300px;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 
     .section, section {
       padding: 1.5rem;

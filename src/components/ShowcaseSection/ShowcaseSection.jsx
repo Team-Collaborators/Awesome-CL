@@ -1,11 +1,10 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./ShowcaseSection.scss";
 import { Link } from "react-router-dom";
 import snow from "../../assets/images/snow.jpg";
 import Avatar from "../../component_testing/Avatar/Avatar";
 import Button from "../../component_testing/Button/Button";
 // //import Card from "../../component_testing/Card/Card";
-// // import Carousel from "../../component_testing/Carousel/Carousel";
 import Checkbox from "../../component_testing/Checkbox/Checkbox";
 import Form from "../../component_testing/Form/Form";
 import Image from "../../component_testing/Image/Image";
@@ -18,7 +17,7 @@ import Switch from "../../component_testing/Switch/Switch";
 
 const showcaseItems = [
   {
-    component: <Avatar />,
+    component: <Avatar avatarName="Brian" />,
     title: "Avatar",
     link: "/frontend/components/avatar",
   },
@@ -90,9 +89,32 @@ const showcaseItems = [
 ];
 
 const ShowcaseSection = () => {
+  const showcaseRef = useRef(null);
+
+  useEffect(() => {
+    const showcaseContainer = showcaseRef.current;
+
+    if (!showcaseContainer) return;
+
+    const handleWheel = (event) => {
+      // Check if the scroll is primarily vertical
+      if (Math.abs(event.deltaY) > Math.abs(event.deltaX)) {
+        event.preventDefault();
+        showcaseContainer.scrollLeft += event.deltaY;
+      }
+    };
+
+    showcaseContainer.addEventListener("wheel", handleWheel);
+
+    // Cleanup listener on unmount
+    return () => {
+      showcaseContainer.removeEventListener("wheel", handleWheel);
+    };
+  }, []);
+
   return (
-    <div className="showcase-section">
-      <div className="showcase-container">
+    <section className="showcase-section">
+      <div className="showcase-container" ref={showcaseRef}>
         {showcaseItems.map((item, index) => (
           <div key={index} className="component-box">
             {" "}
@@ -104,7 +126,7 @@ const ShowcaseSection = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

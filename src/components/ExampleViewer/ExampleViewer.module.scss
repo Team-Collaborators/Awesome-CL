@@ -3,8 +3,7 @@
 .DynamicComponent {
   padding: 1.5rem;
   border-radius: 8px;
-  display: flex;
-flex-direction: column;
+
   .toggleButtons {
     display: flex;
     gap: 1rem;
@@ -22,26 +21,21 @@ flex-direction: column;
   }
 
   .componentDisplay {
-    display: flex;
-    flex-direction: column;
     padding: 1rem;
     border-radius: 8px;
     overflow: hidden;
     // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     // transition: background-color 0.3s, box-shadow 0.3s;
-   
   }
 }
 
 .componentUl {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: left;
   align-items: center;
-  width: 100%;
   gap: 1rem;
+  width: 100%;
   & li {
-    flex-grow: 1;
-
+    width: 100%;
   }
 }

@@ -1,7 +1,7 @@
 import React from "react";
 
-// import Button from "../../component_testing/Button/Button"; // Importa tus componentes
-import { Button } from "AwesomeCL";
+import Button from "../../component_testing/Button/Button"; // Importa tus componentes
+// import { Button } from "AwesomeCL";
 import Modal from "../../component_testing/Modal/Modal";
 import Form from "../../component_testing/Form/Form";
 import Accordion from "../../component_testing/Accordion/Accordion";
@@ -27,7 +27,6 @@ const components = {
   Spinner,
   Switch,
   Checkbox,
-  Carousel,
   Image,
   Avatar,
 };
