@@ -50,38 +50,32 @@
   border-width: var(--spinner-thickness-lg);
 }
 
-// Color classes
-// .color-default-light {
-//   border-color: colors.$default-light;
-//   border-bottom-color: transparent;
-// }
-
 .color-default {
-  border-color: colors.$default-base;
+  border-color: var(--default-base);
   border-bottom-color: transparent;
 }
 
 .color-primary {
-  border-color: colors.$primary-base;
+  border-color: var(--primary-base);
   border-bottom-color: transparent;
 }
 
 .color-secondary {
-  border-color: colors.$secondary-base;
+  border-color: var(--secondary-base);
   border-bottom-color: transparent;
 }
 
 .color-success {
-  border-color: colors.$success-base;
+  border-color: var(--success-base);
   border-bottom-color: transparent;
 }
 
 .color-warning {
-  border-color: colors.$warning-base;
+  border-color: var(--warning-base);
   border-bottom-color: transparent;
 }
 
 .color-danger {
-  border-color: colors.$danger-base;
+  border-color: var(--danger-base);
   border-bottom-color: transparent;
 }

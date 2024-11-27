@@ -47,13 +47,20 @@ const Playground = () => {
         <Card
           size="sm"
           title="Some Title"
-          style={{ width: "200px", height: "200px", backgroundColor: "lightblue", color: "black"
-           }}
+          // style={{ width: "200px", height: "200px", backgroundColor: "lightblue", color: "black"
+          //  }}
           description="This is a small card with default variant"
-          footer={<>  <p>Hello </p><Button color="primary" size="sm">
-              Primary
-            </Button></>
-          
+          footer={
+            <>
+              {" "}
+              <Button
+                size="sm"
+                style={{ backgroundColor: "black" }}
+                radius="md"
+              >
+                Click me
+              </Button>
+            </>
           }
         ></Card>
         <br />
@@ -63,10 +70,11 @@ const Playground = () => {
           variant="elevated"
           avatar={<Avatar avatarName="Brian" name="Brian" />}
           title="Medium Elevated Card with Avatar"
+          color="primary"
           description="This is a medium card with elevated variant and an avatar"
           footer={
-            <Button color="secondary" size="sm" border="xs" radius="md">
-              Secondary
+            <Button color="primary" size="sm" radius="md">
+              Primary
             </Button>
           }
         >
@@ -78,24 +86,18 @@ const Playground = () => {
         <Card
           variant="outlined"
           size="lg"
-          radius="lg"
-          image={
-            <Image
-              src={snow}
-              height="200px"
-              width="200px"
-              objectFit="cover"
-            />
-          }
+          radius="md"
+          color="default"
+          image={<Image src={snow} objectFit="cover" radius="none" />}
           title="Large Outlined Card"
           description="This is a large card with outlined variant and an image"
           footer={
             <>
               {" "}
-              <Button color="secondary" radius="full">
+              <Button color="danger" size="sm" radius="full">
                 Yes
               </Button>
-              <Button color="default" radius="full">
+              <Button color="default" size="sm" radius="full">
                 No
               </Button>
             </>
@@ -104,11 +106,12 @@ const Playground = () => {
         <br />
 
         {/* Card Horizontal */}
-      <Card horizontal="true"
-      radius="sm"
+        <Card
+          horizontal="true"
+          radius="sm"
           title="Card Horizontal"
           description="This is a horizontal card with an image"
-          image={<Image src={glasses} size="lg" radius="md" />}
+          image={<Image src={glasses} size="lg" radius="none" />}
           variant="outlined"
           isInteractive={false}
           size="lg"
@@ -118,11 +121,16 @@ const Playground = () => {
               <Button color="default" radius="sm" size="sm">
                 no
               </Button>
-              <Button style={{backgroundColor: "black", color: "white"}} radius="sm" size="sm">
+              <Button
+                style={{ backgroundColor: "black", color: "white" }}
+                radius="sm"
+                size="sm"
+              >
                 Yes!
               </Button>
             </>
-          }></Card>
+          }
+        ></Card>
       </div>
     </div>
   );

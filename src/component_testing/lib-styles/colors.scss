@@ -1,114 +1,130 @@
 // Light theme colors (default)
 // Default Colors
-$default-base: #a3a3a3; 
-$default-base-lighter: #f4f4f4; 
-$default-dark: black;
-$default-light: white;
+// $default-base: #a3a3a3;
+// $default-base-lighter: #f4f4f4;
+// $default-dark: black;
+// $default-light: white;
 
-// Primary Colors
-$primary-base: #4a90e2; 
-$primary-dark: #00509e; 
-$primary-light: #a0c4f2; 
+// // Primary Colors
+// $primary-base: #4a90e2;
+// $primary-dark: #00509e;
+// $primary-light: #a0c4f2;
 
-// Secondary Colors
-$secondary-base: #8f52bc;
-$secondary-dark: #6d3f8e;
-$secondary-light: #b685db;
+// // Secondary Colors
+// $secondary-base: #8f52bc;
+// $secondary-dark: #6d3f8e;
+// $secondary-light: #b685db;
 
-// Success Colors
-$success-base: #39cb73;
-$success-dark: #2e9b59;
-$success-light: #88e1ac;
+// // Success Colors
+// $success-base: #39cb73;
+// $success-dark: #2e9b59;
+// $success-light: #88e1ac;
 
-// Warning Colors
-$warning-base: #f2f05e;
-$warning-dark: #b6b33d;
-$warning-light: #f7f5a1;
+// // Warning Colors
+// $warning-base: #f2f05e;
+// $warning-dark: #b6b33d;
+// $warning-light: #f7f5a1;
 
-// Danger Colors
-$danger-base: #e35260;
-$danger-dark: #a33a46;
-$danger-light: #f2a0aa;
+// // Danger Colors
+// $danger-base: #e35260;
+// $danger-dark: #a33a46;
+// $danger-light: #f2a0aa;
 
-// Dark theme colors
-// Default Colors
-$dark-default-base: #303030; 
-$dark-default-base-lighter: #424242; 
-$dark-default-dark: #f4f4f4; 
-$dark-default-light: #e0e0e0; 
+// // Dark theme colors
+// // Default Colors
+// $dark-default-base: #303030;
+// $dark-default-base-lighter: #424242;
+// $dark-default-dark: #f4f4f4;
+// $dark-default-light: #e0e0e0;
 
-// Primary Colors
-$dark-primary-base: #4a90e2;
-$dark-primary-dark: #81b3ed; 
-$dark-primary-light: #204970; 
+// // Primary Colors
+// $dark-primary-base: #4a90e2;
+// $dark-primary-dark: #81b3ed;
+// $dark-primary-light: #204970;
 
-// Secondary Colors
-$dark-secondary-base: #8f52bc; 
-$dark-secondary-dark: #b685db; 
-$dark-secondary-light: #4c316b; 
+// // Secondary Colors
+// $dark-secondary-base: #8f52bc;
+// $dark-secondary-dark: #b685db;
+// $dark-secondary-light: #4c316b;
 
-// Success Colors
-$dark-success-base: #39cb73; 
-$dark-success-dark: #4ddb88; 
-$dark-success-light: #1f5a36; 
+// // Success Colors
+// $dark-success-base: #39cb73;
+// $dark-success-dark: #4ddb88;
+// $dark-success-light: #1f5a36;
 
-// Warning Colors
-$dark-warning-base: #f2f05e; 
-$dark-warning-dark: #f7f787;
-$dark-warning-light: #645e27; 
+// // Warning Colors
+// $dark-warning-base: #f2f05e;
+// $dark-warning-dark: #f7f787;
+// $dark-warning-light: #645e27;
 
-// Danger Colors
-$dark-danger-base: #e35260; 
-$dark-danger-dark: #f27885; 
-$dark-danger-light: #5a2c33; 
+// // Danger Colors
+// $dark-danger-base: #e35260;
+// $dark-danger-dark: #f27885;
+// $dark-danger-light: #5a2c33;
 
 :root {
-  --default-base: #{$default-base};
-  --default-base-lighter: #{$default-base-lighter};
-  --default-dark: #{$default-dark};
-  --default-light: #{$default-light};
+  // Default Colors
+  --default-base: #a3a3a3;
+  --default-base-lighter: #f4f4f4;
+  --default-dark: black;
+  --default-light: white;
 
-  --primary-base: #{$primary-base};
-  --primary-dark: #{$primary-dark};
-  --primary-light: #{$primary-light};
+  // Primary Colors
+  --primary-base: #4a90e2;
+  --primary-dark: #00509e;
+  --primary-light: #a0c4f2;
 
-  --secondary-base: #{$secondary-base};
-  --secondary-dark: #{$secondary-dark};
-  --secondary-light: #{$secondary-light};
+  // Secondary Colors
+  --secondary-base: #8f52bc;
+  --secondary-dark: #6d3f8e;
+  --secondary-light: #b685db;
 
-  --success-base: #{$success-base};
-  --success-dark: #{$success-dark};
-  --success-light: #{$success-light};
+  // Success Colors
+  --success-base: #39cb73;
+  --success-dark: #2e9b59;
+  --success-light: #88e1ac;
 
-  --warning-base: #{$warning-base};
-  --warning-dark: #{$warning-dark};
-  --warning-light: #{$warning-light};
+  // Warning Colors
+  --warning-base: #f2f05e;
+  --warning-dark: #b6b33d;
+  --warning-light: #f7f5a1;
 
-  --danger-base: #{$danger-base};
-  --danger-dark: #{$danger-dark};
-  --danger-light: #{$danger-light};
+  // Danger Colors
+  --danger-base: #e35260;
+  --danger-dark: #a33a46;
+  --danger-light: #f2a0aa;
+}
 
-  --dark-default-base: #{$dark-default-base};
-  --dark-default-dark: #{$dark-default-dark};
-  --dark-default-light: #{$dark-default-light};
+body.dark-theme {
+  // Dark theme colors
+  // Default Colors
+  --default-base: #474747;
+  --default-base-lighter: #424242;
+  --default-dark: #f4f4f4;
+  --default-light: #e0e0e0;
 
-  --dark-primary-base: #{$dark-primary-base};
-  --dark-primary-dark: #{$dark-primary-dark};
-  --dark-primary-light: #{$dark-primary-light};
+  // Primary Colors
+  --primary-base: #4a90e2;
+  --primary-dark: #81b3ed;
+  --primary-light: #204970;
 
-  --dark-secondary-base: #{$dark-secondary-base};
-  --dark-secondary-dark: #{$dark-secondary-dark};
-  --dark-secondary-light: #{$dark-secondary-light};
+  // Secondary Colors
+  --secondary-base: #8f52bc;
+  --secondary-dark: #b685db;
+  --secondary-light: #4c316b;
 
-  --dark-success-base: #{$dark-success-base};
-  --dark-success-dark: #{$dark-success-dark};
-  --dark-success-light: #{$dark-success-light};
+  // Success Colors
+  --success-base: #39cb73;
+  --success-dark: #4ddb88;
+  --success-light: #1f5a36;
 
-  --dark-warning-base: #{$dark-warning-base};
-  --dark-warning-dark: #{$dark-warning-dark};
-  --dark-warning-light: #{$dark-warning-light};
+  // Warning Colors
+  --warning-base: #f2f05e;
+  --warning-dark: #f7f787;
+  --warning-light: #645e27;
 
-  --dark-danger-base: #{$dark-danger-base};
-  --dark-danger-dark: #{$dark-danger-dark};
-  --dark-danger-light: #{$dark-danger-light};
+  // Danger Colors
+  --danger-base: #e35260;
+  --danger-dark: #f27885;
+  --danger-light: #5a2c33;
 }
