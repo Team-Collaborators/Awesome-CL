@@ -16,6 +16,7 @@
     .description {
       // color: var(--muted-text-color);
       font-size: 1.2rem;
+      max-width: 800px;
       @media (max-width: 768px) {
         font-size: 1rem;
       }
@@ -24,17 +25,17 @@
 
   .main {
     max-width: 1300px;
-    // margin: 0 auto;
     display: flex;
     flex-direction: column;
 
     .section,
     section {
       padding: 1.5rem;
-      // border-radius: 10px;
+      background-color: var(--background-color-transparent);
       box-shadow: $box-shadow-all-sides;
       margin-bottom: 1.5rem;
       overflow: hidden;
+
       @media (max-width: 768px) {
         // margin-bottom: -4rem;
       }
@@ -45,8 +46,9 @@
       }
 
       .ul {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 1rem;
       }
     }
 

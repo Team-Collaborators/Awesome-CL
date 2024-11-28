@@ -67,7 +67,7 @@ export function MainFrontendLayout({ data }) {
           <section className={styles.section}>
             <h2 className={styles.h2}>Usage</h2>
             {component.examples.map((example, index) => (
-              <div key={index}>
+              <div className={styles.viewBox} key={index}>
                 <h2 className={styles.h2}>{example.title}</h2>
                 <ExampleViewer example={example} />
               </div>
@@ -80,7 +80,7 @@ export function MainFrontendLayout({ data }) {
               rows={component.propsTable.rows}
             />
           </section>
-          {component.propsTable2 && (
+          {component.propsTable2 ? (
             <section className={styles.section}>
               <h2 className={styles.h2}>{component.propsTable2.title}</h2>
               <p className={styles.p}>{component.propsTable2.description}</p>
@@ -89,28 +89,24 @@ export function MainFrontendLayout({ data }) {
                 rows={component.propsTable2.rows}
               />
             </section>
-          )}
-          <section className={styles.section}>
-            {component.eventsTable && (
-              <>
-                <h2 className={styles.h2}>{component.eventsTable.title}</h2>
-                <p>{component.eventsTable.description}</p>
-                <Table
-                  headers={component.eventsTable.headers}
-                  rows={component.eventsTable.rows}
-                />
-              </>
-            )}
-          </section>
-          <section className={styles.section}>
-            {component.accessibility && (
-              <>
-                <h2 className={styles.h2}>{component.accessibility.title}</h2>
-                <p>{component.accessibility.description}</p>
-                <Table rows={component.accessibility.ariaRoles} />
-              </>
-            )}
-          </section>
+          ) : null}
+          {component.eventsTable ? (
+            <section className={styles.section}>
+              <h2 className={styles.h2}>{component.eventsTable.title}</h2>
+              <p>{component.eventsTable.description}</p>
+              <Table
+                headers={component.eventsTable.headers}
+                rows={component.eventsTable.rows}
+              />
+            </section>
+          ) : null}
+          {component.accessibility ? (
+            <section className={styles.section}>
+              <h2 className={styles.h2}>{component.accessibility.title}</h2>
+              <p>{component.accessibility.description}</p>
+              <Table rows={component.accessibility.ariaRoles} />
+            </section>
+          ) : null}
         </main>
       </div>
     );

@@ -112,7 +112,6 @@
   border-radius: var(--border-radius-lg);
 }
 
-
 /* Color variants */
 .color-default {
   &.checked {
@@ -128,6 +127,7 @@
 
 .color-secondary {
   &.checked {
+    // background-color: var(--secondary-base);
     background-color: var(--secondary-base);
   }
 }

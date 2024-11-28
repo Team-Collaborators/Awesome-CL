@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Carousel.module.scss";
 import { FaReact, FaGitAlt, FaGithub, FaNodeJs } from "react-icons/fa";
+
 import {
   SiJavascript,
   SiHtml5,

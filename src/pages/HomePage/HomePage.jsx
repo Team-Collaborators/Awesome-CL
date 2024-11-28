@@ -9,7 +9,10 @@ import CodeDisplay from "../../components/ProductDisplay/CodeDisPlay/CodeDisPlay
 import FeatureCards from "../../components/FeatureCards/FeatureCards";
 import LandingSection from "../../components/LandingSection/LandingSection";
 
-import Table from "../../component_testing/Table/Table";
+
+
+import ShowcaseSection from "../../components/ShowcaseSection/ShowcaseSection";
+
 
 export default function HomePage() {
   const [theme, setTheme] = useState("default");
@@ -17,6 +20,7 @@ export default function HomePage() {
     <>
       <main className="container">
         <LandingSection />
+        <ShowcaseSection />
         <FeatureCards />
         <section className="main-wrapper">
           <div className="section-heading-wrapper">
@@ -37,9 +41,7 @@ export default function HomePage() {
           </div>
         </section>
       </main>
-      <section>
-        <Table />
-      </section>
+
     </>
   );
 }

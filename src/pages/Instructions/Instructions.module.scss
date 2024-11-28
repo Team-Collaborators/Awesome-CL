@@ -46,18 +46,14 @@ $optional-color: #5a2778;
 }
 
 .subtitle {
-  font-size: styles.$h2-font-size;
+  font-size: styles.$h3-font-size;
   margin-top: 35px;
+  text-align: left;
   margin-bottom: 15px;
-  color: styles.$slightlyLighter-color;
+  color: var(--text-color);
   border-bottom: styles.$border-color;
   padding-bottom: 8px;
-  text-align: center;
   text-transform: uppercase;
-  background: linear-gradient(to right, #8f52bc, #26b3c6);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
 
   // @media (max-width: 768px) {
   //   font-size: 1.5rem;
@@ -72,6 +68,8 @@ $optional-color: #5a2778;
   font-size: styles.$paragraph-font-size;
   padding: 1rem 0;
   transition: color 0.3s ease;
+  color: var(--muted-text-color);
+
   // @media (max-width: 768px) {
   //   font-size: 1.1rem;
   // }
@@ -82,14 +80,21 @@ $optional-color: #5a2778;
 }
 
 .link {
-  color: color.adjust($optional-color, $lightness: 15%);
   font-weight: bold;
+  color: var(--muted-text-color);
   &:hover {
-    color: color.adjust($optional-color, $lightness: 30%);
+    color: var(--text-color);
   }
 }
 
 .installationSection {
+  box-shadow: styles.$box-shadow-all-sides;
+  padding: 1.5rem;
+  border: styles.$border-color;
+  width: auto;
+  margin-top: 2rem;
+  border-radius: 3px;
+  background-color: var(--background-color-transparent);
   ul {
     display: flex;
     flex-direction: row;
@@ -127,6 +132,9 @@ $optional-color: #5a2778;
 .list {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  gap: 2em;
+  width: 100%;
   margin: auto;
   & li {
     padding: 2em;
@@ -143,21 +151,22 @@ $optional-color: #5a2778;
   position: relative;
   display: inline-block;
   padding: 1rem;
-  // margin: 1rem;
-  font-size: var(--paragraph-font-size); /* Assuming this variable is defined */
-  background-color: var(
-    --background-color
-  ); /* Ensure it blends with your design */
-  border-radius: 10px; /* Rounded corners, adjust as needed */
-  z-index: 1; /* Ensures content stays on top */
-  overflow: hidden; /* Clip pseudo-elements to the element's boundary */
+  text-align: center;
+  color: var(--muted-text-color);
+  width: 10rem;
+  height: auto;
+  border: styles.$border-color;
+  font-size: var(--paragraph-font-size);
+  background-color: var(--background-color--transparent);
+  border-radius: 10px;
+  z-index: 1;
+  overflow: hidden;
 
-  /* Animated border effect */
   &::before {
     content: "";
     position: absolute;
     top: 0;
-    left: -100%; /* Start animation off-screen */
+    left: -100%;
     width: 100%;
     height: 100%;
     background: linear-gradient(
@@ -179,13 +188,13 @@ $optional-color: #5a2778;
     right: 2px;
     bottom: 2px;
     background: var(--background-color);
-    border-radius: 10px; /* Matches parent border radius */
+    border-radius: 10px;
     z-index: 0;
   }
 
   &:hover::before {
-    left: 0; /* Brings the animation into view */
-    transition: all 0.5s ease-in-out; /* Smooth animation effect */
+    left: 0;
+    transition: all 0.5s ease-in-out;
   }
   & span {
     position: relative;
@@ -198,4 +207,14 @@ $optional-color: #5a2778;
   display: inline-block;
   min-width: 500px;
   margin: auto;
+}
+
+.shadow {
+  box-shadow: styles.$box-shadow-all-sides;
+  padding: 1.5rem;
+  border: styles.$border-color;
+  width: auto;
+  margin-top: 2rem;
+  border-radius: 3px;
+  background-color: var(--background-color-transparent);
 }
