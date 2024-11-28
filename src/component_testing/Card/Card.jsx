@@ -10,6 +10,7 @@ const Card = ({
   color = "default",
   isInteractive = true,
   horizontal = false,
+  imageTop = false,
   avatar = null,
   className = "",
   style,
@@ -29,7 +30,7 @@ ${styles[`radius-${radius}`]}
 ${isInteractive ? styles.interactive : ""}
 ${horizontal ? styles.horizontal : ""}
 ${avatar ? styles.withAvatar : ""}
-${image ? styles.withImage : ""}
+${imageTop ? styles.withImageTop : ""}
 `.trim();
 
   const finalClassNames = `${combinedClassNames} ${className}`.trim();
