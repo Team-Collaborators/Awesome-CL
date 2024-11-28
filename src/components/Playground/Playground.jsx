@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import "./Playground.scss";
 import Card from "../../component_testing/Card/Card";
 import Image from "../../component_testing/Image/Image";
+import sofa from "../../assets/images/sofa.jpg";
+
 import snow from "../../assets/images/snow.jpg";
 import glasses from "../../assets/images/high-tech-glasses.jpg";
-import Modal from "../../component_testing/Modal/Modal";
 import Button from "../../component_testing/Button/Button";
 import Avatar from "../../component_testing/Avatar/Avatar";
 
@@ -29,43 +30,31 @@ const Playground = () => {
           padding: "20px",
         }}
       >
-        {/* <Modal
-          size="sm"
-          placement="bottom-center"
-          modalBody={
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad sequi
-              commodi vero, esse fugiat atque repellat! Eius magni illo
-              accusantium nihil officia quod, doloribus excepturi obcaecati,
-              odio molestiae minima labore!
-            </p>
-          }
-        >
-          Click me
-        </Modal> */}
-        {/* Card Small */}
+        <br />
+
+        {/* Card Default */}
+
+        {/* Card Default*/}
         <Card
-          size="sm"
-          title="Some Title"
-          // style={{ width: "200px", height: "200px", backgroundColor: "lightblue", color: "black"
-          //  }}
-          description="This is a small card with default variant"
+          variant="subtle"
+          size="md"
+          radius="md"
+          image={<Image src={sofa} objectFit="cover" radius="md" size="sm" />}
+          title="Card"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh."
           footer={
             <>
               {" "}
-              <Button
-                size="sm"
-                style={{ backgroundColor: "black" }}
-                radius="md"
-              >
-                Click me
+              <Button color="danger" size="sm" radius="full">
+                Yes
+              </Button>
+              <Button color="default" size="sm" radius="full">
+                No
               </Button>
             </>
           }
         ></Card>
-        <br />
 
-        {/* Card Medium Elevated with Avatar */}
         <Card
           variant="elevated"
           avatar={<Avatar avatarName="Brian" name="Brian" />}

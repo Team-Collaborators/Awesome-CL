@@ -77,36 +77,36 @@
 /* color-classes */
 .color-primary {
   background-color: var(--primary-base);
-  color: white;
+  color: var(--default-light);
   border-color: var(--primary-dark);
 }
 
 .color-default {
   background-color: var(--default-base);
-  color: white;
+  color: var(--default-light);
   border-color: var(--default-dark);
 }
 
 .color-secondary {
   background-color: var(--secondary-base);
-  color: white;
+  color: var(--default-light);
   border-color: var(--secondary-dark);
 }
 
 .color-success {
   background-color: var(--success-base);
-  color: black;
+  color: var(--default-dark);
   border-color: var(--success-dark);
 }
 
 .color-warning {
   background-color: var(--warning-base);
-  color: black;
+  color: var(--default-dark);
   border-color: var(--warning-dark);
 }
 
 .color-danger {
   background-color: var(--danger-base);
-  color: white;
+  color: var(--default-light);
   border-color: var(--danger-dark);
 }

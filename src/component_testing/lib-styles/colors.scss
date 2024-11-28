@@ -64,9 +64,10 @@
 
 :root {
   // Default Colors
-  --default-base: #a3a3a3;
+  --default-base: #747474;
   --default-base-lighter: #f4f4f4;
-  --default-dark: black;
+  --default-dark: rgb(29, 29, 29);
+  --default-dark-lighter: rgb(58, 58, 58);
   --default-light: white;
 
   // Primary Colors
@@ -98,10 +99,11 @@
 body.dark-theme {
   // Dark theme colors
   // Default Colors
-  --default-base: #474747;
+  --default-base: #bbbbbb;
   --default-base-lighter: #424242;
   --default-dark: #f4f4f4;
-  --default-light: #e0e0e0;
+  --default-dark-lighter: #ffffff;
+  --default-light: #fcfcfc;
 
   // Primary Colors
   --primary-base: #4a90e2;
