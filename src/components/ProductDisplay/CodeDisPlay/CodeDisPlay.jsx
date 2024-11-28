@@ -3,7 +3,7 @@ import {
   dracula,
   atomDark,
 } from "react-syntax-highlighter/dist/esm/styles/prism";
-import "./CodeDisplay.scss";
+import "./CodeDisPlay.scss";
 
 const customLightTheme = {
   'pre[class*="language-"]': {
