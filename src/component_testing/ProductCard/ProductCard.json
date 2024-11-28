@@ -1,0 +1,114 @@
+{
+  "title": "ProductCard",
+  "path": "",
+  "description": "A visually striking product card component with multiple themes, showcasing product details and pricing.",
+  "installation": [
+    {
+      "name": "CLI",
+      "command": "cli-command-to-install",
+      "path": "/icons/cube-solid.svg"
+    },
+    {
+      "name": "npm",
+      "command": "npm install your-library",
+      "path": "/icons/npm-brands-solid.svg"
+    },
+    {
+      "name": "yarn",
+      "command": "yarn add your-library",
+      "path": "/icons/yarn-brands-solid.svg"
+    },
+    {
+      "name": "pnpm",
+      "command": "pnpm add your-library",
+      "path": "/icons/cubes-solid.svg"
+    },
+    {
+      "name": "bun",
+      "command": "bun add your-library",
+      "path": "/icons/lemon-regular.svg"
+    }
+  ],
+  "import": {
+    "code": "import {ProductCard }from 'AwesomeCL';",
+    "description": "This code shows how to import the ProductCard component from the library."
+  },
+  "examples": [
+    {
+      "title": "Default Theme",
+      "components": [
+        {
+          "type": "ProductCard",
+          "props": {
+            "theme": "default"
+          }
+        }
+      ],
+      "code": "import {ProductCard} from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <ProductCard theme=\"default\" />\n  );\n}"
+    },
+    {
+      "title": "Dark Theme",
+      "components": [
+        {
+          "type": "ProductCard",
+          "props": {
+            "theme": "dark-theme"
+          }
+        }
+      ],
+      "code": "import {ProductCard} from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <ProductCard theme=\"dark-theme\" />\n  );\n}"
+    },
+    {
+      "title": "Neon Theme",
+      "components": [
+        {
+          "type": "ProductCard",
+          "props": {
+            "theme": "neon-theme"
+          }
+        }
+      ],
+      "code": "import {ProductCard} from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <ProductCard theme=\"neon-theme\" />\n  );\n}"
+    }
+  ],
+  "propsTable": {
+    "title": "ProductCard Props",
+    "description": "List of all props supported by the ProductCard component.",
+    "headers": ["Prop Name", "Type", "Description", "Default Value"],
+    "rows": [
+      {
+        "propName": "theme",
+        "type": "string",
+        "description": "Defines the theme of the ProductCard. Options are: 'default', 'dark-theme', 'neon-theme'.",
+        "defaultValue": "'default'"
+      },
+      {
+        "propName": "onThemeChange",
+        "type": "function",
+        "description": "Callback function triggered when the theme is changed.",
+        "defaultValue": "undefined"
+      }
+    ]
+  },
+  "eventsTable": {
+    "title": "Events",
+    "description": "List of all events emitted by the ProductCard component.",
+    "headers": ["Event Name", "Description"],
+    "rows": [
+      {
+        "eventName": "onThemeChange",
+        "description": "Triggered when the theme is changed by the user."
+      }
+    ]
+  },
+  "accessibility": {
+    "title": "Accessibility",
+    "description": "Accessibility considerations for the ProductCard component.",
+    "ariaRoles": [
+      {
+        "propName": "Theme buttons",
+        "description": "Each theme button should have an aria-label describing the theme it applies."
+      }
+    ]
+  }
+}

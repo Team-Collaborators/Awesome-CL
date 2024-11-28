@@ -31,7 +31,7 @@
 
   p {
     margin-bottom: 20px;
-    color: styles.$muted-text-color;
+    color: var(--muted-text-color);
     font-size: styles.$paragraph-font-size;
 
     @media (max-width: 768px) {

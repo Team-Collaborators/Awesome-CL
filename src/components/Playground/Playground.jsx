@@ -3,6 +3,7 @@ import "./Playground.scss";
 import Card from "../../component_testing/Card/Card";
 import Button from "../../component_testing/Button/Button";
 import Image from "../../component_testing/Image/Image";
+import ProductCard from "../../component_testing/ProductCard/ProductCard";
 const Playground = () => {
   const [isContentVisible, setIsContentVisible] = useState(false);
   // Handle toggle of content visibility
@@ -12,9 +13,9 @@ const Playground = () => {
 
   return (
     <div className="playground-wrapper">
+      <ProductCard />
       <h1>Playground</h1>
       <p>This is the space to test new components</p>
-
       <div
         className="container"
         style={{

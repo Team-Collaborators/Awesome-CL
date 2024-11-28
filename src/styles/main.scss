@@ -1,4 +1,4 @@
-@use "../../node_modules/AwesomeCL/dist/exports.css";
+// @use "../../node_modules/AwesomeCL/dist/exports.css";
 
 @use "sass:map";
 @tailwind base;
@@ -21,8 +21,6 @@ $font-stack: "Roboto", sans-serif;
 
 // box shadow
 $box-shadow-light: rgba(0, 0, 0, 0.3);
-$box-shadow-strong: rgba(0, 0, 0, 0.5);
-
 $box-shadow-small: 0 2px 4px $box-shadow-light;
 $box-shadow-medium: 0 4px 6px $box-shadow-light;
 $box-shadow-large: 0 6px 10px $box-shadow-light;
