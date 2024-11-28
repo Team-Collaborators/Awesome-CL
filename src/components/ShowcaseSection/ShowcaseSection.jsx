@@ -56,7 +56,6 @@ const showcaseItems = [
   {
     component: (
       <Input color="secondary" size="sm" border="bottom">
-        Input
       </Input>
     ),
     title: "Input",
@@ -66,7 +65,7 @@ const showcaseItems = [
     component: (
       <Modal
         size="sm"
-        placement="bottom"
+        placement="center"
         modalHeader="Modal Header"
         modalBody={
           <p>
