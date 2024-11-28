@@ -7,7 +7,6 @@ const Card = ({
   variant = "subtle",
   size = "md",
   radius = "md",
-  color = "default",
   isInteractive = true,
   horizontal = false,
   imageTop = false,
@@ -18,19 +17,21 @@ const Card = ({
   title = "",
   description = "",
   footer = null,
-
+  titleAlignment = "center",
+  footerAlignment = "center",
   aria = "card",
 }) => {
   const combinedClassNames = `
 ${styles.card} 
 ${styles[`variant-${variant}`]}
-${styles[`color-${color}`]}
 ${styles[`size-${size}`]} 
 ${styles[`radius-${radius}`]}
 ${isInteractive ? styles.interactive : ""}
 ${horizontal ? styles.horizontal : ""}
 ${avatar ? styles.withAvatar : ""}
 ${imageTop ? styles.withImageTop : ""}
+${styles[`title-align-${titleAlignment}`]} // Dynamic title alignment
+${styles[`footer-align-${footerAlignment}`]} // Dynamic footer alignment
 `.trim();
 
   const finalClassNames = `${combinedClassNames} ${className}`.trim();
