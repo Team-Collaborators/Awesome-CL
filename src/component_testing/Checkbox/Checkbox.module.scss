@@ -120,24 +120,12 @@
   .checkmark {
     color: var(--default-dark);
   }
-  @media (prefers-color-scheme: dark) {
-    background-color: var(--dark-default-base);
-    .checkmark {
-      color: var(--default-light);
-    }
-  }
 }
 
 .color-primary.variant-subtle {
   background-color: var(--primary-light);
   .checkmark {
     color: var(--primary-dark);
-  }
-  @media (prefers-color-scheme: dark) {
-    background-color: var(--dark-primary-base);
-    .checkmark {
-      color: var(--primary-light);
-    }
   }
 }
 
@@ -146,12 +134,6 @@
   .checkmark {
     color: var(--secondary-dark);
   }
-  @media (prefers-color-scheme: dark) {
-    background-color: var(--dark-secondary-base);
-    .checkmark {
-      color: var(--secondary-light);
-    }
-  }
 }
 
 .color-success.variant-subtle {
@@ -159,26 +141,12 @@
   .checkmark {
     color: var(--dark-success-dark);
   }
-
-  @media (prefers-color-scheme: dark) {
-    background-color: var(--dark-success-base);
-    .checkmark {
-      color: var(--success-light);
-    }
-  }
 }
 
 .color-warning.variant-subtle {
   background-color: var(--warning-light);
   .checkmark {
     color: var(--warning-dark);
-
-    @media (prefers-color-scheme: dark) {
-      background-color: var(--dark-warning-base);
-      .checkmark {
-        color: var(--warning-light);
-      }
-    }
   }
 }
 
@@ -186,13 +154,6 @@
   background-color: var(--danger-light);
   .checkmark {
     color: var(--danger-dark);
-  }
-
-  @media (prefers-color-scheme: dark) {
-    background-color: var(--dark-danger-base);
-    .checkmark {
-      color: var(--danger-light);
-    }
   }
 }
 
@@ -206,16 +167,15 @@
   &.checked {
     border: none;
   }
-
-  @media (prefers-color-scheme: dark) {
-    background-color: var(--dark-default-base);
-    border-color: var(--dark-default-light);
-  }
 }
 
 .color-default.variant-solid {
   &.checked {
     background-color: var(--default-dark);
+
+    .checkmark {
+      color: var(--default-base-lighter);
+    }
   }
 }
 
@@ -242,7 +202,7 @@
     background-color: var(--warning-base);
 
     .checkmark {
-      color: var(--default-dark);
+      color: #212121;
     }
   }
 }

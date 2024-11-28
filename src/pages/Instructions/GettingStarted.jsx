@@ -66,11 +66,11 @@ const GettingStarted = () => {
         >
           <RenderCode className={styles.code} code={installation} />
         </div>
+        <p className={styles.paragraph}>
+          After the short install you're ready to go! Browse the frontend
+          components or check out the backend utilities according to your needs!
+        </p>
       </section>
-      <p className={styles.paragraph}>
-        After the short install you're ready to go! Browse the frontend
-        components or check out the backend utilities according to your needs!
-      </p>
 
       <section className={styles.shadow}>
         <h2 className={styles.subtitle}>Importing components</h2>

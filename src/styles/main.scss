@@ -75,6 +75,13 @@ body {
   font-family: var(--font-stack);
   background-color: var(--background-color);
   color: var(--text-color);
+  background-image: url("../assets/images/bbblurry.svg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  @media (max-width: map.get($breakpoints, "md")) {
+    background-size: 200%;
+  }
 }
 
 ul {

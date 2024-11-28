@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import snow from "../../assets/images/snow.jpg";
 import Avatar from "../../component_testing/Avatar/Avatar";
 import Button from "../../component_testing/Button/Button";
-// //import Card from "../../component_testing/Card/Card";
+// import Card from "../../component_testing/Card/Card";
 import Checkbox from "../../component_testing/Checkbox/Checkbox";
 import Form from "../../component_testing/Form/Form";
 import Image from "../../component_testing/Image/Image";
@@ -44,7 +44,7 @@ const showcaseItems = [
     component: (
       <Image
         src={snow}
-        alt="High-tech glasses"
+        alt="snowy mountain with skiing person"
         size="sm"
         objectFit="cover"
         isZoomed="true"
@@ -56,7 +56,6 @@ const showcaseItems = [
   {
     component: (
       <Input color="secondary" size="sm" border="bottom">
-        Input
       </Input>
     ),
     title: "Input",
@@ -64,8 +63,20 @@ const showcaseItems = [
   },
   {
     component: (
-      <Modal size="sm" placement="top">
-        Modal
+      <Modal
+        size="sm"
+        placement="center"
+        modalHeader="Modal Header"
+        modalBody={
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad sequi
+            commodi vero, esse fugiat atque repellat! Eius magni illo
+            accusantium nihil officia quod, doloribus excepturi obcaecati, odio
+            molestiae minima labore!
+          </p>
+        }
+      >
+        Click me
       </Modal>
     ),
     title: "Modal",

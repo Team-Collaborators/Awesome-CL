@@ -1,112 +1,133 @@
 // Light theme colors (default)
-$primary-base: rgb(0, 0, 255);
-$primary-dark: darkblue;
-$primary-light: rgb(166, 166, 217);
+// Default Colors
+// $default-base: #a3a3a3;
+// $default-base-lighter: #f4f4f4;
+// $default-dark: black;
+// $default-light: white;
 
-$default-base: lightgrey;
-$default-base-lighter: rgb(247, 247, 247);
-$default-dark: black;
-$default-light: white;
+// // Primary Colors
+// $primary-base: #4a90e2;
+// $primary-dark: #00509e;
+// $primary-light: #a0c4f2;
 
-// $secondary-base: purple;
-// $secondary-dark: rgb(83, 2, 83);
-// $secondary-light: rgb(211, 146, 211);
-$secondary-base: #8f52bc;
-$secondary-dark: #60377d;
-$secondary-light: #be6ef8;
-//#8f52bc, #26b3c6
+// // Secondary Colors
+// $secondary-base: #8f52bc;
+// $secondary-dark: #6d3f8e;
+// $secondary-light: #b685db;
 
-$success-base: green;
-$success-dark: darkgreen;
-$success-light: rgb(112, 206, 112);
+// // Success Colors
+// $success-base: #39cb73;
+// $success-dark: #2e9b59;
+// $success-light: #88e1ac;
 
-$warning-base: yellow;
-$warning-dark: rgb(165, 124, 20);
-$warning-light: rgb(219, 192, 123);
+// // Warning Colors
+// $warning-base: #f2f05e;
+// $warning-dark: #b6b33d;
+// $warning-light: #f7f5a1;
 
-$danger-base: red;
-$danger-dark: darkred;
-$danger-light: rgb(209, 121, 121);
+// // Danger Colors
+// $danger-base: #e35260;
+// $danger-dark: #a33a46;
+// $danger-light: #f2a0aa;
 
-// Dark theme colors
-$dark-primary-base: rgb(0, 0, 139);
-$dark-primary-dark: darkblue;
-$dark-primary-light: rgb(80, 80, 120);
+// // Dark theme colors
+// // Default Colors
+// $dark-default-base: #303030;
+// $dark-default-base-lighter: #424242;
+// $dark-default-dark: #f4f4f4;
+// $dark-default-light: #e0e0e0;
 
-$dark-default-base: rgb(50, 50, 50);
-$dark-default-dark: black;
-$dark-default-light: rgb(79, 79, 79);
+// // Primary Colors
+// $dark-primary-base: #4a90e2;
+// $dark-primary-dark: #81b3ed;
+// $dark-primary-light: #204970;
 
-$dark-secondary-base: #b388ff;
-$dark-secondary-dark: #7c4dff;
-$dark-secondary-light: #d1a3ff;
+// // Secondary Colors
+// $dark-secondary-base: #8f52bc;
+// $dark-secondary-dark: #b685db;
+// $dark-secondary-light: #4c316b;
 
-$dark-success-base: rgb(0, 128, 0);
-$dark-success-dark: darkgreen;
-$dark-success-light: rgb(60, 120, 60);
+// // Success Colors
+// $dark-success-base: #39cb73;
+// $dark-success-dark: #4ddb88;
+// $dark-success-light: #1f5a36;
 
-$dark-warning-base: rgb(255, 204, 0);
-$dark-warning-dark: rgb(155, 105, 0);
-$dark-warning-light: rgb(150, 125, 80);
+// // Warning Colors
+// $dark-warning-base: #f2f05e;
+// $dark-warning-dark: #f7f787;
+// $dark-warning-light: #645e27;
 
-$dark-danger-base: rgb(139, 0, 0);
-$dark-danger-dark: darkred;
-$dark-danger-light: rgb(150, 50, 50);
+// // Danger Colors
+// $dark-danger-base: #e35260;
+// $dark-danger-dark: #f27885;
+// $dark-danger-light: #5a2c33;
 
-// Root variables for light mode
 :root {
-  --default-base: #{$default-base};
-  --default-base-lighter: #{$default-base-lighter};
-  --default-dark: #{$default-dark};
-  --default-light: #{$default-light};
+  // Default Colors
+  --default-base: #747474;
+  --default-base-lighter: #f4f4f4;
+  --default-dark: rgb(29, 29, 29);
+  --default-dark-lighter: rgb(58, 58, 58);
+  --default-light: white;
 
-  --primary-base: #{$primary-base};
-  --primary-dark: #{$primary-dark};
-  --primary-light: #{$primary-light};
+  // Primary Colors
+  --primary-base: #4a90e2;
+  --primary-dark: #00509e;
+  --primary-light: #a0c4f2;
 
-  --secondary-base: #{$secondary-base};
-  --secondary-dark: #{$secondary-dark};
-  --secondary-light: #{$secondary-light};
+  // Secondary Colors
+  --secondary-base: #8f52bc;
+  --secondary-dark: #6d3f8e;
+  --secondary-light: #b685db;
 
-  --success-base: #{$success-base};
-  --success-dark: #{$success-dark};
-  --success-light: #{$success-light};
+  // Success Colors
+  --success-base: #39cb73;
+  --success-dark: #2e9b59;
+  --success-light: #88e1ac;
 
-  --warning-base: #{$warning-base};
-  --warning-dark: #{$warning-dark};
-  --warning-light: #{$warning-light};
+  // Warning Colors
+  --warning-base: #f2f05e;
+  --warning-dark: #b6b33d;
+  --warning-light: #f7f5a1;
 
-  --danger-base: #{$danger-base};
-  --danger-dark: #{$danger-dark};
-  --danger-light: #{$danger-light};
+  // Danger Colors
+  --danger-base: #e35260;
+  --danger-dark: #a33a46;
+  --danger-light: #f2a0aa;
+}
 
-  //Dark Mode Colors (Override using prefers-color-scheme)
-  // then remove dark in front, because need same name to override
-  // @media (prefers-color-scheme: dark) {
+body.dark-theme {
+  // Dark theme colors
+  // Default Colors
+  --default-base: #bbbbbb;
+  --default-base-lighter: #424242;
+  --default-dark: #f4f4f4;
+  --default-dark-lighter: #ffffff;
+  --default-light: #fcfcfc;
 
-  --dark-default-base: #{$dark-default-base};
-  --dark-default-dark: #{$dark-default-dark};
-  --dark-default-light: #{$dark-default-light};
+  // Primary Colors
+  --primary-base: #4a90e2;
+  --primary-dark: #81b3ed;
+  --primary-light: #204970;
 
-  --dark-primary-base: #{$dark-primary-base};
-  --dark-primary-dark: #{$dark-primary-dark};
-  --dark-primary-light: #{$dark-primary-light};
+  // Secondary Colors
+  --secondary-base: #8f52bc;
+  --secondary-dark: #b685db;
+  --secondary-light: #4c316b;
 
-  --dark-secondary-base: #{$dark-secondary-base};
-  --dark-secondary-dark: #{$dark-secondary-dark};
-  --dark-secondary-light: #{$dark-secondary-light};
+  // Success Colors
+  --success-base: #39cb73;
+  --success-dark: #4ddb88;
+  --success-light: #1f5a36;
 
-  --dark-success-base: #{$dark-success-base};
-  --dark-success-dark: #{$dark-success-dark};
-  --dark-success-light: #{$dark-success-light};
+  // Warning Colors
+  --warning-base: #f2f05e;
+  --warning-dark: #f7f787;
+  --warning-light: #645e27;
 
-  --dark-warning-base: #{$dark-warning-base};
-  --dark-warning-dark: #{$dark-warning-dark};
-  --dark-warning-light: #{$dark-warning-light};
-
-  --dark-danger-base: #{$dark-danger-base};
-  --dark-danger-dark: #{$dark-danger-dark};
-  --dark-danger-light: #{$dark-danger-light};
-
-  // }
+  // Danger Colors
+  --danger-base: #e35260;
+  // --danger-base: yellow;
+  --danger-dark: #f27885;
+  --danger-light: #5a2c33;
 }

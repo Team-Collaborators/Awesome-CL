@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import "./Playground.scss";
 import Card from "../../component_testing/Card/Card";
 import Image from "../../component_testing/Image/Image";
+import sofa from "../../assets/images/sofa.jpg";
+
 import snow from "../../assets/images/snow.jpg";
 import glasses from "../../assets/images/high-tech-glasses.jpg";
-// import Switch from "../../component_testing/Switch/Switch";
 import Button from "../../component_testing/Button/Button";
 import Avatar from "../../component_testing/Avatar/Avatar";
 
@@ -29,29 +30,40 @@ const Playground = () => {
           padding: "20px",
         }}
       >
-        {/* Card Small */}
-        <Card
-          size="sm"
-          title="Some Title"
-          description="This is a small card with default variant"
-          footer={
-            <Button color="primary" size="sm">
-              Primary
-            </Button>
-          }
-        >
-        </Card>
         <br />
 
-        {/* Card Medium Elevated with Avatar */}
+        {/* Card Default */}
+
+        {/* Card Default*/}
+        <Card
+          variant="subtle"
+          size="md"
+          radius="md"
+          image={<Image src={sofa} objectFit="cover" radius="md" size="sm" />}
+          title="Card"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh."
+          footer={
+            <>
+              {" "}
+              <Button color="danger" size="sm" radius="full">
+                Yes
+              </Button>
+              <Button color="default" size="sm" radius="full">
+                No
+              </Button>
+            </>
+          }
+        ></Card>
+
         <Card
           variant="elevated"
           avatar={<Avatar avatarName="Brian" name="Brian" />}
           title="Medium Elevated Card with Avatar"
+          color="primary"
           description="This is a medium card with elevated variant and an avatar"
           footer={
-            <Button color="secondary" size="sm" border="xs" radius="md">
-              Secondary
+            <Button color="primary" size="sm" radius="md">
+              Primary
             </Button>
           }
         >
@@ -63,16 +75,42 @@ const Playground = () => {
         <Card
           variant="outlined"
           size="lg"
-          radius="lg"
-          image={<Image src={glasses} height="200px" width="200px" objectFit="cover"/>}
+          radius="md"
+          color="default"
+          imageTop={true}
+          image={<Image src={snow} objectFit="cover" radius="none" />}
           title="Large Outlined Card"
+          description="This is a large card with outlined variant and an image"
           footer={
             <>
               {" "}
-              <Button color="secondary" radius="full">
+              <Button color="danger" size="sm" radius="full">
                 Yes
               </Button>
-              <Button color="default" radius="full">
+              <Button color="default" size="sm" radius="full">
+                No
+              </Button>
+            </>
+          }
+        ></Card>
+        <br />
+
+        {/* Card Small Outlined */}
+        <Card
+          variant="outlined"
+          size="sm"
+          radius="md"
+          color="default"
+          image={<Image src={snow} objectFit="cover" radius="md" size="sm" />}
+          title="Small Outlined Card"
+          description="This is a large card with outlined variant and an image"
+          footer={
+            <>
+              {" "}
+              <Button color="danger" size="sm" radius="full">
+                Yes
+              </Button>
+              <Button color="default" size="sm" radius="full">
                 No
               </Button>
             </>
@@ -82,31 +120,30 @@ const Playground = () => {
 
         {/* Card Horizontal */}
         <Card
-           horizontal="true"
-          title={
-            <>
-              <h2>Card Horizontal</h2> <p>With Image</p>
-            </>
-          }
-          image={<Image src={snow} />}
+          horizontal="true"
+          radius="sm"
+          title="Card Horizontal"
+          description="This is a horizontal card with an image"
+          image={<Image src={glasses} size="lg" radius="none" />}
           variant="outlined"
           isInteractive={false}
-          radius="none"
           size="lg"
           footer={
             <>
               {" "}
-              <Button color="secondary" radius="full">
-                Yes
+              <Button color="default" radius="sm" size="sm">
+                no
               </Button>
-              <Button color="default" radius="full">
-                No
+              <Button
+                style={{ backgroundColor: "black", color: "white" }}
+                radius="sm"
+                size="sm"
+              >
+                Yes!
               </Button>
             </>
           }
-        >
-          This is a horizontal card with two buttons and no radius
-        </Card>
+        ></Card>
       </div>
     </div>
   );

@@ -9,6 +9,7 @@ const Card = ({
   radius = "md",
   isInteractive = true,
   horizontal = false,
+  imageTop = false,
   avatar = null,
   className = "",
   style,
@@ -16,7 +17,8 @@ const Card = ({
   title = "",
   description = "",
   footer = null,
-
+  titleAlignment = "center",
+  footerAlignment = "center",
   aria = "card",
 }) => {
   const combinedClassNames = `
@@ -27,6 +29,9 @@ ${styles[`radius-${radius}`]}
 ${isInteractive ? styles.interactive : ""}
 ${horizontal ? styles.horizontal : ""}
 ${avatar ? styles.withAvatar : ""}
+${imageTop ? styles.withImageTop : ""}
+${styles[`title-align-${titleAlignment}`]} // Dynamic title alignment
+${styles[`footer-align-${footerAlignment}`]} // Dynamic footer alignment
 `.trim();
 
   const finalClassNames = `${combinedClassNames} ${className}`.trim();
@@ -35,8 +40,12 @@ ${avatar ? styles.withAvatar : ""}
     <div className={finalClassNames} style={style} role={aria}>
       {/* Avatar */}
       {avatar && <div className={styles.cardAvatar}>{avatar}</div>}
-      {/* Image */}
-      {image && <div className={styles.cardImage}>{image}</div>}
+
+      <div className={styles.cardImageWrapper}>
+        {" "}
+        {/* Image */}
+        {image && <div className={styles.cardImage}>{image}</div>}
+      </div>
 
       <div className={styles.contentContainer}>
         {" "}
