@@ -6,27 +6,27 @@
     "installation": [
       {
         "name": "CLI",
-        "command": "cli-command-to-install",
+        "command": "npx create-react-app my-app --template git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cube-solid.svg"
       },
       {
         "name": "npm",
-        "command": "npm install your-library",
+        "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/npm-brands-solid.svg"
       },
       {
         "name": "yarn",
-        "command": "yarn add your-library",
+        "command": "yarn add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/yarn-brands-solid.svg"
       },
       {
         "name": "pnpm",
-        "command": "pnpm add your-library",
+        "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cubes-solid.svg"
       },
       {
         "name": "bun",
-        "command": "bun add your-library",
+        "command": "bun add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/lemon-regular.svg"
       }
     ],
@@ -361,27 +361,27 @@
     "installation": [
       {
         "name": "CLI",
-        "command": "cli-command-to-install",
+        "command": "npx create-react-app my-app --template git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cube-solid.svg"
       },
       {
         "name": "npm",
-        "command": "npm install your-library",
+        "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/npm-brands-solid.svg"
       },
       {
         "name": "yarn",
-        "command": "yarn add your-library",
+        "command": "yarn add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/yarn-brands-solid.svg"
       },
       {
         "name": "pnpm",
-        "command": "pnpm add your-library",
+        "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cubes-solid.svg"
       },
       {
         "name": "bun",
-        "command": "bun add your-library",
+        "command": "bun add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/lemon-regular.svg"
       }
     ],
@@ -639,27 +639,27 @@
     "installation": [
       {
         "name": "CLI",
-        "command": "cli-command-to-install",
+        "command": "npx create-react-app my-app --template git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cube-solid.svg"
       },
       {
         "name": "npm",
-        "command": "npm install your-library",
+        "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/npm-brands-solid.svg"
       },
       {
         "name": "yarn",
-        "command": "yarn add your-library",
+        "command": "yarn add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/yarn-brands-solid.svg"
       },
       {
         "name": "pnpm",
-        "command": "pnpm add your-library",
+        "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cubes-solid.svg"
       },
       {
         "name": "bun",
-        "command": "bun add your-library",
+        "command": "bun add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/lemon-regular.svg"
       }
     ],
@@ -1078,27 +1078,27 @@
     "installation": [
       {
         "name": "CLI",
-        "command": "cli-command-to-install",
+        "command": "npx create-react-app my-app --template git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cube-solid.svg"
       },
       {
         "name": "npm",
-        "command": "npm install your-library",
+        "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/npm-brands-solid.svg"
       },
       {
         "name": "yarn",
-        "command": "yarn add your-library",
+        "command": "yarn add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/yarn-brands-solid.svg"
       },
       {
         "name": "pnpm",
-        "command": "pnpm add your-library",
+        "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cubes-solid.svg"
       },
       {
         "name": "bun",
-        "command": "bun add your-library",
+        "command": "bun add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/lemon-regular.svg"
       }
     ],
@@ -1478,27 +1478,27 @@
     "installation": [
       {
         "name": "CLI",
-        "command": "cli-command-to-install",
+        "command": "npx create-react-app my-app --template git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cube-solid.svg"
       },
       {
         "name": "npm",
-        "command": "npm install your-library",
+        "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/npm-brands-solid.svg"
       },
       {
         "name": "yarn",
-        "command": "yarn add your-library",
+        "command": "yarn add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/yarn-brands-solid.svg"
       },
       {
         "name": "pnpm",
-        "command": "pnpm add your-library",
+        "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cubes-solid.svg"
       },
       {
         "name": "bun",
-        "command": "bun add your-library",
+        "command": "bun add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/lemon-regular.svg"
       }
     ],
@@ -1708,27 +1708,27 @@
     "installation": [
       {
         "name": "CLI",
-        "command": "cli-command-to-install",
+        "command": "npx create-react-app my-app --template git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cube-solid.svg"
       },
       {
         "name": "npm",
-        "command": "npm install your-library",
+        "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/npm-brands-solid.svg"
       },
       {
         "name": "yarn",
-        "command": "yarn add your-library",
+        "command": "yarn add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/yarn-brands-solid.svg"
       },
       {
         "name": "pnpm",
-        "command": "pnpm add your-library",
+        "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cubes-solid.svg"
       },
       {
         "name": "bun",
-        "command": "bun add your-library",
+        "command": "bun add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/lemon-regular.svg"
       }
     ],
@@ -2049,27 +2049,27 @@
     "installation": [
       {
         "name": "CLI",
-        "command": "cli-command-to-install",
+        "command": "npx create-react-app my-app --template git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cube-solid.svg"
       },
       {
         "name": "npm",
-        "command": "npm install your-library",
+        "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/npm-brands-solid.svg"
       },
       {
         "name": "yarn",
-        "command": "yarn add your-library",
+        "command": "yarn add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/yarn-brands-solid.svg"
       },
       {
         "name": "pnpm",
-        "command": "pnpm add your-library",
+        "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cubes-solid.svg"
       },
       {
         "name": "bun",
-        "command": "bun add your-library",
+        "command": "bun add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/lemon-regular.svg"
       }
     ],
@@ -2377,27 +2377,27 @@
     "installation": [
       {
         "name": "CLI",
-        "command": "cli-command-to-install",
+        "command": "npx create-react-app my-app --template git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cube-solid.svg"
       },
       {
         "name": "npm",
-        "command": "npm install your-library",
+        "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/npm-brands-solid.svg"
       },
       {
         "name": "yarn",
-        "command": "yarn add your-library",
+        "command": "yarn add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/yarn-brands-solid.svg"
       },
       {
         "name": "pnpm",
-        "command": "pnpm add your-library",
+        "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cubes-solid.svg"
       },
       {
         "name": "bun",
-        "command": "bun add your-library",
+        "command": "bun add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/lemon-regular.svg"
       }
     ],
@@ -2621,27 +2621,27 @@
     "installation": [
       {
         "name": "CLI",
-        "command": "cli-command-to-install",
+        "command": "npx create-react-app my-app --template git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cube-solid.svg"
       },
       {
         "name": "npm",
-        "command": "npm install your-library",
+        "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/npm-brands-solid.svg"
       },
       {
         "name": "yarn",
-        "command": "yarn add your-library",
+        "command": "yarn add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/yarn-brands-solid.svg"
       },
       {
         "name": "pnpm",
-        "command": "pnpm add your-library",
+        "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cubes-solid.svg"
       },
       {
         "name": "bun",
-        "command": "bun add your-library",
+        "command": "bun add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/lemon-regular.svg"
       }
     ],
@@ -2911,27 +2911,27 @@
     "installation": [
       {
         "name": "CLI",
-        "command": "cli-command-to-install",
+        "command": "npx create-react-app my-app --template git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cube-solid.svg"
       },
       {
         "name": "npm",
-        "command": "npm install your-library",
+        "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/npm-brands-solid.svg"
       },
       {
         "name": "yarn",
-        "command": "yarn add your-library",
+        "command": "yarn add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/yarn-brands-solid.svg"
       },
       {
         "name": "pnpm",
-        "command": "pnpm add your-library",
+        "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cubes-solid.svg"
       },
       {
         "name": "bun",
-        "command": "bun add your-library",
+        "command": "bun add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/lemon-regular.svg"
       }
     ],
@@ -3493,30 +3493,30 @@
     "title": "image",
     "path": "/frontend/components/image",
     "description": "A customizable image component.",
-    "installation": [
+   "installation": [
       {
         "name": "CLI",
-        "command": "cli-command-to-install",
+        "command": "npx create-react-app my-app --template git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cube-solid.svg"
       },
       {
         "name": "npm",
-        "command": "npm install your-library",
+        "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/npm-brands-solid.svg"
       },
       {
         "name": "yarn",
-        "command": "yarn add your-library",
+        "command": "yarn add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/yarn-brands-solid.svg"
       },
       {
         "name": "pnpm",
-        "command": "pnpm add your-library",
+        "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cubes-solid.svg"
       },
       {
         "name": "bun",
-        "command": "bun add your-library",
+        "command": "bun add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/lemon-regular.svg"
       }
     ],
@@ -3734,30 +3734,30 @@
     "title": "avatar",
     "path": "/frontend/components/avatar",
     "description": "A customizable Avatar component that supports DiceBear SVG generation, image sources, sizes, colors, shapes, and additional user details like name and description.",
-    "installation": [
+   "installation": [
       {
         "name": "CLI",
-        "command": "npm install @dicebear/core @dicebear/collection",
+        "command": "npx create-react-app my-app --template git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cube-solid.svg"
       },
       {
         "name": "npm",
-        "command": "npm install your-avatar-library",
+        "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/npm-brands-solid.svg"
       },
       {
         "name": "yarn",
-        "command": "yarn add your-avatar-library",
+        "command": "yarn add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/yarn-brands-solid.svg"
       },
       {
         "name": "pnpm",
-        "command": "pnpm add your-avatar-library",
+        "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cubes-solid.svg"
       },
       {
         "name": "bun",
-        "command": "bun add your-avatar-library",
+        "command": "bun add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/lemon-regular.svg"
       }
     ],

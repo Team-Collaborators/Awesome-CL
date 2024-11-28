@@ -27,7 +27,7 @@
     max-width: 1300px;
     display: flex;
     flex-direction: column;
-    //overflow: hidden;
+
 
     .section,
     section {
@@ -43,8 +43,9 @@
       }
 
       .ul {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 1rem;
       }
     }
 
