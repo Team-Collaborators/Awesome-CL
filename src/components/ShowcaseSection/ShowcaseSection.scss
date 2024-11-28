@@ -29,13 +29,12 @@
   scrollbar-width: none; /* Hides the scrollbar */
 }
 
-
-
 .component-box {
+  background-color: var(--background-color);
   flex: 0 0 auto;
   width: 18rem;
   height: 16rem;
-  border: 1px solid #e0e0e0;
+  border: 1px solid var(--input-border-color);
   border-radius: 0.5rem;
   box-shadow: $box-shadow-light;
   padding: 1rem;
@@ -55,7 +54,7 @@
   overflow: hidden;
   padding: 0.3rem;
   width: 100%;
-  }
+}
 .component-content > * {
   max-width: 100%; /* Ensure elements don't overflow */
   max-height: 100%;

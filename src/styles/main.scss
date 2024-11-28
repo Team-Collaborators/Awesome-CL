@@ -75,6 +75,9 @@ body {
   font-family: var(--font-stack);
   background-color: var(--background-color);
   color: var(--text-color);
+  background-image: url("../assets/images/bbblurry.svg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 ul {
