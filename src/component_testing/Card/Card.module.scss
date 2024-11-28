@@ -163,6 +163,7 @@
 }
 
 .variant-elevated {
+  background-color: var(--default-light);
   border: var(--border-xs) solid;
   border-color: var(--default-base);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
@@ -173,6 +174,7 @@
 }
 
 .variant-outlined {
+  background-color: var(--default-light);
   border: var(--border-xs);
   border-color: var(--default-base);
   color: var(--default-dark-lighter);

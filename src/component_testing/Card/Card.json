@@ -105,7 +105,18 @@
             "title": "Large Card",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
             "size": "lg"
-          }
+          },
+          "children": [
+            {
+              "type": "Button",
+              "props": {
+                "color": "primary",
+                "size": "sm",
+                "radius": "sm"
+              },
+              "children": "Primary"
+            }
+          ]
         }
       ],
       "code": "import { Card, Image } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Card \n      title=\"Card with Image\" \n      description=\"This card has an image at the top.\"\n      imageTop\n      image={<Image src='https://example.com/image.jpg' alt='Example Image' />}\n    />\n  );\n}"
@@ -139,6 +150,40 @@
         }
       ],
       "code": "import { Card, Image } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Card \n      title=\"Horizontal Card\" \n      description=\"This card uses a horizontal layout.\"\n      horizontal\n      image={<Image src='https://example.com/image.jpg' alt='Example Image' />}\n    />\n  );\n}"
+    },
+    {
+      "title": "Avatar",
+      "components": [
+        {
+          "type": "Card",
+          "props": {
+            "variant": "subtle",
+            "title": "Medium Elevated Card with Avatar",
+            "color": "primary",
+            "description": "This is a medium card with elevated variant and an avatar"
+          },
+          "children": [
+            {
+              "type": "Avatar",
+              "props": {
+                "avatarName": "Brian",
+                "name": "Brian"
+              }
+            },
+            {
+              "type": "Button",
+              "props": {
+                "color": "primary",
+                "size": "sm",
+                "radius": "sm"
+              },
+              "children": "Primary"
+            },
+            "Variant Subtle"
+          ]
+        }
+      ],
+      "code": "import { Accordion, AccordionItem } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Accordion>\n            <AccordionItem title='Section 1'>\n              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolorem unde quis, ea ratione obcaecati. Quaerat autem unde cupiditate ipsa.\n            </AccordionItem>\n            <AccordionItem title='Section 2'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium unde, amet voluptatibus soluta reprehenderit sed laudantium optio ut sint nemo illum earum ducimus tempora nulla quia nam placeat explicabo facilis quisquam minus? Fuga, labore facilis.\n            </AccordionItem>\n            <AccordionItem title='Section 3'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, est exercitationem consequatur dolorum architecto molestiae aspernatur voluptatem ducimus nisi ea quo, atque tempora magni necessitatibus.\n            </AccordionItem>\n    </Accordion>\n );\n}"
     }
   ],
   "propsTable": {
