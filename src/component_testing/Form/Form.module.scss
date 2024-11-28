@@ -175,7 +175,6 @@ textarea {
   }
 }
 
-// Open Form Button Styling
 .openButton {
   font-size: 1rem;
   background-color: var(--button-bg-color);
@@ -220,7 +219,6 @@ textarea {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-// Animation for Header
 @keyframes fadeInSlideUp {
   from {
     opacity: 0;

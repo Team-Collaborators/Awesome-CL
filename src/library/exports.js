@@ -16,9 +16,7 @@ import Spinner from "../component_testing/Spinner/Spinner";
 import Switch from "../component_testing/Switch/Switch";
 import Checkbox from "../component_testing/Checkbox/Checkbox";
 import Image from "../component_testing/Image/Image";
-
-
-
+import ProductCard from "../component_testing/ProductCard/ProductCard";
 
 // import variables from lib styles
 // import all components from the json file, then export them all
@@ -35,4 +33,5 @@ export {
   Switch,
   Checkbox,
   Image,
+  ProductCard,
 };

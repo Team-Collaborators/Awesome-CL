@@ -9,7 +9,7 @@ const teamData = [
     description:
       "Passionate about creating seamless user experiences and building reusable components.",
     image: "",
-    linkedin: "https://www.linkedin.com/",
+    linkedin: "https://www.linkedin.com/in/annadobrucki/",
   },
   {
     name: "Heriberto",
@@ -49,7 +49,6 @@ const teamData = [
     description:
       "Passionate about creating seamless user experiences and building reusable components.",
     image: "",
-    linkedin: "https://www.linkedin.com/",
   },
 ];
 
