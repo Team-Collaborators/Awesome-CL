@@ -51,7 +51,7 @@ $optional-color: #5a2778;
   text-align: left;
   margin-bottom: 15px;
   color: var(--text-color);
-  border-bottom: styles.$border-color;
+  border-bottom: 1px solid var(--border-color);
   padding-bottom: 8px;
   text-transform: uppercase;
 
