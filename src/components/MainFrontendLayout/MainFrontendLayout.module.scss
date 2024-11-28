@@ -27,10 +27,12 @@
     max-width: 1300px;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    //overflow: hidden;
 
-    .section, section {
+    .section,
+    section {
       padding: 1.5rem;
+      background-color: var(--background-color-transparent);
       box-shadow: $box-shadow-all-sides;
       margin-bottom: 1.5rem;
       overflow: hidden;
@@ -56,8 +58,6 @@
           flex-wrap: wrap;
         }
       }
-      
-    
 
       .li {
         text-align: center;
@@ -85,7 +85,6 @@
         transition: background-color 0.3s;
       }
     }
-
 
     .importDescription {
       // color: var(--muted-text-color);

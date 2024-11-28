@@ -61,54 +61,58 @@ const Customization = () => {
         </div>
       </section>
 
-      <h2 className={styles.subtitle}>Level Up your Workflow with Tailwind</h2>
-      <p className={styles.paragraph}>
-        Awesome CL comes with full Tailwind integration that allows you to style
-        with ease for simply awesome results:
-      </p>
-      <ul>
-        <section className={styles.shadow}>
-          <li className={styles.paragraph}>1. Install Tailwind</li>
-          <div className={styles.code}>
-            <RenderCode
-              code={"npm install -D tailwindcss\nnpx tailwindcss init "}
-            />
-          </div>
-        </section>
-        <section className={styles.shadow}>
-          <li className={styles.paragraph}>
-            2. Add Tailwind's directives to your CSS file (e.g.,
-            styles/tailwind.css):
-          </li>
-          <div className={styles.code}>
-            <RenderCode
-              code={
-                "@tailwind base;\n@tailwind components;\n@tailwind utilities;"
-              }
-            />
-          </div>
-        </section>
-        <section className={styles.shadow}>
-          <li className={styles.paragraph}>
-            3. Import your Tailwind CSS into your project:
-          </li>
-          <div className={styles.code}>
-            <RenderCode code={"import './styles/tailwind.css';"} />
-          </div>
-        </section>
-        <section className={styles.shadow}>
-          <li className={styles.paragraph}>
-            4. Start using Tailwind classes directly on your components:
-          </li>
-          <div className={styles.code}>
-            <RenderCode
-              code={
-                '<Button className="bg-blue-500 text-white font-bold py-2 px-4 rounded">Click Me</Button>'
-              }
-            />
-          </div>
-        </section>
-      </ul>
+      <section className={styles.shadow}>
+        <h2 className={styles.subtitle}>
+          Level Up your Workflow with Tailwind
+        </h2>
+        <p className={styles.paragraph}>
+          Awesome CL comes with full Tailwind integration that allows you to
+          style with ease for simply awesome results:
+        </p>
+        <ul>
+          <section className={styles.shadow}>
+            <li className={styles.paragraph}>1. Install Tailwind</li>
+            <div className={styles.code}>
+              <RenderCode
+                code={"npm install -D tailwindcss\nnpx tailwindcss init "}
+              />
+            </div>
+          </section>
+          <section className={styles.shadow}>
+            <li className={styles.paragraph}>
+              2. Add Tailwind's directives to your CSS file (e.g.,
+              styles/tailwind.css):
+            </li>
+            <div className={styles.code}>
+              <RenderCode
+                code={
+                  "@tailwind base;\n@tailwind components;\n@tailwind utilities;"
+                }
+              />
+            </div>
+          </section>
+          <section className={styles.shadow}>
+            <li className={styles.paragraph}>
+              3. Import your Tailwind CSS into your project:
+            </li>
+            <div className={styles.code}>
+              <RenderCode code={"import './styles/tailwind.css';"} />
+            </div>
+          </section>
+          <section className={styles.shadow}>
+            <li className={styles.paragraph}>
+              4. Start using Tailwind classes directly on your components:
+            </li>
+            <div className={styles.code}>
+              <RenderCode
+                code={
+                  '<Button className="bg-blue-500 text-white font-bold py-2 px-4 rounded">Click Me</Button>'
+                }
+              />
+            </div>
+          </section>
+        </ul>
+      </section>
     </div>
   );
 };
