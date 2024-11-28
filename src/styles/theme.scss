@@ -13,6 +13,7 @@
   --team-bg-color: rgba(130, 130, 132, 0.15);
   --secondary-text-color: #2d2d2d;
   --muted-text-color: #575760;
+  --border-color: rgba(130, 130, 132, 0.2);
 }
 
 body.dark-theme {
@@ -29,4 +30,5 @@ body.dark-theme {
   --team-bg-color: rgba(50, 50, 50, 0.5);
   --secondary-text-color: #fafafa;
   --muted-text-color: #a1a1aa;
+  --border-color: rgba(255, 255, 255, 0.2);
 }
