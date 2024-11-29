@@ -27,12 +27,6 @@ const Playground = () => {
       >
         <br />
 
-        <div style={{ width: "200px" }}>
-          <Search />
-        </div>
-        <div style={{ width: "300px" }}>
-          <Search />
-        </div>
       </div>
     </div>
   );
