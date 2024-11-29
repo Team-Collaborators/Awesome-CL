@@ -1,4 +1,4 @@
-Awesome CL - Making a junior developer’s life easier by using a component library! 
+**Awesome CL - Making a junior developer’s life easier by using a component library!** 
 
 **About**
 
