@@ -20,7 +20,6 @@
     width: auto;
     display: flex;
     justify-content: center;
-    align-items: stretch;
     overflow: hidden;
   }
 
@@ -54,25 +53,30 @@
   // Horizontal Option
   &.horizontal {
     flex-direction: row;
-    align-items: center;
+    align-items: stretch;
     gap: 10px;
     padding: 0;
+    height: 100%;
+
     .cardImageWrapper {
       justify-content: flex-start;
-      border-radius: inherit 0 0 inherit; /* Apply border-radius to the left only */
-    }
-    .cardImage {
-      width: 100%;
+      border-radius: inherit 0 0 inherit;
       height: 100%;
-      object-fit: cover;
+      width: auto;
+      & img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+      }
     }
-    .contentContainer {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      text-align: left;
-      padding: var(--padding-md);
-    }
+  }
+
+  .contentContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: left;
+    padding: var(--padding-md);
   }
 }
 

@@ -42,11 +42,11 @@ ${styles[`footer-align-${footerAlignment}`]} // Dynamic footer alignment
       {/* Avatar */}
       {avatar && <div className={styles.cardAvatar}>{avatar}</div>}
 
-      <div className={styles.cardImageWrapper}>
-        {" "}
+     
         {/* Image */}
-        {image && <div className={styles.cardImage}>{image}</div>}
-      </div>
+        {image && <div className={styles.cardImageWrapper}>{image}</div>}
+     {/* {children} */}
+
 
       <div className={styles.contentContainer}>
         {" "}
