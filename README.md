@@ -1,6 +1,7 @@
 Awesome CL - Making a junior developer’s life easier by using a component library! 
 
 **About**
+
 Awesome CL is a React library offering reusable front-end components along with a utility library of Express.js middleware and helper functions, aimed at helping junior developers and students build full-stack applications faster while learning how libraries work. The library includes clear documentation and an intuitive, minimalistic interface.
 
 **Purpose**
