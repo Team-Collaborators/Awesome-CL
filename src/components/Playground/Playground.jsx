@@ -49,7 +49,7 @@ const Playground = () => {
           }
         ></Card> */}
 
-        {/* <Card
+        <Card
           variant="elevated"
           avatar={<Avatar avatarName="Brian" name="Brian" />}
           title="Medium Elevated Card with Avatar"
@@ -63,7 +63,7 @@ const Playground = () => {
         >
           Variant Elevated
         </Card>
-        <br /> */}
+        <br />
 
         {/* Card Large Outlined */}
         <Card
@@ -91,25 +91,25 @@ const Playground = () => {
 
         {/* Card Small Outlined */}
         <Card
-  variant="outlined"
-  size="sm"
-  radius="md"
-  color="default"
-  image={<Image src={snow} objectFit="cover" radius="md" size="sm" />}
-  title="Small Outlined Card"
-  description="This is a large card with outlined variant and an image"
-  footer={
-    <>
-      {" "}
-      <Button color="danger" size="sm" radius="full">
-        Yes
-      </Button>
-      <Button color="default" size="sm" radius="full">
-        No
-      </Button>
-    </>
-  }
-></Card>
+          variant="outlined"
+          size="sm"
+          radius="md"
+          color="default"
+          image={<Image src={snow} objectFit="cover" radius="md" size="sm" />}
+          title="Small Outlined Card"
+          description="This is a large card with outlined variant and an image"
+          footer={
+            <>
+              {" "}
+              <Button color="danger" size="sm" radius="full">
+                Yes
+              </Button>
+              <Button color="default" size="sm" radius="full">
+                No
+              </Button>
+            </>
+          }
+        ></Card>
         <br />
 
         {/* Card Horizontal */}
@@ -118,9 +118,10 @@ const Playground = () => {
           radius="sm"
           title="Card Horizontal"
           description="This is a horizontal card with an image"
-          image={<Image src={snow} size="xl" radius="none" objectFit="contain" />}
+          image={<Image src={snow} radius="none" />}
           variant="outlined"
-          isInteractive={false}
+          isInteractive={true}
+          titleAlignment="left"
           size="lg"
           footer={
             <>

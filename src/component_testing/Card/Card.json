@@ -45,7 +45,15 @@
             "radius": "md",
             "title": "Card Title",
             "description": "This is a default card."
-          }
+          },
+          "children": [
+            {
+              "type": "Image",
+              "props": {
+                "src": "/src/assets/images/sofa.jpg"
+              }
+            }
+          ]
         }
       ],
       "code": "import { Card } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Card title=\"Card Title\" description=\"This is a default card.\" footer=\"Footer content here\" />\n  );\n}"
@@ -59,7 +67,24 @@
             "title": "Subtle Variant",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
             "variant": "subtle"
-          }
+          },
+          "children": [
+            {
+              "type": "Image",
+              "props": {
+                "src": "/src/assets/images/sofa.jpg"
+              }
+            },
+            {
+              "type": "Button",
+              "props": {
+                "color": "default",
+                "size": "sm",
+                "radius": "sm"
+              },
+              "children": "Buy Now"
+            }
+          ]
         },
         {
           "type": "Card",
@@ -67,7 +92,24 @@
             "title": "Elevated Variant",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
             "variant": "elevated"
-          }
+          },
+          "children": [
+            {
+              "type": "Image",
+              "props": {
+                "src": "/src/assets/images/sofa.jpg"
+              }
+            },
+            {
+              "type": "Button",
+              "props": {
+                "color": "default",
+                "size": "sm",
+                "radius": "sm"
+              },
+              "children": "Buy Now"
+            }
+          ]
         },
         {
           "type": "Card",
@@ -75,7 +117,24 @@
             "title": "Outlined Variant",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
             "variant": "outlined"
-          }
+          },
+          "children": [
+            {
+              "type": "Image",
+              "props": {
+                "src": "/src/assets/images/sofa.jpg"
+              }
+            },
+            {
+              "type": "Button",
+              "props": {
+                "color": "default",
+                "size": "sm",
+                "radius": "sm"
+              },
+              "children": "Buy Now"
+            }
+          ]
         }
       ],
       "code": "import { Card, Image } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Card \n      title=\"Card with Image\" \n      description=\"This card has an image at the top.\"\n      imageTop\n      image={<Image src='https://example.com/image.jpg' alt='Example Image' />}\n    />\n  );\n}"
@@ -129,9 +188,17 @@
           "props": {
             "title": "Card with Header Image",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            "imageTop": true,
-            "image": "<Image src='https://example.com/image.jpg' alt='Example Image' />"
-          }
+            "imageTop": true
+          },
+          "children": [
+            {
+              "type": "Image",
+              "props": {
+                "src": "/src/assets/images/sofa2.jpg",
+                "radius": "none"
+              }
+            }
+          ]
         }
       ],
       "code": "import { Card, Image } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Card \n      title=\"Card with Image\" \n      description=\"This card has an image at the top.\"\n      imageTop\n      image={<Image src='https://example.com/image.jpg' alt='Example Image' />}\n    />\n  );\n}"
@@ -145,8 +212,18 @@
             "title": "Horizontal Card",
             "description": "This card uses a horizontal layout.",
             "horizontal": true,
-            "image": "<Image src='https://example.com/image.jpg' alt='Example Image' />"
-          }
+            "size": "lg"
+          },
+          "children": [
+            {
+              "type": "Image",
+              "props": {
+                "src": "/src/assets/images/snow.jpg",
+                "radius": "none",
+                "objectFit": "cover"
+              }
+            }
+          ]
         }
       ],
       "code": "import { Card, Image } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Card \n      title=\"Horizontal Card\" \n      description=\"This card uses a horizontal layout.\"\n      horizontal\n      image={<Image src='https://example.com/image.jpg' alt='Example Image' />}\n    />\n  );\n}"
@@ -160,7 +237,9 @@
             "variant": "subtle",
             "title": "Medium Elevated Card with Avatar",
             "color": "primary",
-            "description": "This is a medium card with elevated variant and an avatar"
+            "description": "This is a medium card with elevated variant and an avatar",
+            "titleAlignment": "left",
+            "footerAlignment": "right"
           },
           "children": [
             {
@@ -178,8 +257,7 @@
                 "radius": "sm"
               },
               "children": "Primary"
-            },
-            "Variant Subtle"
+            }
           ]
         }
       ],
