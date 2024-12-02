@@ -27,11 +27,7 @@ const Playground = () => {
         {/* Card Default */}
 
         {/* Card Default*/}
-        {/* <Card
-          variant="subtle"
-          size="md"
-          radius="md"
-          image={<Image src={sofa} objectFit="cover" radius="md" size="sm" />}
+        <Card
           title="Card"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh."
           footer={
@@ -45,7 +41,8 @@ const Playground = () => {
               </Button>
             </>
           }
-        ></Card> */}
+          image={<Image src={snow} objectFit="cover" radius="md" size="sm" />}
+        ></Card>
 
         <Card
           variant="elevated"
