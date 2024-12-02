@@ -4338,7 +4338,7 @@
       }
     ],
     "import": {
-      "code": "import ProductCard from 'awesome-library';",
+      "code": "import ProductCard from 'AwesomeCL';",
       "description": "This code shows how to import the ProductCard component from the library."
     },
     "examples": [
@@ -4353,7 +4353,7 @@
             }
           }
         ],
-        "code": "import ProductCard from 'awesome-library';\n\nfunction App() {\n  return (\n    <ProductCard showThemeSwitcher={true} />;\n  );\n}"
+        "code": "import ProductCard from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <ProductCard showThemeSwitcher={true} />;\n  );\n}"
       },
       {
         "title": "Dark Theme",
@@ -4366,7 +4366,7 @@
             }
           }
         ],
-        "code": "import ProductCard from 'awesome-library';\n\nfunction App() {\n  return (\n    <ProductCard \n      theme=\"dark-theme\" \n    />;\n  );\n}"
+        "code": "import ProductCard from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <ProductCard \n      theme=\"dark-theme\" \n    />;\n  );\n}"
       },
       {
         "title": "Neon Theme",
@@ -4379,12 +4379,11 @@
             }
           }
         ],
-        "code": "import ProductCard from 'awesome-library';\n\nfunction App() {\n  return (\n    <ProductCard \n      theme=\"neon-theme\" \n    />;\n  );\n}"
+        "code": "import ProductCard from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <ProductCard \n      theme=\"neon-theme\" \n    />;\n  );\n}"
       },
       {
         "title": "Custom Theme",
         "description": "Demonstrates a custom-themed product card with unique styles and a custom image.",
-  
         "components": [
           {
             "type": "ProductCard",
@@ -4396,7 +4395,6 @@
               "originalPrice": 1199.99,
               "discount": 25,
               "image": "/images/vr-headset.jpg",
-  
               "customTheme": {
                 "backgroundColor": "#1E1E2F",
                 "textColor": "#E0E0E0",
@@ -4408,20 +4406,24 @@
                 "discountColor": "#FFD700",
                 "border": "2px solid #2C2C3D",
                 "boxShadow": "4px 4px 10px rgba(77, 20, 91, 0.5), -4px -4px 10px rgba(77, 20, 91, 0.5), -4px 4px 10px rgba(77, 20, 91, 0.5), 4px -4px 10px rgba(77, 20, 91, 0.5)",
-  
                 "nameTextShadow": "2px 2px 5px rgba(0, 0, 0, 0.5)",
                 "descriptionTextShadow": "1px 1px 3px rgba(0, 0, 0, 0.3)"
               }
             }
           }
         ],
-        "code": "import ProductCard from 'awesome-library';\n\nfunction App() {\n  const handleBuyNow = () => {\n    alert('Buy Now clicked!');\n  };\n\n  const handleAddToBag = () => {\n    alert('Add to Bag clicked!');\n  };\n\n  return (\n    <ProductCard \n      theme=\"custom-theme\"\n      name=\"VR Headset\"\n      description=\"Revolutionize your VR experience with vibrant customization.\"\n      price={899.99}\n      originalPrice={1199.99}\n      discount={25}\n      image=\"/images/vr-headset.jpg\"\n      customTheme={{\n        backgroundColor: \"#E6E6FA\", // Light lavender\n        textColor: \"#1E3A8A\", // Deep blue for text\n        buttonBackground: \"#4F46E5\", // Vibrant indigo for buttons\n        buttonTextColor: \"#FFFFFF\", // White for button text\n        priceColor: \"#4ADE80\", // Light green for price\n        originalPriceColor: \"#9333EA\", // Purple for original price\n        discountColor: \"#60A5FA\", // Sky blue for discount\n        border: \"2px solid #7C3AED\", // Bold purple border\n        boxShadow: \"0 6px 15px rgba(124, 58, 237, 0.3)\", // Purple shadow\n        fontWeight: \"bold\" // Bold text for emphasis\n      }}\n      onBuyNow={handleBuyNow}\n      onAddToBag={handleAddToBag}\n    />;\n  );\n}"
+        "code": "import ProductCard from 'AwesomeCL';\n\nfunction App() {\n  const handleBuyNow = () => {\n    alert('Buy Now clicked!');\n  };\n\n  const handleAddToBag = () => {\n    alert('Add to Bag clicked!');\n  };\n\n  return (\n    <ProductCard \n      theme=\"custom-theme\"\n      name=\"VR Headset\"\n      description=\"Revolutionize your VR experience with vibrant customization.\"\n      price={899.99}\n      originalPrice={1199.99}\n      discount={25}\n      image=\"/images/vr-headset.jpg\"\n      customTheme={{\n        backgroundColor: \"#E6E6FA\", // Light lavender\n        textColor: \"#1E3A8A\", // Deep blue for text\n        buttonBackground: \"#4F46E5\", // Vibrant indigo for buttons\n        buttonTextColor: \"#FFFFFF\", // White for button text\n        priceColor: \"#4ADE80\", // Light green for price\n        originalPriceColor: \"#9333EA\", // Purple for original price\n        discountColor: \"#60A5FA\", // Sky blue for discount\n        border: \"2px solid #7C3AED\", // Bold purple border\n        boxShadow: \"0 6px 15px rgba(124, 58, 237, 0.3)\", // Purple shadow\n        fontWeight: \"bold\" // Bold text for emphasis\n      }}\n      onBuyNow={handleBuyNow}\n      onAddToBag={handleAddToBag}\n    />;\n  );\n}"
       }
     ],
     "propsTable": {
       "title": "Product Card Props",
       "description": "A list of all properties supported by the Product Card component.",
-      "headers": ["Prop Name", "Type", "Description", "Default Value"],
+      "headers": [
+        "Prop Name",
+        "Type",
+        "Description",
+        "Default Value"
+      ],
       "rows": [
         {
           "propName": "theme",
@@ -4516,5 +4518,4 @@
       ]
     }
   }
-  
 ]
