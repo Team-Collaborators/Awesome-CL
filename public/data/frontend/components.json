@@ -3877,17 +3877,14 @@
           {
             "type": "Card",
             "props": {
-              "variant": "subtle",
-              "size": "md",
-              "radius": "md",
               "title": "Card Title",
-              "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+              "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa."
             },
             "children": [
               {
                 "type": "Image",
                 "props": {
-                  "src": "/images/sofa.webp"
+                  "src": "/images/snow.webp"
                 }
               },
               {
@@ -3895,14 +3892,14 @@
                 "props": {
                   "color": "default",
                   "size": "sm",
-                  "radius": "sm"
+                  "radius": "full"
                 },
-                "children": "Buy Now"
+                "children": "Read More"
               }
             ]
           }
         ],
-        "code": "import { Card } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Card title=\"Card Title\" description=\"This is a default card.\" footer=\"Footer content here\" />\n  );\n}"
+        "code": "import { Card, Image, Button } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Card \n      image={\n        <Image \n          src={snow} \n          objectFit=\"cover\" \n          radius=\"md\" \n          size=\"sm\" \n          alt=\"Example Image\" \n        />\n      }\n      description=\"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.\"\n      footer={\n        <>\n          <Button color=\"default\" size=\"sm\" radius=\"full\">Read More</Button>\n        </>\n      }\n    />\n  );\n}"
       },
       {
         "title": "Variants",
@@ -3983,7 +3980,7 @@
             ]
           }
         ],
-        "code": "import { Card, Image } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Card \n      title=\"Card with Image\" \n      description=\"This card has an image at the top.\"\n      imageTop\n      image={<Image src='https://example.com/image.jpg' alt='Example Image' />}\n    />\n  );\n}"
+        "code": "import { Card, Image, Button } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Card \n      variant=\"subtle\" \n      variant=\"elevated\" \n      variant=\"outlined\" \n    />\n  );\n}"
       },
       {
         "title": "Sizes",
