@@ -1,13 +1,15 @@
 import React from "react";
 import Image from "../Image/Image";
 import Button from "../Button/Button";
+import Avatar from "../Avatar/Avatar";
 import styles from "./Card.module.scss";
 
 const Card = ({
   variant = "subtle",
   size = "md",
   radius = "md",
-  isInteractive = true,
+  children,
+  isInteractive = false,
   horizontal = false,
   imageTop = false,
   avatar = null,
@@ -21,6 +23,22 @@ const Card = ({
   footerAlignment = "center",
   aria = "card",
 }) => {
+  let avatarContent = avatar || null;
+  let imageContent = image || null;
+  let buttonContents = [];
+
+  // Normalize children to handle single or multiple elements
+  const normalizedChildren = React.Children.toArray(children);
+  normalizedChildren.forEach((child) => {
+    if (child.type === Avatar && !avatarContent) {
+      avatarContent = child;
+    } else if (child.type === Image && !imageContent) {
+      imageContent = child;
+    } else if (child.type === Button) {
+      buttonContents.push(child);
+    }
+  });
+
   const combinedClassNames = `
 ${styles.card} 
 ${styles[`variant-${variant}`]}
@@ -38,25 +56,32 @@ ${styles[`footer-align-${footerAlignment}`]} // Dynamic footer alignment
 
   return (
     <div className={finalClassNames} style={style} role={aria}>
-      {/* Avatar */}
-      {avatar && <div className={styles.cardAvatar}>{avatar}</div>}
-
-      <div className={styles.cardImageWrapper}>
-        {" "}
-        {/* Image */}
-        {image && <div className={styles.cardImage}>{image}</div>}
-      </div>
+      {avatarContent && (
+        <div className={styles.cardAvatar}>{avatarContent}</div>
+      )}
+      {imageContent && (
+        <div className={styles.cardImageWrapper}>{imageContent}</div>
+      )}
 
       <div className={styles.contentContainer}>
-        {" "}
-        {/* Title */}
         {title && <div className={styles.cardTitle}>{title}</div>}
-        {/* Description */}
         {description && (
           <div className={styles.cardDescription}>{description}</div>
         )}
-        {/* Footer */}
-        {footer && <div className={styles.cardFooter}>{footer}</div>}
+        {(footer || buttonContents.length > 0) && (
+          <div className={styles.cardFooter}>
+            {footer}
+            {buttonContents.length > 0 && (
+              <div className={styles.cardButtons}>
+                {buttonContents.map((button, index) => (
+                  <div key={index} className={styles.cardButton}>
+                    {button}
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
       </div>
     </div>
   );
