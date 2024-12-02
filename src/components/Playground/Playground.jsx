@@ -64,14 +64,14 @@ const Playground = () => {
         <Card
           variant="outlined"
           size="lg"
-          radius="md"
+          radius="lg"
           color="default"
           imageTop={true}
           image={<Image src={snow} objectFit="cover" radius="none" />}
           title="Large Outlined Card"
           description="This is a large card with outlined variant and an image"
           footer={
-            <>
+            <div>
               {" "}
               <Button color="danger" size="sm" radius="full">
                 Yes
@@ -79,8 +79,10 @@ const Playground = () => {
               <Button color="default" size="sm" radius="full">
                 No
               </Button>
-            </>
+            </div>
           }
+           footerAlignment="left"
+          titleAlignment="left"
         ></Card>
         <br />
 
@@ -116,6 +118,7 @@ const Playground = () => {
           image={<Image src={snow} radius="none" />}
           variant="outlined"
           isInteractive={true}
+          footerAlignment="left"
           titleAlignment="left"
           size="lg"
           footer={
