@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import styles from "./AboutUs.module.scss";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { github } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 const teamData = [
   {
@@ -49,6 +50,7 @@ const teamData = [
     description:
       "Passionate about creating seamless user experiences and building reusable components.",
     image: "",
+    github: "https://github.com/NathalieMellaA",
   },
 ];
 
