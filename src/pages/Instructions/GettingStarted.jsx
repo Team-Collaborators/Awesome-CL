@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 
 const GettingStarted = () => {
   const installData = [
-
     {
       name: "npm",
       command:
@@ -32,7 +31,9 @@ const GettingStarted = () => {
     },
   ];
 
-  const [installation, setInstallation] = useState("npm install git+https://github.com/Team-Collaborators/Awesome-CL.git");
+  const [installation, setInstallation] = useState(
+    "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git"
+  );
 
   return (
     <div className={styles.page}>
@@ -56,10 +57,7 @@ const GettingStarted = () => {
             </li>
           ))}
         </ul>
-        <div
-          className={styles.codeDisplay}
-          style={{ textAlign: "left", maxWidth: "500px" }}
-        >
+        <div className={styles.codeDisplay} style={{ textAlign: "left" }}>
           <RenderCode className={styles.code} code={installation} />
         </div>
         <p className={styles.paragraph}>
