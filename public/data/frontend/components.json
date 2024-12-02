@@ -4384,6 +4384,7 @@
       {
         "title": "Custom Theme",
         "description": "Demonstrates a custom-themed product card with unique styles and a custom image.",
+  
         "components": [
           {
             "type": "ProductCard",
@@ -4395,6 +4396,7 @@
               "originalPrice": 1199.99,
               "discount": 25,
               "image": "/images/vr-headset.jpg",
+  
               "customTheme": {
                 "backgroundColor": "#1E1E2F",
                 "textColor": "#E0E0E0",
@@ -4406,6 +4408,7 @@
                 "discountColor": "#FFD700",
                 "border": "2px solid #2C2C3D",
                 "boxShadow": "4px 4px 10px rgba(77, 20, 91, 0.5), -4px -4px 10px rgba(77, 20, 91, 0.5), -4px 4px 10px rgba(77, 20, 91, 0.5), 4px -4px 10px rgba(77, 20, 91, 0.5)",
+  
                 "nameTextShadow": "2px 2px 5px rgba(0, 0, 0, 0.5)",
                 "descriptionTextShadow": "1px 1px 3px rgba(0, 0, 0, 0.3)"
               }
@@ -4418,12 +4421,7 @@
     "propsTable": {
       "title": "Product Card Props",
       "description": "A list of all properties supported by the Product Card component.",
-      "headers": [
-        "Prop Name",
-        "Type",
-        "Description",
-        "Default Value"
-      ],
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
       "rows": [
         {
           "propName": "theme",
@@ -4518,4 +4516,5 @@
       ]
     }
   }
+  
 ]

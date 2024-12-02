@@ -4,11 +4,6 @@
   "description": "A reusable and adaptable product card component with multiple themes, dynamic content, and interactivity.",
   "installation": [
     {
-      "name": "CLI",
-      "command": "npx create-react-app my-app --template git+https://github.com/Team-Collaborators/Awesome-CL.git",
-      "path": "/icons/cube-solid.svg"
-    },
-    {
       "name": "npm",
       "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
       "path": "/icons/npm-brands-solid.svg"
