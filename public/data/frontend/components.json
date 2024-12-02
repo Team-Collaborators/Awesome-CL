@@ -4,7 +4,6 @@
     "path": "/frontend/components/button",
     "description": "A versatile button component that can be used in different styles and sizes.",
     "installation": [
-     
       {
         "name": "npm",
         "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
@@ -19,6 +18,11 @@
         "name": "pnpm",
         "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cubes-solid.svg"
+      },
+      {
+        "name": "bun",
+        "command": "bun add git+https://github.com/Team-Collaborators/Awesome-CL.git",
+        "path": "/icons/lemon-regular.svg"
       }
     ],
     "import": {
@@ -253,7 +257,12 @@
     "propsTable": {
       "title": " Button Props",
       "description": "List of all props supported by the Button component.",
-      "headers": ["Prop Name", "Type", "Description", "Default Value"],
+      "headers": [
+        "Prop Name",
+        "Type",
+        "Description",
+        "Default Value"
+      ],
       "rows": [
         {
           "propName": "children",
@@ -314,7 +323,10 @@
     "eventsTable": {
       "title": "Events",
       "description": "List of all events emitted by the Button component.",
-      "headers": ["Event Name", "Description"],
+      "headers": [
+        "Event Name",
+        "Description"
+      ],
       "rows": [
         {
           "propName": "onClick",
@@ -342,7 +354,6 @@
     "path": "/frontend/components/modal",
     "description": "A modal component that can be customized with various sizes, placements, scroll options, and backdrop styles.",
     "installation": [
-     
       {
         "name": "npm",
         "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
@@ -357,6 +368,11 @@
         "name": "pnpm",
         "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cubes-solid.svg"
+      },
+      {
+        "name": "bun",
+        "command": "bun add git+https://github.com/Team-Collaborators/Awesome-CL.git",
+        "path": "/icons/lemon-regular.svg"
       }
     ],
     "import": {
@@ -502,7 +518,12 @@
     "propsTable": {
       "title": "Modal Props",
       "description": "List of all props supported by the Modal component.",
-      "headers": ["Prop Name", "Type", "Description", "Default Value"],
+      "headers": [
+        "Prop Name",
+        "Type",
+        "Description",
+        "Default Value"
+      ],
       "rows": [
         {
           "propName": "children",
@@ -563,7 +584,10 @@
     "eventsTable": {
       "title": "Events",
       "description": "List of all events emitted by the Modal component.",
-      "headers": ["Event Name", "Description"],
+      "headers": [
+        "Event Name",
+        "Description"
+      ],
       "rows": [
         {
           "propName": "onOpen",
@@ -603,7 +627,6 @@
     "path": "/frontend/components/accordion",
     "description": "A customizable accordion that comes in different variants.",
     "installation": [
-     
       {
         "name": "npm",
         "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
@@ -618,6 +641,11 @@
         "name": "pnpm",
         "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cubes-solid.svg"
+      },
+      {
+        "name": "bun",
+        "command": "bun add git+https://github.com/Team-Collaborators/Awesome-CL.git",
+        "path": "/icons/lemon-regular.svg"
       }
     ],
     "import": {
@@ -912,7 +940,12 @@
     "propsTable": {
       "title": "Accordion Props",
       "description": "List of all properties supported by the accordion component.",
-      "headers": ["Prop Name", "Type", "Description", "Default Value"],
+      "headers": [
+        "Prop Name",
+        "Type",
+        "Description",
+        "Default Value"
+      ],
       "rows": [
         {
           "propName": "aria",
@@ -949,7 +982,12 @@
     "propsTable2": {
       "title": "Accordion Item Props",
       "description": "List of all properties supported by the accordion item component.",
-      "headers": ["Prop Name", "Type", "Description", "Default Value"],
+      "headers": [
+        "Prop Name",
+        "Type",
+        "Description",
+        "Default Value"
+      ],
       "rows": [
         {
           "propName": "aria",
@@ -992,7 +1030,10 @@
     "eventsTable": {
       "title": "Events",
       "description": "List of all events emitted by the Search bar component.",
-      "headers": ["Event Name", "Description"],
+      "headers": [
+        "Event Name",
+        "Description"
+      ],
       "rows": [
         {
           "propName": "onToggle",
@@ -1020,7 +1061,6 @@
     "path": "/frontend/components/checkbox",
     "description": "A checkbox component that supports various styles, sizes, and allows for flexible positioning of the label.",
     "installation": [
-     
       {
         "name": "npm",
         "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
@@ -1035,6 +1075,11 @@
         "name": "pnpm",
         "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cubes-solid.svg"
+      },
+      {
+        "name": "bun",
+        "command": "bun add git+https://github.com/Team-Collaborators/Awesome-CL.git",
+        "path": "/icons/lemon-regular.svg"
       }
     ],
     "import": {
@@ -1308,7 +1353,12 @@
     "propsTable": {
       "title": "Checkbox Props",
       "description": "List of all props supported by the Checkbox component.",
-      "headers": ["Prop Name", "Type", "Description", "Default Value"],
+      "headers": [
+        "Prop Name",
+        "Type",
+        "Description",
+        "Default Value"
+      ],
       "rows": [
         {
           "propName": "children",
@@ -1375,7 +1425,10 @@
     "eventsTable": {
       "title": "Events",
       "description": "List of all events emitted by the Checkbox component.",
-      "headers": ["Event Name", "Description"],
+      "headers": [
+        "Event Name",
+        "Description"
+      ],
       "rows": [
         {
           "propName": "onChange",
@@ -1403,7 +1456,6 @@
     "path": "/frontend/components/form",
     "description": "A versatile form component with multiple variants for various use cases like contact, appointment, feedback, inquiry, and newsletter.",
     "installation": [
-     
       {
         "name": "npm",
         "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
@@ -1418,6 +1470,11 @@
         "name": "pnpm",
         "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cubes-solid.svg"
+      },
+      {
+        "name": "bun",
+        "command": "bun add git+https://github.com/Team-Collaborators/Awesome-CL.git",
+        "path": "/icons/lemon-regular.svg"
       }
     ],
     "import": {
@@ -1432,7 +1489,12 @@
             "type": "Form",
             "props": {
               "variant": "contact",
-              "fields": ["firstName", "lastName", "email", "message"]
+              "fields": [
+                "firstName",
+                "lastName",
+                "email",
+                "message"
+              ]
             },
             "children": "Contact Form Content"
           }
@@ -1446,7 +1508,13 @@
             "type": "Form",
             "props": {
               "variant": "appointment",
-              "fields": ["firstName", "lastName", "email", "phone", "date"]
+              "fields": [
+                "firstName",
+                "lastName",
+                "email",
+                "phone",
+                "date"
+              ]
             },
             "children": "Appointment Form Content"
           }
@@ -1460,7 +1528,12 @@
             "type": "Form",
             "props": {
               "variant": "feedback",
-              "fields": ["firstName", "lastName", "email", "feedback"]
+              "fields": [
+                "firstName",
+                "lastName",
+                "email",
+                "feedback"
+              ]
             },
             "children": "Feedback Form Content"
           }
@@ -1474,7 +1547,12 @@
             "type": "Form",
             "props": {
               "variant": "inquiry",
-              "fields": ["firstName", "lastName", "email", "inquiry"]
+              "fields": [
+                "firstName",
+                "lastName",
+                "email",
+                "inquiry"
+              ]
             },
             "children": "Inquiry Form Content"
           }
@@ -1488,7 +1566,10 @@
             "type": "Form",
             "props": {
               "variant": "newsletter",
-              "fields": ["email", "interests"]
+              "fields": [
+                "email",
+                "interests"
+              ]
             },
             "children": "Newsletter Signup Content"
           }
@@ -1499,7 +1580,12 @@
     "propsTable": {
       "title": "Form Props",
       "description": "List of all props supported by the Form component.",
-      "headers": ["Prop Name", "Type", "Description", "Default Value"],
+      "headers": [
+        "Prop Name",
+        "Type",
+        "Description",
+        "Default Value"
+      ],
       "rows": [
         {
           "propName": "variant",
@@ -1560,7 +1646,10 @@
     "eventsTable": {
       "title": "Events",
       "description": "List of all events emitted by the Form component.",
-      "headers": ["Event Name", "Description"],
+      "headers": [
+        "Event Name",
+        "Description"
+      ],
       "rows": [
         {
           "propName": "onSubmit",
@@ -1592,7 +1681,6 @@
     "path": "/frontend/components/input",
     "description": "A customizable form element with adjustable label positioning (above or to the left), size, color, and border styles.",
     "installation": [
-     
       {
         "name": "npm",
         "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
@@ -1607,6 +1695,11 @@
         "name": "pnpm",
         "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cubes-solid.svg"
+      },
+      {
+        "name": "bun",
+        "command": "bun add git+https://github.com/Team-Collaborators/Awesome-CL.git",
+        "path": "/icons/lemon-regular.svg"
       }
     ],
     "import": {
@@ -1813,7 +1906,12 @@
     "propsTable": {
       "title": "Input Props",
       "description": "List of all properties supported by the Input component.",
-      "headers": ["Prop Name", "Type", "Description", "Default Value"],
+      "headers": [
+        "Prop Name",
+        "Type",
+        "Description",
+        "Default Value"
+      ],
       "rows": [
         {
           "propName": "aria",
@@ -1892,7 +1990,10 @@
     "eventsTable": {
       "title": "Events",
       "description": "List of all events emitted by the Input component.",
-      "headers": ["Event Name", "Description"],
+      "headers": [
+        "Event Name",
+        "Description"
+      ],
       "rows": [
         {
           "propName": "onValueChange",
@@ -1916,7 +2017,6 @@
     "path": "/frontend/components/searchbar",
     "description": "A customizable search bar with button element with adjustable positioning, size, color, and border styles.",
     "installation": [
-     
       {
         "name": "npm",
         "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
@@ -1931,6 +2031,11 @@
         "name": "pnpm",
         "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cubes-solid.svg"
+      },
+      {
+        "name": "bun",
+        "command": "bun add git+https://github.com/Team-Collaborators/Awesome-CL.git",
+        "path": "/icons/lemon-regular.svg"
       }
     ],
     "import": {
@@ -2132,7 +2237,12 @@
     "propsTable": {
       "title": "Search Props",
       "description": "List of all properties supported by the Search component.",
-      "headers": ["Prop Name", "Type", "Description", "Default Value"],
+      "headers": [
+        "Prop Name",
+        "Type",
+        "Description",
+        "Default Value"
+      ],
       "rows": [
         {
           "propName": "aria",
@@ -2199,7 +2309,10 @@
     "eventsTable": {
       "title": "Events",
       "description": "List of all events emitted by the Search bar component.",
-      "headers": ["Event Name", "Description"],
+      "headers": [
+        "Event Name",
+        "Description"
+      ],
       "rows": [
         {
           "propName": "onValueChange",
@@ -2227,7 +2340,6 @@
     "path": "/frontend/components/spinner",
     "description": "A customizable spinner component for indicating loading states.",
     "installation": [
-     
       {
         "name": "npm",
         "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
@@ -2242,6 +2354,11 @@
         "name": "pnpm",
         "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cubes-solid.svg"
+      },
+      {
+        "name": "bun",
+        "command": "bun add git+https://github.com/Team-Collaborators/Awesome-CL.git",
+        "path": "/icons/lemon-regular.svg"
       }
     ],
     "import": {
@@ -2397,7 +2514,12 @@
     "propsTable": {
       "title": "Spinner Props",
       "description": "List of all props supported by the Spinner component.",
-      "headers": ["Prop Name", "Type", "Description", "Default Value"],
+      "headers": [
+        "Prop Name",
+        "Type",
+        "Description",
+        "Default Value"
+      ],
       "rows": [
         {
           "propName": "size",
@@ -2457,7 +2579,6 @@
     "path": "/frontend/components/switch",
     "description": "A customizable switch component that toggles between two states.",
     "installation": [
-     
       {
         "name": "npm",
         "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
@@ -2472,6 +2593,11 @@
         "name": "pnpm",
         "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cubes-solid.svg"
+      },
+      {
+        "name": "bun",
+        "command": "bun add git+https://github.com/Team-Collaborators/Awesome-CL.git",
+        "path": "/icons/lemon-regular.svg"
       }
     ],
     "import": {
@@ -2637,7 +2763,12 @@
     "propsTable": {
       "title": "Switch Props",
       "description": "List of all props supported by the Switch component.",
-      "headers": ["Prop Name", "Type", "Description", "Default Value"],
+      "headers": [
+        "Prop Name",
+        "Type",
+        "Description",
+        "Default Value"
+      ],
       "rows": [
         {
           "propName": "aria",
@@ -2698,7 +2829,10 @@
     "eventsTable": {
       "title": "Events",
       "description": "List of all events emitted by the Switch component.",
-      "headers": ["Event Name", "Description"],
+      "headers": [
+        "Event Name",
+        "Description"
+      ],
       "rows": [
         {
           "propName": "onChange",
@@ -2730,7 +2864,6 @@
     "path": "/frontend/components/carousel",
     "description": "A versatile carousel component that can be used in different variants and styles.",
     "installation": [
-     
       {
         "name": "npm",
         "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
@@ -2745,6 +2878,11 @@
         "name": "pnpm",
         "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cubes-solid.svg"
+      },
+      {
+        "name": "bun",
+        "command": "bun add git+https://github.com/Team-Collaborators/Awesome-CL.git",
+        "path": "/icons/lemon-regular.svg"
       }
     ],
     "import": {
@@ -3157,7 +3295,12 @@
     "propsTable": {
       "title": "Carousel Props",
       "description": "List of all props supported by the Carousel component.",
-      "headers": ["Prop Name", "Type", "Description", "Default Value"],
+      "headers": [
+        "Prop Name",
+        "Type",
+        "Description",
+        "Default Value"
+      ],
       "rows": [
         {
           "propName": "images",
@@ -3266,7 +3409,10 @@
     "eventsTable": {
       "title": "Events",
       "description": "List of all events emitted by the Carousel component.",
-      "headers": ["Event Name", "Description"],
+      "headers": [
+        "Event Name",
+        "Description"
+      ],
       "rows": [
         {
           "propName": "onSlideChange",
@@ -3298,7 +3444,6 @@
     "path": "/frontend/components/image",
     "description": "A customizable image component.",
     "installation": [
-     
       {
         "name": "npm",
         "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
@@ -3313,6 +3458,11 @@
         "name": "pnpm",
         "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cubes-solid.svg"
+      },
+      {
+        "name": "bun",
+        "command": "bun add git+https://github.com/Team-Collaborators/Awesome-CL.git",
+        "path": "/icons/lemon-regular.svg"
       }
     ],
     "import": {
@@ -3427,7 +3577,12 @@
     "propsTable": {
       "title": "Modal Props",
       "description": "List of all props supported by the Modal component.",
-      "headers": ["Prop Name", "Type", "Description", "Default Value"],
+      "headers": [
+        "Prop Name",
+        "Type",
+        "Description",
+        "Default Value"
+      ],
       "rows": [
         {
           "propName": "width",
@@ -3494,7 +3649,10 @@
     "eventsTable": {
       "title": "Events",
       "description": "List of all events emitted by the Modal component.",
-      "headers": ["Event Name", "Description"],
+      "headers": [
+        "Event Name",
+        "Description"
+      ],
       "rows": [
         {
           "propName": "onClick",
@@ -3522,7 +3680,6 @@
     "path": "/frontend/components/avatar",
     "description": "A customizable Avatar component that supports DiceBear SVG generation, image sources, sizes, colors, shapes, and additional user details like name and description.",
     "installation": [
-     
       {
         "name": "npm",
         "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
@@ -3537,13 +3694,17 @@
         "name": "pnpm",
         "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cubes-solid.svg"
+      },
+      {
+        "name": "bun",
+        "command": "bun add git+https://github.com/Team-Collaborators/Awesome-CL.git",
+        "path": "/icons/lemon-regular.svg"
       }
     ],
     "import": {
       "code": "import Avatar from 'AwesomeCL';",
       "description": "This code shows how to import the Avatar component from the library."
     },
-
     "examples": [
       {
         "title": "Default",
@@ -3698,7 +3859,12 @@
     "propsTable": {
       "title": "Avatar Props",
       "description": "List of all props supported by the Avatar component.",
-      "headers": ["Prop Name", "Type", "Description", "Default Value"],
+      "headers": [
+        "Prop Name",
+        "Type",
+        "Description",
+        "Default Value"
+      ],
       "rows": [
         {
           "propName": "src",
@@ -3742,7 +3908,6 @@
           "description": "The shape of the avatar.",
           "defaultValue": "'circle'"
         },
-
         {
           "propName": "radius",
           "type": "'none' | 'sm' | 'md' | 'lg' | 'full'",
@@ -3799,7 +3964,6 @@
     "path": "/frontend/components/card",
     "description": "A flexible and customizable card component that supports various layouts, variants, and interactive features.",
     "installation": [
-     
       {
         "name": "npm",
         "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
@@ -3814,6 +3978,11 @@
         "name": "pnpm",
         "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cubes-solid.svg"
+      },
+      {
+        "name": "bun",
+        "command": "bun add git+https://github.com/Team-Collaborators/Awesome-CL.git",
+        "path": "/icons/lemon-regular.svg"
       }
     ],
     "import": {
@@ -4054,7 +4223,12 @@
     "propsTable": {
       "title": "Card Props",
       "description": "List of all props supported by the Card component.",
-      "headers": ["Prop Name", "Type", "Description", "Default Value"],
+      "headers": [
+        "Prop Name",
+        "Type",
+        "Description",
+        "Default Value"
+      ],
       "rows": [
         {
           "propName": "title",
@@ -4142,7 +4316,6 @@
     "path": "/frontend/components/product-card",
     "description": "A reusable and adaptable product card component with multiple themes, dynamic content, and interactivity.",
     "installation": [
-     
       {
         "name": "npm",
         "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
@@ -4157,6 +4330,11 @@
         "name": "pnpm",
         "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cubes-solid.svg"
+      },
+      {
+        "name": "bun",
+        "command": "bun add git+https://github.com/Team-Collaborators/Awesome-CL.git",
+        "path": "/icons/lemon-regular.svg"
       }
     ],
     "import": {
@@ -4206,7 +4384,6 @@
       {
         "title": "Custom Theme",
         "description": "Demonstrates a custom-themed product card with unique styles and a custom image.",
-  
         "components": [
           {
             "type": "ProductCard",
@@ -4218,7 +4395,6 @@
               "originalPrice": 1199.99,
               "discount": 25,
               "image": "/images/vr-headset.jpg",
-  
               "customTheme": {
                 "backgroundColor": "#1E1E2F",
                 "textColor": "#E0E0E0",
@@ -4230,7 +4406,6 @@
                 "discountColor": "#FFD700",
                 "border": "2px solid #2C2C3D",
                 "boxShadow": "4px 4px 10px rgba(77, 20, 91, 0.5), -4px -4px 10px rgba(77, 20, 91, 0.5), -4px 4px 10px rgba(77, 20, 91, 0.5), 4px -4px 10px rgba(77, 20, 91, 0.5)",
-  
                 "nameTextShadow": "2px 2px 5px rgba(0, 0, 0, 0.5)",
                 "descriptionTextShadow": "1px 1px 3px rgba(0, 0, 0, 0.3)"
               }
@@ -4243,7 +4418,12 @@
     "propsTable": {
       "title": "Product Card Props",
       "description": "A list of all properties supported by the Product Card component.",
-      "headers": ["Prop Name", "Type", "Description", "Default Value"],
+      "headers": [
+        "Prop Name",
+        "Type",
+        "Description",
+        "Default Value"
+      ],
       "rows": [
         {
           "propName": "theme",
@@ -4338,5 +4518,4 @@
       ]
     }
   }
-  
 ]
