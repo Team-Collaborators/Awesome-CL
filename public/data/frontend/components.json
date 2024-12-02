@@ -4298,12 +4298,7 @@
     "propsTable": {
       "title": "Product Card Props",
       "description": "A list of all properties supported by the Product Card component.",
-      "headers": [
-        "Prop Name",
-        "Type",
-        "Description",
-        "Default Value"
-      ],
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
       "rows": [
         {
           "propName": "theme",
@@ -4398,4 +4393,4 @@
       ]
     }
   }
-
+]
