@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Playground.scss";
 import Card from "../../component_testing/Card/Card";
 import Image from "../../component_testing/Image/Image";
-
+import DynamicComponent from "../DinamicComponent/DinamicComponent";
 import sofa from "../../assets/images/sofa.jpg";
 
 import snow from "../../assets/images/snow.jpg";
@@ -10,17 +10,12 @@ import glasses from "../../assets/images/high-tech-glasses.jpg";
 import Button from "../../component_testing/Button/Button";
 import Avatar from "../../component_testing/Avatar/Avatar";
 
+import Search from "../../component_testing/Search/Search";
+
 
 const Playground = () => {
-  const [isContentVisible, setIsContentVisible] = useState(false);
-  // Handle toggle of content visibility
-  const handleContentToggle = (newCheckedState) => {
-    setIsContentVisible(newCheckedState);
-  };
-
   return (
     <div className="playground-wrapper">
-      <ProductCard />
       <h1>Playground</h1>
       <p>This is the space to test new components</p>
       <div
@@ -34,10 +29,11 @@ const Playground = () => {
       >
         <br />
 
+
         {/* Card Default */}
 
         {/* Card Default*/}
-        <Card
+        {/* <Card
           variant="subtle"
           size="md"
           radius="md"
@@ -55,7 +51,7 @@ const Playground = () => {
               </Button>
             </>
           }
-        ></Card>
+        ></Card> */}
 
         <Card
           variant="elevated"
@@ -126,9 +122,10 @@ const Playground = () => {
           radius="sm"
           title="Card Horizontal"
           description="This is a horizontal card with an image"
-          image={<Image src={glasses} size="lg" radius="none" />}
+          image={<Image src={snow} radius="none" />}
           variant="outlined"
-          isInteractive={false}
+          isInteractive={true}
+          titleAlignment="left"
           size="lg"
           footer={
             <>
@@ -138,14 +135,15 @@ const Playground = () => {
               </Button>
               <Button
                 style={{ backgroundColor: "black", color: "white" }}
-                radius="sm"
+                radius="none"
                 size="sm"
               >
-                Yes!
+                No!
               </Button>
             </>
           }
         ></Card>
+
       </div>
     </div>
   );

@@ -77,6 +77,10 @@ body {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
+  //background-size: cover;
+  @media (max-width: map.get($breakpoints, "lg")) {
+    background-size: 150%;
+  }
   @media (max-width: map.get($breakpoints, "md")) {
     background-size: 200%;
   }

@@ -262,12 +262,7 @@
     "propsTable": {
       "title": " Button Props",
       "description": "List of all props supported by the Button component.",
-      "headers": [
-        "Prop Name",
-        "Type",
-        "Description",
-        "Default Value"
-      ],
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
       "rows": [
         {
           "propName": "children",
@@ -328,10 +323,7 @@
     "eventsTable": {
       "title": "Events",
       "description": "List of all events emitted by the Button component.",
-      "headers": [
-        "Event Name",
-        "Description"
-      ],
+      "headers": ["Event Name", "Description"],
       "rows": [
         {
           "propName": "onClick",
@@ -528,12 +520,7 @@
     "propsTable": {
       "title": "Modal Props",
       "description": "List of all props supported by the Modal component.",
-      "headers": [
-        "Prop Name",
-        "Type",
-        "Description",
-        "Default Value"
-      ],
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
       "rows": [
         {
           "propName": "children",
@@ -594,10 +581,7 @@
     "eventsTable": {
       "title": "Events",
       "description": "List of all events emitted by the Modal component.",
-      "headers": [
-        "Event Name",
-        "Description"
-      ],
+      "headers": ["Event Name", "Description"],
       "rows": [
         {
           "propName": "onOpen",
@@ -955,12 +939,7 @@
     "propsTable": {
       "title": "Accordion Props",
       "description": "List of all properties supported by the accordion component.",
-      "headers": [
-        "Prop Name",
-        "Type",
-        "Description",
-        "Default Value"
-      ],
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
       "rows": [
         {
           "propName": "aria",
@@ -997,12 +976,7 @@
     "propsTable2": {
       "title": "Accordion Item Props",
       "description": "List of all properties supported by the accordion item component.",
-      "headers": [
-        "Prop Name",
-        "Type",
-        "Description",
-        "Default Value"
-      ],
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
       "rows": [
         {
           "propName": "aria",
@@ -1045,10 +1019,7 @@
     "eventsTable": {
       "title": "Events",
       "description": "List of all events emitted by the Search bar component.",
-      "headers": [
-        "Event Name",
-        "Description"
-      ],
+      "headers": ["Event Name", "Description"],
       "rows": [
         {
           "propName": "onToggle",
@@ -1373,12 +1344,7 @@
     "propsTable": {
       "title": "Checkbox Props",
       "description": "List of all props supported by the Checkbox component.",
-      "headers": [
-        "Prop Name",
-        "Type",
-        "Description",
-        "Default Value"
-      ],
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
       "rows": [
         {
           "propName": "children",
@@ -1445,10 +1411,7 @@
     "eventsTable": {
       "title": "Events",
       "description": "List of all events emitted by the Checkbox component.",
-      "headers": [
-        "Event Name",
-        "Description"
-      ],
+      "headers": ["Event Name", "Description"],
       "rows": [
         {
           "propName": "onChange",
@@ -1514,12 +1477,7 @@
             "type": "Form",
             "props": {
               "variant": "contact",
-              "fields": [
-                "firstName",
-                "lastName",
-                "email",
-                "message"
-              ]
+              "fields": ["firstName", "lastName", "email", "message"]
             },
             "children": "Contact Form Content"
           }
@@ -1533,13 +1491,7 @@
             "type": "Form",
             "props": {
               "variant": "appointment",
-              "fields": [
-                "firstName",
-                "lastName",
-                "email",
-                "phone",
-                "date"
-              ]
+              "fields": ["firstName", "lastName", "email", "phone", "date"]
             },
             "children": "Appointment Form Content"
           }
@@ -1553,12 +1505,7 @@
             "type": "Form",
             "props": {
               "variant": "feedback",
-              "fields": [
-                "firstName",
-                "lastName",
-                "email",
-                "feedback"
-              ]
+              "fields": ["firstName", "lastName", "email", "feedback"]
             },
             "children": "Feedback Form Content"
           }
@@ -1572,12 +1519,7 @@
             "type": "Form",
             "props": {
               "variant": "inquiry",
-              "fields": [
-                "firstName",
-                "lastName",
-                "email",
-                "inquiry"
-              ]
+              "fields": ["firstName", "lastName", "email", "inquiry"]
             },
             "children": "Inquiry Form Content"
           }
@@ -1591,10 +1533,7 @@
             "type": "Form",
             "props": {
               "variant": "newsletter",
-              "fields": [
-                "email",
-                "interests"
-              ]
+              "fields": ["email", "interests"]
             },
             "children": "Newsletter Signup Content"
           }
@@ -1605,12 +1544,7 @@
     "propsTable": {
       "title": "Form Props",
       "description": "List of all props supported by the Form component.",
-      "headers": [
-        "Prop Name",
-        "Type",
-        "Description",
-        "Default Value"
-      ],
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
       "rows": [
         {
           "propName": "variant",
@@ -1671,10 +1605,7 @@
     "eventsTable": {
       "title": "Events",
       "description": "List of all events emitted by the Form component.",
-      "headers": [
-        "Event Name",
-        "Description"
-      ],
+      "headers": ["Event Name", "Description"],
       "rows": [
         {
           "propName": "onSubmit",
@@ -1936,12 +1867,7 @@
     "propsTable": {
       "title": "Input Props",
       "description": "List of all properties supported by the Input component.",
-      "headers": [
-        "Prop Name",
-        "Type",
-        "Description",
-        "Default Value"
-      ],
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
       "rows": [
         {
           "propName": "aria",
@@ -2020,10 +1946,7 @@
     "eventsTable": {
       "title": "Events",
       "description": "List of all events emitted by the Input component.",
-      "headers": [
-        "Event Name",
-        "Description"
-      ],
+      "headers": ["Event Name", "Description"],
       "rows": [
         {
           "propName": "onValueChange",
@@ -2272,12 +2195,7 @@
     "propsTable": {
       "title": "Search Props",
       "description": "List of all properties supported by the Search component.",
-      "headers": [
-        "Prop Name",
-        "Type",
-        "Description",
-        "Default Value"
-      ],
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
       "rows": [
         {
           "propName": "aria",
@@ -2344,10 +2262,7 @@
     "eventsTable": {
       "title": "Events",
       "description": "List of all events emitted by the Search bar component.",
-      "headers": [
-        "Event Name",
-        "Description"
-      ],
+      "headers": ["Event Name", "Description"],
       "rows": [
         {
           "propName": "onValueChange",
@@ -2554,12 +2469,7 @@
     "propsTable": {
       "title": "Spinner Props",
       "description": "List of all props supported by the Spinner component.",
-      "headers": [
-        "Prop Name",
-        "Type",
-        "Description",
-        "Default Value"
-      ],
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
       "rows": [
         {
           "propName": "size",
@@ -2808,12 +2718,7 @@
     "propsTable": {
       "title": "Switch Props",
       "description": "List of all props supported by the Switch component.",
-      "headers": [
-        "Prop Name",
-        "Type",
-        "Description",
-        "Default Value"
-      ],
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
       "rows": [
         {
           "propName": "aria",
@@ -2874,10 +2779,7 @@
     "eventsTable": {
       "title": "Events",
       "description": "List of all events emitted by the Switch component.",
-      "headers": [
-        "Event Name",
-        "Description"
-      ],
+      "headers": ["Event Name", "Description"],
       "rows": [
         {
           "propName": "onChange",
@@ -3345,12 +3247,7 @@
     "propsTable": {
       "title": "Carousel Props",
       "description": "List of all props supported by the Carousel component.",
-      "headers": [
-        "Prop Name",
-        "Type",
-        "Description",
-        "Default Value"
-      ],
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
       "rows": [
         {
           "propName": "images",
@@ -3459,10 +3356,7 @@
     "eventsTable": {
       "title": "Events",
       "description": "List of all events emitted by the Carousel component.",
-      "headers": [
-        "Event Name",
-        "Description"
-      ],
+      "headers": ["Event Name", "Description"],
       "rows": [
         {
           "propName": "onSlideChange",
@@ -3493,7 +3387,7 @@
     "title": "image",
     "path": "/frontend/components/image",
     "description": "A customizable image component.",
-   "installation": [
+    "installation": [
       {
         "name": "CLI",
         "command": "npx create-react-app my-app --template git+https://github.com/Team-Collaborators/Awesome-CL.git",
@@ -3632,12 +3526,7 @@
     "propsTable": {
       "title": "Modal Props",
       "description": "List of all props supported by the Modal component.",
-      "headers": [
-        "Prop Name",
-        "Type",
-        "Description",
-        "Default Value"
-      ],
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
       "rows": [
         {
           "propName": "width",
@@ -3704,10 +3593,7 @@
     "eventsTable": {
       "title": "Events",
       "description": "List of all events emitted by the Modal component.",
-      "headers": [
-        "Event Name",
-        "Description"
-      ],
+      "headers": ["Event Name", "Description"],
       "rows": [
         {
           "propName": "onClick",
@@ -3734,7 +3620,7 @@
     "title": "avatar",
     "path": "/frontend/components/avatar",
     "description": "A customizable Avatar component that supports DiceBear SVG generation, image sources, sizes, colors, shapes, and additional user details like name and description.",
-   "installation": [
+    "installation": [
       {
         "name": "CLI",
         "command": "npx create-react-app my-app --template git+https://github.com/Team-Collaborators/Awesome-CL.git",
@@ -4015,6 +3901,357 @@
         }
       ]
     }
+  },
+  {
+    "title": "card",
+    "path": "/frontend/components/card",
+    "description": "A flexible and customizable card component that supports various layouts, variants, and interactive features.",
+    "installation": [
+      {
+        "name": "CLI",
+        "command": "cli-command-to-install",
+        "path": "/icons/cube-solid.svg"
+      },
+      {
+        "name": "npm",
+        "command": "npm install your-library",
+        "path": "/icons/npm-brands-solid.svg"
+      },
+      {
+        "name": "yarn",
+        "command": "yarn add your-library",
+        "path": "/icons/yarn-brands-solid.svg"
+      },
+      {
+        "name": "pnpm",
+        "command": "pnpm add your-library",
+        "path": "/icons/cubes-solid.svg"
+      },
+      {
+        "name": "bun",
+        "command": "bun add your-library",
+        "path": "/icons/lemon-regular.svg"
+      }
+    ],
+    "import": {
+      "code": "import { Card } from 'AwesomeCL';",
+      "description": "This code shows how to import the Card component from the library."
+    },
+    "examples": [
+      {
+        "title": "Default",
+        "components": [
+          {
+            "type": "Card",
+            "props": {
+              "variant": "subtle",
+              "size": "md",
+              "radius": "md",
+              "title": "Card Title",
+              "description": "This is a default card."
+            },
+            "children": [
+              {
+                "type": "Image",
+                "props": {
+                  "src": "/src/assets/images/sofa.jpg"
+                }
+              }
+            ]
+          }
+        ],
+        "code": "import { Card } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Card title=\"Card Title\" description=\"This is a default card.\" footer=\"Footer content here\" />\n  );\n}"
+      },
+      {
+        "title": "Variants",
+        "components": [
+          {
+            "type": "Card",
+            "props": {
+              "title": "Subtle Variant",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "variant": "subtle"
+            },
+            "children": [
+              {
+                "type": "Image",
+                "props": {
+                  "src": "/src/assets/images/sofa.jpg"
+                }
+              },
+              {
+                "type": "Button",
+                "props": {
+                  "color": "default",
+                  "size": "sm",
+                  "radius": "sm"
+                },
+                "children": "Buy Now"
+              }
+            ]
+          },
+          {
+            "type": "Card",
+            "props": {
+              "title": "Elevated Variant",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "variant": "elevated"
+            },
+            "children": [
+              {
+                "type": "Image",
+                "props": {
+                  "src": "/src/assets/images/sofa.jpg"
+                }
+              },
+              {
+                "type": "Button",
+                "props": {
+                  "color": "default",
+                  "size": "sm",
+                  "radius": "sm"
+                },
+                "children": "Buy Now"
+              }
+            ]
+          },
+          {
+            "type": "Card",
+            "props": {
+              "title": "Outlined Variant",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "variant": "outlined"
+            },
+            "children": [
+              {
+                "type": "Image",
+                "props": {
+                  "src": "/src/assets/images/sofa.jpg"
+                }
+              },
+              {
+                "type": "Button",
+                "props": {
+                  "color": "default",
+                  "size": "sm",
+                  "radius": "sm"
+                },
+                "children": "Buy Now"
+              }
+            ]
+          }
+        ],
+        "code": "import { Card, Image } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Card \n      title=\"Card with Image\" \n      description=\"This card has an image at the top.\"\n      imageTop\n      image={<Image src='https://example.com/image.jpg' alt='Example Image' />}\n    />\n  );\n}"
+      },
+      {
+        "title": "Sizes",
+        "components": [
+          {
+            "type": "Card",
+            "props": {
+              "title": "Small Card",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "size": "sm"
+            }
+          },
+          {
+            "type": "Card",
+            "props": {
+              "title": "Medium Card",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "size": "md"
+            }
+          },
+          {
+            "type": "Card",
+            "props": {
+              "title": "Large Card",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "size": "lg"
+            },
+            "children": [
+              {
+                "type": "Button",
+                "props": {
+                  "color": "primary",
+                  "size": "sm",
+                  "radius": "sm"
+                },
+                "children": "Primary"
+              }
+            ]
+          }
+        ],
+        "code": "import { Card, Image } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Card \n      title=\"Card with Image\" \n      description=\"This card has an image at the top.\"\n      imageTop\n      image={<Image src='https://example.com/image.jpg' alt='Example Image' />}\n    />\n  );\n}"
+      },
+      {
+        "title": "Header Image",
+        "components": [
+          {
+            "type": "Card",
+            "props": {
+              "title": "Card with Header Image",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "imageTop": true
+            },
+            "children": [
+              {
+                "type": "Image",
+                "props": {
+                  "src": "/src/assets/images/sofa2.jpg",
+                  "radius": "none"
+                }
+              }
+            ]
+          }
+        ],
+        "code": "import { Card, Image } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Card \n      title=\"Card with Image\" \n      description=\"This card has an image at the top.\"\n      imageTop\n      image={<Image src='https://example.com/image.jpg' alt='Example Image' />}\n    />\n  );\n}"
+      },
+      {
+        "title": "Horizontal Layout",
+        "components": [
+          {
+            "type": "Card",
+            "props": {
+              "title": "Horizontal Card",
+              "description": "This card uses a horizontal layout.",
+              "horizontal": true,
+              "size": "lg"
+            },
+            "children": [
+              {
+                "type": "Image",
+                "props": {
+                  "src": "/src/assets/images/snow.jpg",
+                  "radius": "none",
+                  "objectFit": "cover"
+                }
+              }
+            ]
+          }
+        ],
+        "code": "import { Card, Image } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Card \n      title=\"Horizontal Card\" \n      description=\"This card uses a horizontal layout.\"\n      horizontal\n      image={<Image src='https://example.com/image.jpg' alt='Example Image' />}\n    />\n  );\n}"
+      },
+      {
+        "title": "Avatar",
+        "components": [
+          {
+            "type": "Card",
+            "props": {
+              "variant": "subtle",
+              "title": "Medium Elevated Card with Avatar",
+              "color": "primary",
+              "description": "This is a medium card with elevated variant and an avatar",
+              "titleAlignment": "left",
+              "footerAlignment": "right"
+            },
+            "children": [
+              {
+                "type": "Avatar",
+                "props": {
+                  "avatarName": "Brian",
+                  "name": "Brian"
+                }
+              },
+              {
+                "type": "Button",
+                "props": {
+                  "color": "primary",
+                  "size": "sm",
+                  "radius": "sm"
+                },
+                "children": "Primary"
+              }
+            ]
+          }
+        ],
+        "code": "import { Accordion, AccordionItem } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Accordion>\n            <AccordionItem title='Section 1'>\n              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolorem unde quis, ea ratione obcaecati. Quaerat autem unde cupiditate ipsa.\n            </AccordionItem>\n            <AccordionItem title='Section 2'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium unde, amet voluptatibus soluta reprehenderit sed laudantium optio ut sint nemo illum earum ducimus tempora nulla quia nam placeat explicabo facilis quisquam minus? Fuga, labore facilis.\n            </AccordionItem>\n            <AccordionItem title='Section 3'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, est exercitationem consequatur dolorum architecto molestiae aspernatur voluptatem ducimus nisi ea quo, atque tempora magni necessitatibus.\n            </AccordionItem>\n    </Accordion>\n );\n}"
+      }
+    ],
+    "propsTable": {
+      "title": "Card Props",
+      "description": "List of all props supported by the Card component.",
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
+      "rows": [
+        {
+          "propName": "title",
+          "type": "string",
+          "description": "The title of the card.",
+          "defaultValue": "''"
+        },
+        {
+          "propName": "description",
+          "type": "string",
+          "description": "The description text of the card.",
+          "defaultValue": "''"
+        },
+        {
+          "propName": "image",
+          "type": "node",
+          "description": "Optional image to display in the card.",
+          "defaultValue": "null"
+        },
+        {
+          "propName": "imageTop",
+          "type": "boolean",
+          "description": "Determines if the image should be at the top of the card.",
+          "defaultValue": "false"
+        },
+        {
+          "propName": "avatar",
+          "type": "node",
+          "description": "Optional avatar to display in the card.",
+          "defaultValue": "null"
+        },
+        {
+          "propName": "footer",
+          "type": "node",
+          "description": "Optional footer content for the card.",
+          "defaultValue": "null"
+        },
+        {
+          "propName": "variant",
+          "type": "string",
+          "description": "Visual style of the card. Options: 'subtle', 'elevated', 'outlined'.",
+          "defaultValue": "'subtle'"
+        },
+        {
+          "propName": "size",
+          "type": "string",
+          "description": "Size of the card. Options: 'sm', 'md', 'lg'.",
+          "defaultValue": "'md'"
+        },
+        {
+          "propName": "radius",
+          "type": "string",
+          "description": "Border radius of the card. Options: 'none', 'sm', 'md', 'lg', 'full'.",
+          "defaultValue": "'md'"
+        },
+        {
+          "propName": "horizontal",
+          "type": "boolean",
+          "description": "Switches the card layout to horizontal.",
+          "defaultValue": "false"
+        },
+        {
+          "propName": "className",
+          "type": "string",
+          "description": "Additional CSS classes for the card.",
+          "defaultValue": "''"
+        },
+        {
+          "propName": "style",
+          "type": "object",
+          "description": "Inline styles for the card.",
+          "defaultValue": "undefined"
+        },
+        {
+          "propName": "aria",
+          "type": "string",
+          "description": "ARIA role for accessibility.",
+          "defaultValue": "'card'"
+        }
+      ]
+    }
   }
 ]
-
