@@ -257,12 +257,7 @@
     "propsTable": {
       "title": " Button Props",
       "description": "List of all props supported by the Button component.",
-      "headers": [
-        "Prop Name",
-        "Type",
-        "Description",
-        "Default Value"
-      ],
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
       "rows": [
         {
           "propName": "children",
@@ -323,10 +318,7 @@
     "eventsTable": {
       "title": "Events",
       "description": "List of all events emitted by the Button component.",
-      "headers": [
-        "Event Name",
-        "Description"
-      ],
+      "headers": ["Event Name", "Description"],
       "rows": [
         {
           "propName": "onClick",
@@ -518,12 +510,7 @@
     "propsTable": {
       "title": "Modal Props",
       "description": "List of all props supported by the Modal component.",
-      "headers": [
-        "Prop Name",
-        "Type",
-        "Description",
-        "Default Value"
-      ],
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
       "rows": [
         {
           "propName": "children",
@@ -584,10 +571,7 @@
     "eventsTable": {
       "title": "Events",
       "description": "List of all events emitted by the Modal component.",
-      "headers": [
-        "Event Name",
-        "Description"
-      ],
+      "headers": ["Event Name", "Description"],
       "rows": [
         {
           "propName": "onOpen",
@@ -940,12 +924,7 @@
     "propsTable": {
       "title": "Accordion Props",
       "description": "List of all properties supported by the accordion component.",
-      "headers": [
-        "Prop Name",
-        "Type",
-        "Description",
-        "Default Value"
-      ],
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
       "rows": [
         {
           "propName": "aria",
@@ -982,12 +961,7 @@
     "propsTable2": {
       "title": "Accordion Item Props",
       "description": "List of all properties supported by the accordion item component.",
-      "headers": [
-        "Prop Name",
-        "Type",
-        "Description",
-        "Default Value"
-      ],
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
       "rows": [
         {
           "propName": "aria",
@@ -1030,10 +1004,7 @@
     "eventsTable": {
       "title": "Events",
       "description": "List of all events emitted by the Search bar component.",
-      "headers": [
-        "Event Name",
-        "Description"
-      ],
+      "headers": ["Event Name", "Description"],
       "rows": [
         {
           "propName": "onToggle",
@@ -1353,12 +1324,7 @@
     "propsTable": {
       "title": "Checkbox Props",
       "description": "List of all props supported by the Checkbox component.",
-      "headers": [
-        "Prop Name",
-        "Type",
-        "Description",
-        "Default Value"
-      ],
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
       "rows": [
         {
           "propName": "children",
@@ -1425,10 +1391,7 @@
     "eventsTable": {
       "title": "Events",
       "description": "List of all events emitted by the Checkbox component.",
-      "headers": [
-        "Event Name",
-        "Description"
-      ],
+      "headers": ["Event Name", "Description"],
       "rows": [
         {
           "propName": "onChange",
@@ -1489,12 +1452,7 @@
             "type": "Form",
             "props": {
               "variant": "contact",
-              "fields": [
-                "firstName",
-                "lastName",
-                "email",
-                "message"
-              ]
+              "fields": ["firstName", "lastName", "email", "message"]
             },
             "children": "Contact Form Content"
           }
@@ -1508,13 +1466,7 @@
             "type": "Form",
             "props": {
               "variant": "appointment",
-              "fields": [
-                "firstName",
-                "lastName",
-                "email",
-                "phone",
-                "date"
-              ]
+              "fields": ["firstName", "lastName", "email", "phone", "date"]
             },
             "children": "Appointment Form Content"
           }
@@ -1528,12 +1480,7 @@
             "type": "Form",
             "props": {
               "variant": "feedback",
-              "fields": [
-                "firstName",
-                "lastName",
-                "email",
-                "feedback"
-              ]
+              "fields": ["firstName", "lastName", "email", "feedback"]
             },
             "children": "Feedback Form Content"
           }
@@ -1547,12 +1494,7 @@
             "type": "Form",
             "props": {
               "variant": "inquiry",
-              "fields": [
-                "firstName",
-                "lastName",
-                "email",
-                "inquiry"
-              ]
+              "fields": ["firstName", "lastName", "email", "inquiry"]
             },
             "children": "Inquiry Form Content"
           }
@@ -1566,10 +1508,7 @@
             "type": "Form",
             "props": {
               "variant": "newsletter",
-              "fields": [
-                "email",
-                "interests"
-              ]
+              "fields": ["email", "interests"]
             },
             "children": "Newsletter Signup Content"
           }
@@ -1580,12 +1519,7 @@
     "propsTable": {
       "title": "Form Props",
       "description": "List of all props supported by the Form component.",
-      "headers": [
-        "Prop Name",
-        "Type",
-        "Description",
-        "Default Value"
-      ],
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
       "rows": [
         {
           "propName": "variant",
@@ -1646,10 +1580,7 @@
     "eventsTable": {
       "title": "Events",
       "description": "List of all events emitted by the Form component.",
-      "headers": [
-        "Event Name",
-        "Description"
-      ],
+      "headers": ["Event Name", "Description"],
       "rows": [
         {
           "propName": "onSubmit",
@@ -1906,12 +1837,7 @@
     "propsTable": {
       "title": "Input Props",
       "description": "List of all properties supported by the Input component.",
-      "headers": [
-        "Prop Name",
-        "Type",
-        "Description",
-        "Default Value"
-      ],
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
       "rows": [
         {
           "propName": "aria",
@@ -1990,10 +1916,7 @@
     "eventsTable": {
       "title": "Events",
       "description": "List of all events emitted by the Input component.",
-      "headers": [
-        "Event Name",
-        "Description"
-      ],
+      "headers": ["Event Name", "Description"],
       "rows": [
         {
           "propName": "onValueChange",
@@ -2237,12 +2160,7 @@
     "propsTable": {
       "title": "Search Props",
       "description": "List of all properties supported by the Search component.",
-      "headers": [
-        "Prop Name",
-        "Type",
-        "Description",
-        "Default Value"
-      ],
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
       "rows": [
         {
           "propName": "aria",
@@ -2309,10 +2227,7 @@
     "eventsTable": {
       "title": "Events",
       "description": "List of all events emitted by the Search bar component.",
-      "headers": [
-        "Event Name",
-        "Description"
-      ],
+      "headers": ["Event Name", "Description"],
       "rows": [
         {
           "propName": "onValueChange",
@@ -2514,12 +2429,7 @@
     "propsTable": {
       "title": "Spinner Props",
       "description": "List of all props supported by the Spinner component.",
-      "headers": [
-        "Prop Name",
-        "Type",
-        "Description",
-        "Default Value"
-      ],
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
       "rows": [
         {
           "propName": "size",
@@ -2763,12 +2673,7 @@
     "propsTable": {
       "title": "Switch Props",
       "description": "List of all props supported by the Switch component.",
-      "headers": [
-        "Prop Name",
-        "Type",
-        "Description",
-        "Default Value"
-      ],
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
       "rows": [
         {
           "propName": "aria",
@@ -2829,10 +2734,7 @@
     "eventsTable": {
       "title": "Events",
       "description": "List of all events emitted by the Switch component.",
-      "headers": [
-        "Event Name",
-        "Description"
-      ],
+      "headers": ["Event Name", "Description"],
       "rows": [
         {
           "propName": "onChange",
@@ -3295,12 +3197,7 @@
     "propsTable": {
       "title": "Carousel Props",
       "description": "List of all props supported by the Carousel component.",
-      "headers": [
-        "Prop Name",
-        "Type",
-        "Description",
-        "Default Value"
-      ],
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
       "rows": [
         {
           "propName": "images",
@@ -3409,10 +3306,7 @@
     "eventsTable": {
       "title": "Events",
       "description": "List of all events emitted by the Carousel component.",
-      "headers": [
-        "Event Name",
-        "Description"
-      ],
+      "headers": ["Event Name", "Description"],
       "rows": [
         {
           "propName": "onSlideChange",
@@ -3577,12 +3471,7 @@
     "propsTable": {
       "title": "Modal Props",
       "description": "List of all props supported by the Modal component.",
-      "headers": [
-        "Prop Name",
-        "Type",
-        "Description",
-        "Default Value"
-      ],
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
       "rows": [
         {
           "propName": "width",
@@ -3649,10 +3538,7 @@
     "eventsTable": {
       "title": "Events",
       "description": "List of all events emitted by the Modal component.",
-      "headers": [
-        "Event Name",
-        "Description"
-      ],
+      "headers": ["Event Name", "Description"],
       "rows": [
         {
           "propName": "onClick",
@@ -3859,12 +3745,7 @@
     "propsTable": {
       "title": "Avatar Props",
       "description": "List of all props supported by the Avatar component.",
-      "headers": [
-        "Prop Name",
-        "Type",
-        "Description",
-        "Default Value"
-      ],
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
       "rows": [
         {
           "propName": "src",
@@ -4000,14 +3881,23 @@
               "size": "md",
               "radius": "md",
               "title": "Card Title",
-              "description": "This is a default card."
+              "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
             },
             "children": [
               {
                 "type": "Image",
                 "props": {
-                  "src": "/src/assets/images/sofa.jpg"
+                  "src": "/images/sofa.webp"
                 }
+              },
+              {
+                "type": "Button",
+                "props": {
+                  "color": "default",
+                  "size": "sm",
+                  "radius": "sm"
+                },
+                "children": "Buy Now"
               }
             ]
           }
@@ -4028,7 +3918,7 @@
               {
                 "type": "Image",
                 "props": {
-                  "src": "/src/assets/images/sofa.jpg"
+                  "src": "/images/sofa.webp"
                 }
               },
               {
@@ -4053,7 +3943,7 @@
               {
                 "type": "Image",
                 "props": {
-                  "src": "/src/assets/images/sofa.jpg"
+                  "src": "/images/sofa.webp"
                 }
               },
               {
@@ -4078,7 +3968,7 @@
               {
                 "type": "Image",
                 "props": {
-                  "src": "/src/assets/images/sofa.jpg"
+                  "src": "/images/sofa.webp"
                 }
               },
               {
@@ -4110,7 +4000,7 @@
             "type": "Card",
             "props": {
               "title": "Medium Card",
-              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
               "size": "md"
             }
           },
@@ -4118,20 +4008,9 @@
             "type": "Card",
             "props": {
               "title": "Large Card",
-              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. ",
               "size": "lg"
-            },
-            "children": [
-              {
-                "type": "Button",
-                "props": {
-                  "color": "primary",
-                  "size": "sm",
-                  "radius": "sm"
-                },
-                "children": "Primary"
-              }
-            ]
+            }
           }
         ],
         "code": "import { Card, Image } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Card \n      title=\"Card with Image\" \n      description=\"This card has an image at the top.\"\n      imageTop\n      image={<Image src='https://example.com/image.jpg' alt='Example Image' />}\n    />\n  );\n}"
@@ -4150,9 +4029,18 @@
               {
                 "type": "Image",
                 "props": {
-                  "src": "/src/assets/images/sofa2.jpg",
+                  "src": "/images/sofa.webp",
                   "radius": "none"
                 }
+              },
+              {
+                "type": "Button",
+                "props": {
+                  "color": "default",
+                  "size": "sm",
+                  "radius": "sm"
+                },
+                "children": "Buy Now"
               }
             ]
           }
@@ -4166,7 +4054,7 @@
             "type": "Card",
             "props": {
               "title": "Horizontal Card",
-              "description": "This card uses a horizontal layout.",
+              "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.",
               "horizontal": true,
               "size": "lg"
             },
@@ -4174,7 +4062,7 @@
               {
                 "type": "Image",
                 "props": {
-                  "src": "/src/assets/images/snow.jpg",
+                  "src": "/images/bag.webp",
                   "radius": "none",
                   "objectFit": "cover"
                 }
@@ -4223,12 +4111,7 @@
     "propsTable": {
       "title": "Card Props",
       "description": "List of all props supported by the Card component.",
-      "headers": [
-        "Prop Name",
-        "Type",
-        "Description",
-        "Default Value"
-      ],
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
       "rows": [
         {
           "propName": "title",
@@ -4384,7 +4267,7 @@
       {
         "title": "Custom Theme",
         "description": "Demonstrates a custom-themed product card with unique styles and a custom image.",
-  
+
         "components": [
           {
             "type": "ProductCard",
@@ -4396,7 +4279,7 @@
               "originalPrice": 1199.99,
               "discount": 25,
               "image": "/images/vr-headset.jpg",
-  
+
               "customTheme": {
                 "backgroundColor": "#1E1E2F",
                 "textColor": "#E0E0E0",
@@ -4408,7 +4291,7 @@
                 "discountColor": "#FFD700",
                 "border": "2px solid #2C2C3D",
                 "boxShadow": "4px 4px 10px rgba(77, 20, 91, 0.5), -4px -4px 10px rgba(77, 20, 91, 0.5), -4px 4px 10px rgba(77, 20, 91, 0.5), 4px -4px 10px rgba(77, 20, 91, 0.5)",
-  
+
                 "nameTextShadow": "2px 2px 5px rgba(0, 0, 0, 0.5)",
                 "descriptionTextShadow": "1px 1px 3px rgba(0, 0, 0, 0.3)"
               }
@@ -4516,5 +4399,4 @@
       ]
     }
   }
-  
 ]

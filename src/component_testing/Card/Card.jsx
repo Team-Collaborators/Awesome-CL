@@ -9,7 +9,7 @@ const Card = ({
   size = "md",
   radius = "md",
   children,
-  isInteractive = false,
+  isInteractive = true,
   horizontal = false,
   imageTop = false,
   avatar = null,
