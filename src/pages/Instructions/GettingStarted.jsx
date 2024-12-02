@@ -5,11 +5,7 @@ import { Link } from "react-router-dom";
 
 const GettingStarted = () => {
   const installData = [
-    {
-      name: "CLI",
-      command: "cli-command-to-install",
-      path: "/icons/cube-solid.svg",
-    },
+
     {
       name: "npm",
       command:
@@ -36,7 +32,7 @@ const GettingStarted = () => {
     },
   ];
 
-  const [installation, setInstallation] = useState("cli-command-to-install");
+  const [installation, setInstallation] = useState("npm install git+https://github.com/Team-Collaborators/Awesome-CL.git");
 
   return (
     <div className={styles.page}>
