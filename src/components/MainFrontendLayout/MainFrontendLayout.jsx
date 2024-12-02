@@ -8,7 +8,9 @@ import styles from "./MainFrontendLayout.module.scss";
 export function MainFrontendLayout({ data }) {
   const { name } = useParams();
   const [component, setComponent] = useState(null);
-  const [installation, setInstallation] = useState("cli-command-to-install");
+  const [installation, setInstallation] = useState(
+    "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git"
+  );
 
   useEffect(() => {
     if (data && data.length >= 2) {

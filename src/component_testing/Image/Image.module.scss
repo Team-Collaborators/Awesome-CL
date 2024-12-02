@@ -4,13 +4,15 @@
   display: inline-block;
   position: relative;
   overflow: hidden;
-  margin: auto;
+  //margin: auto;
 }
 
 .image {
   display: block;
   object-fit: cover;
   border-radius: inherit;
+  min-height: 100%;
+  min-width: 100%;
 }
 
 .zoomedWrapper:hover {

@@ -32,6 +32,8 @@
     width: 240px;
     margin: 10px;
     transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: var(--background-color-transparent);
 
     &:hover {
       transform: translateY(-5px);
