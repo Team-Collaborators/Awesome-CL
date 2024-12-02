@@ -39,6 +39,7 @@ export const sidebarLinks = {
         { path: "/frontend/components/accordion", title: "Accordion" },
         { path: "/frontend/components/image", title: "Image" },
         { path: "/frontend/components/switch", title: "Switch" },
+        { path: "/frontend/components/product-card", title: "ProductCard" },
       ].sort((a, b) => a.title.localeCompare(b.title)),
     },
     // {

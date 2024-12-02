@@ -12,7 +12,6 @@ export function RenderPages({ file }) {
   let { data, loading, error } = fetchData(`/data/${file}.json`);
   const [pageType, setPageType] = useState(null);
   // const [were, setWere] = useState(true);
-
   useEffect(() => {
     const path = file.split("/");
     if (path[0] === "backend") {

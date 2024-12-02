@@ -9,7 +9,9 @@ import snow from "../../assets/images/snow.jpg";
 import glasses from "../../assets/images/high-tech-glasses.jpg";
 import Button from "../../component_testing/Button/Button";
 import Avatar from "../../component_testing/Avatar/Avatar";
+
 import Search from "../../component_testing/Search/Search";
+
 
 const Playground = () => {
   return (
@@ -26,6 +28,7 @@ const Playground = () => {
         }}
       >
         <br />
+
 
         {/* Card Default */}
 
@@ -140,6 +143,7 @@ const Playground = () => {
             </>
           }
         ></Card>
+
       </div>
     </div>
   );

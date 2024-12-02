@@ -4,6 +4,7 @@
   min-height: 50vh;
   padding: 4rem 2rem;
   text-align: center;
+  margin-top: 7rem;
 
   .feature-section-title {
     font-size: $h2-font-size;
@@ -32,7 +33,7 @@
 
   &:hover {
     cursor: pointer;
-    // box-shadow: 0 10px 20px $shadow-strong;
+
     &::before {
       left: 0;
       animation: borderSlide 0.9s ease-in-out forwards;
@@ -71,6 +72,7 @@
   }
 
   &::after {
+    border: $border-color;
     content: "";
     position: absolute;
     top: 2px;

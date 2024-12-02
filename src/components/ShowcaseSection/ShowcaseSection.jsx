@@ -54,10 +54,7 @@ const showcaseItems = [
     link: "/frontend/components/image",
   },
   {
-    component: (
-      <Input color="secondary" size="sm" border="bottom">
-      </Input>
-    ),
+    component: <Input color="secondary" size="sm" border="bottom"></Input>,
     title: "Input",
     link: "/frontend/components/input",
   },
