@@ -4,11 +4,7 @@
     "path": "/frontend/components/button",
     "description": "A versatile button component that can be used in different styles and sizes.",
     "installation": [
-      {
-        "name": "CLI",
-        "command": "npx create-react-app my-app --template git+https://github.com/Team-Collaborators/Awesome-CL.git",
-        "path": "/icons/cube-solid.svg"
-      },
+     
       {
         "name": "npm",
         "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
@@ -23,11 +19,6 @@
         "name": "pnpm",
         "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cubes-solid.svg"
-      },
-      {
-        "name": "bun",
-        "command": "bun add git+https://github.com/Team-Collaborators/Awesome-CL.git",
-        "path": "/icons/lemon-regular.svg"
       }
     ],
     "import": {
@@ -351,11 +342,7 @@
     "path": "/frontend/components/modal",
     "description": "A modal component that can be customized with various sizes, placements, scroll options, and backdrop styles.",
     "installation": [
-      {
-        "name": "CLI",
-        "command": "npx create-react-app my-app --template git+https://github.com/Team-Collaborators/Awesome-CL.git",
-        "path": "/icons/cube-solid.svg"
-      },
+     
       {
         "name": "npm",
         "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
@@ -370,11 +357,6 @@
         "name": "pnpm",
         "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cubes-solid.svg"
-      },
-      {
-        "name": "bun",
-        "command": "bun add git+https://github.com/Team-Collaborators/Awesome-CL.git",
-        "path": "/icons/lemon-regular.svg"
       }
     ],
     "import": {
@@ -621,11 +603,7 @@
     "path": "/frontend/components/accordion",
     "description": "A customizable accordion that comes in different variants.",
     "installation": [
-      {
-        "name": "CLI",
-        "command": "npx create-react-app my-app --template git+https://github.com/Team-Collaborators/Awesome-CL.git",
-        "path": "/icons/cube-solid.svg"
-      },
+     
       {
         "name": "npm",
         "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
@@ -640,11 +618,6 @@
         "name": "pnpm",
         "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cubes-solid.svg"
-      },
-      {
-        "name": "bun",
-        "command": "bun add git+https://github.com/Team-Collaborators/Awesome-CL.git",
-        "path": "/icons/lemon-regular.svg"
       }
     ],
     "import": {
@@ -1047,11 +1020,7 @@
     "path": "/frontend/components/checkbox",
     "description": "A checkbox component that supports various styles, sizes, and allows for flexible positioning of the label.",
     "installation": [
-      {
-        "name": "CLI",
-        "command": "npx create-react-app my-app --template git+https://github.com/Team-Collaborators/Awesome-CL.git",
-        "path": "/icons/cube-solid.svg"
-      },
+     
       {
         "name": "npm",
         "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
@@ -1066,11 +1035,6 @@
         "name": "pnpm",
         "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cubes-solid.svg"
-      },
-      {
-        "name": "bun",
-        "command": "bun add git+https://github.com/Team-Collaborators/Awesome-CL.git",
-        "path": "/icons/lemon-regular.svg"
       }
     ],
     "import": {
@@ -1439,11 +1403,7 @@
     "path": "/frontend/components/form",
     "description": "A versatile form component with multiple variants for various use cases like contact, appointment, feedback, inquiry, and newsletter.",
     "installation": [
-      {
-        "name": "CLI",
-        "command": "npx create-react-app my-app --template git+https://github.com/Team-Collaborators/Awesome-CL.git",
-        "path": "/icons/cube-solid.svg"
-      },
+     
       {
         "name": "npm",
         "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
@@ -1458,11 +1418,6 @@
         "name": "pnpm",
         "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cubes-solid.svg"
-      },
-      {
-        "name": "bun",
-        "command": "bun add git+https://github.com/Team-Collaborators/Awesome-CL.git",
-        "path": "/icons/lemon-regular.svg"
       }
     ],
     "import": {
@@ -1637,11 +1592,7 @@
     "path": "/frontend/components/input",
     "description": "A customizable form element with adjustable label positioning (above or to the left), size, color, and border styles.",
     "installation": [
-      {
-        "name": "CLI",
-        "command": "npx create-react-app my-app --template git+https://github.com/Team-Collaborators/Awesome-CL.git",
-        "path": "/icons/cube-solid.svg"
-      },
+     
       {
         "name": "npm",
         "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
@@ -1656,11 +1607,6 @@
         "name": "pnpm",
         "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cubes-solid.svg"
-      },
-      {
-        "name": "bun",
-        "command": "bun add git+https://github.com/Team-Collaborators/Awesome-CL.git",
-        "path": "/icons/lemon-regular.svg"
       }
     ],
     "import": {
@@ -1970,11 +1916,7 @@
     "path": "/frontend/components/searchbar",
     "description": "A customizable search bar with button element with adjustable positioning, size, color, and border styles.",
     "installation": [
-      {
-        "name": "CLI",
-        "command": "npx create-react-app my-app --template git+https://github.com/Team-Collaborators/Awesome-CL.git",
-        "path": "/icons/cube-solid.svg"
-      },
+     
       {
         "name": "npm",
         "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
@@ -1989,11 +1931,6 @@
         "name": "pnpm",
         "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cubes-solid.svg"
-      },
-      {
-        "name": "bun",
-        "command": "bun add git+https://github.com/Team-Collaborators/Awesome-CL.git",
-        "path": "/icons/lemon-regular.svg"
       }
     ],
     "import": {
@@ -2290,11 +2227,7 @@
     "path": "/frontend/components/spinner",
     "description": "A customizable spinner component for indicating loading states.",
     "installation": [
-      {
-        "name": "CLI",
-        "command": "npx create-react-app my-app --template git+https://github.com/Team-Collaborators/Awesome-CL.git",
-        "path": "/icons/cube-solid.svg"
-      },
+     
       {
         "name": "npm",
         "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
@@ -2309,11 +2242,6 @@
         "name": "pnpm",
         "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cubes-solid.svg"
-      },
-      {
-        "name": "bun",
-        "command": "bun add git+https://github.com/Team-Collaborators/Awesome-CL.git",
-        "path": "/icons/lemon-regular.svg"
       }
     ],
     "import": {
@@ -2529,11 +2457,7 @@
     "path": "/frontend/components/switch",
     "description": "A customizable switch component that toggles between two states.",
     "installation": [
-      {
-        "name": "CLI",
-        "command": "npx create-react-app my-app --template git+https://github.com/Team-Collaborators/Awesome-CL.git",
-        "path": "/icons/cube-solid.svg"
-      },
+     
       {
         "name": "npm",
         "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
@@ -2548,11 +2472,6 @@
         "name": "pnpm",
         "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cubes-solid.svg"
-      },
-      {
-        "name": "bun",
-        "command": "bun add git+https://github.com/Team-Collaborators/Awesome-CL.git",
-        "path": "/icons/lemon-regular.svg"
       }
     ],
     "import": {
@@ -2811,11 +2730,7 @@
     "path": "/frontend/components/carousel",
     "description": "A versatile carousel component that can be used in different variants and styles.",
     "installation": [
-      {
-        "name": "CLI",
-        "command": "npx create-react-app my-app --template git+https://github.com/Team-Collaborators/Awesome-CL.git",
-        "path": "/icons/cube-solid.svg"
-      },
+     
       {
         "name": "npm",
         "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
@@ -2830,11 +2745,6 @@
         "name": "pnpm",
         "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cubes-solid.svg"
-      },
-      {
-        "name": "bun",
-        "command": "bun add git+https://github.com/Team-Collaborators/Awesome-CL.git",
-        "path": "/icons/lemon-regular.svg"
       }
     ],
     "import": {
@@ -3388,11 +3298,7 @@
     "path": "/frontend/components/image",
     "description": "A customizable image component.",
     "installation": [
-      {
-        "name": "CLI",
-        "command": "npx create-react-app my-app --template git+https://github.com/Team-Collaborators/Awesome-CL.git",
-        "path": "/icons/cube-solid.svg"
-      },
+     
       {
         "name": "npm",
         "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
@@ -3407,11 +3313,6 @@
         "name": "pnpm",
         "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cubes-solid.svg"
-      },
-      {
-        "name": "bun",
-        "command": "bun add git+https://github.com/Team-Collaborators/Awesome-CL.git",
-        "path": "/icons/lemon-regular.svg"
       }
     ],
     "import": {
@@ -3621,11 +3522,7 @@
     "path": "/frontend/components/avatar",
     "description": "A customizable Avatar component that supports DiceBear SVG generation, image sources, sizes, colors, shapes, and additional user details like name and description.",
     "installation": [
-      {
-        "name": "CLI",
-        "command": "npx create-react-app my-app --template git+https://github.com/Team-Collaborators/Awesome-CL.git",
-        "path": "/icons/cube-solid.svg"
-      },
+     
       {
         "name": "npm",
         "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
@@ -3640,11 +3537,6 @@
         "name": "pnpm",
         "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cubes-solid.svg"
-      },
-      {
-        "name": "bun",
-        "command": "bun add git+https://github.com/Team-Collaborators/Awesome-CL.git",
-        "path": "/icons/lemon-regular.svg"
       }
     ],
     "import": {
@@ -3907,30 +3799,21 @@
     "path": "/frontend/components/card",
     "description": "A flexible and customizable card component that supports various layouts, variants, and interactive features.",
     "installation": [
-      {
-        "name": "CLI",
-        "command": "cli-command-to-install",
-        "path": "/icons/cube-solid.svg"
-      },
+     
       {
         "name": "npm",
-        "command": "npm install your-library",
+        "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/npm-brands-solid.svg"
       },
       {
         "name": "yarn",
-        "command": "yarn add your-library",
+        "command": "yarn add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/yarn-brands-solid.svg"
       },
       {
         "name": "pnpm",
-        "command": "pnpm add your-library",
+        "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cubes-solid.svg"
-      },
-      {
-        "name": "bun",
-        "command": "bun add your-library",
-        "path": "/icons/lemon-regular.svg"
       }
     ],
     "import": {
@@ -4253,5 +4136,207 @@
         }
       ]
     }
+  },
+  {
+    "title": "product-card",
+    "path": "/frontend/components/product-card",
+    "description": "A reusable and adaptable product card component with multiple themes, dynamic content, and interactivity.",
+    "installation": [
+     
+      {
+        "name": "npm",
+        "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
+        "path": "/icons/npm-brands-solid.svg"
+      },
+      {
+        "name": "yarn",
+        "command": "yarn add git+https://github.com/Team-Collaborators/Awesome-CL.git",
+        "path": "/icons/yarn-brands-solid.svg"
+      },
+      {
+        "name": "pnpm",
+        "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
+        "path": "/icons/cubes-solid.svg"
+      }
+    ],
+    "import": {
+      "code": "import ProductCard from 'awesome-library';",
+      "description": "This code shows how to import the ProductCard component from the library."
+    },
+    "examples": [
+      {
+        "title": "Default Theme with Theme Switcher",
+        "description": "Showcases the default theme of the product card with theme switcher buttons, allowing users to toggle between 'default', 'dark', and 'neon' themes.",
+        "components": [
+          {
+            "type": "ProductCard",
+            "props": {
+              "showThemeSwitcher": true
+            }
+          }
+        ],
+        "code": "import ProductCard from 'awesome-library';\n\nfunction App() {\n  return (\n    <ProductCard showThemeSwitcher={true} />;\n  );\n}"
+      },
+      {
+        "title": "Dark Theme",
+        "description": "Renders the product card with the 'dark-theme' applied, using predefined values from the component.",
+        "components": [
+          {
+            "type": "ProductCard",
+            "props": {
+              "theme": "dark-theme"
+            }
+          }
+        ],
+        "code": "import ProductCard from 'awesome-library';\n\nfunction App() {\n  return (\n    <ProductCard \n      theme=\"dark-theme\" \n    />;\n  );\n}"
+      },
+      {
+        "title": "Neon Theme",
+        "description": "Applies the 'neon-theme' for a vibrant and dynamic appearance, using predefined values from the component.",
+        "components": [
+          {
+            "type": "ProductCard",
+            "props": {
+              "theme": "neon-theme"
+            }
+          }
+        ],
+        "code": "import ProductCard from 'awesome-library';\n\nfunction App() {\n  return (\n    <ProductCard \n      theme=\"neon-theme\" \n    />;\n  );\n}"
+      },
+      {
+        "title": "Custom Theme",
+        "description": "Demonstrates a custom-themed product card with unique styles and a custom image.",
+  
+        "components": [
+          {
+            "type": "ProductCard",
+            "props": {
+              "theme": "custom-theme",
+              "name": "VR Headset",
+              "description": "Revolutionize your VR experience with vibrant customization.",
+              "price": 899.99,
+              "originalPrice": 1199.99,
+              "discount": 25,
+              "image": "/images/vr-headset.jpg",
+  
+              "customTheme": {
+                "backgroundColor": "#1E1E2F",
+                "textColor": "#E0E0E0",
+                "buttonBackground": "#4C64F2",
+                "buttonHoverBackground": "#637AFF",
+                "buttonTextColor": "#FFFFFF",
+                "priceColor": "#38D39F",
+                "originalPriceColor": "#E94560",
+                "discountColor": "#FFD700",
+                "border": "2px solid #2C2C3D",
+                "boxShadow": "4px 4px 10px rgba(77, 20, 91, 0.5), -4px -4px 10px rgba(77, 20, 91, 0.5), -4px 4px 10px rgba(77, 20, 91, 0.5), 4px -4px 10px rgba(77, 20, 91, 0.5)",
+  
+                "nameTextShadow": "2px 2px 5px rgba(0, 0, 0, 0.5)",
+                "descriptionTextShadow": "1px 1px 3px rgba(0, 0, 0, 0.3)"
+              }
+            }
+          }
+        ],
+        "code": "import ProductCard from 'awesome-library';\n\nfunction App() {\n  const handleBuyNow = () => {\n    alert('Buy Now clicked!');\n  };\n\n  const handleAddToBag = () => {\n    alert('Add to Bag clicked!');\n  };\n\n  return (\n    <ProductCard \n      theme=\"custom-theme\"\n      name=\"VR Headset\"\n      description=\"Revolutionize your VR experience with vibrant customization.\"\n      price={899.99}\n      originalPrice={1199.99}\n      discount={25}\n      image=\"/images/vr-headset.jpg\"\n      customTheme={{\n        backgroundColor: \"#E6E6FA\", // Light lavender\n        textColor: \"#1E3A8A\", // Deep blue for text\n        buttonBackground: \"#4F46E5\", // Vibrant indigo for buttons\n        buttonTextColor: \"#FFFFFF\", // White for button text\n        priceColor: \"#4ADE80\", // Light green for price\n        originalPriceColor: \"#9333EA\", // Purple for original price\n        discountColor: \"#60A5FA\", // Sky blue for discount\n        border: \"2px solid #7C3AED\", // Bold purple border\n        boxShadow: \"0 6px 15px rgba(124, 58, 237, 0.3)\", // Purple shadow\n        fontWeight: \"bold\" // Bold text for emphasis\n      }}\n      onBuyNow={handleBuyNow}\n      onAddToBag={handleAddToBag}\n    />;\n  );\n}"
+      }
+    ],
+    "propsTable": {
+      "title": "Product Card Props",
+      "description": "A list of all properties supported by the Product Card component.",
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
+      "rows": [
+        {
+          "propName": "theme",
+          "type": "string",
+          "description": "The theme for the product card. Options: 'default', 'dark-theme', 'neon-theme', 'custom-theme'.",
+          "defaultValue": "'default'"
+        },
+        {
+          "propName": "name",
+          "type": "string",
+          "description": "The name of the product.",
+          "defaultValue": "Unnamed Product"
+        },
+        {
+          "propName": "description",
+          "type": "string",
+          "description": "A brief description of the product.",
+          "defaultValue": "No description available."
+        },
+        {
+          "propName": "price",
+          "type": "number",
+          "description": "The current price of the product.",
+          "defaultValue": "0"
+        },
+        {
+          "propName": "originalPrice",
+          "type": "number",
+          "description": "The original price of the product, used to calculate discounts.",
+          "defaultValue": "0"
+        },
+        {
+          "propName": "discount",
+          "type": "number",
+          "description": "The discount percentage on the product.",
+          "defaultValue": "0"
+        },
+        {
+          "propName": "image",
+          "type": "string",
+          "description": "The URL or path to the product image.",
+          "defaultValue": "-"
+        },
+        {
+          "propName": "customTheme",
+          "type": "object",
+          "description": "Custom styles for the product card (backgroundColor, textColor, buttonBackground, buttonTextColor).",
+          "defaultValue": "{}"
+        },
+        {
+          "propName": "showThemeSwitcher",
+          "type": "boolean",
+          "description": "Whether to show theme switcher buttons.",
+          "defaultValue": "false"
+        },
+        {
+          "propName": "onThemeChange",
+          "type": "function",
+          "description": "Callback function triggered when the theme changes.",
+          "defaultValue": "-"
+        },
+        {
+          "propName": "onBuyNow",
+          "type": "function",
+          "description": "Callback function for the 'Buy Now' button.",
+          "defaultValue": "-"
+        },
+        {
+          "propName": "onAddToBag",
+          "type": "function",
+          "description": "Callback function for the 'Add to Bag' button.",
+          "defaultValue": "-"
+        }
+      ]
+    },
+    "accessibility": {
+      "title": "Accessibility",
+      "description": "Accessibility considerations for the Product Card component.",
+      "ariaRoles": [
+        {
+          "role": "Product Image",
+          "description": "The product image includes an alt tag with the product name for better accessibility."
+        },
+        {
+          "role": "Buttons",
+          "description": "Interactive buttons have accessible labels for screen readers."
+        },
+        {
+          "role": "Theme Switcher",
+          "description": "Theme switcher buttons are keyboard-navigable and accessible."
+        }
+      ]
+    }
   }
+  
 ]
