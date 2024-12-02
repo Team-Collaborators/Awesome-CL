@@ -99,30 +99,45 @@ const showcaseItems = [
 const ShowcaseSection = () => {
   const showcaseRef = useRef(null);
 
-  useEffect(() => {
-    const showcaseContainer = showcaseRef.current;
+  const handleWheel = (e) => {
+    const element = showcaseRef.current;
 
-    if (!showcaseContainer) return;
-
-    const handleWheel = (event) => {
-      // Check if the scroll is primarily vertical
-      if (Math.abs(event.deltaY) > Math.abs(event.deltaX)) {
-        event.preventDefault();
-        showcaseContainer.scrollLeft += event.deltaY;
+    if (element && element.contains(e.target)) {
+      // If scrolling horizontally
+      if (e.deltaX === 0) {
+        element.scrollLeft += e.deltaY;
+        e.preventDefault(); // Prevent vertical scrolling interference
       }
-    };
+    }
+  };
+  // useEffect(() => {
+  //   const showcaseContainer = showcaseRef.current;
 
-    showcaseContainer.addEventListener("wheel", handleWheel);
+  // if (!showcaseContainer) return;
 
-    // Cleanup listener on unmount
-    return () => {
-      showcaseContainer.removeEventListener("wheel", handleWheel);
-    };
-  }, []);
+  // const handleWheel = (event) => {
+  //   // Check if the scroll is primarily vertical
+  //   if (Math.abs(event.deltaY) > Math.abs(event.deltaX)) {
+  //     event.preventDefault();
+  //     showcaseContainer.scrollLeft += event.deltaY;
+  //   }
+  // };
+
+  //   showcaseContainer.addEventListener("wheel", handleWheel);
+
+  //   // Cleanup listener on unmount
+  //   return () => {
+  //     showcaseContainer.removeEventListener("wheel", handleWheel);
+  //   };
+  // }, [];
 
   return (
     <section className="showcase-section">
-      <div className="showcase-container" ref={showcaseRef}>
+      <div
+        className="showcase-container"
+        ref={showcaseRef}
+        onWheel={handleWheel}
+      >
         {showcaseItems.map((item, index) => (
           <div key={index} className="component-box">
             {" "}
