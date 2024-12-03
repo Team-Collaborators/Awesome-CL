@@ -91,9 +91,9 @@ export default function MainRoutes() {
 
           {/* Catch-all route for 404 */}
           <Route path="*" element={<NotFound />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/about" element={<AboutUs />} />
-          <Route path="/legalnotice" element={<LegalNotice />} />
+          <Route path="contact" element={<ContactPage />} />
+          <Route path="about" element={<AboutUs />} />
+          <Route path="legalnotice" element={<LegalNotice />} />
         </Route>
       </Routes>
     </Router>
