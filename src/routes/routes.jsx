@@ -11,6 +11,7 @@ import Introduction from "../pages/Instructions/Introduction";
 import GettingStarted from "../pages/Instructions/GettingStarted";
 import Customization from "../pages/Instructions/Customization";
 import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
+import LegalNotice from "../pages/LegalNotice/LegalNotice";
 
 export default function MainRoutes() {
   return (
@@ -92,6 +93,7 @@ export default function MainRoutes() {
           <Route path="*" element={<NotFound />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/about" element={<AboutUs />} />
+          <Route path="/legalnotice" element={<LegalNotice />} />
         </Route>
       </Routes>
     </Router>

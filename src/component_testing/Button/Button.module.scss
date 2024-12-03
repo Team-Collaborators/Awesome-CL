@@ -76,37 +76,37 @@
 
 /* color-classes */
 .color-primary {
-  background-color: colors.$primary-base;
-  color: white;
-  border-color: colors.$primary-dark;
+  background-color: var(--primary-base);
+  color: var(--default-light);
+  border-color: var(--primary-dark);
 }
 
 .color-default {
-  background-color: colors.$default-base;
-  color: white;
-  border-color: colors.$default-dark;
+  background-color: var(--default-base);
+  color: var(--default-light);
+  border-color: var(--default-dark);
 }
 
 .color-secondary {
-  background-color: colors.$secondary-base;
-  color: white;
-  border-color: colors.$secondary-dark;
+  background-color: var(--secondary-base);
+  color: var(--default-light);
+  border-color: var(--secondary-dark);
 }
 
 .color-success {
-  background-color: colors.$success-base;
-  color: black;
-  border-color: colors.$success-dark;
+  background-color: var(--success-base);
+  color: var(--default-dark);
+  border-color: var(--success-dark);
 }
 
 .color-warning {
-  background-color: colors.$warning-base;
-  color: black;
-  border-color: colors.$warning-dark;
+  background-color: var(--warning-base);
+  color: var(--default-dark);
+  border-color: var(--warning-dark);
 }
 
 .color-danger {
-  background-color: colors.$danger-base;
-  color: white;
-  border-color: colors.$danger-dark;
+  background-color: var(--danger-base);
+  color: var(--default-light);
+  border-color: var(--danger-dark);
 }

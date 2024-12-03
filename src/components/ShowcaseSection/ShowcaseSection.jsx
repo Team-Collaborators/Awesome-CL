@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import snow from "../../assets/images/snow.jpg";
 import Avatar from "../../component_testing/Avatar/Avatar";
 import Button from "../../component_testing/Button/Button";
-// //import Card from "../../component_testing/Card/Card";
+// import Card from "../../component_testing/Card/Card";
 import Checkbox from "../../component_testing/Checkbox/Checkbox";
 import Form from "../../component_testing/Form/Form";
 import Image from "../../component_testing/Image/Image";
@@ -44,7 +44,7 @@ const showcaseItems = [
     component: (
       <Image
         src={snow}
-        alt="High-tech glasses"
+        alt="snowy mountain with skiing person"
         size="sm"
         objectFit="cover"
         isZoomed="true"
@@ -54,18 +54,26 @@ const showcaseItems = [
     link: "/frontend/components/image",
   },
   {
-    component: (
-      <Input color="secondary" size="sm" border="bottom">
-        Input
-      </Input>
-    ),
+    component: <Input color="secondary" size="sm" border="bottom"></Input>,
     title: "Input",
     link: "/frontend/components/input",
   },
   {
     component: (
-      <Modal size="sm" placement="top">
-        Modal
+      <Modal
+        size="sm"
+        placement="center"
+        modalHeader="Modal Header"
+        modalBody={
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad sequi
+            commodi vero, esse fugiat atque repellat! Eius magni illo
+            accusantium nihil officia quod, doloribus excepturi obcaecati, odio
+            molestiae minima labore!
+          </p>
+        }
+      >
+        Click me
       </Modal>
     ),
     title: "Modal",
@@ -91,30 +99,45 @@ const showcaseItems = [
 const ShowcaseSection = () => {
   const showcaseRef = useRef(null);
 
-  useEffect(() => {
-    const showcaseContainer = showcaseRef.current;
+  const handleWheel = (e) => {
+    const element = showcaseRef.current;
 
-    if (!showcaseContainer) return;
-
-    const handleWheel = (event) => {
-      // Check if the scroll is primarily vertical
-      if (Math.abs(event.deltaY) > Math.abs(event.deltaX)) {
-        event.preventDefault();
-        showcaseContainer.scrollLeft += event.deltaY;
+    if (element && element.contains(e.target)) {
+      // If scrolling horizontally
+      if (e.deltaX === 0) {
+        element.scrollLeft += e.deltaY;
+        e.preventDefault(); // Prevent vertical scrolling interference
       }
-    };
+    }
+  };
+  // useEffect(() => {
+  //   const showcaseContainer = showcaseRef.current;
 
-    showcaseContainer.addEventListener("wheel", handleWheel);
+  // if (!showcaseContainer) return;
 
-    // Cleanup listener on unmount
-    return () => {
-      showcaseContainer.removeEventListener("wheel", handleWheel);
-    };
-  }, []);
+  // const handleWheel = (event) => {
+  //   // Check if the scroll is primarily vertical
+  //   if (Math.abs(event.deltaY) > Math.abs(event.deltaX)) {
+  //     event.preventDefault();
+  //     showcaseContainer.scrollLeft += event.deltaY;
+  //   }
+  // };
+
+  //   showcaseContainer.addEventListener("wheel", handleWheel);
+
+  //   // Cleanup listener on unmount
+  //   return () => {
+  //     showcaseContainer.removeEventListener("wheel", handleWheel);
+  //   };
+  // }, [];
 
   return (
     <section className="showcase-section">
-      <div className="showcase-container" ref={showcaseRef}>
+      <div
+        className="showcase-container"
+        ref={showcaseRef}
+        onWheel={handleWheel}
+      >
         {showcaseItems.map((item, index) => (
           <div key={index} className="component-box">
             {" "}

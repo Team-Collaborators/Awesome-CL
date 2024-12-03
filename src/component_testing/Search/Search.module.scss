@@ -12,13 +12,20 @@
 
 .outer-wrapper {
   display: flex;
+  max-width: 100%;
+  width: 100%;
 }
 
 .inner-wrapper {
   display: flex;
+  max-width: 100%;
+  width: 100%;
 }
 
 .input {
+  flex-grow: 1;
+  width: 100%;
+  max-width: 100%;
   &:hover {
     opacity: 0.7;
   }
@@ -30,6 +37,7 @@
 .button {
   display: flex;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .size-sm {
@@ -83,128 +91,128 @@
 
 /* color-classes */
 .color-primary {
-  border-color: colors.$primary-dark;
+  border-color: var(--primary-dark);
   .inner-wrapper {
-    border-color: colors.$primary-dark;
+    border-color: var(--primary-dark);
   }
   .input {
-    background-color: colors.$primary-light;
-    color: colors.$primary-dark;
-    border-color: colors.$primary-dark;
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+    border-color: var(--primary-dark);
     &::placeholder {
-      color: colors.$primary-dark;
+      color: var(--primary-dark);
       font-style: italic;
     }
   }
   .button {
-    background-color: colors.$primary-base;
-    border-color: colors.$primary-dark;
-    color: colors.$primary-dark;
+    background-color: var(--primary-base);
+    border-color: var(--primary-dark);
+    color: var(--primary-dark);
   }
 }
 
 .color-default {
-  border-color: colors.$default-dark;
+  border-color: var(--default-dark);
   .inner-wrapper {
-    border-color: colors.$default-dark;
+    border-color: var(--default-dark);
   }
   .input {
-    background-color: colors.$default-light;
-    color: colors.$default-dark;
-    border-color: colors.$default-dark;
+    background-color: var(--default-light);
+    color: var(--default-dark);
+    border-color: var(--default-dark);
     &::placeholder {
-      color: colors.$default-dark;
+      color: cvar(--default-dark);
       font-style: italic;
     }
   }
   .button {
-    background-color: colors.$default-base;
-    border-color: colors.$default-dark;
-    color: colors.$default-dark;
+    background-color: var(--default-base);
+    border-color: var(--default-dark);
+    color: var(--default-dark);
   }
 }
 
 .color-secondary {
-  border-color: colors.$secondary-dark;
+  border-color: var(--secondary-dark);
   .inner-wrapper {
-    border-color: colors.$secondary-dark;
+    border-color: var(--secondary-dark);
   }
   .input {
-    background-color: colors.$secondary-light;
-    color: colors.$secondary-dark;
-    border-color: colors.$secondary-dark;
+    background-color: var(--secondary-light);
+    color: var(--secondary-dark);
+    border-color: var(--secondary-dark);
     &::placeholder {
-      color: colors.$secondary-dark;
+      color: var(--secondary-dark);
       font-style: italic;
     }
   }
   .button {
-    background-color: colors.$secondary-base;
-    border-color: colors.$secondary-dark;
-    color: colors.$secondary-dark;
+    background-color: var(--secondary-base);
+    border-color: var(--secondary-dark);
+    color: var(--secondary-dark);
   }
 }
 
 .color-success {
-  border-color: colors.$success-dark;
+  border-color: var(--success-dark);
   .inner-wrapper {
-    border-color: colors.$success-dark;
+    border-color: var(--success-dark);
   }
   .input {
-    background-color: colors.$success-light;
-    color: colors.$success-dark;
-    border-color: colors.$success-dark;
+    background-color: var(--success-light);
+    color: var(--success-dark);
+    border-color: var(--success-dark);
     &::placeholder {
-      color: colors.$success-dark;
+      color: var(--success-dark);
       font-style: italic;
     }
   }
   .button {
-    background-color: colors.$success-base;
-    border-color: colors.$success-dark;
-    color: colors.$success-dark;
+    background-color: var(--success-base);
+    border-color: var(--success-dark);
+    color: var(--success-dark);
   }
 }
 
 .color-warning {
-  border-color: colors.$warning-dark;
+  border-color: var(--warning-dark);
   .inner-wrapper {
-    border-color: colors.$warning-dark;
+    border-color: var(--warning-dark);
   }
   .input {
-    background-color: colors.$warning-light;
-    color: colors.$warning-dark;
-    border-color: colors.$warning-dark;
+    background-color: var(--warning-light);
+    color: var(--warning-dark);
+    border-color: var(--warning-dark);
     &::placeholder {
-      color: colors.$warning-dark;
+      color: var(--warning-dark);
       font-style: italic;
     }
   }
   .button {
-    background-color: colors.$warning-base;
-    border-color: colors.$warning-dark;
-    color: colors.$warning-dark;
+    background-color: var(--warning-base);
+    border-color: var(--warning-dark);
+    color: var(--warning-dark);
   }
 }
 
 .color-danger {
-  border-color: colors.$danger-dark;
+  border-color: var(--danger-dark);
   .inner-wrapper {
-    border-color: colors.$danger-dark;
+    border-color: var(--danger-dark);
   }
   .input {
-    background-color: colors.$danger-light;
-    color: colors.$danger-dark;
-    border-color: colors.$danger-dark;
+    background-color: var(--danger-light);
+    color: var(--danger-dark);
+    border-color: var(--danger-dark);
     &::placeholder {
-      color: colors.$danger-dark;
+      color: var(--danger-dark);
       font-style: italic;
     }
   }
   .button {
-    background-color: colors.$danger-base;
-    border-color: colors.$danger-dark;
-    color: colors.$danger-dark;
+    background-color: var(--danger-base);
+    border-color: var(--danger-dark);
+    color: var(--danger-dark);
   }
 }
 

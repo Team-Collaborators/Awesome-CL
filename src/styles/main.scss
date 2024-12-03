@@ -21,8 +21,6 @@ $font-stack: "Roboto", sans-serif;
 
 // box shadow
 $box-shadow-light: rgba(0, 0, 0, 0.3);
-$box-shadow-strong: rgba(0, 0, 0, 0.5);
-
 $box-shadow-small: 0 2px 4px $box-shadow-light;
 $box-shadow-medium: 0 4px 6px $box-shadow-light;
 $box-shadow-large: 0 6px 10px $box-shadow-light;
@@ -75,6 +73,17 @@ body {
   font-family: var(--font-stack);
   background-color: var(--background-color);
   color: var(--text-color);
+  background-image: url("../assets/images/bbblurry.svg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  //background-size: cover;
+  @media (max-width: map.get($breakpoints, "lg")) {
+    background-size: 150%;
+  }
+  @media (max-width: map.get($breakpoints, "md")) {
+    background-size: 200%;
+  }
 }
 
 ul {

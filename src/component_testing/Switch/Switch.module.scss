@@ -115,7 +115,7 @@
 /* Color variants */
 .color-default {
   &.checked {
-    background-color: var(--default-dark);
+    background-color: var(--default-dark-lighter);
   }
 }
 
@@ -128,7 +128,7 @@
 .color-secondary {
   &.checked {
     // background-color: var(--secondary-base);
-    background-color: colors.$secondary-base;
+    background-color: var(--secondary-base);
   }
 }
 

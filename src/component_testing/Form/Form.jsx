@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import styles from "./Form.module.scss";
 
-//  variants
 const VARIANTS = {
   CONTACT: "contact",
   APPOINTMENT: "appointment",
@@ -12,7 +11,7 @@ const VARIANTS = {
   NEWSLETTER: "newsletter",
 };
 
-//options for various fields
+// Options for multi-select fields
 const INTEREST_OPTIONS = [
   "Frontend Development",
   "Backend Development",
@@ -25,7 +24,7 @@ const INTEREST_OPTIONS = [
   "Cloud Computing",
 ];
 
-//Input field component for text inputs
+// Input field component
 const InputField = ({
   label,
   name,
@@ -33,8 +32,9 @@ const InputField = ({
   onChange,
   required = false,
   type = "text",
+  customStyle = {},
 }) => (
-  <label className={styles.label}>
+  <label className={styles.label} style={customStyle.label}>
     {label}
     <input
       type={type}
@@ -43,6 +43,7 @@ const InputField = ({
       onChange={onChange}
       required={required}
       className={styles.inputField}
+      style={customStyle.inputField}
     />
   </label>
 );
@@ -55,8 +56,9 @@ const TextAreaField = ({
   onChange,
   placeholder,
   required = false,
+  customStyle = {},
 }) => (
-  <label className={styles.label}>
+  <label className={styles.label} style={customStyle.label}>
     {label}
     <textarea
       name={name}
@@ -65,11 +67,12 @@ const TextAreaField = ({
       placeholder={placeholder}
       required={required}
       className={styles.inputField}
+      style={customStyle.inputField}
     ></textarea>
   </label>
 );
 
-// Multi-select dropdown for multiple options
+// Multi-select dropdown field component
 const MultipleSelectField = ({
   label,
   name,
@@ -77,8 +80,9 @@ const MultipleSelectField = ({
   onChange,
   options,
   required = false,
+  customStyle = {},
 }) => (
-  <label className={styles.label}>
+  <label className={styles.label} style={customStyle.label}>
     {label}
     <select
       name={name}
@@ -87,6 +91,7 @@ const MultipleSelectField = ({
       onChange={onChange}
       required={required}
       className={styles.multipleSelectField}
+      style={customStyle.inputField}
     >
       {options.map((option) => (
         <option key={option} value={option}>
@@ -98,8 +103,8 @@ const MultipleSelectField = ({
 );
 
 // Date picker field component
-const DatePickerField = ({ label, selected, onChange }) => (
-  <div className={styles.datePickerContainer}>
+const DatePickerField = ({ label, selected, onChange, customStyle }) => (
+  <div className={styles.datePickerContainer} style={customStyle}>
     <label className={styles.label}>{label}</label>
     <DatePicker
       selected={selected}
@@ -110,33 +115,35 @@ const DatePickerField = ({ label, selected, onChange }) => (
       timeCaption="Time"
       dateFormat="MMMM d, yyyy h:mm aa"
       className={styles.datePicker}
+      style={customStyle}
     />
   </div>
 );
 
 // Main Form Component
-const Form = ({ variant = VARIANTS.CONTACT }) => {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    subject: "",
-    message: "",
-    organization: "",
-  });
+const Form = ({
+  variant = VARIANTS.CONTACT,
+  onSubmit,
+  customStyles = {},
+  successMessage = "Thank you! Your form has been submitted.",
+  additionalFields = [],
+}) => {
+  const [formData, setFormData] = useState({});
   const [isVisible, setIsVisible] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const handleOpen = () => setIsVisible(true);
+  const handleOpen = () => {
+    setSubmitted(false); // Reset the submitted state when opening the form
+    setIsVisible(true);
+  };
+
   const handleClose = () => {
-    setSubmitted(false);
     setIsVisible(false);
+    setSubmitted(false);
   };
 
   const handleChange = (event) => {
     const { name, value, type, selectedOptions } = event.target;
-
     const updatedValue =
       type === "select-multiple" && selectedOptions
         ? Array.from(selectedOptions, (option) => option.value)
@@ -145,16 +152,77 @@ const Form = ({ variant = VARIANTS.CONTACT }) => {
     setFormData((prevData) => ({ ...prevData, [name]: updatedValue }));
   };
 
-  const handleDateChange = (date) => {
-    setFormData((prevData) => ({ ...prevData, appointmentDate: date }));
+  const handleDateChange = (name, date) => {
+    setFormData((prevData) => ({ ...prevData, [name]: date }));
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
     setSubmitted(true);
+    if (onSubmit) onSubmit(formData); // Trigger the onSubmit callback with form data
+    setFormData({});
   };
 
   const renderVariantFields = () => {
+    const renderAdditionalFields = () => {
+      return additionalFields?.map((field) => {
+        if (field.type === "textarea") {
+          return (
+            <TextAreaField
+              key={field.name}
+              label={field.label}
+              name={field.name}
+              value={formData[field.name] || ""}
+              onChange={field.onChange || handleChange}
+              placeholder={field.placeholder}
+              required={field.required || false}
+              customStyle={field.customStyle || customStyles.inputField}
+            />
+          );
+        } else if (field.type === "select") {
+          return (
+            <MultipleSelectField
+              key={field.name}
+              label={field.label}
+              name={field.name}
+              value={formData[field.name] || []}
+              onChange={field.onChange || handleChange}
+              options={field.options || []}
+              required={field.required || false}
+              customStyle={field.customStyle || customStyles.inputField}
+            />
+          );
+        } else if (field.type === "date") {
+          return (
+            <DatePickerField
+              key={field.name}
+              label={field.label}
+              selected={formData[field.name]}
+              onChange={(date) =>
+                field.onChange
+                  ? field.onChange(date)
+                  : handleDateChange(field.name, date)
+              }
+              customStyle={field.customStyle || customStyles.datePicker}
+            />
+          );
+        } else {
+          return (
+            <InputField
+              key={field.name}
+              label={field.label}
+              name={field.name}
+              value={formData[field.name] || ""}
+              onChange={field.onChange || handleChange}
+              type={field.type || "text"}
+              required={field.required || false}
+              customStyle={field.customStyle || customStyles.inputField}
+            />
+          );
+        }
+      });
+    };
+
     switch (variant) {
       case VARIANTS.CONTACT:
         return (
@@ -162,61 +230,88 @@ const Form = ({ variant = VARIANTS.CONTACT }) => {
             <InputField
               label="Phone Number"
               name="phone"
-              value={formData.phone}
+              value={formData.phone || ""}
               onChange={handleChange}
               type="tel"
               required
+              customStyle={customStyles.inputField}
             />
             <InputField
               label="Subject"
               name="subject"
-              value={formData.subject}
+              value={formData.subject || ""}
               onChange={handleChange}
               required
+              customStyle={customStyles.inputField}
             />
             <InputField
               label="Organization / Company"
               name="organization"
-              value={formData.organization}
+              value={formData.organization || ""}
               onChange={handleChange}
+              customStyle={customStyles.inputField}
             />
             <TextAreaField
               label="Message"
               name="message"
-              value={formData.message}
+              value={formData.message || ""}
               onChange={handleChange}
               placeholder="Enter your message here"
               required
+              customStyle={customStyles.inputField}
             />
+            {renderAdditionalFields()}
           </>
         );
       case VARIANTS.APPOINTMENT:
         return (
-          <DatePickerField
-            label="Appointment Date and Time"
-            selected={formData.appointmentDate}
-            onChange={handleDateChange}
-          />
+          <>
+            <InputField
+              label="Your Name"
+              name="name"
+              value={formData.name || ""}
+              onChange={handleChange}
+              required
+              customStyle={customStyles.inputField}
+            />
+            <DatePickerField
+              label="Appointment Date and Time"
+              selected={formData.appointmentDate}
+              onChange={(date) => handleDateChange("appointmentDate", date)}
+              customStyle={customStyles.datePicker}
+            />
+            {renderAdditionalFields()}
+          </>
         );
       case VARIANTS.FEEDBACK:
         return (
-          <TextAreaField
-            label="Your Feedback"
-            name="feedback"
-            value={formData.feedback}
-            onChange={handleChange}
-            placeholder="Share your feedback"
-          />
+          <>
+            <TextAreaField
+              label="Your Feedback"
+              name="feedback"
+              value={formData.feedback || ""}
+              onChange={handleChange}
+              placeholder="Share your feedback"
+              required
+              customStyle={customStyles.textArea}
+            />
+            {renderAdditionalFields()}
+          </>
         );
       case VARIANTS.INQUIRY:
         return (
-          <TextAreaField
-            label="Your Inquiry"
-            name="inquiry"
-            value={formData.inquiry}
-            onChange={handleChange}
-            placeholder="What would you like to inquire about?"
-          />
+          <>
+            <TextAreaField
+              label="Your Inquiry"
+              name="inquiry"
+              value={formData.inquiry || ""}
+              onChange={handleChange}
+              placeholder="What would you like to inquire about?"
+              required
+              customStyle={customStyles.textArea}
+            />
+            {renderAdditionalFields()}
+          </>
         );
       case VARIANTS.NEWSLETTER:
         return (
@@ -226,131 +321,103 @@ const Form = ({ variant = VARIANTS.CONTACT }) => {
               newsletter content.
             </p>
             <MultipleSelectField
-              label="Areas of Interest"
+              label="Topics of Interest"
               name="interests"
-              value={formData.interests}
+              value={formData.interests || []}
               onChange={handleChange}
               options={INTEREST_OPTIONS}
               required
+              customStyle={customStyles.select}
             />
+            {renderAdditionalFields()}
           </>
         );
       default:
-        return null;
+        return renderAdditionalFields();
     }
   };
 
   return (
     <>
-      <button className={styles.openButton} onClick={handleOpen}>
+      <button
+        className={styles.openButton}
+        onClick={handleOpen}
+        style={customStyles.openButton}
+      >
         {variant.charAt(0).toUpperCase() + variant.slice(1)}
       </button>
       {isVisible && (
-        <div className={styles.formBackdrop} onClick={handleClose}>
+        <div
+          className={styles.formBackdrop}
+          onClick={handleClose}
+          style={customStyles.formBackdrop}
+        >
           <div
             className={`${styles.formContainer} ${styles[`${variant}Form`]}`}
             onClick={(e) => e.stopPropagation()}
+            style={{ ...customStyles.formContainer }}
           >
-            <button className={styles.closeButton} onClick={handleClose}>
+            <button
+              className={styles.closeButton}
+              onClick={handleClose}
+              style={customStyles.closeButton}
+            >
               &times;
             </button>
-            <h1 className={styles.submitHeader}>{`${
-              variant.charAt(0).toUpperCase() + variant.slice(1)
-            } Form`}</h1>
+            <h1
+              className={styles.submitHeader}
+              style={customStyles.submitHeader}
+            >
+              {variant.charAt(0).toUpperCase() + variant.slice(1)} Form
+            </h1>
             {submitted ? (
-              <p className={styles.successMessage}>
-                Thank you! Your form has been submitted.
+              <p
+                className={styles.successMessage}
+                style={customStyles.successMessage}
+              >
+                {successMessage}
               </p>
             ) : (
-              <form onSubmit={handleSubmit} className={styles.form}>
-                {variant === VARIANTS.CONTACT ? (
-                  <>
-                    <div className={styles.inputRow}>
-                      <InputField
-                        label="First Name"
-                        name="firstName"
-                        value={formData.firstName}
-                        onChange={handleChange}
-                        required
-                      />
-                      <InputField
-                        label="Last Name"
-                        name="lastName"
-                        value={formData.lastName}
-                        onChange={handleChange}
-                        required
-                      />
-                    </div>
-                    <div className={styles.inputRow}>
-                      <InputField
-                        label="Email Address"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                        type="email"
-                      />
-                      <InputField
-                        label="Phone Number"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        type="tel"
-                        required
-                      />
-                    </div>
-                    <div className={styles.inputRow}>
-                      <InputField
-                        label="Subject"
-                        name="subject"
-                        value={formData.subject}
-                        onChange={handleChange}
-                        required
-                      />
-                      <InputField
-                        label="Organization / Company"
-                        name="organization"
-                        value={formData.organization}
-                        onChange={handleChange}
-                      />
-                    </div>
-                    <TextAreaField
-                      label="Message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      placeholder="Enter your message here"
-                      required
-                    />
-                  </>
-                ) : (
-                  <>
-                    <InputField
-                      label="First Name"
-                      name="firstName"
-                      value={formData.firstName}
-                      onChange={handleChange}
-                      required
-                    />
-                    <InputField
-                      label="Last Name"
-                      name="lastName"
-                      value={formData.lastName}
-                      onChange={handleChange}
-                      required
-                    />
-                    <InputField
-                      label="Email Address"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      type="email"
-                    />
-                    {renderVariantFields()}
-                  </>
-                )}
-                <button type="submit" className={styles.submitButton}>
+              <form
+                onSubmit={handleSubmit}
+                className={styles.form}
+                style={{ ...customStyles.form }}
+              >
+                <div className={styles.inputRow}>
+                  <InputField
+                    label="First Name"
+                    name="firstName"
+                    value={formData.firstName || ""}
+                    onChange={handleChange}
+                    required
+                    customStyle={customStyles.inputField}
+                  />
+                  <InputField
+                    label="Last Name"
+                    name="lastName"
+                    value={formData.lastName || ""}
+                    onChange={handleChange}
+                    required
+                    customStyle={customStyles.inputField}
+                  />
+                </div>
+                <div className={styles.inputRow}>
+                  <InputField
+                    label="Email"
+                    name="email"
+                    value={formData.email || ""}
+                    onChange={handleChange}
+                    type="email"
+                    required
+                    customStyle={customStyles.inputField}
+                  />
+                </div>
+                {renderVariantFields()}
+                <button
+                  type="submit"
+                  className={styles.submitButton}
+                  style={customStyles.submitButton}
+                >
                   Submit
                 </button>
               </form>

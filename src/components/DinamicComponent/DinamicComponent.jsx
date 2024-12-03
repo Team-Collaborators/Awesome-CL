@@ -15,6 +15,11 @@ import Input from "../../component_testing/Input/Input";
 import Image from "../../component_testing/Image/Image";
 import Avatar from "../../component_testing/Avatar/Avatar";
 
+import ProductCard from "../../component_testing/ProductCard/ProductCard";
+
+import Card from "../../component_testing/Card/Card";
+
+
 const components = {
   //Object with all components
   Button,
@@ -30,6 +35,11 @@ const components = {
   Image,
   Carousel,
   Avatar,
+
+  ProductCard,
+
+  Card,
+
 };
 
 export default function DynamicComponent({ type, props, children }) {
