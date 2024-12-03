@@ -3884,7 +3884,7 @@
               {
                 "type": "Image",
                 "props": {
-                  "src": "/images/snow.webp"
+                  "src": "/images/green-building.webp"
                 }
               },
               {
@@ -3899,7 +3899,7 @@
             ]
           }
         ],
-        "code": "import { Card, Image, Button } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Card \n      image={\n        <Image \n          src={snow} \n          objectFit=\"cover\" \n          radius=\"md\" \n          size=\"sm\" \n          alt=\"Example Image\" \n        />\n      }\n      description=\"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.\"\n      footer={\n        <>\n          <Button color=\"default\" size=\"sm\" radius=\"full\">Read More</Button>\n        </>\n      }\n    />\n  );\n}"
+        "code": "import { Card, Image, Button } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Card \n      image={\n        <Image \n          src={snow} \n          objectFit=\"cover\" \n          radius=\"md\" \n          size=\"sm\" \n          alt=\"Example Image\" \n        />\n      }\n      description=\"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.\"\n      footer={\n        <Button color=\"default\" size=\"sm\" radius=\"full\">Read More</Button>\n      }\n    />\n  );\n}"
       },
       {
         "title": "Variants",
@@ -4010,7 +4010,7 @@
             }
           }
         ],
-        "code": "import { Card, Image } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Card \n      title=\"Card with Image\" \n      description=\"This card has an image at the top.\"\n      imageTop\n      image={<Image src='https://example.com/image.jpg' alt='Example Image' />}\n    />\n  );\n}"
+        "code": "import { Card, Image } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Card \n      size=\"sm\" \n      size=\"md\" \n      size=\"lg\" \n    />\n  );\n}"
       },
       {
         "title": "Header Image",
@@ -4042,7 +4042,7 @@
             ]
           }
         ],
-        "code": "import { Card, Image } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Card \n      title=\"Card with Image\" \n      description=\"This card has an image at the top.\"\n      imageTop\n      image={<Image src='https://example.com/image.jpg' alt='Example Image' />}\n    />\n  );\n}"
+        "code": "import { Card, Image, Button } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Card \n      imageTop=\"true\" \n     />\n  );\n}"
       },
       {
         "title": "Horizontal Layout",
@@ -4067,7 +4067,7 @@
             ]
           }
         ],
-        "code": "import { Card, Image } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Card \n      title=\"Horizontal Card\" \n      description=\"This card uses a horizontal layout.\"\n      horizontal\n      image={<Image src='https://example.com/image.jpg' alt='Example Image' />}\n    />\n  );\n}"
+        "code": "import { Card, Image } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Card \n      horizontal=\"true\" \n    />\n  );\n}"
       },
       {
         "title": "Avatar",
@@ -4077,8 +4077,7 @@
             "props": {
               "variant": "subtle",
               "title": "Medium Elevated Card with Avatar",
-              "color": "primary",
-              "description": "This is a medium card with elevated variant and an avatar",
+              "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. ",
               "titleAlignment": "left",
               "footerAlignment": "right"
             },
@@ -4102,7 +4101,48 @@
             ]
           }
         ],
-        "code": "import { Accordion, AccordionItem } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Accordion>\n            <AccordionItem title='Section 1'>\n              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolorem unde quis, ea ratione obcaecati. Quaerat autem unde cupiditate ipsa.\n            </AccordionItem>\n            <AccordionItem title='Section 2'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium unde, amet voluptatibus soluta reprehenderit sed laudantium optio ut sint nemo illum earum ducimus tempora nulla quia nam placeat explicabo facilis quisquam minus? Fuga, labore facilis.\n            </AccordionItem>\n            <AccordionItem title='Section 3'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, est exercitationem consequatur dolorum architecto molestiae aspernatur voluptatem ducimus nisi ea quo, atque tempora magni necessitatibus.\n            </AccordionItem>\n    </Accordion>\n );\n}"
+        "code": "import { Card, Avatar } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Card \n      avatar={<Avatar avatarName=\"Brian\" name=\"Brian\" />} \n      description=\"Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\" \n    />\n  );\n}"
+      },
+      {
+        "title": "Interactive",
+        "components": [
+          {
+            "type": "Card",
+            "props": {
+              "title": "Interactive Card",
+              "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor."
+            },
+            "children": [
+              {
+                "type": "Image",
+                "props": {
+                  "src": "/images/green-window.webp",
+                  "radius": "md",
+                  "objectFit": "cover"
+                }
+              }
+            ]
+          },
+          {
+            "type": "Card",
+            "props": {
+              "title": "Non-Interactive Card",
+              "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.",
+              "isInteractive": false
+            },
+            "children": [
+              {
+                "type": "Image",
+                "props": {
+                  "src": "/images/green-window.webp",
+                  "radius": "md",
+                  "objectFit": "cover"
+                }
+              }
+            ]
+          }
+        ],
+        "code": "import { Card, Image } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Card \n      isInteractive=\"true\" \n      isInteractive=\"false\" \n    />\n  );\n}"
       }
     ],
     "propsTable": {
@@ -4114,13 +4154,13 @@
           "propName": "title",
           "type": "string",
           "description": "The title of the card.",
-          "defaultValue": "''"
+          "defaultValue": ""
         },
         {
           "propName": "description",
           "type": "string",
-          "description": "The description text of the card.",
-          "defaultValue": "''"
+          "description": "Renders an optional image within the card. Typically used for `Image` components.",
+          "defaultValue": ""
         },
         {
           "propName": "image",
@@ -4131,19 +4171,19 @@
         {
           "propName": "imageTop",
           "type": "boolean",
-          "description": "Determines if the image should be at the top of the card.",
+          "description": "Determines whether the image appears at the top of the card. If `true`, the image is styled accordingly.",
           "defaultValue": "false"
         },
         {
           "propName": "avatar",
           "type": "node",
-          "description": "Optional avatar to display in the card.",
+          "description": "Renders an optional avatar. Typically used for `Avatar` components.",
           "defaultValue": "null"
         },
         {
           "propName": "footer",
           "type": "node",
-          "description": "Optional footer content for the card.",
+          "description": "Defines the footer content of the card. Commonly includes actions like buttons.",
           "defaultValue": "null"
         },
         {
@@ -4161,32 +4201,50 @@
         {
           "propName": "radius",
           "type": "string",
-          "description": "Border radius of the card. Options: 'none', 'sm', 'md', 'lg', 'full'.",
+          "description": "Adjusts the corner radius of the card. Options: 'none', 'sm', 'md', 'lg'.",
           "defaultValue": "'md'"
         },
         {
           "propName": "horizontal",
           "type": "boolean",
-          "description": "Switches the card layout to horizontal.",
+          "description": "When set to `true`, switches the card layout to a horizontal orientation.",
           "defaultValue": "false"
+        },
+        {
+          "propName": "isInteractive",
+          "type": "boolean",
+          "description": "Enables hover effect.",
+          "defaultValue": "true"
         },
         {
           "propName": "className",
           "type": "string",
           "description": "Additional CSS classes for the card.",
-          "defaultValue": "''"
+          "defaultValue": ""
         },
         {
           "propName": "style",
           "type": "object",
-          "description": "Inline styles for the card.",
-          "defaultValue": "undefined"
+          "description": "Applies custom inline styles to the card container.",
+          "defaultValue": "{}"
         },
         {
           "propName": "aria",
           "type": "string",
           "description": "ARIA role for accessibility.",
           "defaultValue": "'card'"
+        },
+        {
+          "propName": "textAlignment",
+          "type": "string",
+          "description": "Specifies the alignment of the card title and description. Options: `'left'`, `'center'`, `'right'`.",
+          "defaultValue": "'center'"
+        },
+        {
+          "propName": "footerAlignment",
+          "type": "string",
+          "description": "Specifies the alignment of the footer content. Options: `'left'`, `'center'`, `'right'`.",
+          "defaultValue": "'center'"
         }
       ]
     }
@@ -4298,12 +4356,7 @@
     "propsTable": {
       "title": "Product Card Props",
       "description": "A list of all properties supported by the Product Card component.",
-      "headers": [
-        "Prop Name",
-        "Type",
-        "Description",
-        "Default Value"
-      ],
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
       "rows": [
         {
           "propName": "theme",
@@ -4398,4 +4451,4 @@
       ]
     }
   }
-
+]
