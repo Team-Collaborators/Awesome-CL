@@ -96,7 +96,7 @@ const Sidebar = ({ links }) => {
       {renderLinks(links)}
 
       {/* Playground */}
-      <Button
+      {/* <Button
         radius="md"
         color="secondary"
         className={`${styles["playground-btn"]} hover:bg-pink-100`}
@@ -104,7 +104,7 @@ const Sidebar = ({ links }) => {
         <Link to="/playground" style={{ color: "white" }}>
           Playground
         </Link>
-      </Button>
+      </Button> */}
     </nav>
   );
 };
