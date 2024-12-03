@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Introduction = () => {
   return (
     <div className={styles.page}>
-      <h1 className={styles.title}>Welcome to Awesome CL</h1>
+      <h1 className={styles.title}>Welcome to Awesome CL!</h1>
       <section className={styles.shadow}>
         <h2 className={styles.subtitle}>Built for Students by Students</h2>
         <p className={styles.paragraph}>
