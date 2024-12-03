@@ -6,10 +6,11 @@ import { github } from "react-syntax-highlighter/dist/esm/styles/hljs";
 const teamData = [
   {
     name: "Anna",
-    role: "Frontend & Backend Developer",
+    role: "Web Developer",
     description:
-      "Passionate about creating seamless user experiences and building reusable components.",
+      "Passionate about crafting clean, functional, and user-friendly applications, with a love for turning chaos into beautifully structured code.",
     image: "",
+    github: "https://github.com/andobrucki",
     linkedin: "https://www.linkedin.com/in/annadobrucki/",
   },
   {
