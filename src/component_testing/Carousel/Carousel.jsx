@@ -161,7 +161,7 @@ export default function Carousel({
 
   const sliderStyle = {
     width: `${width}px`,
-    gap: variant !== "classic" ? `${gap}px` : "",
+    gap: variant !== "classic" ? `${gap}px` : null,
     margin: variant === "classic" ? 0 : `0 ${width}px`,
     color: { iconColor },
     backgroundColor: `${backgroundColor}`,
