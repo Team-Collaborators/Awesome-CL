@@ -11,7 +11,7 @@ const Playground = () => {
   return (
     <div className="playground-wrapper">
       <h1>Playground</h1>
-      <p>This is the space to test new components</p>
+      <p>This is the space to test new components.</p>
       <div
         className="container"
         style={{

@@ -5,28 +5,23 @@
     "description": "A versatile button component that can be used in different styles and sizes.",
     "installation": [
       {
-        "name": "CLI",
-        "command": "cli-command-to-install",
-        "path": "/icons/cube-solid.svg"
-      },
-      {
         "name": "npm",
-        "command": "npm install your-library",
+        "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/npm-brands-solid.svg"
       },
       {
         "name": "yarn",
-        "command": "yarn add your-library",
+        "command": "yarn add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/yarn-brands-solid.svg"
       },
       {
         "name": "pnpm",
-        "command": "pnpm add your-library",
+        "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cubes-solid.svg"
       },
       {
         "name": "bun",
-        "command": "bun add your-library",
+        "command": "bun add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/lemon-regular.svg"
       }
     ],
@@ -262,12 +257,7 @@
     "propsTable": {
       "title": " Button Props",
       "description": "List of all props supported by the Button component.",
-      "headers": [
-        "Prop Name",
-        "Type",
-        "Description",
-        "Default Value"
-      ],
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
       "rows": [
         {
           "propName": "children",
@@ -328,10 +318,7 @@
     "eventsTable": {
       "title": "Events",
       "description": "List of all events emitted by the Button component.",
-      "headers": [
-        "Event Name",
-        "Description"
-      ],
+      "headers": ["Event Name", "Description"],
       "rows": [
         {
           "propName": "onClick",
@@ -360,28 +347,23 @@
     "description": "A modal component that can be customized with various sizes, placements, scroll options, and backdrop styles.",
     "installation": [
       {
-        "name": "CLI",
-        "command": "cli-command-to-install",
-        "path": "/icons/cube-solid.svg"
-      },
-      {
         "name": "npm",
-        "command": "npm install your-library",
+        "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/npm-brands-solid.svg"
       },
       {
         "name": "yarn",
-        "command": "yarn add your-library",
+        "command": "yarn add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/yarn-brands-solid.svg"
       },
       {
         "name": "pnpm",
-        "command": "pnpm add your-library",
+        "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cubes-solid.svg"
       },
       {
         "name": "bun",
-        "command": "bun add your-library",
+        "command": "bun add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/lemon-regular.svg"
       }
     ],
@@ -528,12 +510,7 @@
     "propsTable": {
       "title": "Modal Props",
       "description": "List of all props supported by the Modal component.",
-      "headers": [
-        "Prop Name",
-        "Type",
-        "Description",
-        "Default Value"
-      ],
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
       "rows": [
         {
           "propName": "children",
@@ -594,10 +571,7 @@
     "eventsTable": {
       "title": "Events",
       "description": "List of all events emitted by the Modal component.",
-      "headers": [
-        "Event Name",
-        "Description"
-      ],
+      "headers": ["Event Name", "Description"],
       "rows": [
         {
           "propName": "onOpen",
@@ -638,28 +612,23 @@
     "description": "A customizable accordion that comes in different variants.",
     "installation": [
       {
-        "name": "CLI",
-        "command": "cli-command-to-install",
-        "path": "/icons/cube-solid.svg"
-      },
-      {
         "name": "npm",
-        "command": "npm install your-library",
+        "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/npm-brands-solid.svg"
       },
       {
         "name": "yarn",
-        "command": "yarn add your-library",
+        "command": "yarn add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/yarn-brands-solid.svg"
       },
       {
         "name": "pnpm",
-        "command": "pnpm add your-library",
+        "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cubes-solid.svg"
       },
       {
         "name": "bun",
-        "command": "bun add your-library",
+        "command": "bun add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/lemon-regular.svg"
       }
     ],
@@ -955,12 +924,7 @@
     "propsTable": {
       "title": "Accordion Props",
       "description": "List of all properties supported by the accordion component.",
-      "headers": [
-        "Prop Name",
-        "Type",
-        "Description",
-        "Default Value"
-      ],
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
       "rows": [
         {
           "propName": "aria",
@@ -997,12 +961,7 @@
     "propsTable2": {
       "title": "Accordion Item Props",
       "description": "List of all properties supported by the accordion item component.",
-      "headers": [
-        "Prop Name",
-        "Type",
-        "Description",
-        "Default Value"
-      ],
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
       "rows": [
         {
           "propName": "aria",
@@ -1045,10 +1004,7 @@
     "eventsTable": {
       "title": "Events",
       "description": "List of all events emitted by the Search bar component.",
-      "headers": [
-        "Event Name",
-        "Description"
-      ],
+      "headers": ["Event Name", "Description"],
       "rows": [
         {
           "propName": "onToggle",
@@ -1077,28 +1033,23 @@
     "description": "A checkbox component that supports various styles, sizes, and allows for flexible positioning of the label.",
     "installation": [
       {
-        "name": "CLI",
-        "command": "cli-command-to-install",
-        "path": "/icons/cube-solid.svg"
-      },
-      {
         "name": "npm",
-        "command": "npm install your-library",
+        "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/npm-brands-solid.svg"
       },
       {
         "name": "yarn",
-        "command": "yarn add your-library",
+        "command": "yarn add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/yarn-brands-solid.svg"
       },
       {
         "name": "pnpm",
-        "command": "pnpm add your-library",
+        "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cubes-solid.svg"
       },
       {
         "name": "bun",
-        "command": "bun add your-library",
+        "command": "bun add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/lemon-regular.svg"
       }
     ],
@@ -1373,12 +1324,7 @@
     "propsTable": {
       "title": "Checkbox Props",
       "description": "List of all props supported by the Checkbox component.",
-      "headers": [
-        "Prop Name",
-        "Type",
-        "Description",
-        "Default Value"
-      ],
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
       "rows": [
         {
           "propName": "children",
@@ -1445,10 +1391,7 @@
     "eventsTable": {
       "title": "Events",
       "description": "List of all events emitted by the Checkbox component.",
-      "headers": [
-        "Event Name",
-        "Description"
-      ],
+      "headers": ["Event Name", "Description"],
       "rows": [
         {
           "propName": "onChange",
@@ -1477,28 +1420,23 @@
     "description": "A versatile form component with multiple variants for various use cases like contact, appointment, feedback, inquiry, and newsletter.",
     "installation": [
       {
-        "name": "CLI",
-        "command": "cli-command-to-install",
-        "path": "/icons/cube-solid.svg"
-      },
-      {
         "name": "npm",
-        "command": "npm install your-library",
+        "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/npm-brands-solid.svg"
       },
       {
         "name": "yarn",
-        "command": "yarn add your-library",
+        "command": "yarn add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/yarn-brands-solid.svg"
       },
       {
         "name": "pnpm",
-        "command": "pnpm add your-library",
+        "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cubes-solid.svg"
       },
       {
         "name": "bun",
-        "command": "bun add your-library",
+        "command": "bun add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/lemon-regular.svg"
       }
     ],
@@ -1514,12 +1452,7 @@
             "type": "Form",
             "props": {
               "variant": "contact",
-              "fields": [
-                "firstName",
-                "lastName",
-                "email",
-                "message"
-              ]
+              "fields": ["firstName", "lastName", "email", "message"]
             },
             "children": "Contact Form Content"
           }
@@ -1538,13 +1471,13 @@
                 "lastName",
                 "email",
                 "phone",
-                "date"
+                "appointmentDate"
               ]
             },
             "children": "Appointment Form Content"
           }
         ],
-        "code": "import { Form } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Form variant=\"appointment\" />\n  );\n}"
+        "code": "import { Form } from 'AwesomeCL';\n\nfunction App() {\n  const additionalFields = [\n    {\n      name: 'reason',\n      label: 'Reason for Appointment',\n      type: 'textarea',\n      required: true,\n    },\n  ];\n\n  const handleSubmit = (formData) => {\n    alert(`Appointment Scheduled: ${JSON.stringify(formData, null, 2)}`);\n  };\n\n  return (\n    <Form\n      variant=\"appointment\"\n      additionalFields={additionalFields}\n    onSubmit={handleSubmit}\n    />\n  );\n}"
       },
       {
         "title": "Feedback Form",
@@ -1553,17 +1486,12 @@
             "type": "Form",
             "props": {
               "variant": "feedback",
-              "fields": [
-                "firstName",
-                "lastName",
-                "email",
-                "feedback"
-              ]
+              "fields": ["firstName", "lastName", "email", "feedback"]
             },
             "children": "Feedback Form Content"
           }
         ],
-        "code": "import { Form } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Form variant=\"feedback\" />\n  );\n}"
+        "code": "import { Form } from 'AwesomeCL';\n\nfunction App() {\n  const customStyles = {\n    inputField: {\n      border: '2px solid #4caf50',\n      padding: '10px',\n      borderRadius: '5px',\n    },\n    submitButton: {\n      backgroundColor: '#4caf50',\n      color: 'white',\n      padding: '10px 20px',\n      border: 'none',\n      borderRadius: '5px',\n      cursor: 'pointer',\n    },\n  };\n\n  return (\n    <Form variant=\"feedback\" customStyles={customStyles} />\n  );\n}"
       },
       {
         "title": "Inquiry Form",
@@ -1572,12 +1500,7 @@
             "type": "Form",
             "props": {
               "variant": "inquiry",
-              "fields": [
-                "firstName",
-                "lastName",
-                "email",
-                "inquiry"
-              ]
+              "fields": ["firstName", "lastName", "email", "inquiry"]
             },
             "children": "Inquiry Form Content"
           }
@@ -1591,26 +1514,18 @@
             "type": "Form",
             "props": {
               "variant": "newsletter",
-              "fields": [
-                "email",
-                "interests"
-              ]
+              "fields": ["email", "interests"]
             },
             "children": "Newsletter Signup Content"
           }
         ],
-        "code": "import { Form } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Form variant=\"newsletter\" />\n  );\n}"
+        "code": "import { Form } from 'AwesomeCL';\n\nfunction App() {\n  const additionalFields = [\n    {\n      name: 'preferences',\n      label: 'Email Preferences',\n      type: 'select',\n      options: ['Daily Updates', 'Weekly News', 'Monthly Summary'],\n      required: true,\n    },\n    {\n      name: 'timezone',\n      label: 'Timezone',\n      type: 'text',\n      required: false,\n    },\n  ];\n\n  return (\n    <Form variant=\"newsletter\" additionalFields={additionalFields} />\n  );\n}"
       }
     ],
     "propsTable": {
       "title": "Form Props",
       "description": "List of all props supported by the Form component.",
-      "headers": [
-        "Prop Name",
-        "Type",
-        "Description",
-        "Default Value"
-      ],
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
       "rows": [
         {
           "propName": "variant",
@@ -1621,68 +1536,47 @@
         {
           "propName": "fields",
           "type": "array",
-          "description": "Defines the fields included in the form.",
+          "description": "Defines the fields included in the form. Can be customized dynamically.",
           "defaultValue": "[]"
         },
         {
-          "propName": "firstName",
-          "type": "string",
-          "description": "Sets the default first name value.",
-          "defaultValue": "''"
+          "propName": "onSubmit",
+          "type": "function",
+          "description": "Callback function triggered when the form is submitted.",
+          "defaultValue": "undefined"
         },
         {
-          "propName": "lastName",
-          "type": "string",
-          "description": "Sets the default last name value.",
-          "defaultValue": "''"
+          "propName": "customStyles",
+          "type": "object",
+          "description": "Custom styles for the form fields and buttons.",
+          "defaultValue": "{}"
         },
         {
-          "propName": "email",
-          "type": "string",
-          "description": "Sets the default email value.",
-          "defaultValue": "''"
-        },
-        {
-          "propName": "phone",
-          "type": "string",
-          "description": "Sets the default phone number for the form.",
-          "defaultValue": "''"
-        },
-        {
-          "propName": "date",
-          "type": "Date",
-          "description": "Sets a default date for the appointment form.",
-          "defaultValue": "new Date()"
-        },
-        {
-          "propName": "message",
-          "type": "string",
-          "description": "Provides a message field for the contact or inquiry form.",
-          "defaultValue": "''"
-        },
-        {
-          "propName": "interests",
+          "propName": "additionalFields",
           "type": "array",
-          "description": "List of interests for the newsletter signup form.",
+          "description": "Additional fields that can be dynamically added to the form.",
           "defaultValue": "[]"
+        },
+        {
+          "propName": "successMessage",
+          "type": "string",
+          "description": "Message displayed after successful form submission.",
+          "defaultValue": "'Thank you! Your form has been submitted.'"
         }
       ]
     },
     "eventsTable": {
       "title": "Events",
       "description": "List of all events emitted by the Form component.",
-      "headers": [
-        "Event Name",
-        "Description"
-      ],
+      "headers": ["Event Name", "Description"],
       "rows": [
         {
           "propName": "onSubmit",
-          "type": "Triggered when the form is submitted."
+          "type": "Triggered when the form is submitted. The callback receives the form data as an argument."
         },
         {
           "propName": "onChange",
-          "type": "Triggered when the input values are changed."
+          "type": "Triggered when an input value changes. Can be used to monitor real-time user input."
         }
       ]
     },
@@ -1692,43 +1586,43 @@
       "ariaRoles": [
         {
           "propName": "Form",
-          "description": "The Form component is rendered with the 'form' role."
+          "description": "The Form component is rendered with the 'form' role for better screen reader compatibility."
         },
         {
-          "propName": "aria-label",
+          "propName": "Form",
           "description": "An aria-label can be added for accessibility if the form has no header."
+        },
+        {
+          "propName": "Polite",
+          "description": "Live regions are used for dynamic updates like success messages."
         }
       ]
     }
   },
+
   {
     "title": "input",
     "path": "/frontend/components/input",
     "description": "A customizable form element with adjustable label positioning (above or to the left), size, color, and border styles.",
     "installation": [
       {
-        "name": "CLI",
-        "command": "cli-command-to-install",
-        "path": "/icons/cube-solid.svg"
-      },
-      {
         "name": "npm",
-        "command": "npm install your-library",
+        "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/npm-brands-solid.svg"
       },
       {
         "name": "yarn",
-        "command": "yarn add your-library",
+        "command": "yarn add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/yarn-brands-solid.svg"
       },
       {
         "name": "pnpm",
-        "command": "pnpm add your-library",
+        "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cubes-solid.svg"
       },
       {
         "name": "bun",
-        "command": "bun add your-library",
+        "command": "bun add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/lemon-regular.svg"
       }
     ],
@@ -1936,12 +1830,7 @@
     "propsTable": {
       "title": "Input Props",
       "description": "List of all properties supported by the Input component.",
-      "headers": [
-        "Prop Name",
-        "Type",
-        "Description",
-        "Default Value"
-      ],
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
       "rows": [
         {
           "propName": "aria",
@@ -2020,10 +1909,7 @@
     "eventsTable": {
       "title": "Events",
       "description": "List of all events emitted by the Input component.",
-      "headers": [
-        "Event Name",
-        "Description"
-      ],
+      "headers": ["Event Name", "Description"],
       "rows": [
         {
           "propName": "onValueChange",
@@ -2048,28 +1934,23 @@
     "description": "A customizable search bar with button element with adjustable positioning, size, color, and border styles.",
     "installation": [
       {
-        "name": "CLI",
-        "command": "cli-command-to-install",
-        "path": "/icons/cube-solid.svg"
-      },
-      {
         "name": "npm",
-        "command": "npm install your-library",
+        "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/npm-brands-solid.svg"
       },
       {
         "name": "yarn",
-        "command": "yarn add your-library",
+        "command": "yarn add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/yarn-brands-solid.svg"
       },
       {
         "name": "pnpm",
-        "command": "pnpm add your-library",
+        "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cubes-solid.svg"
       },
       {
         "name": "bun",
-        "command": "bun add your-library",
+        "command": "bun add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/lemon-regular.svg"
       }
     ],
@@ -2272,12 +2153,7 @@
     "propsTable": {
       "title": "Search Props",
       "description": "List of all properties supported by the Search component.",
-      "headers": [
-        "Prop Name",
-        "Type",
-        "Description",
-        "Default Value"
-      ],
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
       "rows": [
         {
           "propName": "aria",
@@ -2344,10 +2220,7 @@
     "eventsTable": {
       "title": "Events",
       "description": "List of all events emitted by the Search bar component.",
-      "headers": [
-        "Event Name",
-        "Description"
-      ],
+      "headers": ["Event Name", "Description"],
       "rows": [
         {
           "propName": "onValueChange",
@@ -2376,28 +2249,23 @@
     "description": "A customizable spinner component for indicating loading states.",
     "installation": [
       {
-        "name": "CLI",
-        "command": "cli-command-to-install",
-        "path": "/icons/cube-solid.svg"
-      },
-      {
         "name": "npm",
-        "command": "npm install your-library",
+        "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/npm-brands-solid.svg"
       },
       {
         "name": "yarn",
-        "command": "yarn add your-library",
+        "command": "yarn add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/yarn-brands-solid.svg"
       },
       {
         "name": "pnpm",
-        "command": "pnpm add your-library",
+        "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cubes-solid.svg"
       },
       {
         "name": "bun",
-        "command": "bun add your-library",
+        "command": "bun add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/lemon-regular.svg"
       }
     ],
@@ -2554,12 +2422,7 @@
     "propsTable": {
       "title": "Spinner Props",
       "description": "List of all props supported by the Spinner component.",
-      "headers": [
-        "Prop Name",
-        "Type",
-        "Description",
-        "Default Value"
-      ],
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
       "rows": [
         {
           "propName": "size",
@@ -2620,28 +2483,23 @@
     "description": "A customizable switch component that toggles between two states.",
     "installation": [
       {
-        "name": "CLI",
-        "command": "cli-command-to-install",
-        "path": "/icons/cube-solid.svg"
-      },
-      {
         "name": "npm",
-        "command": "npm install your-library",
+        "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/npm-brands-solid.svg"
       },
       {
         "name": "yarn",
-        "command": "yarn add your-library",
+        "command": "yarn add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/yarn-brands-solid.svg"
       },
       {
         "name": "pnpm",
-        "command": "pnpm add your-library",
+        "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cubes-solid.svg"
       },
       {
         "name": "bun",
-        "command": "bun add your-library",
+        "command": "bun add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/lemon-regular.svg"
       }
     ],
@@ -2808,12 +2666,7 @@
     "propsTable": {
       "title": "Switch Props",
       "description": "List of all props supported by the Switch component.",
-      "headers": [
-        "Prop Name",
-        "Type",
-        "Description",
-        "Default Value"
-      ],
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
       "rows": [
         {
           "propName": "aria",
@@ -2874,10 +2727,7 @@
     "eventsTable": {
       "title": "Events",
       "description": "List of all events emitted by the Switch component.",
-      "headers": [
-        "Event Name",
-        "Description"
-      ],
+      "headers": ["Event Name", "Description"],
       "rows": [
         {
           "propName": "onChange",
@@ -2910,28 +2760,23 @@
     "description": "A versatile carousel component that can be used in different variants and styles.",
     "installation": [
       {
-        "name": "CLI",
-        "command": "cli-command-to-install",
-        "path": "/icons/cube-solid.svg"
-      },
-      {
         "name": "npm",
-        "command": "npm install your-library",
+        "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/npm-brands-solid.svg"
       },
       {
         "name": "yarn",
-        "command": "yarn add your-library",
+        "command": "yarn add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/yarn-brands-solid.svg"
       },
       {
         "name": "pnpm",
-        "command": "pnpm add your-library",
+        "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cubes-solid.svg"
       },
       {
         "name": "bun",
-        "command": "bun add your-library",
+        "command": "bun add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/lemon-regular.svg"
       }
     ],
@@ -2948,44 +2793,44 @@
             "props": {
               "images": [
                 {
-                  "url": "https://picsum.photos/id/10/600/300",
-                  "alt": "Aerial view photography of green trees beside ocean"
+                  "url": "/images/green-mountain.webp",
+                  "alt": "A mountaibn range and trees."
                 },
                 {
-                  "url": "https://picsum.photos/id/11/600/300",
-                  "alt": "Green grass field"
+                  "url": "/images/beach-with-waves.webp",
+                  "alt": "aerial view of waves crashing on a beach."
                 },
                 {
-                  "url": "https://picsum.photos/id/12/600/300",
-                  "alt": "rippling body of water facing the coastline"
+                  "url": "/images/lake-under-blue-sky.webp",
+                  "alt": "A misty lake in the morning."
                 },
                 {
-                  "url": "https://picsum.photos/id/13/600/300",
-                  "alt": "Calm water and seashore near trees under white clouds"
+                  "url": "/images/lavender-flower-field.webp",
+                  "alt": "Flower fields in front of a lake with mountains in the background."
                 },
                 {
-                  "url": "https://picsum.photos/id/14/600/300",
-                  "alt": "Brown rocks beside body of water"
+                  "url": "/images/body-of-water-surrounded-by-trees.webp",
+                  "alt": "A river surrounded by trees and mountains."
                 },
                 {
-                  "url": "https://picsum.photos/id/15/600/300",
-                  "alt": "Landscape photography of river and trees"
+                  "url": "/images/mountain-range-with-snow.webp",
+                  "alt": "A snowy mountain range under blue sky."
                 },
                 {
-                  "url": "https://picsum.photos/id/16/600/300",
-                  "alt": "Body of water under blue sky"
+                  "url": "/images/rock-formation-on-body.webp",
+                  "alt": "Rock formation on the shore."
                 },
                 {
-                  "url": "https://picsum.photos/id/17/600/300",
-                  "alt": "Road surrounded by green leafed trees"
+                  "url": "/images/snow-mountain-under-stars.webp",
+                  "alt": "A snowy mountain under stars."
                 },
                 {
-                  "url": "https://picsum.photos/id/18/600/300",
-                  "alt": "Shallow focus photography of green grass"
+                  "url": "/images/tree-on-body-of-water-near-mountains.webp",
+                  "alt": "Tree on the water in front of mountain range."
                 },
                 {
-                  "url": "https://picsum.photos/id/19/600/300",
-                  "alt": "Selective focus photography of tree trunk on daytime"
+                  "url": "/images/waterfalls-in-forest.webp",
+                  "alt": "A waterfall in the autumn forest."
                 }
               ],
               "variant": "classic",
@@ -3005,44 +2850,44 @@
             "props": {
               "images": [
                 {
-                  "url": "https://picsum.photos/id/10/600/300",
-                  "alt": "Aerial view photography of green trees beside ocean"
+                  "url": "/images/green-mountain.webp",
+                  "alt": "A mountaibn range and trees."
                 },
                 {
-                  "url": "https://picsum.photos/id/11/600/300",
-                  "alt": "Green grass field"
+                  "url": "/images/beach-with-waves.webp",
+                  "alt": "aerial view of waves crashing on a beach."
                 },
                 {
-                  "url": "https://picsum.photos/id/12/600/300",
-                  "alt": "rippling body of water facing the coastline"
+                  "url": "/images/lake-under-blue-sky.webp",
+                  "alt": "A misty lake in the morning."
                 },
                 {
-                  "url": "https://picsum.photos/id/13/600/300",
-                  "alt": "Calm water and seashore near trees under white clouds"
+                  "url": "/images/lavender-flower-field.webp",
+                  "alt": "Flower fields in front of a lake with mountains in the background."
                 },
                 {
-                  "url": "https://picsum.photos/id/14/600/300",
-                  "alt": "Brown rocks beside body of water"
+                  "url": "/images/body-of-water-surrounded-by-trees.webp",
+                  "alt": "A river surrounded by trees and mountains."
                 },
                 {
-                  "url": "https://picsum.photos/id/15/600/300",
-                  "alt": "Landscape photography of river and trees"
+                  "url": "/images/mountain-range-with-snow.webp",
+                  "alt": "A snowy mountain range under blue sky."
                 },
                 {
-                  "url": "https://picsum.photos/id/16/600/300",
-                  "alt": "Body of water under blue sky"
+                  "url": "/images/rock-formation-on-body.webp",
+                  "alt": "Rock formation on the shore."
                 },
                 {
-                  "url": "https://picsum.photos/id/17/600/300",
-                  "alt": "Road surrounded by green leafed trees"
+                  "url": "/images/snow-mountain-under-stars.webp",
+                  "alt": "A snowy mountain under stars."
                 },
                 {
-                  "url": "https://picsum.photos/id/18/600/300",
-                  "alt": "Shallow focus photography of green grass"
+                  "url": "/images/tree-on-body-of-water-near-mountains.webp",
+                  "alt": "Tree on the water in front of mountain range."
                 },
                 {
-                  "url": "https://picsum.photos/id/19/600/300",
-                  "alt": "Selective focus photography of tree trunk on daytime"
+                  "url": "/images/waterfalls-in-forest.webp",
+                  "alt": "A waterfall in the autumn forest."
                 }
               ],
               "variant": "classic",
@@ -3066,44 +2911,44 @@
             "props": {
               "images": [
                 {
-                  "url": "https://picsum.photos/id/10/600/300",
-                  "alt": "Aerial view photography of green trees beside ocean"
+                  "url": "/images/green-mountain.webp",
+                  "alt": "A mountaibn range and trees."
                 },
                 {
-                  "url": "https://picsum.photos/id/11/600/300",
-                  "alt": "Green grass field"
+                  "url": "/images/beach-with-waves.webp",
+                  "alt": "aerial view of waves crashing on a beach."
                 },
                 {
-                  "url": "https://picsum.photos/id/12/600/300",
-                  "alt": "rippling body of water facing the coastline"
+                  "url": "/images/lake-under-blue-sky.webp",
+                  "alt": "A misty lake in the morning."
                 },
                 {
-                  "url": "https://picsum.photos/id/13/600/300",
-                  "alt": "Calm water and seashore near trees under white clouds"
+                  "url": "/images/lavender-flower-field.webp",
+                  "alt": "Flower fields in front of a lake with mountains in the background."
                 },
                 {
-                  "url": "https://picsum.photos/id/14/600/300",
-                  "alt": "Brown rocks beside body of water"
+                  "url": "/images/body-of-water-surrounded-by-trees.webp",
+                  "alt": "A river surrounded by trees and mountains."
                 },
                 {
-                  "url": "https://picsum.photos/id/15/600/300",
-                  "alt": "Landscape photography of river and trees"
+                  "url": "/images/mountain-range-with-snow.webp",
+                  "alt": "A snowy mountain range under blue sky."
                 },
                 {
-                  "url": "https://picsum.photos/id/16/600/300",
-                  "alt": "Body of water under blue sky"
+                  "url": "/images/rock-formation-on-body.webp",
+                  "alt": "Rock formation on the shore."
                 },
                 {
-                  "url": "https://picsum.photos/id/17/600/300",
-                  "alt": "Road surrounded by green leafed trees"
+                  "url": "/images/snow-mountain-under-stars.webp",
+                  "alt": "A snowy mountain under stars."
                 },
                 {
-                  "url": "https://picsum.photos/id/18/600/300",
-                  "alt": "Shallow focus photography of green grass"
+                  "url": "/images/tree-on-body-of-water-near-mountains.webp",
+                  "alt": "Tree on the water in front of mountain range."
                 },
                 {
-                  "url": "https://picsum.photos/id/19/600/300",
-                  "alt": "Selective focus photography of tree trunk on daytime"
+                  "url": "/images/waterfalls-in-forest.webp",
+                  "alt": "A waterfall in the autumn forest."
                 }
               ],
               "variant": "classic",
@@ -3126,44 +2971,44 @@
             "props": {
               "images": [
                 {
-                  "url": "https://picsum.photos/id/10/600/300",
-                  "alt": "Aerial view photography of green trees beside ocean"
+                  "url": "/images/green-mountain.webp",
+                  "alt": "A mountaibn range and trees."
                 },
                 {
-                  "url": "https://picsum.photos/id/11/600/300",
-                  "alt": "Green grass field"
+                  "url": "/images/beach-with-waves.webp",
+                  "alt": "aerial view of waves crashing on a beach."
                 },
                 {
-                  "url": "https://picsum.photos/id/12/600/300",
-                  "alt": "rippling body of water facing the coastline"
+                  "url": "/images/lake-under-blue-sky.webp",
+                  "alt": "A misty lake in the morning."
                 },
                 {
-                  "url": "https://picsum.photos/id/13/600/300",
-                  "alt": "Calm water and seashore near trees under white clouds"
+                  "url": "/images/lavender-flower-field.webp",
+                  "alt": "Flower fields in front of a lake with mountains in the background."
                 },
                 {
-                  "url": "https://picsum.photos/id/14/600/300",
-                  "alt": "Brown rocks beside body of water"
+                  "url": "/images/body-of-water-surrounded-by-trees.webp",
+                  "alt": "A river surrounded by trees and mountains."
                 },
                 {
-                  "url": "https://picsum.photos/id/15/600/300",
-                  "alt": "Landscape photography of river and trees"
+                  "url": "/images/mountain-range-with-snow.webp",
+                  "alt": "A snowy mountain range under blue sky."
                 },
                 {
-                  "url": "https://picsum.photos/id/16/600/300",
-                  "alt": "Body of water under blue sky"
+                  "url": "/images/rock-formation-on-body.webp",
+                  "alt": "Rock formation on the shore."
                 },
                 {
-                  "url": "https://picsum.photos/id/17/600/300",
-                  "alt": "Road surrounded by green leafed trees"
+                  "url": "/images/snow-mountain-under-stars.webp",
+                  "alt": "A snowy mountain under stars."
                 },
                 {
-                  "url": "https://picsum.photos/id/18/600/300",
-                  "alt": "Shallow focus photography of green grass"
+                  "url": "/images/tree-on-body-of-water-near-mountains.webp",
+                  "alt": "Tree on the water in front of mountain range."
                 },
                 {
-                  "url": "https://picsum.photos/id/19/600/300",
-                  "alt": "Selective focus photography of tree trunk on daytime"
+                  "url": "/images/waterfalls-in-forest.webp",
+                  "alt": "A waterfall in the autumn forest."
                 }
               ],
               "variant": "slider",
@@ -3185,44 +3030,44 @@
             "props": {
               "images": [
                 {
-                  "url": "https://picsum.photos/id/10/600/300",
-                  "alt": "Aerial view photography of green trees beside ocean"
+                  "url": "/images/green-mountain.webp",
+                  "alt": "A mountaibn range and trees."
                 },
                 {
-                  "url": "https://picsum.photos/id/11/600/300",
-                  "alt": "Green grass field"
+                  "url": "/images/beach-with-waves.webp",
+                  "alt": "aerial view of waves crashing on a beach."
                 },
                 {
-                  "url": "https://picsum.photos/id/12/600/300",
-                  "alt": "rippling body of water facing the coastline"
+                  "url": "/images/lake-under-blue-sky.webp",
+                  "alt": "A misty lake in the morning."
                 },
                 {
-                  "url": "https://picsum.photos/id/13/600/300",
-                  "alt": "Calm water and seashore near trees under white clouds"
+                  "url": "/images/lavender-flower-field.webp",
+                  "alt": "Flower fields in front of a lake with mountains in the background."
                 },
                 {
-                  "url": "https://picsum.photos/id/14/600/300",
-                  "alt": "Brown rocks beside body of water"
+                  "url": "/images/body-of-water-surrounded-by-trees.webp",
+                  "alt": "A river surrounded by trees and mountains."
                 },
                 {
-                  "url": "https://picsum.photos/id/15/600/300",
-                  "alt": "Landscape photography of river and trees"
+                  "url": "/images/mountain-range-with-snow.webp",
+                  "alt": "A snowy mountain range under blue sky."
                 },
                 {
-                  "url": "https://picsum.photos/id/16/600/300",
-                  "alt": "Body of water under blue sky"
+                  "url": "/images/rock-formation-on-body.webp",
+                  "alt": "Rock formation on the shore."
                 },
                 {
-                  "url": "https://picsum.photos/id/17/600/300",
-                  "alt": "Road surrounded by green leafed trees"
+                  "url": "/images/snow-mountain-under-stars.webp",
+                  "alt": "A snowy mountain under stars."
                 },
                 {
-                  "url": "https://picsum.photos/id/18/600/300",
-                  "alt": "Shallow focus photography of green grass"
+                  "url": "/images/tree-on-body-of-water-near-mountains.webp",
+                  "alt": "Tree on the water in front of mountain range."
                 },
                 {
-                  "url": "https://picsum.photos/id/19/600/300",
-                  "alt": "Selective focus photography of tree trunk on daytime"
+                  "url": "/images/waterfalls-in-forest.webp",
+                  "alt": "A waterfall in the autumn forest."
                 }
               ],
               "variant": "slider",
@@ -3345,12 +3190,7 @@
     "propsTable": {
       "title": "Carousel Props",
       "description": "List of all props supported by the Carousel component.",
-      "headers": [
-        "Prop Name",
-        "Type",
-        "Description",
-        "Default Value"
-      ],
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
       "rows": [
         {
           "propName": "images",
@@ -3459,10 +3299,7 @@
     "eventsTable": {
       "title": "Events",
       "description": "List of all events emitted by the Carousel component.",
-      "headers": [
-        "Event Name",
-        "Description"
-      ],
+      "headers": ["Event Name", "Description"],
       "rows": [
         {
           "propName": "onSlideChange",
@@ -3495,28 +3332,23 @@
     "description": "A customizable image component.",
     "installation": [
       {
-        "name": "CLI",
-        "command": "cli-command-to-install",
-        "path": "/icons/cube-solid.svg"
-      },
-      {
         "name": "npm",
-        "command": "npm install your-library",
+        "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/npm-brands-solid.svg"
       },
       {
         "name": "yarn",
-        "command": "yarn add your-library",
+        "command": "yarn add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/yarn-brands-solid.svg"
       },
       {
         "name": "pnpm",
-        "command": "pnpm add your-library",
+        "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cubes-solid.svg"
       },
       {
         "name": "bun",
-        "command": "bun add your-library",
+        "command": "bun add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/lemon-regular.svg"
       }
     ],
@@ -3531,7 +3363,7 @@
           {
             "type": "Image",
             "props": {
-              "src": "https://picsum.photos/200"
+              "src": "/images/lavender-flower-field.webp"
             },
             "children": ""
           }
@@ -3544,14 +3376,14 @@
           {
             "type": "Image",
             "props": {
-              "src": "https://picsum.photos/1920/1080"
+              "src": "/images/snow-mountain-under-stars.webp"
             },
             "children": ""
           },
           {
             "type": "Image",
             "props": {
-              "src": "https://picsum.photos/1920/1080",
+              "src": "/images/snow-mountain-under-stars.webp",
               "height": "200px",
               "width": "200px"
             },
@@ -3560,7 +3392,7 @@
           {
             "type": "Image",
             "props": {
-              "src": "https://picsum.photos/1920/1080",
+              "src": "/images/snow-mountain-under-stars.webp",
               "width": "400px"
             },
             "children": ""
@@ -3574,7 +3406,7 @@
           {
             "type": "Image",
             "props": {
-              "src": "https://picsum.photos/200",
+              "src": "/images/lake-under-blue-sky.webp",
               "isZoomed": "true"
             },
             "children": ""
@@ -3588,7 +3420,9 @@
           {
             "type": "Image",
             "props": {
-              "src": "https://picsum.photos/200",
+              "src": "/images/fly-agaric.webp",
+              "width": "200px",
+              "height": "200px",
               "radius": "none"
             },
             "children": ""
@@ -3596,7 +3430,9 @@
           {
             "type": "Image",
             "props": {
-              "src": "https://picsum.photos/200",
+              "src": "/images/fly-agaric.webp",
+              "width": "200px",
+              "height": "200px",
               "radius": "sm"
             },
             "children": ""
@@ -3604,7 +3440,9 @@
           {
             "type": "Image",
             "props": {
-              "src": "https://picsum.photos/200",
+              "src": "/images/fly-agaric.webp",
+              "width": "200px",
+              "height": "200px",
               "radius": "md"
             },
             "children": ""
@@ -3612,7 +3450,9 @@
           {
             "type": "Image",
             "props": {
-              "src": "https://picsum.photos/200",
+              "src": "/images/fly-agaric.webp",
+              "width": "200px",
+              "height": "200px",
               "radius": "lg"
             },
             "children": ""
@@ -3620,7 +3460,9 @@
           {
             "type": "Image",
             "props": {
-              "src": "https://picsum.photos/200",
+              "src": "/images/fly-agaric.webp",
+              "width": "200px",
+              "height": "200px",
               "radius": "full"
             },
             "children": ""
@@ -3632,12 +3474,7 @@
     "propsTable": {
       "title": "Modal Props",
       "description": "List of all props supported by the Modal component.",
-      "headers": [
-        "Prop Name",
-        "Type",
-        "Description",
-        "Default Value"
-      ],
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
       "rows": [
         {
           "propName": "width",
@@ -3704,10 +3541,7 @@
     "eventsTable": {
       "title": "Events",
       "description": "List of all events emitted by the Modal component.",
-      "headers": [
-        "Event Name",
-        "Description"
-      ],
+      "headers": ["Event Name", "Description"],
       "rows": [
         {
           "propName": "onClick",
@@ -3736,28 +3570,23 @@
     "description": "A customizable Avatar component that supports DiceBear SVG generation, image sources, sizes, colors, shapes, and additional user details like name and description.",
     "installation": [
       {
-        "name": "CLI",
-        "command": "npm install @dicebear/core @dicebear/collection",
-        "path": "/icons/cube-solid.svg"
-      },
-      {
         "name": "npm",
-        "command": "npm install your-avatar-library",
+        "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/npm-brands-solid.svg"
       },
       {
         "name": "yarn",
-        "command": "yarn add your-avatar-library",
+        "command": "yarn add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/yarn-brands-solid.svg"
       },
       {
         "name": "pnpm",
-        "command": "pnpm add your-avatar-library",
+        "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/cubes-solid.svg"
       },
       {
         "name": "bun",
-        "command": "bun add your-avatar-library",
+        "command": "bun add git+https://github.com/Team-Collaborators/Awesome-CL.git",
         "path": "/icons/lemon-regular.svg"
       }
     ],
@@ -3765,7 +3594,6 @@
       "code": "import Avatar from 'AwesomeCL';",
       "description": "This code shows how to import the Avatar component from the library."
     },
-
     "examples": [
       {
         "title": "Default",
@@ -3964,7 +3792,6 @@
           "description": "The shape of the avatar.",
           "defaultValue": "'circle'"
         },
-
         {
           "propName": "radius",
           "type": "'none' | 'sm' | 'md' | 'lg' | 'full'",
@@ -4012,6 +3839,617 @@
         {
           "propName": "Responsive Design",
           "description": "Avatar sizes (`size` prop) should be responsive and maintain accessibility for varying device sizes."
+        }
+      ]
+    }
+  },
+  {
+    "title": "card",
+    "path": "/frontend/components/card",
+    "description": "A flexible and customizable card component that supports various layouts, variants, and interactive features.",
+    "installation": [
+      {
+        "name": "npm",
+        "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
+        "path": "/icons/npm-brands-solid.svg"
+      },
+      {
+        "name": "yarn",
+        "command": "yarn add git+https://github.com/Team-Collaborators/Awesome-CL.git",
+        "path": "/icons/yarn-brands-solid.svg"
+      },
+      {
+        "name": "pnpm",
+        "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
+        "path": "/icons/cubes-solid.svg"
+      },
+      {
+        "name": "bun",
+        "command": "bun add git+https://github.com/Team-Collaborators/Awesome-CL.git",
+        "path": "/icons/lemon-regular.svg"
+      }
+    ],
+    "import": {
+      "code": "import { Card } from 'AwesomeCL';",
+      "description": "This code shows how to import the Card component from the library."
+    },
+    "examples": [
+      {
+        "title": "Default",
+        "components": [
+          {
+            "type": "Card",
+            "props": {
+              "title": "Card Title",
+              "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa."
+            },
+            "children": [
+              {
+                "type": "Image",
+                "props": {
+                  "src": "/images/green-building.webp"
+                }
+              },
+              {
+                "type": "Button",
+                "props": {
+                  "color": "default",
+                  "size": "sm",
+                  "radius": "full"
+                },
+                "children": "Read More"
+              }
+            ]
+          }
+        ],
+        "code": "import { Card, Image, Button } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Card \n      image={\n        <Image \n          src={snow} \n          objectFit=\"cover\" \n          radius=\"md\" \n          size=\"sm\" \n          alt=\"Example Image\" \n        />\n      }\n      description=\"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.\"\n      footer={\n        <Button color=\"default\" size=\"sm\" radius=\"full\">Read More</Button>\n      }\n    />\n  );\n}"
+      },
+      {
+        "title": "Variants",
+        "components": [
+          {
+            "type": "Card",
+            "props": {
+              "title": "Subtle Variant",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "variant": "subtle"
+            },
+            "children": [
+              {
+                "type": "Image",
+                "props": {
+                  "src": "/images/sofa.webp"
+                }
+              },
+              {
+                "type": "Button",
+                "props": {
+                  "color": "default",
+                  "size": "sm",
+                  "radius": "sm"
+                },
+                "children": "Buy Now"
+              }
+            ]
+          },
+          {
+            "type": "Card",
+            "props": {
+              "title": "Elevated Variant",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "variant": "elevated"
+            },
+            "children": [
+              {
+                "type": "Image",
+                "props": {
+                  "src": "/images/sofa.webp"
+                }
+              },
+              {
+                "type": "Button",
+                "props": {
+                  "color": "default",
+                  "size": "sm",
+                  "radius": "sm"
+                },
+                "children": "Buy Now"
+              }
+            ]
+          },
+          {
+            "type": "Card",
+            "props": {
+              "title": "Outlined Variant",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "variant": "outlined"
+            },
+            "children": [
+              {
+                "type": "Image",
+                "props": {
+                  "src": "/images/sofa.webp"
+                }
+              },
+              {
+                "type": "Button",
+                "props": {
+                  "color": "default",
+                  "size": "sm",
+                  "radius": "sm"
+                },
+                "children": "Buy Now"
+              }
+            ]
+          }
+        ],
+        "code": "import { Card, Image, Button } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Card \n      variant=\"subtle\" \n      variant=\"elevated\" \n      variant=\"outlined\" \n    />\n  );\n}"
+      },
+      {
+        "title": "Sizes",
+        "components": [
+          {
+            "type": "Card",
+            "props": {
+              "title": "Small Card",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "size": "sm"
+            }
+          },
+          {
+            "type": "Card",
+            "props": {
+              "title": "Medium Card",
+              "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+              "size": "md"
+            }
+          },
+          {
+            "type": "Card",
+            "props": {
+              "title": "Large Card",
+              "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. ",
+              "size": "lg"
+            }
+          }
+        ],
+        "code": "import { Card, Image } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Card \n      size=\"sm\" \n      size=\"md\" \n      size=\"lg\" \n    />\n  );\n}"
+      },
+      {
+        "title": "Header Image",
+        "components": [
+          {
+            "type": "Card",
+            "props": {
+              "title": "Card with Header Image",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "imageTop": true
+            },
+            "children": [
+              {
+                "type": "Image",
+                "props": {
+                  "src": "/images/sofa.webp",
+                  "radius": "none"
+                }
+              },
+              {
+                "type": "Button",
+                "props": {
+                  "color": "default",
+                  "size": "sm",
+                  "radius": "sm"
+                },
+                "children": "Buy Now"
+              }
+            ]
+          }
+        ],
+        "code": "import { Card, Image, Button } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Card \n      imageTop=\"true\" \n     />\n  );\n}"
+      },
+      {
+        "title": "Horizontal Layout",
+        "components": [
+          {
+            "type": "Card",
+            "props": {
+              "title": "Horizontal Card",
+              "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.",
+              "horizontal": true,
+              "size": "lg"
+            },
+            "children": [
+              {
+                "type": "Image",
+                "props": {
+                  "src": "/images/bag.webp",
+                  "radius": "none",
+                  "objectFit": "cover"
+                }
+              }
+            ]
+          }
+        ],
+        "code": "import { Card, Image } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Card \n      horizontal=\"true\" \n    />\n  );\n}"
+      },
+      {
+        "title": "Avatar",
+        "components": [
+          {
+            "type": "Card",
+            "props": {
+              "variant": "subtle",
+              "title": "Medium Elevated Card with Avatar",
+              "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. ",
+              "titleAlignment": "left",
+              "footerAlignment": "right"
+            },
+            "children": [
+              {
+                "type": "Avatar",
+                "props": {
+                  "avatarName": "Brian",
+                  "name": "Brian"
+                }
+              },
+              {
+                "type": "Button",
+                "props": {
+                  "color": "primary",
+                  "size": "sm",
+                  "radius": "sm"
+                },
+                "children": "Primary"
+              }
+            ]
+          }
+        ],
+        "code": "import { Card, Avatar } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Card \n      avatar={<Avatar avatarName=\"Brian\" name=\"Brian\" />} \n      description=\"Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\" \n    />\n  );\n}"
+      },
+      {
+        "title": "Interactive",
+        "components": [
+          {
+            "type": "Card",
+            "props": {
+              "title": "Interactive Card",
+              "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor."
+            },
+            "children": [
+              {
+                "type": "Image",
+                "props": {
+                  "src": "/images/green-window.webp",
+                  "radius": "md",
+                  "objectFit": "cover"
+                }
+              }
+            ]
+          },
+          {
+            "type": "Card",
+            "props": {
+              "title": "Non-Interactive Card",
+              "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.",
+              "isInteractive": false
+            },
+            "children": [
+              {
+                "type": "Image",
+                "props": {
+                  "src": "/images/green-window.webp",
+                  "radius": "md",
+                  "objectFit": "cover"
+                }
+              }
+            ]
+          }
+        ],
+        "code": "import { Card, Image } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Card \n      isInteractive=\"true\" \n      isInteractive=\"false\" \n    />\n  );\n}"
+      }
+    ],
+    "propsTable": {
+      "title": "Card Props",
+      "description": "List of all props supported by the Card component.",
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
+      "rows": [
+        {
+          "propName": "title",
+          "type": "string",
+          "description": "The title of the card.",
+          "defaultValue": ""
+        },
+        {
+          "propName": "description",
+          "type": "string",
+          "description": "Renders an optional image within the card. Typically used for `Image` components.",
+          "defaultValue": ""
+        },
+        {
+          "propName": "image",
+          "type": "node",
+          "description": "Optional image to display in the card.",
+          "defaultValue": "null"
+        },
+        {
+          "propName": "imageTop",
+          "type": "boolean",
+          "description": "Determines whether the image appears at the top of the card. If `true`, the image is styled accordingly.",
+          "defaultValue": "false"
+        },
+        {
+          "propName": "avatar",
+          "type": "node",
+          "description": "Renders an optional avatar. Typically used for `Avatar` components.",
+          "defaultValue": "null"
+        },
+        {
+          "propName": "footer",
+          "type": "node",
+          "description": "Defines the footer content of the card. Commonly includes actions like buttons.",
+          "defaultValue": "null"
+        },
+        {
+          "propName": "variant",
+          "type": "string",
+          "description": "Visual style of the card. Options: 'subtle', 'elevated', 'outlined'.",
+          "defaultValue": "'subtle'"
+        },
+        {
+          "propName": "size",
+          "type": "string",
+          "description": "Size of the card. Options: 'sm', 'md', 'lg'.",
+          "defaultValue": "'md'"
+        },
+        {
+          "propName": "radius",
+          "type": "string",
+          "description": "Adjusts the corner radius of the card. Options: 'none', 'sm', 'md', 'lg'.",
+          "defaultValue": "'md'"
+        },
+        {
+          "propName": "horizontal",
+          "type": "boolean",
+          "description": "When set to `true`, switches the card layout to a horizontal orientation.",
+          "defaultValue": "false"
+        },
+        {
+          "propName": "isInteractive",
+          "type": "boolean",
+          "description": "Enables hover effect.",
+          "defaultValue": "true"
+        },
+        {
+          "propName": "className",
+          "type": "string",
+          "description": "Additional CSS classes for the card.",
+          "defaultValue": ""
+        },
+        {
+          "propName": "style",
+          "type": "object",
+          "description": "Applies custom inline styles to the card container.",
+          "defaultValue": "{}"
+        },
+        {
+          "propName": "aria",
+          "type": "string",
+          "description": "ARIA role for accessibility.",
+          "defaultValue": "'card'"
+        },
+        {
+          "propName": "textAlignment",
+          "type": "string",
+          "description": "Specifies the alignment of the card title and description. Options: `'left'`, `'center'`, `'right'`.",
+          "defaultValue": "'center'"
+        },
+        {
+          "propName": "footerAlignment",
+          "type": "string",
+          "description": "Specifies the alignment of the footer content. Options: `'left'`, `'center'`, `'right'`.",
+          "defaultValue": "'center'"
+        }
+      ]
+    }
+  },
+  {
+    "title": "product-card",
+    "path": "/frontend/components/product-card",
+    "description": "A reusable and adaptable product card component with multiple themes, dynamic content, and interactivity.",
+    "installation": [
+      {
+        "name": "npm",
+        "command": "npm install git+https://github.com/Team-Collaborators/Awesome-CL.git",
+        "path": "/icons/npm-brands-solid.svg"
+      },
+      {
+        "name": "yarn",
+        "command": "yarn add git+https://github.com/Team-Collaborators/Awesome-CL.git",
+        "path": "/icons/yarn-brands-solid.svg"
+      },
+      {
+        "name": "pnpm",
+        "command": "pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git",
+        "path": "/icons/cubes-solid.svg"
+      },
+      {
+        "name": "bun",
+        "command": "bun add git+https://github.com/Team-Collaborators/Awesome-CL.git",
+        "path": "/icons/lemon-regular.svg"
+      }
+    ],
+    "import": {
+      "code": "import ProductCard from 'AwesomeCL';",
+      "description": "This code shows how to import the ProductCard component from the library."
+    },
+    "examples": [
+      {
+        "title": "Default Theme with Theme Switcher",
+        "description": "Showcases the default theme of the product card with theme switcher buttons, allowing users to toggle between 'default', 'dark', and 'neon' themes.",
+        "components": [
+          {
+            "type": "ProductCard",
+            "props": {
+              "showThemeSwitcher": true
+            }
+          }
+        ],
+        "code": "import ProductCard from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <ProductCard showThemeSwitcher={true} />;\n  );\n}"
+      },
+      {
+        "title": "Dark Theme",
+        "description": "Renders the product card with the 'dark-theme' applied, using predefined values from the component.",
+        "components": [
+          {
+            "type": "ProductCard",
+            "props": {
+              "theme": "dark-theme"
+            }
+          }
+        ],
+        "code": "import ProductCard from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <ProductCard \n      theme=\"dark-theme\" \n    />;\n  );\n}"
+      },
+      {
+        "title": "Neon Theme",
+        "description": "Applies the 'neon-theme' for a vibrant and dynamic appearance, using predefined values from the component.",
+        "components": [
+          {
+            "type": "ProductCard",
+            "props": {
+              "theme": "neon-theme"
+            }
+          }
+        ],
+        "code": "import ProductCard from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <ProductCard \n      theme=\"neon-theme\" \n    />;\n  );\n}"
+      },
+      {
+        "title": "Custom Theme",
+        "description": "Demonstrates a custom-themed product card with unique styles and a custom image.",
+        "components": [
+          {
+            "type": "ProductCard",
+            "props": {
+              "theme": "custom-theme",
+              "name": "VR Headset",
+              "description": "Revolutionize your VR experience with vibrant customization.",
+              "price": 899.99,
+              "originalPrice": 1199.99,
+              "discount": 25,
+              "image": "/images/vr-headset.jpg",
+              "customTheme": {
+                "backgroundColor": "#1E1E2F",
+                "textColor": "#E0E0E0",
+                "buttonBackground": "#4C64F2",
+                "buttonHoverBackground": "#637AFF",
+                "buttonTextColor": "#FFFFFF",
+                "priceColor": "#38D39F",
+                "originalPriceColor": "#E94560",
+                "discountColor": "#FFD700",
+                "border": "2px solid #2C2C3D",
+                "boxShadow": "4px 4px 10px rgba(77, 20, 91, 0.5), -4px -4px 10px rgba(77, 20, 91, 0.5), -4px 4px 10px rgba(77, 20, 91, 0.5), 4px -4px 10px rgba(77, 20, 91, 0.5)",
+                "nameTextShadow": "2px 2px 5px rgba(0, 0, 0, 0.5)",
+                "descriptionTextShadow": "1px 1px 3px rgba(0, 0, 0, 0.3)"
+              }
+            }
+          }
+        ],
+        "code": "import ProductCard from 'AwesomeCL';\n\nfunction App() {\n  const handleBuyNow = () => {\n    alert('Buy Now clicked!');\n  };\n\n  const handleAddToBag = () => {\n    alert('Add to Bag clicked!');\n  };\n\n  return (\n    <ProductCard \n      theme=\"custom-theme\"\n      name=\"VR Headset\"\n      description=\"Revolutionize your VR experience with vibrant customization.\"\n      price={899.99}\n      originalPrice={1199.99}\n      discount={25}\n      image=\"/images/vr-headset.jpg\"\n      customTheme={{\n        backgroundColor: \"#E6E6FA\", // Light lavender\n        textColor: \"#1E3A8A\", // Deep blue for text\n        buttonBackground: \"#4F46E5\", // Vibrant indigo for buttons\n        buttonTextColor: \"#FFFFFF\", // White for button text\n        priceColor: \"#4ADE80\", // Light green for price\n        originalPriceColor: \"#9333EA\", // Purple for original price\n        discountColor: \"#60A5FA\", // Sky blue for discount\n        border: \"2px solid #7C3AED\", // Bold purple border\n        boxShadow: \"0 6px 15px rgba(124, 58, 237, 0.3)\", // Purple shadow\n        fontWeight: \"bold\" // Bold text for emphasis\n      }}\n      onBuyNow={handleBuyNow}\n      onAddToBag={handleAddToBag}\n    />;\n  );\n}"
+      }
+    ],
+    "propsTable": {
+      "title": "Product Card Props",
+      "description": "A list of all properties supported by the Product Card component.",
+      "headers": ["Prop Name", "Type", "Description", "Default Value"],
+      "rows": [
+        {
+          "propName": "theme",
+          "type": "string",
+          "description": "The theme for the product card. Options: 'default', 'dark-theme', 'neon-theme', 'custom-theme'.",
+          "defaultValue": "'default'"
+        },
+        {
+          "propName": "name",
+          "type": "string",
+          "description": "The name of the product.",
+          "defaultValue": "Unnamed Product"
+        },
+        {
+          "propName": "description",
+          "type": "string",
+          "description": "A brief description of the product.",
+          "defaultValue": "No description available."
+        },
+        {
+          "propName": "price",
+          "type": "number",
+          "description": "The current price of the product.",
+          "defaultValue": "0"
+        },
+        {
+          "propName": "originalPrice",
+          "type": "number",
+          "description": "The original price of the product, used to calculate discounts.",
+          "defaultValue": "0"
+        },
+        {
+          "propName": "discount",
+          "type": "number",
+          "description": "The discount percentage on the product.",
+          "defaultValue": "0"
+        },
+        {
+          "propName": "image",
+          "type": "string",
+          "description": "The URL or path to the product image.",
+          "defaultValue": "-"
+        },
+        {
+          "propName": "customTheme",
+          "type": "object",
+          "description": "Custom styles for the product card (backgroundColor, textColor, buttonBackground, buttonTextColor).",
+          "defaultValue": "{}"
+        },
+        {
+          "propName": "showThemeSwitcher",
+          "type": "boolean",
+          "description": "Whether to show theme switcher buttons.",
+          "defaultValue": "false"
+        },
+        {
+          "propName": "onThemeChange",
+          "type": "function",
+          "description": "Callback function triggered when the theme changes.",
+          "defaultValue": "-"
+        },
+        {
+          "propName": "onBuyNow",
+          "type": "function",
+          "description": "Callback function for the 'Buy Now' button.",
+          "defaultValue": "-"
+        },
+        {
+          "propName": "onAddToBag",
+          "type": "function",
+          "description": "Callback function for the 'Add to Bag' button.",
+          "defaultValue": "-"
+        }
+      ]
+    },
+    "accessibility": {
+      "title": "Accessibility",
+      "description": "Accessibility considerations for the Product Card component.",
+      "ariaRoles": [
+        {
+          "propName": "Product Image",
+          "description": "The product image includes an alt tag with the product name for better accessibility."
+        },
+        {
+          "propName": "Buttons",
+          "description": "Interactive buttons have accessible labels for screen readers."
+        },
+        {
+          "propName": "Theme Switcher",
+          "description": "Theme switcher buttons are keyboard-navigable and accessible."
         }
       ]
     }
