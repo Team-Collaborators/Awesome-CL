@@ -17,6 +17,9 @@ import Switch from "../component_testing/Switch/Switch";
 import Checkbox from "../component_testing/Checkbox/Checkbox";
 import Image from "../component_testing/Image/Image";
 import ProductCard from "../component_testing/ProductCard/ProductCard";
+import Avatar from "../component_testing/Avatar/Avatar";
+import Carousel from "../component_testing/Carousel/Carousel";
+import Card from "../component_testing/Card/Card";
 
 // import variables from lib styles
 // import all components from the json file, then export them all
@@ -34,4 +37,7 @@ export {
   Checkbox,
   Image,
   ProductCard,
+  Avatar,
+  Carousel,
+  Card,
 };
