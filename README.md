@@ -20,13 +20,13 @@ Awesome CL is a React library offering reusable front-end components along with 
 ## Installation
 Simply choose your favourite package manager and copy the command to your terminal.
 
-- npm install git+https://github.com/Team-Collaborators/Awesome-CL.git
-- yarn add git+https://github.com/Team-Collaborators/Awesome-CL.git
-- pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git
-- bun add git+https://github.com/Team-Collaborators/Awesome-CL.git
+- `npm install git+https://github.com/Team-Collaborators/Awesome-CL.git`
+- `yarn add git+https://github.com/Team-Collaborators/Awesome-CL.git`
+- `pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git`
+- `bun add git+https://github.com/Team-Collaborators/Awesome-CL.git`
 
 ## Usage
-Now import components where ever you need them with a simple import command.
+Now import components wherever you need them with a simple import command.
 ```javascript
 import { Button } from "AwesomeCL";
 
@@ -41,9 +41,7 @@ function App() {
 export default App;
 ```
 
-To import the style sheet add it to you main CSS file:
+To import the style sheet add it to your main CSS file:
 ```javascript
 @import "/node_modules/AwesomeCL/dist/exports.css";
 ```
-## Examples
-You can find more examples of how to use the library in the instructions directory [instructions directory](https://www.awesome-cl.live/instructions/introduction)
