@@ -1,4 +1,4 @@
-# Awesome CL - Making a junior developer’s life easier by using a component library! 
+## Awesome CL - Making a junior developer’s life easier by using a component library! 
 
 ## About
 
@@ -20,10 +20,10 @@ Awesome CL is a React library offering reusable front-end components along with 
 ## Installation
 Simply choose your favourite package manager and copy the command to your terminal.
 
-npm install git+https://github.com/Team-Collaborators/Awesome-CL.git
-yarn add git+https://github.com/Team-Collaborators/Awesome-CL.git
-pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git
-bun add git+https://github.com/Team-Collaborators/Awesome-CL.git
+- npm install git+https://github.com/Team-Collaborators/Awesome-CL.git
+- yarn add git+https://github.com/Team-Collaborators/Awesome-CL.git
+- pnpm add git+https://github.com/Team-Collaborators/Awesome-CL.git
+- bun add git+https://github.com/Team-Collaborators/Awesome-CL.git
 
 ## Usage
 Now import components where ever you need them with a simple import command.
