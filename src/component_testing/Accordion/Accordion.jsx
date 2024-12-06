@@ -27,7 +27,7 @@ const Accordion = ({
   const combinedClassNames = `accordion-wrapper ${className} variant-${variant}`;
 
   return (
-    <div className={combinedClassNames} style={style}>
+    <div className={combinedClassNames} style={style} aria-label={aria}>
       {React.Children.map(children, (child, index) =>
         cloneElement(child, {
           isOpen: openIndexes.includes(index),

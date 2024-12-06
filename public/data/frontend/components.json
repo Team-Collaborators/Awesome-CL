@@ -35,9 +35,7 @@
         "components": [
           {
             "type": "Button",
-            "props": {
-              "size": "sm"
-            },
+            "props": {},
             "children": "Button"
           }
         ],
@@ -74,7 +72,7 @@
             "children": "Button"
           }
         ],
-        "code": "import { Button } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Button size=\"sm\">Button</Button>\n      <Button size=\"md\">MButton</Button>\n      <Button size=\"lg\">Button</Button>\n    </>\n  );\n}"
+        "code": "import { Button } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Button size=\"sm\" radius=\"sm\" color=\"secondary\">Button</Button>\n      <Button size=\"md\" radius=\"sm\" color=\"secondary\">Button</Button>\n      <Button size=\"lg\" radius=\"sm\" color=\"secondary\">Button</Button>\n    </>\n  );\n}"
       },
       {
         "title": "Radius",
@@ -125,7 +123,7 @@
             "children": "Button"
           }
         ],
-        "code": "import { Button } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Button radius=\"none\">Button</Button>\n      <Button radius=\"sm\">Button</Button>\n      <Button radius=\"md\">Button</Button>\n      <Button radius=\"lg\">Button</Button>\n      <Button radius=\"full\">Button</Button>\n    </>\n  );\n}"
+        "code": "import { Button } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Button radius=\"none\" size=\"sm\" color=\"secondary\">Button</Button>\n      <Button radius=\"sm\" size=\"sm\" color=\"secondary\">Button</Button>\n      <Button radius=\"md\" size=\"sm\" color=\"secondary\">Button</Button>\n      <Button radius=\"lg\" size=\"sm\" color=\"secondary\">Button</Button>\n      <Button radius=\"full\" size=\"sm\" color=\"secondary\">Button</Button>\n    </>\n  );\n}"
       },
       {
         "title": "Colors",
@@ -134,7 +132,7 @@
             "type": "Button",
             "props": {
               "size": "sm",
-              "radius": "md",
+              "radius": "sm",
               "color": "default"
             },
             "children": "Button"
@@ -143,7 +141,7 @@
             "type": "Button",
             "props": {
               "size": "sm",
-              "radius": "md",
+              "radius": "sm",
               "color": "primary"
             },
             "children": "Button"
@@ -152,7 +150,7 @@
             "type": "Button",
             "props": {
               "size": "sm",
-              "radius": "md",
+              "radius": "sm",
               "color": "secondary"
             },
             "children": "Button"
@@ -161,7 +159,7 @@
             "type": "Button",
             "props": {
               "size": "sm",
-              "radius": "md",
+              "radius": "sm",
               "color": "success"
             },
             "children": "Button"
@@ -170,7 +168,7 @@
             "type": "Button",
             "props": {
               "size": "sm",
-              "radius": "md",
+              "radius": "sm",
               "color": "warning"
             },
             "children": "Button"
@@ -179,13 +177,13 @@
             "type": "Button",
             "props": {
               "size": "sm",
-              "radius": "md",
+              "radius": "sm",
               "color": "danger"
             },
             "children": "Button"
           }
         ],
-        "code": "import { Button } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Button color=\"default\">Button</Button>\n      <Button color=\"primary\">Button</Button>\n      <Button color=\"secondary\">Button</Button>\n      <Button color=\"success\">Button</Button>\n      <Button color=\"warning\">Button</Button>\n      <Button color=\"danger\">Button</Button>\n    </>\n  );\n}"
+        "code": "import { Button } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Button color=\"default\" size=\"sm\" radius=\"sm\">Button</Button>\n      <Button color=\"primary\" size=\"sm\" radius=\"sm\">Button</Button>\n      <Button color=\"secondary\" size=\"sm\" radius=\"sm\">Button</Button>\n      <Button color=\"success\" size=\"sm\" radius=\"sm\">Button</Button>\n      <Button color=\"warning\" size=\"sm\" radius=\"sm\">Button</Button>\n      <Button color=\"danger\" size=\"sm\" radius=\"sm\">Button</Button>\n    </>\n  );\n}"
       },
       {
         "title": "Borders",
@@ -194,7 +192,7 @@
             "type": "Button",
             "props": {
               "size": "sm",
-              "radius": "md",
+              "radius": "sm",
               "color": "secondary",
               "border": "none"
             },
@@ -204,7 +202,7 @@
             "type": "Button",
             "props": {
               "size": "sm",
-              "radius": "md",
+              "radius": "sm",
               "color": "secondary",
               "border": "xs"
             },
@@ -214,7 +212,7 @@
             "type": "Button",
             "props": {
               "size": "sm",
-              "radius": "md",
+              "radius": "sm",
               "color": "secondary",
               "border": "sm"
             },
@@ -224,7 +222,7 @@
             "type": "Button",
             "props": {
               "size": "sm",
-              "radius": "md",
+              "radius": "sm",
               "color": "secondary",
               "border": "md"
             },
@@ -234,7 +232,7 @@
             "type": "Button",
             "props": {
               "size": "sm",
-              "radius": "md",
+              "radius": "sm",
               "color": "secondary",
               "border": "lg"
             },
@@ -244,14 +242,14 @@
             "type": "Button",
             "props": {
               "size": "sm",
-              "radius": "md",
+              "radius": "sm",
               "color": "secondary",
               "border": "xl"
             },
             "children": "Button"
           }
         ],
-        "code": "import { Button } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Button border=\"none\">No Border</Button>\n      <Button border=\"xs\">Extra Small Border</Button>\n      <Button border=\"sm\">Small Border</Button>\n      <Button border=\"md\">Medium Border</Button>\n      <Button border=\"lg\">Large Border</Button>\n    </>\n  );\n}"
+        "code": "import { Button } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Button border=\"none\" size=\"sm\" radius=\"sm\" color=\"secondary\">Button</Button>\n      <Button border=\"xs\" size=\"sm\" radius=\"sm\" color=\"secondary\">Button</Button>\n      <Button border=\"sm\" size=\"sm\" radius=\"sm\" color=\"secondary\">Button</Button>\n      <Button border=\"md\" size=\"sm\" radius=\"sm\" color=\"secondary\">Button</Button>\n      <Button border=\"lg\" size=\"sm\" radius=\"sm\" color=\"secondary\">Button</Button>\n    </>\n  );\n}"
       }
     ],
     "propsTable": {
@@ -278,18 +276,6 @@
           "defaultValue": "'primary'"
         },
         {
-          "propName": "onClick",
-          "type": "function",
-          "description": "Callback function triggered when the button is clicked.",
-          "defaultValue": "undefined"
-        },
-        {
-          "propName": "style",
-          "type": "object",
-          "description": "Inline styles to be applied to the button.",
-          "defaultValue": "undefined"
-        },
-        {
           "propName": "size",
           "type": "string",
           "description": "Defines the size of the button. Options are: 'sm', 'md', 'lg'.",
@@ -311,6 +297,18 @@
           "propName": "className",
           "type": "string",
           "description": "Additional CSS class names to apply to the button.",
+          "defaultValue": "undefined"
+        },
+        {
+          "propName": "style",
+          "type": "object",
+          "description": "Inline styles to be applied to the button.",
+          "defaultValue": "undefined"
+        },
+        {
+          "propName": "onClick",
+          "type": "function",
+          "description": "Callback function triggered when the button is clicked.",
           "defaultValue": "undefined"
         }
       ]
@@ -384,7 +382,7 @@
             "children": "Default"
           }
         ],
-        "code": "import { Modal } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Modal size=\"md\" placement=\"center\" scroll=\"inside\" backdrop=\"opaque\">\n      This is a default modal.\n    </Modal>\n  );\n}"
+        "code": "import { Modal } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Modal modalHeader=\"Example Header\" modalBody=\"Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque eos voluptatibus ullam, cupiditate vitae voluptates quas voluptatum repudiandae corrupti neque quam assumenda sint facilis nihil voluptatem voluptate hic non nemo nostrum earum! Magnam quos ipsa quibusdam nulla laboriosam ducimus itaque ex eos esse voluptas at rem velit, praesentium reprehenderit? Architecto!\">\n         Default\n    </Modal>\n  );\n}"
       },
       {
         "title": "Sizes",
@@ -609,7 +607,7 @@
   {
     "title": "accordion",
     "path": "/frontend/components/accordion",
-    "description": "A customizable accordion that comes in different variants.",
+    "description": "A customizable accordion component that comes in different variants.",
     "installation": [
       {
         "name": "npm",
@@ -638,7 +636,7 @@
     },
     "examples": [
       {
-        "title": "Default / Variant Bordered",
+        "title": "Default (Variant Bordered)",
         "components": [
           {
             "type": "Accordion",
@@ -674,7 +672,7 @@
             ]
           }
         ],
-        "code": "import { Accordion, AccordionItem } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Accordion>\n            <AccordionItem title='Section 1'>\n              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolorem unde quis, ea ratione obcaecati. Quaerat autem unde cupiditate ipsa.\n            </AccordionItem>\n            <AccordionItem title='Section 2'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium unde, amet voluptatibus soluta reprehenderit sed laudantium optio ut sint nemo illum earum ducimus tempora nulla quia nam placeat explicabo facilis quisquam minus? Fuga, labore facilis.\n            </AccordionItem>\n            <AccordionItem title='Section 3'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, est exercitationem consequatur dolorum architecto molestiae aspernatur voluptatem ducimus nisi ea quo, atque tempora magni necessitatibus.\n            </AccordionItem>\n    </Accordion>\n );\n}"
+        "code": "import { Accordion, AccordionItem } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Accordion style={{ margin: \"auto\", width: \"60%\" }}>\n            <AccordionItem title='Section 1'>\n              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolorem unde quis, ea ratione obcaecati. Quaerat autem unde cupiditate ipsa.\n            </AccordionItem>\n            <AccordionItem title='Section 2'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium unde, amet voluptatibus soluta reprehenderit sed laudantium optio ut sint nemo illum earum ducimus tempora nulla quia nam placeat explicabo facilis quisquam minus? Fuga, labore facilis.\n            </AccordionItem>\n            <AccordionItem title='Section 3'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, est exercitationem consequatur dolorum architecto molestiae aspernatur voluptatem ducimus nisi ea quo, atque tempora magni necessitatibus.\n            </AccordionItem>\n    </Accordion>\n );\n}"
       },
       {
         "title": "Multiple items open",
@@ -714,7 +712,7 @@
             ]
           }
         ],
-        "code": "import { Accordion, AccordionItem } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Accordion allowMultipleOpen={false}>\n            <AccordionItem title='Section 1'>\n              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolorem unde quis, ea ratione obcaecati. Quaerat autem unde cupiditate ipsa.\n            </AccordionItem>\n            <AccordionItem title='Section 2'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium unde, amet voluptatibus soluta reprehenderit sed laudantium optio ut sint nemo illum earum ducimus tempora nulla quia nam placeat explicabo facilis quisquam minus? Fuga, labore facilis.\n            </AccordionItem>\n            <AccordionItem title='Section 3'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, est exercitationem consequatur dolorum architecto molestiae aspernatur voluptatem ducimus nisi ea quo, atque tempora magni necessitatibus.\n            </AccordionItem>\n    </Accordion>\n );\n}"
+        "code": "import { Accordion, AccordionItem } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Accordion allowMultipleOpen={true} style={{ margin: \"auto\", width: \"60%\" }}>\n            <AccordionItem title='Section 1'>\n              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolorem unde quis, ea ratione obcaecati. Quaerat autem unde cupiditate ipsa.\n            </AccordionItem>\n            <AccordionItem title='Section 2'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium unde, amet voluptatibus soluta reprehenderit sed laudantium optio ut sint nemo illum earum ducimus tempora nulla quia nam placeat explicabo facilis quisquam minus? Fuga, labore facilis.\n            </AccordionItem>\n            <AccordionItem title='Section 3'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, est exercitationem consequatur dolorum architecto molestiae aspernatur voluptatem ducimus nisi ea quo, atque tempora magni necessitatibus.\n            </AccordionItem>\n    </Accordion>\n );\n}"
       },
       {
         "title": "With Subtitles",
@@ -756,7 +754,7 @@
             ]
           }
         ],
-        "code": "import { Accordion, AccordionItem } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Accordion allowMultipleOpen={false}>\n            <AccordionItem title='Section 1' subtitle='Subtitle 1'>\n              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolorem unde quis, ea ratione obcaecati. Quaerat autem unde cupiditate ipsa.\n            </AccordionItem>\n            <AccordionItem title='Section 2' subtitle='Subtitle 2'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium unde, amet voluptatibus soluta reprehenderit sed laudantium optio ut sint nemo illum earum ducimus tempora nulla quia nam placeat explicabo facilis quisquam minus? Fuga, labore facilis.\n            </AccordionItem>\n            <AccordionItem title='Section 3' subtitle='Subtitle 3'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, est exercitationem consequatur dolorum architecto molestiae aspernatur voluptatem ducimus nisi ea quo, atque tempora magni necessitatibus.\n            </AccordionItem>\n    </Accordion>\n );\n}"
+        "code": "import { Accordion, AccordionItem } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Accordion style={{ margin: \"auto\", width: \"60%\" }}>\n            <AccordionItem title='Section 1' subtitle='Subtitle 1'>\n              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolorem unde quis, ea ratione obcaecati. Quaerat autem unde cupiditate ipsa.\n            </AccordionItem>\n            <AccordionItem title='Section 2' subtitle='Subtitle 2'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium unde, amet voluptatibus soluta reprehenderit sed laudantium optio ut sint nemo illum earum ducimus tempora nulla quia nam placeat explicabo facilis quisquam minus? Fuga, labore facilis.\n            </AccordionItem>\n            <AccordionItem title='Section 3' subtitle='Subtitle 3'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, est exercitationem consequatur dolorum architecto molestiae aspernatur voluptatem ducimus nisi ea quo, atque tempora magni necessitatibus.\n            </AccordionItem>\n    </Accordion>\n );\n}"
       },
       {
         "title": "Variant Shadow",
@@ -795,7 +793,7 @@
             ]
           }
         ],
-        "code": "import { Accordion, AccordionItem } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Accordion variant='shadow'>\n            <AccordionItem title='Section 1'>\n              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolorem unde quis, ea ratione obcaecati. Quaerat autem unde cupiditate ipsa.\n            </AccordionItem>\n            <AccordionItem title='Section 2'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium unde, amet voluptatibus soluta reprehenderit sed laudantium optio ut sint nemo illum earum ducimus tempora nulla quia nam placeat explicabo facilis quisquam minus? Fuga, labore facilis.\n            </AccordionItem>\n            <AccordionItem title='Section 3'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, est exercitationem consequatur dolorum architecto molestiae aspernatur voluptatem ducimus nisi ea quo, atque tempora magni necessitatibus.\n            </AccordionItem>\n    </Accordion>\n );\n}"
+        "code": "import { Accordion, AccordionItem } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Accordion variant='shadow' style={{ margin: \"auto\", width: \"60%\" }}>\n            <AccordionItem title='Section 1'>\n              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolorem unde quis, ea ratione obcaecati. Quaerat autem unde cupiditate ipsa.\n            </AccordionItem>\n            <AccordionItem title='Section 2'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium unde, amet voluptatibus soluta reprehenderit sed laudantium optio ut sint nemo illum earum ducimus tempora nulla quia nam placeat explicabo facilis quisquam minus? Fuga, labore facilis.\n            </AccordionItem>\n            <AccordionItem title='Section 3'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, est exercitationem consequatur dolorum architecto molestiae aspernatur voluptatem ducimus nisi ea quo, atque tempora magni necessitatibus.\n            </AccordionItem>\n    </Accordion>\n );\n}"
       },
       {
         "title": "Variant Light",
@@ -834,7 +832,7 @@
             ]
           }
         ],
-        "code": "import { Accordion, AccordionItem } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Accordion variant='light'>\n            <AccordionItem title='Section 1'>\n              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolorem unde quis, ea ratione obcaecati. Quaerat autem unde cupiditate ipsa.\n            </AccordionItem>\n            <AccordionItem title='Section 2'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium unde, amet voluptatibus soluta reprehenderit sed laudantium optio ut sint nemo illum earum ducimus tempora nulla quia nam placeat explicabo facilis quisquam minus? Fuga, labore facilis.\n            </AccordionItem>\n            <AccordionItem title='Section 3'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, est exercitationem consequatur dolorum architecto molestiae aspernatur voluptatem ducimus nisi ea quo, atque tempora magni necessitatibus.\n            </AccordionItem>\n    </Accordion>\n );\n}"
+        "code": "import { Accordion, AccordionItem } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Accordion variant='light' style={{ margin: \"auto\", width: \"60%\" }}>\n            <AccordionItem title='Section 1'>\n              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolorem unde quis, ea ratione obcaecati. Quaerat autem unde cupiditate ipsa.\n            </AccordionItem>\n            <AccordionItem title='Section 2'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium unde, amet voluptatibus soluta reprehenderit sed laudantium optio ut sint nemo illum earum ducimus tempora nulla quia nam placeat explicabo facilis quisquam minus? Fuga, labore facilis.\n            </AccordionItem>\n            <AccordionItem title='Section 3'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, est exercitationem consequatur dolorum architecto molestiae aspernatur voluptatem ducimus nisi ea quo, atque tempora magni necessitatibus.\n            </AccordionItem>\n    </Accordion>\n );\n}"
       },
       {
         "title": "Variant Splitted",
@@ -873,7 +871,7 @@
             ]
           }
         ],
-        "code": "import { Accordion, AccordionItem } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Accordion variant='splitted'>\n            <AccordionItem title='Section 1'>\n              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolorem unde quis, ea ratione obcaecati. Quaerat autem unde cupiditate ipsa.\n            </AccordionItem>\n            <AccordionItem title='Section 2'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium unde, amet voluptatibus soluta reprehenderit sed laudantium optio ut sint nemo illum earum ducimus tempora nulla quia nam placeat explicabo facilis quisquam minus? Fuga, labore facilis.\n            </AccordionItem>\n            <AccordionItem title='Section 3'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, est exercitationem consequatur dolorum architecto molestiae aspernatur voluptatem ducimus nisi ea quo, atque tempora magni necessitatibus.\n            </AccordionItem>\n    </Accordion>\n );\n}"
+        "code": "import { Accordion, AccordionItem } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Accordion variant='splitted' style={{ margin: \"auto\", width: \"60%\" }}>\n            <AccordionItem title='Section 1'>\n              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolorem unde quis, ea ratione obcaecati. Quaerat autem unde cupiditate ipsa.\n            </AccordionItem>\n            <AccordionItem title='Section 2'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium unde, amet voluptatibus soluta reprehenderit sed laudantium optio ut sint nemo illum earum ducimus tempora nulla quia nam placeat explicabo facilis quisquam minus? Fuga, labore facilis.\n            </AccordionItem>\n            <AccordionItem title='Section 3'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, est exercitationem consequatur dolorum architecto molestiae aspernatur voluptatem ducimus nisi ea quo, atque tempora magni necessitatibus.\n            </AccordionItem>\n    </Accordion>\n );\n}"
       },
       {
         "title": "Change Icons",
@@ -927,12 +925,6 @@
       "headers": ["Prop Name", "Type", "Description", "Default Value"],
       "rows": [
         {
-          "propName": "aria",
-          "type": "string",
-          "description": "Aria label for accessibility. Provides additional context for screen readers.",
-          "defaultValue": "'accordion'"
-        },
-        {
           "propName": "allowMultipleOpen",
           "type": "Boolean",
           "description": "Defines whether multiple items can be toggled at the same time.",
@@ -945,16 +937,28 @@
           "defaultValue": "bordered"
         },
         {
-          "propName": "style",
-          "type": "object",
-          "description": "Inline styles to be applied to the search bar.",
+          "propName": "children",
+          "type": "React Node",
+          "description": "Children nodes for the accordion. Used for adding Accordion items.",
           "defaultValue": "-"
+        },
+        {
+          "propName": "aria",
+          "type": "string",
+          "description": "Aria label for accessibility. Provides additional context for screen readers.",
+          "defaultValue": "'accordion'"
         },
         {
           "propName": "className",
           "type": "string",
           "description": "Additional CSS class names to apply.",
           "defaultValue": "undefined"
+        },
+        {
+          "propName": "style",
+          "type": "object",
+          "description": "Inline styles to be applied to the search bar.",
+          "defaultValue": "-"
         }
       ]
     },
@@ -963,6 +967,12 @@
       "description": "List of all properties supported by the accordion item component.",
       "headers": ["Prop Name", "Type", "Description", "Default Value"],
       "rows": [
+        {
+          "propName": "children",
+          "type": "string/ React Node",
+          "description": "The content for the accordion item.",
+          "defaultValue": "-"
+        },
         {
           "propName": "aria",
           "type": "string",
@@ -982,12 +992,6 @@
           "defaultValue": "-"
         },
         {
-          "propName": "children",
-          "type": "string/ React Node",
-          "description": "The content for the accordion item.",
-          "defaultValue": "-"
-        },
-        {
           "propName": "iconClose",
           "type": "(React) icon",
           "description": "Defines the icon that is visible when item is open. Works with react icons.",
@@ -998,6 +1002,12 @@
           "type": "string/ React Node",
           "description": "Defines the icon that is visible when item is closed. Works with react icons.",
           "defaultValue": "Arrow left"
+        },
+        {
+          "propName": "onToggle",
+          "type": "funcrion",
+          "description": "Callback function executing on item toggle event.",
+          "defaultValue": "-"
         }
       ]
     },
@@ -1008,7 +1018,7 @@
       "rows": [
         {
           "propName": "onToggle",
-          "type": "Accordion item event. Defines action in toggle."
+          "type": "Accordion item event. Defines action on toggle."
         }
       ]
     },
@@ -1104,7 +1114,7 @@
             "children": "Bottom Label"
           }
         ],
-        "code": "import { Checkbox } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Checkbox labelPosition=\"right\">Right</Checkbox>\n      <Checkbox labelPosition=\"left\">Left</Checkbox>\n      <Checkbox labelPosition=\"top\">Top</Checkbox>\n      <Checkbox labelPosition=\"bottom\">Bottom</Checkbox>\n    </>\n  );\n}"
+        "code": "import { Checkbox } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Checkbox labelPosition=\"right\">Right Label</Checkbox>\n      <Checkbox labelPosition=\"left\">Left Label</Checkbox>\n      <Checkbox labelPosition=\"top\">Top Label</Checkbox>\n      <Checkbox labelPosition=\"bottom\">Bottom Label</Checkbox>\n    </>\n  );\n}"
       },
       {
         "title": "Checked State",
@@ -1182,7 +1192,7 @@
             "children": "Full"
           }
         ],
-        "code": "import { Switch } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Checkbox radius=\"none\">None</Checkbox>\n      <Checkbox radius=\"sm\">Small</Checkbox>\n      <Checkbox radius=\"md\">Medium</Checkbox>\n      <Checkbox radius=\"full\">Full</Checkbox>\n    </>\n  );\n}"
+        "code": "import { Switch } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <>\n      <Checkbox radius=\"none\" size=\"large\">None</Checkbox>\n      <Checkbox radius=\"sm\"  size=\"large\">Small</Checkbox>\n      <Checkbox radius=\"md\" size=\"large\">Medium</Checkbox>\n      <Checkbox radius=\"full\" size=\"large\">Full</Checkbox>\n    </>\n  );\n}"
       },
       {
         "title": "Style Variants",
@@ -1339,28 +1349,16 @@
           "defaultValue": "'checkbox'"
         },
         {
-          "propName": "variant",
+          "propName": "labelPosition",
           "type": "string",
-          "description": "Defines the style variant of the checkbox. Options are: 'solid' and  'subtle'.",
-          "defaultValue": "'subtle'"
+          "description": "Defines the position of the label. Options are: 'left', 'right', 'top', 'bottom'.",
+          "defaultValue": "'right'"
         },
         {
-          "propName": "color",
-          "type": "string",
-          "description": "Defines the color of the checkbox. Options are: 'default', 'primary', 'secondary', 'success', 'warning', 'danger'.",
-          "defaultValue": "'default'"
-        },
-        {
-          "propName": "onChange",
-          "type": "function",
-          "description": "Callback function triggered when the checkbox is clicked",
-          "defaultValue": "-"
-        },
-        {
-          "propName": "style",
-          "type": "object",
-          "description": "Inline styles to be applied to the checkbox container.",
-          "defaultValue": "-"
+          "propName": "checked",
+          "type": "Boolean",
+          "description": "Render checkbox in checked state.",
+          "defaultValue": "false"
         },
         {
           "propName": "size",
@@ -1375,16 +1373,34 @@
           "defaultValue": "'sm'"
         },
         {
+          "propName": "variant",
+          "type": "string",
+          "description": "Defines the style variant of the checkbox. Options are: 'solid' and  'subtle'.",
+          "defaultValue": "'subtle'"
+        },
+        {
+          "propName": "color",
+          "type": "string",
+          "description": "Defines the color of the checkbox. Options are: 'default', 'primary', 'secondary', 'success', 'warning', 'danger'.",
+          "defaultValue": "'default'"
+        },
+        {
           "propName": "className",
           "type": "string",
           "description": "Additional CSS class names to apply to the checkbox container.",
           "defaultValue": "-"
         },
         {
-          "propName": "labelPosition",
-          "type": "string",
-          "description": "Defines the position of the label. Options are: 'left', 'right', 'top', 'bottom'.",
-          "defaultValue": "'right'"
+          "propName": "style",
+          "type": "object",
+          "description": "Inline styles to be applied to the checkbox container.",
+          "defaultValue": "-"
+        },
+        {
+          "propName": "onChange",
+          "type": "function",
+          "description": "Callback function triggered when the checkbox is clicked",
+          "defaultValue": "-"
         }
       ]
     },
