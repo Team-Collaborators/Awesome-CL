@@ -82,7 +82,7 @@ const GettingStarted = () => {
         </p>
         <div className={styles.code}>
           <RenderCode
-            code={'@use "../../node_modules/AwesomeCL/dist/exports.css"'}
+            code={'@import "/node_modules/AwesomeCL/dist/exports.css";'}
           />
         </div>
 

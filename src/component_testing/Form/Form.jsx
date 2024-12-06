@@ -32,9 +32,9 @@ const InputField = ({
   onChange,
   required = false,
   type = "text",
-  customStyle = {},
+  customStyles = {},
 }) => (
-  <label className={styles.label} style={customStyle.label}>
+  <label className={styles.label} style={customStyles.label}>
     {label}
     <input
       type={type}
@@ -43,7 +43,7 @@ const InputField = ({
       onChange={onChange}
       required={required}
       className={styles.inputField}
-      style={customStyle.inputField}
+      style={customStyles}
     />
   </label>
 );
@@ -56,9 +56,9 @@ const TextAreaField = ({
   onChange,
   placeholder,
   required = false,
-  customStyle = {},
+  customStyles = {},
 }) => (
-  <label className={styles.label} style={customStyle.label}>
+  <label className={styles.label} style={customStyles.label}>
     {label}
     <textarea
       name={name}
@@ -67,7 +67,7 @@ const TextAreaField = ({
       placeholder={placeholder}
       required={required}
       className={styles.inputField}
-      style={customStyle.inputField}
+      style={customStyles.textArea || customStyles.inputField}
     ></textarea>
   </label>
 );
@@ -80,9 +80,9 @@ const MultipleSelectField = ({
   onChange,
   options,
   required = false,
-  customStyle = {},
+  customStyles = {},
 }) => (
-  <label className={styles.label} style={customStyle.label}>
+  <label className={styles.label} style={customStyles.label}>
     {label}
     <select
       name={name}
@@ -91,7 +91,7 @@ const MultipleSelectField = ({
       onChange={onChange}
       required={required}
       className={styles.multipleSelectField}
-      style={customStyle.inputField}
+      style={customStyles.inputField}
     >
       {options.map((option) => (
         <option key={option} value={option}>
@@ -103,8 +103,8 @@ const MultipleSelectField = ({
 );
 
 // Date picker field component
-const DatePickerField = ({ label, selected, onChange, customStyle }) => (
-  <div className={styles.datePickerContainer} style={customStyle}>
+const DatePickerField = ({ label, selected, onChange, customStyles }) => (
+  <div className={styles.datePickerContainer} style={customStyles}>
     <label className={styles.label}>{label}</label>
     <DatePicker
       selected={selected}
@@ -115,7 +115,7 @@ const DatePickerField = ({ label, selected, onChange, customStyle }) => (
       timeCaption="Time"
       dateFormat="MMMM d, yyyy h:mm aa"
       className={styles.datePicker}
-      style={customStyle}
+      style={customStyles}
     />
   </div>
 );
@@ -176,7 +176,7 @@ const Form = ({
               onChange={field.onChange || handleChange}
               placeholder={field.placeholder}
               required={field.required || false}
-              customStyle={field.customStyle || customStyles.inputField}
+              customStyles={field.customStyles || customStyles.inputField}
             />
           );
         } else if (field.type === "select") {
@@ -189,7 +189,7 @@ const Form = ({
               onChange={field.onChange || handleChange}
               options={field.options || []}
               required={field.required || false}
-              customStyle={field.customStyle || customStyles.inputField}
+              customStyles={field.customStyles || customStyles.inputField}
             />
           );
         } else if (field.type === "date") {
@@ -203,7 +203,7 @@ const Form = ({
                   ? field.onChange(date)
                   : handleDateChange(field.name, date)
               }
-              customStyle={field.customStyle || customStyles.datePicker}
+              customStyles={field.customStyles || customStyles.datePicker}
             />
           );
         } else {
@@ -216,7 +216,7 @@ const Form = ({
               onChange={field.onChange || handleChange}
               type={field.type || "text"}
               required={field.required || false}
-              customStyle={field.customStyle || customStyles.inputField}
+              customStyles={field.customStyles || customStyles.inputField}
             />
           );
         }
@@ -234,7 +234,7 @@ const Form = ({
               onChange={handleChange}
               type="tel"
               required
-              customStyle={customStyles.inputField}
+              customStyles={customStyles.inputField}
             />
             <InputField
               label="Subject"
@@ -242,14 +242,14 @@ const Form = ({
               value={formData.subject || ""}
               onChange={handleChange}
               required
-              customStyle={customStyles.inputField}
+              customStyles={customStyles.inputField}
             />
             <InputField
               label="Organization / Company"
               name="organization"
               value={formData.organization || ""}
               onChange={handleChange}
-              customStyle={customStyles.inputField}
+              customStyles={customStyles.inputField}
             />
             <TextAreaField
               label="Message"
@@ -258,7 +258,7 @@ const Form = ({
               onChange={handleChange}
               placeholder="Enter your message here"
               required
-              customStyle={customStyles.inputField}
+              customStyles={customStyles.inputField}
             />
             {renderAdditionalFields()}
           </>
@@ -272,13 +272,13 @@ const Form = ({
               value={formData.name || ""}
               onChange={handleChange}
               required
-              customStyle={customStyles.inputField}
+              customStyles={customStyles.inputField}
             />
             <DatePickerField
               label="Appointment Date and Time"
               selected={formData.appointmentDate}
               onChange={(date) => handleDateChange("appointmentDate", date)}
-              customStyle={customStyles.datePicker}
+              customStyles={customStyles.datePicker}
             />
             {renderAdditionalFields()}
           </>
@@ -293,7 +293,7 @@ const Form = ({
               onChange={handleChange}
               placeholder="Share your feedback"
               required
-              customStyle={customStyles.textArea}
+              customStyles={customStyles.textArea}
             />
             {renderAdditionalFields()}
           </>
@@ -308,7 +308,7 @@ const Form = ({
               onChange={handleChange}
               placeholder="What would you like to inquire about?"
               required
-              customStyle={customStyles.textArea}
+              customStyles={customStyles.textArea}
             />
             {renderAdditionalFields()}
           </>
@@ -327,7 +327,7 @@ const Form = ({
               onChange={handleChange}
               options={INTEREST_OPTIONS}
               required
-              customStyle={customStyles.select}
+              customStyles={customStyles.select}
             />
             {renderAdditionalFields()}
           </>
@@ -372,6 +372,7 @@ const Form = ({
             </h1>
             {submitted ? (
               <p
+                aria-live="polite"
                 className={styles.successMessage}
                 style={customStyles.successMessage}
               >
@@ -390,7 +391,7 @@ const Form = ({
                     value={formData.firstName || ""}
                     onChange={handleChange}
                     required
-                    customStyle={customStyles.inputField}
+                    customStyles={customStyles.inputField}
                   />
                   <InputField
                     label="Last Name"
@@ -398,7 +399,7 @@ const Form = ({
                     value={formData.lastName || ""}
                     onChange={handleChange}
                     required
-                    customStyle={customStyles.inputField}
+                    customStyles={customStyles.inputField}
                   />
                 </div>
                 <div className={styles.inputRow}>
@@ -409,14 +410,14 @@ const Form = ({
                     onChange={handleChange}
                     type="email"
                     required
-                    customStyle={customStyles.inputField}
+                    customStyles={customStyles.inputField}
                   />
                 </div>
                 {renderVariantFields()}
                 <button
                   type="submit"
                   className={styles.submitButton}
-                  style={customStyles.submitButton}
+                  style={{ ...customStyles.submitButton }}
                 >
                   Submit
                 </button>

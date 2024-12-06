@@ -127,7 +127,6 @@
 
 .color-secondary {
   &.checked {
-    // background-color: var(--secondary-base);
     background-color: var(--secondary-base);
   }
 }
@@ -147,54 +146,5 @@
 .color-danger {
   &.checked {
     background-color: var(--danger-base);
-  }
-}
-
-// Dark mode adjustments
-@media (prefers-color-scheme: dark) {
-  .switch {
-    background-color: var(--dark-default-light);
-  }
-  .slider {
-    background-color: --default-base;
-    &.checked {
-      background-color: var(--dark-default-dark);
-    }
-  }
-
-  .color-default {
-    &.checked {
-      background-color: var(--default-light);
-    }
-  }
-
-  .color-primary {
-    &.checked {
-      background-color: var(--dark-primary-base);
-    }
-  }
-
-  .color-secondary {
-    &.checked {
-      background-color: var(--dark-secondary-base);
-    }
-  }
-
-  .color-success {
-    &.checked {
-      background-color: var(--dark-success-base);
-    }
-  }
-
-  .color-warning {
-    &.checked {
-      background-color: var(--dark-warning-base);
-    }
-  }
-
-  .color-danger {
-    &.checked {
-      background-color: var(--dark-danger-base);
-    }
   }
 }
