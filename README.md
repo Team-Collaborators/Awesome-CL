@@ -26,7 +26,7 @@ Simply choose your favourite package manager and copy the command to your termin
 - `bun add git+https://github.com/Team-Collaborators/Awesome-CL.git`
 
 ## Usage
-Now import components where ever you need them with a simple import command.
+Now import components wherever you need them with a simple import command.
 ```javascript
 import { Button } from "AwesomeCL";
 
@@ -41,7 +41,7 @@ function App() {
 export default App;
 ```
 
-To import the style sheet add it to you main CSS file:
+To import the style sheet add it to your main CSS file:
 ```javascript
 @import "/node_modules/AwesomeCL/dist/exports.css";
 ```
