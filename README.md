@@ -46,4 +46,4 @@ To import the style sheet add it to your main CSS file:
 @import "/node_modules/AwesomeCL/dist/exports.css";
 ```
 ## Examples
-You can find more examples of how to use the library in the instructions directory [instructions directory](https://www.awesome-cl.live/instructions/introduction)
+You can find more examples of how to use the library in the [instructions directory](https://www.awesome-cl.live/instructions/introduction)
