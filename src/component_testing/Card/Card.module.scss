@@ -11,7 +11,6 @@
   height: 100%;
   width: auto;
   overflow: hidden;
-
   align-items: stretch;
 
   .card.scrollable {
@@ -35,6 +34,29 @@
     padding: var(--padding-sm);
   }
 
+  .cardTitle {
+    font-size: var(--font-size-lg);
+    font-weight: bold;
+  }
+
+  .cardDescription {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    font-size: var(--font-size-sm);
+  }
+
+  .cardFooter {
+    font-size: var(--font-size-md);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  // Options //
+
   // Avatar Option
   &.withAvatar {
     align-items: flex-start;
@@ -47,7 +69,7 @@
     }
   }
 
-  // Image Option
+  // Image Top Option
   &.withImageTop {
     padding: 0;
     .cardImageWrapper {
@@ -73,28 +95,49 @@
       height: auto;
       border-radius: inherit 0 0 inherit;
     }
+    .contentContainer {
+      flex-grow: 1;
+      padding-left: var(--padding-sm);
+      padding-right: var(--padding-sm);
+      padding-top: 0;
+      padding-bottom: 0;
+
+      &.title-align-left {
+        align-items: flex-start;
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      &.title-align-center {
+        align-items: center;
+      }
+
+      &.title-align-right {
+        align-items: flex-end;
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      /* Footer alignment */
+      &.footer-align-left {
+        .cardFooter {
+          justify-content: flex-start;
+        }
+      }
+
+      &.footer-align-center {
+        .cardFooter {
+          justify-content: center;
+        }
+      }
+
+      &.footer-align-right {
+        .cardFooter {
+          justify-content: flex-end;
+        }
+      }
+    }
   }
-}
-
-.cardTitle {
-  font-size: var(--font-size-lg);
-  font-weight: bold;
-}
-
-.cardDescription {
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-  font-size: var(--font-size-sm);
-}
-
-.cardFooter {
-  font-size: var(--font-size-md);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  width: 100%;
-  margin-top: 1rem;
 }
 
 // Interactive Styles
@@ -112,24 +155,27 @@
   }
 }
 
-/* Title and description alignment */
 .title-align-left {
-  .cardTitle,
-  .cardDescription {
+  .contentContainer {
+    align-items: flex-start;
+    padding-left: 0;
+    padding-right: 0;
     text-align: left;
   }
 }
 
 .title-align-center {
-  .cardTitle,
-  .cardDescription {
+  .contentContainer {
+    align-items: center;
     text-align: center;
   }
 }
 
 .title-align-right {
-  .cardTitle,
-  .cardDescription {
+  .contentContainer {
+    align-items: flex-end;
+    padding-left: 0;
+    padding-right: 0;
     text-align: right;
   }
 }
@@ -222,75 +268,8 @@
   border-radius: var(--border-radius-lg);
 }
 
-/* Tablet styles */
-// @media (max-width: 1024px) {
-//   .card {
-//     padding: var(--padding-sm); /* Reduce padding for smaller screens */
-//     flex-direction: column; /* Ensure content stacks vertically */
-//     width: 100%; /* Take up full width */
-//     min-height: auto; /* Allow height to adjust to content */
-
-//     &.horizontal {
-//       flex-direction: column; /* Change horizontal layout to vertical */
-//       gap: 0.5rem; /* Reduce spacing */
-//     }
-
-//     .cardTitle {
-//       font-size: var(--font-size-md); /* Smaller font size */
-//     }
-
-//     .cardDescription {
-//       font-size: var(--font-size-sm); /* Smaller font size */
-//     }
-
-//     .cardFooter {
-//       flex-wrap: wrap; /* Allow wrapping for footer buttons or links */
-//       gap: 0.5rem;
-//     }
-//   }
-
-//   .size-sm {
-//     width: 100%; /* Ensure the card takes full width */
-//     min-height: auto; /* Adjust height for smaller screens */
-//     padding: var(--card-sm-padding);
-//   }
-
-//   .size-md {
-//     width: 100%;
-//     min-height: auto;
-//     padding: var(--card-md-padding);
-//   }
-
-//   .size-lg {
-//     width: 100%;
-//     min-height: auto;
-//     padding: var(--card-lg-padding);
-//   }
-// }
-
-// /* Mobile styles */
-// @media (max-width: 768px) {
-//   .card {
-//     padding: var(--padding-xs); /* Further reduce padding */
-//     gap: 0.5rem;
-
-//     .cardTitle {
-//       font-size: var(--font-size-sm); /* Even smaller font size */
-//     }
-
-//     .cardDescription {
-//       font-size: var(--font-size-xs);
-//     }
-
-//     .cardFooter {
-//       justify-content: center; /* Center align footer on mobile */
-//     }
-//   }
-
-//   .size-sm,
-//   .size-md,
-//   .size-lg {
-//     width: 100%; /* Full width for all sizes */
-//     padding: var(--padding-xs);
-//   }
-// }
+@media (max-width: 768px) {
+  .card {
+    width: 90%;
+  }
+}
