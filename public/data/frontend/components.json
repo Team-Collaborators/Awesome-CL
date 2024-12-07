@@ -4115,7 +4115,7 @@
                   "size": "sm",
                   "radius": "sm"
                 },
-                "children": "Primary"
+                "children": "Click here"
               }
             ]
           }
@@ -4162,6 +4162,68 @@
           }
         ],
         "code": "import { Card, Image } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Card \n      isInteractive=\"true\" \n      isInteractive=\"false\" \n    />\n  );\n}"
+      },
+      {
+        "title": "Alignment",
+        "components": [
+          {
+            "type": "Card",
+            "props": {
+              "title": "Align Left",
+              "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.",
+              "titleAlignment": "left",
+              "footerAlignment": "left"
+            },
+            "children": [
+              {
+                "type": "Image",
+                "props": {
+                  "src": "/images/green-building.webp",
+                  "radius": "md",
+                  "objectFit": "cover"
+                }
+              },
+              {
+                "type": "Button",
+                "props": {
+                  "color": "default",
+                  "size": "sm",
+                  "radius": "sm"
+                },
+                "children": "Click here"
+              }
+            ]
+          },
+          {
+            "type": "Card",
+            "props": {
+              "title": "Align Right",
+              "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.",
+              "titleAlignment": "right",
+              "footerAlignment": "right"
+            },
+            "children": [
+              {
+                "type": "Image",
+                "props": {
+                  "src": "/images/green-building.webp",
+                  "radius": "md",
+                  "objectFit": "cover"
+                }
+              },
+              {
+                "type": "Button",
+                "props": {
+                  "color": "default",
+                  "size": "sm",
+                  "radius": "sm"
+                },
+                "children": "Click here"
+              }
+            ]
+          }
+        ],
+        "code": "import { Card, Image, Button } from 'AwesomeCL';\n\nfunction App() {\n  return (\n    <Card \n      titleAlignment=\"left\" \n      footerAlignment=\"left\" \n      titleAlignment=\"right\" \n      footerAlignment=\"right\" \n    />\n  );\n}"
       }
     ],
     "propsTable": {
@@ -4178,32 +4240,14 @@
         {
           "propName": "description",
           "type": "string",
-          "description": "Renders an optional image within the card. Typically used for `Image` components.",
+          "description": "The description of the card.",
           "defaultValue": ""
-        },
-        {
-          "propName": "image",
-          "type": "node",
-          "description": "Optional image to display in the card.",
-          "defaultValue": "null"
-        },
-        {
-          "propName": "imageTop",
-          "type": "boolean",
-          "description": "Determines whether the image appears at the top of the card. If `true`, the image is styled accordingly.",
-          "defaultValue": "false"
-        },
-        {
-          "propName": "avatar",
-          "type": "node",
-          "description": "Renders an optional avatar. Typically used for `Avatar` components.",
-          "defaultValue": "null"
         },
         {
           "propName": "footer",
           "type": "node",
           "description": "Defines the footer content of the card. Commonly includes actions like buttons.",
-          "defaultValue": "null"
+          "defaultValue": "-"
         },
         {
           "propName": "variant",
@@ -4224,10 +4268,40 @@
           "defaultValue": "'md'"
         },
         {
+          "propName": "image",
+          "type": "node",
+          "description": "Optional image to display in the card.",
+          "defaultValue": "-"
+        },
+        {
+          "propName": "avatar",
+          "type": "node",
+          "description": "Renders an optional avatar. Typically used for `Avatar` components.",
+          "defaultValue": "-"
+        },
+        {
+          "propName": "imageTop",
+          "type": "boolean",
+          "description": "Determines whether the image appears at the top of the card. If `true`, the image is styled accordingly.",
+          "defaultValue": "false"
+        },
+        {
           "propName": "horizontal",
           "type": "boolean",
           "description": "When set to `true`, switches the card layout to a horizontal orientation.",
           "defaultValue": "false"
+        },
+        {
+          "propName": "textAlignment",
+          "type": "string",
+          "description": "Specifies the alignment of the card title and description. Options: `'left'`, `'center'`, `'right'`.",
+          "defaultValue": "'center'"
+        },
+        {
+          "propName": "footerAlignment",
+          "type": "string",
+          "description": "Specifies the alignment of the footer content. Options: `'left'`, `'center'`, `'right'`.",
+          "defaultValue": "'center'"
         },
         {
           "propName": "isInteractive",
@@ -4252,18 +4326,6 @@
           "type": "string",
           "description": "ARIA role for accessibility.",
           "defaultValue": "'card'"
-        },
-        {
-          "propName": "textAlignment",
-          "type": "string",
-          "description": "Specifies the alignment of the card title and description. Options: `'left'`, `'center'`, `'right'`.",
-          "defaultValue": "'center'"
-        },
-        {
-          "propName": "footerAlignment",
-          "type": "string",
-          "description": "Specifies the alignment of the footer content. Options: `'left'`, `'center'`, `'right'`.",
-          "defaultValue": "'center'"
         }
       ]
     }
