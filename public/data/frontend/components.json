@@ -4095,7 +4095,7 @@
             "type": "Card",
             "props": {
               "variant": "subtle",
-              "title": "Medium Elevated Card with Avatar",
+              "title": "Card with Avatar",
               "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. ",
               "titleAlignment": "left",
               "footerAlignment": "right"

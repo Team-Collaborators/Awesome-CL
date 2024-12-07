@@ -79,7 +79,6 @@
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
-      text-align: left;
       padding: var(--padding-sm);
     }
   }
@@ -97,15 +96,10 @@
     }
     .contentContainer {
       flex-grow: 1;
-      padding-left: var(--padding-sm);
-      padding-right: var(--padding-sm);
-      padding-top: 0;
-      padding-bottom: 0;
+      padding: var(--padding-sm);
 
       &.title-align-left {
         align-items: flex-start;
-        padding-left: 0;
-        padding-right: 0;
       }
 
       &.title-align-center {
@@ -114,8 +108,6 @@
 
       &.title-align-right {
         align-items: flex-end;
-        padding-left: 0;
-        padding-right: 0;
       }
 
       /* Footer alignment */
