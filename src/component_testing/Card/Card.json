@@ -92,9 +92,7 @@
           "props": {
             "title": "Elevated Variant",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            "variant": "elevated",
-            "titleAlignment": "center",
-            "footerAlignment": "center"
+            "variant": "elevated"
           },
           "children": [
             {
@@ -381,32 +379,14 @@
       {
         "propName": "description",
         "type": "string",
-        "description": "Renders an optional image within the card. Typically used for `Image` components.",
+        "description": "The description of the card.",
         "defaultValue": ""
-      },
-      {
-        "propName": "image",
-        "type": "node",
-        "description": "Optional image to display in the card.",
-        "defaultValue": "null"
-      },
-      {
-        "propName": "imageTop",
-        "type": "boolean",
-        "description": "Determines whether the image appears at the top of the card. If `true`, the image is styled accordingly.",
-        "defaultValue": "false"
-      },
-      {
-        "propName": "avatar",
-        "type": "node",
-        "description": "Renders an optional avatar. Typically used for `Avatar` components.",
-        "defaultValue": "null"
       },
       {
         "propName": "footer",
         "type": "node",
         "description": "Defines the footer content of the card. Commonly includes actions like buttons.",
-        "defaultValue": "null"
+        "defaultValue": "-"
       },
       {
         "propName": "variant",
@@ -427,10 +407,40 @@
         "defaultValue": "'md'"
       },
       {
+        "propName": "image",
+        "type": "node",
+        "description": "Optional image to display in the card.",
+        "defaultValue": "-"
+      },
+      {
+        "propName": "avatar",
+        "type": "node",
+        "description": "Renders an optional avatar. Typically used for `Avatar` components.",
+        "defaultValue": "-"
+      },
+      {
+        "propName": "imageTop",
+        "type": "boolean",
+        "description": "Determines whether the image appears at the top of the card. If `true`, the image is styled accordingly.",
+        "defaultValue": "false"
+      },
+      {
         "propName": "horizontal",
         "type": "boolean",
         "description": "When set to `true`, switches the card layout to a horizontal orientation.",
         "defaultValue": "false"
+      },
+      {
+        "propName": "textAlignment",
+        "type": "string",
+        "description": "Specifies the alignment of the card title and description. Options: `'left'`, `'center'`, `'right'`.",
+        "defaultValue": "'center'"
+      },
+      {
+        "propName": "footerAlignment",
+        "type": "string",
+        "description": "Specifies the alignment of the footer content. Options: `'left'`, `'center'`, `'right'`.",
+        "defaultValue": "'center'"
       },
       {
         "propName": "isInteractive",
@@ -455,18 +465,6 @@
         "type": "string",
         "description": "ARIA role for accessibility.",
         "defaultValue": "'card'"
-      },
-      {
-        "propName": "titleAlignment",
-        "type": "string",
-        "description": "Specifies the alignment of the card title and description. Options: `'left'`, `'center'`, `'right'`.",
-        "defaultValue": "'center'"
-      },
-      {
-        "propName": "footerAlignment",
-        "type": "string",
-        "description": "Specifies the alignment of the footer content. Options: `'left'`, `'center'`, `'right'`.",
-        "defaultValue": "'center'"
       }
     ]
   }
