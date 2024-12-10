@@ -1,6 +1,6 @@
 import React, { useState } from "react"; // Import React and useState hook
 import { FaRegCopy } from "react-icons/fa6"; // Import copy icon from react-icons
-import { Light as SyntaxHighlighter } from "react-syntax-highlighter"; // Import SyntaxHighlighter component
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"; // Import SyntaxHighlighter component
 import { atelierDuneDark } from "react-syntax-highlighter/dist/esm/styles/hljs"; // Import syntax highlighting style
 import styles from "./RenderCode.module.scss"; // Import CSS module styles
 
