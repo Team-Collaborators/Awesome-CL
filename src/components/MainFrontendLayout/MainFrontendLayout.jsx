@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { RenderCode } from "../RenderCode/RenderCode";
 import { Light as SyntaxHighlighter } from "react-syntax-highlighter";
+import { atelierDuneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import ExampleViewer from "../../components/ExampleViewer/ExampleViewer";
 import Table from "../../components/Table/Table";
 import styles from "./MainFrontendLayout.module.scss";
