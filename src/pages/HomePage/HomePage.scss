@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  overflow-x: hidden;
+  //overflow-x: hidden;
 }
 
 .main-wrapper {
@@ -26,6 +26,7 @@
     width: 100%;
     padding: 20px;
     margin-top: 10px;
+    min-width: 0;
   }
 
   @media (min-width: 1600px) {
@@ -79,10 +80,13 @@
   gap: 50px;
   align-items: flex-start;
   justify-content: center;
+  //min-width: 1400px;
+  //padding: 0 16rem;
 
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
+    padding: 0;
   }
 
   @media (min-width: 1600px) {
