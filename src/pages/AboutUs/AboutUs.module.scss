@@ -135,11 +135,14 @@
   }
 
   .teamImage {
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    max-width: 120px;
+    max-height: 120px;
+    display: block;
     border-radius: 50%;
-    object-fit: cover;
-    margin: 0 auto 15px;
+    object-fit: contain;
+    background-color: #d9dad6;
+    margin: 0 auto;
     display: block;
     transition: transform 0.3s ease;
     border: 2px solid rgb(75, 74, 74);
