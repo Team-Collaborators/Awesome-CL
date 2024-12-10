@@ -6,7 +6,6 @@ import styles from "./RenderCode.module.scss"; // Import CSS module styles
 
 export function RenderCode({ code }) {
   const [copied, setCopied] = useState(false); // State to track if code is copied
-
   const copyToClipboard = (code) => {
     navigator.clipboard
       .writeText(code) // Copy code to clipboard
