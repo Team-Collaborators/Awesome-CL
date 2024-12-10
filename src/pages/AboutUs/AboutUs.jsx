@@ -1,7 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import styles from "./AboutUs.module.scss";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { github } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import Anna from "../../assets/images/Anna.jpg";
+import Heriberto from "../../assets/images/Heriberto.webp";
+import Iryna from "../../assets/images/Iryna.webp";
+import Kristin from "../../assets/images/Kristin.webp";
+import Nancy from "../../assets/images/nk.webp";
+import Nathalie from "../../assets/images/Nathalie.webp";
 
 const teamData = [
   {
@@ -9,7 +14,7 @@ const teamData = [
     role: "Web Developer",
     description:
       "Passionate about crafting clean, functional, and user-friendly applications, with a love for turning chaos into beautifully structured code.",
-    image: "",
+    image: Anna,
     github: "https://github.com/andobrucki",
     linkedin: "https://www.linkedin.com/in/annadobrucki/",
   },
@@ -18,39 +23,39 @@ const teamData = [
     role: "Frontend & Backend Developer",
     description:
       "Passionate about creating seamless user experiences and building reusable components.",
-    image: "",
+    image: Heriberto,
     linkedin: "https://www.linkedin.com/in/heriberto-santana-solsona/",
   },
   {
     name: "Iryna",
     role: "Frontend & Backend Developer",
     description:
-      "Passionate about creating seamless user experiences and building reusable components.",
-    image: "",
+      "Building sleek, reusable components while learning and growing alongside my team made this journey unforgettable!",
+    image: Iryna,
     github: "https://github.com/IrYna-Kononova",
   },
   {
     name: "Kristin",
     role: "Frontend & Backend Developer",
     description:
-      "Passionate about creating seamless user experiences and building reusable components.",
-    image: "",
+      "Dark mode first developer: because sunglasses are for the night and light only attracts bugs..",
+    image: Kristin,
     github: "https://github.com/kwossi",
   },
   {
     name: "Nancy",
     role: "Frontend & Backend Developer",
     description:
-      "Passionate about creating seamless user experiences and building reusable components.",
-    image: "",
+      "Dedicated to designing intuitive user experiences and creating dynamic themes that adapt to user preferences.",
+    image: Nancy,
     github: "https://github.com/NancyJK",
   },
   {
     name: "Nathalie",
     role: "Frontend & Backend Developer",
     description:
-      "Passionate about creating seamless user experiences and building reusable components.",
-    image: "",
+      "Component library enthusiast: because who doesn't love an AWESOME collection of reusable code?!",
+    image: Nathalie,
     github: "https://github.com/NathalieMellaA",
   },
 ];
