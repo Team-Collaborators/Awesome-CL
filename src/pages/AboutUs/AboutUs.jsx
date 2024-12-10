@@ -11,7 +11,7 @@ import Nathalie from "../../assets/images/Nathalie.webp";
 const teamData = [
   {
     name: "Anna",
-    role: "Web Developer",
+    role: "Full-Stack Web Developer",
     description:
       "Passionate about crafting clean, functional, and user-friendly applications, with a love for turning chaos into beautifully structured code.",
     image: Anna,
@@ -20,15 +20,16 @@ const teamData = [
   },
   {
     name: "Heriberto",
-    role: "Frontend & Backend Developer",
+    role: "Full-Stack Web Developer",
     description:
       "Passionate about creating seamless user experiences and building reusable components.",
     image: Heriberto,
+    github: "https://github.com/Hery8910",
     linkedin: "https://www.linkedin.com/in/heriberto-santana-solsona/",
   },
   {
     name: "Iryna",
-    role: "Frontend & Backend Developer",
+    role: "Full-Stack Web Developer",
     description:
       "Building sleek, reusable components while learning and growing alongside my team made this journey unforgettable!",
     image: Iryna,
@@ -36,15 +37,16 @@ const teamData = [
   },
   {
     name: "Kristin",
-    role: "Frontend & Backend Developer",
+    role: "Full-Stack Web Developer",
     description:
       "Dark mode first developer: because sunglasses are for the night and light only attracts bugs..",
     image: Kristin,
     github: "https://github.com/kwossi",
+    linkedin: "https://www.linkedin.com/in/kristin-stoecker/",
   },
   {
     name: "Nancy",
-    role: "Frontend & Backend Developer",
+    role: "Full-Stack Web Developer",
     description:
       "Dedicated to designing intuitive user experiences and creating dynamic themes that adapt to user preferences.",
     image: Nancy,
@@ -52,7 +54,7 @@ const teamData = [
   },
   {
     name: "Nathalie",
-    role: "Frontend & Backend Developer",
+    role: "Full-Stack Web Developer",
     description:
       "Component library enthusiast: because who doesn't love an AWESOME collection of reusable code?!",
     image: Nathalie,
