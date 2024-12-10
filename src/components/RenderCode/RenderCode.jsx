@@ -1,11 +1,14 @@
 import React, { useState } from "react"; // Import React and useState hook
 import { FaRegCopy } from "react-icons/fa6"; // Import copy icon from react-icons
-import { Light as SyntaxHighlighter } from "react-syntax-highlighter"; // Import SyntaxHighlighter component
+// import { PrismAsyncLight as SyntaxHighlighter } from "react-syntax-highlighter"; // Import SyntaxHighlighter component
+import SyntaxHighlighter from "react-syntax-highlighter";
 import { atelierDuneDark } from "react-syntax-highlighter/dist/esm/styles/hljs"; // Import syntax highlighting style
 import styles from "./RenderCode.module.scss"; // Import CSS module styles
+import jsx from "react-syntax-highlighter/dist/esm/languages/prism/jsx";
 
 export function RenderCode({ code }) {
   const [copied, setCopied] = useState(false); // State to track if code is copied
+  //SyntaxHighlighter.registerLanguage("jsx", jsx);
   const copyToClipboard = (code) => {
     navigator.clipboard
       .writeText(code) // Copy code to clipboard
