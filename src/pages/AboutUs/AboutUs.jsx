@@ -22,7 +22,7 @@ const teamData = [
     name: "Heriberto",
     role: "Full-Stack Web Developer",
     description:
-      "Passionate about creating seamless user experiences and building reusable components.",
+      "My life changed completely the day I understood that '1' + 1 = 11. JavaScript taught me that, everything is about the small details.",
     image: Heriberto,
     github: "https://github.com/Hery8910",
     linkedin: "https://www.linkedin.com/in/heriberto-santana-solsona/",
