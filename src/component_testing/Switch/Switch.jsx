@@ -37,7 +37,7 @@ const Switch = ({
       return newCheckedState;
     });
   };
-  console.log("isChecked", isChecked);
+
   return (
     <div className={styles.switchContainer}>
       <div
