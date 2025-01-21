@@ -2,6 +2,7 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import {
   dracula,
   atomDark,
+  solarizedDarkAtom,
 } from "react-syntax-highlighter/dist/esm/styles/prism";
 import "./CodeDisPlay.scss";
 
@@ -19,8 +20,10 @@ const customLightTheme = {
 };
 
 const THEME_STYLES = {
-  default: customLightTheme,
-  "dark-theme": dracula,
+  // default: { ...atomDark, ...customLightTheme },
+  //default: customLightTheme,
+  default: solarizedDarkAtom,
+  "dark-theme": atomDark,
   "neon-theme": atomDark,
 };
 
